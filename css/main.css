@@ -1,9 +1,9 @@
-/*
-License & Attributions
-======================
+/* License & Attributions
 
-Some of this code derives from the pico project (https://picocss.com/docs/)
-Said derivations were made available under the CC BY-SA 4.0 license (https://creativecommons.org/licenses/by-sa/4.0)
+Some of this code derives from the pico project
+(https://picocss.com/docs/).
+Said derivations were made available under the CC BY-SA 4.0 license
+(https://creativecommons.org/licenses/by-sa/4.0).
 */
 
 html {
@@ -160,8 +160,9 @@ footer {
 */
 
 
-pre code {
-    font-size: 0.8rem;
+/* render monospace'd code smaller */
+code {
+    font-size: 0.85em;
 }
 
 @media screen {
