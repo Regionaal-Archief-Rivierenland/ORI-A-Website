@@ -10,6 +10,8 @@ SVG_DST := $(patsubst ims/%,site/%,$(SVG_SRC))
 MD_SRC := $(wildcard pages/*.md)
 HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
 
+MAIN_HTML = over-ori-a.html
+
 .PHONY: all clean
 
 # Default target
@@ -42,12 +44,13 @@ site/theme-toggle.js: js/theme-toggle.js
 
 # Copy index.html
 # index.html currently only redirects to something else
-site/index.html: pages/index.html | site/
-	cp $< $@
+# site/index.html: pages/index.html | site/
+# 	cp $< $@
 
 # Build HTML pages (depends on all build artifacts)
-buildpages: $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) site/index.html site/theme-toggle.js
+buildpages: $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) site/theme-toggle.js
 	python buildpages.py
+	ln -srf site/$(MAIN_HTML) site/index.html
 
 # FIXME: this currently strips too much, breaking html
 minify: buildpages
