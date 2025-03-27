@@ -1,0 +1,240 @@
+/*
+License & Attributions
+======================
+
+Some of this code derives from the pico project (https://picocss.com/docs/)
+Said derivations were made available under the CC BY-SA 4.0 license (https://creativecommons.org/licenses/by-sa/4.0)
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Used to add an icon to external URLS */
+.external {
+    padding-right: 1.0em;
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>');
+	background-size: 14px;
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+:root {
+    --pico-block-spacing-vertical: 2.0rem;
+    --pico-block-spacing-horizontal: 2.0rem;
+}
+
+/* this uses the values of h3 */
+h2 {
+  --pico-font-size:1.5rem;
+  --pico-line-height:1.175;
+  --pico-typography-spacing-top:2.25rem;
+  --pico-color: var(--pico-h3-color);
+}
+
+/* make all tables striped */
+
+table tbody tr:nth-child(odd) th,
+table tbody tr:nth-child(odd) td {
+  background-color: var(--pico-table-row-stripped-background-color);
+}
+
+.maingrid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 175px minmax(0, 1fr);
+  grid-gap: 2.2rem;
+}
+
+
+.muted {
+    color: var(--pico-muted-color);
+}
+
+/* Horizontal nav */
+aside {
+    --pico-font-size: 16px; /* font size of sidebar */
+    font-size: var(--pico-font-size);
+    position: sticky;
+    top: 0; /* Stay at the top */
+    grid-area: sidebar;
+    /* for some reason, setting this to an absolute value is the only way to make sticky work,
+       _and_ push the footer at the same time */
+    height: 600px;
+}
+
+/* Style currently selected item in navbar */
+aside nav a.active {
+    background-color: var(--pico-code-background-color);
+}
+
+aside > nav ul ul {
+    padding-top: 0.2rem; /* increase vertical space between list elem and first subelemnt */
+    padding-left: 0.75rem;  /* indent nested list */
+}
+
+/* Landmarks
+ */
+
+header {
+    margin-top: 8px;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.14em;
+    line-height: 1.35;
+}
+
+/* O with logo */
+.o-container {
+  position: relative;
+  display: inline-flex;
+  white-space: nowrap;
+  transform: scaleX(1.12); /* Slightly wider "O" */
+}
+
+.o-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.25em;  /* Adjust size as needed */
+  height: 1.25em;
+  transform: translate(-8%, -9.3%);
+  pointer-events: none; /* Ensures text selection works normally */
+  user-select: none; /* Prevents SVG from being treated as selectable text */
+}
+
+
+html.dark-mode {
+    color-scheme: dark;
+}
+
+html.light-mode {
+    color-scheme: light;
+}
+
+/* TODO: maybe add a max-width? */
+main {
+    grid-area: content;
+}
+
+/* dark mode tweaks */
+[data-theme="dark"] article {
+    background: none;
+}
+
+
+footer {
+    grid-area: footer;
+    padding-bottom: 20px;
+    /* background: var(--pico-background-color); */
+    /* z-index: 2; */
+}
+
+/* Adaptive rules */
+
+/* just hide the sidebar on small widths */
+@media (max-width: 710px) { /* Adjust breakpoint as needed */
+  aside#documentation-menu {
+    display: none;
+  }
+  .maingrid {
+    grid-template-columns: 1fr; /* Make main content take full width */
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  }
+  
+  .container {
+      padding-left: 0;
+  }
+}
+
+
+/* Syntax highlighting
+*/
+
+
+pre code {
+    font-size: 0.8rem;
+}
+
+@media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span {color: var(--pico-color)}
+code span.kw { color: var(--pico-ins-color); font-weight: 600; } /* Keyword */
+
+/* Anchor links next to headers */
+
+:is(h1,
+h2,
+h3,
+h4,
+h5,
+h6) {
+    position:relative;
+}
+
+:is(h1,
+h2,
+h3,
+h4,
+h5,
+h6)>a {
+  padding-left:calc(var(--pico-spacing) * .5);
+  font-weight:400;
+  text-decoration:none;
+  opacity:0;
+  visibility: none;
+  transition:color var(--pico-transition) opacity var(--pico-transition);
+}
+
+:is(h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6)>a {
+    position:absolute;
+    padding-right:calc(var(--pico-spacing) * .5);
+}
+:is(h1,
+h2,
+h3,
+h4,
+h5,
+h6)>a:focus-visible {
+  box-shadow:none;
+  color:var(--pico-primary);
+  opacity:1
+}
+:is(h1,
+h2,
+h3,
+h4,
+h5,
+h6):hover>a {
+  opacity:.25
+}
+:is(h1,
+h2,
+h3,
+h4,
+h5,
+h6):hover>a:hover {
+    opacity:.5;
+}
+:is(h1,
+h2,
+h3,
+h4,
+h5,
+h6):hover>a:focus-visible {
+    opacity:1;
+}

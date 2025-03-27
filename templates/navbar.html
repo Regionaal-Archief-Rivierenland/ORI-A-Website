@@ -1,0 +1,14 @@
+<ul>
+  {% for page in pages %}
+  <li><b><a href="{{ page.filename }}" {{ "class='active contrast'" if page.filename == current_page else "class='contrast'"}}>{{ page.title }}</a></b>
+    {% if page.headers %}
+      <ul>
+        {% for header, anchor in page.headers %}
+          <li><a class="secondary" href="{{ page.filename }}#{{ anchor }}">{{ header }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
