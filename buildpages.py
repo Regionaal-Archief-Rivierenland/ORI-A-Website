@@ -95,6 +95,9 @@ for page in pages:
 
     with open(f"{output_folder}/github.svg") as f:
         githubsvg = f.read()
+        
+    with open(f"{output_folder}/hamburger.svg") as f:
+        hamburgersvg = f.read()
 
     # process html
     page_contents = add_icon_to_links(page_contents)
@@ -104,7 +107,13 @@ for page in pages:
     # this needs current_page because that visited page needs to styled in the navbar
     navbar_html = navbar_template.render(pages=pages, current_page=page["filename"])
     html = base_template.render(
-        content=page_contents, navbar=navbar_html, title=page["title"], sunsvg=sunsvg, githubsvg=githubsvg, current_page=page["filename"]
+        content=page_contents,
+        navbar=navbar_html,
+        title=page["title"],
+        sunsvg=sunsvg,
+        githubsvg=githubsvg,
+        hamburgersvg=hamburgersvg,
+        current_page=page["filename"],
     )
 
     with open(f"{output_folder}/{page["filename"]}", 'w') as f:
