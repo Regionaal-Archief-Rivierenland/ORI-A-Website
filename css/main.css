@@ -5,12 +5,11 @@ Some of this code derives from the pico project
 Said derivations were made available under the CC BY-SA 4.0 license
 (https://creativecommons.org/licenses/by-sa/4.0).
 */
+
 :root {
     --pico-block-spacing-vertical: 2.0rem;
     --pico-block-spacing-horizontal: 2.0rem;
-    --small-page-size: 765px;
 }
-
 
 html {
     scroll-behavior: smooth;
