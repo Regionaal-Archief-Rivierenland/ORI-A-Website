@@ -30,26 +30,18 @@ Een paar begrippenlijsten die van toepassing zijn op **ORI•A** worden beheerd 
 
 Van belang bij bijv. `<heeftAlsBijlage>`.
 
-| Label          | Definitie                                                                      |
-|:---------------|:-------------------------------------------------------------------------------|
-| Voorstel       | Een plan waarover een besluit genomen kan worden.                              |
-| Motie          | Een gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
-| Toezegging     | Een toezegging van een gedeputeerde of raadslid.                               |
-| Vraag          | Een vraag aan de raad.                                                         |
-| Antwoord       | Een antwoord op een vraag aan de raad.                                         |
+| Label      | Definitie                                                                      |
+|:-----------|:-------------------------------------------------------------------------------|
+| Voorstel   | Een plan waarover een besluit genomen kan worden.                              |
+| Motie      | Een gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
+| Toezegging | Een toezegging van een gedeputeerde of raadslid.                               |
+| Vraag      | Een vraag aan de raad.                                                         |
+| Antwoord   | Een antwoord op een vraag aan de raad.                                         |
 
 
 # Deelnemer rollen
 
 Hoort bij `<aanwezigeDeelnemer>`. Donec vitae dolor.  Donec at pede. 
-
-<!-- <details class="dropdown"> -->
-<!--   <summary>Begrippenlijst versie...</summary> -->
-<!--   <ul> -->
-<!--     <li><a>Versie 1 (02-15-2025)</a></li> -->
-<!--     <li><a>Versie 2 (12-12-2027)</a></li> -->
-<!--   </ul> -->
-<!-- </details> -->
 
 
 | Label              | Definitie                                                                             |
