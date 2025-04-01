@@ -98,6 +98,9 @@ for page in pages:
         
     with open(f"{output_folder}/hamburger.svg") as f:
         hamburgersvg = f.read()
+        
+    with open(f"{output_folder}/moon.svg") as f:
+        moonsvg = f.read()
 
     # process html
     page_contents = add_icon_to_links(page_contents)
@@ -111,6 +114,7 @@ for page in pages:
         navbar=navbar_html,
         title=page["title"],
         sunsvg=sunsvg,
+        moonsvg=moonsvg,
         githubsvg=githubsvg,
         hamburgersvg=hamburgersvg,
         current_page=page["filename"],

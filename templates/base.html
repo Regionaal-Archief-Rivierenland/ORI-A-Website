@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark"/>
     <meta name="description" content="ORI-A open raadsinformatie archiefstandaard">
-    <meta name="keywords" content="archiefstandaard, raadssinformatie, ORI, archief, videotuul, open-source">
+    <meta name="keywords"
+          content="archiefstandaard, raadsinformatie, ORI, archief, videotuul, open-source, RIS, ORI-a">
     <title>ORI•A - {{ title }}</title>
     <link rel="icon" type="image/svg+xml" href="logo.svg">
     <link rel="stylesheet" href="css/pico/pico.min.css">
@@ -13,6 +14,14 @@
     <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 765px)" />
     <script src="theme-toggle.js" defer></script>
     <script src="hamburger-menu-toggle.js" defer></script>
+    <script>
+      (function() {
+          const storedTheme = localStorage.getItem('theme');
+          const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = storedTheme || (systemPrefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
   </head>
   <body>
     <div class="maingrid container">
@@ -38,6 +47,7 @@
             <li>
               <a class="contrast" id="theme-toggle" aria-label="Turn off dark mode" href="#">
                 {{sunsvg | safe}}
+                {{moonsvg | safe}}
               </a>
             </li>
             <li>

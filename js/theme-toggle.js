@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.getElementById("theme-toggle");
-    if (!themeToggle) return;
-
     const html = document.documentElement;
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
         html.setAttribute("data-theme", savedTheme);
     }
+    const themeToggle = document.getElementById("theme-toggle");
 
     themeToggle.addEventListener("click", (event) => {
         event.preventDefault(); // Prevents page reload if it's a link

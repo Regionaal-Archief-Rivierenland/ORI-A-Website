@@ -26,7 +26,9 @@ site:
 	mkdir -p $(CSS_DST)
 
 # Copy CSS files to the site folder
-# TODO: minimize CSS; minify-html apperently doesn't cut it
+# to strip unused css: 
+# ./node_modules/purgecss/bin/purgecss.js --content "site/*.html" "js/*.js" --css $@ --output $@
+# (but this seems to be buggy)
 $(CSS_DST)%: $(CSS_SRC)%
 	@mkdir -p $(@D)
 	lightningcss --minify $< -o $@
@@ -57,7 +59,7 @@ buildpages: $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST)
 
 # FIXME: this currently strips too much, breaking html
 minify: buildpages
-	minify-html $$(fd -ehtml . site/)
+	minify-html --minify-js $$(fd -ehtml . site/)
 
 # Clean up
 clean:

@@ -130,6 +130,41 @@ main {
     box-shadow: none;
 }
 
+/* [data-theme="dark"] #moon { */
+/*     display: block; */
+/* } */
+
+/* [data-theme="dark"] #sun { */
+/*     display: none; */
+/* } */
+/* [data-theme="light"] #moon { */
+/*     display: none; */
+/* } */
+
+/* [data-theme="light"] #sun { */
+/*     display: block; */
+/* } */
+
+#moon, #sun {
+    display: none; /* Initially hide both */
+}
+
+[data-theme="dark"] #moon {
+    display: inline;
+}
+
+[data-theme="dark"] #sun {
+    display: none;
+}
+
+[data-theme="light"] #moon {
+    display: none;
+}
+
+[data-theme="light"] #sun {
+    display: inline;
+}
+
 footer {
     grid-area: footer;
     padding-bottom: 20px;

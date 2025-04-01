@@ -1,8 +1,9 @@
+
 #documentation-menu {
     display: none;
 }
 
-#hamburger-menu {
+#hamburger-menu, #mobile-menu li, #mobile-menu ul {
     display: block;
 }
 
@@ -29,6 +30,14 @@
     top: 0;
     left: 0;
     transform: translate(100%);
+    overflow-y: auto;
+    max-height: 100vh;
+
+}
+
+/* hide scrollbars of page behind mobile menu */
+body.no-scroll {
+  overflow: hidden;
 }
 
 #mobile-menu header {
@@ -51,17 +60,10 @@
     transform: translate(0)
 }
 
-#mobile-menu ul {
-    display: block;
-}
-
+/* indent nested list */
 #mobile-menu ul ul {
     padding-top: .7rem;
     padding-left: 3.3rem;
-}
-
-#mobile-menu li {
-    display: block;
 }
 
 #mobile-menu a.active {
