@@ -1,11 +1,14 @@
 CSS_SRC := css/
 CSS_DST := site/css/
 
-CSS_FILES := main.css pico/pico.min.css pico/pico.colors.min.css
+CSS_FILES := main.css pico/pico.min.css mobile.css
 CSS_DST_FILES := $(addprefix $(CSS_DST),$(CSS_FILES))
 
 SVG_SRC := $(wildcard ims/*.svg)
 SVG_DST := $(patsubst ims/%,site/%,$(SVG_SRC))
+
+JS_SRC := $(wildcard js/*.js)
+JS_DST := $(patsubst js/%.js, site/%.js, $(JS_SRC))
 
 MD_SRC := $(wildcard pages/*.md)
 HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
@@ -38,17 +41,17 @@ pages/%.html: pages/%.md
 	@mkdir -p $(@D)
 	pandoc $< -o $@
 
-# copy/minify js
-site/theme-toggle.js: js/theme-toggle.js
-	uglifyjs $< -o $@ -c -m
-
 # Copy index.html
 # index.html currently only redirects to something else
 # site/index.html: pages/index.html | site/
 # 	cp $< $@
 
+# copy/minify js
+site/%.js: js/%.js
+	uglifyjs $< -o $@ -c -m
+
 # Build HTML pages (depends on all build artifacts)
-buildpages: $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) site/theme-toggle.js
+buildpages: $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST)
 	python buildpages.py
 	ln -srf site/$(MAIN_HTML) site/index.html
 
