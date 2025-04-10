@@ -73,11 +73,11 @@ aside {
 }
 
 /* Style currently selected item in navbar */
-nav.listnav a.active {
+.listnav a.active {
     background-color: var(--pico-code-background-color);
 }
 
-nav.listnav ul ul {
+.listnav ul ul {
     padding-top: 0.2rem; /* increase vertical space between list elem and first subelemnt */
     padding-left: 0.75rem;  /* indent nested list */
 }
@@ -96,6 +96,7 @@ nav.listnav ul ul {
 }
 
 /* O with logo */
+
 .o-container {
   position: relative;
   display: inline-flex;
@@ -103,13 +104,14 @@ nav.listnav ul ul {
   transform: scaleX(1.12); /* Slightly wider "O" */
 }
 
+
 .o-svg {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 1.25em;  /* Adjust size as needed */
   height: 1.25em;
-  transform: translate(-8%, -9.3%);
+  transform: translate(-8.2%, -9.3%);
   pointer-events: none; /* Ensures text selection works normally */
   user-select: none; /* Prevents SVG from being treated as selectable text */
 }
@@ -127,9 +129,9 @@ html.light-mode {
     color-scheme: light;
 }
 
-/* TODO: maybe add a max-width? */
 main {
     grid-area: content;
+    min-width: 0; /* important for responsive layout; see pj-dev.com/blog/flex-items-and-min-width-0 */
 }
 
 /* dark mode tweaks */
@@ -138,21 +140,7 @@ main {
     box-shadow: none;
 }
 
-/* [data-theme="dark"] #moon { */
-/*     display: block; */
-/* } */
-
-/* [data-theme="dark"] #sun { */
-/*     display: none; */
-/* } */
-/* [data-theme="light"] #moon { */
-/*     display: none; */
-/* } */
-
-/* [data-theme="light"] #sun { */
-/*     display: block; */
-/* } */
-
+/* may be relevant wheen js is disabled??? */
 #moon, #sun {
     display: none; /* Initially hide both */
 }
