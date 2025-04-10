@@ -15,6 +15,7 @@ main_page = "main.html"
 env = Environment(loader=FileSystemLoader("templates"))
 base_template = env.get_template("base.html")
 navbar_template = env.get_template("navbar.html")
+logo = env.get_template("logo.html")
 
 def pageinfo(filestem):
     """Build pageinfo (title, etc.) from markdown YAML frontmatter and pandoc html"""
@@ -108,8 +109,10 @@ for page in pages:
     page_contents = anchor_icon_to_headers(page_contents)
     
     # this needs current_page because that visited page needs to styled in the navbar
+    logo_html = logo.render()
     navbar_html = navbar_template.render(pages=pages, current_page=page["filename"])
     html = base_template.render(
+        logo=logo_html,
         content=page_contents,
         navbar=navbar_html,
         title=page["title"],
