@@ -34,27 +34,30 @@
         <nav id="topbar-nav">
           <ul>
             <li>
-              <a class="contrast" id="hamburger-menu" aria-label="Open navigation menu" href="#">
+              <a class="contrast" id="hamburger-menu" aria-label="Open navigation menu" title="Navigatie menu" href="#">
                 {{hamburgersvg | safe}}
               </a>
             </li>
             <li>
-              <a class="contrast" id="theme-toggle" aria-label="Turn off dark mode" href="#">
+              <a class="contrast" id="theme-toggle" aria-label="Toggle dark mode" title="Zet donkere modus aan/uit " href="#">
                 {{sunsvg | safe}}
                 {{moonsvg | safe}}
               </a>
             </li>
             <li>
-              <a class="contrast" aria-label="GitHub repository" rel="noopener noreferrer" target="_blank" href="https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD">
+              <a class="contrast" aria-label="GitHub repository" title="GitHub pagina" rel="noopener noreferrer" target="_blank" href="https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD">
                 {{githubsvg | safe}}
               </a>
             </li>
           </ul>
         </nav>
       </header>
-      <nav id="mobile-menu">
-          <header>
-            <button class="secondary" id="close-btn" aria-label="Close navigation menu">
+      <nav aria-hidden="true" id="mobile-menu">
+        <header>
+          <div>
+            <!-- ORI<span style="color: #4D1A57">•</span>A -->
+          </div>
+          <button class="secondary" id="close-btn" aria-label="Close navigation menu" title="Sluiten">
               &times; <!-- This will be the cross symbol -->
             </button>
           </header>

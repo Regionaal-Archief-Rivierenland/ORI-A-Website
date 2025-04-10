@@ -3,19 +3,22 @@
     display: none;
 }
 
-#hamburger-menu, #mobile-menu li, #mobile-menu ul {
+#hamburger-menu, #mobile-menu a, #mobile-menu li, #mobile-menu ul {
     display: block;
 }
 
 .maingrid {
+    display: grid;
     grid-template-columns:1fr;
     grid-template-areas:
         "header"
         "content"
-        "footer"
+        "footer";
+    grid-template-columns: unset;
+    grid-gap: 1.0em;
 }
 
-#mobile-menu{
+#mobile-menu {
     background: var(--pico-background-color);
     z-index: 2;
     justify-content: unset;
@@ -32,32 +35,14 @@
     transform: translate(100%);
     overflow-y: auto;
     max-height: 100vh;
+    opacity: 0;
 
-}
-
-/* hide scrollbars of page behind mobile menu */
-body.no-scroll {
-  overflow: hidden;
-}
-
-#mobile-menu header {
-    justify-content: flex-end;
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-}
-
-#close-btn {
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    font-size: 2rem;
-    display: flex
 }
 
 #mobile-menu.open {
-    transform: translate(0)
+    display: block;
+    transform: translate(0);
+    opacity: 1;
 }
 
 /* indent nested list */
@@ -68,5 +53,28 @@ body.no-scroll {
 
 #mobile-menu a.active {
     background-color: var(--pico-code-background-color);
-    display: block
+}
+
+#mobile-menu header {
+    justify-content: space-between;
+    flex-direction: row;
+    /* width: 100%; */
+    padding: 1rem;
+    display: flex;
+    font-size: 2rem;
+}
+
+
+/* hide scrollbars of page behind mobile menu */
+body.no-scroll {
+  overflow: hidden;
+}
+
+#close-btn {
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    font-size: inherit;
 }

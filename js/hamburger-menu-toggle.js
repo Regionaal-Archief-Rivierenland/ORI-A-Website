@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const anchorLinks = menu.querySelectorAll("a[href*='#']");
 
     function toggleMenu() {
+        menu.setAttribute('aria-hidden',
+                          menu.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
         menu.classList.toggle("open");
         document.body.classList.toggle("no-scroll");
     }
