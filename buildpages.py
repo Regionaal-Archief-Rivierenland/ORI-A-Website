@@ -75,7 +75,7 @@ def anchor_icon_to_headers(html):
     soup = BeautifulSoup(html, 'html.parser')
     headers = soup.find_all(re.compile('^h[1-6]$'))
     for h in headers:
-        a = soup.new_tag("a", **{"href": f"#{h['id']}", "class" : "secondary"})
+        a = soup.new_tag("a", **{"href": f"#{h['id']}", "class" : "secondary", "aria-hidden" : "true"})
         a.append("#")
         h.append(a)
 
