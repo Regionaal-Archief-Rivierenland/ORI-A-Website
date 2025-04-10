@@ -9,10 +9,18 @@ Said derivations were made available under the CC BY-SA 4.0 license
 :root {
     --pico-block-spacing-vertical: 2.0rem;
     --pico-block-spacing-horizontal: 2.0rem;
+    /* --pico-font-family-sans-serif: "Ubuntu"; */
+    /* --pico-font-family-sans-serif: "Inter"; */
+    /* --pico-font-family-sans-serif: "Atkinson Hyperlegible Next"; */
+    /* --pico-font-family-sans-serif: "Lato",system-ui,"Segoe UI",Arial,sans-serif; */
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: "Source Sans 3";
 }
 
 /* Used to add an icon to external URLS */
