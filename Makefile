@@ -1,5 +1,5 @@
 CSS_SRC := css/
-CSS_DST := site/css/
+CSS_DST := site/
 
 CSS_FILES := main.css pico/pico.min.css mobile.css
 CSS_DST_FILES := $(addprefix $(CSS_DST),$(CSS_FILES))
@@ -25,10 +25,11 @@ $(CSS_DST) $(HTML_DST): | site
 site:
 	mkdir -p $(CSS_DST)
 
-# Copy CSS files to the site folder
 # to strip unused css: 
 # ./node_modules/purgecss/bin/purgecss.js --content "site/*.html" "js/*.js" --css $@ --output $@
 # (but this seems to be buggy)
+
+# Minize CSS
 $(CSS_DST)%: $(CSS_SRC)%
 	@mkdir -p $(@D)
 	lightningcss --minify $< -o $@
@@ -57,7 +58,6 @@ buildpages: $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST)
 	python buildpages.py
 	ln -srf site/$(MAIN_HTML) site/index.html
 
-# FIXME: this currently strips too much, breaking html
 minify: buildpages
 	minify-html --minify-js $$(fd -ehtml . site/)
 

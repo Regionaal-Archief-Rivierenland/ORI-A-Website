@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Lato";
+    src: url("lato.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("lato-bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
 
 #documentation-menu {
     display: none;
@@ -36,7 +49,7 @@
     overflow-y: auto;
     max-height: 100vh;
     opacity: 0;
-
+    font-family: var(--header-font);
 }
 
 #mobile-menu.open {

@@ -8,10 +8,10 @@
     <meta name="keywords"
           content="archiefstandaard, raadsinformatie, ORI, archief, videotuul, open-source, RIS, ORI-a">
     <title>ORI•A - {{ title }}</title>
+    <link rel="stylesheet" href="pico/pico.min.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg">
-    <link rel="stylesheet" href="css/pico/pico.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 765px)" />
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 765px)" />
     <script src="theme-toggle.js" defer></script>
     <script src="hamburger-menu-toggle.js" defer></script>
     <script>
@@ -26,7 +26,7 @@
   <body>
     <div class="maingrid container">
       <header id="header-nav">
-        <a class="logo" aria-label="logo" style="all: unset; cursor: pointer" href="index.html">
+        <a class="logo" aria-label="logo" href="index.html">
           {{logo | safe}}
           <span class="muted" style="font-size: 0.5em; display: block">Open raadsinformatie <span style="color: #4D1A57">•</span> Archiefstandaard</span>
         </a>

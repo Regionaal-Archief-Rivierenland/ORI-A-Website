@@ -2,26 +2,49 @@
 
 Some of this code derives from the pico project
 (https://picocss.com/docs/).
-Said derivations were made available under the CC BY-SA 4.0 license
+Those assets were made available under the CC BY-SA 4.0 license
 (https://creativecommons.org/licenses/by-sa/4.0).
 */
+
+/* these woff2 fonts were forged from the official Lato ttf files, using google's woff2_compress
+IMO, these woff2 files have superior kerning compared to the woff2 files on googlefonts.
+Also, the official woff2 files from the Lato website had vertical spacing issues 
+*/
+@font-face {
+    font-family: "Lato";
+    src: url("lato.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("lato-bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
 
 :root {
     --pico-block-spacing-vertical: 2.0rem;
     --pico-block-spacing-horizontal: 2.0rem;
-    /* --pico-font-family-sans-serif: "Ubuntu"; */
-    /* --pico-font-family-sans-serif: "Inter"; */
-    /* --pico-font-family-sans-serif: "Atkinson Hyperlegible Next"; */
-    /* --pico-font-family-sans-serif: "Lato",system-ui,"Segoe UI",Arial,sans-serif; */
+    /* Ubuntu, Open Sans, Cantarell, Lato are nice */
+    --header-font: "Lato";
+    /* Windows users */
+    /* --pico-font-family-sans-serif: "Segoe UI Variable Static Display"; */
 }
 
 html {
     scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3 {
-    font-family: "Source Sans 3";
+
+h1, h2, h3, #documentation-menu, .logo {
+    font-family: var(--header-font);
 }
+
+
+
 
 /* Used to add an icon to external URLS */
 .external {
@@ -95,13 +118,24 @@ aside {
     line-height: 1.35;
 }
 
+#hamburger-icon {
+    width: 25px;
+    height: 25px;
+}
+
 /* O with logo */
+
+.logo {
+    all: unset;
+    cursor: pointer;
+    font-family: var(--header-font);
+}
 
 .o-container {
   position: relative;
   display: inline-flex;
   white-space: nowrap;
-  transform: scaleX(1.12); /* Slightly wider "O" */
+  transform: scaleX(1.07); /* Slightly wider "O" */
 }
 
 
