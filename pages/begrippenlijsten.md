@@ -1,6 +1,6 @@
 ---
 title: Begrippenlijsten
-position: 3
+position: 2
 ---
 
 # Begrippenlijsten gebruiken
