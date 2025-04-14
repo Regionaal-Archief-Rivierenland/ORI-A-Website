@@ -1,5 +1,6 @@
 ---
 title: FAQ
+position: 4
 ---
 
 # Waarom is ORI-A ontwikkeld?
