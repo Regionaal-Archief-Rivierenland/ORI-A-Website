@@ -15,10 +15,18 @@ HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
 
 MAIN_HTML = over-ori-a.html
 
+FONT_TITLE := lato.woff2
+FONT_TITLE_BOLD := lato-bold.woff2
+FONT_MONOSPACE := CommitMonoVariable.woff2
+
+FONT_INPUTS := fonts/$(FONT_TITLE) fonts/$(FONT_TITLE_BOLD) fonts/$(FONT_MONOSPACE)
+FONT_OUTPUTS := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_MONOSPACE)
+
+
 .PHONY: all clean
 
 # Default target
-all: buildpages minify
+all: buildpages minify subset-fonts
 
 # Create site/ directory
 $(CSS_DST) $(HTML_DST): | site
@@ -44,10 +52,29 @@ pages/%.html: pages/%.md
 	@mkdir -p $(@D)
 	pandoc $< -o $@
 
-# Copy index.html
-# index.html currently only redirects to something else
-# site/index.html: pages/index.html | site/
-# 	cp $< $@
+subset-fonts: $(FONT_OUTPUTS)
+
+$(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
+    # Use titles and headers to subset lato
+	titles_and_headers=$$(rg -e '^title: (.*)' -e '^\#(.*)' -r '$$1$$2' --no-filename pages/*md); \
+	pyftsubset fonts/$(FONT_TITLE) \
+		--flavor=woff2 --layout-features="kern,liga" \
+		--text="Open raadsinformatie Archiefstandaard$$titles_and_headers" \
+		--output-file=site/$(FONT_TITLE) ; \
+	pyftsubset fonts/$(FONT_TITLE_BOLD) \
+		--flavor=woff2 --layout-features="kern,liga" \
+		--text="$$titles_and_headers" \
+		--output-file=site/$(FONT_TITLE_BOLD)
+
+    # Subset monospace font based on text between pairs of "```"/"`"
+	@code_snippets=$$( \
+		rg --no-filename -U --multiline-dotall '```[^\n]*\n(.*?)```' -r '$$1' pages/*md; \
+		rg --no-filename -o '[^`]`(.*)`' -r '$$1' pages/*md \
+	); \
+	pyftsubset fonts/$(FONT_MONOSPACE) \
+		--flavor=woff2 --layout-features="kern,liga" \
+		--text="$$code_snippets" \
+		--output-file=site/$(FONT_MONOSPACE)
 
 # copy/minify js
 site/%.js: js/%.js
