@@ -28,6 +28,7 @@ jobs:
           npm install -g lightningcss-cli
           wget -nv https://github.com/wilsonzlin/minify-html/releases/download/v0.16.4/minhtml-0.16.4-x86_64-unknown-linux-gnu -O /usr/local/bin/minify-html
           chmod +x /usr/local/bin/minify-html
+          ln -s $(which fdfind) /usr/local/bin/fd
 
 
       - name: Build site
