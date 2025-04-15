@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.documentElement;var t=localStorage.getItem("theme");t&&e.setAttribute("data-theme",t);const a=document.getElementById("theme-toggle");a.addEventListener("click",t=>{t.preventDefault();t="dark"===e.getAttribute("data-theme")?"light":"dark";e.setAttribute("data-theme",t),localStorage.setItem("theme",t)})});
