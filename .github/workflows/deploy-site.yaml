@@ -23,8 +23,8 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc make scour ripgrep fd-find fonttools uglifyjs npm wget
-          pip3 install --user jinja2 beautifulsoup4 python-frontmatter
+          sudo apt-get install -y pandoc make scour ripgrep fd-find uglifyjs npm wget
+          pip3 install --user jinja2 beautifulsoup4 python-frontmatter fonttools
           npm install -g lightningcss-cli
           wget -nv https://github.com/wilsonzlin/minify-html/releases/download/v0.16.4/minhtml-0.16.4-x86_64-unknown-linux-gnu -O /usr/local/bin/minify-html
           chmod +x /usr/local/bin/minify-html
