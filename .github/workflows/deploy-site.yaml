@@ -23,12 +23,12 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc make scour rust-ripgrep fd-find fonttools uglifyjs npm wget
+          sudo apt-get install -y pandoc make scour ripgrep fd-find fonttools uglifyjs npm wget
           npm install -g lightningcss-cli
           wget https://github.com/wilsonzlin/minify-html/releases/download/v0.16.4/minhtml-0.16.4-x86_64-unknown-linux-gnu -O /usr/local/bin/minify-html
           chmod +x /usr/local/bin/minify-html
 
-      
+
       - name: Build site
         run: make
 
