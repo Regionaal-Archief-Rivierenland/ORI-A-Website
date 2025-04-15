@@ -10,6 +10,9 @@ SVG_DST := $(patsubst ims/%,site/%,$(SVG_SRC))
 JS_SRC := $(wildcard js/*.js)
 JS_DST := $(patsubst js/%.js, site/%.js, $(JS_SRC))
 
+PDF_SRC := $(wildcard pdfs/*.pdf)
+PDF_DST := $(patsubst pdfs/%.pdf, site/%.pdf, $(PDF_SRC))
+
 MD_SRC := $(wildcard pages/*.md)
 HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
 
@@ -46,6 +49,9 @@ $(CSS_DST)%: $(CSS_SRC)%
 site/%.svg: ims/%.svg
 	scour -i $< -o $@
 
+site/%.pdf: pdfs/%.pdf
+	cp $< $@
+
 # Convert Markdown to HTML
 # NOTE: currently breaks if you use filenames with spaces
 pages/%.html: pages/%.md
@@ -81,7 +87,7 @@ site/%.js: js/%.js
 	uglifyjs $< -o $@ -c -m
 
 # Build HTML pages (depends on all build artifacts)
-buildpages: $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST)
+buildpages: $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF_DST)
 	python buildpages.py
 	ln -srf site/$(MAIN_HTML) site/index.html
 
