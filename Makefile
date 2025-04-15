@@ -88,7 +88,7 @@ site/%.js: js/%.js
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF_DST)
-	python buildpages.py
+	python3 buildpages.py
 	ln -srf site/$(MAIN_HTML) site/index.html
 
 minify: buildpages
