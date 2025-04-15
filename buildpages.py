@@ -1,3 +1,5 @@
+#!/bin/python
+
 from jinja2 import Environment, FileSystemLoader
 from bs4 import BeautifulSoup
 import frontmatter
@@ -23,6 +25,7 @@ def pageinfo(filestem):
     # get title from YAML frontmatter
     doc = frontmatter.load(filestem+".md")
     title = doc.metadata['title']
+    position = int(doc.metadata['position'])
     
     # findall <h1> headers (and their anchors)
     with open(filestem+".html", 'r') as f:
@@ -37,6 +40,7 @@ def pageinfo(filestem):
 
     return {
         "title": title,
+        "position": position,
         "filename": f"{filestem.removeprefix(f"{pages_folder}/")}.html",
         "headers": headers
     }
@@ -61,13 +65,13 @@ def colorize_inline_xml(html):
         # Create a new <span class="kw"> element
         span = soup.new_tag("span", **{"class": "kw"})
         span.string = content  # Set its text content
-        
+
         # Rebuild the code tag with the new structure
         code.clear()
         code.append("<")
         code.append(span)
         code.append(">")
-    
+
 
     return str(soup)
 
@@ -78,14 +82,16 @@ def anchor_icon_to_headers(html):
         a = soup.new_tag("a", **{"href": f"#{h['id']}", "class" : "secondary", "aria-hidden" : "true"})
         a.append("#")
         h.append(a)
-
     return str(soup)
-    
+
 pages = []
 
 for md_file in glob.glob(f"{pages_folder}/*.md"):
     pages.append(pageinfo(md_file.removesuffix('.md')))
-    
+
+# sort pages according to their position key in the YAML frontmatter
+pages = sorted(pages, key=lambda p: p["position"])
+
 for page in pages:
     # read pandoc-converted HTML file
     with open(f"{html_folder}/{page['filename']}", 'r') as f:
