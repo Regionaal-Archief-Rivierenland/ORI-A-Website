@@ -23,7 +23,7 @@ De documentatie van de XSD is een work-in-progress. De betekenis van de verschil
 
 Bovendien bestaat er een [grafische representatie van het informatiemodel.](ORI-A-diagram.pdf)
 
-## Deelnemers aan de Werkgroep Standaardisering Raadsinformatie
+# Werkgroep leden
 
 * Erfgoed Leiden en Omstreken
 * Provincie Zeeland
