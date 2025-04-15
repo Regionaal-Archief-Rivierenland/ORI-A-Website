@@ -32,6 +32,8 @@ def pageinfo(filestem):
         soup = BeautifulSoup(f, 'html.parser')
 
     headers = []
+    # if title != "FAQ":
+    #     # don't generate sidebar headers for the faq pages
     for header in soup.find_all('h1'):
         # pandoc generates anchors automatically!
         anchor = header.get('id')
@@ -60,6 +62,7 @@ def colorize_inline_xml(html):
 
     for code in code_tags:
         code["class"] = "sourceCode xml"
+        # FIXME: I think you can do this extraction with regexs?
         content = code.string[1:-1]  # Extract inner text (without < and >)
         
         # Create a new <span class="kw"> element
@@ -83,6 +86,52 @@ def anchor_icon_to_headers(html):
         a.append("#")
         h.append(a)
     return str(soup)
+
+# TODO: this should probably 
+def headers_to_accordions(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    h1s = soup.find_all("h1")
+
+    # Section for the title
+    title_section = soup.new_tag("section")
+    new_title = soup.new_tag("h1", id="FAQ")
+    new_title.string = "Veel gestelgde vragen"
+    title_section.append(new_title)
+
+    # Section for the accordions
+    details_section = soup.new_tag("section")
+
+    for idx, h in enumerate(h1s):
+        details = soup.new_tag("details")
+        # if idx == 0:
+        #     details.attrs["open"] = "true"
+
+        summary = soup.new_tag("summary")
+        summary.string = h.get_text()
+        details.append(summary)
+
+        # Collect siblings until next h1
+        sibling = h.find_next_sibling()
+        while sibling and sibling.name != "h1":
+            next_sibling = sibling.find_next_sibling()
+            details.append(sibling.extract())
+            sibling = next_sibling
+
+        details_section.append(details)
+
+        if idx < len(h1s) - 1:
+            hr = soup.new_tag("hr")
+            details_section.append(hr)
+
+        h.decompose()
+
+    # Insert the two sections at the top of the document
+    soup.insert(0, details_section)
+    soup.insert(0, title_section)
+
+    return str(soup)
+    
+
 
 pages = []
 
@@ -112,6 +161,8 @@ for page in pages:
     # process html
     page_contents = add_icon_to_links(page_contents)
     page_contents = colorize_inline_xml(page_contents)
+    # if page["title"] == "FAQ":
+    #     page_contents = headers_to_accordions(page_contents)
     page_contents = anchor_icon_to_headers(page_contents)
     
     # this needs current_page because that visited page needs to styled in the navbar
