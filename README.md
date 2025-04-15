@@ -16,9 +16,12 @@ position: 3
 
 # Website (lokaal) bouwen
 
-TBA; maar in principe gewoon `make` runnen. Na `make` komt de "site" (i.e. de _build artifacts_) in de map `site/`. 
+De website wordt automatisch opnieuw gebouwd na elke commit. Voor de dependencies die je hierbij nodig hebt kun je de bijbehorende CI action in de `.github/` map bekijken.
 
-Die kun je vervolgens raadplegen door bijv. `python -m http.server` in die map aan te roepen.
+
+Het lokaal bouwen van de website komt neer op `make` runnen, mits je alle dependencies hebt. Na `make` komt de "site" (i.e. de _build artifacts_) in de map `site/`. 
+
+Die kun je vervolgens raadplegen door bijv. `python -m http.server .` in die map aan te roepen.
 
 # Wat is wat
 
