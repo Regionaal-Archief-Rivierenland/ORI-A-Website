@@ -99,7 +99,7 @@ aside {
     grid-area: sidebar;
     /* for some reason, setting this to an absolute value is the only way to make sticky work,
        _and_ push the footer at the same time */
-    height: 742px;
+    height: 755px;
 }
 
 /* Style currently selected item in navbar */
