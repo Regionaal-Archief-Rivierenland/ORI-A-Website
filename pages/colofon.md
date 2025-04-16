@@ -3,9 +3,7 @@ title: Colofon
 position: 5
 ---
 
-# Colofon
-
-## Werkgroep Archivering Raadsinformatie
+# Werkgroep Archivering Raadsinformatie
 De Open Raadsinformatie Archiefstandaard is een initiatief van en wordt beheerd door de Werkgroep Archivering Raadsinformatie. De werkgroep bestaat uit afgevaardigden van de volgende organisaties:
 
 
