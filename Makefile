@@ -64,20 +64,25 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
     # Use titles and headers to subset lato
 	titles_and_headers=$$(rg -e '^title: (.*)' -e '^\#(.*)' -r '$$1$$2' --no-filename pages/*md); \
 	pyftsubset fonts/$(FONT_TITLE) \
+        --drop-tables=FFTM,feat,meta,name \
 		--flavor=woff2 --layout-features="kern,liga" \
 		--text="Open raadsinformatie Archiefstandaard$$titles_and_headers" \
 		--output-file=site/$(FONT_TITLE) ; \
 	pyftsubset fonts/$(FONT_TITLE_BOLD) \
+        --drop-tables=FFTM,feat,meta,name \
 		--flavor=woff2 --layout-features="kern,liga" \
 		--text="$$titles_and_headers" \
 		--output-file=site/$(FONT_TITLE_BOLD)
 
     # Subset monospace font based on text between pairs of "```"/"`"
-	@code_snippets=$$( \
+    # removing the name table as above creates problems,
+    # for some reason
+	code_snippets=$$( \
 		rg --no-filename -U --multiline-dotall '```[^\n]*\n(.*?)```' -r '$$1' pages/*md; \
 		rg --no-filename -o '[^`]`(.*)`' -r '$$1' pages/*md \
 	); \
 	pyftsubset fonts/$(FONT_MONOSPACE) \
+        --drop-tables=FFTM,feat,meta \
 		--flavor=woff2 --layout-features="kern" \
 		--text="$$code_snippets" \
 		--output-file=site/$(FONT_MONOSPACE)
