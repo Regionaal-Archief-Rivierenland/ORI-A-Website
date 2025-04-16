@@ -107,6 +107,10 @@ aside {
     background-color: var(--pico-code-background-color);
 }
 
+[data-theme="dark"] .listnav a.active {
+    background-color: var(--pico-muted-border-color);
+}
+
 .listnav ul ul {
     padding-top: 0.2rem; /* increase vertical space between list elem and first subelemnt */
     padding-left: 0.75rem;  /* indent nested list */
