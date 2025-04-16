@@ -15,6 +15,7 @@ Also, the official woff2 files from the Lato website had vertical spacing issues
     src: url("lato.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -22,6 +23,7 @@ Also, the official woff2 files from the Lato website had vertical spacing issues
     src: url("lato-bold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 /* The monospace font looks kind of okay on some windows devices, actually */
@@ -30,6 +32,7 @@ Also, the official woff2 files from the Lato website had vertical spacing issues
     src: url("CommitMonoVariable.woff2") format("woff2");
     font-weight: 400 700;
     font-style: normal;
+    font-display: swap;
 }
 
 
@@ -37,8 +40,8 @@ Also, the official woff2 files from the Lato website had vertical spacing issues
     --pico-block-spacing-vertical: 2.0rem;
     --pico-block-spacing-horizontal: 2.0rem;
     /* Ubuntu, Open Sans, Cantarell, Lato are nice */
-    --header-font: "Lato";
-    --monospace-font: "CommitMonoVariable";
+    --header-font: "Lato", var(--pico-font-family-sans-serif);
+    --monospace-font: "CommitMonoVariable", var(--pico-font-family-monospace);
     /* Windows users */
     /* --pico-font-family-sans-serif: "Segoe UI Variable Static Display"; */
 }
