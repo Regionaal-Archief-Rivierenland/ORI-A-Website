@@ -78,7 +78,7 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 		rg --no-filename -o '[^`]`(.*)`' -r '$$1' pages/*md \
 	); \
 	pyftsubset fonts/$(FONT_MONOSPACE) \
-		--flavor=woff2 --layout-features="kern,liga" \
+		--flavor=woff2 --layout-features="kern" \
 		--text="$$code_snippets" \
 		--output-file=site/$(FONT_MONOSPACE)
 
