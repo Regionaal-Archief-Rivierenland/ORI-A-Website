@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     hamburger.addEventListener("click", (e) => {
-        // don't go to the href in the <a>
-        e.preventDefault();
         toggleMenu();
 
     });
@@ -22,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 toggleMenu();
     });
 
-    // Close menu when clicking an anchor link
+    // Close menu when clicking on a same-page link within the menu
     anchorLinks.forEach(link => {
         link.addEventListener("click", () => {
             toggleMenu();
