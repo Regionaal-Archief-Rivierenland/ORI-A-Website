@@ -22,7 +22,7 @@ De ontwikkeling van openbesluitvorming.nl splitste zich uiteen in het ontwerp va
 
 ORI-A heeft het informatiemodel onder de Open API Specificatie als basis genomen voor de ontwikkeling van een XML-schema. De begrippen, attributen en onderlinge relaties in het informatiemodel zijn zoveel mogelijk één-op-één overgenomen. De gedachte hierachter was dat we een organisatie die al werkt met ORI zo min mogelijk meerwerk wilden bezorgen om ook ORI-A te implementeren.
 
-# Hoe verhoudt ORI-A zich tot MDTO en TMLO/ToPX?
+# Hoe verhoudt ORI-A zich tot MDTO/ToPX?
 
 ORI-A is een domeinspecifieke uitwisselstandaard voor metagegevens die worden gegenereerd tijdens het politiek en bestuurlijk besluitvormingsproces. Deze metagegevens hebben betrekking op bestuurlijke vergaderingen die worden vastgelegd in audiovisuele vorm, zoals audiotulen of videotulen. ORI-A beschrijft enkel die metagegevens.
 
