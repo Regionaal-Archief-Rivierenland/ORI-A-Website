@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     hamburger.addEventListener("click", (e) => {
+        e.preventDefault();
         toggleMenu();
 
     });
