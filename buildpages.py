@@ -26,6 +26,7 @@ def pageinfo(filestem):
     doc = frontmatter.load(filestem+".md")
     title = doc.metadata['title']
     position = int(doc.metadata['position'])
+    hide = bool(doc.metadata.get('hide_from_navigation', False))
     
     # findall <h1> headers (and their anchors)
     with open(filestem+".html", 'r') as f:
@@ -43,6 +44,7 @@ def pageinfo(filestem):
     return {
         "title": title,
         "position": position,
+        "hide": hide,
         "filename": f"{filestem.removeprefix(f"{pages_folder}/")}.html",
         "headers": headers
     }
@@ -167,7 +169,10 @@ for page in pages:
     
     # this needs current_page because that visited page needs to styled in the navbar
     logo_html = logo.render()
-    navbar_html = navbar_template.render(pages=pages, current_page=page["filename"])
+    navbar_html = navbar_template.render(
+        # don't add colofon/pages with hide_from_nav to navbar
+        pages=[p for p in pages if not p["hide"]],
+        current_page=page["filename"])
     html = base_template.render(
         logo=logo_html,
         content=page_contents,
