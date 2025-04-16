@@ -34,7 +34,7 @@ jobs:
           ln -s $(which fdfind) /usr/local/bin/fd
           # the pandoc version in 22.04 is ancient, as always
           wget -nv https://github.com/jgm/pandoc/releases/download/3.6.4/pandoc-3.6.4-1-amd64.deb -O /tmp/pandoc.deb
-          dpkg -i /tmp/pandoc.deb
+          sudo dpkg -i /tmp/pandoc.deb
 
       - name: Build site
         run: make
