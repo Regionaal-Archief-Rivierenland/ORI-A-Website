@@ -47,7 +47,7 @@ $(CSS_DST)%: $(CSS_SRC)%
 
 # Minimize SVG
 site/%.svg: ims/%.svg
-	scour -i $< -o $@
+	scour --strip-xml-prolog --no-line-breaks --enable-comment-stripping --shorten-ids -i $< -o $@
 
 site/%.pdf: pdfs/%.pdf
 	cp $< $@
