@@ -21,15 +21,15 @@ Alle begrippenlijsten die onderdeel zijn van **ORI•A** worden hieronder gedocu
 
 ## TOOI Begrippenlijsten
 
-Een paar begrippenlijsten die van toepassing zijn op **ORI•A** worden beheerd door **TOOI**, [een standaardisatie project opgezet door de rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/):
+Een paar begrippenlijsten die van toepassing zijn op **ORI•A** worden beheerd door **TOOI**, [een standaardisatie project opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/):
 
 * [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 
-# Vergaderstuk types
+# Vergaderstuktypes
 
-Van belang bij bijv. `<heeftAlsBijlage>`.
+Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Zie meer hierover onder [Documentatie](https://regionaal-archief-rivierenland.github.io/ORI-A-Website/documentatie.html).
 
 | Label      | Definitie                                                                      |
 |:-----------|:-------------------------------------------------------------------------------|
@@ -40,9 +40,9 @@ Van belang bij bijv. `<heeftAlsBijlage>`.
 | Antwoord   | Een antwoord op een vraag aan de raad.                                         |
 
 
-# Deelnemer rollen
+# Deelnemerrollen
 
-Hoort bij `<aanwezigeDeelnemer>`. Donec vitae dolor.  Donec at pede. 
+Binnen ORI-A zijn de volgende deelnemerrollen gedefinieerd. Deze rollen horen bij `<aanwezigeDeelnemer>`. 
 
 
 | Label              | Definitie                                                                             |
@@ -50,6 +50,6 @@ Hoort bij `<aanwezigeDeelnemer>`. Donec vitae dolor.  Donec at pede.
 | Voorzitter         | De voorzitter van de vergadering.                                                     |
 | Griffier           | Secretaris van de raad.                                                               |
 | Inspreker          | Een belanghebbende/betrokkene die inspreekt tijdens een agendapunt.                   |
-| Portefeuillehouder | De ambetenaar die de verantwoordelijk draagt over het besproken onderwerp/agendapunt. |
+| Portefeuillehouder | De ambtenaar die de verantwoordelijk draagt over het besproken onderwerp/agendapunt.  |
 | Raadslid           | Gekozen volksvertegenwoordiger.                                                       |
 | Griffier           | Hoofd van het griffie.                                                                |
