@@ -21,6 +21,31 @@ De ontwikkeling van openbesluitvorming.nl splitste zich uiteen in het ontwerp va
 
 Het ORI-A XML-schema is gebaseerd op het informatiemodel onder de Open API Specificatie. De elementen, attributen en onderlinge relaties in het informatiemodel zijn zoveel mogelijk één-op-één overgenomen. De gedachte hierachter is dat we een organisatie die al werkt met ORI zo min mogelijk meerwerk willen bezorgen om ook ORI-A te implementeren. ORI-A volgt de doorontwikkeling van ORI en zal waar nodig worden aangepast om gezamenlijke implementatie zo laagdrempelig mogelijk te maken.
 
+# Waarop is ORI-A van toepassing? 
+
+ORI-A is van toepassing op het uitwisselen van metagegevens die tijdens het bestuurlijk besluitvormingsproces worden gegenereerd in een raads-, staten- of bestuurlijk informatiesysteem (RIS/SIS/BIS), wanneer deze naar een digitale archiefbewaarplaats worden gemigreerd. Hoewel ORI-A in andere vormen van uitwisseling kan worden gehanteerd, is de syntax, opbouw en ontwerp gericht op dat toepassingsscenario. 
+
+# Voor wie is ORI-A bedoeld? 
+
+ORI-A is bedoeld voor iedereen die betrokken is bij de duurzame toegankelijkheid van raadsinformatie. In het bijzonder: 
+ - Adviseurs van overheidsorganisaties die de eisen opstellen voor bestuurlijke informatiesystemen en deze vertalen naar concrete maatregelen, bijvoorbeeld wat betreft de uitwisseling richting een digitale archiefbewaarplaats. Bijvoorbeeld: architecten, informatiemanagers en -beheerders, inkoopadviseurs en adviseurs digitale archivering. 
+ - Leveranciers die hun producten of diensten willen afstemmen op de behoeften vanuit de overheid. 
+ - Beheerders van bestuurlijke informatiesystemen en andere functionarissen die betrokken zijn bij uitwisseling van raadsinformatie richting een digitale archiefbewaarplaats. 
+
+ORI-A kan ook worden gebruikt als naslagwerk voor iedereen die gebruik wil maken van de ORI-A metagegevens die door een overheidsorganisatie beschikbaar zijn gesteld. Zoals voor het koppelen van een zoekmachine aan (openbare) raadsinformatie of voor het bouwen van andere applicaties die toegang bieden tot raadsinformatie, zoals viewers. 
+
+# Waarom gebruik je ORI-A? 
+
+Het doel van ORI-A is het op uniforme manier uitwisselen van de metagegevens die gebruik en raadpleging van digitale raadsinformatie mogelijk maken. Dit zodat er bij het uitwisselen geen foutgevoelige en bewerkelijke vertalingen nodig zijn. Hiermee worden de kwaliteit van de metagegevens bevorderd en de kosten voor uitwisselen verlaagd. 
+
+# Wanneer gebruik je ORI-A? 
+
+ORI-A is toepasbaar in verschillende scenario’s: 
+ - **Bij het ontwerpen van informatiesystemen**: bij het inkopen, bouwen, aanpassen of uitfaseren van een informatiesysteem kan ORI-A worden gebruikt bij het bepalen van het programma van eisen voor het uitwisselen van metagegevens. Bij het configureren en beheren van het systeem kan ORI-A worden gebruikt als nadere toelichting op het programma van eisen. 
+ - **Bij het ontwerpen van koppelingen tussen bestuurlijke informatiesystemen en digitale depots**: met behulp van het XML-schema kunnen metagegevens gestructureerd en geautomatiseerd uitgewisseld worden. 
+ - **Bij het gebruiken van metagegevens**: met behulp van het XML-schema en het metagegevensschema kunnen gebruikers metadata lezen en interpreteren. 
+ - **Bij het vormgeven van de presentatie van raadsinformatie in een digitaal depot**: ORI-A bevat in de basis alle benodigde data-elementen om de presentatie van raadsinformatie in onderlinge samenhang mogelijk te maken. 
+
 # Hoe verhoudt ORI-A zich tot MDTO/ToPX?
 
 ORI-A is een domeinspecifieke archiefstandaard voor metagegevens die worden gegenereerd tijdens het politiek en bestuurlijk besluitvormingsproces. Deze metagegevens hebben betrekking op bestuurlijke vergaderingen die worden vastgelegd in audiovisuele vorm, zoals audiotulen of videotulen. ORI-A beschrijft enkel die metagegevens.
