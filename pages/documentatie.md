@@ -13,6 +13,8 @@ Je kan de voorbeeldbestanden hier downloaden:
 
 # Visuele weergave
 
+Hier komt de visuele weergave van ORI-A te staan.
+
 <!-- ![ORI-A Diagram](ORI-A-diagram.svg) -->
 
 <!-- <div style="width: 100%; height: 600px; overflow: auto; border: 1px solid #ccc;"> -->
@@ -20,4 +22,29 @@ Je kan de voorbeeldbestanden hier downloaden:
 <!-- </div> -->
 
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.
+# Gebruik van ORI-A met MDTO
+
+ORI-A is zo opgesteld dat een gezamenlijk gebruik met MDTO zo min mogelijk dubbele data zou moeten opleveren. Alle verwijzingen  __ORI-A --> MDTO__  nemen de volgende vorm aan:
+
+``` xml
+<informatieobjectGegevens>
+    <informatieobjectType>Motie</informatieobjectType>
+    <verwijzingInformatieobject>
+        <verwijzingID>1234</verwijzingID>
+        <verwijzingNaam>Motie_van_lid_Smit</verwijzingNaam>
+    </verwijzingInformatieobject>
+<informatieobjectGegevens>
+```
+De verwijzing naar MDTO of ToPXgebeurt op het niveau van informatieobjecten en niet van bestanden. De verwijzing tussen informatieobjecten en bestanden kan in MDTO worden uitgedrukt. Daarbij biedt ORI-A de mogelijkheid om te verwijzen door middel van een ID (verplicht) en/of een naam (niet verplicht).
+
+De enige inhoudelijke informatie over informatieobjecten die in ORI-A wordt opgenomen is het ``<informatieobjectType>``. Dit heeft enige inhoudelijke overlap met ``<classificatie>`` binnen MDTO en ToPX. De reden waarom het alsnog in ORI-A is opgenomen is dat dit domeinspecifieke informatie betreft die in de context van een vergadering relevant is. Een gebruiker die alleen ORI-A data zou raadplegen, zou in dat geval alsnog de rol die het informatieobject heeft gespeeld binnen een vergadering kunnen afleiden.
+
+Vanuit de volgende ORI-A elementen wordt er verwezen naar MDTO/ToPX:
+ - ``Mediabron`` --> isvastgelegdIn -->``informatieobject``
+ - ``Mediabron`` --> heeftOndertitelbestand --> ``informatieobject``
+ - ``Vergadering`` --> isgenotuleerdIn --> ``informatieobject``
+ - ``Vergadering`` --> heeftalsBijlage --> ``informatieobject``
+ - ``Agendapunt`` --> heeftalsBijlage --> ``informatieobject``
+ - ``Stemming`` --> heeftbetrekkingOp --> ``informatieobject``
+ 
+ 
