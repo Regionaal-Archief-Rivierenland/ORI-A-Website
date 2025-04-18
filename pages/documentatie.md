@@ -35,16 +35,17 @@ ORI-A is zo opgesteld dat een gezamenlijk gebruik met MDTO zo min mogelijk dubbe
     </verwijzingInformatieobject>
 <informatieobjectGegevens>
 ```
-De verwijzing naar MDTO of ToPXgebeurt op het niveau van informatieobjecten en niet van bestanden. De verwijzing tussen informatieobjecten en bestanden kan in MDTO worden uitgedrukt. Daarbij biedt ORI-A de mogelijkheid om te verwijzen door middel van een ID (verplicht) en/of een naam (niet verplicht).
+De verwijzing naar MDTO of ToPX gebeurt op het niveau van informatieobjecten en niet van bestanden. De verwijzing tussen informatieobjecten en bestanden kan in MDTO worden uitgedrukt. Daarbij biedt ORI-A de mogelijkheid om te verwijzen door middel van een ID (verplicht) en/of een naam (niet verplicht).
 
-De enige inhoudelijke informatie over informatieobjecten die in ORI-A wordt opgenomen is het ``<informatieobjectType>``. Dit heeft enige inhoudelijke overlap met ``<classificatie>`` binnen MDTO en ToPX. De reden waarom het alsnog in ORI-A is opgenomen is dat dit domeinspecifieke informatie betreft die in de context van een vergadering relevant is. Een gebruiker die alleen ORI-A data zou raadplegen, zou in dat geval alsnog de rol die het informatieobject heeft gespeeld binnen een vergadering kunnen afleiden.
+De enige inhoudelijke informatie over informatieobjecten die in ORI-A wordt opgenomen is het `<informatieobjectType>`. Dit heeft enige inhoudelijke overlap met `<classificatie>` binnen MDTO en ToPX. De reden waarom het alsnog in ORI-A is opgenomen is dat dit domeinspecifieke informatie betreft die in de context van een vergadering relevant is. Een gebruiker die alleen ORI-A data zou raadplegen, zou in dat geval alsnog de rol die het informatieobject heeft gespeeld binnen een vergadering kunnen afleiden.
 
 Vanuit de volgende ORI-A elementen wordt er verwezen naar MDTO/ToPX:
- - ``Mediabron`` --> isvastgelegdIn -->``informatieobject``
- - ``Mediabron`` --> heeftOndertitelbestand --> ``informatieobject``
- - ``Vergadering`` --> isgenotuleerdIn --> ``informatieobject``
- - ``Vergadering`` --> heeftalsBijlage --> ``informatieobject``
- - ``Agendapunt`` --> heeftalsBijlage --> ``informatieobject``
- - ``Stemming`` --> heeftbetrekkingOp --> ``informatieobject``
- 
- 
+
+| ORI-A element | Verwijzing             | MDTO element        |
+|:--------------|:-----------------------|:--------------------|
+| <mediabron>   | isvastgelegdIn         | <informatieobject>  |
+| <mediabron>   | heeftOndertitelbestand | <informatieobject>  |
+| <vergadering> | isgenotuleerdIn        | <informatieobject>  |
+| <vergadering> | heeftalsBijlage        | <informatieobject>  |
+| <agendapunt>  | heeftalsBijlage        | <informatieobject>  |
+| <stemming>    | heeftbetrekkingOp      | <informatieobject>  |
