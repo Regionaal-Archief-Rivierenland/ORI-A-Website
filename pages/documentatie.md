@@ -41,11 +41,11 @@ De enige inhoudelijke informatie over informatieobjecten die in ORI-A wordt opge
 
 Vanuit de volgende ORI-A elementen wordt er verwezen naar MDTO/ToPX:
 
-| ORI-A element | Verwijzing             | MDTO element        |
-|:--------------|:-----------------------|:--------------------|
-| <mediabron>   | isvastgelegdIn         | <informatieobject>  |
-| <mediabron>   | heeftOndertitelbestand | <informatieobject>  |
-| <vergadering> | isgenotuleerdIn        | <informatieobject>  |
-| <vergadering> | heeftalsBijlage        | <informatieobject>  |
-| <agendapunt>  | heeftalsBijlage        | <informatieobject>  |
-| <stemming>    | heeftbetrekkingOp      | <informatieobject>  |
+| ORI-A element | Verwijzing             | MDTO element      |
+|:--------------|:-----------------------|:------------------|
+| Mediabron     | isvastgelegdIn         | Informatieobject  |
+| Mediabron     | heeftOndertitelbestand | Informatieobject  |
+| Vergadering   | isgenotuleerdIn        | Informatieobject  |
+| Vergadering   | heeftalsBijlage        | Informatieobject  |
+| Agendapunt    | heeftalsBijlage        | Informatieobject  |
+| Stemming      | heeftbetrekkingOp      | Informatieobject  |
