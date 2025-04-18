@@ -23,8 +23,8 @@ Het ORI-A XML-schema is gebaseerd op het informatiemodel onder de Open API Speci
 
 # Hoe verhoudt ORI-A zich tot MDTO/ToPX?
 
-ORI-A is een domeinspecifieke uitwisselstandaard voor metagegevens die worden gegenereerd tijdens het politiek en bestuurlijk besluitvormingsproces. Deze metagegevens hebben betrekking op bestuurlijke vergaderingen die worden vastgelegd in audiovisuele vorm, zoals audiotulen of videotulen. ORI-A beschrijft enkel die metagegevens.
+ORI-A is een domeinspecifieke archiefstandaard voor metagegevens die worden gegenereerd tijdens het politiek en bestuurlijk besluitvormingsproces. Deze metagegevens hebben betrekking op bestuurlijke vergaderingen die worden vastgelegd in audiovisuele vorm, zoals audiotulen of videotulen. ORI-A beschrijft enkel die metagegevens.
 
 MDTO (Metagegevens voor duurzaam toegankelijke overheidsinformatie) is een norm voor het vastleggen en uitwisselen van eenduidige metagegevens om de duurzame toegankelijkheid van overheidsinformatie mogelijk te maken. MDTO beschrijft hierin metagegevens voor informatieobjecten en bestanden.
 
-Wanneer binnen het bestuurlijk besluitvormingsproces informatieobjecten en/of bestanden worden beschreven of uitgewisseld, raden we aan deze in MDTO (of ToPX) uit te drukken. Voor metagegevens over het raadsproces zelf (over vergaderingen, deelnemers, agendapunten, spreekfragmenten et cetera) is ORI-A bedoeld. Dit betekent dat uitwisseling van raadsinformatie naar een digitaal depot in de praktijk altijd een gecombineerde toepassing zal zijn van ORI-A en MDTO/ToPX.
+Wanneer binnen het bestuurlijk besluitvormingsproces informatieobjecten en/of bestanden worden beschreven of uitgewisseld, raden we aan deze in MDTO (of ToPX) uit te drukken. Voor metagegevens over het besluitvormingsproces zelf (over vergaderingen, deelnemers, agendapunten, spreekfragmenten et cetera) is ORI-A bedoeld. Dit betekent dat uitwisseling van raadsinformatie naar een digitaal depot in de praktijk altijd een gecombineerde toepassing zal zijn van ORI-A en MDTO/ToPX.

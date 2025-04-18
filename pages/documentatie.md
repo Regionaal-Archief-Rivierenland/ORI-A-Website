@@ -4,7 +4,7 @@ position: 2
 ---
 
 
-**Rijnder <mark>Opmerking</mark>**: Ik denk dat deze pagina uiteindelijk voor bedoeld is als technische documentatie. Een beetje iets als dit, maar dan met meer XML voorbeelden: <https://vng-realisatie.github.io/ODS-Open-Raadsinformatie/catalog>
+**Rijnder <mark>Opmerking</mark>**: Ik denk dat deze pagina uiteindelijk is bedoeld voor technische documentatie. Een beetje iets als dit, maar dan met meer XML voorbeelden: <https://vng-realisatie.github.io/ODS-Open-Raadsinformatie/catalog>
 
 
 # Voorbeeldbestanden
@@ -49,3 +49,13 @@ Vanuit de volgende ORI-A elementen wordt er verwezen naar MDTO/ToPX:
 | Vergadering   | heeftalsBijlage        | Informatieobject  |
 | Agendapunt    | heeftalsBijlage        | Informatieobject  |
 | Stemming      | heeftbetrekkingOp      | Informatieobject  |
+
+# Verplichte elementen in ORI-A
+
+ORI-A kent relatief weinig verplichte elementen. Iedere ORI-A XML moet ten minste één `<vergadering>`, `<agendapunt>` en `<mediabron>` bevatten. Dit is vanuit de gedachte dat er altijd een vergadering moet zijn geweest waar data over is gegenereerd, deze vergadering altijd minstens één agendapunt moet hebben gehad en er altijd een audio en/of visueel verslag moet zijn opgesteld om te kunnen worden gearchiveerd.
+
+# Vormgeving van ORI-A XML-bestanden
+
+Het ORI-A XML-schema is zo opgesteld dat er maximaal één vergadering per ORI-A XML-bestand wordt uitgedrukt. Hierdoor konden de interne verwijzingen tussen andere ORI-A elementen en `<vergadering>` simpel worden gehouden. 
+
+Het ORI-A XML-schema staat overigens toe dat gegevens over één vergadering over meerdere ORI-A XML-bestanden worden verspreid. Uit opnametests is gebleken dat sommige e-depots metagegevens (zoals ORI-A data) direct aan mappen of digitale bestanden koppelen. In dat geval kan het wenselijk zijn om de ORI-A XML-bestanden op te knippen in meerdere bestanden, zodat ze makkelijk aan het juiste niveau kunnen worden gerelateerd.
