@@ -1,0 +1,47 @@
+name: Build & Deploy Website to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write  # Needed to push to gh-pages
+
+    steps:
+      - name: Check out source code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y make scour ripgrep fd-find uglifyjs npm wget fonttools
+          pip3 install --user jinja2 beautifulsoup4 python-frontmatter
+          npm install -g lightningcss-cli
+          wget -nv https://github.com/wilsonzlin/minify-html/releases/download/v0.16.4/minhtml-0.16.4-x86_64-unknown-linux-gnu -O /usr/local/bin/minify-html
+          chmod +x /usr/local/bin/minify-html
+          # ubuntu is extremely silly and decided to rename fd
+          # because there is already an _incredibly_ obscure program
+          # named fd (ever heard of user resolvable pkg conflicts?)
+          ln -s $(which fdfind) /usr/local/bin/fd
+          # the pandoc version in 22.04 is ancient, as always
+          wget -nv https://github.com/jgm/pandoc/releases/download/3.6.4/pandoc-3.6.4-1-amd64.deb -O /tmp/pandoc.deb
+          sudo dpkg -i /tmp/pandoc.deb
+
+      - name: Build site
+        run: make
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site

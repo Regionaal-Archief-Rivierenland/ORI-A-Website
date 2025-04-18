@@ -24,11 +24,21 @@ Also, the official woff2 files from the Lato website had vertical spacing issues
     font-style: normal;
 }
 
+/* The monospace font looks kind of okay on some windows devices, actually */
+@font-face {
+    font-family: "CommitMonoVariable";
+    src: url("CommitMonoVariable.woff2") format("woff2");
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+
 :root {
     --pico-block-spacing-vertical: 2.0rem;
     --pico-block-spacing-horizontal: 2.0rem;
     /* Ubuntu, Open Sans, Cantarell, Lato are nice */
-    --header-font: "Lato";
+    --header-font: "Lato", var(--pico-font-family-sans-serif);
+    --monospace-font: "CommitMonoVariable", var(--pico-font-family-monospace);
     /* Windows users */
     /* --pico-font-family-sans-serif: "Segoe UI Variable Static Display"; */
 }
@@ -42,9 +52,6 @@ html {
 h1, h2, h3, #documentation-menu, .logo {
     font-family: var(--header-font);
 }
-
-
-
 
 /* Used to add an icon to external URLS */
 .external {
@@ -92,12 +99,16 @@ aside {
     grid-area: sidebar;
     /* for some reason, setting this to an absolute value is the only way to make sticky work,
        _and_ push the footer at the same time */
-    height: 600px;
+    height: 755px;
 }
 
 /* Style currently selected item in navbar */
 .listnav a.active {
     background-color: var(--pico-code-background-color);
+}
+
+[data-theme="dark"] .listnav a.active {
+    background-color: var(--pico-muted-border-color);
 }
 
 .listnav ul ul {
@@ -145,7 +156,7 @@ aside {
   left: 50%;
   width: 1.25em;  /* Adjust size as needed */
   height: 1.25em;
-  transform: translate(-8.2%, -9.3%);
+  transform: translate(-8.1%, -9.1%);
   pointer-events: none; /* Ensures text selection works normally */
   user-select: none; /* Prevents SVG from being treated as selectable text */
 }
@@ -198,6 +209,7 @@ main {
 footer {
     grid-area: footer;
     padding-bottom: 20px;
+    z-index: 2;
 }
 
 /* Syntax highlighting
@@ -205,12 +217,17 @@ footer {
 
 /* render monospace'd code smaller */
 code {
-    font-size: 0.85em;
+    font-size: 0.86em;
+    font-family: CommitMonoVariable;
+
+    /* SF Mono */
+    /* font-size: 0.85em; */
 }
 
 /* for some reason this looks strange at the inline code fontsize */
 pre > code {
-    font-size: 0.96em;
+    font-family: CommitMonoVariable;
+    font-size: 1.0em;
 }
 
 code {color: var(--pico-color)}

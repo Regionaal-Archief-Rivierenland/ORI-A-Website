@@ -11,7 +11,8 @@ Audiotulen en videotulen worden gemaakt en beheerd in domeinspecifieke procesond
 
 Binnen de Nederlandse archiefsector is men gewoon te werken met XML bij het uitwisselen van overheidsinformatie naar digitale depots. Het Nationaal Archief beheert hiervoor het MDTO XML-schema. Dit metagegevensschema beschrijft de syntax en elementen voor metagegevens die betrekking hebben op informatieobjecten en bestanden. ORI-A biedt de mogelijkheid om daarnaast metagegevens uit te wisselen die specifiek betrekking hebben op het domein van bestuurlijke besluitvorming. 
 
-# Wat is ORI en hoe verhoudt ORI-A zich tot ORI?
+<!-- misschien de "A" in "ORI-A" schuin gedrukt maken hier? -->
+# Wat is ORI, en hoe verhoudt ORI zich tot ORI-A?
 
 ORI (Open Raadsinformatie, ook wel [Open Raads-, Staten- en Bestuursinformatie](https://vng-realisatie.github.io/ODS-Open-Raadsinformatie/)) is een verzamelnaam voor een aantal initiatieven die met elkaar samenhangen rondom het thema van actieve openbaarmaking van informatie uit het politiek en bestuurlijk besluitvormingsproces. 
 
@@ -21,7 +22,7 @@ De ontwikkeling van openbesluitvorming.nl splitste zich uiteen in het ontwerp va
 
 ORI-A heeft het informatiemodel onder de Open API Specificatie als basis genomen voor de ontwikkeling van een XML-schema. De begrippen, attributen en onderlinge relaties in het informatiemodel zijn zoveel mogelijk één-op-één overgenomen. De gedachte hierachter was dat we een organisatie die al werkt met ORI zo min mogelijk meerwerk wilden bezorgen om ook ORI-A te implementeren.
 
-# Hoe verhoudt ORI-A zich tot MDTO en TMLO/ToPX?
+# Hoe verhoudt ORI-A zich tot MDTO/ToPX?
 
 ORI-A is een domeinspecifieke uitwisselstandaard voor metagegevens die worden gegenereerd tijdens het politiek en bestuurlijk besluitvormingsproces. Deze metagegevens hebben betrekking op bestuurlijke vergaderingen die worden vastgelegd in audiovisuele vorm, zoals audiotulen of videotulen. ORI-A beschrijft enkel die metagegevens.
 
