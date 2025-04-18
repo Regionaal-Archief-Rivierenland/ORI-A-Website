@@ -11,8 +11,7 @@ Audiotulen en videotulen worden gemaakt en beheerd in domeinspecifieke procesond
 
 Binnen de Nederlandse archiefsector is men gewoon te werken met XML bij het uitwisselen van overheidsinformatie naar digitale depots. Het Nationaal Archief beheert hiervoor het MDTO XML-schema. Dit metagegevensschema beschrijft de syntax en elementen voor metagegevens die betrekking hebben op informatieobjecten en bestanden. ORI-A biedt de mogelijkheid om daarnaast metagegevens uit te wisselen die specifiek betrekking hebben op het domein van bestuurlijke besluitvorming. 
 
-<!-- misschien de "A" in "ORI-A" schuin gedrukt maken hier? -->
-# Wat is ORI, en hoe verhoudt ORI zich tot ORI-A?
+# Hoe verhoudt ORI-A zich tot ORI?
 
 ORI (Open Raadsinformatie, ook wel [Open Raads-, Staten- en Bestuursinformatie](https://vng-realisatie.github.io/ODS-Open-Raadsinformatie/)) is een verzamelnaam voor een aantal initiatieven die met elkaar samenhangen rondom het thema van actieve openbaarmaking van informatie uit het politiek en bestuurlijk besluitvormingsproces. 
 
@@ -20,7 +19,7 @@ Vanaf 2015 heeft een samenwerking tussen de Open State Foundation, VNG Realisati
 
 De ontwikkeling van openbesluitvorming.nl splitste zich uiteen in het ontwerp van een pull-API ([Open Raadsinformatie API](https://github.com/openstate/open-raadsinformatie)), een elastic search front-end voor het doorzoekbaar maken van deze data ([openbesluitvorming](https://github.com/ontola/openbesluitvorming)) en een informatiemodel voor raadsinformatie op basis waarvan een Open API Specificatie wordt opgesteld ([ODS Open Raadsinformatie](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie)). Deze laatste heeft als basis gediend voor ORI-A.
 
-ORI-A heeft het informatiemodel onder de Open API Specificatie als basis genomen voor de ontwikkeling van een XML-schema. De begrippen, attributen en onderlinge relaties in het informatiemodel zijn zoveel mogelijk één-op-één overgenomen. De gedachte hierachter was dat we een organisatie die al werkt met ORI zo min mogelijk meerwerk wilden bezorgen om ook ORI-A te implementeren.
+Het ORI-A XML-schema is gebaseerd op het informatiemodel onder de Open API Specificatie. De elementen, attributen en onderlinge relaties in het informatiemodel zijn zoveel mogelijk één-op-één overgenomen. De gedachte hierachter is dat we een organisatie die al werkt met ORI zo min mogelijk meerwerk willen bezorgen om ook ORI-A te implementeren. ORI-A volgt de doorontwikkeling van ORI en zal waar nodig worden aangepast om gezamenlijke implementatie zo laagdrempelig mogelijk te maken.
 
 # Hoe verhoudt ORI-A zich tot MDTO/ToPX?
 
