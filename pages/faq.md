@@ -27,8 +27,9 @@ ORI-A is van toepassing op het uitwisselen van metagegevens die tijdens het best
 
 # Voor wie is ORI-A bedoeld? 
 
-ORI-A is bedoeld voor iedereen die betrokken is bij de duurzame toegankelijkheid van raadsinformatie. In het bijzonder: 
- - Adviseurs van overheidsorganisaties die de eisen opstellen voor bestuurlijke informatiesystemen en deze vertalen naar concrete maatregelen, bijvoorbeeld wat betreft de uitwisseling richting een digitale archiefbewaarplaats. Bijvoorbeeld: architecten, informatiemanagers en -beheerders, inkoopadviseurs en adviseurs digitale archivering. 
+ORI-A is bedoeld voor iedereen die betrokken is bij de duurzame toegankelijkheid van raadsinformatie. In het bijzonder:
+
+- Adviseurs van overheidsorganisaties die de eisen opstellen voor bestuurlijke informatiesystemen en deze vertalen naar concrete maatregelen, bijvoorbeeld wat betreft de uitwisseling richting een digitale archiefbewaarplaats. Bijvoorbeeld: architecten, informatiemanagers en -beheerders, inkoopadviseurs en adviseurs digitale archivering. 
  - Leveranciers die hun producten of diensten willen afstemmen op de behoeften vanuit de overheid. 
  - Beheerders van bestuurlijke informatiesystemen en andere functionarissen die betrokken zijn bij uitwisseling van raadsinformatie richting een digitale archiefbewaarplaats. 
 
@@ -40,11 +41,12 @@ Het doel van ORI-A is het op uniforme manier uitwisselen van de metagegevens die
 
 # Wanneer gebruik je ORI-A? 
 
-ORI-A is toepasbaar in verschillende scenario’s: 
- - **Bij het ontwerpen van informatiesystemen**: bij het inkopen, bouwen, aanpassen of uitfaseren van een informatiesysteem kan ORI-A worden gebruikt bij het bepalen van het programma van eisen voor het uitwisselen van metagegevens. Bij het configureren en beheren van het systeem kan ORI-A worden gebruikt als nadere toelichting op het programma van eisen. 
- - **Bij het ontwerpen van koppelingen tussen bestuurlijke informatiesystemen en digitale depots**: met behulp van het XML-schema kunnen metagegevens gestructureerd en geautomatiseerd uitgewisseld worden. 
- - **Bij het gebruiken van metagegevens**: met behulp van het XML-schema en het metagegevensschema kunnen gebruikers metadata lezen en interpreteren. 
- - **Bij het vormgeven van de presentatie van raadsinformatie in een digitaal depot**: ORI-A bevat in de basis alle benodigde data-elementen om de presentatie van raadsinformatie in onderlinge samenhang mogelijk te maken. 
+ORI-A is toepasbaar in verschillende scenario’s:
+
+- **Bij het ontwerpen van informatiesystemen**: bij het inkopen, bouwen, aanpassen of uitfaseren van een informatiesysteem kan ORI-A worden gebruikt bij het bepalen van het programma van eisen voor het uitwisselen van metagegevens. Bij het configureren en beheren van het systeem kan ORI-A worden gebruikt als nadere toelichting op het programma van eisen. 
+- **Bij het ontwerpen van koppelingen tussen bestuurlijke informatiesystemen en digitale depots**: met behulp van het XML-schema kunnen metagegevens gestructureerd en geautomatiseerd uitgewisseld worden. 
+- **Bij het gebruiken van metagegevens**: met behulp van het XML-schema en het metagegevensschema kunnen gebruikers metadata lezen en interpreteren. 
+- **Bij het vormgeven van de presentatie van raadsinformatie in een digitaal depot**: ORI-A bevat in de basis alle benodigde data-elementen om de presentatie van raadsinformatie in onderlinge samenhang mogelijk te maken. 
 
 # Hoe verhoudt ORI-A zich tot MDTO/ToPX?
 
