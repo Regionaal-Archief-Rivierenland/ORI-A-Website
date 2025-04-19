@@ -96,7 +96,7 @@ def headers_to_accordions(html):
     # Section for the title
     title_section = soup.new_tag("section")
     new_title = soup.new_tag("h1", id="FAQ")
-    new_title.string = "Veel gestelgde vragen"
+    new_title.string = "Veel gestelde vragen"
     title_section.append(new_title)
 
     # Section for the accordions
