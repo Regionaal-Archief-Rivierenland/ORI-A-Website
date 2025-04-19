@@ -33,13 +33,12 @@ def pageinfo(filestem):
         soup = BeautifulSoup(f, 'html.parser')
 
     headers = []
-    # if title != "FAQ":
-    #     # don't generate sidebar headers for the faq pages
-    for header in soup.find_all('h1'):
-        # pandoc generates anchors automatically!
-        anchor = header.get('id')
-        if anchor:
-            headers.append((header.text, anchor))
+    if title != "FAQ":
+        for header in soup.find_all('h1'):
+            # pandoc generates anchors automatically!
+            anchor = header.get('id')
+            if anchor:
+                headers.append((header.text, anchor))
 
     return {
         "title": title,
