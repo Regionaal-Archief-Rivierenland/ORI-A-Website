@@ -162,8 +162,8 @@ for page in pages:
     # process html
     page_contents = add_icon_to_links(page_contents)
     page_contents = colorize_inline_xml(page_contents)
-    # if page["title"] == "FAQ":
-    #     page_contents = headers_to_accordions(page_contents)
+    if page["title"] == "FAQ":
+        page_contents = headers_to_accordions(page_contents)
     page_contents = anchor_icon_to_headers(page_contents)
     
     # this needs current_page because that visited page needs to styled in the navbar
