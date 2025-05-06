@@ -16,7 +16,7 @@ PDF_DST := $(patsubst pdfs/%.pdf, site/%.pdf, $(PDF_SRC))
 MD_SRC := $(wildcard pages/*.md)
 HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
 
-MAIN_HTML = over-ori-a
+MAIN_HTML = over-ori-a.html
 
 FONT_TITLE := lato.woff2
 FONT_TITLE_BOLD := lato-bold.woff2
