@@ -44,7 +44,7 @@ def pageinfo(filestem):
         "title": title,
         "position": position,
         "hide": hide,
-        "filename": f"{filestem.removeprefix(f"{pages_folder}/")}.html",
+        "filename": f"{filestem.removeprefix(f"{pages_folder}/")}",
         "headers": headers
     }
 
@@ -144,7 +144,7 @@ pages = sorted(pages, key=lambda p: p["position"])
 
 for page in pages:
     # read pandoc-converted HTML file
-    with open(f"{html_folder}/{page['filename']}", 'r') as f:
+    with open(f"{html_folder}/{page['filename']}.html", 'r') as f:
         page_contents = f.read()
 
     with open(f"{output_folder}/sun.svg") as f:
