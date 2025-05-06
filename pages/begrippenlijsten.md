@@ -29,7 +29,7 @@ Een paar begrippenlijsten die van toepassing zijn op **ORI•A** worden beheerd 
 
 # Vergaderstuktypes
 
-Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Zie meer hierover onder [Documentatie](https://regionaal-archief-rivierenland.github.io/ORI-A-Website/documentatie.html).
+Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. <!-- TODO: misschien een infobox van maken?-->Voor meer informatie, zie [Gebruik van ORI-A met MDTO](documentatie.html#gebruik-van-ori-a-met-mdto).
 
 | Label      | Definitie                                                                      |
 |:-----------|:-------------------------------------------------------------------------------|
