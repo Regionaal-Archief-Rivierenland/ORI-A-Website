@@ -7,7 +7,7 @@
     <meta name="description" content="ORI-A open raadsinformatie archiefstandaard">
     <meta name="keywords"
           content="archiefstandaard, raadsinformatie, ORI, archief, videotuul, open-source, RIS, ORI-a">
-    <title>ORI•A - Over ORI•A</title>
+    <title>ORI•A - Colofon</title>
     <link rel="stylesheet" href="pico/pico.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg">
@@ -71,7 +71,7 @@
           <div aria-label="Navigation menu" class="container">
             <ul>
   
-  <li><b><a href="over-ori-a" class='active contrast'>Over ORI•A</a></b>
+  <li><b><a href="over-ori-a" class='contrast'>Over ORI•A</a></b>
     
       <ul>
         
@@ -127,7 +127,7 @@ XML-bestanden</a></li>
         <nav class="listnav">
           <ul>
   
-  <li><b><a href="over-ori-a" class='active contrast'>Over ORI•A</a></b>
+  <li><b><a href="over-ori-a" class='contrast'>Over ORI•A</a></b>
     
       <ul>
         
@@ -181,33 +181,22 @@ XML-bestanden</a></li>
       </aside>
       <main class="container">
         <article role="document">
-          <h1 id="wat-is-oria">Wat is ORI•A?<a aria-hidden="true" class="secondary" href="#wat-is-oria">#</a></h1>
-<p>De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels
-voor de uitwisseling van raadsinformatie in XML-formaat. Het is
-gebaseerd op het informatiemodel onder de <a class="external" href="https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie">Open
-API Specificatie voor Raadsinformatie</a>.</p>
-<h2 id="achtergrond">Achtergrond<a aria-hidden="true" class="secondary" href="#achtergrond">#</a></h2>
-<p>Vanuit enkele archiefdiensten is de behoefte ontstaan om te komen tot
-een standaard voor het uitwisselen van raadsinformatie naar een
-voorziening voor digitale duurzaamheid (e-depots). Deze archiefdiensten
-hebben zich verenigd in de
-<a class="secondary" href="colofon.html">Werkgroep Archivering
-Raadsinformatie</a>.</p>
-<p>Het doel van de werkgroep is tweeledig: enerzijds het ontwikkelen,
-testen en borgen van een ORI-A XSD, anderzijds het schrijven van
-implementatiescenario’s en het gebruik van de standaard aanmoedigen.</p>
-<h2 id="status">Status<a aria-hidden="true" class="secondary" href="#status">#</a></h2>
-<p>De ORI-A XSD is momenteel in bèta, en <a class="external" href="https://github.com/Regionaal-Archief-Rivierenland/ORI-XSD/releases">kan
-hier gedownload worden</a>. De standaard wordt de komende tijd getest
-aan enkele praktijkcases en op basis daarvan aangepast. Wijzigingen op
-de ORI-A XSD ten gevolge van deze tests worden op <a class="external" href="https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD">GitHub</a>
-bijgehouden.</p>
-<h2 id="documentatie">Documentatie<a aria-hidden="true" class="secondary" href="#documentatie">#</a></h2>
-<p>De documentatie van de XSD is een work-in-progress. De betekenis van
-de verschillende (sub)elementen kan op dit moment achterhaald worden uit
-de waardes binnen de <code class="sourceCode xml">&lt;<span class="kw">xs:documentation</span>&gt;</code> tags.</p>
-<p>Bovendien bestaat er een <a href="ORI-A-diagram.pdf">grafische
-representatie van het informatiemodel.</a></p>
+          <h1 id="colofon">Colofon<a aria-hidden="true" class="secondary" href="#colofon">#</a></h1>
+<hr/>
+<h2 id="werkgroep-archivering-raadsinformatie">Werkgroep archivering
+raadsinformatie<a aria-hidden="true" class="secondary" href="#werkgroep-archivering-raadsinformatie">#</a></h2>
+<p>De Open Raadsinformatie Archiefstandaard is een initiatief van en
+wordt beheerd door de Werkgroep Archivering Raadsinformatie. De
+werkgroep bestaat uit afgevaardigden van de volgende organisaties:</p>
+<ul>
+<li><strong>Erfgoed Leiden en Omstreken</strong></li>
+<li><strong>Provincie Zeeland</strong></li>
+<li><strong>Regionaal Archief Rivierenland</strong></li>
+<li><strong>Regionaal Archief Tilburg</strong></li>
+<li><strong>Zeeuws Archief</strong></li>
+</ul>
+<p>Oud-deelnemers: <strong>Regionaal Archief Zutphen</strong>,
+<strong>Waterlands Archief</strong></p>
 
         </article>
       </main>

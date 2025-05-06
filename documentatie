@@ -7,7 +7,7 @@
     <meta name="description" content="ORI-A open raadsinformatie archiefstandaard">
     <meta name="keywords"
           content="archiefstandaard, raadsinformatie, ORI, archief, videotuul, open-source, RIS, ORI-a">
-    <title>ORI•A - Over ORI•A</title>
+    <title>ORI•A - Documentatie</title>
     <link rel="stylesheet" href="pico/pico.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg">
@@ -71,7 +71,7 @@
           <div aria-label="Navigation menu" class="container">
             <ul>
   
-  <li><b><a href="over-ori-a" class='active contrast'>Over ORI•A</a></b>
+  <li><b><a href="over-ori-a" class='contrast'>Over ORI•A</a></b>
     
       <ul>
         
@@ -81,7 +81,7 @@
     
   </li>
   
-  <li><b><a href="documentatie" class='contrast'>Documentatie</a></b>
+  <li><b><a href="documentatie" class='active contrast'>Documentatie</a></b>
     
       <ul>
         
@@ -127,7 +127,7 @@ XML-bestanden</a></li>
         <nav class="listnav">
           <ul>
   
-  <li><b><a href="over-ori-a" class='active contrast'>Over ORI•A</a></b>
+  <li><b><a href="over-ori-a" class='contrast'>Over ORI•A</a></b>
     
       <ul>
         
@@ -137,7 +137,7 @@ XML-bestanden</a></li>
     
   </li>
   
-  <li><b><a href="documentatie" class='contrast'>Documentatie</a></b>
+  <li><b><a href="documentatie" class='active contrast'>Documentatie</a></b>
     
       <ul>
         
@@ -181,33 +181,107 @@ XML-bestanden</a></li>
       </aside>
       <main class="container">
         <article role="document">
-          <h1 id="wat-is-oria">Wat is ORI•A?<a aria-hidden="true" class="secondary" href="#wat-is-oria">#</a></h1>
-<p>De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels
-voor de uitwisseling van raadsinformatie in XML-formaat. Het is
-gebaseerd op het informatiemodel onder de <a class="external" href="https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie">Open
-API Specificatie voor Raadsinformatie</a>.</p>
-<h2 id="achtergrond">Achtergrond<a aria-hidden="true" class="secondary" href="#achtergrond">#</a></h2>
-<p>Vanuit enkele archiefdiensten is de behoefte ontstaan om te komen tot
-een standaard voor het uitwisselen van raadsinformatie naar een
-voorziening voor digitale duurzaamheid (e-depots). Deze archiefdiensten
-hebben zich verenigd in de
-<a class="secondary" href="colofon.html">Werkgroep Archivering
-Raadsinformatie</a>.</p>
-<p>Het doel van de werkgroep is tweeledig: enerzijds het ontwikkelen,
-testen en borgen van een ORI-A XSD, anderzijds het schrijven van
-implementatiescenario’s en het gebruik van de standaard aanmoedigen.</p>
-<h2 id="status">Status<a aria-hidden="true" class="secondary" href="#status">#</a></h2>
-<p>De ORI-A XSD is momenteel in bèta, en <a class="external" href="https://github.com/Regionaal-Archief-Rivierenland/ORI-XSD/releases">kan
-hier gedownload worden</a>. De standaard wordt de komende tijd getest
-aan enkele praktijkcases en op basis daarvan aangepast. Wijzigingen op
-de ORI-A XSD ten gevolge van deze tests worden op <a class="external" href="https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD">GitHub</a>
-bijgehouden.</p>
-<h2 id="documentatie">Documentatie<a aria-hidden="true" class="secondary" href="#documentatie">#</a></h2>
-<p>De documentatie van de XSD is een work-in-progress. De betekenis van
-de verschillende (sub)elementen kan op dit moment achterhaald worden uit
-de waardes binnen de <code class="sourceCode xml">&lt;<span class="kw">xs:documentation</span>&gt;</code> tags.</p>
-<p>Bovendien bestaat er een <a href="ORI-A-diagram.pdf">grafische
-representatie van het informatiemodel.</a></p>
+          <p><strong>Rijnder <mark>Opmerking</mark></strong>: Ik denk dat deze
+pagina uiteindelijk is bedoeld voor technische documentatie. Een beetje
+iets als dit, maar dan met meer XML voorbeelden: <a class="external" href="https://vng-realisatie.github.io/ODS-Open-Raadsinformatie/catalog">https://vng-realisatie.github.io/ODS-Open-Raadsinformatie/catalog</a></p>
+<h1 id="voorbeeldbestanden">Voorbeeldbestanden<a aria-hidden="true" class="secondary" href="#voorbeeldbestanden">#</a></h1>
+<p>Je kan de voorbeeldbestanden hier downloaden:</p>
+<h1 id="visuele-weergave">Visuele weergave<a aria-hidden="true" class="secondary" href="#visuele-weergave">#</a></h1>
+<p>Hier komt de visuele weergave van ORI-A te staan.</p>
+<!-- ![ORI-A Diagram](ORI-A-diagram.svg) -->
+<!-- <div style="width: 100%; height: 600px; overflow: auto; border: 1px solid #ccc;"> -->
+<!--   <iframe src="ORI-A-diagram.svg" style="width: 100%; height: 100%; border: none;"></iframe> -->
+<!-- </div> -->
+<h1 id="gebruik-van-ori-a-met-mdto">Gebruik van ORI-A met MDTO<a aria-hidden="true" class="secondary" href="#gebruik-van-ori-a-met-mdto">#</a></h1>
+<p>ORI-A is zo opgesteld dat een gezamenlijk gebruik met MDTO zo min
+mogelijk dubbele data zou moeten opleveren. Alle verwijzingen
+<strong>ORI-A –&gt; MDTO</strong> nemen de volgende vorm aan:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a>&lt;<span class="kw">informatieobjectGegevens</span>&gt;</span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>    &lt;<span class="kw">informatieobjectType</span>&gt;Motie&lt;/<span class="kw">informatieobjectType</span>&gt;</span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>    &lt;<span class="kw">verwijzingInformatieobject</span>&gt;</span>
+<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>        &lt;<span class="kw">verwijzingID</span>&gt;1234&lt;/<span class="kw">verwijzingID</span>&gt;</span>
+<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>        &lt;<span class="kw">verwijzingNaam</span>&gt;Motie_van_lid_Smit&lt;/<span class="kw">verwijzingNaam</span>&gt;</span>
+<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>    &lt;/<span class="kw">verwijzingInformatieobject</span>&gt;</span>
+<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a>&lt;<span class="kw">informatieobjectGegevens</span>&gt;</span></code></pre></div>
+<p>De verwijzing naar MDTO of ToPX gebeurt op het niveau van
+informatieobjecten en niet van bestanden. De verwijzing tussen
+informatieobjecten en bestanden kan in MDTO worden uitgedrukt. Daarbij
+biedt ORI-A de mogelijkheid om te verwijzen door middel van een ID
+(verplicht) en/of een naam (niet verplicht).</p>
+<p>De enige inhoudelijke informatie over informatieobjecten die in ORI-A
+wordt opgenomen is het <code class="sourceCode xml">&lt;<span class="kw">informatieobjectType</span>&gt;</code>. Dit
+heeft enige inhoudelijke overlap met <code class="sourceCode xml">&lt;<span class="kw">classificatie</span>&gt;</code>
+binnen MDTO en ToPX. De reden waarom het alsnog in ORI-A is opgenomen is
+dat dit domeinspecifieke informatie betreft die in de context van een
+vergadering relevant is. Een gebruiker die alleen ORI-A data zou
+raadplegen, zou in dat geval alsnog de rol die het informatieobject
+heeft gespeeld binnen een vergadering kunnen afleiden.</p>
+<p>Vanuit de volgende ORI-A elementen wordt er verwezen naar
+MDTO/ToPX:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ORI-A element</th>
+<th style="text-align: left;">Verwijzing</th>
+<th style="text-align: left;">MDTO element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mediabron</td>
+<td style="text-align: left;">isvastgelegdIn</td>
+<td style="text-align: left;">Informatieobject</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mediabron</td>
+<td style="text-align: left;">heeftOndertitelbestand</td>
+<td style="text-align: left;">Informatieobject</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vergadering</td>
+<td style="text-align: left;">isgenotuleerdIn</td>
+<td style="text-align: left;">Informatieobject</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vergadering</td>
+<td style="text-align: left;">heeftalsBijlage</td>
+<td style="text-align: left;">Informatieobject</td>
+</tr>
+<tr>
+<td style="text-align: left;">Agendapunt</td>
+<td style="text-align: left;">heeftalsBijlage</td>
+<td style="text-align: left;">Informatieobject</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stemming</td>
+<td style="text-align: left;">heeftbetrekkingOp</td>
+<td style="text-align: left;">Informatieobject</td>
+</tr>
+</tbody>
+</table>
+<h1 id="verplichte-elementen-in-ori-a">Verplichte elementen in
+ORI-A<a aria-hidden="true" class="secondary" href="#verplichte-elementen-in-ori-a">#</a></h1>
+<p>ORI-A kent relatief weinig verplichte elementen. Iedere ORI-A XML
+moet ten minste één <code class="sourceCode xml">&lt;<span class="kw">vergadering</span>&gt;</code>,
+<code class="sourceCode xml">&lt;<span class="kw">agendapunt</span>&gt;</code> en <code class="sourceCode xml">&lt;<span class="kw">mediabron</span>&gt;</code>
+bevatten. Dit is vanuit de gedachte dat er altijd een vergadering moet
+zijn geweest waar data over is gegenereerd, deze vergadering altijd
+minstens één agendapunt moet hebben gehad en er altijd een audio en/of
+visueel verslag moet zijn opgesteld om te kunnen worden
+gearchiveerd.</p>
+<h1 id="vormgeving-van-ori-a-xml-bestanden">Vormgeving van ORI-A
+XML-bestanden<a aria-hidden="true" class="secondary" href="#vormgeving-van-ori-a-xml-bestanden">#</a></h1>
+<p>Het ORI-A XML-schema is zo opgesteld dat er maximaal één vergadering
+per ORI-A XML-bestand wordt uitgedrukt. Hierdoor konden de interne
+verwijzingen tussen andere ORI-A elementen en
+<code class="sourceCode xml">&lt;<span class="kw">vergadering</span>&gt;</code> simpel worden gehouden.</p>
+<p>Het ORI-A XML-schema staat overigens toe dat gegevens over één
+vergadering over meerdere ORI-A XML-bestanden worden verspreid. Uit
+opnametests is gebleken dat sommige e-depots metagegevens (zoals ORI-A
+data) direct aan mappen of digitale bestanden koppelen. In dat geval kan
+het wenselijk zijn om de ORI-A XML-bestanden op te knippen in meerdere
+bestanden, zodat ze makkelijk aan het juiste niveau kunnen worden
+gerelateerd.</p>
 
         </article>
       </main>
