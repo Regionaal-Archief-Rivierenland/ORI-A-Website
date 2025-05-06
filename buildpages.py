@@ -41,7 +41,7 @@ def pageinfo(filestem):
         "title": title,
         "position": position,
         "hide": hide,
-        "filename": f"{filestem.removeprefix(f"{pages_folder}/")}.html",
+        "filename": f"{filestem.removeprefix(f"{pages_folder}/")}",
         "headers": headers
     }
 
@@ -141,7 +141,7 @@ pages = sorted(pages, key=lambda p: p["position"])
 
 for page in pages:
     # read pandoc-converted HTML file
-    with open(f"{html_folder}/{page['filename']}", 'r') as f:
+    with open(f"{html_folder}/{page['filename']}.html", 'r') as f:
         page_contents = f.read()
 
     with open(f"{output_folder}/sun.svg") as f:
@@ -168,7 +168,8 @@ for page in pages:
     navbar_html = navbar_template.render(
         # don't add colofon/pages with hide_from_nav to navbar
         pages=[p for p in pages if not p["hide"]],
-        current_page=page["filename"])
+        current_page=page["filename"],
+    )
     html = base_template.render(
         logo=logo_html,
         content=page_contents,
@@ -181,5 +182,5 @@ for page in pages:
         current_page=page["filename"],
     )
 
-    with open(f"{output_folder}/{page["filename"]}", 'w') as f:
+    with open(f"{output_folder}/{page["filename"]}.html", 'w') as f:
         f.write(html)
