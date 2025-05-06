@@ -11,9 +11,6 @@ pages_folder = "pages"
 html_folder = "pages"
 output_folder = "site"
 
-# file that will serve as index.html
-main_page = "main.html" 
-
 env = Environment(loader=FileSystemLoader("templates"))
 base_template = env.get_template("base.html")
 navbar_template = env.get_template("navbar.html")
