@@ -25,7 +25,7 @@ def pageinfo(filestem):
     # get title from YAML frontmatter
     doc = frontmatter.load(filestem+".md")
     title = doc.metadata['title']
-    position = int(doc.metadata['position'])
+    position = int(doc.metadata.get('position', 0))
     hide = bool(doc.metadata.get('hide_from_navigation', False))
     
     # findall <h1> headers (and their anchors)
