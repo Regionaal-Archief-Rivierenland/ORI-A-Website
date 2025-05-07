@@ -101,10 +101,12 @@ def headers_to_accordions(html):
 
     for idx, h in enumerate(h1s):
         details = soup.new_tag("details")
-        # if idx == 0:
-        #     details.attrs["open"] = "true"
+        # adding the same name to each <details> mandates that max. one can be open
+        details.attrs['name'] = 'faq-entry'
 
         summary = soup.new_tag("summary")
+        summary.attrs["role"] = "button"
+        summary.attrs["class"] = "outline contrast"
         summary.string = h.get_text()
         details.append(summary)
 
@@ -116,10 +118,6 @@ def headers_to_accordions(html):
             sibling = next_sibling
 
         details_section.append(details)
-
-        if idx < len(h1s) - 1:
-            hr = soup.new_tag("hr")
-            details_section.append(hr)
 
         h.decompose()
 
@@ -162,7 +160,7 @@ for page in pages:
     if page["title"] == "FAQ":
         page_contents = headers_to_accordions(page_contents)
     page_contents = anchor_icon_to_headers(page_contents)
-    
+
     # this needs current_page because that visited page needs to styled in the navbar
     logo_html = logo.render()
     navbar_html = navbar_template.render(
