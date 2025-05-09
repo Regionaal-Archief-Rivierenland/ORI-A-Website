@@ -54,6 +54,19 @@ def add_icon_to_links(html):
 
     return str(soup)
 
+def delete_pandoc_cruft(html):
+    """
+    Pandoc inserts unused <a> tags in code blocks. This is non-configurable.
+    Hence, we delete these here.
+    """
+    soup = BeautifulSoup(html, 'html.parser')
+
+    for tag in soup.select("code span > a"):
+        tag.decompose()
+
+    return str(soup)
+
+
 def colorize_inline_xml(html):
     soup = BeautifulSoup(html, 'html.parser')
     code_tags = soup.find_all("code", string=re.compile(r"^<.*>$"))
@@ -160,6 +173,7 @@ for page in pages:
     if page["title"] == "FAQ":
         page_contents = headers_to_accordions(page_contents)
     page_contents = anchor_icon_to_headers(page_contents)
+    page_contents = delete_pandoc_cruft(page_contents)
 
     # this needs current_page because that visited page needs to styled in the navbar
     logo_html = logo.render()
