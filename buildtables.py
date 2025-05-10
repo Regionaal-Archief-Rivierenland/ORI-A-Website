@@ -1,7 +1,6 @@
 #!/bin/python
 
 import xml.etree.ElementTree as ET
-import sys
 import re
 
 from jinja2 import FileSystemLoader, Environment
