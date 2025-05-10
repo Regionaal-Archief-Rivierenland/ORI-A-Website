@@ -1,0 +1,132 @@
+<!-- -*- mode: markdown -*- -->
+---
+title: Documentatie
+position: 2
+---
+
+<!-- # Visuele weergave -->
+
+<!-- Hier komt de visuele weergave van ORI-A te staan. -->
+
+<!-- ![ORI-A Diagram](ORI-A-diagram.svg) -->
+
+<!-- <div style="width: 100%; height: 600px; overflow: auto; border: 1px solid #ccc;"> -->
+<!--   <iframe src="ORI-A-diagram.svg" style="width: 100%; height: 100%; border: none;"></iframe> -->
+<!-- </div> -->
+
+
+# Gebruik van ORI-A met MDTO
+
+ORI-A is zo opgesteld dat een gezamenlijk gebruik met MDTO zo min mogelijk dubbele data zou moeten opleveren. Alle verwijzingen  __ORI-A ⟶ MDTO__  nemen de volgende vorm aan:
+
+``` xml
+<informatieobjectGegevens>
+    <informatieobjectType>Motie</informatieobjectType>
+    <verwijzingInformatieobject>
+        <verwijzingID>1234</verwijzingID>
+        <verwijzingNaam>Motie_van_lid_Smit</verwijzingNaam>
+    </verwijzingInformatieobject>
+<informatieobjectGegevens>
+```
+De verwijzing naar MDTO of ToPX gebeurt op het niveau van informatieobjecten en niet van bestanden. De verwijzing tussen informatieobjecten en bestanden kan in MDTO worden uitgedrukt. Daarbij biedt ORI-A de mogelijkheid om te verwijzen door middel van een ID (verplicht) en/of een naam (niet verplicht).
+
+De enige inhoudelijke informatie over informatieobjecten die in ORI-A wordt opgenomen is het `<informatieobjectType>`. Dit heeft enige inhoudelijke overlap met `<classificatie>` binnen MDTO en ToPX. De reden waarom het alsnog in ORI-A is opgenomen is dat dit domeinspecifieke informatie betreft die in de context van een vergadering relevant is. Een gebruiker die alleen ORI-A data zou raadplegen, zou in dat geval alsnog de rol die het informatieobject heeft gespeeld binnen een vergadering kunnen afleiden.
+
+
+# Vormgeving van ORI-A XML-bestanden
+
+Het ORI-A XML-schema is zo opgesteld dat er maximaal één vergadering per ORI-A XML-bestand wordt uitgedrukt. Hierdoor konden de interne verwijzingen tussen andere ORI-A elementen en `<vergadering>` simpel worden gehouden. 
+
+<!-- dit is preservica documentatie, at best. Ik denk niet dat we dit per se officeel willen supporten, want een XSD schema kan geen _verzamelingen_ bestanden valideren, maar alleen indivuele bestanden. Of te wel, dit is highly discouraged, en uiteindelijk bad practice.  -->
+Het ORI-A XML-schema staat overigens toe dat gegevens over één vergadering over meerdere ORI-A XML-bestanden worden verspreid. Uit opnametests is gebleken dat sommige e-depots metagegevens (zoals ORI-A data) direct aan mappen of digitale bestanden koppelen. In dat geval kan het wenselijk zijn om de ORI-A XML-bestanden op te knippen in meerdere bestanden, zodat ze makkelijk aan het juiste niveau kunnen worden gerelateerd.
+
+# Root element
+
+## ORI-A gegevens (_root_-element)
+
+`<ORI-A>` — het eerste element in ORI-A XML boom — kent relatief weinig verplichte kind elementen. Iedere ORI-A XML moet ten minste één `<vergadering>`, `<agendapunt>` en `<mediabron>` bevatten. Dit is vanuit de gedachte dat er altijd een vergadering moet zijn geweest waar data over is gegenereerd, deze vergadering altijd minstens één agendapunt moet hebben gehad en er altijd een audio en/of visueel verslag moet zijn opgesteld om te kunnen worden gearchiveerd.
+
+<!-- TODO: haal mention van mediabron hierboven weg, en maak een infobox met: eigenlijk is dit ook verplicht, maar...-->
+
+::: waarschuwing
+Alhoewel `<mediabron>` strikt genomen niet verplicht is, is het opnemen hiervan noodzakelijk voor de toekomstige interpreteerbaarheid van raadsvergaderingen. Alleen in _zeer_ zeldzame situaties, zoals een besloten vergadering zonder opnames, mag `<mediabron>` ontbreken.
+:::
+
+# Top-level elementen
+
+<section>
+Oftewel, directe kinderen van `<ORI-A>`.
+</section>
+
+## Vergadering gegevens
+
+{{ vergadering_table }}
+
+<!-- misschien deze uitklapbaar maken -->
+#### XML voorbeeld
+
+<!-- ampersand chars (&) cannot actually exist in xml-->
+``` xml
+<vergadering>
+    <ID>abcd-1234</ID>
+    <naam>Vergadering Commisie Ruimte en Wonen</naam>
+    <vergaderingsType>Commissievergadering</vergaderingsType>
+    <locatie>Gemeentehuis Oosterhout</locatie>
+    <vergaderdatum>2023-05-26</vergaderdatum>
+</vergadering>
+```
+
+## Agendapunt gegevens
+
+{{ agendapunt_table }}
+
+#### XML voorbeeld
+
+``` xml
+<agendapunt>
+    <ID>fjerfjen-fenjfe</ID>
+    <agendapuntVolgnummer>3b</agendapuntVolgnummer>
+    <besloten>false</besloten>
+    <agendapuntTitel>Begroting Bankjes in Westerpark</agendapuntTitel>
+</agendapunt>
+```
+
+## Natuurlijk persoon gegegevens
+
+{{ natuurlijk_persoon_table }}
+
+#### XML voorbeeld
+
+``` xml
+</todo>
+```
+## Fractie gegegevens
+
+{{ fractie_table }}
+
+#### XML voorbeeld
+
+``` xml
+<fractie>
+    <fractienaam>D66 Oosterhout</fractienaam>
+    <fractieNeemtDeelAanStemming>
+        <fractieStemresultaat>Aangenomen</fractieStemresultaat>
+        <gegevenOpStemming>
+            <verwijzingID>stemming-0009</verwijzingID>
+            <verwijzingNaam>Meer groen op straat (GL/D66)</verwijzingNaam>
+        </gegevenOpStemming>
+    </fractieNeemtDeelAanStemming>
+</fractie>
+```
+
+# Algemene datatypes
+
+## Verwijzing gegevens
+
+{{ verwijzing_table }}
+
+## Informatieobject gegevens
+
+Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.
+
+{{ informatieobject_table }}

@@ -1,0 +1,49 @@
+<table class="stickytable">
+  <thead>
+    <tr>
+      <th><small class="chapter">{{ table_title }}</small><br>Naam element</th>
+      <th>Verplicht</th>
+      <th>Herhaalbaar</th>
+      <th>Datatype</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+    <tr>
+      <td>
+        <div class="smaller"><strong>{{ row.naam }}</strong></div>
+        <p class="toelichting">{{ row.toelichting }}</p>
+        {% if row.opties %}
+        <p class="toelichting"><strong>Keuze uit:</strong> {{ row.opties | join(', ') }}</p>
+        {% endif %}
+      </td>
+      <td style="text-align: center">
+        <!-- span is needed to make the opacity work -->
+        <span class="icon-cell {{ '' if row.verplicht else 'muted' }}" 
+              aria-label="{{ 'Verplicht' if row.verplicht else 'Niet verplicht' }}">
+          {{ '✓' if row.verplicht else '×' }}
+        </span>
+      </td>
+      <td style="text-align: center">
+        <span class="icon-cell {{ '' if row.herhaalbaar else 'muted' }}"
+              aria-label="{{ 'Verplicht' if row.verplicht else 'Niet verplicht' }}">
+          {{ '✓' if row.herhaalbaar else '×' }}
+        </span>
+      </td>
+      <td>
+        {% if row.datatype_url %}
+        <a href="{{ row.datatype_url }}" class="secondary">
+          <code class=" {{ row.datatype_width_class }}">
+            {{ row.datatype_wbr | safe }}
+          </code>
+        </a>
+        {% elif row.datatype_tooltip %}
+        <code data-tooltip="{{ row.datatype_tooltip }}">{{ row.datatype }}</code>
+        {% else %}
+        <code>{{ row.datatype }}</code>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

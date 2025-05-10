@@ -32,13 +32,13 @@ Also, the official woff2 files from the Lato website had vertical spacing issues
     font-style: normal;
 }
 
-
 :root {
     --pico-block-spacing-vertical: 2.0rem;
     --pico-block-spacing-horizontal: 2.0rem;
     /* Ubuntu, Open Sans, Cantarell, Lato are nice */
     --header-font: "Lato", var(--pico-font-family-sans-serif);
     --monospace-font: "CommitMonoVariable", var(--pico-font-family-monospace);
+    --tiny-font-size: 16px;
     /* Windows users */
     /* --pico-font-family-sans-serif: "Segoe UI Variable Static Display"; */
 }
@@ -47,7 +47,6 @@ html {
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
 }
-
 
 h1, h2, h3, #documentation-menu, .logo {
     font-family: var(--header-font);
@@ -70,11 +69,113 @@ h2 {
   --pico-color: var(--pico-h3-color);
 }
 
-/* make all tables striped */
+.waarschuwing {
+    /* is this darkmode proof? */
+    background-color: #0085f21a;
+    border-left: 2px solid #0085f2;
+    padding: 1rem 1rem 1rem 3rem;
+}
 
+/*
+Tables
+*/
+
+/* make all tables striped */
 tbody tr:nth-child(odd) th,
 tbody tr:nth-child(odd) td {
-  background-color: var(--pico-table-row-stripped-background-color);
+    background-color: var(--pico-table-row-stripped-background-color);
+}
+
+table.stickytable thead {
+    top: 0;
+    position: sticky;
+    z-index: 2;
+}
+
+
+table.stickytable code[data-tooltip] {
+    border-bottom: none;
+}
+
+.toelichting {
+    padding-top: 0.25em;
+    color: var(--pico-muted-color);
+    /* --tiny-font-size is too small */
+    font-size: 0.85em;
+    /* line-height: 1.35; */
+    /* was var(--pico-typography-spacing-vertical); */
+    margin-bottom: 0.5rem;
+    /* hyphens: auto; */
+}
+
+.smaller {
+    font-size: 0.92em;
+}
+
+
+/* draw "fake" border, because the normal one doesn't work with position: sticky  */
+table.stickytable thead::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--pico-muted-border-color); /* or whatever border color */
+}
+
+.icon-cell {
+    text-align: center !important;
+    font-size: 1.375em;
+    opacity: 0.82;
+    font-weight: 800;
+}
+
+.icon-cell.muted {
+    color: var(--pico-muted-color);
+    opacity: 0.65;
+    font-weight: normal;
+}
+
+
+/* more responsive table */
+
+/* this balances headers and subheaders nicely, ensuring the subheaders are never too long */
+/* TODO: investigate performance */
+/* .stickytable td:nth-child(1) { */
+/*     text-wrap: balance; */
+/* } */
+
+.stickytable code {
+    white-space: nowrap;
+    font-size: 0.81em;
+}
+
+@media (max-width: 1500px) {
+    .stickytable th:nth-child(2) {
+        padding-left: 2px;
+        padding-right: 12px;
+    }
+    .stickytable th:nth-child(3)  {
+        padding-left: 10px;
+        padding-right: 1px;
+    }
+}
+
+@media (max-width: 1340px) {
+    /* 10 == length of 'gegevens' + 2 */
+    .code-ch-12 { max-width: 12ch; line-height: 1.3; white-space: wrap !important; }
+    .code-ch-13 { max-width: 13ch; line-height: 1.3; white-space: wrap !important; }
+    .code-ch-14 { max-width: 14ch; line-height: 1.3; white-space: wrap !important; }
+    .code-ch-15 { max-width: 15ch; line-height: 1.3; white-space: wrap !important; }
+    .code-ch-16 { max-width: 16ch; line-height: 1.3; white-space: wrap !important; }
+    .code-ch-17 { max-width: 17ch; line-height: 1.3; white-space: wrap !important; }
+    .code-ch-18 { max-width: 18ch; line-height: 1.3; white-space: wrap !important; }
+    .code-ch-19 { max-width: 19ch; line-height: 1.3; white-space: wrap !important; }
+    .code-ch-20 { max-width: 20ch; line-height: 1.3; white-space: wrap !important; }
+    /* 21 == length of 'fractielidmaatschap' + 2 */
+    .code-ch-21 { max-width: 21ch; line-height: 1.3; white-space: wrap !important; }
 }
 
 .maingrid {
@@ -93,7 +194,7 @@ tbody tr:nth-child(odd) td {
 
 /* Horizontal nav */
 aside {
-    font-size: 16px;
+    font-size: var(--tiny-font-size);
     position: sticky;
     top: 0; /* Stay at the top */
     grid-area: sidebar;
@@ -148,7 +249,6 @@ aside {
   white-space: nowrap;
   transform: scaleX(1.07); /* Slightly wider "O" */
 }
-
 
 .o-svg {
   position: absolute;
@@ -219,15 +319,28 @@ footer {
 code {
     font-size: 0.86em;
     font-family: CommitMonoVariable;
-
-    /* SF Mono */
-    /* font-size: 0.85em; */
 }
+
+a > code {
+    text-decoration: underline;
+}
+
+
 
 /* for some reason this looks strange at the inline code fontsize */
 pre > code {
     font-family: CommitMonoVariable;
     font-size: 1.0em;
+}
+
+.chapter {
+    /* color:  rgb(186.75, 150.5, 43.75); */
+    /* color:  var(--pico-ins-color); */
+    opacity: 0.8;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.0625;
+    text-transform: uppercase;
 }
 
 code {color: var(--pico-color)}

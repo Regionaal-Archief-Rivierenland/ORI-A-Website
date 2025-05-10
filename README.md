@@ -41,6 +41,8 @@ Die kun je vervolgens raadplegen door bijv. `python -m http.server .` in die map
 * `buildpages.py`
   * Gebruikt Jinja2 om de eerder naar HTML geconverteerde bestanden in de templates te stoppen
   * Doet ook wat HTML nabewerkingen
+* `buildtables.py`
+  * Zet de gegevensgroep tabellen in `pages/documentatie.md.j2`
 * `ims/`
   * Afbeelingen
 * `fonts/`
