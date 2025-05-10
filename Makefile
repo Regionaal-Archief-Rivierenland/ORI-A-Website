@@ -25,7 +25,7 @@ FONT_MONOSPACE := CommitMonoVariable.woff2
 FONT_INPUTS := fonts/$(FONT_TITLE) fonts/$(FONT_TITLE_BOLD) fonts/$(FONT_MONOSPACE)
 FONT_OUTPUTS := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_MONOSPACE)
 
-TABLE_SRC := pages/documentatie.md.j2 templates/gegevensgroep_table.html
+TABLE_SRC := pages/documentatie.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd
 TABLE_DST := pages/documentatie.md
 
 .PHONY: all clean
