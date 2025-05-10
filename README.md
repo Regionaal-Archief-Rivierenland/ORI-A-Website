@@ -28,7 +28,8 @@ Die kun je vervolgens raadplegen door bijv. `python -m http.server .` in die map
 
 # Wat is wat
 
-> [!IMPORTANT] Als je simpelweg teksten op de website wilt wijzigen, ben je aangewezen op de bestanden in de map `pages/`
+> [!IMPORTANT]
+> Als je simpelweg teksten op de website wilt wijzigen, ben je aangewezen op de bestanden in de map `pages/`
 
 * `pages/`
   * De markdown bestanden waaruit de documentatie/documentatie website wordt opgebouwd
