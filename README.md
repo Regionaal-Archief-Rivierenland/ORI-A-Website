@@ -23,10 +23,16 @@ Het lokaal bouwen van de website komt neer op `make` runnen, mits je alle depend
 
 Die kun je vervolgens raadplegen door bijv. `python -m http.server .` in die map aan te roepen.
 
+> [!NOTE]
+> Dit project gebruikt de ORI-A XSD als git submodule. Hierom moet je na `git clone https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website`  ook nog `git submodule update --init --recursive` runnen.
+
 # Wat is wat
+
+> [!IMPORTANT] Als je simpelweg teksten op de website wilt wijzigen, ben je aangewezen op de bestanden in de map `pages/`
 
 * `pages/`
   * De markdown bestanden waaruit de documentatie/documentatie website wordt opgebouwd
+  * `pages/documentatie.md.j2` is een combo van markdown en Jinja template, zodat daar v HTML
 * `css/`
   * Verschillende stijlregels. Het grootste gedeelte van de css is afkomstig van het [Pico](https://picocss.com/docs) project.
 * `templates/`
