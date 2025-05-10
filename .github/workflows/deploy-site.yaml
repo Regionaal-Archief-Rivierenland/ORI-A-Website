@@ -39,7 +39,9 @@ jobs:
           sudo dpkg -i /tmp/pandoc.deb
 
       - name: Build site
-        run: make
+        run: |
+          make generate-tables
+          make
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
