@@ -11,7 +11,8 @@ pages_folder = "pages"
 html_folder = "pages"
 output_folder = "site"
 
-env = Environment(loader=FileSystemLoader("templates"))
+env = Environment(loader=FileSystemLoader("templates"),
+                  trim_blocks=True)
 base_template = env.get_template("base.html")
 navbar_template = env.get_template("navbar.html")
 logo = env.get_template("logo.html")
