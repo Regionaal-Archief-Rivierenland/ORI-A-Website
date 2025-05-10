@@ -154,7 +154,7 @@ table.stickytable thead::after {
 
 @media (max-width: 1500px) {
     .stickytable th:nth-child(2) {
-        padding-left: 2px;
+        padding-left: 1px;
         padding-right: 12px;
     }
     .stickytable th:nth-child(3)  {
