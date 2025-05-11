@@ -11,7 +11,7 @@
     {% for row in rows %}
     <tr>
       <td>
-        <div class="smaller"><strong>{{ row.naam }}</strong></div>
+        <div class="small"><strong>{{ row.naam_wbr | safe }}</strong></div>
         <p class="toelichting">{{ row.toelichting }}</p>
         {% if row.opties %}
         <p class="toelichting"><strong>Keuze uit:</strong> {{ row.opties | join(', ') }}</p>

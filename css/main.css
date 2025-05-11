@@ -108,11 +108,6 @@ table.stickytable code[data-tooltip] {
     /* hyphens: auto; */
 }
 
-.smaller {
-    font-size: 0.92em;
-}
-
-
 /* draw "fake" border, because the normal one doesn't work with position: sticky  */
 table.stickytable thead::after {
   content: "";
@@ -154,12 +149,12 @@ table.stickytable thead::after {
 
 @media (max-width: 1500px) {
     .stickytable th:nth-child(2) {
-        padding-left: 1px;
-        padding-right: 12px;
+        padding-left: 2px;
+        padding-right: 11px;
     }
     .stickytable th:nth-child(3)  {
         padding-left: 10px;
-        padding-right: 1px;
+        padding-right: 2px;
     }
 }
 
@@ -176,6 +171,7 @@ table.stickytable thead::after {
     .code-ch-20 { max-width: 20ch; line-height: 1.3; white-space: wrap !important; }
     /* 21 == length of 'fractielidmaatschap' + 2 */
     .code-ch-21 { max-width: 21ch; line-height: 1.3; white-space: wrap !important; }
+    .code-ch-22 { max-width: 22ch; line-height: 1.3; white-space: wrap !important; }
 }
 
 .maingrid {

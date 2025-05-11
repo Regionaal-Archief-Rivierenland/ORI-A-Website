@@ -34,10 +34,20 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         "integerOfTijdstempel": "Getal of tijdsstempel (hh:mm:ss)",
         "positiveInteger": "Positief getal",
     }
-    
+
     for elem in complextype.findall(".//xs:element", namespaces=ns):
         docstring = elem.find(".//xs:documentation", namespaces=ns).text
         naam = elem.attrib["name"]
+
+        # long elem names mess up the table, so add a wordbreak
+        # suggestion to the final word
+        if len(naam) >= 22:
+            words = camel_to_seperate_words(naam)
+            naam_wbr = "".join(words[:-1]) + "<wbr/>" + words[-1]
+        else:
+            naam_wbr = naam
+
+
         verplicht = bool(int(elem.attrib["minOccurs"]))
         herhaalbaar = True if elem.attrib["maxOccurs"] == "unbounded" else False
         # assume enumaration if type is not specified
@@ -51,7 +61,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
                 opties.append(optie.attrib["value"])
 
         seperate_words = camel_to_seperate_words(datatype)
-        
+
         if datatype in gegevensgroepen_names:
             # this is pandoc's anchro link fmt
             datatype_url = f"#{"-".join(seperate_words).lower()}"
@@ -64,21 +74,27 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
             datatype_tooltip = None
 
         # insert places to break words
-        datatype_wbr = "<wbr/>".join(seperate_words)
+        if datatype == "dagelijksBestuurLidmaatschapGegevens":
+            # make an exception for dagelijksbestuurlidmaatschapgegevens,
+            # as breaking it at every word looks pretty bad
+            datatype_wbr = "dagelijksBestuur<wbr/>LidmaatschapGegevens"
+            width_class = f"code-ch-{len('LidmaatschapGegevens') + 2}" 
+        else:
+            datatype_wbr = "<wbr/>".join(seperate_words)
+            # find longest word in datatype. This is used later on to set
+            # inline code boxes to an appropiate width (yes, this needs to
+            # happen manually; tho only to make sure that these boxes look
+            # right when word wrapping occurs)
+            maxlen = max(len(w) for w in seperate_words)
+            # add 2ch to account for padding? in any case, some kind of increment is needed
+            maxlen = maxlen + 2
+            # associate maxlen with a css class
+            width_class = f"code-ch-{maxlen}"
 
-        # find longest word in datatype. This is used later on to set
-        # inline code boxes to an appropiate width (yes, this needs to
-        # happen manually; tho only to make sure that these boxes look
-        # right when word wrapping occurs)
-        maxlen = max(len(w) for w in seperate_words)
-        # add 2ch to account for padding? in any case, some kind of increment is needed
-        maxlen = maxlen + 2
-        # associate maxlen with a css class
-        width_class = f"code-ch-{maxlen}"
-        
         rows.append(
             {
                 "naam": naam,
+                "naam_wbr": naam_wbr,
                 "toelichting": docstring,
                 "datatype": datatype,
                 "datatype_wbr": datatype_wbr,
