@@ -239,6 +239,10 @@ aside {
     padding-left: 0.75rem;  /* indent nested list */
 }
 
+a.mainpage {
+    font-weight: bold;
+}
+
 /* Landmarks
  */
 
