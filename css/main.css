@@ -70,10 +70,36 @@ h2 {
 }
 
 .waarschuwing {
-    /* is this darkmode proof? */
-    background-color: #0085f21a;
-    border-left: 2px solid #0085f2;
-    padding: 1rem 1rem 1rem 3rem;
+    /* pico azure 400 */
+    background-color: #029AE81a;
+    /* pico azure 500 */
+    border-left: 2px solid #017FC0;
+    padding: 1rem 2rem 1rem 3rem;
+    position: relative;
+    border-radius: var(--pico-border-radius);
+    box-shadow: 0 3px 3px #2b2a330d;
+    border-left: .25rem solid #017FC0;
+    border-inline-start: .25rem solid #017FC0;
+    border-inline-end: ;
+}
+
+.waarschuwing::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 1.2rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: #017FC0;
+    /* this has to be inline to be styled/colored */
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path stroke='none' fill='none' d='M0 0h24v24H0z'/><path d='M12 2c5.523 0 10 4.477 10 10a10 10 0 0 1 -19.995 .324l-.005 -.324l.004 -.28c.148 -5.393 4.566 -9.72 9.996 -9.72zm0 9h-1l-.117 .007a1 1 0 0 0 0 1.986l.117 .007v3l.007 .117a1 1 0 0 0 .876 .876l.117 .007h1l.117 -.007a1 1 0 0 0 .876 -.876l.007 -.117l-.007 -.117a1 1 0 0 0 -.764 -.857l-.112 -.02l-.117 -.006v-3l-.007 -.117a1 1 0 0 0 -.876 -.876l-.117 -.007zm.01 -3l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z' /></svg>");
+    mask-repeat: no-repeat;
+}
+
+.waarschuwing p {
+    opacity: 0.87;
+    margin-bottom: 0;
 }
 
 /*
