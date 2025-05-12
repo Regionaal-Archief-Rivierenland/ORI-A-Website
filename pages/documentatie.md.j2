@@ -17,40 +17,64 @@ position: 2
 
 # Gebruik van ORI-A met MDTO
 
-ORI-A is zo opgesteld dat een gezamenlijk gebruik met MDTO zo min mogelijk dubbele data zou moeten opleveren. Alle verwijzingen  __ORI-A ⟶ MDTO__  nemen de volgende vorm aan:
+ORI-A laat het beschrijven van informatieobjecten (**vergaderstukken**, **mediabestanden**, etc.) over aan **MDTO**. Met andere woorden: ORI-A beschrijft domein-_specifieke_ gegevens — raadsgegevens — terwijl MDTO beperkt blijft tot meer generieke gegevens over documenten en bestanden, zoals hun aanmaakdatum en auteur.
 
+::: waarschuwing
+De enige inhoudelijke informatie over informatieobjecten die in ORI-A wordt opgenomen is het `<informatieobjectType>`. Deze informatie heeft inhoudelijke overlap met `<classificatie>` binnen MDTO. <!-- De reden waarom deze informatie alsnog binnen ORI-A kan worden opgenomen is dat dit domeinspecifieke informatie betreft die in de context van een vergadering relevant is. Een gebruiker die alleen ORI-A data zou raadplegen, zou in  geval alsnog de rol die het informatieobject heeft gespeeld binnen een vergadering kunnen afleiden.   -->
+De reden waarom deze informatie álsnog binnen ORI-A mag worden opgenomen is dat het helpt bij het interpreteren van het verloop van een vergadering, en dus wel degelijk als domeinspecifieke informatie kan gelden. 
+:::
+
+## ORI-A → MDTO verwijzingen in XML vorm
+
+Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het ID van een in MDTO opgesteld informatieobject  (zie ook [`verwijzingGegevens`](#verwijzing-gegevens)):
+
+<!-- TODO: misschien wel mooi om het MDTO bestand ook als voorbeeld op te voeren. -->
 ``` xml
 <informatieobjectGegevens>
     <informatieobjectType>Motie</informatieobjectType>
     <verwijzingInformatieobject>
-        <verwijzingID>1234</verwijzingID>
-        <verwijzingNaam>Motie_van_lid_Smit</verwijzingNaam>
+        <verwijzingID>document-009</verwijzingID>
+        <verwijzingNaam>Motie van lid Smit</verwijzingNaam>
     </verwijzingInformatieobject>
-<informatieobjectGegevens>
+</informatieobjectGegevens>
 ```
-De verwijzing naar MDTO of ToPX gebeurt op het niveau van informatieobjecten en niet van bestanden. De verwijzing tussen informatieobjecten en bestanden kan in MDTO worden uitgedrukt. Daarbij biedt ORI-A de mogelijkheid om te verwijzen door middel van een ID (verplicht) en/of een naam (niet verplicht).
 
-De enige inhoudelijke informatie over informatieobjecten die in ORI-A wordt opgenomen is het `<informatieobjectType>`. Dit heeft enige inhoudelijke overlap met `<classificatie>` binnen MDTO en ToPX. De reden waarom het alsnog in ORI-A is opgenomen is dat dit domeinspecifieke informatie betreft die in de context van een vergadering relevant is. Een gebruiker die alleen ORI-A data zou raadplegen, zou in dat geval alsnog de rol die het informatieobject heeft gespeeld binnen een vergadering kunnen afleiden.
+Het element `<verwijzingNaam>` hierboven is slechts een hulpsteuntje voor menselijke lezers — om een verwijzing tot stand te brengen volstaat `<verwijzingID>`.
 
 
-# Vormgeving van ORI-A XML-bestanden
+<!-- # Vormgeving van ORI-A XML-bestanden -->
 
-Het ORI-A XML-schema is zo opgesteld dat er maximaal één vergadering per ORI-A XML-bestand wordt uitgedrukt. Hierdoor konden de interne verwijzingen tussen andere ORI-A elementen en `<vergadering>` simpel worden gehouden. 
+<!-- Het ORI-A XML-schema is zo opgesteld dat er maximaal één vergadering per ORI-A XML-bestand wordt uitgedrukt. Hierdoor konden de interne verwijzingen tussen andere ORI-A elementen en `<vergadering>` simpel worden gehouden.  -->
 
-<!-- dit is preservica documentatie, at best. Ik denk niet dat we dit per se officeel willen supporten, want een XSD schema kan geen _verzamelingen_ bestanden valideren, maar alleen indivuele bestanden. Of te wel, dit is highly discouraged, en uiteindelijk bad practice.  -->
-Het ORI-A XML-schema staat overigens toe dat gegevens over één vergadering over meerdere ORI-A XML-bestanden worden verspreid. Uit opnametests is gebleken dat sommige e-depots metagegevens (zoals ORI-A data) direct aan mappen of digitale bestanden koppelen. In dat geval kan het wenselijk zijn om de ORI-A XML-bestanden op te knippen in meerdere bestanden, zodat ze makkelijk aan het juiste niveau kunnen worden gerelateerd.
+<!-- <\!-- dit is preservica documentatie, at best. Ik denk niet dat we dit per se officeel willen supporten, want een XSD schema kan geen _verzamelingen_ bestanden valideren, maar alleen indivuele bestanden. Of te wel, dit is highly discouraged, en uiteindelijk bad practice.  -\-> -->
+<!-- Het ORI-A XML-schema staat overigens toe dat gegevens over één vergadering over meerdere ORI-A XML-bestanden worden verspreid. Uit opnametests is gebleken dat sommige e-depots metagegevens (zoals ORI-A data) direct aan mappen of digitale bestanden koppelen. In dat geval kan het wenselijk zijn om de ORI-A XML-bestanden op te knippen in meerdere bestanden, zodat ze makkelijk aan het juiste niveau kunnen worden gerelateerd. -->
 
-# Root element
+# Het _root_-element
 
-## ORI-A gegevens (_root_-element)
+## ORI-A gegevens
 
-`<ORI-A>` — het eerste element in ORI-A XML boom — kent relatief weinig verplichte kind elementen. Iedere ORI-A XML moet ten minste één `<vergadering>`, `<agendapunt>` en `<mediabron>` bevatten. Dit is vanuit de gedachte dat er altijd een vergadering moet zijn geweest waar data over is gegenereerd, deze vergadering altijd minstens één agendapunt moet hebben gehad en er altijd een audio en/of visueel verslag moet zijn opgesteld om te kunnen worden gearchiveerd.
+<section>
+`<ORI-A>` — het eerste element in een ORI-A XML boom — kent weinig verplichte kind elementen. Dit _root_-element hoeft alleen een `<vergadering>` en `<agendapunt>` te bevatten. Dit omdat er altijd een vergadering moet zijn geweest waar data over is gegenereerd, en omdat deze vergadering altijd minstens een agendapunt moet hebben gehad.
 
 <!-- TODO: haal mention van mediabron hierboven weg, en maak een infobox met: eigenlijk is dit ook verplicht, maar...-->
 
 ::: waarschuwing
 **Let op:**  Alhoewel `<mediabron>` strikt genomen niet verplicht is, is een audio of video verslag noodzakelijk voor de toekomstige interpreteerbaarheid van raadsvergaderingen. Alleen in _zeer_ zeldzame situaties, zoals een besloten vergadering zonder opnames, mag `<mediabron>` ontbreken.
 :::
+
+</section>
+
+{{ ori_a_table }}
+
+#### XML voorbeeld
+
+``` xml
+<ORI-A xmlns="https://www.ori-a.nl">
+    <vergadering> … </vergadering>
+    <agendapunt> … </agendapunt>
+    <mediabron> … </mediabron>
+</ORI-A>
+```
 
 # Top-level elementen
 
@@ -84,7 +108,7 @@ Oftewel, directe kinderen van `<ORI-A>`.
 
 ``` xml
 <agendapunt>
-    <ID>fjerfjen-fenjfe</ID>
+    <ID>a120-003</ID>
     <agendapuntVolgnummer>3b</agendapuntVolgnummer>
     <besloten>false</besloten>
     <agendapuntTitel>Begroting Bankjes in Westerpark</agendapuntTitel>
