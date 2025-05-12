@@ -87,7 +87,7 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 	pyftsubset fonts/$(FONT_MONOSPACE) \
         --drop-tables=FFTM,feat,meta \
 		--flavor=woff2 --layout-features="kern" \
-		--text="$$code_snippets""Y" \
+		--text="$$code_snippets""YPF" \
 		--output-file=site/$(FONT_MONOSPACE)
 
 # copy/minify js
