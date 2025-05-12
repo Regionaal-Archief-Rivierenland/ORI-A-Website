@@ -129,6 +129,7 @@ for name, elem in zip(gegevensgroepen_names, gegevensgroepen_elems):
     name_seperate_words = camel_to_seperate_words(name)
     pretty_name = " ".join([name_seperate_words[0].capitalize()] + [n.lower() for n in name_seperate_words[1:]])
     snake_case_name = "_".join(name_seperate_words[:-1] + ["table"]).lower()
+    snake_case_name = snake_case_name.replace("ori-a", "ori_a")
     html_table = table_template.render(rows=rows, table_title=pretty_name)
     # add place to word break
     all_tables[snake_case_name] = html_table
