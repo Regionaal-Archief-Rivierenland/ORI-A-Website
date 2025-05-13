@@ -6,9 +6,10 @@ Those assets were made available under the CC BY-SA 4.0 license
 (https://creativecommons.org/licenses/by-sa/4.0).
 */
 
-/* these woff2 fonts were forged from the official Lato ttf files, using google's woff2_compress
-IMO, these woff2 files have superior kerning compared to the woff2 files on googlefonts.
-Also, the official woff2 files from the Lato website had vertical spacing issues 
+/* these woff2 fonts were forged from the official Lato ttf files,
+using google's woff2_compress IMO, these woff2 files have superior
+kerning compared to the woff2 files on googlefonts.  Also, the
+official woff2 files from the Lato website had vertical spacing issues
 */
 @font-face {
     font-family: "Lato";
@@ -183,11 +184,11 @@ table.stickytable th {
 
 @media (max-width: 1500px) {
     .stickytable th:nth-child(2) {
-        padding-left: 1px;
-        padding-right: 11px;
+        padding-left: 0px;
+        padding-right: 10px;
     }
     .stickytable th:nth-child(3)  {
-        padding-left: 10px;
+        padding-left: 8px;
         padding-right: 2px;
     }
 }
@@ -240,7 +241,7 @@ aside {
     grid-area: sidebar;
     /* for some reason, setting this to an absolute value is the only way to make sticky work,
        _and_ push the footer at the same time */
-    height: 755px;
+    height: 760px;
 }
 
 /* Style currently selected item in navbar */
@@ -353,7 +354,6 @@ main {
 footer {
     grid-area: footer;
     padding-bottom: 20px;
-    z-index: 2;
 }
 
 /* Syntax highlighting
@@ -378,8 +378,6 @@ pre > code {
 }
 
 .chapter {
-    /* color:  rgb(186.75, 150.5, 43.75); */
-    /* color:  var(--pico-ins-color); */
     opacity: 0.8;
     font-weight: 600;
     font-size: 13px;
