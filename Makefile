@@ -104,6 +104,8 @@ buildpages: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF
 	python3 buildpages.py
 	ln -srf site/$(MAIN_HTML) site/index.html
 	cp pages/test.html site/
+	cp pages/videotuul.webm site/
+	cp pages/videotuul.html site/
 
 minify: buildpages
 	minify-html --minify-js $$(fd -ehtml . site/)
