@@ -43,7 +43,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         # suggestion to the final word
         if len(naam) >= 22:
             words = camel_to_seperate_words(naam)
-            naam_wbr = "".join(words[:-1]) + "<wbr/>" + words[-1]
+            naam_wbr = "".join(words[:-1]) + "<wbr>" + words[-1]
         else:
             naam_wbr = naam
 
@@ -77,10 +77,10 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         if datatype == "dagelijksBestuurLidmaatschapGegevens":
             # make an exception for dagelijksbestuurlidmaatschapgegevens,
             # as breaking it at every word looks pretty bad
-            datatype_wbr = "dagelijksBestuur<wbr/>LidmaatschapGegevens"
+            datatype_wbr = "dagelijksBestuur<wbr>LidmaatschapGegevens"
             width_class = f"code-ch-{len('LidmaatschapGegevens') + 2}" 
         else:
-            datatype_wbr = "<wbr/>".join(seperate_words)
+            datatype_wbr = "<wbr>".join(seperate_words)
             # find longest word in datatype. This is used later on to set
             # inline code boxes to an appropiate width (yes, this needs to
             # happen manually; tho only to make sure that these boxes look
