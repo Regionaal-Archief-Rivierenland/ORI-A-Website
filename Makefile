@@ -103,6 +103,7 @@ $(TABLE_DST): $(TABLE_SRC)
 buildpages: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF_DST)
 	python3 buildpages.py
 	ln -srf site/$(MAIN_HTML) site/index.html
+	cp pages/test.html site/
 
 minify: buildpages
 	minify-html --minify-js $$(fd -ehtml . site/)
