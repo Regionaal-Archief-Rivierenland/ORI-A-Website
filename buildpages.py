@@ -99,7 +99,6 @@ def anchor_icon_to_headers(html):
         h.append(a)
     return str(soup)
 
-# TODO: this should probably 
 def headers_to_accordions(html):
     soup = BeautifulSoup(html, 'html.parser')
     h1s = soup.find_all("h1")
@@ -115,8 +114,6 @@ def headers_to_accordions(html):
 
     for idx, h in enumerate(h1s):
         details = soup.new_tag("details")
-        # adding the same name to each <details> mandates that max. one can be open
-        details.attrs['name'] = 'faq-entry'
 
         summary = soup.new_tag("summary")
         summary.attrs["role"] = "button"
