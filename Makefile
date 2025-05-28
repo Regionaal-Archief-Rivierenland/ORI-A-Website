@@ -58,7 +58,7 @@ site/%.pdf: pdfs/%.pdf
 # NOTE: currently breaks if you use filenames with spaces
 pages/%.html: pages/%.md
 	@mkdir -p $(@D)
-	pandoc $< -o $@
+	pandoc -f markdown-native_divs $< -o $@
 
 subset-fonts: $(FONT_OUTPUTS)
 

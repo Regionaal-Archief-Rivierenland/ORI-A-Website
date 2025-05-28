@@ -25,4 +25,13 @@ Bovendien bestaat er een [grafische representatie van het informatiemodel.](ORI-
 
 # Downloads
 
-Hier komen alle goodies en links naar gerelateerde projecten
+De voorbeeldbestanden zijn in verschillende variaties beschikbaar:
+
+<div class="grid">
+  <select id="voorbeeld-select" required>
+    <option>ORI-A + MDTO</option>
+    <option>ORI-A + MDTO (OPEX)</option>
+    <option>ORI-A + TMLO</option>
+  </select>
+  <button id="voorbeeld-dl">Download</button>
+</div>
