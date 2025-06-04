@@ -30,8 +30,9 @@ De voorbeeldbestanden zijn in verschillende variaties beschikbaar:
 <div class="grid">
   <select id="voorbeeld-select" required>
     <option>ORI-A + MDTO</option>
-    <option>ORI-A + MDTO (OPEX)</option>
-    <option>ORI-A + TMLO</option>
+    <option>ORI-A + MDTO (met OPEX wrapper)</option>
+    <option>ORI-A + ToPX Sidecar</option>
+    <option>ORI-A + ToPX RIP</option>
   </select>
   <button id="voorbeeld-dl">Download</button>
 </div>
