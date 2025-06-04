@@ -53,3 +53,41 @@ Binnen ORI-A zijn de volgende deelnemerrollen gedefinieerd. Deze rollen horen bi
 | Portefeuillehouder | De ambtenaar die de verantwoordelijk draagt over het besproken onderwerp/agendapunt.  |
 | Raadslid           | Gekozen volksvertegenwoordiger.                                                       |
 | Griffier           | Hoofd van het griffie.                                                                |
+
+
+# Betrokkene-vergaderstuk relaties
+
+Een lijst met verschillende soorten relaties tussen personen en vergaderstukken. Relevant binnen MDTO om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
+
+
+
+<!-- ``` xml
+<informatieobject>
+    ...
+    <betrokkene>
+        <betrokkeneTypeRelatie>
+			<begripLabel>Indiener</begripLabel>
+			<begripBegrippenlijst>
+				<verwijzingNaam>Betrokkene-vergaderstuk relaties</verwijzingNaam>
+				<verwijzingIdentificatie>
+                    <identificatieKenmerk>https://www.ori-a.nl/begrippenlijsten#betrokkene-vergaderstuk-relaties</identificatieKenmerk>
+                    <identificatieBron>ORI-A</identificatieBron>
+                </verwijzingIdentificatie>
+			</begripBegrippenlijst>
+		</betrokkeneTypeRelatie>
+        <betrokkeneActor>
+            <verwijzingNaam>J. De Vries</verwijzingNaam>
+            <verwijzingIdentificatie>
+                <identificatieKenmerk>n208</identificatieKenmerk>
+                <identificatieBron>ORI-A/Parleaus</identificatieBron>
+            </verwijzingIdentificatie>
+        </betrokkeneActor>
+    </betrokkene>
+</informatieobject>
+```
+-->
+| Label         | Definitie                                                 |
+|:--------------|:----------------------------------------------------------|
+| Indiener      | Indiener van een vergaderstuk (herkomst: VNG's ORI).      |
+| Ondertekenaar | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI). |
+
