@@ -55,7 +55,7 @@ Binnen ORI-A zijn de volgende deelnemerrollen gedefinieerd. Deze rollen horen bi
 | Griffier           | Hoofd van het griffie.                                                                |
 
 
-# Betrokkene-vergaderstuk relaties
+# Betrokkene--vergaderstuk relaties
 
 Een lijst met verschillende soorten relaties tussen personen en vergaderstukken. Relevant binnen MDTO om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
 
