@@ -86,8 +86,9 @@ Een lijst met verschillende soorten relaties tussen personen en vergaderstukken.
 </informatieobject>
 ```
 -->
-| Label         | Definitie                                                 |
-|:--------------|:----------------------------------------------------------|
-| Indiener      | Indiener van een vergaderstuk (herkomst: VNG's ORI).      |
-| Ondertekenaar | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI). |
+| Label              | Definitie                                                    |
+|:-------------------|:-------------------------------------------------------------|
+| Indiener           | Indiener van een vergaderstuk (herkomst: VNG's ORI).         |
+| Ondertekenaar      | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI).    |
+| Portefeuillehouder | De portefeuillehouder van een voorstel (herkomst: VNG's ORI) |
 
