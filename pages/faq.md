@@ -1,5 +1,5 @@
 ---
-title: FAQ
+title: Veelgestelde vragen
 position: 4
 ---
 
