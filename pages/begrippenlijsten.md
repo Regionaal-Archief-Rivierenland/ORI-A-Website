@@ -4,6 +4,9 @@ position: 2
 ---
 
 # Begrippenlijsten gebruiken
+<!-- Dit is behoorlijk verouderd en verdient een update o.b.v. de meest recente ORI-A XSD. Er zijn bijvoorbeeld geen <vergaderstukType> (meer) in ORI-A, noch de kindelementen -->
+
+<!-- Het lijkt me een goed idee om te beginnen met een algemeen stuk over het hoe en waarom van begrippenlijsten en hun nut bij standaardisatie. Eventueel met link naar de MDTO en TOOI begrippenlijsten. -->
 
 Een begrippenlijst roep je zo aan:
 
@@ -11,7 +14,7 @@ Een begrippenlijst roep je zo aan:
 <vergaderstukType>
     <begripLabel>Motie</begripLabel>
     <begrippenlijstVerwijzing>
-        <verwijzingID>www.ori-archiefstandaard.nl/begrippenlijsten/vergaderstuk-types</verwijzingID>
+        <verwijzingID>www.ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
         <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuk Types</verwijzingNaam>
     </begrippenlijstVerwijzing>
 </vergaderstukType>
