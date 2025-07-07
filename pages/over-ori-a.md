@@ -3,9 +3,11 @@ title: Over ORI•A
 position: 1
 ---
 
+<section>
 :::: waarschuwing
 De ORI-A website en bijbehorende documentatie zijn nog in ontwikkeling. Alle informatie op deze website kan worden gewijzigd, en is bovendien mogelijk onvolledig of onnauwkeurig.
 ::::
+</section>
 
 # Wat is ORI•A?
 
