@@ -5,7 +5,7 @@ position: 1
 
 <section>
 :::: waarschuwing
-De ORI-A website en bijbehorende documentatie zijn nog in ontwikkeling. Alle informatie op deze website kan worden gewijzigd, en is bovendien mogelijk onvolledig of onnauwkeurig.
+**Disclaimer:** De ORI-A website en bijbehorende documentatie zijn nog in ontwikkeling. Alle informatie op deze website kan worden gewijzigd, en kan onvolledig, onnauwkeurig, of verouderd zijn.
 ::::
 </section>
 
