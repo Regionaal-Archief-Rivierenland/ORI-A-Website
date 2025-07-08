@@ -4,7 +4,6 @@ position: 2
 ---
 
 # Begrippenlijsten gebruiken
-<!-- Dit is behoorlijk verouderd en verdient een update o.b.v. de meest recente ORI-A XSD. Er zijn bijvoorbeeld geen <vergaderstukType> (meer) in ORI-A, noch de kindelementen -->
 
 <!-- Het lijkt me een goed idee om te beginnen met een algemeen stuk over het hoe en waarom van begrippenlijsten en hun nut bij standaardisatie. Eventueel met link naar de MDTO en TOOI begrippenlijsten. -->
 
