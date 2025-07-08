@@ -6,7 +6,7 @@ position: 4
 # Wat is raadsinformatie, en wat is een videotuul?
 **Raadsinformatie** is een verzamelnaam voor alle digitale informatie die overheden aanmaken bij politieke en/of bestuurlijke besluitvorming. Deze besluitvorming vindt plaats in vergaderingen.
 
-Een **videotuul** (samenvoeging van video en notulen) is een audiovisueel verslag van zo'n vergadering. Als het alleen een geluidsopname is, dan wordt het een audiotuul genoemd. Naast de opname bestaat een videotuul uit metagegevens die contextinformatie geven over de vergadering, zoals agendapunten, sprekersinformatie, spreekfragmenten en aanwezige deelnemers. Domeinspecifieke gegevens dus.
+Een **videotuul** (samenvoeging van "video" en "notulen") is een audiovisueel verslag van zo'n vergadering. Als het alleen een geluidsopname is, dan wordt het een audiotuul genoemd. Naast de opname bestaat een videotuul uit metagegevens die contextinformatie geven over de vergadering, zoals agendapunten, sprekersinformatie, spreekfragmenten en aanwezige deelnemers. Domeinspecifieke gegevens dus.
 
 # Moeten videotulen worden bewaard?
 Strikt genomen zijn overheden niet altijd verplicht om videotulen te bewaren. Als er ook schriftelijke verslagen zijn van vergaderingen, dan hoort de meest informatierijke bron te worden bewaard. Vanuit cultuurhistorisch oogpunt is het wel belangrijk dat videotulen permanent bewaard worden. Videotulen zijn een belangrijk onderdeel van de digitale democratie.
