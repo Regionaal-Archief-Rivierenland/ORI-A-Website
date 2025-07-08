@@ -27,11 +27,12 @@ ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgespl
 
 De enige uitzondering die hierop in ORI-A is gemaakt is het nesten van natuurlijkPersoon onder aanwezigeDeelnemer. Voor natuurlijke personen die niet aanwezig waren op de vergadering is het element persoonBuitenVergadering ontworpen.
 
-# Hoeveel vergaderingen komen in één ORI-A XML-bestand?
+<!-- # Hoeveel vergaderingen komen in één ORI-A XML-bestand?
 
 ORI-A is zo ontworpen, dat een ORI-A XML-bestand altijd over maximaal één vergadering informatie bevat. Door die logica aan te houden, kon het interne verwijsmechanisme tussen entiteiten simpel worden gehouden.
 
-In de praktijk zal ORI-A vaak gezamenlijk met MDTO worden ingezet bij het migreren van raadsinformatie in brede zin, dus zowel videotulen als de bijbehorende informatieobjecten. In dat geval raden we aan om het ORI-A XML-bestand onder te brengen in de [MDTO sidecar-structuur](https://www.nationaalarchief.nl/archiveren/mdto/specificatie-submission-information-package/structuur). Dit kan door het ORI-A XML-bestand te beschouwen als [aanvullende metagegevens](https://www.nationaalarchief.nl/archiveren/mdto/aanvullendeMetagegevens) en op te nemen bij een relevant informatieobject. Bijvoorbeeld bij de metagegevens van de videotuul zelf of het vergaderdossier.
+In de praktijk zal ORI-A vaak gezamenlijk met MDTO worden ingezet bij het migreren van raadsinformatie in brede zin, dus zowel videotulen als de bijbehorende informatieobjecten. In dat geval raden we aan om het ORI-A XML-bestand onder te brengen in de [MDTO sidecar-structuur](https://www.nationaalarchief.nl/archiveren/mdto/specificatie-submission-information-package/structuur). Dit kan door het ORI-A XML-bestand te beschouwen als [aanvullende metagegevens](https://www.nationaalarchief.nl/archiveren/mdto/aanvullendeMetagegevens) en op te nemen bij een relevant informatieobject. Bijvoorbeeld bij de metagegevens van de videotuul zelf of het vergaderdossier.-->
+
 <!-- hier gaat het lonen om een voorbeeld van een directorystructuur op te nemen waarop is te zien hoe een gecombineerde MDTO/ORI-A levering eruit ziet. Maar dat kan dan in het 'how-to' gedeelte -->
 
 # Hoe verhoudt ORI-A zich tot ORI?
