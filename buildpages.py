@@ -31,7 +31,7 @@ def pageinfo(filestem):
         soup = BeautifulSoup(f, 'html.parser')
 
     headers = []
-    if title != "FAQ":
+    if not title in ["Veelgestelde vragen", "FAQ"]:
         for header in soup.find_all('h1'):
             # pandoc generates anchors automatically!
             anchor = header.get('id')
