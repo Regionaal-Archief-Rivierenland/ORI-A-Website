@@ -5,13 +5,15 @@ position: 2
 
 # Begrippenlijsten gebruiken
 
+<!-- Het lijkt me een goed idee om te beginnen met een algemeen stuk over het hoe en waarom van begrippenlijsten en hun nut bij standaardisatie. Eventueel met link naar de MDTO en TOOI begrippenlijsten. -->
+
 Een begrippenlijst roep je zo aan:
 
 ``` xml
 <vergaderstukType>
     <begripLabel>Motie</begripLabel>
     <begrippenlijstVerwijzing>
-        <verwijzingID>www.ori-archiefstandaard.nl/begrippenlijsten/vergaderstuk-types</verwijzingID>
+        <verwijzingID>www.ori-a.nl/begrippenlijsten#vergaderstuk-types</verwijzingID>
         <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuk Types</verwijzingNaam>
     </begrippenlijstVerwijzing>
 </vergaderstukType>
