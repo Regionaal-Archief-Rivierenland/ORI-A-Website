@@ -4,31 +4,38 @@ position: 4
 ---
 
 # Wat is raadsinformatie, en wat is een videotuul?
+
 **Raadsinformatie** is een verzamelnaam voor alle digitale informatie die overheden aanmaken bij politieke en/of bestuurlijke besluitvorming. Deze besluitvorming vindt plaats in vergaderingen.
 
 Een **videotuul** (samenvoeging van "video" en "notulen") is een audiovisueel verslag van zo'n vergadering. Als het alleen een geluidsopname is, dan wordt het een audiotuul genoemd. Naast de opname bestaat een videotuul uit metagegevens die contextinformatie geven over de vergadering, zoals agendapunten, sprekersinformatie, spreekfragmenten en aanwezige deelnemers. Domeinspecifieke gegevens dus.
 
 # Moeten videotulen worden bewaard?
+
 Strikt genomen zijn overheden niet altijd verplicht om videotulen te bewaren. Als er ook schriftelijke verslagen zijn van vergaderingen, dan hoort de meest informatierijke bron te worden bewaard. Vanuit cultuurhistorisch oogpunt is het wel belangrijk dat videotulen permanent bewaard worden. Videotulen zijn een belangrijk onderdeel van de digitale democratie.
 
 # Waarom is ORI-A ontwikkeld?
+
 ORI-A is ontwikkeld als domeinspecifieke standaard voor raadsinformatie, wanneer dit voor permanente bewaring naar een [e-depot](https://www.nationaalarchief.nl/archiveren/kennisbank/wat-is-een-e-depot) wordt gemigreerd. Om videotulen op een [duurzaam toegankelijke](https://www.nationaalarchief.nl/archiveren/kennisbank/duurzaam-toegankelijk) manier te kunnen beheren en beschikbaar stellen. Om migratie van raadsinformatie uniformer en efficiënter te maken, en zeker te zijn dat de juiste metagegevens meekomen.
 
 # Waarom is ORI-A een XML-schema?
+
 ORI-A is als XML Schema Document (XSD) ontworpen, zodat het gezamenlijk met [MDTO](https://www.nationaalarchief.nl/archiveren/mdto) kan worden gebruikt bij migraties naar het e-depot. Metagegevens over informatieobjecten en bestanden kunnen dan in MDTO worden uitgedrukt, en metagegevens over raadsinformatie in ORI-A.
 
 # Waarom heeft ORI-A geen aggregatieniveaus?
+
 ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgesplitst in hiërarchisch gestructureerde niveaus, in MDTO ook wel bekend als 'aggregatieniveaus'. De hoofdreden voor deze relatief 'platte' structuur is dat de objecten in ORI, het informatiemodel van de ORI API waar ORI-A op is gebaseerd, bijna allemaal meervoudige relaties hebben met elkaar. Om een voorbeeld te noemen: een raadsvoorstel is weliswaar een onderdeel van een vergadering, maar kan net zo goed onderdeel zijn van iemand's portefeuille, een stemming teweeg brengen, of ondertekend worden door een groep personen. Hierdoor lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
 
 De enige uitzondering die hierop in ORI-A is gemaakt is het nesten van natuurlijkPersoon onder aanwezigeDeelnemer. Voor natuurlijke personen die niet aanwezig waren op de vergadering is het element persoonBuitenVergadering ontworpen.
 
 # Hoeveel vergaderingen komen in één ORI-A XML-bestand?
+
 ORI-A is zo ontworpen, dat een ORI-A XML-bestand altijd over maximaal één vergadering informatie bevat. Door die logica aan te houden, kon het interne verwijsmechanisme tussen entiteiten simpel worden gehouden.
 
 In de praktijk zal ORI-A vaak gezamenlijk met MDTO worden ingezet bij het migreren van raadsinformatie in brede zin, dus zowel videotulen als de bijbehorende informatieobjecten. In dat geval raden we aan om het ORI-A XML-bestand onder te brengen in de [MDTO sidecar-structuur](https://www.nationaalarchief.nl/archiveren/mdto/specificatie-submission-information-package/structuur). Dit kan door het ORI-A XML-bestand te beschouwen als [aanvullende metagegevens](https://www.nationaalarchief.nl/archiveren/mdto/aanvullendeMetagegevens) en op te nemen bij een relevant informatieobject. Bijvoorbeeld bij de metagegevens van de videotuul zelf of het vergaderdossier.
 <!-- hier gaat het lonen om een voorbeeld van een directorystructuur op te nemen waarop is te zien hoe een gecombineerde MDTO/ORI-A levering eruit ziet. Maar dat kan dan in het 'how-to' gedeelte -->
 
 # Hoe verhoudt ORI-A zich tot ORI?
+
 ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). Op sommige vlakken is besloten af te wijken van dit informatiemodel. ORI-A biedt in tegenstelling tot ORI geen ruimte voor gegevens over informatieobjecten, maar verwijst op die momenten naar MDTO. Ook zijn sommige verplichtingen verschillend. Een volledige lijst van de verschillen wordt nog opgemaakt.
 
 Voor meer achtergrondinformatie over ORI, lees [hier](https://ontola.io/nl/cases/openbesluitvorming/) en [hier](https://openstate.eu/nl/projecten-tools-data/besluiten/open-raadsinformatie/).
