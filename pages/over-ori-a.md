@@ -3,6 +3,12 @@ title: Over ORI•A
 position: 1
 ---
 
+<section>
+:::: waarschuwing
+**Disclaimer:** De ORI-A website en bijbehorende documentatie zijn nog in ontwikkeling. Hou er daarom rekening mee dat alle informatie op deze website onvolledig, onnauwkeurig of verouderd kan zijn.
+::::
+</section>
+
 # Wat is ORI•A?
 
 De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor de uitwisseling van raadsinformatie in XML-formaat. Het is gebaseerd op het informatiemodel onder de [Open API Specificatie voor Raadsinformatie](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). 

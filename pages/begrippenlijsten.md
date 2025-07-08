@@ -30,7 +30,7 @@ Een paar begrippenlijsten die van toepassing zijn op **ORI•A** worden beheerd 
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 
-# Vergaderstuktypes
+# Vergaderstuk types
 
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. <!-- TODO: misschien een infobox van maken?-->Voor meer informatie, zie [Gebruik van ORI-A met MDTO](documentatie.html#gebruik-van-ori-a-met-mdto).
 
@@ -38,6 +38,7 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 |:-----------|:-------------------------------------------------------------------------------|
 | Voorstel   | Een plan waarover een besluit genomen kan worden.                              |
 | Motie      | Een gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
+| Amendement | Een voorstel om een bestaand voorstel te wijzigen.                             |
 | Toezegging | Een toezegging van een gedeputeerde of raadslid.                               |
 | Vraag      | Een vraag aan de raad.                                                         |
 | Antwoord   | Een antwoord op een vraag aan de raad.                                         |
@@ -94,4 +95,16 @@ Een lijst met verschillende soorten relaties tussen personen en vergaderstukken.
 | Indiener           | Indiener van een vergaderstuk (herkomst: VNG's ORI).         |
 | Ondertekenaar      | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI).    |
 | Portefeuillehouder | De portefeuillehouder van een voorstel (herkomst: VNG's ORI) |
+
+# Mediabron types
+
+Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
+
+
+| Label        | Definitie                                                                   |
+|:-------------|:----------------------------------------------------------------------------|
+| Video        | Een audiovisuele opname van een vergadering. Ookwel 'videotuul'.            |
+| Audio        | Een audio opname van een vergadering. Ookwel 'audiotuul'.                   |
+| Transcriptie | Een schriftelijk uitverwerking van de gesproken inhoud van een vergadering. |
+
 
