@@ -13,7 +13,7 @@ Een begrippenlijst roep je zo aan:
 <vergaderstukType>
     <begripLabel>Motie</begripLabel>
     <begrippenlijstVerwijzing>
-        <verwijzingID>www.ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
+        <verwijzingID>www.ori-a.nl/begrippenlijsten#vergaderstuk-types</verwijzingID>
         <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuk Types</verwijzingNaam>
     </begrippenlijstVerwijzing>
 </vergaderstukType>
