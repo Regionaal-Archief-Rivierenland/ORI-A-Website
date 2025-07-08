@@ -35,6 +35,7 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 |:-----------|:-------------------------------------------------------------------------------|
 | Voorstel   | Een plan waarover een besluit genomen kan worden.                              |
 | Motie      | Een gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
+| Amendement | Een voorstel om een bestaand voorstel te wijzigen.                             |
 | Toezegging | Een toezegging van een gedeputeerde of raadslid.                               |
 | Vraag      | Een vraag aan de raad.                                                         |
 | Antwoord   | Een antwoord op een vraag aan de raad.                                         |
