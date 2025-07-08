@@ -92,3 +92,15 @@ Een lijst met verschillende soorten relaties tussen personen en vergaderstukken.
 | Ondertekenaar      | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI).    |
 | Portefeuillehouder | De portefeuillehouder van een voorstel (herkomst: VNG's ORI) |
 
+# Mediabron types
+
+Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
+
+
+| Label        | Definitie                                                                   |
+|:-------------|:----------------------------------------------------------------------------|
+| Video        | Een audiovisuele opname van een vergadering. Ookwel 'videotuul'.            |
+| Audio        | Een audio opname van een vergadering. Ookwel 'audiotuul'.                   |
+| Transcriptie | Een schriftelijk uitverwerking van de gesproken inhoud van een vergadering. |
+
+
