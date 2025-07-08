@@ -23,7 +23,9 @@ ORI-A is als XML Schema Document (XSD) ontworpen, zodat het gezamenlijk met [MDT
 
 # Waarom heeft ORI-A geen aggregatieniveaus?
 
-ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgesplitst in hiërarchisch gestructureerde niveaus, in MDTO ook wel bekend als 'aggregatieniveaus'. De hoofdreden voor deze relatief 'platte' structuur is dat de objecten in ORI, het informatiemodel van de ORI API waar ORI-A op is gebaseerd, bijna allemaal meervoudige relaties hebben met elkaar. Om een voorbeeld te noemen: een raadsvoorstel is weliswaar een onderdeel van een vergadering, maar kan net zo goed onderdeel zijn van iemand's portefeuille, een stemming teweeg brengen, of ondertekend worden door een groep personen. Hierdoor lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
+ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgesplitst in hiërarchisch gestructureerde niveaus, in MDTO ook wel bekend als 'aggregatieniveaus'. 
+
+De hoofdreden voor deze relatief 'platte' structuur is dat de objecten in ORI, het informatiemodel van de ORI API waar ORI-A op is gebaseerd, bijna allemaal meervoudige relaties hebben met elkaar. Om een voorbeeld te noemen: een raadsvoorstel is weliswaar een onderdeel van een vergadering, maar kan net zo goed onderdeel zijn van iemand's portefeuille, een stemming teweeg brengen, of ondertekend worden door een groep personen. Hierdoor lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
 
 De enige uitzondering die hierop in ORI-A is gemaakt is het nesten van natuurlijkPersoon onder aanwezigeDeelnemer. Voor natuurlijke personen die niet aanwezig waren op de vergadering is het element persoonBuitenVergadering ontworpen.
 
