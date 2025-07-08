@@ -156,38 +156,3 @@ Dit zijn de gegevens die worden gebruikt bij het verwijzen van het ene naar het 
 Dit zijn de gegevens die worden gebruikt om te verwijzen naar informatieobjecten.
 
 {{ informatieobject_table }}
-
-# Gebruik van ORI-A met MDTO
-
-ORI-A laat het beschrijven van informatieobjecten (**vergaderstukken**, **mediabestanden**, etc.) over aan **MDTO**. Met andere woorden: ORI-A beschrijft domein-_specifieke_ gegevens — raadsgegevens — terwijl MDTO beperkt blijft tot meer generieke gegevens over documenten en bestanden, zoals hun aanmaakdatum en auteur.
-
-::: waarschuwing
-De enige _inhoudelijke_ informatie over informatieobjecten die in ORI-A wordt opgenomen is `<informatieobjectType>`. Deze informatie overlapt met `<classificatie>` binnen MDTO. <!-- De reden waarom deze informatie alsnog binnen ORI-A kan worden opgenomen is dat dit domeinspecifieke informatie betreft die in de context van een vergadering relevant is. Een gebruiker die alleen ORI-A data zou raadplegen, zou in  geval alsnog de rol die het informatieobject heeft gespeeld binnen een vergadering kunnen afleiden.   -->
-De reden dat deze informatie in ORI-A is opgenomen, is omdat het helpt bij het interpreteren van de rol die informatieobjecten in de vergadering hebben gespeeld. 
-:::
-
-## ORI-A → MDTO verwijzingen in XML vorm
-
-Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het ID van een in MDTO opgesteld informatieobject  (zie ook [`verwijzingGegevens`](#verwijzing-gegevens)):
-
-<!-- TODO: misschien wel mooi om het MDTO bestand ook als voorbeeld op te voeren. -->
-``` xml
-<informatieobjectGegevens>
-    <informatieobjectType>Motie</informatieobjectType>
-    <verwijzingInformatieobject>
-        <verwijzingID>document-009</verwijzingID>
-        <verwijzingNaam>Motie van lid Smit</verwijzingNaam>
-    </verwijzingInformatieobject>
-</informatieobjectGegevens>
-```
-
-Het element `<verwijzingNaam>` hierboven is slechts een hulpsteuntje voor menselijke lezers — om een verwijzing tot stand te brengen volstaat `<verwijzingID>`.
-
-
-<!-- # Vormgeving van ORI-A XML-bestanden -->
-
-<!-- Het ORI-A XML-schema is zo opgesteld dat er maximaal één vergadering per ORI-A XML-bestand wordt uitgedrukt. Hierdoor konden de interne verwijzingen tussen andere ORI-A elementen en `<vergadering>` simpel worden gehouden.  -->
-
-<!-- <\!-- dit is preservica documentatie, at best. Ik denk niet dat we dit per se officeel willen supporten, want een XSD schema kan geen _verzamelingen_ bestanden valideren, maar alleen indivuele bestanden. Of te wel, dit is highly discouraged, en uiteindelijk bad practice.  -\-> -->
-<!-- Notitie Léon: de bovenstaande tekst staat nu als FAQ vraag opgenomen -->
-<!-- Het ORI-A XML-schema staat overigens toe dat gegevens over één vergadering over meerdere ORI-A XML-bestanden worden verspreid. Uit opnametests is gebleken dat sommige e-depots metagegevens (zoals ORI-A data) direct aan mappen of digitale bestanden koppelen. In dat geval kan het wenselijk zijn om de ORI-A XML-bestanden op te knippen in meerdere bestanden, zodat ze makkelijk aan het juiste niveau kunnen worden gerelateerd. -->
