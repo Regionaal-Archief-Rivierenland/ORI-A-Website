@@ -65,6 +65,11 @@ def delete_pandoc_cruft(html):
     for tag in soup.select("code span > a"):
         tag.decompose()
 
+    # Unwrap spans with id like cb3-2 inside <code>
+    for span in soup.select('code span[id]'):
+        if re.match(r'^cb\d+-\d+$', span['id']):
+            span.unwrap()
+
     return str(soup)
 
 
