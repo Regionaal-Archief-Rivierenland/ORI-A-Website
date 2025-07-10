@@ -249,6 +249,11 @@ aside {
     background-color: var(--pico-code-background-color);
 }
 
+/* reduce bottom paddig on active list item (if not, we pad doubly) */
+.listnav li.active {
+    padding-bottom: 0;
+}
+
 [data-theme="dark"] .listnav a.active {
     background-color: var(--pico-muted-border-color);
 }
