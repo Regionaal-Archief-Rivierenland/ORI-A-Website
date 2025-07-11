@@ -71,6 +71,12 @@ h2 {
   --pico-color: var(--pico-h3-color);
 }
 
+h3 {
+	--pico-font-size: 1.25rem;
+	--pico-line-height: 1.2;
+	--pico-typography-spacing-top: 1.874rem;
+}
+
 .waarschuwing {
     /* pico azure 400 */
     background-color: #029AE81a;
