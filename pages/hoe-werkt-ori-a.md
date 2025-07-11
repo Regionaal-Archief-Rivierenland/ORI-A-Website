@@ -234,9 +234,9 @@ Als je informatie wilt registeren over personen die niet in de vergadering aanwe
 
 * De afwezigheid van raadsleden registeren
 * Vastleggen dat een ambtenaar die zelf niet aanwezig was verantwoordelijkheid over een agendapunt droeg
-* De ondertekenaars van een stuk opslaan
+* De ondertekenaars van een stuk opslaa
 
-In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering, maar speelde hij toch een zeker rol als behandeld ambtenaar: 
+In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering, maar speelde hij toch een zekere rol als behandeld ambtenaar: 
 
 ``` xml
 <agendapunt>
