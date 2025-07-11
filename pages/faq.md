@@ -1,6 +1,6 @@
 ---
 title: Veelgestelde vragen
-position: 4
+position: 5
 ---
 
 # Wat is raadsinformatie, en wat is een videotuul?
