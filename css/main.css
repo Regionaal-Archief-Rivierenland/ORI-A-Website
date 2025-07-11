@@ -89,6 +89,7 @@ h3 {
     border-left: .25rem solid #017FC0;
     border-inline-start: .25rem solid #017FC0;
     border-inline-end: ;
+    margin-bottom: var(--pico-block-spacing-vertical);
 }
 
 .waarschuwing::before {
