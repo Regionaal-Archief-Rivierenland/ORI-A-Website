@@ -270,9 +270,33 @@ aside {
     padding-left: 0.75rem;  /* indent nested list */
 }
 
+
 a.mainpage {
     font-weight: bold;
 }
+
+/* agendapunt example */
+article > header > * {
+    margin-bottom: 0;
+}
+
+#agenda-example > header p {
+    font-size: 1.125rem;
+}
+
+#agenda-example {
+    border-style: solid;
+    border-radius: var(--pico-border-radius);
+    border-width: 3px;
+    border-color: var(--pico-card-border-color);
+    box-shadow: var(--pico-box-shadow);
+    background: var(--pico-card-background-color);
+}
+
+.hoofdagendapunt details {
+    margin-left: 30px;
+}
+
 
 /* Landmarks
  */
