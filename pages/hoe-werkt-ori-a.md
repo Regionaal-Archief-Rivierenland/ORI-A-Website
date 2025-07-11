@@ -227,10 +227,37 @@ Dit zegt in essentie:
 
 > Peter van der Velden (de burgemeester) was in deze vergadering aanwezig als voorzitter.
 
-### Naar personen verwijzen vanuit MDTO 
 
-ORI-A laat het beschrijven van relaties tussen personen en documenten over aan andere metadatastandaarden, zoals MDTO.
-Dit doe je het ID van een persoon opgemaakt in ORI-A — bijv. `persoon-0` — te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie): 
+## Informatie over personen buiten een vergadering
+
+Als je informatie wilt registeren over mensen die niet in de vergadering aanwezig waren, kan dat in `<persoonBuitenVergadering>`. Met dit element kun je bijvoorbeeld:
+
+* De afwezigheid van raadsleden registeren
+* Vastleggen dat een ambtenaar die zelf niet aanwezig was verantwoordelijkheid over een agendapunt droeg
+* De ondertekenaars van een stuk opslaan
+
+In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering, maar speelde hij toch een zeker rol als behandeld ambtenaar: 
+
+``` xml
+<agendapunt>
+    …
+    <heeftAlsBehandelendAmbtenaar>
+        <verwijzingID>persoon-076</verwijzingID>
+        <verwijzingNaam>Jan de Vries</verwijzingNaam>
+    </heeftAlsBehandelendAmbtenaar>
+</agendapunt>
+
+<persoonBuitenVergadering>
+    <ID>persoon-076</ID>
+    <naam>
+        <volledigeNaam>Jan de Vries</volledigeNaam>
+    </naam>
+</persoonBuitenVergadering>
+```
+
+## Naar personen verwijzen vanuit MDTO 
+
+ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Dit doe je het ID van een persoon opgemaakt in ORI-A — bijv. `persoon-76` — te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie): 
 
 
 ``` xml
@@ -248,44 +275,15 @@ Dit doe je het ID van een persoon opgemaakt in ORI-A — bijv. `persoon-0` — t
 		    </begripBegrippenlijst>
 	    </betrokkeneTypeRelatie>
 	    <betrokkeneActor>
-		    <verwijzingNaam>Peter van der Velden</verwijzingNaam>
+		    <verwijzingNaam>Jan de Vries</verwijzingNaam>
 		    <verwijzingIdentificatie>
-			    <identificatieKenmerk>Persoon-0</identificatieKenmerk>
+			    <identificatieKenmerk>Persoon-76</identificatieKenmerk>
 			    <identificatieBron>Parlaeus</identificatieBron>
 		    </verwijzingIdentificatie>
 	    </betrokkeneActor>
     </betrokkene>
     …
 ```
-
-
-## Informatie over personen buiten een vergadering
-
-Als je informatie wilt registeren over mensen die niet in de vergadering aanwezig waren, kan dat in `<persoonBuitenVergadering>`. Met dit element kun je bijvoorbeeld:
-
-* De afwezigheid van raadsleden registeren
-* Vastleggen dat een ambtenaar die zelf niet aanwezig was verantwoordelijkheid over een agendapunt droeg
-* De ondertekenaars van een stuk opslaan
-
-In onderstaande voorbeeld was Peter de Vries niet zelf aanwezig in de vergadering, maar speelde hij toch een zeker rol als behandeld ambtenaar: 
-
-``` xml
-<agendapunt>
-    …
-    <heeftAlsBehandelendAmbtenaar>
-        <verwijzingID>persoon-076</verwijzingID>
-        <verwijzingNaam>Peter de Vries</verwijzingNaam>
-    </heeftAlsBehandelendAmbtenaar>
-</agendapunt>
-
-<persoonBuitenVergadering>
-    <ID>persoon-076</ID>
-    <naam>
-        <volledigeNaam>Peter de Vries</volledigeNaam>
-    </naam>
-</persoonBuitenVergadering>
-```
-
 
 
 # Spreekfragmenten
