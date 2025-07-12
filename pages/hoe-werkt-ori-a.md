@@ -137,9 +137,9 @@ Veel RIS systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen"  als 
 :::
 
 
-# Relaties tussen ORI-A entiteiten aanmaken
+# Relaties tussen ORI-A entiteiten aanleggen
 
-ORI-A kent naast een vergadering en agendapunten nog een hoop entiteiten, zoals stemmingen, deelnemers en fracties (het ORI-A diagram geeft een volledig overzicht<!-- todo: add link-->).
+ORI-A kent naast vergaderingen en agendapunten nog een hoop entiteiten, zoals stemmingen, deelnemers en fracties (het ORI-A diagram geeft een volledig overzicht<!-- todo: add link-->).
 
 ORI-A entiteiten hebben doorgaans een veel **relaties**, zowel onderling als met externe informatieobjecten. Een fractie lidmaatschap heeft bijvoorbeeld vanzelfsprekend betrekking op een fractie, een stemming is altijd gekoppeld aan bepaald agendapunt, en een vergadering is doorgaans vastgelegd in een mediabestand ("videotuul").
 
@@ -147,9 +147,9 @@ ORI-A entiteiten hebben doorgaans een veel **relaties**, zowel onderling als met
 ## Voorbeeld: de relaties van een stemming
 
 <!-- todo: documenteer ook wanneer je nest? -->
-Een koppeling maken tussen twee entiteiten --- bijv. een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verwezen wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->. 
+Het aanmaken van een relatie tussen twee entiteiten --- bijv. een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verwezen wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->. 
 
-Om een koppeling tot stand te brengen, heeft de entiteit waarnaar verwezen wordt een uniek ID nodig. Dit ID kan vervolgens in `<verwijzingID>` worden ingevuld:
+Om een relatie tot stand te brengen, heeft de entiteit waarnaar verwezen wordt een uniek ID nodig. Dit ID kan vervolgens in `<verwijzingID>` worden ingevuld:
 
 ``` xml
 <stemming>
