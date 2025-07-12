@@ -62,7 +62,7 @@ Wat je binnen `<bestuurslaag>` ziet is een zogeheten **begrippenlijst**. Een beg
 
 <!-- Misschien nog iets toevoegen over het duurzaam bewaren van online begrippenlijsten -->
 :::waarschuwing
-Het is sterk aangeraden om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenlijst>`) een duurzame URL op te nemen. Hiermee blijven je begrippen vindbaar en interpreteerbaar, zelfs in de toekomst.
+Het is raadzaam om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenlijst>`) een duurzame URL op te nemen. Hiermee blijven je begrippen vindbaar en interpreteerbaar, zelfs in de toekomst.
 :::
 
 De oorsprong van de begrippenlijst hierboven is het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Daarnaast kun je er voor kiezen om zelf een begrippenlijst te onderhouden (zie hierover [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
@@ -106,13 +106,13 @@ Dan kun je dat zo in XML uitdrukken:
     <ID>202282aa200aa08200a2821eb50cf</ID>
     <titel>BEËDIGINGEN EN BENOEMINGEN</titel> 
     <heeftAlsSubagendapunt>
-        <ID>a8a80088a2aaa2812</ID>
+        …
         <titel>Beëdiging nieuw raadslid</titel>
         <volgnummer>8</volgnummer>
         <omschrijving>Dhr. Versluijs wordt beëdigd als duo-lid.</omschrijving>
     </heeftAlsSubagendapunt>
     <heeftAlsSubagendapunt>
-        <ID>a8a80088a2aaa2813</ID>
+        …
         <titel>Benoeming leden Rekenkamer Leiden</titel>
         <volgnummer>9</volgnummer>
         <omschrijving>Mw. Snel wordt aangesteld als lid van de Rekenkamer.</omschrijving>
@@ -123,7 +123,7 @@ Dan kun je dat zo in XML uitdrukken:
     <ID>202282aa200aa08200a2821eb5100</ID>
     <titel>HAMERSTUKKEN</titel>
     <heeftAlsSubagendapunt>
-        <ID>a8a80088a2aaa2814</ID>
+        …
         <titel>Vaststelling Regeling Regio Rijnland (9de wijziging)</titel>
         <volgnummer>10</volgnummer>
         <omschrijving>De raad wordt gevraagd de 9de wijziging op de regeling Regio Rijnland vast te stellen.</omschrijving>
@@ -137,19 +137,19 @@ Veel RIS systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen"  als 
 :::
 
 
-# Relaties tussen ORI-A entiteiten aanleggen
+# Relaties tussen ORI-A entiteiten aanmaken
 
-ORI-A kent naast een vergadering en agendapunten nog een andere hele hoop entiteiten, zoals stemmingen, deelnemers en fracties (het ORI-A diagram geeft een volledig overzicht<!-- todo: add link-->). 
+ORI-A kent naast een vergadering en agendapunten nog een hoop entiteiten, zoals stemmingen, deelnemers en fracties (het ORI-A diagram geeft een volledig overzicht<!-- todo: add link-->).
 
-ORI-A entiteiten hebben doorgaans een hoop **relaties**, zowel onderling als met externe informatieobjecten. Een fractie lidmaatschap heeft vanzelfsprekend betrekking op een fractie,  een stemming gaat altijd over een bepaald agendapunt, en een vergadering is doorgaans vastgelegd in een mediabestand ("videotuul").
+ORI-A entiteiten hebben doorgaans een veel **relaties**, zowel onderling als met externe informatieobjecten. Een fractie lidmaatschap heeft bijvoorbeeld vanzelfsprekend betrekking op een fractie, een stemming is altijd gekoppeld aan bepaald agendapunt, en een vergadering is doorgaans vastgelegd in een mediabestand ("videotuul").
 
 
 ## Voorbeeld: de relaties van een stemming
 
 <!-- todo: documenteer ook wanneer je nest? -->
-Een koppelingen maken tussen twee entiteiten --- bijv. een stemming en een agendapunt --- gaat via een een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verwezen wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->. 
+Een koppeling maken tussen twee entiteiten --- bijv. een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verwezen wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->. 
 
-Om een koppeling tot stand te brengen, heeft de entiteit waarnaar verwezen wordt een uniek ID-waarde nodig. Deze waarde kan vervolgens in `verwijzingID` worden ingevuld:
+Om een koppeling tot stand te brengen, heeft de entiteit waarnaar verwezen wordt een uniek ID nodig. Dit ID kan vervolgens in `<verwijzingID>` worden ingevuld:
 
 ``` xml
 <stemming>
@@ -174,9 +174,9 @@ De ORI-A XSD checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn.
 :::
 
 
-Voor een uitgebreide uitleg over het verwijzen naar externe informatieobject zoals besluitvormingsstukken, zie "ORI-A & MDTO combineren".
+Voor een uitgebreide uitleg over het verwijzen naar externe informatieobject zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
-Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in ["Waarom heeft ORI-A geen aggregatieniveaus" de in veelgestelde vragen](faq).
+Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in ["Waarom heeft ORI-A geen aggregatieniveaus" in de veelgestelde vragen](faq).
 
 ### Individuele stemmen
 
@@ -257,7 +257,7 @@ In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering,
 
 ## Naar personen verwijzen vanuit MDTO 
 
-ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Dit doe je het ID van een persoon opgemaakt in ORI-A — bijv. `persoon-76` — te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie): 
+ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Dit doe door een ID van een persoon als gedefinieerd in ORI-A — bijv. `persoon-76` — te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie): 
 
 
 ``` xml
