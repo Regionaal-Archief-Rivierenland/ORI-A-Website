@@ -38,6 +38,7 @@ Duidelijk, maar nog niet super informatief.
 
 # Begrippenlijsten gebruiken
 
+<!-- idk of de semantische beschrijven van bestuurslaag hier helemaal klopt. je hebt ook georganiseerdDoorGremium. Misschien dat dat preciezer is. bestuurslaag geeft namelijk misschien alleen aan op welk niveau de vergadering plaatsvind  -->
 Meestal wil je ook nog weten wie de vergadering heeft georganiseerd. In ORI-A doe je dit door een `<bestuurslaag>` aan je vergadering toe te voegen:
 
 ``` xml
@@ -205,7 +206,7 @@ In ORI-A kun je [persoonsgegevens](documentatie#natuurlijk-persoon-gegevens) ond
 ## Aanwezige deelnemer
 
 
-De meest gebruikelijke optie is om persoonsgegevens onder het `<isNatuurlijkPersoon>` van een aanwezige deelnemer te zetten:
+De meest gebruikelijke optie is om persoonsgegevens onder het `<isNatuurlijkPersoon>` element van een aanwezige deelnemer te zetten:
 
 ``` xml
 <aanwezigeDeelnemer>
