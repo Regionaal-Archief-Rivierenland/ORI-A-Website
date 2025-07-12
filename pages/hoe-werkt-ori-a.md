@@ -200,7 +200,7 @@ Naast personen, kunnen ook fracties een stem uitbrengn. Zie hiervoor `stemResult
 
 # Persoonsgegevens
 
-In ORI-A kun je [persoonsgegevens](documentatie#natuurlijk-persoon-gegevens) onder twee verschillende _top-level_ elementen opnemen:  onder `<aanwezigeDeelnemer>`, of onder `<persoonBuitenvErgadering>`. Deze opties hebben een iets ander semantiek.
+In ORI-A kun je [persoonsgegevens](documentatie#natuurlijk-persoon-gegevens) onder twee verschillende _top-level_ elementen opnemen:  onder `<aanwezigeDeelnemer>`, of onder `<persoonBuitenvErgadering>`. Deze opties hebben een iets andere semantiek.
 
 ## Aanwezige deelnemer
 
