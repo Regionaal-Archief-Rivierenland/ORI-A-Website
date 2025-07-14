@@ -22,11 +22,8 @@ position: 2
 <!-- <\!-- dit is preservica documentatie, at best. Ik denk niet dat we dit per se officeel willen supporten, want een XSD schema kan geen _verzamelingen_ bestanden valideren, maar alleen indivuele bestanden. Of te wel, dit is highly discouraged, en uiteindelijk bad practice.  -\-> -->
 <!-- Het ORI-A XML-schema staat overigens toe dat gegevens over één vergadering over meerdere ORI-A XML-bestanden worden verspreid. Uit opnametests is gebleken dat sommige e-depots metagegevens (zoals ORI-A data) direct aan mappen of digitale bestanden koppelen. In dat geval kan het wenselijk zijn om de ORI-A XML-bestanden op te knippen in meerdere bestanden, zodat ze makkelijk aan het juiste niveau kunnen worden gerelateerd. -->
 
-# Het _root_-element
+# ORI-A (_root_-element)
 
-Op deze pagina is uitleg te vinden over de opbouw en elementen van de ORI-A XML Schema Definition (XSD).
-
-## ORI-A gegevens
 
 <section>
 `<ORI-A>` — het eerste element in een ORI-A XML boom — kent weinig verplichte kind elementen. Dit _root_-element hoeft alleen een `<vergadering>` en `<agendapunt>` te bevatten. Dit omdat er altijd een vergadering moet zijn geweest waar data over is gegenereerd, en omdat deze vergadering minstens een agendapunt moet hebben gehad.
@@ -49,13 +46,7 @@ Op deze pagina is uitleg te vinden over de opbouw en elementen van de ORI-A XML 
 </ORI-A>
 ```
 
-# Top-level elementen
-
-<section>
-Oftewel, directe kinderen van `<ORI-A>`.
-</section>
-
-## Vergadering gegevens
+# Vergadering gegevens
 
 {{ vergadering_table }}
 
@@ -73,7 +64,7 @@ Oftewel, directe kinderen van `<ORI-A>`.
 </vergadering>
 ```
 
-## Agendapunt gegevens
+# Agendapunt gegevens
 
 {{ agendapunt_table }}
 
@@ -88,7 +79,7 @@ Oftewel, directe kinderen van `<ORI-A>`.
 </agendapunt>
 ```
 
-## Natuurlijk persoon gegevens
+# Natuurlijk persoon gegevens
 
 <!-- TODO: korte uitleg over waar dit datatype allemaal voorkomt -->
 {{ natuurlijk_persoon_table }}
@@ -98,7 +89,7 @@ Oftewel, directe kinderen van `<ORI-A>`.
 ``` xml
 </todo>
 ```
-## Fractie gegevens
+# Fractie gegevens
 
 {{ fractie_table }}
 
@@ -117,15 +108,19 @@ Oftewel, directe kinderen van `<ORI-A>`.
 </fractie>
 ```
 
-# Algemene datatypes
-
-## Verwijzing gegevens
+# Verwijzing gegevens
 
 Dit zijn de gegevens die worden gebruikt bij het verwijzen van het ene naar het andere element binnen ORI-A, of naar informatieobjecten buiten ORI-A.
 
 {{ verwijzing_table }}
 
-## Informatieobject gegevens
+# Begrip gegevens
+
+Zie [begrippenlijsten gebruiken](hoe-werkt-ori-a#begrippenlijsten-gebruiken).
+
+{{ begrip_table }}
+
+# Informatieobject gegevens
 
 Dit zijn de gegevens die worden gebruikt om te verwijzen naar informatieobjecten.
 

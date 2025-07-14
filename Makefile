@@ -28,10 +28,13 @@ FONT_OUTPUTS := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_MONOSPACE
 TABLE_SRC := pages/documentatie.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd
 TABLE_DST := pages/documentatie.md
 
-.PHONY: all clean
+.PHONY: all clean update-submodule
 
 # Default target
-all: generate-tables buildpages minify subset-fonts
+all: update-submodule generate-tables buildpages minify subset-fonts
+
+update-submodule:
+	git submodule update --recursive --remote
 
 # Create site/ directory
 $(CSS_DST) $(HTML_DST): | site
@@ -87,7 +90,7 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 	pyftsubset fonts/$(FONT_MONOSPACE) \
         --drop-tables=FFTM,feat,meta \
 		--flavor=woff2 --layout-features="kern" \
-		--text="$$code_snippets""YPF" \
+		--text="$$code_snippets""YPFURI" \
 		--output-file=site/$(FONT_MONOSPACE)
 
 # copy/minify js
@@ -99,13 +102,12 @@ generate-tables: $(TABLE_DST)
 $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
 
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF_DST)
+
 # Build HTML pages (depends on all build artifacts)
-buildpages: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF_DST)
+buildpages: prepare-site
 	python3 buildpages.py
 	ln -srf site/$(MAIN_HTML) site/index.html
-	cp pages/test.html site/
-	cp pages/videotuul.mp4 site/
-	cp pages/videotuul.html site/
 
 minify: buildpages
 	minify-html --minify-js $$(fd -ehtml . site/)
