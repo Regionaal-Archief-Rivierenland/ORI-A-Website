@@ -28,10 +28,13 @@ FONT_OUTPUTS := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_MONOSPACE
 TABLE_SRC := pages/documentatie.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd
 TABLE_DST := pages/documentatie.md
 
-.PHONY: all clean
+.PHONY: all clean update-submodule
 
 # Default target
-all: generate-tables buildpages minify subset-fonts
+all: update-submodule generate-tables buildpages minify subset-fonts
+
+update-submodule:
+	git submodule update --recursive --remote
 
 # Create site/ directory
 $(CSS_DST) $(HTML_DST): | site
