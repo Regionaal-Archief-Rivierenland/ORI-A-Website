@@ -257,7 +257,7 @@ In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering,
 
 ## Naar personen verwijzen vanuit MDTO 
 
-ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Dit doe door een ID van een persoon als gedefinieerd in ORI-A --- bijv. `persoon-76` --- te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie):
+ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Dit doe je door het ID van een persoon in ORI-A --- bijv. `persoon-76` --- te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie):
 
 
 ``` xml
