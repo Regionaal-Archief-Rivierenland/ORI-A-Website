@@ -66,7 +66,7 @@ Wat je binnen `<bestuurslaag>` ziet is een zogeheten **begrippenlijst**. Een beg
 Het is raadzaam om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenlijst>`) een duurzame URL op te nemen. Hiermee blijven je begrippen vindbaar en interpreteerbaar, zelfs in de toekomst.
 :::
 
-De oorsprong van de begrippenlijst hierboven is het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Daarnaast kun je er voor kiezen om zelf een begrippenlijst te onderhouden (zie hierover [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
+De oorsprong van de begrippenlijst hierboven is het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Ten slotte kun je er voor kiezen om zelf een begrippenlijst te onderhouden (zie hierover [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
 
 # Hoofd- en subagendapunten
 
@@ -140,15 +140,14 @@ Veel RIS systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen"  als 
 
 # Relaties tussen ORI-A entiteiten aanleggen
 
-ORI-A kent naast vergaderingen en agendapunten nog een hoop entiteiten, zoals stemmingen, deelnemers en fracties (het ORI-A diagram geeft een volledig overzicht<!-- todo: add link-->).
+ORI-A kent naast vergaderingen en agendapunten een hoop andere entiteiten, zoals stemmingen, deelnemers en fracties (het ORI-A diagram geeft een volledig overzicht<!-- todo: add link-->).
 
-ORI-A entiteiten hebben doorgaans veel **relaties**, zowel onderling als met externe informatieobjecten. Een fractie lidmaatschap heeft bijvoorbeeld vanzelfsprekend betrekking op een fractie, een stemming is altijd gekoppeld aan bepaald agendapunt, en een vergadering is doorgaans vastgelegd in een mediabestand ("videotuul").
-
+ORI-A entiteiten hebben doorgaans veel **relaties**, zowel onderling als met externe informatieobjecten. Een fractie lidmaatschap heeft vanzelfsprekend betrekking op een fractie, een stemming heeft altijd betrekking op een agendapunt, en een vergadering is doorgaans vastgelegd in een buiten ORI-A beschreven mediabestand ('videotuul').
 
 ## Voorbeeld: de relaties van een stemming
 
 <!-- todo: documenteer ook wanneer je nest? -->
-Het aanmaken van een relatie tussen twee entiteiten --- bijv. een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verwezen wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->. 
+Het aanmaken van een relatie tussen twee entiteiten --- bijv. een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verweze—n wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->. 
 
 Om een relatie tot stand te brengen, heeft de entiteit waarnaar verwezen wordt een uniek ID nodig. Dit ID kan vervolgens in `<verwijzingID>` worden ingevuld:
 
@@ -174,9 +173,9 @@ Dit zegt:
 De ORI-A XSD checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn.
 :::
 
-
 Voor een uitgebreide uitleg over het verwijzen naar externe informatieobject zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
+<!-- convert to info box -->
 Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in ["Waarom heeft ORI-A geen aggregatieniveaus" in de veelgestelde vragen](faq).
 
 ### Individuele stemmen
@@ -197,11 +196,11 @@ Een stem van een persoon op een `<stemming>` komt onder het _top-level_ element 
 
 Dit betekent dat deze deelnemer "Voor"  heeft gestemd op een stemming met ID `RV 23.0081`. 
 
-Naast personen, kunnen ook fracties een stem uitbrengn. Zie hiervoor `stemResultaatPerfractieGegevens`<!-- todo: link-->.
+Naast personen, kunnen ook fracties een stem uitbrengen. Zie hiervoor `stemResultaatPerfractieGegevens`<!-- todo: link-->.
 
 # Persoonsgegevens
 
-In ORI-A kun je [persoonsgegevens](documentatie#natuurlijk-persoon-gegevens) onder twee verschillende _top-level_ elementen opnemen:  onder `<aanwezigeDeelnemer>`, of onder `<persoonBuitenvErgadering>`. Deze opties hebben een iets andere semantiek.
+In ORI-A kun je [persoonsgegevens](documentatie#natuurlijk-persoon-gegevens) onder twee verschillende _top-level_ elementen opnemen:  onder `<aanwezigeDeelnemer>`, of onder `<persoonBuitenVergadering>`. Deze opties hebben een iets andere semantiek.
 
 ## Aanwezige deelnemer
 
@@ -231,9 +230,9 @@ Dit zegt in essentie:
 
 ## Informatie over personen buiten een vergadering
 
-Als je informatie wilt registeren over personen die niet in de vergadering aanwezig waren, kan dat in `<persoonBuitenVergadering>`. Met dit element kun je bijvoorbeeld…
+Als je informatie wilt registeren over personen die niet in de vergadering aanwezig waren, kan dat in `<persoonBuitenVergadering>`. Met dit element kun je onder andere:
 
-* De afwezigheid van raadsleden registeren
+* De afwezigheid van raadsleden bijhouden
 * Vastleggen dat een ambtenaar die zelf niet aanwezig was verantwoordelijkheid over een agendapunt droeg
 * De ondertekenaars van een stuk opslaan
 
