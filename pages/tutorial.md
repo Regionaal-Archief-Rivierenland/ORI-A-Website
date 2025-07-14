@@ -134,7 +134,7 @@ Dan kun je dat zo in XML uitdrukken:
 
 <!-- raden we dit aan, of schrijven we dit voor? -->
 :::waarschuwing
-Veel RIS systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen"  als agendapunten, maar geven ze geen volgnummers. Hierom is in ORI-A de volgorde van de `<(sub)agendapunt>` elementen leidend voor de volgorde van de agenda.
+Veel RIS systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen"  als agendapunten, maar geven ze geen volgnummers. Hierom is in ORI-A de volgorde van de `<(sub)agendapunt>`-elementen leidend voor de volgorde van de agenda.
 :::
 
 
