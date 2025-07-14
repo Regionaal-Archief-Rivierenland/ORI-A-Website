@@ -230,7 +230,7 @@ Dit zegt in essentie:
 
 ## Informatie over personen buiten een vergadering
 
-Als je informatie wilt registeren over personen die niet in de vergadering aanwezig waren, kan dat in `<persoonBuitenVergadering>`. Met dit element kun je onder andere:
+Als je informatie wilt registeren over personen die _niet_ in de vergadering aanwezig waren, kan dat in `<persoonBuitenVergadering>`. Met dit element kun je onder andere:
 
 * De afwezigheid van raadsleden bijhouden
 * Vastleggen dat een ambtenaar die zelf niet aanwezig was verantwoordelijkheid over een agendapunt droeg
