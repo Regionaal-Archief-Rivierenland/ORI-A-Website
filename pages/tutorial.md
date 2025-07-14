@@ -338,5 +338,8 @@ Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het
 
 Het element `<verwijzingNaam>` hierboven is [slechts een hulp steuntje](#verwijzen-met-een-naam) voor menselijke lezers --- om een verwijzing tot stand te brengen volstaat `<verwijzingID>`.
 
-## Metadateren van een videotuul 
+## Metadateren van een videotuul, audiotuul of transcriptie
 
+Metadata over de **mediabestanden** waarin een vergadering is opgenomen --- een videotuul, audiotuul of transcriptie ---- komt in MDTO (zie ook de voorbeeldbestanden<!-- todo: add link-->). 
+
+<!-- stukje over subtitles -->
