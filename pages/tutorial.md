@@ -198,6 +198,27 @@ Dit betekent dat deze deelnemer "Voor"  heeft gestemd op een stemming met ID `RV
 
 Naast personen, kunnen ook fracties een stem uitbrengen. Zie hiervoor `stemResultaatPerfractieGegevens`<!-- todo: link-->.
 
+## Verwijzen met een naam
+
+Binnen [`verwijzingGegevens`](#verwijzing-gegevens) --- de gegevensgroep waarmee je in ORI-A van de ene naar de andere entiteit verwijst --- is alleen het element `<verwijzingID>` verplicht. Naast deze verplichte ID, heb je in deze gegevensgroep ook de mogelijkheid om de **naam** van de entiteit waarnaar je verwijst meenemen.  Dit is omdat dit...
+
+``` xml
+<heeftBetrekkingOpAgendapunt>
+    <verwijzingID>2028a00aa</verwijzingID>
+</heeftBetrekkingOpAgendapunt>
+```
+
+voor mensen minder duidelijk leest dan dit:
+
+``` xml
+<heeftBetrekkingOpAgendapunt>
+    <verwijzingID>2028a00aa</verwijzingID>
+    <verwijzingNaam>Delegatiebesluit Omgevingsplan Leiden 2023</verwijzingNaam>
+</heeftBetrekkingOpAgendapunt>
+```
+
+Natuurlijk zijn computers, en niet mensen, de uiteindelijke **doelgroep van ORI-A XML**. Gebruik dit element dus alleen als je genoodzaakt bent ORI-A XML in compleet rauwe vorm te presenteren.
+
 # Persoonsgegevens
 
 In ORI-A kun je [persoonsgegevens](documentatie#natuurlijk-persoon-gegevens) onder twee verschillende _top-level_ elementen opnemen:  onder `<aanwezigeDeelnemer>`, of onder `<persoonBuitenVergadering>`. Deze opties hebben een iets andere semantiek.
@@ -257,7 +278,7 @@ In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering,
 
 ## Naar personen verwijzen vanuit MDTO 
 
-ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Dit doe je door het ID van een persoon in ORI-A --- bijv. `persoon-76` --- te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie):
+ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Zo'n relatie maak je aan door het ID van een persoon in ORI-A --- bijv. `persoon-76` --- te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie):
 
 
 ``` xml
@@ -315,7 +336,7 @@ Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het
 </heeftAlsBijlage>
 ```
 
-Het element `<verwijzingNaam>` hierboven is slechts een hulp steuntje voor menselijke lezers --- om een verwijzing tot stand te brengen volstaat `<verwijzingID>`.
+Het element `<verwijzingNaam>` hierboven is [slechts een hulp steuntje](#verwijzen-met-een-naam) voor menselijke lezers --- om een verwijzing tot stand te brengen volstaat `<verwijzingID>`.
 
 ## Metadateren van een videotuul 
 
