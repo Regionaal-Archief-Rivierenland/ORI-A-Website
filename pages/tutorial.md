@@ -39,7 +39,7 @@ Duidelijk, maar nog niet super informatief.
 # Begrippenlijsten gebruiken
 
 <!-- idk of de semantische beschrijven van bestuurslaag hier helemaal klopt. je hebt ook georganiseerdDoorGremium. Misschien dat dat preciezer is. bestuurslaag geeft namelijk misschien alleen aan op welk niveau de vergadering plaatsvind  -->
-Meestal wil je ook nog weten wie de vergadering heeft georganiseerd. In ORI-A doe je dit door een `<bestuurslaag>` aan je vergadering toe te voegen:
+Meestal wil je ook nog weten _wie_ de vergadering heeft georganiseerd. In ORI-A doe je dit door een `<bestuurslaag>` aan je vergadering toe te voegen:
 
 ``` xml
 <vergadering>
