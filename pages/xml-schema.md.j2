@@ -100,22 +100,47 @@ Het element `<verwijzingNaam>` hierboven is slechts een hulpsteuntje voor mensel
 ``` xml
 <agendapunt>
     <ID>a120-003</ID>
-    <agendapuntVolgnummer>3b</agendapuntVolgnummer>
+    <volgnummer>3b</volgnummer>
     <besloten>false</besloten>
-    <agendapuntTitel>Begroting Bankjes in Westerpark</agendapuntTitel>
+    <titel>Begroting Bankjes in Westerpark</titel>
 </agendapunt>
 ```
 
-# Natuurlijk persoon gegevens
+# Stemming gegevens
 
-<!-- TODO: korte uitleg over waar dit datatype allemaal voorkomt -->
-{{ natuurlijk_persoon_table }}
+Dit zijn gegevens over een **algemene stemming**; indivuele **stemkeuzes** komen in [`aanwezigeDeelnemerGegevens`](#aanwezige-deelnemer-gegevens).
+
+{{ stemming_table }}
 
 #### XML voorbeeld
 
 ``` xml
-</todo>
+<stemming>
+    <ID>stemming-0010</ID>
+    <stemmingType>Regulier</stemmingType>
+    <!--  -->
+    <leidtTotBesluit>
+        <besluitResultaat>Aangenomen</besluitResultaat>
+    </leidtTotBesluit>
+    <heeftBetrekkingOpAgendapunt>
+        <verwijzingID>2028</verwijzingID>
+        <verwijzingNaam>Delegatiebesluit Omgevingsplan Leiden 2023</verwijzingNaam>
+    </heeftBetrekkingOpAgendapunt>
+    <heeftBetrekkingOpBesluitvormingsstuk>
+        <informatieobjectType>
+            <begripLabel>Amendement</begripLabel>
+            <verwijzingBegrippenlijst>
+                <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuk-types</verwijzingID>
+            </verwijzingBegrippenlijst>
+        </informatieobjectType>
+        <verwijzingInformatieobject>
+            <verwijzingID>0222</verwijzingID>
+            <verwijzingNaam>Motie PvdD Groene ruimte borgen</verwijzingNaam>
+        </verwijzingInformatieobject>
+    </heeftBetrekkingOpBesluitvormingsstuk>
+</stemming>
 ```
+
 # Fractie gegevens
 
 {{ fractie_table }}
