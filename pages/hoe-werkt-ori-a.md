@@ -257,7 +257,7 @@ In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering,
 
 ## Naar personen verwijzen vanuit MDTO 
 
-ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Dit doe door een ID van een persoon als gedefinieerd in ORI-A — bijv. `persoon-76` — te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie): 
+ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Dit doe door een ID van een persoon als gedefinieerd in ORI-A --- bijv. `persoon-76` --- te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie):
 
 
 ``` xml
@@ -294,7 +294,7 @@ TODO
 
 # ORI-A & MDTO combineren
 
-ORI-A laat het beschrijven van informatieobjecten (**vergaderstukken**, **mediabestanden**, etc.) over aan **MDTO**. Met andere woorden: ORI-A beschrijft domein*specifieke* gegevens — raadsgegevens — terwijl MDTO beperkt blijft tot meer generieke gegevens over documenten en bestanden, zoals hun aanmaakdatum en auteur.
+ORI-A laat het beschrijven van informatieobjecten (**vergaderstukken**, **mediabestanden**, etc.) over aan **MDTO**. Met andere woorden: ORI-A beschrijft domein*specifieke* gegevens --- raadsgegevens --- terwijl MDTO beperkt blijft tot meer generieke gegevens over documenten en bestanden, zoals hun aanmaakdatum en auteur.
 
 ::: waarschuwing
 De enige _inhoudelijke_ informatie over informatieobjecten die in ORI-A wordt opgenomen is `<informatieobjectType>`. Deze informatie overlapt met `<classificatie>` binnen MDTO.  Deze informatie mag alsnog in ORI-A worden opgenomen, omdat het soms wel degelijk domeinspecifieke informatie betreft.  Voor het begrijpen van een vergadering kan het bijvoorbeeld uitmaken of een document een motie, amendement, of voorstel is.
@@ -315,7 +315,7 @@ Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het
 </heeftAlsBijlage>
 ```
 
-Het element `<verwijzingNaam>` hierboven is slechts een hulp steuntje voor menselijke lezers — om een verwijzing tot stand te brengen volstaat `<verwijzingID>`.
+Het element `<verwijzingNaam>` hierboven is slechts een hulp steuntje voor menselijke lezers --- om een verwijzing tot stand te brengen volstaat `<verwijzingID>`.
 
 ## Metadateren van een videotuul 
 
