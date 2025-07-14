@@ -40,8 +40,7 @@ jobs:
 
       - name: Build site
         run: |
-          make generate-tables
-          make
+          make -j5
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

@@ -99,13 +99,12 @@ generate-tables: $(TABLE_DST)
 $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
 
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF_DST)
+
 # Build HTML pages (depends on all build artifacts)
-buildpages: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF_DST)
+buildpages: prepare-site
 	python3 buildpages.py
 	ln -srf site/$(MAIN_HTML) site/index.html
-	cp pages/test.html site/
-	cp pages/videotuul.mp4 site/
-	cp pages/videotuul.html site/
 
 minify: buildpages
 	minify-html --minify-js $$(fd -ehtml . site/)
