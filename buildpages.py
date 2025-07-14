@@ -57,7 +57,8 @@ def add_icon_to_links(html):
 
 def delete_pandoc_cruft(html):
     """
-    Pandoc inserts unused <a> tags in code blocks. This is non-configurable.
+    Pandoc inserts unused <a> tags in code blocks, as well as extra
+    spans and divs. This is non-configurable.
     Hence, we delete these here.
     """
     soup = BeautifulSoup(html, 'html.parser')
@@ -65,10 +66,13 @@ def delete_pandoc_cruft(html):
     for tag in soup.select("code span > a"):
         tag.decompose()
 
-    # Unwrap spans with id like cb3-2 inside <code>
+    # Unwrap spans with ids like cb3-2 inside <code>
     for span in soup.select('code span[id]'):
         if re.match(r'^cb\d+-\d+$', span['id']):
             span.unwrap()
+
+    for div in soup.find_all('div', class_='sourceCode'):
+        div.unwrap()
 
     return str(soup)
 
