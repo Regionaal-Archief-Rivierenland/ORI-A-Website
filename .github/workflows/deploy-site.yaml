@@ -40,6 +40,7 @@ jobs:
 
       - name: Build site
         run: |
+          make generate-tables
           make -j5
 
       - name: Deploy to GitHub Pages
