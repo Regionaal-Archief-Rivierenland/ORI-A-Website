@@ -63,7 +63,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         seperate_words = camel_to_seperate_words(datatype)
 
         if datatype in gegevensgroepen_names:
-            # this is pandoc's anchro link fmt
+            # this is pandoc's anchor link fmt
             datatype_url = f"#{"-".join(seperate_words).lower()}"
         else:
             datatype_url = None
