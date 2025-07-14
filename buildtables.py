@@ -109,7 +109,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
 
     return rows
 
-outfile = "pages/documentatie.md"
+outfile = "pages/xml-schema.md"
 # Setup environment with whitespace control
 env = Environment(
     loader=FileSystemLoader(["pages", "templates"]),
@@ -117,7 +117,7 @@ env = Environment(
     lstrip_blocks=True,
 )
 
-documentatie_template = env.get_template("documentatie.md.j2")
+documentatie_template = env.get_template("xml-schema.md.j2")
 table_template = env.get_template("gegevensgroep_table.html")
 
 # to be passed as kwards to jinja
