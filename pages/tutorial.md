@@ -63,10 +63,10 @@ Wat je binnen `<bestuurslaag>` ziet is een zogeheten **begrippenlijst**. Een beg
 
 <!-- Misschien nog iets toevoegen over het duurzaam bewaren van online begrippenlijsten -->
 :::waarschuwing
-Het is raadzaam om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenlijst>`) een duurzame URL op te nemen. Hiermee blijven je begrippen vindbaar en interpreteerbaar, zelfs in de toekomst.
+Het is raadzaam om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenlijst>`) een URL bij `<verwijzingID>` op te nemen. Hiermee blijven je begrippen vindbaar en interpreteerbaar.
 :::
 
-De oorsprong van de begrippenlijst hierboven is het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Ten slotte kun je er voor kiezen om zelf een begrippenlijst te onderhouden (zie hierover [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
+De oorsprong van de begrippenlijst hierboven is het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Ten slotte kun je ook besluiten om zelf een begrippenlijst te onderhouden (zie hierover [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
 
 # Hoofd- en subagendapunten
 
