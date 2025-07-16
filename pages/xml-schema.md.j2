@@ -156,7 +156,28 @@ Dit zijn gegevens over een **algemene stemming**; indivuele **stemkeuzes** komen
 
 ``` xml
 <fractie>
-    <fractienaam>D66 Oosterhout</fractienaam>
+    <ID>D66-gm0826</ID>
+    <fractienaam>D66</fractienaam>
+    <bestuurslaag>
+        <begripLabel>Gemeente Oosterhout</begripLabel>
+        <begripCode>gm0826</begripCode>
+        <verwijzingBegrippenlijst>
+            <verwijzingID>https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4</verwijzingID>
+        </verwijzingBegrippenlijst>
+    </bestuurslaag>
+</fractie>
+```
+
+# Stem resultaat per fractie gegevens
+
+Gegevens over een stemming waar de gehele fractie aan mee heeft gedaan. Deze gegevens komt altijd onder het `fractieNeemtDeelAanStemming`-element van een `<fractie>`.
+
+#### XML voorbeeld
+
+``` xml
+<fractie>
+    <ID>D66-gm0826</ID>
+    …
     <fractieNeemtDeelAanStemming>
         <fractieStemresultaat>Aangenomen</fractieStemresultaat>
         <gegevenOpStemming>
