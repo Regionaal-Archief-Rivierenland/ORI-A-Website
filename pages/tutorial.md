@@ -337,6 +337,6 @@ Het element `<verwijzingNaam>` hierboven is [slechts een hulp steuntje](#verwijz
 
 ## Metadateren van een videotuul, audiotuul of transcriptie
 
-Metadata over de **mediabestanden** waarin een vergadering is opgenomen --- een videotuul, audiotuul of transcriptie ---- komt in MDTO (zie ook de voorbeeldbestanden<!-- todo: add link-->). 
+Metadata over de **mediabestanden** waarin een vergadering is opgenomen --- een videotuul, audiotuul of transcriptie --- komt in MDTO (zie ook de voorbeeldbestanden<!-- todo: add link-->). 
 
 <!-- stukje over subtitles -->
