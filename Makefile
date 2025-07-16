@@ -25,8 +25,8 @@ FONT_MONOSPACE := CommitMonoVariable.woff2
 FONT_INPUTS := fonts/$(FONT_TITLE) fonts/$(FONT_TITLE_BOLD) fonts/$(FONT_MONOSPACE)
 FONT_OUTPUTS := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_MONOSPACE)
 
-TABLE_SRC := pages/documentatie.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd
-TABLE_DST := pages/documentatie.md
+TABLE_SRC := pages/xml-schema.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd
+TABLE_DST := pages/xml-schema.md
 
 .PHONY: all clean update-submodule
 
@@ -115,5 +115,5 @@ minify: buildpages
 # Clean up
 clean:
 	rm -rf site
-	rm pages/documentatie.md
+	rm pages/xml-schema.md
 	fd . -ehtml pages/ --exclude index.html -X rm 

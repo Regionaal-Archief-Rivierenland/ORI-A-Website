@@ -42,7 +42,8 @@ position: 2
 <ORI-A>
     <vergadering> … </vergadering>
     <agendapunt> … </agendapunt>
-    <mediabron> … </mediabron>
+    <persoonBuitenVergadering> … </persoonBuitenVergadering>
+    <aanwezigeDeelnemer> … </aanwezigeDeelnemer>
 </ORI-A>
 ```
 
@@ -57,10 +58,17 @@ position: 2
 ``` xml
 <vergadering>
     <ID>abcd-1234</ID>
-    <naam>Vergadering Commisie Ruimte en Wonen</naam>
+    <naam>Commisie Ruimte en Wonen</naam>
     <vergaderingsType>Commissievergadering</vergaderingsType>
     <locatie>Gemeentehuis Oosterhout</locatie>
     <vergaderdatum>2023-05-26</vergaderdatum>
+    <bestuurslaag>
+        <begripLabel>Gemeente Oosterhout</begripLabel>
+        <begripCode>gm0826</begripCode>
+        <verwijzingBegrippenlijst>
+            <verwijzingID>https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4</verwijzingID>
+        </verwijzingBegrippenlijst>
+    </bestuurslaag>
 </vergadering>
 ```
 
@@ -73,10 +81,95 @@ position: 2
 ``` xml
 <agendapunt>
     <ID>a120-003</ID>
-    <agendapuntVolgnummer>3b</agendapuntVolgnummer>
+    <volgnummer>3b</volgnummer>
     <besloten>false</besloten>
-    <agendapuntTitel>Begroting Bankjes in Westerpark</agendapuntTitel>
+    <titel>Begroting Bankjes in Westerpark</titel>
 </agendapunt>
+```
+
+# Stemming gegevens
+
+Dit zijn gegevens over een **algemene stemming**; indivuele **stemkeuzes** komen onder [`aanwezigeDeelnemerGegevens`](#aanwezige-deelnemer-gegevens).
+
+{{ stemming_table }}
+
+#### XML voorbeeld
+
+``` xml
+<stemming>
+    <ID>stemming-0010</ID>
+    <stemmingType>Regulier</stemmingType>
+    <!-- Let op dat een echte stemming vrijwel nooit over een amendement _en_ persoon gaat -->
+    <leidtTotBesluit>
+        <besluitResultaat>Aangenomen</besluitResultaat>
+    </leidtTotBesluit>
+    <heeftBetrekkingOpAgendapunt>
+        <verwijzingID>2028-354b</verwijzingID>
+        <verwijzingNaam>Beleid openbare ruimte 2023</verwijzingNaam>
+    </heeftBetrekkingOpAgendapunt>
+    <heeftBetrekkingOpBesluitvormingsstuk>
+        <informatieobjectType>
+            <begripLabel>Amendement</begripLabel>
+            <verwijzingBegrippenlijst>
+                <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuk-types</verwijzingID>
+            </verwijzingBegrippenlijst>
+        </informatieobjectType>
+        <verwijzingInformatieobject>
+            <verwijzingID>02f2-3ba4</verwijzingID>
+            <verwijzingNaam>Motie PvdD Groene ruimte borgen</verwijzingNaam>
+        </verwijzingInformatieobject>
+    </heeftBetrekkingOpBesluitvormingsstuk>
+</stemming>
+```
+
+# Fractie gegevens
+
+Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrippenlijsten opgeven:
+
+
+* [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
+* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
+* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
+
+
+{{ fractie_table }}
+
+#### XML voorbeeld
+
+``` xml
+<fractie>
+    <ID>D66-gm0826</ID>
+    <fractienaam>D66</fractienaam>
+    <bestuurslaag>
+        <begripLabel>Gemeente Oosterhout</begripLabel>
+        <begripCode>gm0826</begripCode>
+        <verwijzingBegrippenlijst>
+            <verwijzingID>https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4</verwijzingID>
+        </verwijzingBegrippenlijst>
+    </bestuurslaag>
+</fractie>
+```
+
+# Stem resultaat per fractie gegevens
+
+Gegevens over een stemming waar de gehele fractie aan mee heeft gedaan. Deze gegevens komt altijd onder het `<fractieNeemtDeelAanStemming>`-element van een `<fractie>`.
+
+{{ stemresultaat_per_fractie_table }}
+
+#### XML voorbeeld
+
+``` xml
+<fractie>
+    <ID>D66-gm0826</ID>
+    …
+    <fractieNeemtDeelAanStemming>
+        <fractieStemresultaat>Aangenomen</fractieStemresultaat>
+        <gegevenOpStemming>
+            <verwijzingID>stemming-0009</verwijzingID>
+            <verwijzingNaam>Meer groen op straat (GL/D66)</verwijzingNaam>
+        </gegevenOpStemming>
+    </fractieNeemtDeelAanStemming>
+</fractie>
 ```
 
 # Natuurlijk persoon gegevens
@@ -88,24 +181,6 @@ position: 2
 
 ``` xml
 </todo>
-```
-# Fractie gegevens
-
-{{ fractie_table }}
-
-#### XML voorbeeld
-
-``` xml
-<fractie>
-    <fractienaam>D66 Oosterhout</fractienaam>
-    <fractieNeemtDeelAanStemming>
-        <fractieStemresultaat>Aangenomen</fractieStemresultaat>
-        <gegevenOpStemming>
-            <verwijzingID>stemming-0009</verwijzingID>
-            <verwijzingNaam>Meer groen op straat (GL/D66)</verwijzingNaam>
-        </gegevenOpStemming>
-    </fractieNeemtDeelAanStemming>
-</fractie>
 ```
 
 # Verwijzing gegevens
