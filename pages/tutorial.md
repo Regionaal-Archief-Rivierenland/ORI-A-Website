@@ -172,7 +172,7 @@ Dit zegt:
 De ORI-A XSD checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn.
 :::
 
-Voor een uitgebreide uitleg over het verwijzen naar externe informatieobject zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
+Voor een uitgebreide uitleg over het verwijzen naar externe informatieobjecten zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
 <!-- convert to info box -->
 Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in ["Waarom heeft ORI-A geen aggregatieniveaus" in de veelgestelde vragen](faq).
