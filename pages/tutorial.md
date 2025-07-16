@@ -323,7 +323,7 @@ TODO
 
 # ORI-A & MDTO combineren
 
-ORI-A laat het beschrijven van informatieobjecten (**vergaderstukken**, **mediabestanden**, etc.) over aan **MDTO**. Met andere woorden: ORI-A beschrijft domein*specifieke* gegevens --- raadsgegevens --- terwijl MDTO beperkt blijft tot meer generieke gegevens over documenten en bestanden, zoals hun aanmaakdatum en auteur.
+ORI-A laat het beschrijven van [informatieobjecten](https://www.nationaalarchief.nl/archiveren/mdto/informatieobject) (**vergaderstukken**, **mediabestanden**, etc.) over aan **MDTO**. Met andere woorden: ORI-A beschrijft domein*specifieke* gegevens --- raadsgegevens --- terwijl MDTO beperkt blijft tot meer generieke gegevens over documenten en bestanden, zoals hun aanmaakdatum en auteur.
 
 ::: waarschuwing
 De enige _inhoudelijke_ informatie over informatieobjecten die in ORI-A wordt opgenomen is `<informatieobjectType>`. Deze informatie overlapt met `<classificatie>` binnen MDTO.  Deze informatie mag alsnog in ORI-A worden opgenomen, omdat het soms wel degelijk domeinspecifieke informatie betreft.  Voor het begrijpen van een vergadering kan het bijvoorbeeld uitmaken of een document een motie, amendement, of voorstel is.
