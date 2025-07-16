@@ -58,7 +58,7 @@ Meestal wil je ook nog weten _wie_ de vergadering heeft georganiseerd. In ORI-A 
 ```
 
 
-Wat je binnen `<bestuurslaag>` ziet is een zogeheten **begrippenlijst**. Een begrippenlijst is een lijst met keuzewaardes, waarbinnen iedere keuze meestal geassocieerd is met een korte uitleg en eigen identificatiecode. De gekozen waarde is hier `Gemeente Leiden`, ook wel bekende onder de code `gm0546`.
+Wat je binnen `<bestuurslaag>` ziet is een zogeheten **begrippenlijst**. Een begrippenlijst is een lijst met keuzewaardes, waarbinnen iedere keuze meestal geassocieerd is met een korte uitleg en eigen identificatiecode. De gekozen waarde is hier `Gemeente Leiden`, ook wel bekend onder de code `gm0546`.
 
 
 :::waarschuwing
