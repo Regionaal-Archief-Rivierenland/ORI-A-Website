@@ -84,10 +84,17 @@ Het element `<verwijzingNaam>` hierboven is slechts een hulpsteuntje voor mensel
 ``` xml
 <vergadering>
     <ID>abcd-1234</ID>
-    <naam>Vergadering Commisie Ruimte en Wonen</naam>
+    <naam>Commisie Ruimte en Wonen</naam>
     <vergaderingsType>Commissievergadering</vergaderingsType>
     <locatie>Gemeentehuis Oosterhout</locatie>
     <vergaderdatum>2023-05-26</vergaderdatum>
+    <bestuurslaag>
+        <begripLabel>Gemeente Oosterhout</begripLabel>
+        <begripCode>gm0826</begripCode>
+        <verwijzingBegrippenlijst>
+            <verwijzingID>https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4</verwijzingID>
+        </verwijzingBegrippenlijst>
+    </bestuurslaag>
 </vergadering>
 ```
 
@@ -118,13 +125,13 @@ Dit zijn gegevens over een **algemene stemming**; indivuele **stemkeuzes** komen
 <stemming>
     <ID>stemming-0010</ID>
     <stemmingType>Regulier</stemmingType>
-    <!--  -->
+    <!-- Let op dat een echte stemming vrijwel nooit over een amendement _en_ persoon gaat -->
     <leidtTotBesluit>
         <besluitResultaat>Aangenomen</besluitResultaat>
     </leidtTotBesluit>
     <heeftBetrekkingOpAgendapunt>
-        <verwijzingID>2028</verwijzingID>
-        <verwijzingNaam>Delegatiebesluit Omgevingsplan Leiden 2023</verwijzingNaam>
+        <verwijzingID>2028-354b</verwijzingID>
+        <verwijzingNaam>Beleid openbare ruimte 2023</verwijzingNaam>
     </heeftBetrekkingOpAgendapunt>
     <heeftBetrekkingOpBesluitvormingsstuk>
         <informatieobjectType>
@@ -134,7 +141,7 @@ Dit zijn gegevens over een **algemene stemming**; indivuele **stemkeuzes** komen
             </verwijzingBegrippenlijst>
         </informatieobjectType>
         <verwijzingInformatieobject>
-            <verwijzingID>0222</verwijzingID>
+            <verwijzingID>02f2-3ba4</verwijzingID>
             <verwijzingNaam>Motie PvdD Groene ruimte borgen</verwijzingNaam>
         </verwijzingInformatieobject>
     </heeftBetrekkingOpBesluitvormingsstuk>
