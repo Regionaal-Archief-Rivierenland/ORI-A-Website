@@ -281,7 +281,7 @@ ORI-A laat het beschrijven van **relaties tussen personen en documenten** over a
 
 MDTO vraagt een aantal gegevens onder `<betrokkene>`:
 
-* Binnen `<betrokkeneTypeRelatie>` moet het **type relatie** tussen de persoon en het stuk beschreven worden, middels een begrip uit een begrippenlijst. ORI-A definieert hiervoor de [begrippenlijst Betrokkene-vergaderstuk relaties](begrippenlijsten#betrokkene-vergaderstuk-relaties).
+* Binnen `<betrokkeneTypeRelatie>` moet het **type relatie** tussen de persoon en het stuk beschreven worden, middels een begrip uit een begrippenlijst. ORI-A definieert hiervoor de [begrippenlijst 'Betrokkene-vergaderstuk relaties'](begrippenlijsten#betrokkene-vergaderstuk-relaties).
 * Binnen `<betrokkeneActor>` worden de **naam en ID** van de betrokkene verwacht, bijvoorbeeld `Jan de Vries` en `persoon-076` om naar de ambtenaar uit het voorbeeld hierboven te verwijzen.
 
 
