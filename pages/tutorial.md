@@ -216,8 +216,6 @@ voor mensen minder duidelijk leest dan dit:
 </heeftBetrekkingOpAgendapunt>
 ```
 
-Natuurlijk zijn computers, en niet mensen, de uiteindelijke **doelgroep van ORI-A XML**. Gebruik dit element dus alleen als je genoodzaakt bent ORI-A XML in compleet rauwe vorm te presenteren.
-
 # Persoonsgegevens
 
 In ORI-A kun je [persoonsgegevens](documentatie#natuurlijk-persoon-gegevens) onder twee verschillende _top-level_ elementen opnemen:  onder `<aanwezigeDeelnemer>`, of onder `<persoonBuitenVergadering>`. Deze opties hebben een iets andere semantiek.
