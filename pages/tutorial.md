@@ -267,6 +267,7 @@ In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering,
 
 <persoonBuitenVergadering>
     <ID>persoon-076</ID>
+    <functie>Ambtenaar</functie>
     <naam>
         <volledigeNaam>Jan de Vries</volledigeNaam>
     </naam>
@@ -275,17 +276,27 @@ In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering,
 
 ## Naar personen verwijzen vanuit MDTO 
 
-ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Zo'n relatie maak je aan door het ID van een persoon in ORI-A --- zeg `persoon-76` --- te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie):
+<!-- wat doen we met eventVerantwoordelijkeActor? imo zou dat ook betrokkeneGegevens moeten krijgen (ipv verwijzingGegevens), maar ja -->
+ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals [MDTO](https://www.nationaalarchief.nl/archiveren/mdto). In MDTO komen gegevens over zulke relaties onder het element `<betrokkene>`.
+
+MDTO vraagt om een aantal gegevens onder `<betrokkene>`:
+
+* Binnen `<betrokkeneTypeRelatie>` moet het **type relatie** tussen de persoon en het stuk beschreven worden, middels een begrip uit een begrippenlijst. ORI-A definiteert hiervoor de [begrippenlijst Betrokkene-vergaderstuk relaties](begrippenlijsten#betrokkene-vergaderstuk-relatoes).
+* Binnen `<betrokkeneActor>` worden de **naam en ID** van de betrokkene verwacht, bijvoorbeeld `Jan de Vries` en `persoon-076` om naar de ambtenaar uit het voorbeeld hierboven te verwijzen.
+
+
+Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van een stuk was, dan kun je dat zo doen:
 
 
 ``` xml
 <MDTO>
+    <naam>Voorstel bestemmingsplan Leiden-Noord</naam>
     …
     <betrokkene>
 	    <betrokkeneTypeRelatie>
 		    <begripLabel>Indiener</begripLabel>
 		    <begripBegrippenlijst>
-			    <verwijzingNaam>ORI-A Begrippenlijst Betrokkene-vergaderstuk relaties</verwijzingNaam>
+			    <verwijzingNaam>ORI-A Betrokkene-vergaderstuk relaties</verwijzingNaam>
 			    <verwijzingIdentificatie>
 				    <identificatieKenmerk>https://ori-a.nl/begrippenlijsten#betrokkene-vergaderstuk-relaties</identificatieKenmerk>
 				    <identificatieBron>ORI-A</identificatieBron>
