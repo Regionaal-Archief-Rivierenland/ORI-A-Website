@@ -195,7 +195,7 @@ Een stem van een persoon op een `<stemming>` komt onder het _top-level_ element 
 
 Dit betekent dat deze deelnemer "Voor"  heeft gestemd op een stemming met ID `RV 23.0081`. 
 
-Naast personen, kunnen ook fracties een stem uitbrengen. Zie hiervoor `stemResultaatPerfractieGegevens`<!-- todo: link-->.
+Naast personen, kunnen ook fracties een stem uitbrengen. Zie hiervoor [`stemResultaatPerFractieGegevens`](xml-schema#stemrestulaat-per-fractie-gegevens).
 
 ## Verwijzen met een naam
 
