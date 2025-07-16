@@ -146,7 +146,7 @@ ORI-A entiteiten hebben doorgaans veel **relaties**, zowel onderling als met ext
 ## Voorbeeld: de relaties van een stemming
 
 <!-- todo: documenteer ook wanneer je nest? -->
-Het aanmaken van een relatie tussen twee entiteiten --- bijv. een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verweze—n wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->. 
+Het aanmaken van een relatie tussen twee entiteiten --- bijvoorbeeld een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verweze—n wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->.
 
 Om een relatie tot stand te brengen, heeft de entiteit waarnaar verwezen wordt een uniek ID nodig. Dit ID kan vervolgens in `<verwijzingID>` worden ingevuld:
 
@@ -277,7 +277,7 @@ In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering,
 
 ## Naar personen verwijzen vanuit MDTO 
 
-ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Zo'n relatie maak je aan door het ID van een persoon in ORI-A --- bijv. `persoon-76` --- te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie):
+ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals MDTO. Zo'n relatie maak je aan door het ID van een persoon in ORI-A --- zeg `persoon-76` --- te gebruiken binnen het [`verwijzingIdentificatie` element van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/verwijzingIdentificatie):
 
 
 ``` xml
