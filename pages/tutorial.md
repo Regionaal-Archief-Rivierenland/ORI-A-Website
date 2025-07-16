@@ -279,9 +279,9 @@ In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering,
 <!-- wat doen we met eventVerantwoordelijkeActor? imo zou dat ook betrokkeneGegevens moeten krijgen (ipv verwijzingGegevens), maar ja -->
 ORI-A laat het beschrijven van **relaties tussen personen en documenten** over aan andere metadatastandaarden, zoals [MDTO](https://www.nationaalarchief.nl/archiveren/mdto). In MDTO komen gegevens over zulke relaties onder het element `<betrokkene>`.
 
-MDTO vraagt om een aantal gegevens onder `<betrokkene>`:
+MDTO vraagt een aantal gegevens onder `<betrokkene>`:
 
-* Binnen `<betrokkeneTypeRelatie>` moet het **type relatie** tussen de persoon en het stuk beschreven worden, middels een begrip uit een begrippenlijst. ORI-A definiteert hiervoor de [begrippenlijst Betrokkene-vergaderstuk relaties](begrippenlijsten#betrokkene-vergaderstuk-relatoes).
+* Binnen `<betrokkeneTypeRelatie>` moet het **type relatie** tussen de persoon en het stuk beschreven worden, middels een begrip uit een begrippenlijst. ORI-A definieert hiervoor de [begrippenlijst Betrokkene-vergaderstuk relaties](begrippenlijsten#betrokkene-vergaderstuk-relaties).
 * Binnen `<betrokkeneActor>` worden de **naam en ID** van de betrokkene verwacht, bijvoorbeeld `Jan de Vries` en `persoon-076` om naar de ambtenaar uit het voorbeeld hierboven te verwijzen.
 
 
