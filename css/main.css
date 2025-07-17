@@ -126,6 +126,10 @@ h3 {
     margin-bottom: var(--pico-block-spacing-vertical);
 }
 
+[data-theme="dark"] .tip {
+    background-color: #e5fded22;
+}
+
 .tip::before {
     content: "";
     display: block;
