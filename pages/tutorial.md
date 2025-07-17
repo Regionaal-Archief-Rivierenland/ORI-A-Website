@@ -40,6 +40,7 @@ Neem bijvoorbeeld de vergadering hierboven, met de ietwat onoriginele titel 'Gem
         <ID>20a280a8a8a88220008208822f6b6b02</ID>
         <naam>Gemeenteraad</naam>
         <vergaderdatum>2023-11-30</vergaderdatum>
+        <locatie>Raadzaal Stadhuis</locatie>
     </vergadering>
     <agendapunt>
         <ID>2028a00aaa2a8aaa00a2uaab6bdaef</ID>
