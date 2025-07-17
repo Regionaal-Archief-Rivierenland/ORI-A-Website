@@ -22,14 +22,14 @@ position: 2
 <!-- <\!-- dit is preservica documentatie, at best. Ik denk niet dat we dit per se officeel willen supporten, want een XSD schema kan geen _verzamelingen_ bestanden valideren, maar alleen indivuele bestanden. Of te wel, dit is highly discouraged, en uiteindelijk bad practice.  -\-> -->
 <!-- Het ORI-A XML-schema staat overigens toe dat gegevens over één vergadering over meerdere ORI-A XML-bestanden worden verspreid. Uit opnametests is gebleken dat sommige e-depots metagegevens (zoals ORI-A data) direct aan mappen of digitale bestanden koppelen. In dat geval kan het wenselijk zijn om de ORI-A XML-bestanden op te knippen in meerdere bestanden, zodat ze makkelijk aan het juiste niveau kunnen worden gerelateerd. -->
 
-# ORI-A (_root_-element)
+# ORI-A gegevens
 
 
 <section>
 `<ORI-A>` — het eerste element in een ORI-A XML boom — kent weinig verplichte kind elementen. Dit _root_-element hoeft alleen een `<vergadering>` en `<agendapunt>` te bevatten. Dit omdat er altijd een vergadering moet zijn geweest waar data over is gegenereerd, en omdat deze vergadering minstens een agendapunt moet hebben gehad.
 
 ::: waarschuwing
-**Let op:**  Alhoewel `<mediabron>` strikt genomen niet verplicht is, is een audio of video verslag noodzakelijk voor de toekomstige interpreteerbaarheid van raadsvergaderingen. Alleen in _zeer_ zeldzame situaties, zoals een besloten vergadering zonder opnames, mag `<mediabron>` ontbreken.
+**Let op:**  Alhoewel `<mediabron>` strikt genomen niet verplicht is, is een transcriptie of (audio)visueel verslag noodzakelijk voor de toekomstige interpreteerbaarheid van raadsvergaderingen. Alleen in _zeer_ zeldzame situaties, zoals een besloten vergadering zonder opnames, mag `<mediabron>` ontbreken.
 :::
 
 </section>
@@ -99,7 +99,7 @@ Dit zijn gegevens over een **algemene stemming**; indivuele **stemkeuzes** komen
 <stemming>
     <ID>stemming-0010</ID>
     <stemmingType>Regulier</stemmingType>
-    <!-- Let op dat een echte stemming vrijwel nooit over een amendement _en_ persoon gaat -->
+    <!-- Let op dat een echte stemming vrijwel nooit over een motie _en_ persoon gaat -->
     <leidtTotBesluit>
         <besluitResultaat>Aangenomen</besluitResultaat>
     </leidtTotBesluit>
@@ -109,7 +109,7 @@ Dit zijn gegevens over een **algemene stemming**; indivuele **stemkeuzes** komen
     </heeftBetrekkingOpAgendapunt>
     <heeftBetrekkingOpBesluitvormingsstuk>
         <informatieobjectType>
-            <begripLabel>Amendement</begripLabel>
+            <begripLabel>Motie</begripLabel>
             <verwijzingBegrippenlijst>
                 <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuk-types</verwijzingID>
             </verwijzingBegrippenlijst>
@@ -150,7 +150,7 @@ Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrip
 </fractie>
 ```
 
-# Stem resultaat per fractie gegevens
+# Stemresultaat per fractie gegevens
 
 Gegevens over een stemming waar de gehele fractie aan mee heeft gedaan. Deze gegevens komt altijd onder het `<fractieNeemtDeelAanStemming>`-element van een `<fractie>`.
 
@@ -197,6 +197,6 @@ Zie [begrippenlijsten gebruiken](hoe-werkt-ori-a#begrippenlijsten-gebruiken).
 
 # Informatieobject gegevens
 
-Dit zijn de gegevens die worden gebruikt om te verwijzen naar informatieobjecten.
+Dit zijn de gegevens die worden gebruikt om te **verwijzen** naar elders gedefinieerde informatieobjecten.
 
 {{ informatieobject_table }}

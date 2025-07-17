@@ -463,8 +463,8 @@ pre > code {
 
 code {color: var(--pico-color)}
 code span.kw { color: var(--pico-ins-color); font-weight: 600; } /* Keyword */
-code span.ot { color: #524ED2F1;} /* attrib */
-code span.st { color: rgb(186.75, 150.5, 43.75);} /* attrib */
+code span.co { color: var(--pico-muted-color)} /* comment */
+
 
 /* Anchor links next to headers */
 
