@@ -3,7 +3,6 @@ title: Hoe werkt ORI-A?
 position: 4
 ---
 
-<!-- misschien 'De basics: een vergadering & agendapunten', of gewoon 'Een vergadering & agendapunten'-->
 # Een vergadering beschrijven
 
 Het simpelst mogelijke ORI-A XML bestand bestaat uit een **vergadering** met een lijst **agendapunten**.
