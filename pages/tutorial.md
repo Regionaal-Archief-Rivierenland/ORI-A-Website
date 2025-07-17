@@ -83,7 +83,9 @@ Meestal wil je ook nog weten _wie_ de vergadering heeft georganiseerd. In ORI-A 
 ```
 
 
-Wat je binnen `<bestuurslaag>` ziet is een zogeheten **begrippenlijst**. Een begrippenlijst is een lijst met keuzewaardes, waarbinnen iedere keuze meestal geassocieerd is met een korte uitleg en eigen identificatiecode. De gekozen waarde is hier `Gemeente Leiden`, ook wel bekend onder de code `gm0546`.
+Wat je binnen `<bestuurslaag>` ziet is een begrip uit een zogeheten **begrippenlijst**. Een begrippenlijst is een verzameling gerelateerde begrippen, waarin ieder begrip meestal een korte uitleg en eigen identificatiecode krijgt. ORI-A vraagt je op sommige plekken een begrip uit zo'n elders gedefinieerde lijst te **kiezen**. Het gekozen begrip is hier `Gemeente Leiden`, ook wel bekend onder de code `gm0546`.
+
+De oorsprong van de begrippenlijst hierboven is het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Ten slotte kun je ook besluiten om zelf een begrippenlijst te onderhouden (zie hiervoor [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
 
 
 :::waarschuwing
@@ -94,7 +96,6 @@ We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenli
 **Tip:** `<bestuurslaag>` is bedoeld voor de overheidslaag die verantwoordelijk was voor de vergadering. Het specifiecke **gremium** (bijv. "Commissie Ruimte & Wonen") kun je kwijt in `<georganiseerdDoorGremium>`.
 :::
 
-De oorsprong van de begrippenlijst hierboven is het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Ten slotte kun je ook besluiten om zelf een begrippenlijst te onderhouden (zie hiervoor [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
 
 # Hoofd- en subagendapunten
 
