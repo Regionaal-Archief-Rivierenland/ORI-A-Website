@@ -15,32 +15,6 @@ position: 2
 <!-- </div> -->
 
 
-# Gebruik van ORI-A met MDTO
-
-ORI-A laat het beschrijven van informatieobjecten (**vergaderstukken**, **mediabestanden**, etc.) over aan **MDTO**. Met andere woorden: ORI-A beschrijft domein*specifieke* gegevens — raadsgegevens — terwijl MDTO beperkt blijft tot meer generieke gegevens over documenten en bestanden, zoals hun aanmaakdatum en auteur.
-
-::: waarschuwing
-De enige _inhoudelijke_ informatie over informatieobjecten die in ORI-A wordt opgenomen is `<informatieobjectType>`. Deze informatie overlapt met `<classificatie>` binnen MDTO.  Deze informatie mag alsnog in ORI-A worden opgenomen, omdat het soms wel degelijk domeinspecifieke informatie betreft.  Voor het begrijpen van een vergadering kan het bijvoorbeeld uitmaken of een document een motie, amendment, of voorstel is.
-:::
-
-## ORI-A → MDTO verwijzingen in XML vorm
-
-Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het ID van een in MDTO opgesteld informatieobject  (zie ook [`verwijzingGegevens`](#verwijzing-gegevens)):
-
-<!-- TODO: misschien wel mooi om het MDTO bestand ook als voorbeeld op te voeren. -->
-``` xml
-<heeftAlsBijlage>
-    <informatieobjectType>Motie</informatieobjectType>
-    <verwijzingInformatieobject>
-        <verwijzingID>document-009</verwijzingID>
-        <verwijzingNaam>Motie van lid Smit</verwijzingNaam>
-    </verwijzingInformatieobject>
-</heeftAlsBijlage>
-```
-
-Het element `<verwijzingNaam>` hierboven is slechts een hulpsteuntje voor menselijke lezers — om een verwijzing tot stand te brengen volstaat `<verwijzingID>`.
-
-
 <!-- # Vormgeving van ORI-A XML-bestanden -->
 
 <!-- Het ORI-A XML-schema is zo opgesteld dat er maximaal één vergadering per ORI-A XML-bestand wordt uitgedrukt. Hierdoor konden de interne verwijzingen tussen andere ORI-A elementen en `<vergadering>` simpel worden gehouden.  -->
