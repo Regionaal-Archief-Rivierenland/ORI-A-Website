@@ -175,7 +175,7 @@ Veel RIS systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen"  als 
 
 ORI-A kent naast vergaderingen en agendapunten een hoop andere entiteiten, zoals stemmingen, deelnemers en fracties (het ORI-A diagram geeft een volledig overzicht<!-- todo: add link-->).
 
-ORI-A entiteiten hebben doorgaans veel **relaties**, zowel onderling als met externe informatieobjecten. Een fractielidmaatschap heeft vanzelfsprekend betrekking op een fractie, een stemming heeft altijd betrekking op een agendapunt, en een vergadering is doorgaans vastgelegd in een buiten ORI-A beschreven mediabestand ('videotuul').
+Deze entiteiten hebben doorgaans veel **relaties**, zowel onderling als met externe informatieobjecten. Een fractielidmaatschap heeft vanzelfsprekend betrekking op een fractie, een stemming heeft altijd betrekking op een agendapunt, en een vergadering is doorgaans vastgelegd in een mediabestand ('videotuul').
 
 ## Voorbeeld: de relaties van een stemming
 
