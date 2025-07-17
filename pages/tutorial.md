@@ -4,7 +4,7 @@ position: 4
 ---
 
 <!-- misschien 'De basics: een vergadering & agendapunten', of gewoon 'Een vergadering & agendapunten'-->
-# Een simpele vergadering
+# Een vergadering beschrijven
 
 Een simpel ORI-A XML bestand ziet er zo uit:
 
