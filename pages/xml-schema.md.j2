@@ -24,16 +24,6 @@ position: 2
 
 # ORI-A gegevens
 
-
-<section>
-`<ORI-A>` — het eerste element in een ORI-A XML boom — kent weinig verplichte kind elementen. Dit _root_-element hoeft alleen een `<vergadering>` en `<agendapunt>` te bevatten. Dit omdat er altijd een vergadering moet zijn geweest waar data over is gegenereerd, en omdat deze vergadering minstens een agendapunt moet hebben gehad.
-
-::: waarschuwing
-**Let op:**  Alhoewel `<mediabron>` strikt genomen niet verplicht is, is een transcriptie of (audio)visueel verslag noodzakelijk voor de toekomstige interpreteerbaarheid van raadsvergaderingen. Alleen in _zeer_ zeldzame situaties, zoals een besloten vergadering zonder opnames, mag `<mediabron>` ontbreken.
-:::
-
-</section>
-
 {{ ori_a_table }}
 
 #### XML voorbeeld
@@ -48,6 +38,11 @@ position: 2
 ```
 
 # Vergadering gegevens
+
+::: waarschuwing
+**Let op:**  Alhoewel `<isVastgelegdMiddels>` strikt genomen niet verplicht is, is een transcriptie of (audio)visueel verslag noodzakelijk voor de toekomstige interpreteerbaarheid van raadsvergaderingen. Alleen in _zeer_ zeldzame situaties, zoals een besloten vergadering zonder opnames, mag `<isVastgelegdMiddels>` ontbreken.
+:::
+
 
 {{ vergadering_table }}
 
