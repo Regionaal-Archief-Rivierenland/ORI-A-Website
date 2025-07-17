@@ -6,7 +6,33 @@ position: 4
 <!-- misschien 'De basics: een vergadering & agendapunten', of gewoon 'Een vergadering & agendapunten'-->
 # Een vergadering beschrijven
 
-Een simpel ORI-A XML bestand ziet er zo uit:
+Het simpelst mogelijke ORI-A XML bestand bestaat uit een **vergadering** met een lijst **agendapunten**.
+
+``` {=html}
+<article class="card">
+  <header>
+    <p>
+      <strong data-tooltip="Titel van de vergadering">Gemeenteraad</strong></p >
+    <p class="muted" style="font-size: 0.85em; padding-top:0.3em; line-height: 1.0em; display: flex; align-items: top">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1.0em" viewBox="0 0 24 24" style="padding-right:0.1em; margin-top: 0.1em"><title>locatie-marker</title><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>
+      Raadzaal Stadhuis
+      <svg xmlns="http://www.w3.org/2000/svg" height="1.0em" viewBox="0 0 24 24" style="padding-left: 0.3em; padding-right:0.2em; margin-top: 0.1em"><title>kalender</title><path d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" /></svg>
+      do. 30 november 2023
+    </p>
+  </header>
+  <details>
+    <summary class="outline contrast" role=button>1. Vaststelling Agenda</summary>
+    <p>De raad stelt de agenda vast.</p>
+  </details>
+  <details>
+    <summary class="outline contrast" role=button>2. Medelingen</summary>
+    <p>Mededelingen aan de raad.</p>
+  </details>
+</article>
+```
+
+
+Neem bijvoorbeeld de vergadering hierboven, met de ietwat onoriginele titel 'Gemeenteraad'. In ORI-A XML zou je deze vergadering zo uitdrukken:
 
 ``` xml
 <ORI-A>
@@ -34,7 +60,7 @@ Dit zegt:
 
 > Er was **30 november 2023** een vergadering genaamd 'Gemeenteraad' met **twee agendapunten**. Tijdens het agendapunt met volgnummer 1 kwam de vaststelling van de agenda aan bod, en bij het volgende agendapunt was er ruimte voor mededelingen.
 
-Duidelijk, maar nog niet super informatief.
+Een goed begin, maar nog niet super informatief.
 
 # Begrippenlijsten gebruiken
 

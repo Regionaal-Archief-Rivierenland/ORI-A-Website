@@ -276,21 +276,23 @@ a.mainpage {
 }
 
 /* agendapunt example */
-article > header > * {
+.card > header > * {
     margin-bottom: 0;
 }
 
-#agenda-example > header p {
+.card > header p {
     font-size: 1.125rem;
 }
 
-#agenda-example {
+.card {
     border-style: solid;
     border-radius: var(--pico-border-radius);
     border-width: 3px;
     border-color: var(--pico-card-border-color);
     box-shadow: var(--pico-box-shadow);
-    background: var(--pico-card-background-color);
+    background: var(--pico-card-background-color) !important;
+    width: 90%;
+    margin: var(--pico-block-spacing-vertical) auto;
 }
 
 .hoofdagendapunt details {
