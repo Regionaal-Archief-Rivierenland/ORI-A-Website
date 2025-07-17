@@ -93,7 +93,7 @@ We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenli
 :::
 
 :::tip
-**Tip:** `<bestuurslaag>` is bedoeld voor de overheidslaag die verantwoordelijk was voor de vergadering. Het specifiecke **gremium** (bijv. "Commissie Ruimte & Wonen") kun je kwijt in `<georganiseerdDoorGremium>`.
+**Tip:** `<bestuurslaag>` is bedoeld voor de overheidslaag die verantwoordelijk was voor de vergadering. Het specifieke **gremium** (bijvoorbeeld "Commissie Ruimte & Wonen") kun je kwijt in `<georganiseerdDoorGremium>`.
 :::
 
 
