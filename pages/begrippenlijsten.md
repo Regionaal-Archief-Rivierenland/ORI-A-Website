@@ -103,7 +103,7 @@ Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worde
 | Label        | Definitie                                                                   |
 |:-------------|:----------------------------------------------------------------------------|
 | Video        | Een audiovisuele opname van een vergadering. Ookwel 'videotuul'.            |
-| Audio        | Een audio opname van een vergadering. Ookwel 'audiotuul'.                   |
+| Audio        | Een geluidsopname van een vergadering. Ookwel 'audiotuul'.                   |
 | Transcriptie | Een schriftelijk uitverwerking van de gesproken inhoud van een vergadering. |
 
 
