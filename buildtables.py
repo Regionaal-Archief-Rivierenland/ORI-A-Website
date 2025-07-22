@@ -47,12 +47,22 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         else:
             naam_wbr = naam
 
-
         verplicht = bool(int(elem.attrib["minOccurs"]))
         herhaalbaar = True if elem.attrib["maxOccurs"] == "unbounded" else False
         # assume enumaration if type is not specified
         # FIXME: this assumption is wrong in case of regexes
-        datatype = elem.attrib.get("type", "enumeratie").replace("xs:", "")
+        datatype = elem.attrib.get("type", None)
+        enumeratie_naam = None
+        # In XSD, restrictions do not set `type=`, so we need to look at info within the restriction
+        if not datatype:
+            if len(elem.findall(".//xs:enumeration", namespaces=ns)) > 1:
+                datatype = "enumeratie"
+                # this is just a copy of the name of the element
+                enumeratie_naam = str(naam)
+            else:
+                datatype = "string"
+
+        datatype = datatype.replace("xs:", "")
 
         opties = []
         # change datatype to "keuze uit: `X`, `Y`, `...`"  if enumeratie
