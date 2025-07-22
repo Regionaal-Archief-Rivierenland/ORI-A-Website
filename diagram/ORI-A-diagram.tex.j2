@@ -217,7 +217,7 @@
           {{ render_table('Dagelijks bestuur', 'Objecttype', dagelijks_bestuur_table) }}
         };
 
-   \node (spreekfragment) [ORI relatieklasse, above = 17.5cm of stem, xshift=-1.6cm]
+   \node (spreekfragment) [ORI relatieklasse, above = 17.4cm of stem, xshift=-1.6cm]
          {
 
            {{ render_table('Spreekfragment', 'Relatieklasse', spreekfragment_table) }}
@@ -432,6 +432,23 @@
   node [anchor=center, above, pos=0.32] {is genotuleerd in}
   node [anchor=center, below, pos=0.32] {\umltype{Relatiesoort}}
   ($(mdto.north)+(-1cm,0)$);
+
+  %% vergadering -> mdto (mediabron)
+  \draw[relatiepijl] ($(vergadering.north)+(2, 0)$) --
+  node [kardinaliteit, right, pos=0, yshift=\kyshiftbeg] {\oldstylenums{0..*}}
+  ($(vergadering.north)+(2, 4.3)$) -|
+  node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..1}}
+  node [anchor=center, above, pos=0.275] {is vastgelegd middels}
+  node [anchor=center, below, pos=0.275] {\umltype{Relatiesoort}}
+  ($(mdto.north)+(1cm,0)$);
+
+  %% spreekfragment -> mdto (mediabron)
+  \draw[relatiepijl] ($(spreekfragment.east)+(0, -3)$) -|
+  node [kardinaliteit, right, pos=0, yshift=\kyshiftbeg] {\oldstylenums{0..1}}
+  node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..*}}
+  node [anchor=center, above, pos=0.137] {is vastgelegd in}
+  node [anchor=center, below, pos=0.137] {\umltype{Relatiesoort}}
+  ($(mdto.north)+(2.8cm,0)$);
   
   %% persoon -> naam
   \draw[gegevenspijl] ([xshift=-3cm] natuurlijkpersoon.south) -- ([xshift=-3cm] naam);
