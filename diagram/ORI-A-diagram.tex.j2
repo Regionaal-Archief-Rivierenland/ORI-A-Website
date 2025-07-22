@@ -137,8 +137,8 @@
 
     {%- set excluded_types = ['verwijzingGegevens', 'informatieobjectGegevens',
     'agendapuntGegevens', 'besluitGegevens', 'stemresultaatPerFractieGegevens',
-    'vergaderingGegevens', 'dagelijksbestuurLidmaatschapGegevens',
-    'fractieLidmaatschapGegevens', 'stemGegevens', 'spreekfragmentGegevens', 'natuurlijkPersoonGegevens'] -%}
+    'vergaderingGegevens', 'dagelijksBestuurLidmaatschapGegevens',
+    'fractielidmaatschapGegevens', 'stemGegevens', 'spreekfragmentGegevens', 'natuurlijkPersoonGegevens'] -%}
     {%- set filtered_rows = rows
     | rejectattr('datatype', 'in', excluded_types)
     | list -%}
