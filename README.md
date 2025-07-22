@@ -36,13 +36,15 @@ Die kun je vervolgens raadplegen door bijv. `python -m http.server .` in die map
   * `pages/documentatie.md.j2` is een combo van markdown en Jinja template, zodat daar v HTML
 * `css/`
   * Verschillende stijlregels. Het grootste gedeelte van de css is afkomstig van het [Pico](https://picocss.com/docs) project.
+* `diagram/`
+  * ORI-A _UML-inspired_ diagram; moet nog gerendered worden met jinja
 * `templates/`
-  * Het HTML "skelet" (i.e. templates)  waar de markdown bestanden in worden gezet
+  * Het HTML "skelet" (i.e. templates) waar de markdown bestanden in worden gezet
 * `buildpages.py`
   * Gebruikt Jinja2 om de eerder naar HTML geconverteerde bestanden in de templates te stoppen
   * Doet ook wat HTML nabewerkingen
 * `buildtables.py`
-  * Zet de gegevensgroep tabellen in `pages/documentatie.md.j2`
+  * Zet de gegevensgroep tabellen in `pages/documentatie.md.j2` en in `diagram/ORI-A-diagram.tex.j2`
 * `ims/`
   * Afbeelingen
 * `fonts/`
