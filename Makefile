@@ -102,7 +102,7 @@ generate-tables: $(TABLE_DST)
 
 $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
-	pdflatex diagram/ORI-A-diagram.tex --output-dir pdfs/
+	pdflatex -output-dir pdfs diagram/ORI-A-diagram.tex
 
 prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF_DST)
 
