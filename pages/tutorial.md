@@ -203,16 +203,18 @@ Om een relatie tot stand te brengen, heeft de entiteit waarnaar verwezen wordt e
 
 Dit zegt:
 
-> De stemming met ID `RV 23.0081` had betrekking op agendapunt met ID `2028a00aa`. Tijdens dit agendapunt werdt er gestemd over een besluitvormingsstuk met ID `0222a202 `. 
+> De stemming met ID `RV 23.0081` had betrekking op een elders gedefinieerd agendapunt met ID `2028a00aa`. Tijdens dit agendapunt werdt er gestemd over een besluitvormingsstuk met ID `0222a202 `. 
+
+Voor een uitgebreide uitleg over het verwijzen **naar externe informatieobjecten** zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
 :::waarschuwing
 De ORI-A XSD checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn.
 :::
 
-Voor een uitgebreide uitleg over het verwijzen naar externe informatieobjecten zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
-<!-- convert to info box -->
-Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in ["Waarom heeft ORI-A geen aggregatieniveaus" in de veelgestelde vragen](faq).
+:::tip
+**Tip:** Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in ["Waarom heeft ORI-A geen aggregatieniveaus" in de veelgestelde vragen](faq).
+:::
 
 ### Individuele stemmen
 
