@@ -41,6 +41,7 @@ jobs:
 
       - name: Build site
         run: |
+          make generate-tables
           make update-submodule
           make -j5
 
