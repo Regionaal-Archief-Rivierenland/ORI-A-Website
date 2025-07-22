@@ -82,6 +82,50 @@ position: 2
 </agendapunt>
 ```
 
+# Natuurlijk persoon gegevens
+
+<!-- TODO: korte uitleg over waar dit datatype allemaal voorkomt -->
+{{ natuurlijk_persoon_table }}
+
+#### XML voorbeeld
+
+``` xml
+</todo>
+```
+
+# Aanwezige deelnemer
+
+{{ aanwezige_deelnemer_table }}
+
+#### XML Voorbeeld
+
+``` xml
+<aanwezigeDeelnemer>
+        <rolnaam>Voorzitter</rolnaam>
+        <isNatuurlijkPersoon>
+            <ID>0028-08a0</ID>
+            <functie>Burgermeester</functie>
+            <naam>
+                <achternaam>Veltman</achternaam>
+                <volledigeNaam>Julia</volledigeNaam>
+            </naam>
+            ...
+        </isNatuurlijkPersoon>
+        <neemtDeelAanStemming>
+            <keuzeStemming>Tegen</keuzeStemming>
+            <gegevenOpStemming>
+                <verwijzingID>21.0081</verwijzingID>
+            </gegevenOpStemming>
+        </neemtDeelAanStemming>
+        <spreektTijdensSpreekfragment>
+            <videoTijdsaanduidingAanvang>00:02:20</videoTijdsaanduidingAanvang>
+            <spreektTijdensAgendapunt>
+                <verwijzingID>b6bd-0aef</verwijzingID>
+            </spreektTijdensAgendapunt>
+        </spreektTijdensSpreekfragment>
+        ...
+```
+
 # Stem gegevens
 
 {{ stem_table }}
@@ -179,17 +223,6 @@ Het stemresultaat op fractie-niveau is in de regel af te leiden [uit stemkeuzes 
         </gegevenOpStemming>
     </fractieNeemtDeelAanStemming>
 </fractie>
-```
-
-# Natuurlijk persoon gegevens
-
-<!-- TODO: korte uitleg over waar dit datatype allemaal voorkomt -->
-{{ natuurlijk_persoon_table }}
-
-#### XML voorbeeld
-
-``` xml
-</todo>
 ```
 
 # Verwijzing gegevens
