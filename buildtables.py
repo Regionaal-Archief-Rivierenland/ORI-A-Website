@@ -23,7 +23,10 @@ def add_wbr_to_camel_case(string):
     return re.sub(r'(?<!^)(?=[A-Z])', '<wbr>', string)
 
 def complextype_to_dict(complextype: ET.Element) -> list[dict]:
-    """Convert <xs:complexType> to a markdown table"""
+    """
+    Convert <xs:complexType> to a list of fat dicts, holding
+    information about each gegevensgroep.
+    """
     rows = []
     tooltips = {
         "string": "Reeks van tekens",
@@ -70,11 +73,26 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
             for optie in elem.findall(".//xs:enumeration", namespaces=ns):
                 opties.append(optie.attrib["value"])
 
-        seperate_words = camel_to_seperate_words(datatype)
+        # construct "pretty" (i.e. normal dutch) variants of datatypes names
+        if datatype == "date":
+            datatype_pretty = "datum"
+        elif datatype == "dateTime":
+            datatype_pretty = "datum + tijd"
+        elif datatype == "anyURI":
+            datatype_pretty = "URL"
+        elif datatype == "integerOfTijdstempel":
+            datatype_pretty = "integer of tijd"
+        elif datatype == "language":
+            datatype_pretty = "taal"
+        else:
+            datatype_pretty = str(datatype)
+
+        datatype_seperate_words = camel_to_seperate_words(datatype)
+        naam_seperate_words = camel_to_seperate_words(naam)
 
         if datatype in gegevensgroepen_names:
             # this is pandoc's anchor link fmt
-            datatype_url = f"#{"-".join(seperate_words).lower()}"
+            datatype_url = f"#{'-'.join(datatype_seperate_words).lower()}"
         else:
             datatype_url = None
 
@@ -83,32 +101,40 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         else:
             datatype_tooltip = None
 
-        # insert places to break words
+        # insert places to break words with <wbr>
+        # make an exception for dagelijksbestuurlidmaatschapgegevens,
+        # as breaking it at every word looks pretty bad
         if datatype == "dagelijksBestuurLidmaatschapGegevens":
-            # make an exception for dagelijksbestuurlidmaatschapgegevens,
-            # as breaking it at every word looks pretty bad
             datatype_wbr = "dagelijksBestuur<wbr>LidmaatschapGegevens"
-            width_class = f"code-ch-{len('LidmaatschapGegevens') + 2}" 
+            width_class = f"code-ch-{len('LidmaatschapGegevens') + 2}"
         else:
-            datatype_wbr = "<wbr>".join(seperate_words)
+            datatype_wbr = "<wbr>".join(datatype_seperate_words)
             # find longest word in datatype. This is used later on to set
             # inline code boxes to an appropiate width (yes, this needs to
             # happen manually; tho only to make sure that these boxes look
             # right when word wrapping occurs)
-            maxlen = max(len(w) for w in seperate_words)
+            maxlen = max(len(w) for w in datatype_seperate_words)
             # add 2ch to account for padding? in any case, some kind of increment is needed
             maxlen = maxlen + 2
             # associate maxlen with a css class
             width_class = f"code-ch-{maxlen}"
 
+        # e.g. Dagelijksbestuur lidmaatschap gegevens
+        naam_pretty = " ".join(w.lower() for w in naam_seperate_words).capitalize()
+        if naam == "ID":
+            naam_pretty = "ID"
+
         rows.append(
             {
                 "naam": naam,
+                "naam_pretty": naam_pretty,
                 "naam_wbr": naam_wbr,
+                "enumeratie_naam": enumeratie_naam,
                 "toelichting": docstring,
                 "datatype": datatype,
                 "datatype_wbr": datatype_wbr,
                 "datatype_width_class": width_class,
+                "datatype_pretty": datatype_pretty,
                 "datatype_url": datatype_url,
                 "datatype_tooltip": datatype_tooltip,
                 "herhaalbaar": herhaalbaar,
@@ -119,10 +145,12 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
 
     return rows
 
+
 outfile = "pages/xml-schema.md"
+outfile_diagram = "diagram/ORI-A-diagram.tex"
 # Setup environment with whitespace control
 env = Environment(
-    loader=FileSystemLoader(["pages", "templates"]),
+    loader=FileSystemLoader(["pages", "templates", "diagram"]),
     trim_blocks=True,
     lstrip_blocks=True,
 )
@@ -130,23 +158,31 @@ env = Environment(
 documentatie_template = env.get_template("xml-schema.md.j2")
 table_template = env.get_template("gegevensgroep_table.html")
 
-# to be passed as kwards to jinja
-all_tables = {}
+diagram_template = env.get_template("ORI-A-diagram.tex.j2")
 
-for name, elem in zip(gegevensgroepen_names, gegevensgroepen_elems):
+# to be passed as kwards to jinja
+all_tables_html = {}
+all_tables = {} # more general struct; used in latex
+
+for gegevensgroep_name, elem in zip(gegevensgroepen_names, gegevensgroepen_elems):
     rows = complextype_to_dict(elem)
     # e.g. verwijzingGegevens → ['verwijzing', 'Gegevens']
-    name_seperate_words = camel_to_seperate_words(name)
-    pretty_name = " ".join([name_seperate_words[0].capitalize()] + [n.lower() for n in name_seperate_words[1:]])
-    snake_case_name = "_".join(name_seperate_words[:-1] + ["table"]).lower()
+    gegevensgroep_seperate_words = camel_to_seperate_words(gegevensgroep_name)
+    gegevensgroep_pretty = " ".join(w.lower() for w in gegevensgroep_seperate_words).capitalize()
+    snake_case_name = "_".join(gegevensgroep_seperate_words[:-1] + ["table"]).lower()
     snake_case_name = snake_case_name.replace("ori-a", "ori_a")
-    html_table = table_template.render(rows=rows, table_title=pretty_name)
-    # add place to word break
-    all_tables[snake_case_name] = html_table
+    html_table = table_template.render(rows=rows, table_title=gegevensgroep_pretty)
+    all_tables_html[snake_case_name] = html_table
+    all_tables[snake_case_name] = rows
 
-md_with_html_tables = documentatie_template.render(**all_tables)
-# this string must be removed for the yaml frontmatter syntactically correct
+md_with_html_tables = documentatie_template.render(**all_tables_html)
+# this string must be removed for the yaml frontmatter to be syntactically correct
 md_with_html_tables = md_with_html_tables.replace('<!-- -*- mode: markdown -*- -->', '')
+diagram_rendered = diagram_template.render(**all_tables)
+diagram_rendered = diagram_rendered.replace('<!-- -*- mode: LaTex -*- -->', '')
 
 with open(outfile, "w") as f:
     f.write(md_with_html_tables)
+
+with open(outfile_diagram, "w") as f:
+    f.write(diagram_rendered)
