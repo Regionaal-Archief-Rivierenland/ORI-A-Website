@@ -149,7 +149,9 @@ Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrip
 
 # Stemresultaat per fractie gegevens
 
-Gegevens over een stemming waar de gehele fractie aan mee heeft gedaan. Deze gegevens komt altijd onder het `<fractieNeemtDeelAanStemming>`-element van een `<fractie>`.
+Gegevens over hoe de fractie als geheel tegenover een stemming stond, zoals of de aanwezigen leden unaniem voor, unaniem tegen, of juist verdeeld hebben gestemd.. Deze gegevens komt altijd onder het `<neemtDeelAanStemming>`-element van een `<fractie>`.
+
+Het stemresultaat op fractie-niveau is in de regel af te leiden [uit stemkeuzes van aanwezige deelnemers](#stem-gegevens).
 
 {{ stemresultaat_per_fractie_table }}
 
@@ -157,9 +159,9 @@ Gegevens over een stemming waar de gehele fractie aan mee heeft gedaan. Deze geg
 
 ``` xml
 <fractie>
-    <ID>D66-gm0826</ID>
     …
-    <fractieNeemtDeelAanStemming>
+    <fractienaam>D66</fractienaam>
+    <neemtDeelAanStemming>
         <fractieStemresultaat>Aangenomen</fractieStemresultaat>
         <gegevenOpStemming>
             <verwijzingID>stemming-0009</verwijzingID>
