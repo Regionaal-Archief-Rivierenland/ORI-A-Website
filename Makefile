@@ -54,6 +54,7 @@ $(CSS_DST)%: $(CSS_SRC)%
 site/%.svg: ims/%.svg
 	scour --strip-xml-prolog --no-line-breaks --enable-comment-stripping -i $< -o $@
 
+# TODO: optimize pdfs?
 site/%.pdf: pdfs/%.pdf
 	cp $< $@
 
@@ -101,7 +102,7 @@ generate-tables: $(TABLE_DST)
 
 $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
-	pdflatex diagram/ORI-A-diagram.tex
+	pdflatex diagram/ORI-A-diagram.tex --output-dir pdfs/
 
 prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF_DST)
 
