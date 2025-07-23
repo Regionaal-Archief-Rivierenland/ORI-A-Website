@@ -1,6 +1,6 @@
 ---
 title: Hoe werkt ORI-A?
-position: 4
+position: 2
 ---
 
 # Een vergadering beschrijven
