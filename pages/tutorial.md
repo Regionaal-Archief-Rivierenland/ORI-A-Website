@@ -208,7 +208,7 @@ Dit zegt:
 Voor een uitgebreide uitleg over het verwijzen **naar externe informatieobjecten** zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
 :::waarschuwing
-De ORI-A XSD checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn.
+De ORI-A XSD checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn. Dit vermindert de kans op ambigue verwijzingen.
 :::
 
 
