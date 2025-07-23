@@ -30,6 +30,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
     rows = []
     tooltips = {
         "string": "Reeks van tekens",
+        "anyURI": "Link naar een webpagina",
         "boolean": "true of false",
         "date": "YYYY-MM-dd",
         "dateTime": "YYYY-MM-DDThh:mm:ss, bijv. 2012-05-15T13:20:00",
