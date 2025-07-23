@@ -99,7 +99,7 @@ We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenli
 
 # Hoofd- en subagendapunten
 
-Het is mogelijk een agendapunt op te splitsen in **subagendapunten**. Dit is vooral handig als je agendapunten wilt onderverdelen in rubrieken.
+Het is mogelijk agendapunten op te splitsen in **subagendapunten**. Dit is vooral handig als je agendapunten wilt onderverdelen in rubrieken.
 
 Stel bijvoorbeeld dat je de volgende agenda hebt:
 
