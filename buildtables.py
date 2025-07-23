@@ -101,12 +101,20 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         else:
             datatype_tooltip = None
 
+        # adding a lil extra padding to the box looks better
+        extra_box_padding = 2
+
         # insert places to break words with <wbr>
+
         # make an exception for dagelijksbestuurlidmaatschapgegevens,
         # as breaking it at every word looks pretty bad
+        # (and same for stemmingOverPersonenGegevens)
         if datatype == "dagelijksBestuurLidmaatschapGegevens":
             datatype_wbr = "dagelijksBestuur<wbr>LidmaatschapGegevens"
-            width_class = f"code-ch-{len('LidmaatschapGegevens') + 2}"
+            width_class = f"code-ch-{len('LidmaatschapGegevens') + extra_box_padding}"
+        elif datatype == "stemmingOverPersonenGegevens":
+            datatype_wbr = "stemmingOver<wbr>PersonenGegevens"
+            width_class = f"code-ch-{len('PersonenGegevens') + extra_box_padding}"
         else:
             datatype_wbr = "<wbr>".join(datatype_seperate_words)
             # find longest word in datatype. This is used later on to set
@@ -114,8 +122,8 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
             # happen manually; tho only to make sure that these boxes look
             # right when word wrapping occurs)
             maxlen = max(len(w) for w in datatype_seperate_words)
-            # add 2ch to account for padding? in any case, some kind of increment is needed
-            maxlen = maxlen + 2
+            # add 2ch to account for padding? in any case, some kind of increment is visually nicer
+            maxlen = maxlen + extra_box_padding
             # associate maxlen with a css class
             width_class = f"code-ch-{maxlen}"
 
