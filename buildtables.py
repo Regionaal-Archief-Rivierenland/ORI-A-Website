@@ -35,7 +35,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         "date": "YYYY-MM-dd",
         "dateTime": "YYYY-MM-DDThh:mm:ss, bijv. 2012-05-15T13:20:00",
         "enumeratie": "Lijst van keuzes",
-        "integerOfTijdstempel": "Getal of tijdsstempel (hh:mm:ss)",
+        "integerOfTijdcode": "Getal of tijdcode (hh:mm:ss)",
         "positiveInteger": "Positief getal",
     }
 
