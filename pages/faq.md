@@ -27,15 +27,6 @@ ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgespl
 
 De hoofdreden voor deze relatief 'platte' structuur is dat de objecten in ORI, het informatiemodel van de ORI API waar ORI-A op is gebaseerd, bijna allemaal meervoudige relaties hebben met elkaar. Om een voorbeeld te noemen: een raadsvoorstel is weliswaar een onderdeel van een vergadering, maar kan net zo goed onderdeel zijn van iemand's portefeuille, een stemming teweeg brengen, of ondertekend worden door een groep personen. Hierdoor lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
 
-
-<!-- # Hoeveel vergaderingen komen in één ORI-A XML-bestand?
-
-ORI-A is zo ontworpen, dat een ORI-A XML-bestand altijd over maximaal één vergadering informatie bevat. Door die logica aan te houden, kon het interne verwijsmechanisme tussen entiteiten simpel worden gehouden.
-
-In de praktijk zal ORI-A vaak gezamenlijk met MDTO worden ingezet bij het migreren van raadsinformatie in brede zin, dus zowel videotulen als de bijbehorende informatieobjecten. In dat geval raden we aan om het ORI-A XML-bestand onder te brengen in de [MDTO sidecar-structuur](https://www.nationaalarchief.nl/archiveren/mdto/specificatie-submission-information-package/structuur). Dit kan door het ORI-A XML-bestand te beschouwen als [aanvullende metagegevens](https://www.nationaalarchief.nl/archiveren/mdto/aanvullendeMetagegevens) en op te nemen bij een relevant informatieobject. Bijvoorbeeld bij de metagegevens van de videotuul zelf of het vergaderdossier.-->
-
-<!-- hier gaat het lonen om een voorbeeld van een directorystructuur op te nemen waarop is te zien hoe een gecombineerde MDTO/ORI-A levering eruit ziet. Maar dat kan dan in het 'how-to' gedeelte -->
-
 # Hoe verhoudt ORI-A zich tot ORI?
 
 ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). Op sommige vlakken is besloten af te wijken van dit informatiemodel. ORI-A biedt in tegenstelling tot ORI geen ruimte voor gegevens over informatieobjecten, maar verwijst op die momenten naar MDTO. Ook zijn sommige verplichtingen verschillend. Een volledige lijst van de verschillen wordt nog opgemaakt.
