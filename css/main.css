@@ -467,6 +467,31 @@ code {color: var(--pico-color)}
 code span.kw { color: var(--pico-ins-color); font-weight: 600; } /* Keyword */
 code span.co { color: var(--pico-muted-color)} /* comment */
 
+/* badges used in navbar */
+.badge {
+    font-weight: bolder;
+    font-size: 0.57em;
+    border-radius: var(--pico-border-radius);
+    background-color: var(--pico-code-kbd-background-color);
+    color: var(--pico-code-kbd-color);
+    opacity: 0.8;
+    margin-top: 0.1em; /* custom alignment */
+    padding: 0.08rem 0.23rem !important;
+    line-height: 1.25;
+    margin-right: 0.5em;
+}
+
+nav li li li {
+    padding-bottom: 0.30em;
+    padding-top: 0.30em;
+    margin-left: 0.34em;
+    display: flex; /* needed to center the badge with the text */
+    align-items: center;
+}
+
+nav li li li:last-child {
+    padding-bottom: 0.1em;
+}
 
 /* Anchor links next to headers */
 

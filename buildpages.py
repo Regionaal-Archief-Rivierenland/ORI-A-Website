@@ -15,6 +15,7 @@ env = Environment(loader=FileSystemLoader("templates"),
                   trim_blocks=True)
 base_template = env.get_template("base.html")
 navbar_template = env.get_template("navbar.html")
+navbar_nested_template = env.get_template("navbar_nested.html")
 logo = env.get_template("logo.html")
 
 def pageinfo(filestem):
@@ -31,18 +32,38 @@ def pageinfo(filestem):
         soup = BeautifulSoup(f, 'html.parser')
 
     headers = []
+    # dict that stores h2 info under its h1 sibling(/"parent")
+    h2_by_h1 = {}
     for header in soup.find_all('h1'):
         # pandoc generates anchors automatically!
         anchor = header.get('id')
         if anchor:
             headers.append((header.text, anchor))
 
+        h2s = []
+        for sibling in header.find_next_siblings():
+            if sibling.name == 'h1':
+                break
+            if sibling.name == 'h2':
+                h2s.append((sibling.text, sibling.get('id')))
+
+        h2_by_h1[header.text] = h2s
+
+    headers_h2 = []
+    for header in soup.find_all('h2'):
+        # pandoc generates anchors automatically!
+        anchor = header.get('id')
+        if anchor:
+            headers_h2.append((header.text, anchor))
+
     return {
         "title": title,
         "position": position,
         "hide": hide,
         "filename": f"{filestem.removeprefix(f"{pages_folder}/")}",
-        "headers": headers
+        "headers": headers,
+        "headers_h2": headers_h2,
+        "h2_by_h1": h2_by_h1
     }
 
 def add_icon_to_links(html):
@@ -176,18 +197,28 @@ for page in pages:
     # process html
     page_contents = add_icon_to_links(page_contents)
     page_contents = colorize_inline_xml(page_contents)
+
     if page["title"] in ["FAQ", "Veelgestelde vragen"]:
         page_contents = headers_to_accordions(page_contents)
+
+
     page_contents = anchor_icon_to_headers(page_contents)
     page_contents = delete_pandoc_cruft(page_contents)
 
     # this needs current_page because that visited page needs to styled in the navbar
     logo_html = logo.render()
-    navbar_html = navbar_template.render(
-        # don't add colofon/pages with hide_from_nav to navbar
-        pages=[p for p in pages if not p["hide"]],
-        current_page=page["filename"],
-    )
+    if page["title"] in ["Het XML-schema"]:
+        navbar_html = navbar_nested_template.render(
+            pages=[p for p in pages if not p["hide"]],
+            current_page=page["filename"],
+        )
+    else:
+        navbar_html = navbar_template.render(
+            # don't add colofon/pages with hide_from_nav to navbar
+            pages=[p for p in pages if not p["hide"]],
+            current_page=page["filename"],
+        )
+
     html = base_template.render(
         logo=logo_html,
         content=page_contents,
