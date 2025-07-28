@@ -22,11 +22,17 @@ position: 3
 <!-- <\!-- dit is preservica documentatie, at best. Ik denk niet dat we dit per se officeel willen supporten, want een XSD schema kan geen _verzamelingen_ bestanden valideren, maar alleen indivuele bestanden. Of te wel, dit is highly discouraged, en uiteindelijk bad practice.  -\-> -->
 <!-- Het ORI-A XML-schema staat overigens toe dat gegevens over één vergadering over meerdere ORI-A XML-bestanden worden verspreid. Uit opnametests is gebleken dat sommige e-depots metagegevens (zoals ORI-A data) direct aan mappen of digitale bestanden koppelen. In dat geval kan het wenselijk zijn om de ORI-A XML-bestanden op te knippen in meerdere bestanden, zodat ze makkelijk aan het juiste niveau kunnen worden gerelateerd. -->
 
-# ORI-A gegevens
+# Entiteiten
+
+Alle «Entiteiten» in ORI-A.
+
+## ORI-A
+
+Gegevens die onder het _root_-element `<ORI-A>` komen.
 
 {{ ori_a_table }}
 
-#### XML voorbeeld
+### XML voorbeeld
 
 ``` xml
 <ORI-A>
@@ -37,7 +43,7 @@ position: 3
 </ORI-A>
 ```
 
-# Vergadering gegevens
+## Vergadering
 
 ::: waarschuwing
 **Let op:**  Alhoewel `<isVastgelegdMiddels>` strikt genomen niet verplicht is, is een transcriptie of (audio)visueel verslag noodzakelijk voor de toekomstige interpreteerbaarheid van raadsvergaderingen. Alleen in _zeer_ zeldzame situaties, zoals een besloten vergadering zonder opnames, mag `<isVastgelegdMiddels>` ontbreken.
@@ -47,7 +53,7 @@ position: 3
 {{ vergadering_table }}
 
 <!-- misschien deze uitklapbaar maken -->
-#### XML voorbeeld
+### XML voorbeeld
 
 <!-- ampersand chars (&) cannot actually exist in xml-->
 ``` xml
@@ -67,11 +73,13 @@ position: 3
 </vergadering>
 ```
 
-# Agendapunt gegevens
+## Agendapunt
+
+<!-- todo: misschien hier (nogmaals) documenteren dat de volgorde van agendapunten leidend is?-->
 
 {{ agendapunt_table }}
 
-#### XML voorbeeld
+### XML voorbeeld
 
 ``` xml
 <agendapunt>
@@ -82,26 +90,25 @@ position: 3
 </agendapunt>
 ```
 
-# Natuurlijk persoon gegevens
+## Natuurlijk persoon
 
 <!-- TODO: korte uitleg over waar dit datatype allemaal voorkomt -->
+
+Een veelvoorkomende toepassing van dit element is het registeren welke personen lid zijn van een bepaalde fractie. Dit kan middels het `<isLidVanFractie>` element (zie XML voorbeeld).
+
 {{ natuurlijk_persoon_table }}
 
-#### XML voorbeeld
+### XML voorbeeld
 
 ``` xml
 </todo>
 ```
 
-# Naam gegevens
-
-{{ naam_table }}
-
-# Aanwezige deelnemer gegevens
+## Aanwezige deelnemer
 
 {{ aanwezige_deelnemer_table }}
 
-#### XML Voorbeeld
+### XML voorbeeld
 
 ``` xml
 <aanwezigeDeelnemer>
@@ -130,29 +137,15 @@ position: 3
         ...
 ```
 
-# Spreekfragment gegevens
-
-{{ spreekfragment_table }}
-
-# Stem gegevens
-
-{{ stem_table }}
-
-#### XML voorbeeld
-
-``` xml
-</todo>
-```
-
-# Stemming gegevens
+## Stemming
 
 :::tip
-**Tip:** dit zijn gegevens over een **algemene stemming**; indivuele stemkeuzes komen onder [`aanwezigeDeelnemerGegevens`](#aanwezige-deelnemer-gegevens).
+**Tip:** dit zijn gegevens over een **algemene stemming**; indivuele stemkeuzes komen onder [`aanwezigeDeelnemerGegevens`](#aanwezige-deelnemer).
 :::
 
 {{ stemming_table }}
 
-#### XML voorbeeld
+### XML voorbeeld
 
 ``` xml
 <stemming>
@@ -181,11 +174,11 @@ position: 3
 </stemming>
 ```
 
-# Besluit gegevens
+## Besluit
 
 {{ besluit_table }}
 
-# Fractie gegevens
+## Fractie
 
 Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrippenlijsten opgeven:
 
@@ -213,15 +206,74 @@ Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrip
 </fractie>
 ```
 
-# Stemresultaat per fractie gegevens
+# Gegevensgroepen
 
-Gegevens over hoe de fractie als geheel tegenover een stemming stond, zoals of de aanwezigen leden unaniem voor, unaniem tegen, of juist verdeeld hebben gestemd.. Deze gegevens komt altijd onder het `<neemtDeelAanStemming>`-element van een `<fractie>`.
+## Naam
+
+{{ naam_table }}
+
+### XML voorbeeld
+
+
+``` xml
+</todo>
+```
+
+## Stemming over personen
+
+{{ stemming_over_personen_table }}
+
+## Nevenfunctie
+
+{{ nevenfunctie_table }}
+
+# Relatieklasses
+
+## Fractielidmaatschap
+
+
+{{ fractielidmaatschap_table }}
+
+### XML voorbeeld
+
+``` xml
+</todo>
+```
+
+## Dagelijks bestuur lidmaatschap
+
+
+{{ dagelijks_bestuur_lidmaatschap_table }}
+
+### XML voorbeeld
+
+``` xml
+</todo>
+```
+
+## Spreekfragment
+
+{{ spreekfragment_table }}
+
+## Stem gegevens
+
+{{ stem_table }}
+
+### XML voorbeeld
+
+``` xml
+</todo>
+```
+
+## Stemresultaat per fractie
+
+Gegevens over hoe de fractie als geheel tegenover een stemming stond, zoals of de aanwezigen leden unaniem voor, unaniem tegen, of juist verdeeld hebben gestemd. Deze gegevens komt altijd onder het `<neemtDeelAanStemming>`-element van een `<fractie>`.
 
 Het stemresultaat op fractie-niveau is in de regel af te leiden [uit stemkeuzes van aanwezige deelnemers](#stem-gegevens).
 
 {{ stemresultaat_per_fractie_table }}
 
-#### XML voorbeeld
+### XML voorbeeld
 
 ``` xml
 <fractie>
@@ -237,19 +289,21 @@ Het stemresultaat op fractie-niveau is in de regel af te leiden [uit stemkeuzes 
 </fractie>
 ```
 
-# Verwijzing gegevens
+# Algemeen
+
+## Verwijzing gegevens
 
 Dit zijn de gegevens die worden gebruikt bij het verwijzen van het ene naar het andere element binnen ORI-A, of naar informatieobjecten buiten ORI-A.
 
 {{ verwijzing_table }}
 
-# Begrip gegevens
+## Begrip gegevens
 
 Zie [begrippenlijsten gebruiken](tutorial#begrippenlijsten-gebruiken).
 
 {{ begrip_table }}
 
-# Informatieobject gegevens
+## Informatieobject gegevens
 
 Dit zijn de gegevens die worden gebruikt om te **verwijzen** naar elders gedefinieerde informatieobjecten.
 

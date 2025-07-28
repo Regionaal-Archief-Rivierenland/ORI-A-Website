@@ -92,8 +92,13 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         naam_seperate_words = camel_to_seperate_words(naam)
 
         if datatype in gegevensgroepen_names:
+            # strip -Gegevens suffix, except in some cases
+            slice_index = None
+            if not datatype in ["verwijzingGegevens", "begripGegevens", "informatieobjectGegevens"]:
+                slice_index = -1
+
             # this is pandoc's anchor link fmt
-            datatype_url = f"#{'-'.join(datatype_seperate_words).lower()}"
+            datatype_url = f"#{'-'.join(datatype_seperate_words[0:slice_index]).lower()}"
         else:
             datatype_url = None
 
@@ -177,7 +182,13 @@ for gegevensgroep_name, elem in zip(gegevensgroepen_names, gegevensgroepen_elems
     rows = complextype_to_dict(elem)
     # e.g. verwijzingGegevens → ['verwijzing', 'Gegevens']
     gegevensgroep_seperate_words = camel_to_seperate_words(gegevensgroep_name)
-    gegevensgroep_pretty = " ".join(w.lower() for w in gegevensgroep_seperate_words).capitalize()
+
+    # remove -Gegevens suffix, sometimes
+    slice_index = None
+    if not gegevensgroep_name in ["verwijzingGegevens", "begripGegevens", "informatieobjectGegevens"]:
+        slice_index = -1
+
+    gegevensgroep_pretty = " ".join(w.lower() for w in gegevensgroep_seperate_words[0:slice_index]).capitalize()
     snake_case_name = "_".join(gegevensgroep_seperate_words[:-1] + ["table"]).lower()
     snake_case_name = snake_case_name.replace("ori-a", "ori_a")
     html_table = table_template.render(rows=rows, table_title=gegevensgroep_pretty)
