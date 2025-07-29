@@ -25,7 +25,6 @@ official woff2 files from the Lato website had vertical spacing issues
     font-style: normal;
 }
 
-/* The monospace font looks kind of okay on some windows devices, actually */
 @font-face {
     font-family: "CommitMonoVariable";
     src: url("CommitMonoVariable.woff2") format("woff2");
