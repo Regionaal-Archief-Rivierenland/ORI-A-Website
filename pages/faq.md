@@ -7,7 +7,6 @@ position: 5
 
 **Raadsinformatie** is een verzamelnaam voor alle digitale informatie die overheden aanmaken bij politieke en/of bestuurlijke besluitvorming. Deze besluitvorming vindt plaats in vergaderingen.
 
-
 Een **videotuul** (samenvoeging van "video" en "notulen") is een audiovisueel verslag van zo'n vergadering. Een videotuul bestaat meestal uit **twee onderdelen**: een video-opname; en metagegevens die contextinformatie geven over de vergadering, zoals een overzicht van de aanwezige fracties,  een lijst met behandelde agendapunten, of sprekersinformatie.
 
 Een vergadering die is vastgelegd middels een audio-opname wordt ook wel een **audiotuul** genoemd.
