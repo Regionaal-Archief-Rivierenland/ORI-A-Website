@@ -478,7 +478,7 @@ code span.co { color: var(--pico-muted-color)} /* comment */
     margin-top: 0.1em; /* custom alignment */
     padding: 0.08rem 0.23rem !important;
     line-height: 1.25;
-    margin-right: 0.5em;
+    /* margin-right: 0.5em; */
 }
 
 nav li li li {
