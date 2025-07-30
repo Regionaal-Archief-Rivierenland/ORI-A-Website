@@ -41,7 +41,7 @@ ORI-A is bedoeld voor iedereen die betrokken is bij de duurzame toegankelijkheid
 - Leveranciers die hun producten of diensten willen afstemmen op de behoeften vanuit de overheid.
 - Beheerders van raadsinformatiesystemen en andere functionarissen die betrokken zijn bij het migreren van raadsinformatie richting een e-depot. 
 
-Ten slotte kan ORI-A ook dienen als naslagwerk voor iedereen die gebruik wilt maken van door overheden gepubliceerde ORI-A metagegevens. Denk bijvoorbeeld aan applicatiebouwers die viewers of zoekmachines voor (openbare) raadsinformatie willen ontwikkelen.
+Ten slotte kan ORI-A ook dienen als naslagwerk voor iedereen die gebruik wil maken van door overheden gepubliceerde ORI-A metagegevens. Denk bijvoorbeeld aan applicatiebouwers die viewers of zoekmachines voor (openbare) raadsinformatie willen ontwikkelen.
 
 # Wanneer gebruik je ORI-A? 
 
