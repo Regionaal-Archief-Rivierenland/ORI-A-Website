@@ -31,7 +31,7 @@ De hoofdreden voor deze relatief 'platte' structuur is dat de objecten in ORI, h
 
 ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). Op sommige vlakken is besloten af te wijken van dit informatiemodel. ORI-A biedt in tegenstelling tot ORI geen ruimte voor gegevens over informatieobjecten, maar verwijst op die momenten naar MDTO. Ook zijn sommige verplichtingen verschillend. Een volledige lijst van de verschillen wordt nog opgemaakt.
 
-Voor meer achtergrondinformatie over ORI, lees [hier](https://ontola.io/nl/cases/openbesluitvorming/) en [hier](https://openstate.eu/nl/projecten-tools-data/besluiten/open-raadsinformatie/).
+Voor meer achtergrondinformatie over ORI, zie [hier](https://ontola.io/nl/cases/openbesluitvorming/) en [hier](https://openstate.eu/nl/projecten-tools-data/besluiten/open-raadsinformatie/).
 
 # Voor wie is ORI-A bedoeld? 
 
