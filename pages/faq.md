@@ -38,7 +38,7 @@ Voor meer achtergrondinformatie over ORI, zie [hier](https://ontola.io/nl/cases/
 ORI-A is bedoeld voor iedereen die betrokken is bij de duurzame toegankelijkheid van raadsinformatie. In het bijzonder:
 
 - Adviseurs van overheidsorganisaties die de eisen opstellen voor raadsinformatiesystemen (RIS'en) en deze vertalen naar concrete maatregelen, bijvoorbeeld bij het migreren naar een e-depot. Denk aan: architecten, informatiemanagers en -beheerders, inkoopadviseurs en adviseurs digitale archivering.
-- Leveranciers die hun producten of diensten willen afstemmen op de behoeften vanuit de overheid. 
+- Leveranciers die hun producten of diensten willen afstemmen op de behoeften vanuit de overheid.
 - Beheerders van raadsinformatiesystemen en andere functionarissen die betrokken zijn bij het migreren van raadsinformatie richting een e-depot. 
 
 ORI-A kan ook worden gebruikt als naslagwerk voor iedereen die gebruik wil maken van de ORI-A metagegevens die door een overheidsorganisatie beschikbaar zijn gesteld. Zoals voor het koppelen van een zoekmachine aan (openbare) raadsinformatie of voor het bouwen van andere applicaties die toegang bieden tot raadsinformatie, zoals viewers. 
