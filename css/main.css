@@ -464,7 +464,10 @@ pre > code {
 
 code {color: var(--pico-color)}
 code span.kw { color: var(--pico-ins-color); font-weight: 600; } /* Keyword */
-code span.co { color: var(--pico-muted-color)} /* comment */
+code span.co { color: var(--pico-muted-color)}/* comments */
+code span.st { color: #748BF8} /* strings (Pico Blue 400) */
+code span.ot { color: var(--pico-ins-color)} /* attribs */
+
 
 /* badges used in navbar */
 .badge {
