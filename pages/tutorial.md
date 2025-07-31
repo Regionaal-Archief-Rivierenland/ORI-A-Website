@@ -213,7 +213,7 @@ De ORI-A XSD checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn.
 
 
 :::tip
-**Tip:** Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in ["Waarom heeft ORI-A geen aggregatieniveaus" in de veelgestelde vragen](faq).
+**Tip:** Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in [Waarom heeft ORI-A geen aggregatieniveaus](faq).
 :::
 
 ### Individuele stemmen
