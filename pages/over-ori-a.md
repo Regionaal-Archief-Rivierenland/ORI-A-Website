@@ -9,7 +9,7 @@ position: 1
 
 # Wat is ORI•A?
 
-De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het duurzaam bewaren van raadsinformatie in XML-formaat. Het is gebaseerd op het informatiemodel onder de [Open Raadsinformatie (ORI) API specificatie](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie).
+De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het duurzaam bewaren van raadsinformatie in XML-formaat. ORI-A is gebaseerd op het informatiemodel onder de [Open Raadsinformatie (ORI) API specificatie](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie).
 
 ## Achtergrond
 
