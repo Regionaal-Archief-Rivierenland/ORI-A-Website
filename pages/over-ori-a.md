@@ -13,7 +13,7 @@ De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het d
 
 ## Achtergrond
 
-Vanuit enkele archiefdiensten is de behoefte ontstaan om te komen tot een standaard voor het uitwisselen van raadsinformatie naar een voorziening voor digitale duurzaamheid (e-depots). Deze archiefdiensten hebben zich verenigd in de [Werkgroep Archivering Raadsinformatie](colofon).
+Vanuit enkele archiefdiensten is de behoefte ontstaan om te komen tot een standaard voor het duurzaam bewaren en bescikbaarstellen van raadsinformatie in een digitale archief bewaarplaats (het e-depot). Deze archiefdiensten hebben zich verenigd in de [Werkgroep Archivering Raadsinformatie](colofon).
 
 De werkgroep heeft twee doelen: het ontwikkelen, testen en gebruiksklaar maken van een ORI-A XSD, en vervolgens het gebruik van de standaard aanmoedigen en ondersteunen.
 
