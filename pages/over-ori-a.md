@@ -13,13 +13,13 @@ De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het d
 
 ## Achtergrond
 
-Vanuit enkele archiefdiensten is de behoefte ontstaan om te komen tot een standaard voor het duurzaam bewaren en bescikbaarstellen van raadsinformatie in een digitale archief bewaarplaats (het e-depot). Deze archiefdiensten hebben zich verenigd in de [Werkgroep Archivering Raadsinformatie](colofon).
+Vanuit enkele archiefdiensten is de behoefte ontstaan om te komen tot een standaard voor het duurzaam bewaren en beschikbaarstellen van raadsinformatie in een digitale archiefbewaarplaats (het e-depot). Deze archiefdiensten hebben zich verenigd in de [Werkgroep Archivering Raadsinformatie](colofon).
 
 De werkgroep heeft twee doelen: het ontwikkelen, testen en gebruiksklaar maken van een ORI-A XSD, en vervolgens het gebruik van de standaard aanmoedigen en ondersteunen.
 
 ## Status
 
-De ORI-A XSD is momenteel in bèta, en [kan hier gedownload worden](https://github.com/Regionaal-Archief-Rivierenland/ORI-XSD/releases). De standaard wordt de komende tijd getest aan enkele praktijkcases en op basis daarvan aangepast. Wijzigingen op de ORI-A XSD ten gevolge van deze tests worden op [GitHub](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD) bijgehouden.
+De ORI-A XSD is momenteel in bèta, en [kan hier gedownload worden](https://github.com/Regionaal-Archief-Rivierenland/ORI-XSD/releases). De standaard is de afgelopen tijd getest aan enkele praktijkcases, momenteel wordt gewerkt aan de documentatie en voorbeeldbestanden. Vanaf het najaar volgen enkele pilotimplementaties, waarin de standaard wordt ingezet in de praktijk. Hierover zullen periodiek berichten op [KIA](https://kiacommunity.nl/welcome) verschijnen.
 
 ## Documentatie
 
