@@ -13,7 +13,7 @@ Een vergadering die is vastgelegd middels een audio-opname wordt ook wel een **a
 
 # Moeten videotulen worden bewaard?
 
-Strikt genomen zijn overheden niet altijd verplicht om videotulen te bewaren. Als er ook schriftelijke verslagen zijn van vergaderingen, dan hoort de meest informatierijke bron te worden bewaard. Vanuit cultuurhistorisch oogpunt is het wel belangrijk dat videotulen permanent bewaard worden. Videotulen zijn een belangrijk onderdeel van de digitale democratie.
+Strikt genomen zijn overheden niet altijd verplicht om videotulen te bewaren. Als een vergadering ook schriftelijke is vastgelegd, dan hoort de meest informatierijke bron te worden bewaard. Vanuit cultuurhistorisch oogpunt is het wel belangrijk dat videotulen permanent bewaard worden. Videotulen zijn namelijk een belangrijk onderdeel van de digitale democratie.
 
 # Waarom is ORI-A ontwikkeld?
 
