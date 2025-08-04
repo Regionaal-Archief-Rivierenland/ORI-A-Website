@@ -19,6 +19,8 @@ ORI en ORI-A hebben vergelijkbare doelstellingen, waaronder het gestandaardiseer
 
 Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bleek:
 
+* **XML ondersteuning.** ORI is alleen beschikbaar in het [JSON bestandsformaat](https://en.wikipedia.org/wiki/JSON). Alhoewel er niks mis is met JSON, ondersteunen e-depots en de software die archiefinstellingen gebruiken meestal alleen XML. Door een XML standaard en [aansluitend validatie-schema](https://en.wikipedia.org/wiki/XML_Schema_(W3C)) te ontwikkelen --- [de ORI-A XSD](downloads) --- sluit ORI-A beter aan op gewoontes in de archiefwereld.
+
 * **Aansluiten bij bestaande (archief)standaarden.** [Het Nationaal Archief raadt aan](https://www.nationaalarchief.nl/archiveren/mdto#collapse-102790) algemene gegevens over informatieobjecten --- zoals aanmaakdatum en auteur --- vast te leggen in MDTO, een metadatastandaard gericht op het duurzaam toegangelijk maken van overheidsdocumenten. In tegenstelling tot ORI is ORI-A zo ontwikkelt dat deze taak volledig bij MDTO blijft.  ORI-A richt zich daarentegen uitsluitend op **domeinspecifieke gegevens** --- oftewel, raadsinformatie.
 
 ::: tip
@@ -29,7 +31,6 @@ Je kunt meer lezen over het combineren van ORI-A en MDTO in [Hoe werkt ORI-A?](t
 
 * **Duurzame toegangelijkheid.** Sommige gegevens in ORI, zoals de datum waarop een vergadering gehouden is, zijn essentieel voor de toekomstige interpreteerbaarheid van raadsinformatie, maar niet verplicht. Om de [duurzame toegangelijkheid](https://www.nationaalarchief.nl/archiveren/kennisbank/duurzaam-toegankelijk) van raadsinformatie te waarborgen zijn zulke gegevens in ORI-A wél verplicht gesteld.
 
-* **XML ondersteuning.** ORI is alleen beschikbaar in het [JSON bestandsformaat](https://en.wikipedia.org/wiki/JSON). Alhoewel er niks mis is met JSON, ondersteunen e-depots en de software die archiefinstellingen gebruiken meestal alleen XML. Door een XML standaard en [aansluitend validatie-schema](https://en.wikipedia.org/wiki/XML_Schema_(W3C)) te ontwikkelen --- [de ORI-A XSD](downloads) --- sluit ORI-A beter aan op gewoontes in de archiefwereld.
 
 # Waarom heeft ORI-A geen aggregatieniveaus?
 
