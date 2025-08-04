@@ -251,7 +251,7 @@ voor mensen minder duidelijk leest dan dit:
 ``` xml
 <heeftBetrekkingOpAgendapunt>
     <verwijzingID>2028a00aa</verwijzingID>
-    <verwijzingNaam>Delegatiebesluit Omgevingsplan Leiden 2023</verwijzingNaam>
+    <verwijzingNaam>Delegatiebesluit omgevingsplan Leiden 2023</verwijzingNaam>
 </heeftBetrekkingOpAgendapunt>
 ```
 
