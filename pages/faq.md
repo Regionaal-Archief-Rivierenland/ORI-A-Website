@@ -27,7 +27,7 @@ Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bl
 Je kunt meer lezen over het combineren van ORI-A en MDTO in [Hoe werkt ORI-A?](tutorial#mdto)
 :::
 
-* **Flexibiliteit.** ORI vereist soms informatie die niet altijd in de gevraagde vorm beschikbaar bleek. Dit probleem komt vooral voor bij raadsinformatie die is aangemaakt _voordat_ de VNG met ORI begon. Omdat archieven deze oudere vergaderingen alsnog gestandaardiseerd willen opslaan, was een flexibelere standaard nodig.
+* **Achterwaartse compatibiliteit (_backwards compatibility_).**  Bestaande raadsinformatie voldoet niet altijd aan alle eisen van ORI. Uit analyses van RIS systemen kwam bijvoorbeeld naar voren dat ORI soms gegevens vereist die ofwel niet beschikbaar zijn, ofwel niet beschikbaar zijn in de gevraagde vorm. Dit komt vooral voor bij **oudere vergaderingen**. Omdat ook deze vergaderingen gearchiveerd moeten worden, is ORI-A flexiber gemaakt op punten waar RIS systemen momenteel tekort schieten.
 
 * **Duurzame toegangelijkheid.** Sommige gegevens in ORI, zoals de datum waarop een vergadering gehouden is, zijn essentieel voor de toekomstige interpreteerbaarheid van raadsinformatie, maar niet verplicht. Om de [duurzame toegangelijkheid](https://www.nationaalarchief.nl/archiveren/kennisbank/duurzaam-toegankelijk) van raadsinformatie te waarborgen zijn zulke gegevens in ORI-A wél verplicht gesteld.
 
