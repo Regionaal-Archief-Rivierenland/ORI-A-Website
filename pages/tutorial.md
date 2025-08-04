@@ -374,13 +374,22 @@ Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het
 
 <!-- TODO: misschien wel mooi om het MDTO bestand ook als voorbeeld op te voeren. -->
 ``` xml
-<heeftAlsBijlage> 
-    <informatieobjectType>Motie</informatieobjectType>
-    <verwijzingInformatieobject>
-        <verwijzingID>document-009</verwijzingID>
-        <verwijzingNaam>Motie van lid Smit</verwijzingNaam>
-    </verwijzingInformatieobject>
-</heeftAlsBijlage>
+<agendapunt>
+    …
+    <heeftAlsBijlage>
+        <informatieobjectType>
+            <begripLabel>Motie</begripLabel>
+            <verwijzingBegrippenlijst>
+                <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuk-types</verwijzingID>
+            </verwijzingBegrippenlijst>
+        </informatieobjectType>
+        <verwijzingInformatieobject>
+            <verwijzingID>document-009</verwijzingID>
+            <verwijzingNaam>Motie van lid Smit</verwijzingNaam>
+        </verwijzingInformatieobject>
+    </heeftAlsBijlage>
+</agendapunt>
+
 ```
 
 Het element `<verwijzingNaam>` hierboven is [slechts een hulpsteuntje](#verwijzen-met-een-naam) voor menselijke lezers --- om een verwijzing tot stand te brengen volstaat `<verwijzingID>`.
