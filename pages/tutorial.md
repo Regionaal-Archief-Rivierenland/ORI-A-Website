@@ -406,9 +406,9 @@ De verwijzing naar deze mediabron komt in ORI-A onder `<vergadering>`:
     <isVastgelegdMiddels>
         <informatieobjectType>
             <begripLabel>Video</begripLabel>
-            <verwijzingBegrip>
+            <verwijzingBegrippenlijst>
                 <verwijzingID>https://ori-a.nl/begrippenlijsten#mediabron-types</verwijzingID>
-            </verwijzingBegrip>
+            </verwijzingBegrippenlijst>
         </informatieobjectType>
         <verwijzingInformatieobject>
             <verwijzingID>8088a20808a0…</verwijzingID>
