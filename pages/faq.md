@@ -15,9 +15,9 @@ Strikt genomen zijn overheden niet altijd verplicht om videotulen te bewaren. Al
 
 # Waarom een speciale archiefstandaard?
 
-ORI-A is ontwikkelt met hetzelfde doel als ORI: het gestandaardiseerd beschikbaar stellen van raadsinformatie.
+ORI en ORI-A hebben vergelijkbare doelstellingen, waaronder het gestandaardiseerd beschikbaarstellen van raadsinformatie.
 
-Toch zijn er redenen waarom een speciale archiefvariant van ORI noodzakelijk was:
+Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bleek:
 
 * **Aansluiten bij bestaande (archief)standaarden.** [Het Nationaal Archief raadt aan](https://www.nationaalarchief.nl/archiveren/mdto#collapse-102790) algemene gegevens over informatieobjecten --- zoals aanmaakdatum en auteur --- vast te leggen in MDTO, een metadatastandaard gericht op het duurzaam toegangelijk maken van overheidsdocumenten. In tegenstelling tot ORI is ORI-A zo ontwikkelt dat deze taak volledig bij MDTO blijft.  ORI-A richt zich daarentegen uitsluitend op **domeinspecifieke gegevens** --- oftewel, raadsinformatie.
 
