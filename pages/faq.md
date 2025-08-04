@@ -15,13 +15,24 @@ Een vergadering die is vastgelegd middels een audio-opname wordt ook wel een **a
 
 Strikt genomen zijn overheden niet altijd verplicht om videotulen te bewaren. Als een vergadering ook schriftelijke is vastgelegd, dan hoort de meest informatierijke bron te worden bewaard. Vanuit cultuurhistorisch oogpunt is het wel belangrijk dat videotulen permanent bewaard worden. Videotulen zijn namelijk een belangrijk onderdeel van de digitale democratie.
 
-# Waarom is ORI-A ontwikkeld?
+# Waarom een speciale archiefstandaard?
 
-ORI-A is ontwikkeld als domeinspecifieke standaard voor raadsinformatie, wanneer dit voor permanente bewaring naar een [e-depot](https://www.nationaalarchief.nl/archiveren/kennisbank/wat-is-een-e-depot) wordt gemigreerd. Om videotulen op een [duurzaam toegankelijke](https://www.nationaalarchief.nl/archiveren/kennisbank/duurzaam-toegankelijk) manier te kunnen beheren en beschikbaar stellen. Om migratie van raadsinformatie uniformer en efficiënter te maken, en zeker te zijn dat de juiste metagegevens meekomen.
+ORI en ORI-A hebben vergelijkbare doelstellingen, waaronder het gestandaardiseerd beschikbaarstellen van raadsinformatie.
 
-# Waarom is ORI-A een XML-schema?
+Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bleek:
 
-ORI-A is als XML Schema Document (XSD) ontworpen, zodat het gezamenlijk met [MDTO](https://www.nationaalarchief.nl/archiveren/mdto) kan worden gebruikt bij migraties naar het e-depot. Metagegevens over informatieobjecten en bestanden kunnen dan in MDTO worden uitgedrukt, en metagegevens over raadsinformatie in ORI-A.
+* **XML ondersteuning.** ORI is alleen beschikbaar in het [JSON bestandsformaat](https://en.wikipedia.org/wiki/JSON). Alhoewel er niks mis is met JSON, ondersteunen e-depots en de software die archiefinstellingen gebruiken meestal alleen XML. Door een XML standaard en [aansluitend validatie-schema](https://en.wikipedia.org/wiki/XML_Schema_(W3C)) te ontwikkelen --- [de ORI-A XSD](downloads) --- sluit ORI-A beter aan op gewoontes in de archiefwereld.
+
+* **Aansluiten bij bestaande (archief)standaarden.** [Het Nationaal Archief raadt aan](https://www.nationaalarchief.nl/archiveren/mdto#collapse-102790) algemene gegevens over informatieobjecten --- zoals aanmaakdatum en auteur --- vast te leggen in MDTO, een metadatastandaard gericht op het duurzaam toegangelijk maken van overheidsdocumenten. In tegenstelling tot ORI is ORI-A zo ontwikkelt dat deze taak volledig bij MDTO blijft.  ORI-A richt zich daarentegen uitsluitend op **domeinspecifieke gegevens** --- oftewel, raadsinformatie.
+
+::: tip
+Je kunt meer lezen over het combineren van ORI-A en MDTO in [Hoe werkt ORI-A?](tutorial#mdto)
+:::
+
+* **Achterwaartse compatibiliteit (_backwards compatibility_).**  Bestaande raadsinformatie voldoet niet altijd aan alle eisen van ORI. Uit analyses van RIS systemen kwam bijvoorbeeld naar voren dat ORI soms gegevens vereist die ofwel niet beschikbaar zijn, ofwel niet beschikbaar zijn in de gevraagde vorm. Dit komt vooral voor bij **oudere vergaderingen**. Omdat ook deze vergaderingen gearchiveerd moeten worden, is ORI-A flexiber gemaakt op punten waar RIS systemen momenteel tekort schieten.
+
+* **Duurzame toegangelijkheid.** Sommige gegevens in ORI, zoals de datum waarop een vergadering gehouden is, zijn essentieel voor de toekomstige interpreteerbaarheid van raadsinformatie, maar niet verplicht. Om de [duurzame toegangelijkheid](https://www.nationaalarchief.nl/archiveren/kennisbank/duurzaam-toegankelijk) van raadsinformatie te waarborgen zijn zulke gegevens in ORI-A wél verplicht gesteld.
+
 
 # Waarom heeft ORI-A geen aggregatieniveaus?
 
