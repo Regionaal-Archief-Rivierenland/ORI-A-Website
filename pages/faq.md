@@ -34,7 +34,7 @@ ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsin
 Ondanks deze kleine aanpassingen is wel geprobeerd ORI-A **interoperabel** te houden met ORI. Formeler gezegd: je kan ORI zonder informatieverlies converteren naar een combinatie van ORI-A en MDTO (zie ook [round-trip format conversion](https://en.wikipedia.org/wiki/Round-trip_format_conversion)). De andere kant op (ORI-A + MDTO → ORI) kan ook, maar dan treed mogelijk informatieverlies op, aangezien ORI-A + MDTO een _superset_ is van ORI.
 
 ::: waarschuwing
-Meer achtergrondinformatie over ORI kun je vinden op [de website van de ontwikkelaars van openbesluitvorming.nl](https://ontola.io/nl/cases/openbesluitvorming/) en [de website van ](https://openstate.eu/nl/projecten-tools-data/besluiten/open-raadsinformatie/).
+Meer achtergrondinformatie over ORI kun je vinden op [de website van de ontwikkelaars van openbesluitvorming.nl](https://ontola.io/nl/cases/openbesluitvorming/) en [de website van openstate.eu](https://openstate.eu/nl/projecten-tools-data/besluiten/open-raadsinformatie/).
 :::
 
 <!-- todo: benoem conversie scripts wanneer die af zijn -->
