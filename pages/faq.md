@@ -26,7 +26,7 @@ Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bl
 * **Aansluiten bij bestaande (archief)standaarden.** [Het Nationaal Archief raadt aan](https://www.nationaalarchief.nl/archiveren/mdto#collapse-102790) algemene gegevens over informatieobjecten --- zoals aanmaakdatum en auteur --- vast te leggen in MDTO, een metadatastandaard gericht op het duurzaam toegangelijk maken van overheidsdocumenten. In tegenstelling tot ORI is ORI-A zo ontwikkelt dat deze taak volledig bij MDTO blijft.  ORI-A richt zich daarentegen uitsluitend op **domeinspecifieke gegevens** --- oftewel, raadsinformatie.
 
 ::: tip
-Je kunt meer lezen over het combineren van ORI-A en MDTO in [Hoe werkt ORI-A?](tutorial#mdto)
+**Tip:** Je kunt meer lezen over het combineren van ORI-A en MDTO in [Hoe werkt ORI-A?](tutorial#mdto)
 :::
 
 * **Achterwaartse compatibiliteit (_backwards compatibility_).**  Bestaande raadsinformatie voldoet niet altijd aan alle eisen van ORI. Uit analyses van RIS systemen kwam bijvoorbeeld naar voren dat ORI soms gegevens vereist die ofwel niet beschikbaar zijn, ofwel niet beschikbaar zijn in de gevraagde vorm. Dit komt vooral voor bij **oudere vergaderingen**. Omdat ook deze vergaderingen gearchiveerd moeten worden, is ORI-A flexiber gemaakt op punten waar RIS systemen momenteel tekort schieten.
@@ -38,7 +38,7 @@ Je kunt meer lezen over het combineren van ORI-A en MDTO in [Hoe werkt ORI-A?](t
 
 ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgesplitst in hiërarchisch gestructureerde niveaus, ook wel bekend als 'aggregatieniveaus'. 
 
-De hoofdreden voor deze relatief 'platte' structuur is dat entiteiten in het  oorspronkelijke ORI informatiemodel bijna allemaal **meervoudige relaties** hebben. Om een voorbeeld te noemen: een raadsvoorstel is weliswaar een onderdeel van een vergadering, maar kan net zo goed onderdeel zijn van iemand's portefeuille, een stemming teweeg brengen, of ondertekend worden door een groep personen. Hierdoor lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
+De hoofdreden voor deze relatief platte structuur is dat entiteiten in het  oorspronkelijke ORI informatiemodel bijna allemaal **meervoudige relaties** hebben. Om een voorbeeld te noemen: een raadsvoorstel is weliswaar een onderdeel van een vergadering, maar kan net zo goed onderdeel zijn van iemand's portefeuille, een stemming teweeg brengen, of ondertekend worden door een groep personen. Hierdoor lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
 
 # Hoe verhoudt ORI-A zich tot ORI?
 
