@@ -465,15 +465,12 @@ pre > code {
 code {color: var(--pico-color)}
 code span.kw { color: var(--pico-ins-color); font-weight: 600; } /* Keyword */
 code span.co { color: var(--pico-muted-color)}/* comments */
-code span.st { color: #2060DF} /* strings (Pico Blue 550) */
+code span.st { color: var(--pico-primary-background)} /* strings */
 code span.ot { color: var(--pico-ins-color)} /* attribs */
-code span.fu { color: #AA40BF; font-weight: 400;} /* XML declaration (Pico purple 550) */
+code span.fu { color: var(--pico-ins-color); font-weight: 600;} /* XML declaration (Pico purple 550) */
 
 
-[data-theme="dark"] code span.fu {
-    color: #D47DE4; font-weight: 400; /* XML declaration (Pico purple 350) */
-}
-
+/* pico-primary-background lacks sufficient contrast for some reason */
 [data-theme="dark"] code span.st {
     color: #748BF8; /* strings (Pico Blue 400) */
 }
