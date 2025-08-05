@@ -61,6 +61,19 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het volgnummer en bijbehorende stukken. De volgorde van agendapunt-elementen geeft aan in welke volgorde ze behandeld zijn.
 
 {{ agendapunt_table }}
+
+
+### XML voorbeeld
+
+``` xml
+<agendapunt>
+    <ID>a120-003</ID>
+    <volgnummer>3b</volgnummer>
+    <besloten>false</besloten>
+    <titel>Begroting Bankjes in Westerpark</titel>
+</agendapunt>
+```
+
 ## Stemming
 
 :::tip
@@ -96,17 +109,6 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
         </verwijzingInformatieobject>
     </heeftBetrekkingOpBesluitvormingsstuk>
 </stemming>
-```
-
-### XML voorbeeld
-
-``` xml
-<agendapunt>
-    <ID>a120-003</ID>
-    <volgnummer>3b</volgnummer>
-    <besloten>false</besloten>
-    <titel>Begroting Bankjes in Westerpark</titel>
-</agendapunt>
 ```
 
 ## Besluit
