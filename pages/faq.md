@@ -13,7 +13,11 @@ Een vergadering die is vastgelegd middels een audio-opname wordt ook wel een **a
 
 # Moeten videotulen worden bewaard?
 
-Strikt genomen zijn overheden niet altijd verplicht om videotulen te bewaren. Als een vergadering ook schriftelijk is vastgelegd, dan hoort de meest informatierijke bron te worden bewaard. Vanuit cultuurhistorisch oogpunt is het wel belangrijk dat videotulen permanent bewaard worden. Videotulen zijn namelijk een belangrijk onderdeel van de digitale democratie.
+Strikt genomen zijn overheden niet altijd verplicht om videotulen te bewaren. Als een vergadering ook schriftelijk is vastgelegd, dan hoort de meest informatierijke bron te worden bewaard. Vanuit cultuurhistorisch oogpunt is het wel belangrijk dat videotulen permanent bewaard worden. Videotulen zijn namelijk een belangrijk onderdeel van de digitale democratie. 
+
+----
+
+Bron: [Selectielijst gemeenten en intergemeentelijke organen 2020](https://www.nationaalarchief.nl/archiveren/kennisbank/selectielijst-gemeenten-en-intergemeentelijke-organen-2020)
 
 # Waarom een speciale archiefstandaard?
 
@@ -64,3 +68,5 @@ ORI-A is toepasbaar in verschillende scenario’s:
 - **Bij het ontwerpen van koppelingen tussen bestuurlijke informatiesystemen en e-depots:** met behulp van het ORI-A XML-schema kunnen metagegevens gestructureerd en geautomatiseerd uitgewisseld worden. 
 - **Bij het gebruiken van metagegevens:** met behulp van het XML-schema en het metagegevensschema kunnen gebruikers metadata lezen en interpreteren. 
 - **Bij het vormgeven van de presentatie van raadsinformatie in een e-depot:** ORI-A bevat in de basis alle benodigde data-elementen om de presentatie van raadsinformatie in onderlinge samenhang mogelijk te maken. 
+
+
