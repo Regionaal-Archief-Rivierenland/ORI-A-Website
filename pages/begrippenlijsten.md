@@ -33,14 +33,14 @@ Een paar begrippenlijsten die van toepassing zijn op **ORI•A** worden beheerd 
 
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](tutorial#gebruik-van-ori-a-met-mdto).
 
-| Label      | Definitie                                                                      |
-|:-----------|:-------------------------------------------------------------------------------|
-| Voorstel   | Een plan waarover een besluit genomen kan worden.                              |
-| Motie      | Een gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
-| Amendement | Een voorstel om een bestaand voorstel te wijzigen.                             |
-| Toezegging | Een toezegging van een gedeputeerde of raadslid.                               |
-| Vraag      | Een vraag aan de raad.                                                         |
-| Antwoord   | Een antwoord op een vraag aan de raad.                                         |
+| Label      | Definitie                                                                  |
+|:-----------|:---------------------------------------------------------------------------|
+| Voorstel   | Plan waarover een besluit genomen kan worden.                              |
+| Motie      | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
+| Amendement | Voorstel om een bestaand voorstel te wijzigen.                             |
+| Toezegging | Toezegging van een gedeputeerde of raadslid.                               |
+| Vraag      | Vraag aan de raad.                                                         |
+| Antwoord   | Antwoord op een vraag aan de raad.                                         |
 
 
 # Deelnemerrollen
