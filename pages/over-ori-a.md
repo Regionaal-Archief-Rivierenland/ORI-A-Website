@@ -17,7 +17,7 @@ ORI-A is gebaseerd op het informatiemodel onder [de VNG's Open Raadsinformatie (
 
 Vanuit enkele archiefdiensten is de behoefte ontstaan om te komen tot een standaard voor het duurzaam bewaren en beschikbaarstellen van raadsinformatie in een digitale archiefbewaarplaats (het e-depot). Deze archiefdiensten hebben zich verenigd in de [Werkgroep Archivering Raadsinformatie](colofon).
 
-De werkgroep heeft twee doelen: het ontwikkelen, testen en gebruiksklaar maken van een ORI-A XSD, en vervolgens het gebruik van de standaard aanmoedigen en ondersteunen.
+De werkgroep heeft twee doelen: het ontwikkelen, testen en gebruiksklaar maken van een ORI-A XML validatie schema ([XSD](https://en.wikipedia.org/wiki/XML_Schema_(W3C))), en vervolgens het gebruik van de standaard aanmoedigen en ondersteunen.
 
 ## Status
 
