@@ -129,7 +129,7 @@ Stel bijvoorbeeld dat je de volgende agenda hebt:
 <div class="hoofdagendapunt">
     <p><strong>HAMERSTUKKEN</strong><span class="muted"> &nbsp;(12:30)</span></p>
     <details>
-        <summary role="group" class="outline contrast" role=button>10. Vaststelling Regeling Regio Rijnland (9de wijziging)</summary>
+        <summary role="group" class="outline contrast" role=button>10. Vaststelling Regeling Regio Rijnland</summary>
         <p>De raad wordt gevraagd de 9de wijziging op de regeling Regio Rijnland vast te stellen.</p>
     </details>
 </div>
