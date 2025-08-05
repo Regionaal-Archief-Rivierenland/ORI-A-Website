@@ -61,65 +61,6 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het volgnummer en bijbehorende stukken. De volgorde van agendapunt-elementen geeft aan in welke volgorde ze behandeld zijn.
 
 {{ agendapunt_table }}
-
-### XML voorbeeld
-
-``` xml
-<agendapunt>
-    <ID>a120-003</ID>
-    <volgnummer>3b</volgnummer>
-    <besloten>false</besloten>
-    <titel>Begroting Bankjes in Westerpark</titel>
-</agendapunt>
-```
-
-## Natuurlijk persoon
-
-<!-- TODO: korte uitleg over waar dit datatype allemaal voorkomt -->
-
-Een belangrijke toepassing van dit element is vastleggen wie lid is van welke fractie. Dit kan via het `<isLidVanFractie>` element (zie XML voorbeeld).
-
-{{ natuurlijk_persoon_table }}
-
-### XML voorbeeld
-
-``` xml
-</todo>
-```
-
-## Aanwezige deelnemer
-
-{{ aanwezige_deelnemer_table }}
-
-### XML voorbeeld
-
-``` xml
-<aanwezigeDeelnemer>
-    <rolnaam>Voorzitter</rolnaam>
-    <isNatuurlijkPersoon>
-        <ID>0028-08a0</ID>
-        <functie>Burgermeester</functie>
-        <naam>
-            <achternaam>Veltman</achternaam>
-            <volledigeNaam>Julia</volledigeNaam>
-        </naam>
-        ...
-    </isNatuurlijkPersoon>
-    <neemtDeelAanStemming>
-        <keuzeStemming>Tegen</keuzeStemming>
-        <gegevenOpStemming>
-            <verwijzingID>21.0081</verwijzingID>
-        </gegevenOpStemming>
-    </neemtDeelAanStemming>
-    <spreektTijdensSpreekfragment>
-        <videoTijdsaanduidingAanvang>00:02:20</videoTijdsaanduidingAanvang>
-        <spreektTijdensAgendapunt>
-            <verwijzingID>b6bd-0aef</verwijzingID>
-        </spreektTijdensAgendapunt>
-    </spreektTijdensSpreekfragment>
-    ...
-```
-
 ## Stemming
 
 :::tip
@@ -157,8 +98,18 @@ Een belangrijke toepassing van dit element is vastleggen wie lid is van welke fr
 </stemming>
 ```
 
-## Besluit
+### XML voorbeeld
 
+``` xml
+<agendapunt>
+    <ID>a120-003</ID>
+    <volgnummer>3b</volgnummer>
+    <besloten>false</besloten>
+    <titel>Begroting Bankjes in Westerpark</titel>
+</agendapunt>
+```
+
+## Besluit
 {{ besluit_table }}
 
 ## Fractie
@@ -205,6 +156,60 @@ Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrip
 ``` xml
 </todo>
 ```
+
+
+## Natuurlijk persoon
+
+Dit datatype komt voor onder `<aanwezigeDeelnemer>` en  het top-level element `<persoonBuitenVergadering>`
+
+Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke fractie. Dit kan via het `<isLidVanFractie>` element (zie XML voorbeeld).
+
+{{ natuurlijk_persoon_table }}
+
+### XML voorbeeld
+
+``` xml
+</todo>
+```
+
+## Aanwezige deelnemer
+
+{{ aanwezige_deelnemer_table }}
+
+### XML voorbeeld
+
+``` xml
+<aanwezigeDeelnemer>
+    <rolnaam>Voorzitter</rolnaam>
+    <isNatuurlijkPersoon>
+        <ID>0028-08a0</ID>
+        <functie>Burgermeester</functie>
+        <naam>
+            <achternaam>Veltman</achternaam>
+            <volledigeNaam>Julia</volledigeNaam>
+        </naam>
+        ...
+    </isNatuurlijkPersoon>
+    <neemtDeelAanStemming>
+        <keuzeStemming>Tegen</keuzeStemming>
+        <gegevenOpStemming>
+            <verwijzingID>21.0081</verwijzingID>
+        </gegevenOpStemming>
+    </neemtDeelAanStemming>
+    <spreektTijdensSpreekfragment>
+        <videoTijdsaanduidingAanvang>00:02:20</videoTijdsaanduidingAanvang>
+        <spreektTijdensAgendapunt>
+            <verwijzingID>b6bd-0aef</verwijzingID>
+        </spreektTijdensAgendapunt>
+    </spreektTijdensSpreekfragment>
+    ...
+```
+
+
+
+
+
+
 
 # Gegevensgroepen
 
