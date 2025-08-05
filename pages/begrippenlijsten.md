@@ -48,14 +48,14 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 Binnen ORI-A zijn de volgende deelnemerrollen gedefinieerd. Deze rollen horen bij `<aanwezigeDeelnemer>`. 
 
 
-| Label                   | Definitie                                                                            |
-|:------------------------|:-------------------------------------------------------------------------------------|
-| Voorzitter              | De voorzitter van de vergadering.                                                    |
-| Griffier                | Secretaris van de raad.                                                              |
-| Inspreker               | Een belanghebbende/betrokkene die inspreekt tijdens een agendapunt.                  |
-| Portefeuille<wbr>houder | De ambtenaar die de verantwoordelijk draagt over het besproken onderwerp/agendapunt. |
-| Raadslid                | Gekozen volksvertegenwoordiger.                                                      |
-| Griffier                | Hoofd van het griffie.                                                               |
+| Label              | Definitie                                                                             |
+|:-------------------|:--------------------------------------------------------------------------------------|
+| Voorzitter         | De voorzitter van de vergadering.                                                     |
+| Griffier           | Secretaris van de raad.                                                               |
+| Inspreker          | Een belanghebbende/betrokkene die inspreekt tijdens een agendapunt.                   |
+| Portefeuillehouder | De ambtenaar die de verantwoordelijk draagt over het besproken onderwerp/agendapunt.  |
+| Raadslid           | Gekozen volksvertegenwoordiger.                                                       |
+| Griffier           | Hoofd van het griffie.                                                                |
 
 
 # Betrokkene-vergaderstuk relaties
@@ -89,11 +89,11 @@ Een lijst met verschillende soorten relaties tussen personen en vergaderstukken.
 </informatieobject>
 ```
 -->
-| Label                   | Definitie                                                    |
-|:------------------------|:-------------------------------------------------------------|
-| Indiener                | Indiener van een vergaderstuk (herkomst: VNG's ORI).         |
-| Ondertekenaar           | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI).    |
-| Portefeuille<wbr>houder | De portefeuillehouder van een voorstel (herkomst: VNG's ORI) |
+| Label              | Definitie                                                    |
+|:-------------------|:-------------------------------------------------------------|
+| Indiener           | Indiener van een vergaderstuk (herkomst: VNG's ORI).         |
+| Ondertekenaar      | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI).    |
+| Portefeuillehouder | De portefeuillehouder van een voorstel (herkomst: VNG's ORI) |
 
 # Mediabron types
 
