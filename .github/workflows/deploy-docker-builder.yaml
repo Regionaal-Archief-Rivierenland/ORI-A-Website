@@ -29,5 +29,5 @@ jobs:
       - name: Build and Push Docker image
         run: |
           IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/oria-builder:latest
-          docker build -t $IMAGE_NAME -f builder/Dockerfile .
+          docker build -t $IMAGE_NAME -f buildtools/Dockerfile .
           docker push $IMAGE_NAME
