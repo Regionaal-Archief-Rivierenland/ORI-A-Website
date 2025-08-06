@@ -5,8 +5,8 @@ FROM greyltc/archlinux-aur:paru
 RUN useradd -m -G wheel builder && \
     echo 'builder ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 RUN mkdir -p /ori-a-website
-run chgrp wheel /ori-a-website
-run chmod -R g+rxw /ori-a-website
+RUN chgrp wheel /ori-a-website
+RUN chmod -R g+rxw /ori-a-website
 
 USER builder
 
