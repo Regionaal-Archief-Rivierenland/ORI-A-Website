@@ -389,7 +389,7 @@ main {
     box-shadow: none;
 }
 
-/* may be relevant wheen js is disabled??? */
+/* may be relevant when js is disabled??? */
 #moon, #sun {
     display: none; /* Initially hide both */
 }
