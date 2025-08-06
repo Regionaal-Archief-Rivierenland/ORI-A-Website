@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'buildtools/Dockerfile'
-      - '.github/workflows/build-push-docker.yaml'
+      - '.github/workflows/deploy-docker-builder.yaml'
     branches:
       - main
 
