@@ -5,7 +5,7 @@ USER ab
 WORKDIR /ori-a-website
 
 # Install build dependencies
-RUN paru -Syu --skipreview --removemake --cleanafter --noconfirm \
+RUN paru -Syu --skipreview --asexplicit --removemake --cleanafter --noconfirm \
     scour ripgrep fd make git \
     minify-html-bin uglify-js lightningcss-cli-bin pandoc-bin \
     python-fonttools python-jinja python-beautifulsoup4 python-frontmatter python-setuptools python-brotli \
@@ -14,6 +14,7 @@ RUN paru -Syu --skipreview --removemake --cleanafter --noconfirm \
 # cleanup unused pkgs and cache
 RUN paru --noconfirm -c -Rss python-setuptools 
 RUN paru --noconfirm -Scc
-RUN yes | sudo pacman -Scc 
+RUN sudo pacman --noconfirm -Scc
+RUN sudo pacman --noconfirm -Rs base-devel
 
 USER root
