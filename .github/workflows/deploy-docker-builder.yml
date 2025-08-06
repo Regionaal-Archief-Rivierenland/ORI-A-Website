@@ -3,7 +3,7 @@ name: Build & push Docker image to github's container hub
 on:
   push:
     paths:
-      - 'builder/Dockerfile'
+      - 'buildtools/Dockerfile'
       - '.github/workflows/build-push-docker.yml'
     branches:
       - main
