@@ -13,12 +13,17 @@ jobs:
     permissions:
       contents: write  # Needed to push to gh-pages
 
+    defaults:
+      run:
+        working-directory: /ori-a-website 
+      
     steps:
       - name: Check out source code
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 1
+          path: .
 
       - name: Build site
         run: |
