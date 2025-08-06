@@ -139,7 +139,6 @@ h3 {
 }
 
 
-
 /*
 Tables
 */
@@ -205,12 +204,6 @@ table.stickytable th {
 
 
 /* more responsive table */
-
-/* this balances headers and subheaders nicely, ensuring the subheaders are never too long */
-/* TODO: investigate performance */
-/* .stickytable td:nth-child(1) { */
-/*     text-wrap: balance; */
-/* } */
 
 .stickytable code {
     /* disable wrapping */
@@ -298,7 +291,6 @@ aside {
     padding-top: 0.2rem; /* increase vertical space between list elem and first subelemnt */
     padding-left: 0.75rem;  /* indent nested list */
 }
-
 
 a.mainpage {
     font-weight: bold;
