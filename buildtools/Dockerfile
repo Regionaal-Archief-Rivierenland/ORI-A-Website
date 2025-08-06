@@ -20,6 +20,5 @@ RUN paru -Syu --skipreview --removemake --cleanafter --noconfirm \
 
 # cleanup unused pkgs and cache
 RUN paru --noconfirm -c -Rss python-setuptools
-RUN paru --noconfirm -c -R gcc gcc-libs
 RUN paru --noconfirm -Scc
 RUN yes | sudo pacman -Scc 
