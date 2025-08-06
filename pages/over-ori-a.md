@@ -25,7 +25,7 @@ De ORI-A XSD is momenteel in bèta, en [kan hier gedownload worden](https://gith
 
 # Waarom is ORI-A ontwikkeld?
 
-ORI-A heeft een vergelijkbaar doel als het ORI-project geleid door de VNG: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatie slag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiekelijk gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
+ORI-A heeft een vergelijkbaar doel als het ORI-project geleid door de VNG: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiekelijk gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
 
 Toch kon VNG's ORI niet aan alle behoeften van archieven voldoen. Hierom is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
 
