@@ -1,4 +1,4 @@
-name: Build & push Docker image to github's container hub
+name: Build & push Docker for building the ori-a website
 
 on:
   push:
