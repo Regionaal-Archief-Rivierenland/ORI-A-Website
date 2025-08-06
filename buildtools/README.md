@@ -9,3 +9,5 @@ To run (make sure you are at the root of the website!):
 ``` shell
 sudo docker run --rm -it -v $(pwd):/ori-a-website oria-builder /bin/bash
 ```
+
+(automated CI builds happen on every change to `Dockerfile`)
