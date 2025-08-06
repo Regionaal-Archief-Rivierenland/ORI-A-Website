@@ -140,4 +140,30 @@
             &lt;<span class=kw>verwijzingNaam</span>>Motie van lid Smit&lt;/<span class=kw>verwijzingNaam</span>>
         &lt;/<span class=kw>verwijzingInformatieobject</span>>
     &lt;/<span class=kw>heeftAlsBijlage</span>>
-&lt;/<span class=kw>agendapunt</span>></code></pre><p>Het element <code class="sourceCode xml">&lt;<span class=kw>verwijzingNaam</span>></code> hierboven is <a href=#verwijzen-met-een-naam>slechts een hulpsteuntje</a> voor menselijke lezers — om een verwijzing tot stand te brengen volstaat <code class="sourceCode xml">&lt;<span class=kw>verwijzingID</span>></code>.<h2 id=metadateren-van-een-videotuul-audiotuul-of-transcriptie>Metadateren van een videotuul, audiotuul of transcriptie<a class=secondary href=#metadateren-van-een-videotuul-audiotuul-of-transcriptie><span aria-hidden=true>#</span></a></h2><p>Metadata over de <strong>mediabestanden</strong> waarin een vergadering is opgenomen — een videotuul, audiotuul of transcriptie — komt in MDTO (zie ook de voorbeeldbestanden).</article></main><footer><hr><small><a class=secondary href=colofon>Colofon</a> • Website gemaakt met <a class="external secondary" rel="noopener noreferrer" href=https://picocss.com target=_blank>Pico</a> • <a class="secondary external" rel="noopener noreferrer" href=https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website target=_blank>Broncode website</a> (GPLv3)</small></footer></div></body><script defer src=hamburger-menu-toggle.js></script><script defer src=theme-toggle.js></script>
+&lt;/<span class=kw>agendapunt</span>></code></pre><p>Het element <code class="sourceCode xml">&lt;<span class=kw>verwijzingNaam</span>></code> hierboven is <a href=#verwijzen-met-een-naam>slechts een hulpsteuntje</a> voor menselijke lezers — om een verwijzing tot stand te brengen volstaat <code class="sourceCode xml">&lt;<span class=kw>verwijzingID</span>></code>.<h2 id=metadateren-van-een-videotuul-audiotuul-of-transcriptie>Metadateren van een videotuul, audiotuul of transcriptie<a class=secondary href=#metadateren-van-een-videotuul-audiotuul-of-transcriptie><span aria-hidden=true>#</span></a></h2><p>Niet alleen metagegevens over vergaderstukken, maar ook metagegevens over de <strong>mediabestanden</strong> waarin een vergadering is opgenomen — een videotuul, audiotuul of transcriptie — komen in MDTO.<p>De verwijzing naar deze mediabron komt in ORI-A onder <code class="sourceCode xml">&lt;<span class=kw>vergadering</span>></code>:<pre class="sourceCode xml"><code class="sourceCode xml">&lt;<span class=kw>vergadering</span>>
+    …
+    &lt;<span class=kw>isVastgelegdMiddels</span>>
+        &lt;<span class=kw>informatieobjectType</span>>
+            &lt;<span class=kw>begripLabel</span>>Video&lt;/<span class=kw>begripLabel</span>>
+            &lt;<span class=kw>verwijzingBegrippenlijst</span>>
+                &lt;<span class=kw>verwijzingID</span>>https://ori-a.nl/begrippenlijsten#mediabron-types&lt;/<span class=kw>verwijzingID</span>>
+            &lt;/<span class=kw>verwijzingBegrippenlijst</span>>
+        &lt;/<span class=kw>informatieobjectType</span>>
+        &lt;<span class=kw>verwijzingInformatieobject</span>>
+            &lt;<span class=kw>verwijzingID</span>>8088a20808a0…&lt;/<span class=kw>verwijzingID</span>>
+            &lt;<span class=kw>verwijzingNaam</span>>Videotuul Gemeenteraad 30 november 2023&lt;/<span class=kw>verwijzingNaam</span>>
+        &lt;/<span class=kw>verwijzingInformatieobject</span>>
+    &lt;/<span class=kw>isVastgelegdMiddels</span>>
+&lt;/<span class=kw>vergadering</span>></code></pre><div class=tip><p><strong>Tip:</strong> <code class="sourceCode xml">&lt;<span class=kw>isVastgelegdMiddels</span>></code> is herhaalbaar. Door dit element te herhalen kun je een koppeling leggen met meerdere mediabronnen, bijvoorbeeld met een videotuul én een transcriptie.</div><p>In je MDTO kun je eventueel de <a href=begrippenlijsten#mediabron-types>begrippenlijst ‘Mediabron types’</a> onder <code>mdto:classificatie</code> invullen, om ook daar het soort mediabron nader te specificeren.<h3 id=ondertitelbestanden>Ondertitelbestanden<a class=secondary href=#ondertitelbestanden><span aria-hidden=true>#</span></a></h3><p>Als je een video met een los ondertitelbestand hebt, is het meestal het makkelijkst om een <strong>complex informatieobject</strong> aan te maken — oftewel, een informatieobject dat is samengesteld uit meerdere bestanden:<pre class="sourceCode bash"><code class="sourceCode bash"><span class=ex>Gemeenteraad.mp4</span>
+<span class=ex>Gemeenteraad.mdto.xml</span>
+<span class=ex>Gemeenteraad.mp4.bestand.mdto.xml</span>
+<span class=ex>Gemeenteraad.vtt.bestand.mdto.xml</span>  <span class=co># dit is het ondertitel bestand</span></code></pre><p>In MDTO druk je dit zo uit:<pre class="sourceCode xml"><code class="sourceCode xml">&lt;<span class=kw>MDTO</span>>
+    &lt;<span class=kw>informatieobject</span>>
+        …
+        &lt;<span class=kw>heeftRepresenatie</span>>
+            &lt;<span class=kw>verwijzingNaam</span>>Gemeenteraad.mp4.bestand.mdto.xml&lt;/<span class=kw>verwijzingNaam</span>>
+        &lt;/<span class=kw>heeftRepresenatie</span>>
+        &lt;<span class=kw>heeftRepresenatie</span>>
+            &lt;<span class=kw>verwijzingNaam</span>>Gemeenteraad.vtt.bestand.mdto.xml&lt;/<span class=kw>verwijzingNaam</span>>
+        &lt;/<span class=kw>heeftRepresenatie</span>>
+        …</code></pre></article></main><footer><hr><small><a class=secondary href=colofon>Colofon</a> • Website gemaakt met <a class="external secondary" rel="noopener noreferrer" href=https://picocss.com target=_blank>Pico</a> • <a class="secondary external" rel="noopener noreferrer" href=https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website target=_blank>Broncode website</a> (GPLv3)</small></footer></div></body><script defer src=hamburger-menu-toggle.js></script><script defer src=theme-toggle.js></script>
