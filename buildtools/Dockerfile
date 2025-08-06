@@ -2,6 +2,8 @@ FROM greyltc/archlinux-aur:paru
 
 USER ab
 
+WORKDIR /ori-a-website
+
 # Install build dependencies
 RUN paru -Syu --skipreview --removemake --cleanafter --noconfirm \
     scour ripgrep fd make git \
