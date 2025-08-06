@@ -44,7 +44,6 @@ jobs:
           make generate-tables
           make update-submodule
           make -j5
-          make -j5
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
