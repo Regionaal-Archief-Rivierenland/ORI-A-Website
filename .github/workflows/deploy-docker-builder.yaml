@@ -1,4 +1,4 @@
-name: Build & push Docker for building the ori-a website
+name: Build & push Docker image for building the website
 
 on:
   push:
