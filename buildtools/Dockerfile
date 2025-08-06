@@ -1,7 +1,6 @@
 FROM greyltc/archlinux-aur:paru
 
-# needed because paru MAY NOT be run as root
-
+# create new user because paru may not be run as root
 RUN useradd -m -G wheel builder && \
     echo 'builder ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 RUN mkdir -p /ori-a-website
