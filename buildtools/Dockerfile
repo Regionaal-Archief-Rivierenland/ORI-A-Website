@@ -1,9 +1,5 @@
 FROM greyltc/archlinux-aur:paru
 
-# # create new user because paru may not be run as root
-# RUN useradd -m -G wheel builder && \
-#     echo 'builder ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
-
 USER ab
 
 # Install build dependencies
