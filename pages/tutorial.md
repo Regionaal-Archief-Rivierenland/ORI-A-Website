@@ -85,7 +85,7 @@ Meestal wil je ook nog weten _wie_ de vergadering heeft georganiseerd. In ORI-A 
 
 Wat je binnen `<bestuurslaag>` ziet is een begrip uit een zogeheten **begrippenlijst**. Een begrippenlijst is een verzameling gerelateerde begrippen, waarin ieder begrip meestal een **korte uitleg** en eigen **identificatiecode** krijgt. In ORI-A wordt soms gevraagd een begrip uit zo'n elders gedefinieerde lijst te kiezen.  Hierboven is het gekozen begrip `Gemeente Leiden`, ook wel bekend onder de code `gm0546`.
 
-De oorsprong van dit begrip is een begrippenlijst beheerd door het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Ten slotte kun je ook besluiten om zelf een begrippenlijst te onderhouden (zie hiervoor [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
+De oorsprong van dit begrip is een begrippenlijst beheerd door het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Tenslotte kun je ook besluiten om zelf een begrippenlijst te onderhouden (zie hiervoor [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
 
 
 :::waarschuwing
@@ -170,7 +170,7 @@ Dan kun je dat zo in XML uitdrukken:
 
 <!-- raden we dit aan, of schrijven we dit voor? -->
 :::waarschuwing
-Veel RIS systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen"  als agendapunten, maar geven ze geen volgnummers. Hierom is in ORI-A de volgorde van de `<(sub)agendapunt>`-elementen leidend voor de volgorde van de agenda.
+Veel RIS-systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen"  als agendapunten, maar geven ze geen volgnummers. Hierom is in ORI-A de volgorde van de `<(sub)agendapunt>`-elementen leidend voor de volgorde van de agenda.
 :::
 
 
@@ -203,7 +203,7 @@ Om een relatie tot stand te brengen, heeft de entiteit waarnaar verwezen wordt e
 
 Dit zegt:
 
-> De stemming met ID `RV 23.0081` had betrekking op een elders gedefinieerd agendapunt met ID `2028a00aa`. Tijdens dit agendapunt werdt er gestemd over een besluitvormingsstuk met ID `0222a202 `. 
+> De stemming met ID `RV 23.0081` had betrekking op een elders gedefinieerd agendapunt met ID `2028a00aa`. Tijdens dit agendapunt werd er gestemd over een besluitvormingsstuk met ID `0222a202`. 
 
 Voor een uitgebreide uitleg over het verwijzen **naar externe informatieobjecten** zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
