@@ -19,5 +19,5 @@ RUN paru -Syu --skipreview --removemake --cleanafter --noconfirm \
     texlive-basic texlive-latexextra texlive-plaingeneric texlive-latexrecommended texlive-fontsextra texlive-langeuropean 
 
 # cleanup unused pkgs and cache
-RUN paru --noconfirm -c -Rs python-setuptools base-devel
+RUN paru --noconfirm -c -Rs python-setuptools gcc
 RUN paru --noconfirm -Scc
