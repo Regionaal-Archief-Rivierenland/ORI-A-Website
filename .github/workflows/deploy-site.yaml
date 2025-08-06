@@ -10,13 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/regionaal-archief-rivierenland/oria-builder:latest
-      options: --user root # github writes tmp files whereever it wants, and that needs root access
-
     permissions:
       contents: write  # Needed to push to gh-pages
-    defaults:
-      run:
-        working-directory: /ori-a-website
 
     steps:
       - name: Check out source code
@@ -24,12 +19,11 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 1
-          path: .
 
-      - name: Build site as `builder` user  # set user explictly since gh rly wants root
+      - name: Build site
         run: |
-          sudo -u builder make update-submodule
-          sudo -u builder make -j5
+          make update-submodule
+          make -j5
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
