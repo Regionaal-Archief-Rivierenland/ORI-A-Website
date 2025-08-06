@@ -396,6 +396,58 @@ Het element `<verwijzingNaam>` hierboven is [slechts een hulpsteuntje](#verwijze
 
 ## Metadateren van een videotuul, audiotuul of transcriptie
 
-Metadata over de **mediabestanden** waarin een vergadering is opgenomen --- een videotuul, audiotuul of transcriptie --- komt in MDTO (zie ook de voorbeeldbestanden<!-- todo: add link-->). 
+Niet alleen metagegevens over vergaderstukken, maar ook metagegevens over de **mediabestanden** waarin een vergadering is opgenomen --- een videotuul, audiotuul of transcriptie --- komen in MDTO. 
 
-<!-- stukje over subtitles -->
+De verwijzing naar deze mediabron komt in ORI-A onder `<vergadering>`:
+
+``` xml
+<vergadering>
+    …
+    <isVastgelegdMiddels>
+        <informatieobjectType>
+            <begripLabel>Video</begripLabel>
+            <verwijzingBegrippenlijst>
+                <verwijzingID>https://ori-a.nl/begrippenlijsten#mediabron-types</verwijzingID>
+            </verwijzingBegrippenlijst>
+        </informatieobjectType>
+        <verwijzingInformatieobject>
+            <verwijzingID>8088a20808a0…</verwijzingID>
+            <verwijzingNaam>Videotuul Gemeenteraad 30 november 2023</verwijzingNaam>
+        </verwijzingInformatieobject>
+    </isVastgelegdMiddels>
+</vergadering>
+```
+
+::: tip
+**Tip:** `<isVastgelegdMiddels>` is herhaalbaar. Door dit element te herhalen kun je een koppeling leggen met meerdere mediabronnen, bijvoorbeeld met een videotuul én een transcriptie.
+:::
+
+In je MDTO kun je eventueel de  [begrippenlijst 'Mediabron types']( begrippenlijsten#mediabron-types)  onder `mdto:classificatie` invullen, om ook daar het soort mediabron nader te specificeren.
+
+
+### Ondertitelbestanden
+
+Als je een video met een los ondertitelbestand hebt, is het meestal het makkelijkst om een **complex informatieobject** aan te maken --- oftewel, een informatieobject dat is samengesteld uit meerdere bestanden:
+
+
+```bash
+Gemeenteraad.mp4
+Gemeenteraad.mdto.xml
+Gemeenteraad.mp4.bestand.mdto.xml
+Gemeenteraad.vtt.bestand.mdto.xml  # dit is het ondertitel bestand
+```
+
+In MDTO druk je dit zo uit:
+
+``` xml
+<MDTO>
+    <informatieobject>
+        …
+        <heeftRepresenatie>
+            <verwijzingNaam>Gemeenteraad.mp4.bestand.mdto.xml</verwijzingNaam>
+        </heeftRepresenatie>
+        <heeftRepresenatie>
+            <verwijzingNaam>Gemeenteraad.vtt.bestand.mdto.xml</verwijzingNaam>
+        </heeftRepresenatie>
+        …
+```
