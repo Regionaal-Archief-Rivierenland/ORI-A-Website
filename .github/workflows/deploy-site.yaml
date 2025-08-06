@@ -23,6 +23,7 @@ jobs:
       - name: Build site
         run: |
           # make update-submodule
+          make generate-tables
           make -j5
 
       - name: Deploy to GitHub Pages
