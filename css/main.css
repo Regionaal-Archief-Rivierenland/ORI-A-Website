@@ -135,9 +135,12 @@ h3 {
 
 .waarschuwing p, .tip p {
     opacity: 0.88;
-    margin-bottom: 0;
 }
 
+.waarschuwing :last-child,
+.tip :last-child {
+    margin-bottom: 0;
+}
 
 /*
 Tables
