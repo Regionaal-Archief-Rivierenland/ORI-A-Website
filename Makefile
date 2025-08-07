@@ -7,6 +7,9 @@ CSS_DST_FILES := $(addprefix $(CSS_DST),$(CSS_FILES))
 SVG_SRC := $(wildcard ims/*.svg)
 SVG_DST := $(patsubst ims/%,site/%,$(SVG_SRC))
 
+PNG_SRC := $(wildcard ims/*.png)
+PNG_DST := $(patsubst ims/%,site/%,$(PNG_SRC))
+
 JS_SRC := $(wildcard js/*.js)
 JS_DST := $(patsubst js/%.js, site/%.js, $(JS_SRC))
 
