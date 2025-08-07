@@ -47,6 +47,15 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 
 Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
 
+::: waarschuwing
+De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informatiemodel te garanderen. Het gebruik van deze rol wordt afgeraden. Als de bestaande rollen niet toereikend zijn, heb je drie opties:
+
+1. Een uitbreiding op deze begrippenlijst [aanvragen](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new)
+2. Een nieuwe begrippenlijst starten
+3. Deze begrippenlijst uitbreiden
+
+:::
+
 
 | Label                 | Definitie                                                              |
 |:----------------------|:-----------------------------------------------------------------------|
@@ -56,11 +65,11 @@ Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een verg
 | Griffier              | Hoofd van het griffie.                                                 |
 | Raadslid              | Gekozen volksvertegenwoordiger binnen een gemeente.                    |
 | Statenlid             | Gekozen volksvertegenwoordiger binnen een provincie.                   |
-| Kamerlid              | Gekozen volksvertegenwoordiger binnen de 1e of 2e kamer.               |
+| Kamerlid              | Gekozen volksvertegenwoordiger binnen de eerst of tweede kamer.        |
 | Dagelijks bestuurslid | Lid van een dagelijks bestuur.                                         |
-| Algemeen bestuurslid  | Lid van het algemeen bestuur van een waterschap.                |
+| Algemeen bestuurslid  | Lid van het algemeen bestuur van een waterschap.                       |
 | Inspreker             | Niet-lid dat inspreekt tijdens de vergadering.                         |
-
+| <del>Overig</del>     | -                                                                      |
 
 # Betrokkene-vergaderstuk relaties
 
