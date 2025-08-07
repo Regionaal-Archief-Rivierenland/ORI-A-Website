@@ -110,7 +110,7 @@ $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
 	pdflatex -output-dir pdfs diagram/ORI-A-diagram.tex
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(JS_DST) $(PDF_DST)
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST)
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
