@@ -12,10 +12,10 @@ Een begrippenlijst roep je zo aan:
 ``` xml
 <vergaderstukType>
     <begripLabel>Motie</begripLabel>
-    <begrippenlijstVerwijzing>
+    <verwijzingBegrippenlijst>
         <verwijzingID>www.ori-a.nl/begrippenlijsten#vergaderstuk-types</verwijzingID>
         <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuk Types</verwijzingNaam>
-    </begrippenlijstVerwijzing>
+    </verwijzingBegrippenlijst>
 </vergaderstukType>
 ```
 
