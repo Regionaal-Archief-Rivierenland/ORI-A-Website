@@ -54,6 +54,9 @@ $(CSS_DST)%: $(CSS_SRC)%
 site/%.svg: ims/%.svg
 	scour --strip-xml-prolog --no-line-breaks --enable-comment-stripping -i $< -o $@
 
+site/%.png: ims/%.png
+	optipng -o3 $< -out $@
+
 # TODO: optimize pdfs?
 site/%.pdf: pdfs/%.pdf
 	cp $< $@
