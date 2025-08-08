@@ -3,6 +3,8 @@ title: Veelgestelde vragen
 position: 5
 ---
 
+Hieronder worden vragen over ORI-A behandeld die niet pasten onder één van de andere rubrieken.
+
 # Wat is raadsinformatie, en wat is een videotuul?
 
 **Raadsinformatie** is een verzamelnaam voor alle digitale informatie die overheden aanmaken bij politieke en/of bestuurlijke besluitvorming. Deze besluitvorming vindt plaats in vergaderingen.
@@ -37,14 +39,14 @@ Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bl
 
 * **Duurzame toegankelijkheid.** Sommige gegevens in ORI, zoals de datum waarop een vergadering gehouden is, zijn essentieel voor de toekomstige interpreteerbaarheid van raadsinformatie, maar niet verplicht. Om de [duurzame toegankelijkheid](https://www.nationaalarchief.nl/archiveren/kennisbank/duurzaam-toegankelijk) van raadsinformatie te waarborgen zijn zulke gegevens in ORI-A wél verplicht gesteld.
 
+# Waarom heeft ORI•A geen aggregatieniveaus?
 
-# Waarom heeft ORI-A geen aggregatieniveaus?
 
 ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgesplitst in hiërarchisch gestructureerde niveaus, ook wel bekend als 'aggregatieniveaus'. 
 
 De hoofdreden voor deze relatief platte structuur is dat entiteiten in het  oorspronkelijke ORI informatiemodel bijna allemaal **meervoudige relaties** hebben. Om een voorbeeld te noemen: een raadsvoorstel is weliswaar een onderdeel van een vergadering, maar kan net zo goed onderdeel zijn van iemand's portefeuille, een stemming teweeg brengen, of ondertekend worden door een groep personen. Door deze verstrengelingen lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
 
-# Hoe verhoudt ORI-A zich tot ORI?
+# Hoe verhoudt ORI•A zich tot ORI?
 
 ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). Dit informatiemodel is aangepast aan de behoeftes van archieven. ORI-A biedt bijvoorbeeld geen ruimte voor gegevens over informatieobjecten, maar verwijst op die momenten naar MDTO. Ook zijn sommige verplichtingen verschillend. Een volledige lijst van de verschillen wordt nog opgemaakt.
 
@@ -56,7 +58,7 @@ Meer achtergrondinformatie over ORI kun je vinden op [de website van de ontwikke
 
 <!-- todo: benoem conversiescripts wanneer die af zijn -->
 
-# Voor wie is ORI-A bedoeld? 
+# Voor wie is ORI•A bedoeld? 
 
 ORI-A is bedoeld voor iedereen die betrokken is bij de duurzame toegankelijkheid van raadsinformatie. In het bijzonder:
 
@@ -66,7 +68,7 @@ ORI-A is bedoeld voor iedereen die betrokken is bij de duurzame toegankelijkheid
 
 Ten slotte kan ORI-A ook dienen als naslagwerk voor iedereen die gebruik wil maken van door overheden gepubliceerde ORI-A metagegevens. Denk bijvoorbeeld aan applicatiebouwers die viewers of zoekmachines voor (openbare) raadsinformatie willen ontwikkelen.
 
-# Wanneer gebruik je ORI-A? 
+# Wanneer gebruik je ORI•A? 
 
 ORI-A is toepasbaar in verschillende scenario’s:
 

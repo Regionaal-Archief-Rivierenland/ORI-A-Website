@@ -4,14 +4,12 @@ title: Het XML-schema
 position: 3
 ---
 
+Op deze pagina worden de verschillende onderdelen van het ORI-A XML-schema uitgelegd. Deze onderdelen zijn ook terug te zien op de [ORI-A UML diagram](https://ori-a.nl/ORI-A-diagram.pdf).
+<!-- todo: misschien een soort legenda van hoe deze pagina gelezen dient te worden? -->
+
 # Entiteiten
 
-<!-- todo: misschien een soort legenda van hoe deze pagina gelezen dient te worden? -->
-Datatypes van alle hoofdentiteiten in ORI-A.
-
-## ORI-A
-
-Gegevens die onder het _root_-element `<ORI-A>` komen.
+Gegevens van alle entiteiten die onder het _root_-element `<ORI-A>` komen.
 
 {{ ori_a_table }}
 
@@ -28,6 +26,8 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 ```
 
 ## Vergadering
+
+Gegevens over de vergadering, zoals de startdatum en locatie. Een vergadering kan uit een of meer deelvergaderingen bestaan.
 
 ::: waarschuwing
 **Let op:**  Alhoewel `<isVastgelegdMiddels>` strikt genomen niet verplicht is, is een transcriptie of (audio)visueel verslag noodzakelijk voor de toekomstige interpreteerbaarheid van raadsvergaderingen. Alleen in _zeer_ zeldzame situaties, zoals een besloten vergadering zonder opnames, mag `<isVastgelegdMiddels>` ontbreken.
@@ -58,7 +58,8 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 
 ## Agendapunt
 
-Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het volgnummer en bijbehorende stukken. De volgorde van agendapunt-elementen geeft aan in welke volgorde ze behandeld zijn.
+Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het volgnummer en bijbehorende stukken. Een agendapunt kan uit een of meer subagendapunten bestaan. 
+De volgorde van agendapunt-elementen geeft aan in welke volgorde ze behandeld zijn.
 
 {{ agendapunt_table }}
 
@@ -76,8 +77,10 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 
 ## Stemming
 
+Gegevens over een stemming, zoals het agendapunt of de persoon waarover gestemd is.
+
 :::tip
-**Tip:** dit zijn gegevens over een **algemene stemming**; indivuele stemkeuzes komen onder [`aanwezigeDeelnemerGegevens`](#aanwezige-deelnemer).
+**Tip:** dit zijn gegevens over een **algemene stemming**; individuele stemkeuzes komen onder [`aanwezigeDeelnemerGegevens`](#aanwezige-deelnemer).
 :::
 
 {{ stemming_table }}
@@ -112,12 +115,16 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 ```
 
 ## Besluit
+
+Gegevens over het besluit waartoe de stemming heeft geleid, zoals of het unaniem aangenomen of verworpen is.
+
 {{ besluit_table }}
 
 ## Fractie
 
-Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrippenlijsten opgeven:
+Gegevens over een fractie, zoals de naam en het stemgedrag van de fractie.
 
+Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrippenlijsten opgeven:
 
 * [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
@@ -143,8 +150,9 @@ Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrip
 ```
 ## Dagelijks bestuur
 
-Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrippenlijsten opgeven:
+Gegevens over een dagelijks bestuur, zoals de naam van het bestuur.
 
+Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrippenlijsten opgeven:
 
 * [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
@@ -159,10 +167,11 @@ Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrip
 </todo>
 ```
 
+## Persoon buiten vergadering
 
-## Natuurlijk persoon
+Gegevens over een persoon die een relatie heeft met de vergadering, maar niet zelf aanwezig was. Dit kan bijvoorbeeld een portefeuillehouder, indiender of afwezig raadslid zijn.
 
-Dit datatype komt voor onder `<aanwezigeDeelnemer>` en  het top-level element `<persoonBuitenVergadering>`
+Het datatype van deze entiteit komt ook voor onder `<aanwezigeDeelnemer>`. Zie voor uitleg hierover de rubriek [Persoonsgegevens](https://ori-a.nl/tutorial#persoonsgegevens).
 
 Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke fractie. Dit kan via het `<isLidVanFractie>` element (zie XML voorbeeld).
 
@@ -176,6 +185,8 @@ Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke f
 
 ## Aanwezige deelnemer
 
+Gegevens over een persoon die daadwerkelijk bij de vergadering aanwezig was, zoals diens stemgedrag, inspreekmomenten, en meer algemene persoonsgegevens.
+
 {{ aanwezige_deelnemer_table }}
 
 ### XML voorbeeld
@@ -185,7 +196,7 @@ Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke f
     <rolnaam>Voorzitter</rolnaam>
     <isNatuurlijkPersoon>
         <ID>0028-08a0</ID>
-        <functie>Burgermeester</functie>
+        <functie>Burgemeester</functie>
         <naam>
             <achternaam>Veltman</achternaam>
             <volledigeNaam>Julia</volledigeNaam>
@@ -215,7 +226,7 @@ Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke f
 
 # Gegevensgroepen
 
-Gegevensgroepen (<span class="badge">G</span>) komen altijd direct onder een ander element, en krijgen nooit een ID.
+Gegevensgroepen (<span class="badge">G</span>) bevatten een aantal gegevens die bij inhoudelijk elkaar horen. Ze komen in ORI-A altijd direct onder een ander element, en krijgen nooit een ID.
 
 ## Naam
 
@@ -232,6 +243,8 @@ Gegevens over de naam van een natuurlijk persoon.
 
 ## Stemming over personen
 
+Gegevens die het het resultaat van een stemming over personen beschrijven, zoals het aantal stemmen wat een persoon haalde.
+
 {{ stemming_over_personen_table }}
 
 ### XML voorbeeld
@@ -242,6 +255,8 @@ Gegevens over de naam van een natuurlijk persoon.
 ```
 
 ## Nevenfunctie
+
+Gegevens over nevenfuncties van de persoon, zoals of het om een betaalde functie gaat.
 
 {{ nevenfunctie_table }}
 
@@ -256,6 +271,7 @@ Gegevens over de naam van een natuurlijk persoon.
 
 ## Fractielidmaatschap
 
+Gegevens over wanneer iemand lid is geworden van welke fractie.
 
 {{ fractielidmaatschap_table }}
 
@@ -267,6 +283,7 @@ Gegevens over de naam van een natuurlijk persoon.
 
 ## Dagelijks bestuur lidmaatschap
 
+Gegevens over wanneer iemand lid is geworden van welk dagelijks bestuur.
 
 {{ dagelijks_bestuur_lidmaatschap_table }}
 
@@ -278,6 +295,7 @@ Gegevens over de naam van een natuurlijk persoon.
 
 ## Spreekfragment
 
+Gegevens over een spreekfragment waarin de deelnemer sprak, zoals het moment waarop dit fragment begon en eindigde.
 {{ spreekfragment_table }}
 
 ## Stem

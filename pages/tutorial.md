@@ -3,9 +3,10 @@ title: Hoe werkt ORI-A?
 position: 2
 ---
 
-# Een vergadering beschrijven
+Op deze pagina laten we stap voor stap zien uit welke verschillende onderdelen een ORI-A XML-bestand kan bestaan en hoe ze werken in XML.
 
-Het meest simpele ORI-A XML bestand bestaat uit een **vergadering** met een lijst **agendapunten**.
+# Een vergadering beschrijven
+Het meest simpele ORI-A XML-bestand bestaat uit een **vergadering** met een lijst **agendapunten**.
 
 ``` {=html}
 <article class="card">
@@ -97,7 +98,7 @@ We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenli
 :::
 
 
-# Hoofd- en subagendapunten
+# Agendapunten en subagendapunten
 
 Het is mogelijk agendapunten op te splitsen in **subagendapunten**. Dit is vooral handig als je agendapunten wilt onderverdelen in rubrieken.
 
@@ -174,7 +175,7 @@ Veel RIS-systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen"  als 
 :::
 
 
-# Relaties tussen ORI-A entiteiten aanleggen
+# Relaties tussen ORI•A entiteiten aanleggen
 
 ORI-A kent naast vergaderingen en agendapunten een hoop andere entiteiten, zoals stemmingen, deelnemers en fracties (het [ORI-A diagram](downloads#diagram) geeft een volledig overzicht).
 
@@ -360,7 +361,7 @@ TODO
 
 <!-- misschien incl. interactieve video, waarin je ook even het verschil uitlegt tussen relatieve en absolute timestamps -->
 
-# ORI-A & MDTO combineren
+# ORI•A & MDTO combineren
 
 ORI-A laat het beschrijven van [informatieobjecten](https://www.nationaalarchief.nl/archiveren/mdto/informatieobject) (**vergaderstukken**, **mediabestanden**, etc.) over aan **MDTO**. Met andere woorden: ORI-A beschrijft domein*specifieke* gegevens --- raadsgegevens --- terwijl MDTO beperkt blijft tot meer generieke gegevens over documenten en bestanden, zoals hun aanmaakdatum en auteur.
 
@@ -368,7 +369,7 @@ ORI-A laat het beschrijven van [informatieobjecten](https://www.nationaalarchief
 De enige _inhoudelijke_ informatie over informatieobjecten die in ORI-A wordt opgenomen is `<informatieobjectType>`. Deze informatie overlapt met `<classificatie>` binnen MDTO.  Deze informatie mag alsnog in ORI-A worden opgenomen, omdat het soms wel degelijk domeinspecifieke informatie betreft.  Voor het begrijpen van een vergadering kan het bijvoorbeeld uitmaken of een document een motie, amendement, of voorstel is.
 :::
 
-## ORI-A → MDTO verwijzingen in XML vorm
+## ORI•A → MDTO verwijzingen in XML vorm
 
 Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het ID van een in MDTO opgesteld informatieobject  (zie ook [`verwijzingGegevens`](#verwijzing-gegevens)):
 

@@ -2,10 +2,12 @@
 title: Begrippenlijsten
 position: 4
 ---
+<!-- Het lijkt me een goed idee om te beginnen met een algemeen stuk over het hoe en waarom van begrippenlijsten en hun nut bij standaardisatie. Eventueel met link naar de MDTO en TOOI begrippenlijsten. -->
+
+Op deze pagina is informatie te vinden over de momenten waarop ORI•A gebruik maakt van begrippenlijsten. Een begrippenlijst is een manier om gegevens te relateren aan een extern vastgestelde (gecontroleerde) lijst van waarden. ORI•A volgt de definitie, semantiek en toepassing van begrippenlijsten zoals die ook in [MDTO](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst) worden gehanteerd.
+
 
 # Begrippenlijsten gebruiken
-
-<!-- Het lijkt me een goed idee om te beginnen met een algemeen stuk over het hoe en waarom van begrippenlijsten en hun nut bij standaardisatie. Eventueel met link naar de MDTO en TOOI begrippenlijsten. -->
 
 Een begrippenlijst roep je zo aan:
 
@@ -21,7 +23,7 @@ Een begrippenlijst roep je zo aan:
 
 Alle begrippenlijsten die onderdeel zijn van **ORI•A** worden hieronder gedocumenteerd.
 
-## TOOI Begrippenlijsten
+## TOOI begrippenlijsten
 
 Een paar begrippenlijsten die van toepassing zijn op **ORI•A** worden beheerd door **TOOI**, [een standaardisatie project opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/):
 
@@ -29,7 +31,8 @@ Een paar begrippenlijsten die van toepassing zijn op **ORI•A** worden beheerd 
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 
-# Vergaderstuk types
+
+# Vergaderstuktypes
 
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](tutorial#gebruik-van-ori-a-met-mdto).
 
@@ -74,8 +77,6 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 # Betrokkene-vergaderstuk relaties
 
 Een lijst met verschillende soorten relaties tussen personen en vergaderstukken. Relevant binnen MDTO om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
-
-
 
 <!-- ``` xml
 <informatieobject>
