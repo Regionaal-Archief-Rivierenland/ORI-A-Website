@@ -123,5 +123,5 @@ minify: buildpages
 # Clean up
 clean:
 	rm -rf site
-	rm pages/xml-schema.md
+	rm -f pages/xml-schema.md
 	fd . -ehtml pages/ --exclude index.html -X rm 
