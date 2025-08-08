@@ -83,20 +83,17 @@ Meestal wil je ook nog weten _wie_ de vergadering heeft georganiseerd. In ORI-A 
 </vergadering>
 ```
 
-
 Wat je binnen `<bestuurslaag>` ziet is een begrip uit een zogeheten **begrippenlijst**. Een begrippenlijst is een verzameling gerelateerde begrippen, waarin ieder begrip meestal een **korte uitleg** en eigen **identificatiecode** krijgt. In ORI-A wordt soms gevraagd een begrip uit zo'n elders gedefinieerde lijst te kiezen.  Hierboven is het gekozen begrip `Gemeente Leiden`, ook wel bekend onder de code `gm0546`.
 
 De oorsprong van dit begrip is een begrippenlijst beheerd door het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Tenslotte kun je ook besluiten om zelf een begrippenlijst te onderhouden (zie hiervoor [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
 
-
 :::waarschuwing
-We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenlijst>`) een URL bij `<verwijzingID>` in te vullen. Hiermee maak je je begrippen vindbaar en valideerbaar.
+We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenlijst>`) bij `<verwijzingID>` een URL in te vullen. Hiermee maak je je begrippen vindbaar en valideerbaar.
 :::
 
 :::tip
 **Tip:** `<bestuurslaag>` is bedoeld voor de overheidslaag die verantwoordelijk was voor de vergadering. Het specifieke **gremium** (bijvoorbeeld "Commissie Ruimte & Wonen") kun je kwijt in `<georganiseerdDoorGremium>`.
 :::
-
 
 # Agendapunten en subagendapunten
 
@@ -174,7 +171,6 @@ Dan kun je dat zo in XML uitdrukken:
 Veel RIS-systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen"  als agendapunten, maar geven ze geen volgnummers. Hierom is in ORI-A de volgorde van de `<(sub)agendapunt>`-elementen leidend voor de volgorde van de agenda.
 :::
 
-
 # Relaties tussen ORI•A entiteiten aanleggen
 
 ORI-A kent naast vergaderingen en agendapunten een hoop andere entiteiten, zoals stemmingen, deelnemers en fracties (het [ORI-A diagram](downloads#diagram) geeft een volledig overzicht).
@@ -184,7 +180,7 @@ Deze entiteiten hebben doorgaans veel **relaties**, zowel onderling als met exte
 ## Voorbeeld: de relaties van een stemming
 
 <!-- todo: documenteer ook wanneer je nest? -->
-Het aanmaken van een relatie tussen twee entiteiten --- bijvoorbeeld een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verweze—n wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->.
+Het leggen van een relatie tussen twee entiteiten --- bijvoorbeeld een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verweze—n wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->.
 
 Om een relatie tot stand te brengen, heeft de entiteit waarnaar verwezen wordt een uniek ID nodig. Dit ID kan vervolgens in `<verwijzingID>` worden ingevuld:
 
@@ -209,9 +205,8 @@ Dit zegt:
 Voor een uitgebreide uitleg over het verwijzen **naar externe informatieobjecten** zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
 :::waarschuwing
-De ORI-A XSD checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn. Dit vermindert de kans op ambigue verwijzingen.
+Het ORI-A XML-schema checkt of alle waardes van `<ID>`'s binnen een XML-boom uniek zijn. Dit vermindert de kans op ambigue verwijzingen.
 :::
-
 
 :::tip
 **Tip:** Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in [Waarom heeft ORI-A geen aggregatieniveaus?](faq)
@@ -262,7 +257,6 @@ In ORI-A kun je [persoonsgegevens](documentatie#natuurlijk-persoon-gegevens) ond
 
 ## Aanwezige deelnemer
 
-
 De meest gebruikelijke optie is om persoonsgegevens onder het `<isNatuurlijkPersoon>` element van een aanwezige deelnemer te zetten:
 
 ``` xml
@@ -284,7 +278,6 @@ De meest gebruikelijke optie is om persoonsgegevens onder het `<isNatuurlijkPers
 Dit zegt in essentie: 
 
 > Peter van der Velden (de burgemeester) was in deze vergadering aanwezig als voorzitter.
-
 
 ## Informatie over personen buiten een vergadering
 
@@ -324,9 +317,7 @@ MDTO vraagt een aantal gegevens onder `<betrokkene>`:
 * Binnen `<betrokkeneTypeRelatie>` moet het **type relatie** tussen de persoon en het stuk beschreven worden, middels een begrip uit een begrippenlijst. ORI-A definieert hiervoor de [begrippenlijst 'Betrokkene-vergaderstuk relaties'](begrippenlijsten#betrokkene-vergaderstuk-relaties).
 * Binnen `<betrokkeneActor>` worden de **naam en ID** van de betrokkene verwacht, bijvoorbeeld `Jan de Vries` en `persoon-076` om naar de ambtenaar uit het voorbeeld hierboven te verwijzen.
 
-
 Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van een stuk was, dan kun je dat zo doen:
-
 
 ``` xml
 <MDTO>
@@ -353,7 +344,6 @@ Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van
     </betrokkene>
     …
 ```
-
 
 # Spreekfragmenten
 
@@ -425,17 +415,15 @@ De verwijzing naar deze mediabron komt in ORI-A onder `<vergadering>`:
 
 In je MDTO kun je eventueel de  [begrippenlijst 'Mediabron types']( begrippenlijsten#mediabron-types)  onder `mdto:classificatie` invullen, om ook daar het soort mediabron nader te specificeren.
 
-
 ### Ondertitelbestanden
 
 Als je een video met een los ondertitelbestand hebt, is het meestal het makkelijkst om een **complex informatieobject** aan te maken --- oftewel, een informatieobject dat is samengesteld uit meerdere bestanden:
-
 
 ```bash
 Gemeenteraad.mp4
 Gemeenteraad.mdto.xml
 Gemeenteraad.mp4.bestand.mdto.xml
-Gemeenteraad.vtt.bestand.mdto.xml  # dit is het ondertitel bestand
+Gemeenteraad.vtt.bestand.mdto.xml  # dit is het ondertitelbestand
 ```
 
 In MDTO druk je dit zo uit:

@@ -33,7 +33,6 @@ Gegevens over de vergadering, zoals de startdatum en locatie. Een vergadering ka
 **Let op:**  Alhoewel `<isVastgelegdMiddels>` strikt genomen niet verplicht is, is een transcriptie of (audio)visueel verslag noodzakelijk voor de toekomstige interpreteerbaarheid van raadsvergaderingen. Alleen in _zeer_ zeldzame situaties, zoals een besloten vergadering zonder opnames, mag `<isVastgelegdMiddels>` ontbreken.
 :::
 
-
 {{ vergadering_table }}
 
 <!-- misschien deze uitklapbaar maken -->
@@ -62,7 +61,6 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 De volgorde van agendapunt-elementen geeft aan in welke volgorde ze behandeld zijn.
 
 {{ agendapunt_table }}
-
 
 ### XML voorbeeld
 
@@ -130,7 +128,6 @@ Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrip
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 
-
 {{ fractie_table }}
 
 ### XML voorbeeld
@@ -157,7 +154,6 @@ Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrip
 * [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-
 
 {{ dagelijks_bestuur_table }}
 
@@ -218,12 +214,6 @@ Gegevens over een persoon die daadwerkelijk bij de vergadering aanwezig was, zoa
     ...
 ```
 
-
-
-
-
-
-
 # Gegevensgroepen
 
 Gegevensgroepen (<span class="badge">G</span>) bevatten een aantal gegevens die bij inhoudelijk elkaar horen. Ze komen in ORI-A altijd direct onder een ander element, en krijgen nooit een ID.
@@ -235,7 +225,6 @@ Gegevens over de naam van een natuurlijk persoon.
 {{ naam_table }}
 
 ### XML voorbeeld
-
 
 ``` xml
 </todo>
@@ -249,7 +238,6 @@ Gegevens die het het resultaat van een stemming over personen beschrijven, zoals
 
 ### XML voorbeeld
 
-
 ``` xml
 </todo>
 ```
@@ -261,7 +249,6 @@ Gegevens over nevenfuncties van de persoon, zoals of het om een betaalde functie
 {{ nevenfunctie_table }}
 
 ### XML voorbeeld
-
 
 ``` xml
 </todo>
@@ -296,6 +283,7 @@ Gegevens over wanneer iemand lid is geworden van welk dagelijks bestuur.
 ## Spreekfragment
 
 Gegevens over een spreekfragment waarin de deelnemer sprak, zoals het moment waarop dit fragment begon en eindigde.
+
 {{ spreekfragment_table }}
 
 ## Stem

@@ -45,7 +45,6 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 | Vraag      | Vraag aan de raad.                                                         |
 | Antwoord   | Antwoord op een vraag aan de raad.                                         |
 
-
 # Deelnemerrollen
 
 Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
@@ -59,22 +58,21 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 
 :::
 
+| Label                 | Definitie                                                                  |
+|:----------------------|:---------------------------------------------------------------------------|
+| Voorzitter            | De voorzitter van de vergadering.                                          |
+| Vice-voorzitter       | De vice-voorzitter van de vergadering.                                     |
+| Portefeuillehouder    | Ambtenaar die de verantwoordelijkheid draagt over een besproken onderwerp. |
+| Griffier              | Hoofd van het griffie.                                                     |
+| Raadslid              | Gekozen volksvertegenwoordiger binnen een gemeente.                        |
+| Statenlid             | Gekozen volksvertegenwoordiger binnen een provincie.                       |
+| Kamerlid              | Gekozen volksvertegenwoordiger binnen de Eerste of Tweede Kamer.           |
+| Dagelijks bestuurslid | Lid van een dagelijks bestuur.                                             |
+| Algemeen bestuurslid  | Lid van een algemeen bestuur.                                              |
+| Inspreker             | Niet-lid dat inspreekt tijdens de vergadering.                             |
+| <del>Overig</del>     | -                                                                          |
 
-| Label                 | Definitie                                                              |
-|:----------------------|:-----------------------------------------------------------------------|
-| Voorzitter            | De voorzitter van de vergadering.                                      |
-| Vice-voorzitter       | De vice-voorzitter van de vergadering.                                 |
-| Portefeuillehouder    | Ambtenaar die de verantwoordelijk draagt over een besproken onderwerp. |
-| Griffier              | Hoofd van het griffie.                                                 |
-| Raadslid              | Gekozen volksvertegenwoordiger binnen een gemeente.                    |
-| Statenlid             | Gekozen volksvertegenwoordiger binnen een provincie.                   |
-| Kamerlid              | Gekozen volksvertegenwoordiger binnen de eerst of tweede kamer.        |
-| Dagelijks bestuurslid | Lid van een dagelijks bestuur.                                         |
-| Algemeen bestuurslid  | Lid van het algemeen bestuur van een waterschap.                       |
-| Inspreker             | Niet-lid dat inspreekt tijdens de vergadering.                         |
-| <del>Overig</del>     | -                                                                      |
-
-# Betrokkene-vergaderstuk relaties
+# Betrokkene - vergaderstuk relaties
 
 Een lijst met verschillende soorten relaties tussen personen en vergaderstukken. Relevant binnen MDTO om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
 
@@ -103,20 +101,18 @@ Een lijst met verschillende soorten relaties tussen personen en vergaderstukken.
 </informatieobject>
 ```
 -->
-| Label              | Definitie                                                    |
-|:-------------------|:-------------------------------------------------------------|
-| Indiener           | Indiener van een vergaderstuk (herkomst: VNG's ORI).         |
-| Ondertekenaar      | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI).    |
-| Portefeuillehouder | De portefeuillehouder van een voorstel (herkomst: VNG's ORI) |
+| Label              | Definitie                                                              |
+|:-------------------|:-----------------------------------------------------------------------|
+| Indiener           | Indiener van een vergaderstuk (herkomst: ORI-informatiemodel).         |
+| Ondertekenaar      | Ondertekenaar van een vergaderstuk (herkomst: ORI-informatiemodel).    |
+| Portefeuillehouder | De portefeuillehouder van een voorstel (herkomst: ORI-informatiemodel) |
 
 # Mediabron types
 
 Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
 
-
 | Label        | Definitie                                                                   |
 |:-------------|:----------------------------------------------------------------------------|
-| Video        | Een audiovisuele opname van een vergadering. Ookwel 'videotuul'.            |
 | Audio        | Een geluidsopname van een vergadering. Ookwel 'audiotuul'.                   |
 | Transcriptie | Een schriftelijk uitverwerking van de gesproken inhoud van een vergadering. |
 
