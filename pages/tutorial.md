@@ -431,10 +431,10 @@ Als je een video met een los ondertitelbestand hebt, is het meestal het makkelij
 
 
 ```bash
-Gemeenteraad.mp4
-Gemeenteraad.mdto.xml
-Gemeenteraad.mp4.bestand.mdto.xml
-Gemeenteraad.vtt.bestand.mdto.xml  # dit is het ondertitel bestand
+videotuul.mp4
+videotuul.mdto.xml
+videotuul.mp4.bestand.mdto.xml
+videotuul.vtt.bestand.mdto.xml  # dit is het ondertitel bestand
 ```
 
 In MDTO druk je dit zo uit:
@@ -444,10 +444,10 @@ In MDTO druk je dit zo uit:
     <informatieobject>
         …
         <heeftRepresenatie>
-            <verwijzingNaam>Gemeenteraad.mp4.bestand.mdto.xml</verwijzingNaam>
+            <verwijzingNaam>videotuul.mp4.bestand.mdto.xml</verwijzingNaam>
         </heeftRepresenatie>
         <heeftRepresenatie>
-            <verwijzingNaam>Gemeenteraad.vtt.bestand.mdto.xml</verwijzingNaam>
+            <verwijzingNaam>videotuul.vtt.bestand.mdto.xml</verwijzingNaam>
         </heeftRepresenatie>
         …
 ```
