@@ -19,11 +19,11 @@ Een begrippenlijst roep je zo aan:
 </vergaderstukType>
 ```
 
-Alle begrippenlijsten die onderdeel zijn van **ORI•A** worden hieronder gedocumenteerd.
+Alle begrippenlijsten die onderdeel zijn van **ORI-A** worden hieronder gedocumenteerd.
 
 ## TOOI Begrippenlijsten
 
-Een paar begrippenlijsten die van toepassing zijn op **ORI•A** worden beheerd door **TOOI**, [een standaardisatie project opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/):
+Een paar begrippenlijsten die van toepassing zijn op **ORI-A** worden beheerd door **TOOI**, [een standaardisatie project opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/):
 
 * [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)

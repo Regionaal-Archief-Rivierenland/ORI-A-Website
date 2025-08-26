@@ -1,5 +1,5 @@
 ---
-title: Over ORI•A
+title: Over ORI-A
 position: 1
 ---
 
@@ -7,7 +7,7 @@ position: 1
 **Disclaimer:** De ORI-A website en bijbehorende documentatie zijn nog in ontwikkeling. Hou er daarom rekening mee dat alle informatie op deze website onvolledig, onnauwkeurig of verouderd kan zijn.
 :::
 
-# Wat is ORI•A?
+# Wat is ORI-A?
 
 De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het duurzaam bewaren van raadsinformatie in XML-formaat. Dit XML-formaat kan gebruikt worden wanneer raadsinformatie, zoals een collectie videotulen, voor permanente bewaring naar een [e-depot](https://www.nationaalarchief.nl/archiveren/kennisbank/wat-is-een-e-depot) wordt gemigreerd. 
 
