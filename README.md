@@ -33,7 +33,7 @@ Die kun je vervolgens raadplegen door bijv. `python -m http.server .` in die map
 
 * `pages/`
   * De markdown bestanden waaruit de documentatie/documentatie website wordt opgebouwd
-  * `pages/documentatie.md.j2` is een combo van markdown en Jinja template, zodat daar v HTML
+  * `pages/documentatie.md.j2` is een combo van markdown en jinja template; jinja voegt op bepaalde momenten HTML tabellen in.
 * `css/`
   * Verschillende stijlregels. Het grootste gedeelte van de css is afkomstig van het [Pico](https://picocss.com/docs) project.
 * `diagram/`
