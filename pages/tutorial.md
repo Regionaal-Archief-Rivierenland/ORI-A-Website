@@ -429,12 +429,12 @@ In je MDTO kun je eventueel de  [begrippenlijst 'Mediabron types']( begrippenlij
 
 Als je een video met een los ondertitelbestand hebt, is het meestal het makkelijkst om een **complex informatieobject** aan te maken --- oftewel, een informatieobject dat is samengesteld uit meerdere bestanden:
 
-
 ```bash
 videotuul.mp4
+videotuul.vtt # dit is het ondertitelbestand
 videotuul.mdto.xml
 videotuul.mp4.bestand.mdto.xml
-videotuul.vtt.bestand.mdto.xml  # dit is het ondertitel bestand
+videotuul.vtt.bestand.mdto.xml
 ```
 
 In MDTO druk je dit zo uit:
