@@ -155,9 +155,10 @@
         &lt;/<span class=kw>verwijzingInformatieobject</span>>
     &lt;/<span class=kw>isVastgelegdMiddels</span>>
 &lt;/<span class=kw>vergadering</span>></code></pre><div class=tip><p><strong>Tip:</strong> <code class="sourceCode xml">&lt;<span class=kw>isVastgelegdMiddels</span>></code> is herhaalbaar. Door dit element te herhalen kun je een koppeling leggen met meerdere mediabronnen, bijvoorbeeld met een videotuul én een transcriptie.</div><p>In je MDTO kun je eventueel de <a href=begrippenlijsten#mediabron-types>begrippenlijst ‘Mediabron types’</a> onder <code>mdto:classificatie</code> invullen, om ook daar het soort mediabron nader te specificeren.<h3 id=ondertitelbestanden>Ondertitelbestanden<a class=secondary href=#ondertitelbestanden><span aria-hidden=true>#</span></a></h3><p>Als je een video met een los ondertitelbestand hebt, is het meestal het makkelijkst om een <strong>complex informatieobject</strong> aan te maken — oftewel, een informatieobject dat is samengesteld uit meerdere bestanden:<pre class="sourceCode bash"><code class="sourceCode bash"><span class=ex>videotuul.mp4</span>
+<span class=ex>videotuul.vtt</span> <span class=co># dit is het ondertitelbestand</span>
 <span class=ex>videotuul.mdto.xml</span>
 <span class=ex>videotuul.mp4.bestand.mdto.xml</span>
-<span class=ex>videotuul.vtt.bestand.mdto.xml</span>  <span class=co># dit is het ondertitel bestand</span></code></pre><p>In MDTO druk je dit zo uit:<pre class="sourceCode xml"><code class="sourceCode xml">&lt;<span class=kw>MDTO</span>>
+<span class=ex>videotuul.vtt.bestand.mdto.xml</span></code></pre><p>In MDTO druk je dit zo uit:<pre class="sourceCode xml"><code class="sourceCode xml">&lt;<span class=kw>MDTO</span>>
     &lt;<span class=kw>informatieobject</span>>
         …
         &lt;<span class=kw>heeftRepresenatie</span>>
