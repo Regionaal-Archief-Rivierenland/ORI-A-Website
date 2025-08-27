@@ -34,6 +34,10 @@
 \definecolor{moderngray}{HTML}{D8D8DB}
 \definecolor{darkgreen}{HTML}{43674c}
 \definecolor{enumeratiecolor}{HTML}{3C5770}
+\definecolor{logogreen}{HTML}{1D6A54}
+\definecolor{logopurple}{HTML}{5e3067}
+\definecolor{logoblue}{HTML}{4974A5}
+
 
 %% tikz
 \usepackage{tikz}
@@ -94,8 +98,17 @@
 \newcommand{\enumeratietype}[1]{enumeratie \textcolor{darkgreen}{#1}}
 
 %% Header of boxes
-\newcommand{\objectheader}[2]{
-  \umltype{#1} \\
+\newcommand{\objectheader}[3]{
+      \tcbox[
+      on line,
+      boxsep=4pt,
+      left=8.0pt,
+      right=8.0pt,
+      top=0.5pt,
+      bottom=0.5pt,
+      arc=8pt,
+      opacityframe=0,
+      colback=#3!20]{\textbf{\textcolor{#3!110}{#1}}} \\
   {\large \textcolor{mainblack}{{\fontseries{b}\selectfont #2}}}
   \nodepart[align=left]{two}
 }
@@ -142,7 +155,14 @@
     | rejectattr('datatype', 'in', excluded_types)
     | list -%}
 
-  \objectheader{ {{- object_type -}} }{ {{- table_title -}} }
+    {% if object_type == 'Objecttype' %}
+      \objectheader{  {{- object_type -}} }{ {{- table_title -}} }{logopurple}
+    {% elif object_type == 'Relatieklasse' %}
+      \objectheader{  {{- object_type -}} }{ {{- table_title -}} }{logogreen}
+    {% elif object_type == 'Gegevensgroeptype' %}
+      \objectheader{  {{- object_type -}} }{ {{- table_title -}} }{logoblue}
+    {% endif %}
+
 
   {% for row in filtered_rows %}
     {%- if row.herhaalbaar and row.verplicht -%}
@@ -494,10 +514,16 @@
   }
 
   %% text bubbles
-  \tcbset{on line, 
-    boxsep=2.2pt, left=4pt,right=4pt,top=4pt,bottom=4pt,
-    colframe=moderngray,colback=white, arc=7pt,}
-  \newcommand{\keuze}[1]{\tcbox{\textcolor{mainblack}{#1}}}
+  \newcommand{\keuze}[1]{
+    \tcbox[on line,
+      boxsep=2.2pt,
+      left=4pt,
+      right=4pt,
+      top=4pt,
+      bottom=4pt,
+      colframe=moderngray,
+      colback=white,
+      arc=7pt]{\textcolor{mainblack}{#1}}}
 
   \newcommand{\sep}{ \, }
   \newcommand{\seprule}{\noindent\hspace{0cm}\textcolor{moderngray}{\rule{\dimexpr\linewidth-0.1cm\relax}{1.0pt}}\\[0.7ex]}
