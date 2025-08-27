@@ -108,8 +108,10 @@
       bottom=0.5pt,
       arc=8pt,
       opacityframe=0,
-      colback=#3!20]{\textbf{\textcolor{#3!110}{#1}}} \\
-  {\large \textcolor{mainblack}{{\fontseries{b}\selectfont #2}}}
+      colback=#3!20]{\textbf{\textcolor{#3!110}{\guillemotleft#1\guillemotright}}} 
+      \\
+      {\large \textcolor{mainblack}{{\fontseries{b}\selectfont #2}}} 
+  
   \nodepart[align=left]{two}
 }
 
@@ -155,11 +157,11 @@
     | rejectattr('datatype', 'in', excluded_types)
     | list -%}
 
-    {% if object_type == 'Objecttype' %}
+    {% if object_type == 'Entiteit' %}
       \objectheader{  {{- object_type -}} }{ {{- table_title -}} }{logopurple}
     {% elif object_type == 'Relatieklasse' %}
       \objectheader{  {{- object_type -}} }{ {{- table_title -}} }{logogreen}
-    {% elif object_type == 'Gegevensgroeptype' %}
+    {% elif object_type == 'Gegevensgroep' %}
       \objectheader{  {{- object_type -}} }{ {{- table_title -}} }{logoblue}
     {% endif %}
 
@@ -196,29 +198,29 @@
 
   \node (agendapunt) [ORI object]
         {
-          {{ render_table('Agendapunt', 'Objecttype', agendapunt_table) }}
+          {{ render_table('Agendapunt', 'Entiteit', agendapunt_table) }}
           %% make the box just slightly wider (for visual balance)
           \hspace{0.8cm}
         };
 
    \node (vergadering) [ORI object, align=center, left=17cm of agendapunt]
         {
-          {{ render_table('Vergadering', 'Objecttype', vergadering_table) }}
+          {{ render_table('Vergadering', 'Entiteit', vergadering_table) }}
         };
 
    \node (deelnemer) [ORI object, align=center, below=3.3cm of vergadering]
         {
-          {{ render_table('Aanwezige deelnemer', 'Objecttype', aanwezige_deelnemer_table) }}
+          {{ render_table('Aanwezige deelnemer', 'Entiteit', aanwezige_deelnemer_table) }}
         };
 
     \node (stemming) [ORI object, below = 3.9cm of agendapunt, align=center]
         {
-          {{ render_table('Stemming', 'Objecttype', stemming_table) }}
+          {{ render_table('Stemming', 'Entiteit', stemming_table) }}
         };
 
     \node (fractie) [ORI object, below = 8.5cm of stemming, align=center]
         {
-          {{ render_table('Fractie', 'Objecttype', fractie_table) }}
+          {{ render_table('Fractie', 'Entiteit', fractie_table) }}
         };
 
    \node (stem) [ORI relatieklasse, align=center, at = ($(deelnemer.east)!0.5!(stemming.west)$), yshift=2.4cm]
@@ -233,7 +235,7 @@
 
    \node (dagelijksbestuur) [ORI object, align=center, below = 5.2cm of fractie]
         {
-          {{ render_table('Dagelijks bestuur', 'Objecttype', dagelijks_bestuur_table) }}
+          {{ render_table('Dagelijks bestuur', 'Entiteit', dagelijks_bestuur_table) }}
         };
 
    \node (spreekfragment) [ORI relatieklasse, above = 17.4cm of stem, xshift=-1.6cm]
@@ -244,17 +246,17 @@
         
    \node (natuurlijkpersoon) [ORI object, align=center, left=5.0cm of deelnemer]
         {
-          {{ render_table('Natuurlijk persoon', 'Objecttype', natuurlijk_persoon_table) }}
+          {{ render_table('Natuurlijk persoon', 'Entiteit', natuurlijk_persoon_table) }}
         };
 
    \node (naam) [ORI object, below = 2.2cm of natuurlijkpersoon, align=center, draw=gray!86, xshift=-3cm]
          {
-           {{ render_table('Naam', 'Gegevensgroeptype', naam_table) }}
+           {{ render_table('Naam', 'Gegevensgroep', naam_table) }}
         };
 
    \node (nevenfunctie) [ORI object, above left = 2.2cm and -9cm of natuurlijkpersoon, align=center, draw=gray!86]
         {
-          {{ render_table('Nevenfunctie', 'Gegevensgroeptype', nevenfunctie_table) }}
+          {{ render_table('Nevenfunctie', 'Gegevensgroep', nevenfunctie_table) }}
         };
 
    \node (fractielidmaatschap) [ORI relatieklasse, below = 4.0cm of deelnemer, align=center]
@@ -269,12 +271,12 @@
 
   \node (besluit) [ORI object, above right = 0.5cm and 0.9cm of stemming, align=center]
         {
-          {{ render_table('Besluit', 'Objecttype', besluit_table) }}
+          {{ render_table('Besluit', 'Entiteit', besluit_table) }}
         };
 
   \node (stemmingOverPersonenGegevens) [ORI object, below right = 5.3cm and -9.2cm of besluit, align=center, draw=gray!86]
         {
-          {{ render_table('Stemming over personen', 'Gegevensgroeptype', stemming_over_personen_table) }}
+          {{ render_table('Stemming over personen', 'Gegevensgroep', stemming_over_personen_table) }}
         };
 
    \node (informatieobject) [ORI relatieklasse, above right = -4.6cm and 7.2cm of agendapunt, align=center]
