@@ -37,6 +37,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         "enumeratie": "Lijst van keuzes",
         "integerOfTijdcode": "Getal of tijdcode (hh:mm:ss)",
         "positiveInteger": "Positief getal",
+        "nonNegativeInteger": "Getal boven of gelijk aan 0",
     }
 
     for elem in complextype.findall(".//xs:element", namespaces=ns):
