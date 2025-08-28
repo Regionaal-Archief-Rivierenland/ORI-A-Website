@@ -91,6 +91,19 @@
       {\textcolor{blueishblack}{\textbf{#2}}}
 }
 
+\newcommand{\pill}[2]{
+  \tcbox[
+    on line,
+    boxsep=5.0pt,
+    left=7.5pt,
+    right=7.5pt,
+    top=0.5pt,
+    bottom=0.5pt,
+    arc=8pt,
+    opacityframe=0,
+    colback=#1!15]{\fontseries{sb}\selectfont\textcolor{#1!110}{\guillemotleft#2\guillemotright}}
+}
+
 \newcommand{\umltype}[1]{
   {\textbf{\textcolor{gray}{\guillemotleft#1\guillemotright}}}
 }
@@ -99,19 +112,8 @@
 
 %% Header of boxes
 \newcommand{\objectheader}[3]{
-  {\large \textcolor{mainblack}{{\fontseries{b}\selectfont #2}}} \hspace{0.5em}
-        \tcbox[
-      on line,
-      boxsep=5.3pt,
-      left=7.5pt,
-      right=7.5pt,
-      top=0.5pt,
-      bottom=0.5pt,
-      arc=8pt,
-      opacityframe=0,
-      colback=#3!15]{\fontseries{sb}\selectfont{\textcolor{#3!110}{#1}}}
-
-  
+  \rule[-1ex]{0pt}{4ex}
+  {\large \textcolor{mainblack}{{\fontseries{b}\selectfont #2}}}
   \nodepart[align=left]{two}
 }
 
@@ -127,14 +129,41 @@
 \begin{tikzpicture}[
     %% needed to fix svg
     background rectangle/.style={fill=white}, show background rectangle,
-    %% not sure why the "header" is still centered after align=left, but oh well
     %% changerectangle split part fill for colors
     ORI object/.style={rectangle split, rectangle split parts=2,
       rectangle split part fill={white,white}, draw=mainblack, rounded corners=5pt, fill=white, align=left, very thick, inner sep=10pt,
+      append after command={
+        node[
+          shift={(44pt,0pt)}
+        ] at (\tikzlastnode.north west)
+        {
+          \pill{logopurple}{Entiteit}
+        }
+      }
     },
     ORI relatieklasse/.style={rectangle split, rectangle split parts=2,
       rectangle split part fill={white,white}, rounded corners=5pt,
       very thick, inner sep=10pt, draw=gray!86, fill=white, align=left,
+      append after command={
+        node[
+          shift={(53pt,0pt)}
+        ] at (\tikzlastnode.north west)
+        {
+          \pill{logogreen}{Relatieklase}
+        }
+      }
+      },
+    ORI gegevensgroep/.style={rectangle split, rectangle split parts=2,
+      rectangle split part fill={white,white}, rounded corners=5pt,
+      very thick, inner sep=10pt, draw=gray!86, fill=white, align=left,
+      append after command={
+        node[
+          shift={(59pt,0pt)}
+        ] at (\tikzlastnode.north west)
+        {
+          \pill{logoblue}{Gegevensgroep}
+        }
+      }
       },
     relatiepijl/.style={-{Straight Barb[length=4mm,width=6mm]}, very thick, draw=mainblack, text=mainblack},
     gegevenspijl/.style={-{Straight Barb[length=4mm,width=6mm]}, very thick, dashed, draw=mainblack},
@@ -200,8 +229,7 @@
           %% make the box just slightly wider (for visual balance)
           \hspace{0.8cm}
         };
-
-   \node (vergadering) [ORI object,  left=17cm of agendapunt]
+   \node (vergadering) [ORI object, left=17cm of agendapunt]
         {
           {{ render_table('Vergadering', 'Entiteit', vergadering_table) }}
         };
@@ -211,12 +239,12 @@
           {{ render_table('Aanwezige deelnemer', 'Entiteit', aanwezige_deelnemer_table) }}
         };
 
-    \node (stemming) [ORI object, below = 3.9cm of agendapunt, align=center]
+    \node (stemming) [ORI object, below = 3.9cm of agendapunt]
         {
           {{ render_table('Stemming', 'Entiteit', stemming_table) }}
         };
 
-    \node (fractie) [ORI object, below = 8.5cm of stemming, align=center]
+    \node (fractie) [ORI object, below = 8.5cm of stemming]
         {
           {{ render_table('Fractie', 'Entiteit', fractie_table) }}
         };
@@ -247,17 +275,17 @@
           {{ render_table('Natuurlijk persoon', 'Entiteit', natuurlijk_persoon_table) }}
         };
 
-   \node (naam) [ORI object, below = 2.2cm of natuurlijkpersoon,  draw=gray!86, xshift=-3cm]
+   \node (naam) [ORI gegevensgroep, below = 2.2cm of natuurlijkpersoon,  xshift=-3cm]
          {
            {{ render_table('Naam', 'Gegevensgroep', naam_table) }}
         };
 
-   \node (nevenfunctie) [ORI object, above left = 2.2cm and -9cm of natuurlijkpersoon,  draw=gray!86]
+   \node (nevenfunctie) [ORI gegevensgroep, above left = 2.2cm and -9cm of natuurlijkpersoon]
         {
           {{ render_table('Nevenfunctie', 'Gegevensgroep', nevenfunctie_table) }}
         };
 
-   \node (fractielidmaatschap) [ORI relatieklasse, below = 4.0cm of deelnemer, align=center]
+   \node (fractielidmaatschap) [ORI relatieklasse, below = 4.0cm of deelnemer]
         {
           {{ render_table('Fractielidmaatschap', 'Relatieklasse', fractielidmaatschap_table) }}
         };
@@ -267,23 +295,23 @@
           {{ render_table('Dagelijks bestuur lidmaatschap', 'Relatieklasse', dagelijks_bestuur_lidmaatschap_table) }}
         };
 
-  \node (besluit) [ORI object, above right = 0.5cm and 0.9cm of stemming, align=center]
+  \node (besluit) [ORI object, above right = 0.5cm and 0.9cm of stemming]
         {
           {{ render_table('Besluit', 'Entiteit', besluit_table) }}
         };
 
-  \node (stemmingOverPersonenGegevens) [ORI object, below right = 5.3cm and -9.2cm of besluit,  draw=gray!86]
+  \node (stemmingOverPersonenGegevens) [ORI gegevensgroep, below right = 5.3cm and -9.2cm of besluit]
         {
           {{ render_table('Stemming over personen', 'Gegevensgroep', stemming_over_personen_table) }}
         };
 
-   \node (informatieobject) [ORI relatieklasse, above right = -4.6cm and 7.2cm of agendapunt, align=center]
+   \node (informatieobject) [ORI relatieklasse, above right = -4.6cm and 7.2cm of agendapunt]
         {
           {{ render_table('Informatieobject', 'Relatieklasse', informatieobject_table) }}
         };
 
   %% inner MDTO rectangle
-  \node (mdto-inner) [rectangle, draw=mainblack, text=mainblack, ultra thick, right = 3.2cm of informatieobject, inner sep=40pt, fill=githubgrey, align=center]
+  \node (mdto-inner) [rectangle, draw=mainblack, text=mainblack, ultra thick, right = 3.2cm of informatieobject, inner sep=40pt, fill=githubgrey]
         {
           {\LARGE \fontseries{sb}\selectfont MDTO\,/\,TMLO}
         };
@@ -438,10 +466,9 @@
   node [anchor=center, below, pos=0.335] {\umltype{Relatiesoort}}
   coordinate[pos=0.335] (tempcoordinate) %% define tmp halfway coord
   ($(mdto.north)+(-2.8cm,0)$);
-
   % Draw the dashed line
   \coordinate (lineendsouth) at (tempcoordinate|-informatieobject.north);
-  \draw[dashedpijl] ($(tempcoordinate) + (0, -0.5cm)$) -- (lineendsouth);
+  \draw[dashedpijl] ($(tempcoordinate) + (0, -0.5cm)$) -- ($(lineendsouth) + (0, 0.35cm)$);
   
   %% vergadering -> mdto (notulen)
   \draw[relatiepijl] ($(vergadering.north)+(4, 0)$) --
@@ -470,9 +497,9 @@
   ($(mdto.north)+(2.8cm,0)$);
   
   %% persoon -> naam
-  \draw[gegevenspijl] ([xshift=-3cm] natuurlijkpersoon.south) -- ([xshift=-3cm] naam);
+  \draw[gegevenspijl] ([xshift=-1.9cm] natuurlijkpersoon.south) -- ([xshift=1.1cm] naam.north);
   %% persoon -> nevenfunctie
-  \draw[gegevenspijl] ([xshift=-3cm] natuurlijkpersoon.north) -- ([xshift=-3cm] natuurlijkpersoon.north |- nevenfunctie.south);
+  \draw[gegevenspijl] ([xshift=-2cm] natuurlijkpersoon.north) -- ([xshift=-2cm] natuurlijkpersoon.north |- nevenfunctie.south);
   %% persoon -> fractie (by way of fractielidmaatschap)
   % calculate endpoint
   \coordinate (Y) at ($(fractielidmaatschap.south)-(0.0cm,2.5cm)$);
