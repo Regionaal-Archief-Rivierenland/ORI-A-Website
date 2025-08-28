@@ -281,6 +281,22 @@ aside {
     /* for some reason, setting this to an absolute value is the only way to make sticky work,
        _and_ push the footer at the same time */
     height: 860px;
+    overflow-y: auto;
+    height: 100vh;
+    align-items: start;
+    position: sticky;
+    top: 0;
+}
+
+/* hack to have margin protruding highlighting of active navbar item  */
+#documentation-menu {
+    margin-left: calc(var(--pico-nav-link-spacing-horizontal) * -1);
+    margin-right: calc(var(--pico-nav-link-spacing-horizontal) * -1);
+}
+
+#documentation-menu nav {
+    margin-left: var(--pico-nav-link-spacing-horizontal);
+    margin-right: var(--pico-nav-link-spacing-horizontal);
 }
 
 /* Style currently selected item in navbar */
