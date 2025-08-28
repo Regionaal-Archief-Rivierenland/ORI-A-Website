@@ -99,17 +99,18 @@
 
 %% Header of boxes
 \newcommand{\objectheader}[3]{
-      \tcbox[
+  {\large \textcolor{mainblack}{{\fontseries{b}\selectfont #2}}} \hspace{0.5em}
+        \tcbox[
       on line,
-      boxsep=3.3pt,
+      boxsep=5.3pt,
       left=7.5pt,
       right=7.5pt,
       top=0.5pt,
       bottom=0.5pt,
       arc=8pt,
       opacityframe=0,
-      colback=#3!15]{\fontseries{sb}\selectfont{\textcolor{#3!110}{#1}}}\\[0.1ex]
-      {\large \textcolor{mainblack}{{\fontseries{b}\selectfont #2}}} 
+      colback=#3!15]{\fontseries{sb}\selectfont{\textcolor{#3!110}{#1}}}
+
   
   \nodepart[align=left]{two}
 }
@@ -129,14 +130,12 @@
     %% not sure why the "header" is still centered after align=left, but oh well
     %% changerectangle split part fill for colors
     ORI object/.style={rectangle split, rectangle split parts=2,
-      rectangle split part fill={white,white}, draw=mainblack, rounded corners=5pt, fill=white,
-      very thick, inner sep=10pt,
+      rectangle split part fill={white,white}, draw=mainblack, rounded corners=5pt, fill=white, align=left, very thick, inner sep=10pt,
     },
     ORI relatieklasse/.style={rectangle split, rectangle split parts=2,
       rectangle split part fill={white,white}, rounded corners=5pt,
-      very thick, inner sep=10pt, draw=gray!86, fill=white,
+      very thick, inner sep=10pt, draw=gray!86, fill=white, align=left,
       },
-    ORI referentie/.style={draw=mainblack, rounded corners=5pt, align=center, very thick, inner sep=10pt, draw=gray!86},
     relatiepijl/.style={-{Straight Barb[length=4mm,width=6mm]}, very thick, draw=mainblack, text=mainblack},
     gegevenspijl/.style={-{Straight Barb[length=4mm,width=6mm]}, very thick, dashed, draw=mainblack},
     generalisatiepijl/.style={-{Latex[round,open,length=4mm,width=6mm]}, very thick, draw=mainblack},
@@ -202,12 +201,12 @@
           \hspace{0.8cm}
         };
 
-   \node (vergadering) [ORI object, align=center, left=17cm of agendapunt]
+   \node (vergadering) [ORI object,  left=17cm of agendapunt]
         {
           {{ render_table('Vergadering', 'Entiteit', vergadering_table) }}
         };
 
-   \node (deelnemer) [ORI object, align=center, below=3.3cm of vergadering]
+   \node (deelnemer) [ORI object,  below=3.3cm of vergadering]
         {
           {{ render_table('Aanwezige deelnemer', 'Entiteit', aanwezige_deelnemer_table) }}
         };
@@ -222,17 +221,17 @@
           {{ render_table('Fractie', 'Entiteit', fractie_table) }}
         };
 
-   \node (stem) [ORI relatieklasse, align=center, at = ($(deelnemer.east)!0.5!(stemming.west)$), yshift=2.4cm]
+   \node (stem) [ORI relatieklasse,  at = ($(deelnemer.east)!0.5!(stemming.west)$), yshift=2.4cm]
         {
           {{ render_table('Stem', 'Relatieklasse', stem_table) }}
         };
 
-   \node (stemresultaatperfractie) [ORI relatieklasse, align=center, below right = 6.5cm and -4.5cm of stem]
+   \node (stemresultaatperfractie) [ORI relatieklasse,  below right = 6.5cm and -4.5cm of stem]
         {
           {{ render_table('Stemresultaat per fractie', 'Relatieklasse', stemresultaat_per_fractie_table) }}
         };
 
-   \node (dagelijksbestuur) [ORI object, align=center, below = 5.2cm of fractie]
+   \node (dagelijksbestuur) [ORI object,  below = 5.2cm of fractie]
         {
           {{ render_table('Dagelijks bestuur', 'Entiteit', dagelijks_bestuur_table) }}
         };
@@ -243,17 +242,17 @@
            {{ render_table('Spreekfragment', 'Relatieklasse', spreekfragment_table) }}
         };
         
-   \node (natuurlijkpersoon) [ORI object, align=center, left=5.0cm of deelnemer]
+   \node (natuurlijkpersoon) [ORI object,  left=5.0cm of deelnemer]
         {
           {{ render_table('Natuurlijk persoon', 'Entiteit', natuurlijk_persoon_table) }}
         };
 
-   \node (naam) [ORI object, below = 2.2cm of natuurlijkpersoon, align=center, draw=gray!86, xshift=-3cm]
+   \node (naam) [ORI object, below = 2.2cm of natuurlijkpersoon,  draw=gray!86, xshift=-3cm]
          {
            {{ render_table('Naam', 'Gegevensgroep', naam_table) }}
         };
 
-   \node (nevenfunctie) [ORI object, above left = 2.2cm and -9cm of natuurlijkpersoon, align=center, draw=gray!86]
+   \node (nevenfunctie) [ORI object, above left = 2.2cm and -9cm of natuurlijkpersoon,  draw=gray!86]
         {
           {{ render_table('Nevenfunctie', 'Gegevensgroep', nevenfunctie_table) }}
         };
@@ -263,7 +262,7 @@
           {{ render_table('Fractielidmaatschap', 'Relatieklasse', fractielidmaatschap_table) }}
         };
 
-   \node (dagelijksbestuurlidmaatschap) [ORI relatieklasse, align=center, below = 6.0cm of fractielidmaatschap]
+   \node (dagelijksbestuurlidmaatschap) [ORI relatieklasse,  below = 6.0cm of fractielidmaatschap]
         {
           {{ render_table('Dagelijks bestuur lidmaatschap', 'Relatieklasse', dagelijks_bestuur_lidmaatschap_table) }}
         };
@@ -273,7 +272,7 @@
           {{ render_table('Besluit', 'Entiteit', besluit_table) }}
         };
 
-  \node (stemmingOverPersonenGegevens) [ORI object, below right = 5.3cm and -9.2cm of besluit, align=center, draw=gray!86]
+  \node (stemmingOverPersonenGegevens) [ORI object, below right = 5.3cm and -9.2cm of besluit,  draw=gray!86]
         {
           {{ render_table('Stemming over personen', 'Gegevensgroep', stemming_over_personen_table) }}
         };
