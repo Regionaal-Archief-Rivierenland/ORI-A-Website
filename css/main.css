@@ -38,6 +38,10 @@ figure {
     padding-bottom: var(--pico-block-spacing-vertical);
 }
 
+.muted {
+    color: var(--pico-muted-color);
+}
+
 :root {
     --pico-block-spacing-vertical: 2.0rem;
     --pico-block-spacing-horizontal: 2.0rem;
@@ -267,9 +271,6 @@ table.stickytable th {
   grid-gap: 2.2rem;
 }
 
-.muted {
-    color: var(--pico-muted-color);
-}
 
 /* Horizontal nav */
 aside {
