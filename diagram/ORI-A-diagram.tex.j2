@@ -34,7 +34,7 @@
 \definecolor{moderngray}{HTML}{D8D8DB}
 \definecolor{darkgreen}{HTML}{43674c}
 \definecolor{enumeratiecolor}{HTML}{3C5770}
-\definecolor{logogreen}{HTML}{1D6A54}
+\definecolor{logogreen}{HTML}{257D5B}
 \definecolor{logopurple}{HTML}{5e3067}
 \definecolor{logoblue}{HTML}{4974A5}
 
@@ -101,15 +101,14 @@
 \newcommand{\objectheader}[3]{
       \tcbox[
       on line,
-      boxsep=4pt,
-      left=8.0pt,
-      right=8.0pt,
+      boxsep=3.3pt,
+      left=7.5pt,
+      right=7.5pt,
       top=0.5pt,
       bottom=0.5pt,
       arc=8pt,
       opacityframe=0,
-      colback=#3!20]{\textbf{\textcolor{#3!110}{\guillemotleft#1\guillemotright}}} 
-      \\
+      colback=#3!15]{\fontseries{sb}\selectfont{\textcolor{#3!110}{#1}}}\\[0.1ex]
       {\large \textcolor{mainblack}{{\fontseries{b}\selectfont #2}}} 
   
   \nodepart[align=left]{two}
