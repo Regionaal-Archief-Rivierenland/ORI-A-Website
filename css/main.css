@@ -38,6 +38,13 @@ figure {
     padding-bottom: var(--pico-block-spacing-vertical);
 }
 
+/* make some images protrude in the margins  */
+.largefigure {
+    width: 101%;
+    max-width: 101%;
+    margin-left: -8px;
+}
+
 .muted {
     color: var(--pico-muted-color);
 }
