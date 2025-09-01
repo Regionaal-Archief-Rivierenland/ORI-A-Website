@@ -5,7 +5,7 @@ position: 2
 
 # Een vergadering beschrijven
 
-Het meest simpele ORI-A XML bestand bestaat uit een **vergadering** met een lijst **agendapunten**.
+Het simpelst mogelijke ORI-A XML bestand bestaat uit een **vergadering** met een lijst **agendapunten**.
 
 ``` {=html}
 <article class="card">
