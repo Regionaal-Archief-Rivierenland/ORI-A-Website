@@ -266,8 +266,8 @@ table.stickytable th {
   grid-template-areas:
     "header header"
     "sidebar content"
-    "footer footer";
-  grid-template-columns: 192px minmax(0, 1fr);
+    "sidebar footer";
+  grid-template-columns: 205px minmax(0, 1fr);
   grid-gap: 2.2rem;
 }
 
@@ -278,14 +278,10 @@ aside {
     position: sticky;
     top: 0; /* Stay at the top */
     grid-area: sidebar;
-    /* for some reason, setting this to an absolute value is the only way to make sticky work,
-       _and_ push the footer at the same time */
-    height: 860px;
-    overflow-y: auto;
     height: 100vh;
-    align-items: start;
-    position: sticky;
-    top: 0;
+    overflow-y: auto;
+    /* space for scrollbar */
+    padding-right: 13px;
 }
 
 /* hack to have margin protruding highlighting of active navbar item  */
@@ -438,6 +434,7 @@ main {
 
 footer {
     grid-area: footer;
+    margin-top: -20px;
     padding-bottom: 20px;
 }
 
