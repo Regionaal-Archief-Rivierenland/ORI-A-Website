@@ -50,12 +50,12 @@ De hoofdreden voor deze relatief platte structuur is dat entiteiten in het ORI-i
 
 # Hoe verhoudt ORI-A zich tot ORI?
 
-ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). Dit informatiemodel is aangepast aan de behoeftes van archieven. ORI-A biedt bijvoorbeeld geen ruimte voor gegevens over informatieobjecten, maar verwijst op die momenten naar MDTO. Ook zijn sommige verplichtingen verschillend. Een volledige lijst van de verschillen wordt nog opgemaakt.
+ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). Dit informatiemodel is aangepast aan de behoeftes van archieven. In tegenstelling tot ORI biedt ORI-A bijvoorbeeld geen ruimte aan gegevens over informatieobjecten, maar verwijst op die momenten naar MDTO. Ook zijn sommige verplichtingen verschillend. Een volledige lijst van de verschillen wordt nog opgemaakt.
 
 Ondanks deze kleine aanpassingen is wel geprobeerd ORI-A **interoperabel** te houden met ORI. Formeler gezegd: je kan ORI zonder informatieverlies converteren naar een combinatie van ORI-A en MDTO (zie ook [round-trip format conversion](https://en.wikipedia.org/wiki/Round-trip_format_conversion)). De andere kant op (ORI-A + MDTO → ORI) kan ook, maar dan treedt mogelijk informatieverlies op, aangezien ORI-A + MDTO een _superset_ is van ORI.
 
 ::: waarschuwing
-Meer achtergrondinformatie over ORI kun je vinden op [de website van de ontwikkelaars van openbesluitvorming.nl](https://ontola.io/nl/cases/openbesluitvorming/) en [de website van openstate.eu](https://openstate.eu/nl/projecten-tools-data/besluiten/open-raadsinformatie/).
+Meer achtergrondinformatie over de verschillende projecten rondom ORI kun je vinden op [de website van de ontwikkelaars van openbesluitvorming.nl](https://ontola.io/nl/cases/openbesluitvorming/) en [de website van openstate.eu](https://openstate.eu/nl/projecten-tools-data/besluiten/open-raadsinformatie/).
 :::
 
 <!-- todo: benoem conversiescripts wanneer die af zijn -->
