@@ -29,7 +29,7 @@ Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bl
 
 * **XML ondersteuning.** ORI is alleen beschikbaar in het [JSON bestandsformaat](https://en.wikipedia.org/wiki/JSON). Alhoewel er niks mis is met JSON, ondersteunen e-depots en de software die archiefinstellingen gebruiken meestal alleen XML. ORI-A is ontwikkeld als een [XML-schema](downloads), waardoor het beter aansluit bij gewoontes in de archiefsector.
 
-* **Aansluiten bij bestaande (archief)standaarden.** [Het Nationaal Archief raadt aan](https://www.nationaalarchief.nl/archiveren/mdto#collapse-102790) algemene gegevens over informatieobjecten --- zoals aanmaakdatum en auteur --- vast te leggen in MDTO, een metadatastandaard gericht op het duurzaam toegankelijk maken van overheidsdocumenten. In tegenstelling tot ORI is ORI-A zo ontwikkeld dat deze taak volledig bij MDTO blijft.  ORI-A richt zich daarentegen uitsluitend op **domeinspecifieke gegevens** --- oftewel, raadsinformatie.
+* **Aansluiten bij bestaande (archief)standaarden.** Het ORI-A XML-schema is ontworpen om samen te gebruiken met [MDTO](https://www.nationaalarchief.nl/archiveren/mdto#collapse-102790), een XML-schema voor informatieobjecten en bestanden van het Nationaal Archief. In het ORI-informatiemodel staan veel gegevens over informatieobjecten. Deze gegevens zijn weggelaten uit het ORI-A XML-schema en vervangen door verwijzingen naar MDTO. Beide standaarden zijn hierdoor goed samen bruikbaar. ORI-A richt zich dus uitsluitend op **domeinspecifieke gegevens**: raadsinformatie.
 
   ::: tip
   **Tip:** Je kunt meer lezen over het combineren van ORI-A en MDTO in [Hoe werkt ORI-A?](tutorial#mdto)
