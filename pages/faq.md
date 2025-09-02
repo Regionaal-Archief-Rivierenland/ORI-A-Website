@@ -46,6 +46,8 @@ ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgespl
 
 De hoofdreden voor deze relatief platte structuur is dat entiteiten in het ORI-informatiemodel bijna allemaal **meervoudige relaties** hebben. Om een voorbeeld te noemen: een aanwezige deelnemer neemt weliswaar deel aan een vergadering, maar kan net zo goed deelnemen aan een stemming, of spreken tijdens een agendapunt. Door deze verstrengelingen lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
 
+<!-- "Voor sommige e-depots is het handig als ORI-A XML-bestanden bij het opmaken van een levering worden opgeknipt en verspreid over de aggregatieniveaus in een MDTO sidecar-structuur. Zie hiervoor de voorbeeldimplementatie van ELO" (Hier een link opnemen naar de voorbeeldbestanden van ELO, waarin ORI-A gegevens in de MDTO aggregatieniveaus is onderverdeeld) -->
+
 # Hoe verhoudt ORI-A zich tot ORI?
 
 ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). Dit informatiemodel is aangepast aan de behoeftes van archieven. ORI-A biedt bijvoorbeeld geen ruimte voor gegevens over informatieobjecten, maar verwijst op die momenten naar MDTO. Ook zijn sommige verplichtingen verschillend. Een volledige lijst van de verschillen wordt nog opgemaakt.
