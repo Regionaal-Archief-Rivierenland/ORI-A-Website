@@ -3,6 +3,8 @@ title: Veelgestelde vragen
 position: 5
 ---
 
+Hieronder worden vragen over ORI-A behandeld die niet pasten onder één van de andere rubrieken.
+
 # Wat is raadsinformatie, en wat is een videotuul?
 
 **Raadsinformatie** is een verzamelnaam voor alle digitale informatie die overheden aanmaken bij politieke en/of bestuurlijke besluitvorming. Deze besluitvorming vindt plaats in vergaderingen.
