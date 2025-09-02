@@ -44,7 +44,7 @@ Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bl
 
 ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgesplitst in hiërarchisch gestructureerde niveaus, ook wel bekend als 'aggregatieniveaus'. 
 
-De hoofdreden voor deze relatief platte structuur is dat entiteiten in het  oorspronkelijke ORI informatiemodel bijna allemaal **meervoudige relaties** hebben. Om een voorbeeld te noemen: een raadsvoorstel is weliswaar een onderdeel van een vergadering, maar kan net zo goed onderdeel zijn van iemand's portefeuille, een stemming teweeg brengen, of ondertekend worden door een groep personen. Door deze verstrengelingen lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
+De hoofdreden voor deze relatief platte structuur is dat entiteiten in het ORI-informatiemodel bijna allemaal **meervoudige relaties** hebben. Om een voorbeeld te noemen: een aanwezige deelnemer neemt weliswaar deel aan een vergadering, maar kan net zo goed deelnemen aan een stemming, of spreken tijdens een agendapunt. Door deze verstrengelingen lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
 
 # Hoe verhoudt ORI-A zich tot ORI?
 
