@@ -3,6 +3,8 @@ title: Hoe werkt ORI-A?
 position: 2
 ---
 
+Op deze pagina laten we stap voor stap zien uit welke verschillende onderdelen een ORI-A XML-bestand kan bestaan en hoe ze werken in XML.
+
 # Een vergadering beschrijven
 
 Het simpelst mogelijke ORI-A XML bestand bestaat uit een **vergadering** met een lijst **agendapunten**.
