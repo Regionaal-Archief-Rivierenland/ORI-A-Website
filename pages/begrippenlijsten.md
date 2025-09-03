@@ -4,9 +4,13 @@ title-icon: lijst.svg
 position: 4
 ---
 
-# Begrippenlijsten gebruiken
-
 <!-- Het lijkt me een goed idee om te beginnen met een algemeen stuk over het hoe en waarom van begrippenlijsten en hun nut bij standaardisatie. Eventueel met link naar de MDTO en TOOI begrippenlijsten. -->
+
+Op deze pagina is informatie te vinden over de momenten waarop ORI-A gebruik maakt van begrippenlijsten. Een begrippenlijst is een manier om gegevens te relateren aan een extern vastgestelde (gecontroleerde) lijst van waarden. ORI-A volgt de definitie, semantiek en toepassing van begrippenlijsten zoals die ook in [MDTO](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst) worden gehanteerd.
+
+Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten.
+
+# Begrippenlijsten gebruiken
 
 Een begrippenlijst roep je zo aan:
 
@@ -58,19 +62,19 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 :::
 
 
-| Label                 | Definitie                                                              |
-|:----------------------|:-----------------------------------------------------------------------|
-| Voorzitter            | De voorzitter van de vergadering.                                      |
-| Vice-voorzitter       | De vice-voorzitter van de vergadering.                                 |
-| Portefeuillehouder    | Ambtenaar die de verantwoordelijk draagt over een besproken onderwerp. |
-| Griffier              | Hoofd van het griffie.                                                 |
-| Raadslid              | Gekozen volksvertegenwoordiger binnen een gemeente.                    |
-| Statenlid             | Gekozen volksvertegenwoordiger binnen een provincie.                   |
-| Kamerlid              | Gekozen volksvertegenwoordiger binnen de eerst of tweede kamer.        |
-| Dagelijks bestuurslid | Lid van een dagelijks bestuur.                                         |
-| Algemeen bestuurslid  | Lid van het algemeen bestuur van een waterschap.                       |
-| Inspreker             | Niet-lid dat inspreekt tijdens de vergadering.                         |
-| <del>Overig</del>     | -                                                                      |
+| Label                 | Definitie                                                                  |
+|:----------------------|:---------------------------------------------------------------------------|
+| Voorzitter            | De voorzitter van de vergadering.                                          |
+| Vice-voorzitter       | De vice-voorzitter van de vergadering.                                     |
+| Portefeuillehouder    | Ambtenaar die de verantwoordelijkheid draagt over een besproken onderwerp. |
+| Griffier              | Hoofd van het griffie.                                                     |
+| Raadslid              | Gekozen volksvertegenwoordiger binnen een gemeente.                        |
+| Statenlid             | Gekozen volksvertegenwoordiger binnen een provincie.                       |
+| Kamerlid              | Gekozen volksvertegenwoordiger binnen de Eerste of Tweede Kamer.           |
+| Dagelijks bestuurslid | Lid van een dagelijks bestuur.                                             |
+| Algemeen bestuurslid  | Lid van een algemeen bestuur.                                              |
+| Inspreker             | Niet-lid dat inspreekt tijdens de vergadering.                             |
+| <del>Overig</del>     | -                                                                          |
 
 # Betrokkene-vergaderstuk relaties
 
@@ -114,10 +118,10 @@ Een lijst met verschillende soorten relaties tussen personen en vergaderstukken.
 Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
 
 
-| Label        | Definitie                                                                   |
-|:-------------|:----------------------------------------------------------------------------|
-| Video        | Een audiovisuele opname van een vergadering. Ookwel 'videotuul'.            |
-| Audio        | Een geluidsopname van een vergadering. Ookwel 'audiotuul'.                   |
-| Transcriptie | Een schriftelijk uitverwerking van de gesproken inhoud van een vergadering. |
+| Label        | Definitie                                                                 |
+|:-------------|:--------------------------------------------------------------------------|
+| Video        | Een audiovisuele opname van een vergadering. Ook wel 'videotuul'.         |
+| Audio        | Een geluidsopname van een vergadering. Ook wel 'audiotuul'.               |
+| Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
 
 

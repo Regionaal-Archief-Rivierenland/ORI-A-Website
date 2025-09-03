@@ -4,9 +4,11 @@ title-icon: boek.svg
 position: 2
 ---
 
+Op deze pagina laten we stap voor stap zien uit welke verschillende onderdelen een ORI-A XML-bestand kan bestaan en hoe ze werken in XML.
+
 # Een vergadering beschrijven
 
-Het simpelst mogelijke ORI-A XML bestand bestaat uit een **vergadering** met een lijst **agendapunten**.
+Het meest simpele ORI-A XML-bestand bestaat uit een **vergadering** met een lijst **agendapunten**.
 
 ``` {=html}
 <article class="card">
@@ -184,7 +186,7 @@ Deze entiteiten hebben doorgaans veel **relaties**, zowel onderling als met exte
 ## Voorbeeld: de relaties van een stemming
 
 <!-- todo: documenteer ook wanneer je nest? -->
-Het aanmaken van een relatie tussen twee entiteiten --- bijvoorbeeld een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verweze—n wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->.
+Het leggen van een relatie tussen twee entiteiten --- bijvoorbeeld een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verwezen wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->.
 
 Om een relatie tot stand te brengen, heeft de entiteit waarnaar verwezen wordt een uniek ID nodig. Dit ID kan vervolgens in `<verwijzingID>` worden ingevuld:
 
@@ -209,7 +211,7 @@ Dit zegt:
 Voor een uitgebreide uitleg over het verwijzen **naar externe informatieobjecten** zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
 :::waarschuwing
-De ORI-A XSD checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn. Dit vermindert de kans op ambigue verwijzingen.
+Het ORI-A XML-schema checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn. Dit vermindert de kans op ambigue verwijzingen.
 :::
 
 
