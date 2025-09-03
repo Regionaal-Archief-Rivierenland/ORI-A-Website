@@ -84,13 +84,14 @@ body.no-scroll {
     }
     .container {
         max-width: 530px;
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 6px;
+        padding-left: 6px;
     }
     article {
         box-shadow: none;
     }
-    .maingrid > header {
-        padding: 8px;
+    footer, .maingrid header {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
