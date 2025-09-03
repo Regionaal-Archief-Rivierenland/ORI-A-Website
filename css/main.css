@@ -42,14 +42,12 @@ official woff2 files from the Lato website had vertical spacing issues
 .title {
     font-weight: 900;
     font-size: 2.5rem;
-    display: inline-flex;
-    align-items: end;
-    gap: 0.2em;
-    line-height: 1;
 }
 
 .title svg {
-    width: 1.0em;
+    margin-top: -0.3rem;
+    margin-right: 0.5rem;
+    width: 2.5rem;
 }
 
 figure {
@@ -287,6 +285,13 @@ table.stickytable th {
     }
 }
 
+.download {
+    margin-bottom: var(--pico-block-spacing-vertical);
+}
+
+.download select  {
+    height: 100%;
+}
 
 .maingrid {
   display: grid;
@@ -428,6 +433,7 @@ html.light-mode {
 }
 
 main {
+    align-self: start;
     grid-area: content;
     min-width: 0; /* important for responsive layout; see pj-dev.com/blog/flex-items-and-min-width-0 */
 }
@@ -588,6 +594,7 @@ h4):hover>a:focus-visible {
     padding-left: 0;
   }
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 728px;
