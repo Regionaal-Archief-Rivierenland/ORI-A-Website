@@ -40,7 +40,7 @@ official woff2 files from the Lato website had vertical spacing issues
 }
 
 .title {
-    font-family: "Lato black";
+    font-weight: 900;
     font-size: 2.5rem;
     display: inline-flex;
     align-items: end;
