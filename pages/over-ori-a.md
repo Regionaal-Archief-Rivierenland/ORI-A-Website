@@ -15,9 +15,11 @@ ORI-A is gebaseerd op het informatiemodel van [de Open Raadsinformatie (ORI) API
 
 ## Achtergrond
 
+In de zomer van 2021 is tijdens een landelijke ['videotulenbijeenkomst'](https://kiacommunity.nl/thoughts/11904) door diverse stakeholders in het informatiedomein de wens uitgesproken om te komen tot een standaard voor de duurzame toegankelijkheid van raadsinformatie. De toen opgerichte [Werkgroep Archivering Raadsinformatie](colofon) stelde zich als taak deze standaard te realiseren. ORI-A is daarvan het resultaat.
+
 Vanuit enkele archiefdiensten is de behoefte ontstaan om te komen tot een standaard voor het duurzaam bewaren en beschikbaarstellen van raadsinformatie in een digitale archiefbewaarplaats (het e-depot). Deze archiefdiensten hebben zich verenigd in de [Werkgroep Archivering Raadsinformatie](colofon).
 
-De werkgroep heeft twee doelen: het ontwikkelen, testen en gebruiksklaar maken van een ORI-A XML validatie schema ([XSD](https://en.wikipedia.org/wiki/XML_Schema_(W3C))), en vervolgens het gebruik van de standaard aanmoedigen en ondersteunen.
+De werkgroep heeft zich drie doelen gesteld: ten eerste het ontwikkelen, testen en gebruiksklaar maken van een ORI-A XML-schema ([XSD](https://en.wikipedia.org/wiki/XML_Schema_(W3C))), ten tweede het promoten en tijdelijk ondersteunen van het gebruik van de standaard, en ten derde het borgen van het beheer van de standaard op de lange termijn.
 
 ## Status
 
