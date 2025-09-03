@@ -52,14 +52,6 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 
 Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
 
-::: waarschuwing
-De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informatiemodel te garanderen. Het gebruik van deze rol wordt afgeraden. Als de bestaande rollen niet toereikend zijn, heb je drie opties:
-
-1. Een uitbreiding op deze begrippenlijst [aanvragen](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new)
-2. Een nieuwe begrippenlijst starten
-3. Deze begrippenlijst uitbreiden
-
-:::
 
 
 | Label                 | Definitie                                                                  |
@@ -75,6 +67,14 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 | Algemeen bestuurslid  | Lid van het algemeen bestuur van een waterschap.                           |
 | Inspreker             | Niet-lid dat inspreekt tijdens de vergadering.                             |
 | <del>Overig</del>     | -                                                                          |
+
+::: waarschuwing
+De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informatiemodel te garanderen. Het gebruik van deze rol wordt afgeraden. Als de bestaande rollen niet toereikend zijn, heb je twee opties:
+
+* Een uitbreiding op deze begrippenlijst [aanvragen](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new)
+* Een nieuwe begrippenlijst starten
+
+:::
 
 # Betrokkene-vergaderstuk relaties
 
