@@ -55,7 +55,7 @@ $(CSS_DST)%: $(CSS_SRC)%
 
 # Minimize SVG
 site/%.svg: ims/%.svg
-	scour --strip-xml-prolog --no-line-breaks --enable-comment-stripping -i $< -o $@
+	scour --remove-descriptive-elements --strip-xml-prolog --no-line-breaks --enable-comment-stripping -i $< -o $@
 
 site/%.png: ims/%.png
 	optipng -clobber -o3 $< -out $@
