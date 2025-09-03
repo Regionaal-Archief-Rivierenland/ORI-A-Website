@@ -72,7 +72,7 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 | Statenlid             | Gekozen volksvertegenwoordiger binnen een provincie.                       |
 | Kamerlid              | Gekozen volksvertegenwoordiger binnen de Eerste of Tweede Kamer.           |
 | Dagelijks bestuurslid | Lid van een dagelijks bestuur.                                             |
-| Algemeen bestuurslid  | Lid van een algemeen bestuur.                                              |
+| Algemeen bestuurslid  | Lid van het algemeen bestuur van een waterschap.                           |
 | Inspreker             | Niet-lid dat inspreekt tijdens de vergadering.                             |
 | <del>Overig</del>     | -                                                                          |
 
