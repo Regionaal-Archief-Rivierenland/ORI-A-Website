@@ -76,3 +76,10 @@ body.no-scroll {
     display: flex;
     font-size: inherit;
 }
+
+
+@media (max-width: 400px) {
+    .title svg {
+      display: none;
+  }
+}
