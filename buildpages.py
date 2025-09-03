@@ -136,40 +136,38 @@ def anchor_icon_to_headers(html):
 
 def headers_to_accordions(html):
     soup = BeautifulSoup(html, "html.parser")
-    h1s = soup.find_all("h1")
+    h1s_and_h2s = soup.find_all("h1") + soup.find_all("h2")
 
-    # Section for the title
-    title_section = soup.new_tag("section")
-    new_title = soup.new_tag("h1", id="FAQ")
-    new_title.string = "Veelgestelde vragen"
-    title_section.append(new_title)
+    for h in h1s_and_h2s:
+        if not 'dropdown' in h.attrs.get("class", []):
+            continue
 
-    # Section for the accordions
-    details_section = soup.new_tag("section")
+        h_title = h.get_text().replace('#', '')
 
-    for idx, h in enumerate(h1s):
         details = soup.new_tag("details")
 
         summary = soup.new_tag("summary")
         summary.attrs["role"] = "button"
         summary.attrs["class"] = "outline contrast"
-        summary.string = h.get_text()
+        summary.string = h_title
         details.append(summary)
 
-        # Collect siblings until next h1
+        # Collect siblings until next header
         sibling = h.find_next_sibling()
-        while sibling and sibling.name != "h1":
+        h1_or_h2 = sibling.name in ["h1", "h2"]
+        while sibling and not h1_or_h2:
             next_sibling = sibling.find_next_sibling()
             details.append(sibling.extract())
+
+            if not next_sibling:
+                break
+
+            h1_or_h2 = next_sibling.name in ["h1", "h2"]
             sibling = next_sibling
 
-        details_section.append(details)
+        h.replace_with(details)
 
-        h.decompose()
 
-    # Insert the two sections at the top of the document
-    soup.insert(0, details_section)
-    soup.insert(0, title_section)
 
     return str(soup)
 
@@ -201,12 +199,12 @@ for page in pages:
 
     # process html
     page_contents = add_icon_to_links(page_contents)
+    page_contents = anchor_icon_to_headers(page_contents)
+    page_contents = headers_to_accordions(page_contents)
+    page_contents = add_title_section(page_contents, page["title"])
     page_contents = colorize_inline_xml(page_contents)
 
-    if page["title"] in ["FAQ", "Veelgestelde vragen"]:
-        page_contents = headers_to_accordions(page_contents)
 
-    page_contents = anchor_icon_to_headers(page_contents)
     page_contents = delete_pandoc_cruft(page_contents)
 
     # this needs current_page because that visited page needs to styled in the navbar

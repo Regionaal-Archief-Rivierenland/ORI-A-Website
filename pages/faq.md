@@ -3,7 +3,7 @@ title: Veelgestelde vragen
 position: 5
 ---
 
-# Wat is raadsinformatie, en wat is een videotuul?
+# Wat is raadsinformatie, en wat is een videotuul? {.dropdown}
 
 **Raadsinformatie** is een verzamelnaam voor alle digitale informatie die overheden aanmaken bij politieke en/of bestuurlijke besluitvorming. Deze besluitvorming vindt plaats in vergaderingen.
 
@@ -11,7 +11,7 @@ Een **videotuul** (samenvoeging van "video" en "notulen") is een audiovisueel ve
 
 Een vergadering die is vastgelegd middels een audio-opname wordt ook wel een **audiotuul** genoemd.
 
-# Moeten videotulen worden bewaard?
+# Moeten videotulen worden bewaard? {.dropdown}
 
 Strikt genomen zijn overheden niet altijd verplicht om videotulen te bewaren. Als een vergadering ook schriftelijk is vastgelegd, dan hoort de meest informatierijke bron te worden bewaard. Wel is het vanuit cultuurhistorisch oogpunt belangrijk dat videotulen permanent bewaard worden. Videotulen zijn namelijk een belangrijk onderdeel van de digitale democratie. 
 
@@ -19,7 +19,7 @@ Strikt genomen zijn overheden niet altijd verplicht om videotulen te bewaren. Al
 
 Bron: [Selectielijst gemeenten en intergemeentelijke organen 2020](https://www.nationaalarchief.nl/archiveren/kennisbank/selectielijst-gemeenten-en-intergemeentelijke-organen-2020)
 
-# Waarom een speciale archiefstandaard?
+# Waarom een speciale archiefstandaard? {.dropdown}
 
 ORI en ORI-A hebben vergelijkbare doelstellingen, waaronder het gestandaardiseerd beschikbaarstellen van raadsinformatie.
 
@@ -38,13 +38,13 @@ Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bl
 * **Duurzame toegankelijkheid.** Sommige gegevens in ORI, zoals de datum waarop een vergadering gehouden is, zijn essentieel voor de toekomstige interpreteerbaarheid van raadsinformatie, maar niet verplicht. Om de [duurzame toegankelijkheid](https://www.nationaalarchief.nl/archiveren/kennisbank/duurzaam-toegankelijk) van raadsinformatie te waarborgen zijn zulke gegevens in ORI-A wél verplicht gesteld.
 
 
-# Waarom heeft ORI-A geen aggregatieniveaus?
+# Waarom heeft ORI-A geen aggregatieniveaus? {.dropdown}
 
 ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgesplitst in hiërarchisch gestructureerde niveaus, ook wel bekend als 'aggregatieniveaus'. 
 
 De hoofdreden voor deze relatief platte structuur is dat entiteiten in het  oorspronkelijke ORI informatiemodel bijna allemaal **meervoudige relaties** hebben. Om een voorbeeld te noemen: een raadsvoorstel is weliswaar een onderdeel van een vergadering, maar kan net zo goed onderdeel zijn van iemand's portefeuille, een stemming teweeg brengen, of ondertekend worden door een groep personen. Door deze verstrengelingen lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
 
-# Hoe verhoudt ORI-A zich tot ORI?
+# Hoe verhoudt ORI-A zich tot ORI? {.dropdown}
 
 ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). Dit informatiemodel is aangepast aan de behoeftes van archieven. ORI-A biedt bijvoorbeeld geen ruimte voor gegevens over informatieobjecten, maar verwijst op die momenten naar MDTO. Ook zijn sommige verplichtingen verschillend. Een volledige lijst van de verschillen wordt nog opgemaakt.
 
@@ -56,7 +56,7 @@ Meer achtergrondinformatie over ORI kun je vinden op [de website van de ontwikke
 
 <!-- todo: benoem conversiescripts wanneer die af zijn -->
 
-# Voor wie is ORI-A bedoeld? 
+# Voor wie is ORI-A bedoeld? {.dropdown}
 
 ORI-A is bedoeld voor iedereen die betrokken is bij de duurzame toegankelijkheid van raadsinformatie. In het bijzonder:
 
@@ -66,7 +66,7 @@ ORI-A is bedoeld voor iedereen die betrokken is bij de duurzame toegankelijkheid
 
 Ten slotte kan ORI-A ook dienen als naslagwerk voor iedereen die gebruik wil maken van door overheden gepubliceerde ORI-A metagegevens. Denk bijvoorbeeld aan applicatiebouwers die viewers of zoekmachines voor (openbare) raadsinformatie willen ontwikkelen.
 
-# Wanneer gebruik je ORI-A? 
+# Wanneer gebruik je ORI-A? {.dropdown}
 
 ORI-A is toepasbaar in verschillende scenario’s:
 
