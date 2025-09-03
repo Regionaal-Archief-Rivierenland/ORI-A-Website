@@ -1,5 +1,5 @@
 ---
-title: Hoe werkt ORI-A?
+title: ORI-A XML uitgelegd
 title-icon: boek.svg
 position: 2
 ---
