@@ -1,5 +1,6 @@
 ---
 title: Begrippenlijsten
+title-icon: lijst.svg
 position: 4
 ---
 

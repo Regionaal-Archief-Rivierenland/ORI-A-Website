@@ -1,5 +1,6 @@
 ---
 title: Hoe werkt ORI-A?
+title-icon: boek.svg
 position: 2
 ---
 

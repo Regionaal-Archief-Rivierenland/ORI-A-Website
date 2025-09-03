@@ -1,5 +1,6 @@
 ---
 title: Veelgestelde vragen
+title-icon: faq.svg
 position: 5
 ---
 

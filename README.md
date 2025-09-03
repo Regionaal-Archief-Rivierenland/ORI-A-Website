@@ -52,3 +52,10 @@ Die kun je vervolgens raadplegen door bijv. `python -m http.server .` in die map
 * `Makefile`
   * GNU makefile die alle scripts uitvoert die nodig zijn om de website te bouwen en _resources_ te minimaliseren
   * Heeft ~~te veel~~ heel veel afhankelijkheden
+
+# Attributies
+
+De ORI-A website gebruikt icoontjes uit de volgende projecten:
+
+* [iconior](https://iconoir.com/) (MIT License)
+* [phosphor](https://phosphoricons.com/) (MIT License)

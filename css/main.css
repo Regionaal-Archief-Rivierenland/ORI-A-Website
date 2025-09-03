@@ -20,6 +20,13 @@ official woff2 files from the Lato website had vertical spacing issues
 
 @font-face {
     font-family: "Lato";
+    src: url("lato-black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
     src: url("lato-bold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
@@ -30,6 +37,19 @@ official woff2 files from the Lato website had vertical spacing issues
     src: url("CommitMonoVariable.woff2") format("woff2");
     font-weight: 400 700;
     font-style: normal;
+}
+
+.title {
+    font-family: "Lato black";
+    font-size: 2.5rem;
+    display: inline-flex;
+    align-items: end;
+    gap: 0.2em;
+    line-height: 1;
+}
+
+.title svg {
+    width: 1.0em;
 }
 
 figure {

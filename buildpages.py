@@ -8,6 +8,7 @@ import re
 import glob
 
 pages_folder = "pages"
+icons_folder = "site"
 html_folder = "pages"
 output_folder = "site"
 
@@ -24,6 +25,7 @@ def pageinfo(filestem):
     # get title from YAML frontmatter
     doc = frontmatter.load(filestem + ".md")
     title = doc.metadata["title"]
+    title_icon = doc.metadata.get('title-icon', None)
     position = int(doc.metadata.get("position", 0))
     hide = bool(doc.metadata.get("hide_from_navigation", False))
 
@@ -58,6 +60,7 @@ def pageinfo(filestem):
 
     return {
         "title": title,
+        "title-icon": title_icon,
         "position": position,
         "hide": hide,
         "filename": f"{filestem.removeprefix(f'{pages_folder}/')}",
@@ -76,6 +79,40 @@ def add_icon_to_links(html):
 
     return str(soup)
 
+def add_title_section(html, title, icon):
+    soup = BeautifulSoup(html, "html.parser")
+
+    title_tag = soup.new_tag('h1')
+    title_tag.string = title
+    title_tag["class"] = "title"
+    soup.insert(0, title_tag)
+
+    if icon:
+        if icon.endswith('.svg'):
+            with open(f"{icons_folder}/{icon}", "r") as f:
+                icon_tag = BeautifulSoup(f.read(), 'html.parser').svg
+                icon_tag["aria-hidden"] = "true"
+                title_tag.insert(0, icon_tag)
+        elif type(icon) == str:
+            # "icons" can be plain text
+            span = soup.new_tag('span')
+            span["aria-hidden"] = "true"
+            span["role"] = "presentation"
+            span.string = icon + " "
+            title_tag.insert(0, span)
+
+
+
+    hrule = soup.new_tag('hr')
+    first_sibling = title_tag.find_next_sibling()
+    # add hrule after first p
+    if first_sibling.name == "p":
+        first_sibling["class"] = "muted"
+        first_sibling.insert_after(hrule)
+    else:
+        title_tag.insert_after(hrule)
+
+    return str(soup)
 
 def delete_pandoc_cruft(html):
     """
@@ -201,7 +238,7 @@ for page in pages:
     page_contents = add_icon_to_links(page_contents)
     page_contents = anchor_icon_to_headers(page_contents)
     page_contents = headers_to_accordions(page_contents)
-    page_contents = add_title_section(page_contents, page["title"])
+    page_contents = add_title_section(page_contents, page["title"], page["title-icon"])
     page_contents = colorize_inline_xml(page_contents)
 
 
