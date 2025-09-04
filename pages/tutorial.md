@@ -34,7 +34,7 @@ Het meest simpele ORI-A XML-bestand bestaat uit een **vergadering** met een lijs
 ```
 
 
-Neem bijvoorbeeld de vergadering hierboven, met de simpele titel 'Gemeenteraad'. In ORI-A XML zou je deze vergadering zo uitdrukken:
+Neem bijvoorbeeld de vergadering hierboven, met als officiële titel simpelweg 'Gemeenteraad'. In ORI-A XML zou je deze vergadering zo uitdrukken:
 
 ``` xml
 <ORI-A>
