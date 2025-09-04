@@ -4,7 +4,7 @@ title-icon: download.svg
 position: 8
 ---
 
-Hier vindt je bestanden die je helpen bij het maken, begrijpen of valideren van ORI-A metagegevens.
+Hier vind je bestanden die je helpen bij het maken, begrijpen of valideren van ORI-A metagegevens.
 
 # XML-schema
 
@@ -12,9 +12,9 @@ Hier vindt je bestanden die je helpen bij het maken, begrijpen of valideren van 
 <!-- **Tip:**  Technische feedback of vragen over de XSD kun je achterlaten op [Github](https://github.com/regionaal-archief-rivierenland/ORI-A-XSD/issues). -->
 <!-- ::: -->
 
-Het ORI-A XML-schema beschrijft de regels van valide ORI-A XML. Je kan dit schema gebruiken om te **controleren** of een XML document valide ORI-A XML bevat.
+Het ORI-A XML-schema beschrijft de regels van valide ORI-A XML. Je kan dit schema gebruiken om te **controleren** of een XML-document valide ORI-A XML bevat.
 
-Dit schema is beschikbaar in het **XSD bestandsformaat**.
+Dit schema is beschikbaar in het **XSD-bestandsformaat**.
 
 ![Valideren van ORI-A XML](validatie.svg){ width=95% }
 
@@ -34,17 +34,17 @@ Dit schema is beschikbaar in het **XSD bestandsformaat**.
 </div>
 ```
 
-## Semantisch versionering {.dropdown}
+## Semantisch versioneren {.dropdown}
 
-Het ORI-A XML-schema houdt een vorm van [semantisch versionering](https://semver.org/lang/nl/) aan. Dit betekent dat elk fragment van een versienummer in de vorm `MAJEUR.MINEUR.PATCH` een speciale betekenis draagt:
+Het ORI-A XML-schema houdt een vorm van [semantisch versioneren](https://semver.org/lang/nl/) aan. Dit betekent dat elk fragment van een versienummer in de vorm `MAJEUR.MINEUR.PATCH` een speciale betekenis draagt:
 
-1. `MAJEUR` wordt verhoogt bij schema wijzigingen die bestaande ORI-A XML onvalide maakt.
+1. `MAJEUR` wordt verhoogt bij schemawijzigingen die bestaande ORI-A XML onvalide maakt.
 2. `MINEUR` wordt verhoogt wanneer functionaliteit wordt toegevoegd _zonder_ de status van bestaande ORI-A XML te veranderen (ook wel "compatibele wijzigingen").
 3. `PATCH` wordt verhoogt bij compatibele _bugfixes_, zoals correcties in de documentatie.
 
 Kort gezegd: alle XML die valide is bevonden op basis van schema versie `1.1.0` is nog steeds valide in versie `1.2.1`, maar _niet_ valide in versie `2.0.0`.
 
-## Versie wijzigingen {.dropdown}
+## Versiewijzigingen {.dropdown}
 
 [Volledig overzicht van wijzigingen](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/commits/main/) | [Historische versies van de XSD](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/releases)
 
@@ -60,7 +60,7 @@ Een voorbeeld van hoe je een vergadering kan beschrijven in ORI-A XML. De voorbe
 **Tip:** Voor meer informatie over ORI-A + MDTO, zie [ORI-A & MDTO combineren](ORI-A & MDTO combineren).
 :::
 
-De vergadering in kwestie [is gebaseerd op een gemeenteraad van de gemeente Leiden](https://leiden.parlaeus.nl/app/public/agenda/8028228820022a0a0282a0a8814c778c/vod). Sommige gegevens zijn om didactische redenen gefictionaliseerd of ingekort.
+De vergadering in kwestie [is gebaseerd op een vergadering van de gemeenteraad van de gemeente Leiden](https://leiden.parlaeus.nl/app/public/agenda/8028228820022a0a0282a0a8814c778c/vod). Sommige gegevens zijn om didactische redenen gefictionaliseerd of ingekort.
 
 
 <figure style="text-align: left">
@@ -96,7 +96,7 @@ Voorbeelden/
 
 ## Gebruikersscenario: ORI-A voorbeeldbestanden in Preservica
 
-Gebruikersscenario door Erfgoed Leiden & Omstreken waar andere Preservica gebruikers mogelijk inspiratie uit op kunnen doen.
+Gebruikersscenario van Erfgoed Leiden & Omstreken waar andere Preservica gebruikers mogelijk inspiratie uit op kunnen doen.
 
 TODO
 
@@ -104,7 +104,7 @@ TODO
 
 Het ORI-A diagram is een visuele, op UML-geïnspireerde weergave van het ORI-A informatiemodel. Nuttig als je een globaal plaatje van ORI-A wilt krijgen.
 
-Verplichte gegevens zijn **dik gedrukt**.
+Verplichte gegevens zijn **dikgedrukt**.
 
 <figure class="largefigure">
     <a href="ORI-A-diagram.pdf" target="_blank">
