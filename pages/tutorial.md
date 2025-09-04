@@ -34,7 +34,7 @@ Het meest simpele ORI-A XML-bestand bestaat uit een **vergadering** met een lijs
 ```
 
 
-Neem bijvoorbeeld de vergadering hierboven, met de ietwat onoriginele titel 'Gemeenteraad'. In ORI-A XML zou je deze vergadering zo uitdrukken:
+Neem bijvoorbeeld de vergadering hierboven, met de simpele titel 'Gemeenteraad'. In ORI-A XML zou je deze vergadering zo uitdrukken:
 
 ``` xml
 <ORI-A>
@@ -63,11 +63,11 @@ Dit zegt:
 
 > Er was **30 november 2023** een vergadering genaamd 'Gemeenteraad' met **twee agendapunten**. Tijdens het agendapunt met volgnummer 1 kwam de vaststelling van de agenda aan bod, en bij het volgende agendapunt was er ruimte voor mededelingen.
 
-Een goed begin, maar nog niet super informatief.
+Een goed begin, maar nog niet heel informatief.
 
 # Begrippenlijsten gebruiken
 
-Meestal wil je ook nog weten _wie_ de vergadering heeft georganiseerd. In ORI-A doe je dit door een `<bestuurslaag>` aan je vergadering toe te voegen:
+Meestal wil je ook weten _wie_ de vergadering heeft georganiseerd. In ORI-A doe je dit door een `<bestuurslaag>` aan je vergadering toe te voegen:
 
 ``` xml
 <vergadering>
