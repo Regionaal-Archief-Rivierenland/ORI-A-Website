@@ -15,3 +15,11 @@ De Open Raadsinformatie Archiefstandaard is een initiatief van en wordt beheerd 
 * **Zeeuws Archief**
 
 Oud-deelnemers: **Regionaal Archief Zutphen**, **Waterlands Archief**
+
+# Dankwoord
+
+Dank aan de volgende RIS leveranciers voor het beschikbaarstellen van test- en voorbeeldbestanden:
+
+* Parleaus
+* iBabs
+* Notubiz
