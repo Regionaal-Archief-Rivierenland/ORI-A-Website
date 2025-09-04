@@ -19,6 +19,12 @@ PDF_DST := $(patsubst pdfs/%.pdf, site/%.pdf, $(PDF_SRC))
 MD_SRC := $(wildcard pages/*.md)
 HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
 
+# we're not compiling this everytime, because the pipeline kind of sucks. Like this pulls inkscape
+# VALIDATIE_DIAGRAM_DST := site/validatie.svg
+# VALIDATIE_DIAGRAM_TEX := diagram/validatie.tex
+# # validatie.tex depends on specific svgs to compile
+# VALIDATIE_DIAGRAM_DEPS := $(VALIDATIE_DIAGRAM_TEX) diagram/empty-page.svg diagram/window-xml.svg diagram/xmark-solid.svg diagram/check-solid.svg 
+
 MAIN_HTML = over-ori-a.html
 
 FONT_TITLE := lato.woff2
@@ -110,6 +116,11 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 # copy/minify js
 site/%.js: js/%.js
 	uglifyjs $< -o $@ -c -m
+
+
+$(VALIDATIE_DIAGRAM_DST): $(VALIDATIE_DIAGRAM_DEPS)
+	pdflatex --shell-escape $(VALIDATIE_DIAGRAM_TEX)
+	mutool draw -o $@ diagram/validatie.pdf
 
 generate-tables: $(TABLE_DST)
 
