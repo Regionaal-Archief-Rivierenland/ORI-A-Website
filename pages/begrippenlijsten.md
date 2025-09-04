@@ -62,7 +62,7 @@ Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een verg
 | Statenlid             | Gekozen volksvertegenwoordiger binnen een provincie.                       |
 | Kamerlid              | Gekozen volksvertegenwoordiger binnen de Eerste of Tweede Kamer.           |
 | Dagelijks bestuurslid | Lid van een dagelijks bestuur.                                             |
-| Algemeen bestuurslid  | Lid van het algemeen bestuur van een waterschap.                           |
+| Algemeen bestuurslid  | Lid van een algemeen bestuur.                                              |
 | Inspreker             | Niet-lid dat inspreekt tijdens de vergadering.                             |
 | <del>Overig</del>     | -                                                                          |
 
