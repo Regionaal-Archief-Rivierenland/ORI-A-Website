@@ -79,6 +79,4 @@ ORI-A is toepasbaar in verschillende scenario’s:
 - **Bij het gebruiken van metagegevens:** met behulp van het XML-schema en het metagegevensschema kunnen gebruikers metadata lezen en interpreteren. 
 - **Bij het vormgeven van de presentatie van raadsinformatie in een e-depot:** ORI-A bevat in de basis alle benodigde data-elementen om de presentatie van raadsinformatie in onderlinge samenhang mogelijk te maken. 
 
-# Hoe spel je ORI•A? 
 
-ORI-A mag je zowel spellen met een bolletje (ORI•A) als met een streepje (ORI-A). In het logo en ander (visueel) promotiemateriaal gebruik je bij voorkeur het bolletje, in unicode bekend als u+222.
