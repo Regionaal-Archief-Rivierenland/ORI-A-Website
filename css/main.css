@@ -293,6 +293,26 @@ table.stickytable th {
     height: 100%;
 }
 
+.download button {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers icon + text as a group */
+  gap: 0.5em;
+  white-space: nowrap; /* keeps strong + trailing text glued */
+}
+
+
+.download button::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: currentColor;
+  mask: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg"><path d="M200 124v64a12 12 0 0 1-12 12H12a12 12 0 0 1-12-12v-64a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0m-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L112 95V12a12 12 0 0 0-24 0v83L68.49 75.51a12 12 0 0 0-17 17z"/></svg>') no-repeat center / contain;
+
+}
+
+
 .maingrid {
   display: grid;
   grid-template-areas:
