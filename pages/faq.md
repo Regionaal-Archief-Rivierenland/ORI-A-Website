@@ -28,7 +28,7 @@ ORI en ORI-A hebben vergelijkbare doelstellingen, waaronder het gestandaardiseer
 
 Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bleek:
 
-* **XML ondersteuning.** ORI is alleen beschikbaar in het [JSON bestandsformaat](https://en.wikipedia.org/wiki/JSON). Alhoewel er niks mis is met JSON, ondersteunen e-depots en de software die archiefinstellingen gebruiken meestal alleen XML. Door een XML standaard en [aansluitend validatie-schema](https://en.wikipedia.org/wiki/XML_Schema_(W3C)) te ontwikkelen --- [de ORI-A XSD](downloads) --- sluit ORI-A beter aan op gewoontes in de archiefsector.
+* **XML ondersteuning.** ORI is alleen beschikbaar in het [JSON bestandsformaat](https://en.wikipedia.org/wiki/JSON). Alhoewel er niks mis is met JSON, ondersteunen e-depots en de software die archiefinstellingen gebruiken meestal alleen XML. ORI-A is ontwikkeld als een [XML-schema](downloads), waardoor het beter aansluit bij gewoontes in de archiefsector.
 
 * **Aansluiten bij bestaande (archief)standaarden.** [Het Nationaal Archief raadt aan](https://www.nationaalarchief.nl/archiveren/mdto#collapse-102790) algemene gegevens over informatieobjecten --- zoals aanmaakdatum en auteur --- vast te leggen in MDTO, een metadatastandaard gericht op het duurzaam toegankelijk maken van overheidsdocumenten. In tegenstelling tot ORI is ORI-A zo ontwikkeld dat deze taak volledig bij MDTO blijft.  ORI-A richt zich daarentegen uitsluitend op **domeinspecifieke gegevens** --- oftewel, raadsinformatie.
 
@@ -45,16 +45,18 @@ Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bl
 
 ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgesplitst in hiërarchisch gestructureerde niveaus, ook wel bekend als 'aggregatieniveaus'. 
 
-De hoofdreden voor deze relatief platte structuur is dat entiteiten in het  oorspronkelijke ORI informatiemodel bijna allemaal **meervoudige relaties** hebben. Om een voorbeeld te noemen: een raadsvoorstel is weliswaar een onderdeel van een vergadering, maar kan net zo goed onderdeel zijn van iemand's portefeuille, een stemming teweeg brengen, of ondertekend worden door een groep personen. Door deze verstrengelingen lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
+De hoofdreden voor deze relatief platte structuur is dat entiteiten in het ORI-informatiemodel bijna allemaal **meervoudige relaties** hebben. Om een voorbeeld te noemen: een aanwezige deelnemer neemt weliswaar deel aan een vergadering, maar kan net zo goed deelnemen aan een stemming, of spreken tijdens een agendapunt. Door deze verstrengelingen lijkt een raadsvergadering meer op een spinnenweb dan een hiërarchische boomstructuur.
+
+<!-- "Voor sommige e-depots is het handig als ORI-A XML-bestanden bij het opmaken van een levering worden opgeknipt en verspreid over de aggregatieniveaus in een MDTO sidecar-structuur. Zie hiervoor de voorbeeldimplementatie van ELO" (Hier een link opnemen naar de voorbeeldbestanden van ELO, waarin ORI-A gegevens in de MDTO aggregatieniveaus is onderverdeeld) -->
 
 # Hoe verhoudt ORI-A zich tot ORI? {.dropdown}
 
-ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). Dit informatiemodel is aangepast aan de behoeftes van archieven. ORI-A biedt bijvoorbeeld geen ruimte voor gegevens over informatieobjecten, maar verwijst op die momenten naar MDTO. Ook zijn sommige verplichtingen verschillend. Een volledige lijst van de verschillen wordt nog opgemaakt.
+ORI-A is gebaseerd op het informatiemodel dat is ontworpen voor de [Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). Dit informatiemodel is aangepast aan de behoeftes van archieven. In tegenstelling tot ORI biedt ORI-A bijvoorbeeld geen ruimte aan gegevens over informatieobjecten, maar verwijst op die momenten naar MDTO. Ook zijn sommige verplichtingen verschillend. Een volledige lijst van de verschillen wordt nog opgemaakt.
 
 Ondanks deze kleine aanpassingen is wel geprobeerd ORI-A **interoperabel** te houden met ORI. Formeler gezegd: je kan ORI zonder informatieverlies converteren naar een combinatie van ORI-A en MDTO (zie ook [round-trip format conversion](https://en.wikipedia.org/wiki/Round-trip_format_conversion)). De andere kant op (ORI-A + MDTO → ORI) kan ook, maar dan treedt mogelijk informatieverlies op, aangezien ORI-A + MDTO een _superset_ is van ORI.
 
 ::: waarschuwing
-Meer achtergrondinformatie over ORI kun je vinden op [de website van de ontwikkelaars van openbesluitvorming.nl](https://ontola.io/nl/cases/openbesluitvorming/) en [de website van openstate.eu](https://openstate.eu/nl/projecten-tools-data/besluiten/open-raadsinformatie/).
+Meer achtergrondinformatie over de verschillende projecten rondom ORI kun je vinden op [de website van de ontwikkelaars van openbesluitvorming.nl](https://ontola.io/nl/cases/openbesluitvorming/) en [de website van openstate.eu](https://openstate.eu/nl/projecten-tools-data/besluiten/open-raadsinformatie/).
 :::
 
 <!-- todo: benoem conversiescripts wanneer die af zijn -->
