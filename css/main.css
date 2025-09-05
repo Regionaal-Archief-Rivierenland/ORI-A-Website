@@ -81,7 +81,6 @@ figure {
 
 html {
     scroll-behavior: smooth;
-    text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, #documentation-menu, .logo {
