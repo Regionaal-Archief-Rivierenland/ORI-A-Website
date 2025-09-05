@@ -4,7 +4,7 @@ title-icon: faq.svg
 position: 5
 ---
 
-Staat je vraag hier niet tussen? Stel je vraag op [onze Github](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/discussions/categories/q-a)!
+Staat je vraag hier niet tussen? Stel je vraag op [onze Github!](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/discussions/categories/q-a)
 
 # Wat is raadsinformatie, en wat is een videotuul? {.dropdown}
 
