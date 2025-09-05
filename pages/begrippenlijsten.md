@@ -26,13 +26,13 @@ Alle begrippenlijsten die onderdeel zijn van **ORI-A** worden hieronder gedocume
 
 ## TOOI Begrippenlijsten
 
-Een paar begrippenlijsten die van toepassing zijn op **ORI-A** worden beheerd door **TOOI**, [een standaardisatie project opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/):
+Een paar begrippenlijsten die van toepassing zijn op **ORI-A** worden beheerd door **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/):
 
 * [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 
-# Vergaderstuk types
+# Vergaderstuktypes
 
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](tutorial#gebruik-van-ori-a-met-mdto).
 
@@ -105,13 +105,15 @@ Een lijst met verschillende soorten relaties tussen personen en vergaderstukken.
 </informatieobject>
 ```
 -->
+
+
 | Label              | Definitie                                                    |
 |:-------------------|:-------------------------------------------------------------|
 | Indiener           | Indiener van een vergaderstuk (herkomst: VNG's ORI).         |
 | Ondertekenaar      | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI).    |
 | Portefeuillehouder | De portefeuillehouder van een voorstel (herkomst: VNG's ORI) |
 
-# Mediabron types
+# Mediabrontypes
 
 Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
 
