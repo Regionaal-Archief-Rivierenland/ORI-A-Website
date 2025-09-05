@@ -34,7 +34,6 @@ Een volledige lijst van hoe naar de door ORI-A beheerde begrippenlijsten kan wor
 
 ## TOOI Begrippenlijsten
 
-Een paar begrippenlijsten die van toepassing zijn op **ORI-A** worden beheerd door **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/):
 Een paar begrippenlijsten die van toepassing zijn op **ORI-A** worden beheerd door **TOOI**. Dit betreft de begrippenlijsten voor het element **Bestuurslaag**:
 
 * [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
