@@ -8,28 +8,7 @@ Hier vind je informatie over de momenten waarop ORI-A gebruik maakt van begrippe
 
 Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten.
 
-# Begrippenlijsten gebruiken
-
-Vanuit ORI-A XML kan op de volgende manier naar een begrippenlijst worden verwezen, in dit voorbeeld naar die van Vergaderstuktypes:
-
-``` xml
-<vergaderstukType>
-    <begripLabel>Motie</begripLabel>
-    <verwijzingBegrippenlijst>
-        <verwijzingID>www.ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
-        <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuktypes</verwijzingNaam>
-    </verwijzingBegrippenlijst>
-</vergaderstukType>
-```
-
 Alle begrippenlijsten die onderdeel zijn van **ORI-A** worden hieronder gedocumenteerd.
-Een volledige lijst van hoe naar de door ORI-A beheerde begrippenlijsten kan worden verwezen:
-| verwijzingID                                                       | verwijzingNaam                                        |
-|:-------------------------------------------------------------------|:------------------------------------------------------|
-| https://ori-a.nl/begrippenlijsten#vergaderstuktypes                | ORI-A Begrippenlijst Vergaderstuktypes                |
-| https://ori-a.nl/begrippenlijsten#deelnemerrollenMotie             | ORI-A Begrippenlijst Deelnemerrollen                  |
-| https://ori-a.nl/begrippenlijsten#mediabrontypes                   | ORI-A Begrippenlijst Mediabrontypes                   |
-| https://ori-a.nl/begrippenlijsten#betrokkene-vergaderstuk-relaties | ORI-A Begrippenlijst Betrokkene-vergaderstuk relaties |
 
 
 ## TOOI Begrippenlijsten
@@ -123,14 +102,32 @@ In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergad
 | Portefeuillehouder | De portefeuillehouder van een voorstel. |
 
 # Mediabrontypes
+# Begrippenlijsten gebruiken
 
 Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
+Vanuit ORI-A XML kan op de volgende manier naar een begrippenlijst worden verwezen, in dit voorbeeld naar die van Vergaderstuktypes:
 
+``` xml
+<vergaderstukType>
+    <begripLabel>Motie</begripLabel>
+    <verwijzingBegrippenlijst>
+        <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
+        <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuktypes</verwijzingNaam>
+    </verwijzingBegrippenlijst>
+</vergaderstukType>
+```
 
 | Label        | Definitie                                                                 |
 |:-------------|:--------------------------------------------------------------------------|
 | Video        | Een audiovisuele opname van een vergadering. Ook wel 'videotuul'.         |
 | Audio        | Een geluidsopname van een vergadering. Ook wel 'audiotuul'.               |
 | Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
+Een volledige lijst van hoe naar de door ORI-A beheerde begrippenlijsten kan worden verwezen:
+| verwijzingID                                                       | verwijzingNaam                                        |
+|:-------------------------------------------------------------------|:------------------------------------------------------|
+| https://ori-a.nl/begrippenlijsten#vergaderstuktypes                | ORI-A Begrippenlijst Vergaderstuktypes                |
+| https://ori-a.nl/begrippenlijsten#deelnemerrollenMotie             | ORI-A Begrippenlijst Deelnemerrollen                  |
+| https://ori-a.nl/begrippenlijsten#mediabrontypes                   | ORI-A Begrippenlijst Mediabrontypes                   |
+| https://ori-a.nl/begrippenlijsten#betrokkene-vergaderstuk-relaties | ORI-A Begrippenlijst Betrokkene-vergaderstuk relaties |
 
 
