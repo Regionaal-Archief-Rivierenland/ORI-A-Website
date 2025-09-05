@@ -10,14 +10,14 @@ Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standa
 
 # Begrippenlijsten gebruiken
 
-Een begrippenlijst roep je zo aan:
+Vanuit ORI-A XML kan op de volgende manier naar een begrippenlijst worden verwezen, in dit voorbeeld naar die van Vergaderstuktypes:
 
 ``` xml
 <vergaderstukType>
     <begripLabel>Motie</begripLabel>
     <verwijzingBegrippenlijst>
-        <verwijzingID>www.ori-a.nl/begrippenlijsten#vergaderstuk-types</verwijzingID>
-        <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuk Types</verwijzingNaam>
+        <verwijzingID>www.ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
+        <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuktypes</verwijzingNaam>
     </verwijzingBegrippenlijst>
 </vergaderstukType>
 ```
