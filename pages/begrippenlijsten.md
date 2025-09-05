@@ -11,7 +11,7 @@ Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standa
 Alle begrippenlijsten die onderdeel zijn van **ORI-A** worden hieronder gedocumenteerd.
 
 
-## TOOI Begrippenlijsten
+# TOOI Begrippenlijsten
 
 Een paar begrippenlijsten die van toepassing zijn op **ORI-A** worden beheerd door **TOOI**. Dit betreft de begrippenlijsten voor het element **Bestuurslaag**:
 
@@ -19,8 +19,9 @@ Een paar begrippenlijsten die van toepassing zijn op **ORI-A** worden beheerd do
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet/2)
 * [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_provincies_compleet/1)
 
+# ORI-A Begrippenlijsten
 
-# Vergaderstuktypes
+## Vergaderstuktypes
 
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](tutorial#gebruik-van-ori-a-met-mdto).
 
@@ -34,7 +35,7 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 | Antwoord   | Antwoord op een vraag aan de raad.                                         |
 
 
-# Deelnemerrollen
+## Deelnemerrollen
 
 Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
 
@@ -62,7 +63,6 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 
 :::
 
-# Betrokkene-vergaderstuk relaties
 ## Mediabrontypes
 
 Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
@@ -74,6 +74,7 @@ Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worde
 | Audio        | Een geluidsopname van een vergadering. Ook wel 'audiotuul'.               |
 | Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
 
+## Betrokkene-vergaderstuk relaties
 
 In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergaderstukken. In ORI-A is geen plek voor deze informatie gemaakt, omdat deze informatie het best in MDTO kan worden uitgedrukt - het is immers contextinformatie over een informatieobject. De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
 
