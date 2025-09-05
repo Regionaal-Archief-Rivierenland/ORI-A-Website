@@ -63,6 +63,17 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 :::
 
 # Betrokkene-vergaderstuk relaties
+## Mediabrontypes
+
+Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
+
+
+| Label        | Definitie                                                                 |
+|:-------------|:--------------------------------------------------------------------------|
+| Video        | Een audiovisuele opname van een vergadering. Ook wel 'videotuul'.         |
+| Audio        | Een geluidsopname van een vergadering. Ook wel 'audiotuul'.               |
+| Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
+
 
 In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergaderstukken. In ORI-A is geen plek voor deze informatie gemaakt, omdat deze informatie het best in MDTO kan worden uitgedrukt - het is immers contextinformatie over een informatieobject. De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
 
@@ -101,10 +112,8 @@ In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergad
 | Ondertekenaar      | Ondertekenaar van een vergaderstuk.     |
 | Portefeuillehouder | De portefeuillehouder van een voorstel. |
 
-# Mediabrontypes
 # Begrippenlijsten gebruiken
 
-Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
 Vanuit ORI-A XML kan op de volgende manier naar een begrippenlijst worden verwezen, in dit voorbeeld naar die van Vergaderstuktypes:
 
 ``` xml
@@ -117,11 +126,6 @@ Vanuit ORI-A XML kan op de volgende manier naar een begrippenlijst worden verwez
 </vergaderstukType>
 ```
 
-| Label        | Definitie                                                                 |
-|:-------------|:--------------------------------------------------------------------------|
-| Video        | Een audiovisuele opname van een vergadering. Ook wel 'videotuul'.         |
-| Audio        | Een geluidsopname van een vergadering. Ook wel 'audiotuul'.               |
-| Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
 Een volledige lijst van hoe naar de door ORI-A beheerde begrippenlijsten kan worden verwezen:
 | verwijzingID                                                       | verwijzingNaam                                        |
 |:-------------------------------------------------------------------|:------------------------------------------------------|
