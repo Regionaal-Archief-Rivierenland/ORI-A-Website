@@ -8,18 +8,18 @@
     </tr>
   </thead>
   <tbody>
-    {% for row in rows %}
+    {%- for row in rows -%}
     <tr>
       <td>
         <div class="small"><strong style="font-weight: 600">{{ row.naam_wbr | safe }}</strong></div>
         <p class="toelichting">{{ row.toelichting }}</p>
         {% if row.opties %}
         <p class="toelichting"><strong>Keuze uit:</strong> {{ row.opties | join(', ') }}</p>
-        {% endif %}
+        {%- endif -%}
       </td>
       <td style="text-align: center">
         <!-- span is needed to make the opacity work -->
-        <span class="icon-cell {{ '' if row.verplicht else 'muted' }}" 
+        <span class="icon-cell {{ '' if row.verplicht else 'muted' }}"
               aria-label="{{ 'Verplicht' if row.verplicht else 'Niet verplicht' }}">
           {{- '✓' if row.verplicht else '×' -}}
         </span>
@@ -31,19 +31,17 @@
         </span>
       </td>
       <td>
-        {% if row.datatype_url %}
-        <a href="{{ row.datatype_url }}" class="secondary">
-          <code class=" {{ row.datatype_width_class }}">
+        {% if row.datatype_url -%}
+        <a href="{{ row.datatype_url }}" class="secondary"><code class=" {{ row.datatype_width_class }}">
             {{- row.datatype_wbr | safe -}}
-          </code>
-        </a>
-        {% elif row.datatype_tooltip %}
+          </code></a>
+        {%- elif row.datatype_tooltip -%}
         <code data-tooltip="{{ row.datatype_tooltip }}">{{ row.datatype }}</code>
-        {% else %}
+        {%- else -%}
         <code>{{ row.datatype }}</code>
-        {% endif %}
+        {%- endif -%}
       </td>
     </tr>
-    {% endfor %}
+    {%- endfor -%}
   </tbody>
 </table>

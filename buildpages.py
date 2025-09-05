@@ -12,7 +12,7 @@ icons_folder = "site"
 html_folder = "pages"
 output_folder = "site"
 
-env = Environment(loader=FileSystemLoader("templates"), trim_blocks=True)
+env = Environment(loader=FileSystemLoader("templates"), trim_blocks=True, lstrip_blocks=True)
 base_template = env.get_template("base.html")
 navbar_template = env.get_template("navbar.html")
 navbar_nested_template = env.get_template("navbar_nested.html")
