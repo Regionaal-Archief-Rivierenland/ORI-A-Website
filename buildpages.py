@@ -104,11 +104,18 @@ def add_title_section(html, title, icon):
 
 
     hrule = soup.new_tag('hr')
-    first_sibling = title_tag.find_next_sibling()
+
+    # make p tags muted until you find something different
+    sibling = title_tag.find_next_sibling()
+    p_siblings = []
+    while sibling.name == "p":
+        sibling["class"] = "muted"
+        p_siblings.append(sibling)
+        sibling = sibling.find_next_sibling()
+
     # add hrule after first p
-    if first_sibling.name == "p":
-        first_sibling["class"] = "muted"
-        first_sibling.insert_after(hrule)
+    if p_siblings:
+        p_siblings[-1].insert_after(hrule)
     else:
         title_tag.insert_after(hrule)
 
