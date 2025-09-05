@@ -86,7 +86,7 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 
 # Betrokkene-vergaderstuk relaties
 
-Een lijst met verschillende soorten relaties tussen personen en vergaderstukken. Relevant binnen MDTO om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
+In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergaderstukken. In ORI-A is geen plek voor deze informatie gemaakt, omdat deze informatie het best in MDTO kan worden uitgedrukt - het is immers contextinformatie over een informatieobject. De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
 
 
 
@@ -117,11 +117,11 @@ Een lijst met verschillende soorten relaties tussen personen en vergaderstukken.
 -->
 
 
-| Label              | Definitie                                                    |
-|:-------------------|:-------------------------------------------------------------|
-| Indiener           | Indiener van een vergaderstuk (herkomst: VNG's ORI).         |
-| Ondertekenaar      | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI).    |
-| Portefeuillehouder | De portefeuillehouder van een voorstel (herkomst: VNG's ORI) |
+| Label              | Definitie                               |
+|:-------------------|:----------------------------------------|
+| Indiener           | Indiener van een vergaderstuk.          |
+| Ondertekenaar      | Ondertekenaar van een vergaderstuk.     |
+| Portefeuillehouder | De portefeuillehouder van een voorstel. |
 
 # Mediabrontypes
 
