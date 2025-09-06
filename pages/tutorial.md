@@ -337,13 +337,13 @@ Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van
     <betrokkene>
 	    <betrokkeneTypeRelatie>
 		    <begripLabel>Indiener</begripLabel>
-		    <verwijzingBegrippenlijst>
+		    <begripBegrippenlijst>
 			    <verwijzingNaam>Betrokkene-vergaderstuk relaties</verwijzingNaam>
 			    <verwijzingIdentificatie>
 				    <identificatieKenmerk>https://ori-a.nl/begrippenlijsten#betrokkene-vergaderstuk-relaties</identificatieKenmerk>
 				    <identificatieBron>ORI-A</identificatieBron>
 			    </verwijzingIdentificatie>
-		    </verwijzingBegrippenlijst>
+		    </begripBegrippenlijstt>
 	    </betrokkeneTypeRelatie>
 	    <betrokkeneActor>
 		    <verwijzingNaam>Jan de Vries</verwijzingNaam>
@@ -353,7 +353,6 @@ Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van
 		    </verwijzingIdentificatie>
 	    </betrokkeneActor>
     </betrokkene>
-    …
 ```
 
 
