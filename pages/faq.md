@@ -40,7 +40,6 @@ Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bl
 
 * **Duurzame toegankelijkheid.** Sommige gegevens in ORI, zoals de datum waarop een vergadering gehouden is, zijn essentieel voor de toekomstige interpreteerbaarheid van raadsinformatie, maar niet verplicht. Om de [duurzame toegankelijkheid](https://www.nationaalarchief.nl/archiveren/kennisbank/duurzaam-toegankelijk) van raadsinformatie te waarborgen zijn zulke gegevens in ORI-A wél verplicht gesteld.
 
-
 # Waarom heeft ORI-A geen aggregatieniveaus? {.dropdown}
 
 ORI-A draait om de entiteit vergadering. Deze vergadering is niet verder opgesplitst in hiërarchisch gestructureerde niveaus, ook wel bekend als 'aggregatieniveaus'. 
