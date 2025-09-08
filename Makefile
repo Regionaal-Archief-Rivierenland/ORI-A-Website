@@ -134,6 +134,8 @@ prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(
 buildpages: prepare-site
 	python3 buildpages.py
 	ln -srf site/$(MAIN_HTML) site/index.html
+    # replace normal hyphens by non-breaking ones
+	sd 'ORI-A' 'ORI&#8209;A' site/*.html
 
 minify: buildpages
 	minify-html --minify-js $$(fd -ehtml . site/)
