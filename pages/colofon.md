@@ -21,5 +21,6 @@ Oud-deelnemers: **Regionaal Archief Zutphen**, **Waterlands Archief**
 Dank aan de volgende RIS leveranciers voor het beschikbaarstellen van test- en voorbeeldbestanden:
 
 * Parleaus
+* Company Webcast
 * iBabs
 * Notubiz
