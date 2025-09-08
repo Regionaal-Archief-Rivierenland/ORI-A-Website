@@ -4,7 +4,7 @@ title-icon: boek.svg
 position: 2
 ---
 
-Op deze pagina laten we stap blah blah zien uit welke verschillende onderdelen een ORI-A XML-bestand kan bestaan en hoe ze werken in XML.
+Op deze pagina laten we stap voor stap zien uit welke verschillende onderdelen een ORI-A XML-bestand kan bestaan en hoe ze werken in XML.
 
 # Een vergadering beschrijven
 
