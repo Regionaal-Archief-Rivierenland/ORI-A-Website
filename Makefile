@@ -144,4 +144,4 @@ minify: buildpages
 clean:
 	rm -rf site
 	rm -f pages/xml-schema.md
-	fd . -ehtml pages/ --exclude index.html -X rm 
+	fd . -ehtml pages/ --exclude index.html -X rm
