@@ -75,7 +75,7 @@ site/%.pdf: pdfs/%.pdf
 # NOTE: currently breaks if you use filenames with spaces
 pages/%.html: pages/%.md
 	@mkdir -p $(@D)
-	pandoc -f markdown-native_divs $< -o $@
+	pandoc --wrap=none -f markdown-native_divs $< -o $@
 
 subset-fonts: $(FONT_OUTPUTS)
 
@@ -135,7 +135,8 @@ buildpages: prepare-site
 	python3 buildpages.py
 	ln -srf site/$(MAIN_HTML) site/index.html
     # replace normal hyphens by non-breaking ones
-	sd 'ORI-A' 'ORI&#8209;A' site/*.html
+    # todo: do this in more places
+	sd  -F 'Wanneer gebruik je ORI-A' 'Wanneer gebruik je ORI‑A' site/faq.html
 
 minify: buildpages
 	minify-html --minify-js $$(fd -ehtml . site/)
