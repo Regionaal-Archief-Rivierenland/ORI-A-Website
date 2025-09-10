@@ -121,14 +121,6 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 
 ## Fractie
 
-Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrippenlijsten opgeven:
-
-
-* [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-
-
 {{ fractie_table }}
 
 ### XML voorbeeld
@@ -148,20 +140,24 @@ Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrip
 ```
 ## Dagelijks bestuur
 
-Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrippenlijsten opgeven:
-
-
-* [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-
-
 {{ dagelijks_bestuur_table }}
 
 ### XML voorbeeld
 
 ``` xml
-</todo>
+    <dagelijksBestuur>
+        <ID>College van B&W-gm0546</ID>
+        <dagelijksBestuurNaam>College van B&W</dagelijksBestuurNaam>
+        <dagelijksBestuurType>College</dagelijksBestuurType>
+        <bestuurslaag>
+            <begripLabel>Gemeente Leiden</begripLabel>
+            <begripCode>gm0546</begripCode>
+            <verwijzingBegrippenlijst>
+                <verwijzingID>https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4</verwijzingID>
+                <verwijzingNaam>TOOI Register gemeenten compleet</verwijzingNaam>
+            </verwijzingBegrippenlijst>
+        </bestuurslaag>
+    </dagelijksBestuur>
 ```
 
 
@@ -176,7 +172,26 @@ Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke f
 ### XML voorbeeld
 
 ``` xml
-</todo>
+<isNatuurlijkPersoon>
+            <ID>Persoon-1</ID>
+            <geslachtsaanduiding>Man</geslachtsaanduiding>
+            <functie>Raadslid</functie>
+            <naam>
+                <achternaam>de Boer</achternaam>
+                <volledigeNaam>Peter de Boer</volledigeNaam>
+            </naam>
+            <nevenfunctie>
+                <omschrijving>Promovendus</omschrijving>
+                <naamOrganisatie>Universiteit Leiden</naamOrganisatie>
+                <bezoldigd>true</bezoldigd>
+            </nevenfunctie>
+            <isLidVanFractie>
+                <voorzitter>true</voorzitter>
+                <verwijzingFractie>
+                    <verwijzingID>D66-gm0826</verwijzingID>
+                </verwijzingFractie>
+            </isLidVanFractie>
+        </isNatuurlijkPersoon>
 ```
 
 ## Aanwezige deelnemer
@@ -226,7 +241,10 @@ Gegevens over de naam van een natuurlijk persoon.
 
 
 ``` xml
-</todo>
+<naam>
+    <achternaam>Veltman</achternaam>
+    <volledigeNaam>Julia</volledigeNaam>
+</naam>
 ```
 
 ## Stemming over personen
@@ -237,7 +255,18 @@ Gegevens over de naam van een natuurlijk persoon.
 
 
 ``` xml
-</todo>
+<stemming>
+    <ID>stemming-0011</ID>
+    <resultaatStemmingOverPersonen>Maria Zeeger is verkozen als commissielid Ruimte en Wonen</resultaatStemmingOverPersonen>
+    <stemmingOverPersonen>
+        <naamKandidaat>Willem Wouters</naamKandidaat>
+        <aantalUitgebrachteStemmenvolledigeNaam>2</aantalUitgebrachteStemmen>
+    <stemmingOverPersonen>
+        <naamKandidaat>Henk Meegenkamp</naamKandidaat>
+        <aantalUitgebrachteStemmenvolledigeNaam>4</aantalUitgebrachteStemmen>
+    <stemmingOverPersonen>
+        <naamKandidaat>Maria Zeeger</naamKandidaat>
+        <aantalUitgebrachteStemmenvolledigeNaam>6</aantalUitgebrachteStemmen>
 ```
 
 ## Nevenfunctie
@@ -248,7 +277,11 @@ Gegevens over de naam van een natuurlijk persoon.
 
 
 ``` xml
-</todo>
+<nevenfunctie>
+    <omschrijving>Promovendus</omschrijving>
+    <naamOrganisatie>Universiteit Leiden</naamOrganisatie>
+    <bezoldigd>true</bezoldigd>
+</nevenfunctie>
 ```
 
 # Relatieklasses
@@ -263,7 +296,12 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 ### XML voorbeeld
 
 ``` xml
-</todo>
+<isLidVanFractie>
+    <voorzitter>true</voorzitter>
+    <verwijzingFractie>
+        <verwijzingID>D66-gm0826</verwijzingID>
+    </verwijzingFractie>
+</isLidVanFractie>
 ```
 
 ## Dagelijks bestuur lidmaatschap
@@ -274,12 +312,26 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 ### XML voorbeeld
 
 ``` xml
-</todo>
+<isLidVanDagelijksBestuur>
+    <datumBeginDagelijksBestuurLidmaatschap>2023-09-01</datumBeginDagelijksBestuurLidmaatschap>
+    <verwijzingDagelijksBestuur>
+        <verwijzingID>College van B&amp;W-gm0546</verwijzingID>
+    </verwijzingDagelijksBestuur>
+</isLidVanDagelijksBestuur>
 ```
 
 ## Spreekfragment
 
 {{ spreekfragment_table }}
+
+``` xml
+<spreektTijdensSpreekfragment>
+    <videoTijdsaanduidingAanvang>00:02:20</videoTijdsaanduidingAanvang>
+    <spreektTijdensAgendapunt>
+        <verwijzingID>2028a00aaa2a8aaa00a2aab6bdaef</verwijzingID>
+    </spreektTijdensAgendapunt>
+</spreektTijdensSpreekfragment>
+```
 
 ## Stem
 
@@ -288,7 +340,12 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 ### XML voorbeeld
 
 ``` xml
-</todo>
+<neemtDeelAanStemming>
+            <keuzeStemming>Voor</keuzeStemming>
+            <gegevenOpStemming>
+                <verwijzingID>RV 23.0081</verwijzingID>
+            </gegevenOpStemming>
+        </neemtDeelAanStemming>
 ```
 
 ## Stemresultaat per fractie
