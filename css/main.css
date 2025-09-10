@@ -574,6 +574,12 @@ nav li li li:last-child {
     padding-bottom: 0.1em;
 }
 
+.navbar-bullet {
+    font-size:130%;
+    vertical-align: bottom;
+    margin-right:0.1em;
+}
+
 /* Anchor links next to headers */
 
 :is(h1,
