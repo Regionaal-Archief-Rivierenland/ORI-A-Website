@@ -8,31 +8,20 @@ Hier vind je informatie over de momenten waarop ORI-A gebruik maakt van begrippe
 
 Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten.
 
-# Begrippenlijsten gebruiken
-
-Een begrippenlijst roep je zo aan:
-
-``` xml
-<vergaderstukType>
-    <begripLabel>Motie</begripLabel>
-    <verwijzingBegrippenlijst>
-        <verwijzingID>www.ori-a.nl/begrippenlijsten#vergaderstuk-types</verwijzingID>
-        <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuk Types</verwijzingNaam>
-    </verwijzingBegrippenlijst>
-</vergaderstukType>
-```
-
 Alle begrippenlijsten die onderdeel zijn van **ORI-A** worden hieronder gedocumenteerd.
 
-## TOOI Begrippenlijsten
 
-Een paar begrippenlijsten die van toepassing zijn op **ORI-A** worden beheerd door **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/):
+# TOOI Begrippenlijsten
+
+Een paar begrippenlijsten die van toepassing zijn op **ORI-A** worden beheerd door **TOOI**. Dit betreft de begrippenlijsten voor het element **Bestuurslaag**:
 
 * [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
+* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet/2)
+* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_provincies_compleet/1)
 
-# Vergaderstuktypes
+# ORI-A Begrippenlijsten
+
+## Vergaderstuktypes
 
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](tutorial#gebruik-van-ori-a-met-mdto).
 
@@ -46,7 +35,7 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 | Antwoord   | Antwoord op een vraag aan de raad.                                         |
 
 
-# Deelnemerrollen
+## Deelnemerrollen
 
 Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
 
@@ -74,9 +63,20 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 
 :::
 
-# Betrokkene-vergaderstuk relaties
+## Mediabrontypes
 
-Een lijst met verschillende soorten relaties tussen personen en vergaderstukken. Relevant binnen MDTO om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
+Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
+
+
+| Label        | Definitie                                                                 |
+|:-------------|:--------------------------------------------------------------------------|
+| Video        | Een audiovisuele opname van een vergadering. Ook wel 'videotuul'.         |
+| Audio        | Een geluidsopname van een vergadering. Ook wel 'audiotuul'.               |
+| Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
+
+## Betrokkene-vergaderstuk relaties
+
+In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergaderstukken. In ORI-A is geen plek voor deze informatie gemaakt, omdat deze informatie het best in MDTO kan worden uitgedrukt - het is immers contextinformatie over een informatieobject. De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
 
 
 
@@ -107,21 +107,12 @@ Een lijst met verschillende soorten relaties tussen personen en vergaderstukken.
 -->
 
 
-| Label              | Definitie                                                    |
-|:-------------------|:-------------------------------------------------------------|
-| Indiener           | Indiener van een vergaderstuk (herkomst: VNG's ORI).         |
-| Ondertekenaar      | Ondertekenaar van een vergaderstuk (herkomst: VNG's ORI).    |
-| Portefeuillehouder | De portefeuillehouder van een voorstel (herkomst: VNG's ORI) |
+| Label              | Definitie                               |
+|:-------------------|:----------------------------------------|
+| Indiener           | Indiener van een vergaderstuk.          |
+| Ondertekenaar      | Ondertekenaar van een vergaderstuk.     |
+| Portefeuillehouder | De portefeuillehouder van een voorstel. |
 
-# Mediabrontypes
+## Begrippenlijsten gebruiken
 
-Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
-
-
-| Label        | Definitie                                                                 |
-|:-------------|:--------------------------------------------------------------------------|
-| Video        | Een audiovisuele opname van een vergadering. Ook wel 'videotuul'.         |
-| Audio        | Een geluidsopname van een vergadering. Ook wel 'audiotuul'.               |
-| Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
-
-
+Voor meer informatie over hoe je begrippenlijsten gebruikt in ORI-A XML, zie [Begrippenlijsten gebruiken](tutorial#begrippenlijsten-gebruiken) in [ORI-A XML uitgelegd](tutorial).
