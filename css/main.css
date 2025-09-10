@@ -61,7 +61,6 @@ official woff2 files from the Lato website had vertical spacing issues
     line-height: 1.2;
     border-radius: 1em;
     margin-left: -0.72em;
-    margin
 }
 
 .pill + br {
@@ -565,29 +564,10 @@ code span.fu { color: var(--pico-ins-color); font-weight: 600;} /* XML declarati
     color: #748BF8; /* strings (Pico Blue 400) */
 }
 
-/* badges used in navbar */
-.badge {
-    font-weight: bolder;
-    font-size: 0.57em;
-    border-radius: var(--pico-border-radius);
-    background-color: var(--pico-code-kbd-background-color);
-    color: var(--pico-code-kbd-color);
-    opacity: 0.8;
-    margin-top: 0.1em; /* custom alignment */
-    padding: 0.08rem 0.23rem !important;
-    line-height: 1.25;
-}
-
-nav span.badge {
-    margin-right: 0.45em;
-}
-
 nav li li li {
     padding-bottom: 0.30em;
     padding-top: 0.30em;
     margin-left: 0.34em;
-    display: flex; /* needed to center the badge with the text */
-    align-items: center;
 }
 
 nav li li li:last-child {
