@@ -33,10 +33,10 @@ Toch waren er enkele redenen waarom een speciale archiefvariant van ORI nodig bl
 * **Aansluiten bij bestaande (archief)standaarden.** [Het Nationaal Archief raadt aan](https://www.nationaalarchief.nl/archiveren/mdto#collapse-102790) algemene gegevens over informatieobjecten --- zoals aanmaakdatum en auteur --- vast te leggen in MDTO, een metadatastandaard gericht op het duurzaam toegankelijk maken van overheidsdocumenten. In tegenstelling tot ORI is ORI-A zo ontwikkeld dat deze taak volledig bij MDTO blijft.  ORI-A richt zich daarentegen uitsluitend op **domeinspecifieke gegevens** --- oftewel, raadsinformatie.
 
   ::: tip
-  **Tip:** Je kunt meer lezen over het combineren van ORI-A en MDTO in [Hoe werkt ORI-A?](tutorial#mdto)
+  **Tip:** Je kunt meer lezen over het combineren van ORI-A en MDTO in [ORI-A XML uitgelegd](tutorial#ori-a-mdto-combineren)
   :::
 
-* **Achterwaartse compatibiliteit (_backwards compatibility_).**  Bestaande raadsinformatie voldoet niet altijd aan alle eisen van ORI. Uit analyses van RIS systemen kwam bijvoorbeeld naar voren dat ORI soms gegevens vereist die ofwel niet beschikbaar zijn, ofwel niet beschikbaar zijn in de gevraagde vorm. Dit komt vooral voor bij **oudere vergaderingen**. Omdat ook deze vergaderingen gearchiveerd moeten worden, is ORI-A op bepaalde punten flexibeler (zie ook [Hoe verhoudt ORI-A zich tot ORI](faq#hoe-verhoudt-ori-a-zich-tot-ori)).
+* **Achterwaartse compatibiliteit (_backwards compatibility_).**  Bestaande raadsinformatie voldoet niet altijd aan alle eisen van ORI. Uit analyses van RIS systemen kwam bijvoorbeeld naar voren dat ORI soms gegevens vereist die ofwel niet beschikbaar zijn, ofwel niet beschikbaar zijn in de gevraagde vorm. Dit komt vooral voor bij **oudere vergaderingen**. Omdat ook deze vergaderingen gearchiveerd moeten worden, is ORI-A op bepaalde punten flexibeler (zie ook [Hoe verhoudt ORI-A zich tot ORI?](faq)).
 
 * **Duurzame toegankelijkheid.** Sommige gegevens in ORI, zoals de datum waarop een vergadering gehouden is, zijn essentieel voor de toekomstige interpreteerbaarheid van raadsinformatie, maar niet verplicht. Om de [duurzame toegankelijkheid](https://www.nationaalarchief.nl/archiveren/kennisbank/duurzaam-toegankelijk) van raadsinformatie te waarborgen zijn zulke gegevens in ORI-A wél verplicht gesteld.
 

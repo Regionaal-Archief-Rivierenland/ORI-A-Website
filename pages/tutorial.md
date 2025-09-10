@@ -208,7 +208,7 @@ Dit zegt:
 
 > De stemming met ID `RV 23.0081` had betrekking op een elders gedefinieerd agendapunt met ID `2028a00aa`. Tijdens dit agendapunt werd er gestemd over een besluitvormingsstuk met ID `0222a202`. 
 
-Voor een uitgebreide uitleg over het verwijzen **naar externe informatieobjecten** zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
+Voor een uitgebreide uitleg over het verwijzen **naar externe informatieobjecten** zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](tutorial#ori-a--mdto-combineren).
 
 :::waarschuwing
 Het ORI-A XML-schema checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn. Dit vermindert de kans op ambigue verwijzingen.
@@ -237,11 +237,11 @@ Een stem van een persoon op een `<stemming>` komt onder het _top-level_ element 
 
 Dit betekent dat deze deelnemer "Voor"  heeft gestemd op een stemming met ID `RV 23.0081`. 
 
-Naast personen, kunnen ook fracties een stem uitbrengen. Zie hiervoor [`stemResultaatPerFractieGegevens`](xml-schema#stemrestulaat-per-fractie-gegevens).
+Naast personen, kunnen ook fracties een stem uitbrengen. Zie hiervoor [`stemResultaatPerFractieGegevens`](xml-schema#stemresultaat-per-fractie).
 
 ## Verwijzen met een naam
 
-Binnen [`verwijzingGegevens`](#verwijzing-gegevens) --- de gegevensgroep waarmee je in ORI-A van de ene naar de andere entiteit verwijst --- is alleen het element `<verwijzingID>` verplicht. Naast deze verplichte ID, heb je in deze gegevensgroep ook de mogelijkheid om de **naam** van de entiteit waarnaar je verwijst meenemen.  Dit is omdat dit...
+Binnen [`verwijzingGegevens`](xml-schema#verwijzing-gegevens) --- de gegevensgroep waarmee je in ORI-A van de ene naar de andere entiteit verwijst --- is alleen het element `<verwijzingID>` verplicht. Naast deze verplichte ID, heb je in deze gegevensgroep ook de mogelijkheid om de **naam** van de entiteit waarnaar je verwijst meenemen.  Dit is omdat dit...
 
 ``` xml
 <heeftBetrekkingOpAgendapunt>
@@ -260,7 +260,7 @@ voor mensen minder duidelijk leest dan dit:
 
 # Persoonsgegevens
 
-In ORI-A kun je [persoonsgegevens](documentatie#natuurlijk-persoon-gegevens) onder twee verschillende _top-level_ elementen opnemen: onder `<aanwezigeDeelnemer>`, of onder `<persoonBuitenVergadering>`. Deze opties hebben een iets andere semantiek.
+In ORI-A kun je [persoonsgegevens](xml-schema#natuurlijk-persoon) onder twee verschillende _top-level_ elementen opnemen: onder `<aanwezigeDeelnemer>`, of onder `<persoonBuitenVergadering>`. Deze opties hebben een iets andere semantiek.
 
 ## Aanwezige deelnemer
 
@@ -372,7 +372,7 @@ De enige _inhoudelijke_ informatie over informatieobjecten die in ORI-A wordt op
 
 ## ORI-A → MDTO verwijzingen in XML vorm
 
-Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het ID van een in MDTO opgesteld informatieobject  (zie ook [`verwijzingGegevens`](#verwijzing-gegevens)):
+Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het ID van een in MDTO opgesteld informatieobject  (zie ook [`verwijzingGegevens`](xml-schema#verwijzing-gegevens)):
 
 <!-- TODO: misschien wel mooi om het MDTO bestand ook als voorbeeld op te voeren. -->
 ``` xml
@@ -424,7 +424,7 @@ De verwijzing naar deze mediabron komt in ORI-A onder `<vergadering>`:
 **Tip:** `<isVastgelegdMiddels>` is herhaalbaar. Door dit element te herhalen kun je een koppeling leggen met meerdere mediabronnen, bijvoorbeeld met een videotuul én een transcriptie.
 :::
 
-In je MDTO kun je eventueel de  [begrippenlijst 'Mediabron types']( begrippenlijsten#mediabron-types)  onder `mdto:classificatie` invullen, om ook daar het soort mediabron nader te specificeren.
+In je MDTO kun je eventueel de  [begrippenlijst 'Mediabron types']( begrippenlijsten#mediabrontypes)  onder `mdto:classificatie` invullen, om ook daar het soort mediabron nader te specificeren.
 
 
 ### Ondertitelbestanden
