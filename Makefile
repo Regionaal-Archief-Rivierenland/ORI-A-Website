@@ -38,6 +38,8 @@ FONT_OUTPUTS := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_TITLE_HEA
 TABLE_SRC := pages/xml-schema.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd diagram/ORI-A-diagram.tex.j2
 TABLE_DST := pages/xml-schema.md diagram/ORI-A-diagram.tex
 
+VOORBEELDZIP := site/ORI-A\ voorbeeldbestanden.zip
+
 .PHONY: all clean update-submodule
 
 # Default target
@@ -45,6 +47,11 @@ all: generate-tables buildpages minify subset-fonts
 
 update-submodule:
 	git submodule update --recursive --remote
+
+$(VOORBEELDZIP): $(shell fd . -tfile 'ORI-A-XSD/Voorbeelden')
+	ln -sf ORI-A-XSD/Voorbeelden "ORI-A voorbeeldbestanden" && \
+	zip -r "$@" "ORI-A voorbeeldbestanden" && \
+	unlink "ORI-A voorbeeldbestanden"
 
 # Create site/ directory
 $(CSS_DST) $(HTML_DST): | site
@@ -128,7 +135,7 @@ $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
 	pdflatex -output-dir pdfs diagram/ORI-A-diagram.tex
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST)
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP)
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
