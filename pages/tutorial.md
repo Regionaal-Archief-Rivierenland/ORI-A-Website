@@ -103,12 +103,13 @@ Vanuit ORI-A XML kan op de volgende manier naar een begrippenlijst worden verwez
 ```
 
 Een volledige lijst van hoe naar de door ORI-A beheerde begrippenlijsten kan worden verwezen:
-| `verwijzingID`                                                       | `verwijzingNaam`                                      |
-|:---------------------------------------------------------------------|:------------------------------------------------------|
-| https://ori-a.nl/begrippenlijsten#vergaderstuktypes                  | ORI-A Begrippenlijst Vergaderstuktypes                |
-| https://ori-a.nl/begrippenlijsten#deelnemerrollenMotie               | ORI-A Begrippenlijst Deelnemerrollen                  |
-| https://ori-a.nl/begrippenlijsten#mediabrontypes                     | ORI-A Begrippenlijst Mediabrontypes                   |
-| https://ori-a.nl/begrippenlijsten#betrokkene-vergaderstuk-relaties   | ORI-A Begrippenlijst Betrokkene-vergaderstuk relaties |
+
+| `verwijzingID`                                                     | `verwijzingNaam`                       |
+|:-------------------------------------------------------------------|:---------------------------------------|
+| https://ori-a.nl/begrippenlijsten#vergaderstuktypes                | ORI-A Vergaderstuktypes                |
+| https://ori-a.nl/begrippenlijsten#deelnemerrolle                   | ORI-A Deelnemerrollen                  |
+| https://ori-a.nl/begrippenlijsten#mediabrontypes                   | ORI-A Mediabrontypes                   |
+| https://ori-a.nl/begrippenlijsten#betrokkene-vergaderstuk-relaties | ORI-A Betrokkene-vergaderstuk relaties |
 
 :::waarschuwing
 We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenlijst>`) een URL bij `<verwijzingID>` in te vullen. Hiermee maak je je begrippen vindbaar en valideerbaar.
