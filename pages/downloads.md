@@ -66,12 +66,13 @@ De vergadering in kwestie [is gebaseerd op een vergadering van de gemeenteraad v
 <figure style="text-align: left">
 
 ```
-Voorbeelden/
+ORI-A voorbeeldbestanden/
 ├── Voorbeeld.ori-a.xml
-└── MDTO/
-    ├── 23-11-30_Transcript_Raadsvergadering_Leiden.pdf
-    ├── 23-11-30_Transcript_Raadsvergadering_Leiden.mdto.xml
-    ├── 23-11-30_Transcript_Raadsvergadering_Leiden.pdf.bestand.mdto.xml
+├── 23-11-30_Transcript_Raadsvergadering_Leiden/
+│   ├── 23-11-30_Transcript_Raadsvergadering_Leiden.pdf
+│   ├── 23-11-30_Transcript_Raadsvergadering_Leiden.mdto.xml
+│   └── 23-11-30_Transcript_Raadsvergadering_Leiden.pdf.bestand.mdto.xml
+└── Videotuul_Gemeenteraad_30_november_2023/
     ├── Videotuul_Gemeenteraad_30_november_2023.mp4
     ├── Videotuul_Gemeenteraad_30_november_2023.mdto.xml
     ├── Videotuul_Gemeenteraad_30_november_2023.mp4.bestand.mdto.xml
