@@ -54,6 +54,35 @@ official woff2 files from the Lato website had vertical spacing issues
     width: 2.5rem;
 }
 
+.pill {
+    font-size: 0.7rem;
+    padding-inline: 0.9em;
+    padding-block: 0.3em;
+    line-height: 1.2;
+    border-radius: 1em;
+    margin-left: -0.72em;
+    margin
+}
+
+.pill + br {
+    margin-bottom: 0.1em;
+}
+
+.pill-purple {
+    background: #E7E0E9;
+    color: #4E1B58;
+}
+
+.pill-green {
+    background: #DFECE7;
+    color: #0F704A;
+}
+
+.pill-blue {
+    background: #E4EBF2;
+    color: #37669C;
+}
+
 figure {
     text-align: center;
     padding-top: var(--pico-block-spacing-vertical);
