@@ -6,7 +6,7 @@ WORKDIR /ori-a-website
 
 # Install build dependencies
 RUN paru -Syu --skipreview --asexplicit --removemake --cleanafter --noconfirm \
-    scour ripgrep fd make git optipng sd \
+    scour ripgrep fd make git optipng sd zip \
     minify-html-bin uglify-js lightningcss-cli-bin pandoc-bin \
     python-fonttools python-jinja python-beautifulsoup4 python-frontmatter python-setuptools python-brotli \
     texlive-basic texlive-latexextra texlive-plaingeneric texlive-latexrecommended texlive-fontsextra texlive-langeuropean 
