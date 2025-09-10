@@ -46,7 +46,7 @@ Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een verg
 | Voorzitter            | De voorzitter van de vergadering.                                          |
 | Vice-voorzitter       | De vice-voorzitter van de vergadering.                                     |
 | Portefeuillehouder    | Ambtenaar die de verantwoordelijkheid draagt over een besproken onderwerp. |
-| Griffier              | Hoofd van de griffie.                                                     |
+| Griffier              | Hoofd van de griffie.                                                      |
 | Raadslid              | Gekozen volksvertegenwoordiger binnen een gemeente.                        |
 | Statenlid             | Gekozen volksvertegenwoordiger binnen een provincie.                       |
 | Kamerlid              | Gekozen volksvertegenwoordiger binnen de Eerste of Tweede Kamer.           |
