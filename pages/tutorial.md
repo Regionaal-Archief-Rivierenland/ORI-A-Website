@@ -90,6 +90,25 @@ Wat je binnen `<bestuurslaag>` ziet is een begrip uit een zogeheten **begrippenl
 
 De oorsprong van dit begrip is een begrippenlijst beheerd door het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Tenslotte kun je ook besluiten om zelf een begrippenlijst te onderhouden (zie hiervoor [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
 
+Vanuit ORI-A XML kan op de volgende manier naar een begrippenlijst worden verwezen, in dit voorbeeld naar die van Vergaderstuktypes:
+
+``` xml
+<vergaderstukType>
+    <begripLabel>Motie</begripLabel>
+    <verwijzingBegrippenlijst>
+        <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
+        <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuktypes</verwijzingNaam>
+    </verwijzingBegrippenlijst>
+</vergaderstukType>
+```
+
+Een volledige lijst van hoe naar de door ORI-A beheerde begrippenlijsten kan worden verwezen:
+| `verwijzingID`                                                       | `verwijzingNaam`                                        |
+|:-------------------------------------------------------------------|:------------------------------------------------------|
+| https://ori-a.nl/begrippenlijsten#vergaderstuktypes                | ORI-A Begrippenlijst Vergaderstuktypes                |
+| https://ori-a.nl/begrippenlijsten#deelnemerrollenMotie             | ORI-A Begrippenlijst Deelnemerrollen                  |
+| https://ori-a.nl/begrippenlijsten#mediabrontypes                   | ORI-A Begrippenlijst Mediabrontypes                   |
+| https://ori-a.nl/begrippenlijsten#betrokkene-vergaderstuk-relaties | ORI-A Begrippenlijst Betrokkene-vergaderstuk relaties |
 
 :::waarschuwing
 We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenlijst>`) een URL bij `<verwijzingID>` in te vullen. Hiermee maak je je begrippen vindbaar en valideerbaar.
@@ -98,7 +117,6 @@ We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenli
 :::tip
 **Tip:** `<bestuurslaag>` is bedoeld voor de overheidslaag die verantwoordelijk was voor de vergadering. Het specifieke **gremium** (bijvoorbeeld "Commissie Ruimte & Wonen") kun je kwijt in `<georganiseerdDoorGremium>`.
 :::
-
 
 # Hoofd- en subagendapunten
 
