@@ -298,12 +298,9 @@ for page in pages:
     page_contents = headers_to_accordions(page_contents)
     page_contents = add_title_section(page_contents, page["title"], page["title-icon"])
     page_contents = colorize_inline_xml(page_contents)
-
-
     page_contents = delete_pandoc_cruft(page_contents)
 
     # this needs current_page because that visited page needs to styled in the navbar
-    logo_html = logo.render()
     if page["title"] in ["Het XML-schema"]:
         navbar_html = navbar_nested_template.render(
             pages=[p for p in pages if not p["hide"]],
@@ -315,6 +312,8 @@ for page in pages:
             pages=[p for p in pages if not p["hide"]],
             current_page=page["filename"],
         )
+
+    logo_html = logo.render()
 
     html = base_template.render(
         logo=logo_html,
