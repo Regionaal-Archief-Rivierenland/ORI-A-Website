@@ -229,7 +229,7 @@ def add_pill_to_headers(html):
 
     colors = {
         "entiteit" : "purple",
-        "algemeen" : "blue",
+        "algemeen" : "yellow",
         "gegevensgroep" : "blue",
         "relatieklasse" : "green",
     }

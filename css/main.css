@@ -82,6 +82,11 @@ official woff2 files from the Lato website had vertical spacing issues
     color: #37669C;
 }
 
+.pill-yellow {
+    background: #EEE7C7;
+    color: #93822d;
+}
+
 figure {
     text-align: center;
     padding-top: var(--pico-block-spacing-vertical);
