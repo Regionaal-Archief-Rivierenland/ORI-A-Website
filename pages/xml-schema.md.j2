@@ -170,7 +170,26 @@ Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke f
 ### XML voorbeeld
 
 ``` xml
-</todo>
+<isNatuurlijkPersoon>
+            <ID>Persoon-1</ID>
+            <geslachtsaanduiding>Man</geslachtsaanduiding>
+            <functie>Raadslid</functie>
+            <naam>
+                <achternaam>de Boer</achternaam>
+                <volledigeNaam>Peter de Boer</volledigeNaam>
+            </naam>
+            <nevenfunctie>
+                <omschrijving>Promovendus</omschrijving>
+                <naamOrganisatie>Universiteit Leiden</naamOrganisatie>
+                <bezoldigd>true</bezoldigd>
+            </nevenfunctie>
+            <isLidVanFractie>
+                <voorzitter>true</voorzitter>
+                <verwijzingFractie>
+                    <verwijzingID>D66-gm0826</verwijzingID>
+                </verwijzingFractie>
+            </isLidVanFractie>
+        </isNatuurlijkPersoon>
 ```
 
 ## Aanwezige deelnemer
