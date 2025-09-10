@@ -119,14 +119,6 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 
 ## Fractie
 
-Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrippenlijsten opgeven:
-
-
-* [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-
-
 {{ fractie_table }}
 
 ### XML voorbeeld
@@ -145,14 +137,6 @@ Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrip
 </fractie>
 ```
 ## Dagelijks bestuur
-
-Bij `<bestuurslaag>` bij voorkeur een waarde uit een van de volgende TOOI begrippenlijsten opgeven:
-
-
-* [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-
 
 {{ dagelijks_bestuur_table }}
 
@@ -270,12 +254,26 @@ Gegevens over de naam van een natuurlijk persoon.
 ### XML voorbeeld
 
 ``` xml
-</todo>
+<isLidVanDagelijksBestuur>
+    <datumBeginDagelijksBestuurLidmaatschap>2023-09-01</datumBeginDagelijksBestuurLidmaatschap>
+    <verwijzingDagelijksBestuur>
+        <verwijzingID>College van B&amp;W-gm0546</verwijzingID>
+    </verwijzingDagelijksBestuur>
+</isLidVanDagelijksBestuur>
 ```
 
 ## Spreekfragment
 
 {{ spreekfragment_table }}
+
+``` xml
+<spreektTijdensSpreekfragment>
+    <videoTijdsaanduidingAanvang>00:02:20</videoTijdsaanduidingAanvang>
+    <spreektTijdensAgendapunt>
+        <verwijzingID>2028a00aaa2a8aaa00a2aab6bdaef</verwijzingID>
+    </spreektTijdensAgendapunt>
+</spreektTijdensSpreekfragment>
+```
 
 ## Stem
 
@@ -284,7 +282,12 @@ Gegevens over de naam van een natuurlijk persoon.
 ### XML voorbeeld
 
 ``` xml
-</todo>
+<neemtDeelAanStemming>
+            <keuzeStemming>Voor</keuzeStemming>
+            <gegevenOpStemming>
+                <verwijzingID>RV 23.0081</verwijzingID>
+            </gegevenOpStemming>
+        </neemtDeelAanStemming>
 ```
 
 ## Stemresultaat per fractie
