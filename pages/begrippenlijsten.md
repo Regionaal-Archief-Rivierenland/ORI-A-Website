@@ -113,26 +113,6 @@ In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergad
 | Ondertekenaar      | Ondertekenaar van een vergaderstuk.     |
 | Portefeuillehouder | De portefeuillehouder van een voorstel. |
 
-# Begrippenlijsten gebruiken
+## Begrippenlijsten gebruiken
 
-Vanuit ORI-A XML kan op de volgende manier naar een begrippenlijst worden verwezen, in dit voorbeeld naar die van Vergaderstuktypes:
-
-``` xml
-<vergaderstukType>
-    <begripLabel>Motie</begripLabel>
-    <verwijzingBegrippenlijst>
-        <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
-        <verwijzingNaam>ORI-A Begrippenlijst Vergaderstuktypes</verwijzingNaam>
-    </verwijzingBegrippenlijst>
-</vergaderstukType>
-```
-
-Een volledige lijst van hoe naar de door ORI-A beheerde begrippenlijsten kan worden verwezen:
-| verwijzingID                                                       | verwijzingNaam                                        |
-|:-------------------------------------------------------------------|:------------------------------------------------------|
-| https://ori-a.nl/begrippenlijsten#vergaderstuktypes                | ORI-A Begrippenlijst Vergaderstuktypes                |
-| https://ori-a.nl/begrippenlijsten#deelnemerrollenMotie             | ORI-A Begrippenlijst Deelnemerrollen                  |
-| https://ori-a.nl/begrippenlijsten#mediabrontypes                   | ORI-A Begrippenlijst Mediabrontypes                   |
-| https://ori-a.nl/begrippenlijsten#betrokkene-vergaderstuk-relaties | ORI-A Begrippenlijst Betrokkene-vergaderstuk relaties |
-
-
+Voor meer informatie over hoe je begrippenlijsten gebruikt in ORI-A XML, zie [Begrippenlijsten gebruiken](tutorial#begrippenlijsten-gebruiken) in [ORI-A XML uitgelegd](tutorial).
