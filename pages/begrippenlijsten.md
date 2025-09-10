@@ -113,6 +113,6 @@ In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergad
 | Ondertekenaar      | Ondertekenaar van een vergaderstuk.     |
 | Portefeuillehouder | De portefeuillehouder van een voorstel. |
 
-## Begrippenlijsten gebruiken
+# Begrippenlijsten gebruiken
 
 Voor meer informatie over hoe je begrippenlijsten gebruikt in ORI-A XML, zie [Begrippenlijsten gebruiken](tutorial#begrippenlijsten-gebruiken) in [ORI-A XML uitgelegd](tutorial).
