@@ -8,12 +8,12 @@ Hier vind je informatie over de momenten waarop ORI-A gebruik maakt van begrippe
 
 Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten.
 
-Alle begrippenlijsten die onderdeel zijn van **ORI-A** worden hieronder gedocumenteerd.
+Alle begrippenlijsten die onderdeel zijn van ORI-A worden hieronder gedocumenteerd.
 
 
 # TOOI Begrippenlijsten
 
-Een paar begrippenlijsten die van toepassing zijn op **ORI-A** worden beheerd door **TOOI**. Dit betreft de begrippenlijsten voor het element **Bestuurslaag**:
+Een paar begrippenlijsten die van toepassing zijn op ORI-A worden beheerd door TOOI. Dit betreft de begrippenlijsten voor het element `<bestuurslaag>`:
 
 * [Begrippenlijst Gemeentes](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet/2)
