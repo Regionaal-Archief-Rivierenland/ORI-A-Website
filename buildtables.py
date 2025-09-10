@@ -34,6 +34,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         "boolean": "true of false",
         "date": "YYYY-MM-dd",
         "dateTime": "YYYY-MM-DDThh:mm:ss",
+        "language": "RFC 3066 taalcode, zoals 'nl'",
         "enumeratie": "Lijst van keuzes",
         "integerOfTijdcode": "Getal of tijdcode (hh:mm:ss)",
         "positiveInteger": "Positief getal",

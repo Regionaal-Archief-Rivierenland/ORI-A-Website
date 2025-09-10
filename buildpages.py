@@ -215,6 +215,53 @@ def headers_to_accordions(html):
 
     return str(soup)
 
+def add_pill_to_headers(html):
+    soup = BeautifulSoup(html, "html.parser")
+
+    h1s = soup.find_all("h1")
+
+    labels = {
+        "Entiteiten" : "entiteit",
+        "Algemeen" : "algemeen",
+        "Gegevensgroepen" : "gegevensgroep",
+        "Relatieklasses" : "relatieklasse",
+    }
+
+    colors = {
+        "entiteit" : "purple",
+        "algemeen" : "blue",
+        "gegevensgroep" : "blue",
+        "relatieklasse" : "green",
+    }
+
+    for h1 in h1s:
+        label = labels[h1.get_text().replace('#', '')]
+        color = colors[label]
+
+        sibling = h1.find_next_sibling()
+        while sibling.name != "h1":
+            next_sibling = sibling.find_next_sibling()
+
+            if not next_sibling:
+                break
+
+            if sibling.name == "h2":
+                pill = soup.new_tag('span')
+                pill["class"] = f"pill pill-{color}"
+                pill.string = f"«{label.capitalize()}»"
+
+                text_span = soup.new_tag('span')
+                text_span.string = sibling.string
+
+                sibling.clear()
+                sibling.append(pill)
+                sibling.append(soup.new_tag("br"))
+                sibling.append(text_span)
+
+            sibling = next_sibling
+
+    return str(soup)
+
 
 pages = []
 
@@ -243,16 +290,17 @@ for page in pages:
 
     # process html
     page_contents = add_icon_to_links(page_contents)
+
+    if page["title"] == "Het XML-schema":
+        page_contents = add_pill_to_headers(page_contents)
+
     page_contents = anchor_icon_to_headers(page_contents)
     page_contents = headers_to_accordions(page_contents)
     page_contents = add_title_section(page_contents, page["title"], page["title-icon"])
     page_contents = colorize_inline_xml(page_contents)
-
-
     page_contents = delete_pandoc_cruft(page_contents)
 
     # this needs current_page because that visited page needs to styled in the navbar
-    logo_html = logo.render()
     if page["title"] in ["Het XML-schema"]:
         navbar_html = navbar_nested_template.render(
             pages=[p for p in pages if not p["hide"]],
@@ -264,6 +312,8 @@ for page in pages:
             pages=[p for p in pages if not p["hide"]],
             current_page=page["filename"],
         )
+
+    logo_html = logo.render()
 
     html = base_template.render(
         logo=logo_html,
