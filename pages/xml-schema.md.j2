@@ -119,6 +119,19 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 ## Besluit
 {{ besluit_table }}
 
+### XML voorbeeld
+
+``` xml
+<stemming>
+    ...
+    <leidtTotBesluit>
+        <toezegging>De wethouder belooft een preciezere schatting van de verwachte CO² uitstoot.</toezegging>
+        <besluitResultaat>Aangenomen</besluitResultaat>
+    </leidtTotBesluit>
+    ...
+</stemming>
+```
+
 ## Fractie
 
 {{ fractie_table }}
@@ -145,25 +158,25 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 ### XML voorbeeld
 
 ``` xml
-    <dagelijksBestuur>
-        <ID>College van B&W-gm0546</ID>
-        <dagelijksBestuurNaam>College van B&W</dagelijksBestuurNaam>
-        <dagelijksBestuurType>College</dagelijksBestuurType>
-        <bestuurslaag>
-            <begripLabel>Gemeente Leiden</begripLabel>
-            <begripCode>gm0546</begripCode>
-            <verwijzingBegrippenlijst>
-                <verwijzingID>https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4</verwijzingID>
-                <verwijzingNaam>TOOI Register gemeenten compleet</verwijzingNaam>
-            </verwijzingBegrippenlijst>
-        </bestuurslaag>
-    </dagelijksBestuur>
+<dagelijksBestuur>
+    <ID>College van B&W-gm0546</ID>
+    <dagelijksBestuurNaam>College van B&W</dagelijksBestuurNaam>
+    <dagelijksBestuurType>College</dagelijksBestuurType>
+    <bestuurslaag>
+        <begripLabel>Gemeente Leiden</begripLabel>
+        <begripCode>gm0546</begripCode>
+        <verwijzingBegrippenlijst>
+            <verwijzingID>https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4</verwijzingID>
+            <verwijzingNaam>TOOI Register gemeenten compleet</verwijzingNaam>
+        </verwijzingBegrippenlijst>
+    </bestuurslaag>
+</dagelijksBestuur>
 ```
 
 
 ## Natuurlijk persoon
 
-Dit datatype komt voor onder `<aanwezigeDeelnemer>` en het top-level element `<persoonBuitenVergadering>`.
+Dit datatype komt voor onder de top-level elementen `<aanwezigeDeelnemer>` en `<persoonBuitenVergadering>`.
 
 Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke fractie. Dit kan via het `<isLidVanFractie>` element (zie XML voorbeeld).
 
@@ -173,25 +186,25 @@ Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke f
 
 ``` xml
 <isNatuurlijkPersoon>
-            <ID>Persoon-1</ID>
-            <geslachtsaanduiding>Man</geslachtsaanduiding>
-            <functie>Raadslid</functie>
-            <naam>
-                <achternaam>de Boer</achternaam>
-                <volledigeNaam>Peter de Boer</volledigeNaam>
-            </naam>
-            <nevenfunctie>
-                <omschrijving>Promovendus</omschrijving>
-                <naamOrganisatie>Universiteit Leiden</naamOrganisatie>
-                <bezoldigd>true</bezoldigd>
-            </nevenfunctie>
-            <isLidVanFractie>
-                <voorzitter>true</voorzitter>
-                <verwijzingFractie>
-                    <verwijzingID>D66-gm0826</verwijzingID>
-                </verwijzingFractie>
-            </isLidVanFractie>
-        </isNatuurlijkPersoon>
+    <ID>Persoon-1</ID>
+    <geslachtsaanduiding>Man</geslachtsaanduiding>
+    <functie>Raadslid</functie>
+    <naam>
+        <achternaam>de Boer</achternaam>
+        <volledigeNaam>Peter de Boer</volledigeNaam>
+    </naam>
+    <nevenfunctie>
+        <omschrijving>Promovendus</omschrijving>
+        <naamOrganisatie>Universiteit Leiden</naamOrganisatie>
+        <bezoldigd>true</bezoldigd>
+    </nevenfunctie>
+    <isLidVanFractie>
+        <voorzitter>true</voorzitter>
+        <verwijzingFractie>
+            <verwijzingID>D66-gm0826</verwijzingID>
+        </verwijzingFractie>
+    </isLidVanFractie>
+</isNatuurlijkPersoon>
 ```
 
 ## Aanwezige deelnemer
@@ -225,6 +238,7 @@ Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke f
         </spreektTijdensAgendapunt>
     </spreektTijdensSpreekfragment>
     ...
+</aanwezigeDeelnemer>
 ```
 
 # Gegevensgroepen
@@ -261,12 +275,16 @@ Gegevens over de naam van een natuurlijk persoon.
     <stemmingOverPersonen>
         <naamKandidaat>Willem Wouters</naamKandidaat>
         <aantalUitgebrachteStemmenvolledigeNaam>2</aantalUitgebrachteStemmen>
+    </stemmingOverPersonen>
     <stemmingOverPersonen>
         <naamKandidaat>Henk Meegenkamp</naamKandidaat>
         <aantalUitgebrachteStemmenvolledigeNaam>4</aantalUitgebrachteStemmen>
+    </stemmingOverPersonen>
     <stemmingOverPersonen>
         <naamKandidaat>Maria Zeeger</naamKandidaat>
         <aantalUitgebrachteStemmenvolledigeNaam>6</aantalUitgebrachteStemmen>
+    </stemmingOverPersonen>
+</stemming>    
 ```
 
 ## Nevenfunctie
@@ -341,11 +359,11 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 
 ``` xml
 <neemtDeelAanStemming>
-            <keuzeStemming>Voor</keuzeStemming>
-            <gegevenOpStemming>
-                <verwijzingID>RV 23.0081</verwijzingID>
-            </gegevenOpStemming>
-        </neemtDeelAanStemming>
+    <keuzeStemming>Voor</keuzeStemming>
+    <gegevenOpStemming>
+        <verwijzingID>RV 23.0081</verwijzingID>
+    </gegevenOpStemming>
+</neemtDeelAanStemming>
 ```
 
 ## Stemresultaat per fractie
