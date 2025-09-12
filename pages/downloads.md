@@ -25,12 +25,13 @@ Dit schema is beschikbaar in het **XSD-bestandsformaat**.
 
 ``` {=html}
 <div class="grid download">
-<select name="versie picker" aria-label="Versie" required">
-  <option selected disabled value="">Versie</option>
-  <option selected="selected">v1.0.0</option>
+<select aria-label="Versie" required>
+  <option disabled value="">Versie</option>
+  <option selected>v0.0.14</option>
+  <option disabled>v1.0.0</option>
 </select>
 
-<button><span><strong>ORI-A XML schema</strong> (xsd)</span></button>
+<a download href="ORI-A.xsd" role=button><span><strong>ORI-A XML schema</strong> (xsd)</span></a>
 </div>
 ```
 
@@ -84,14 +85,14 @@ ORI-A voorbeeldbestanden/
 
 ``` {=html}
 <div class="grid download">
-<select name="versie picker" aria-label="Versie" required">
-  <option selected disabled value="">Soort</option>
-  <option selected="selected">ORI-A + MDTO</option>
-  <option>ORI-A + MDTO (opex)</option>
-  <option>ORI-A + TMLO</option>
+<select aria-label="Voorbeeldbestand pakketten" required">
+  <option disabled value="">Soort</option>
+  <option selected>ORI-A + MDTO</option>
+  <option disabled>ORI-A + MDTO (opex)</option>
+  <option disabled>ORI-A + TMLO</option>
 </select>
 
-<button><span><strong>Voorbeeldbestanden</strong> (zip)</span></button>
+<a href="ORI-A voorbeeldbestanden.zip" download role=button><span><strong>Voorbeeldbestanden</strong> (zip)</span></a>
 </div>
 ```
 
@@ -118,14 +119,15 @@ Verplichte gegevens zijn **dikgedrukt**.
 
 ``` {=html}
 <div class="grid download">
-<select name="versie picker" aria-label="Versie" required">
-  <option selected disabled value="">Bestandsformaat</option>
-  <option selected="selected">PDF</option>
-  <option>SVG</option>
+<select aria-label="Bestandsformaat diagram" required">
+  <option disabled value="">Bestandsformaat</option>
+  <option value="pdf_diagram" selected>PDF</option>
+  <option disabled value="svg_diagram">SVG</option>
 </select>
 
-<button><span><strong>ORI-A diagram</strong> (pdf)</span></button>
+<a href="ORI-A-diagram.pdf" download role=button><span><strong>ORI-A diagram</strong> (pdf)</span></a>
 </div>
+
 ```
 
 # Logo
@@ -136,12 +138,14 @@ Dit logo kun je bijvoorbeeld gebruiken in promotiemateriaal of slides.
 
 ``` {=html}
 <div class="grid download">
-<select aria-label="Bestansformaat" required">
-  <option selected disabled value="">Bestandsformaat</option>
-  <option selected="selected">SVG</option>
-  <option>PNG</option>
+<select aria-label="Bestansformaat logo" required>
+  <option disabled value="">Bestandsformaat</option>
+  <option value="png_logo" selected>PNG</option>
+  <option value="svg_logo">SVG</option>
 </select>
 
-<button><span><strong>Logo</strong> (svg)</span></button>
+<a href="logo.png" download role=button><span><strong>Logo</strong> (png)</span></a>
 </div>
 ```
+
+<script src="download.js" defer></script>

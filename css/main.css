@@ -329,7 +329,7 @@ table.stickytable th {
     height: 100%;
 }
 
-.download button {
+.download a {
   display: flex;
   align-items: center;
   justify-content: center; /* centers icon + text as a group */
@@ -338,7 +338,7 @@ table.stickytable th {
 }
 
 
-.download button::before {
+.download a::before {
   content: "";
   display: inline-block;
   width: 1.5em;

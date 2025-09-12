@@ -53,6 +53,9 @@ $(VOORBEELDZIP): $(shell fd . -tfile 'ORI-A-XSD/Voorbeelden')
 	zip -r "$@" "ORI-A voorbeeldbestanden" && \
 	unlink "ORI-A voorbeeldbestanden"
 
+site/ORI-A.xsd: ORI-A-XSD/ORI-A.xsd
+	cp ORI-A-XSD/ORI-A.xsd site/
+
 # Create site/ directory
 $(CSS_DST) $(HTML_DST): | site
 site:
@@ -135,7 +138,7 @@ $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
 	pdflatex -output-dir pdfs diagram/ORI-A-diagram.tex
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP)
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
