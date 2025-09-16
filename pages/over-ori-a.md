@@ -58,6 +58,6 @@ De ORI-A documentatie bestaat uit een aantal onderdelen:
     <svg width=27 height=27>
        <use xlink:href="lijst.svg"/>
     </svg>Begrippenlijsten</header>
-    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>Definities van begrippen die met raadsinformatie te maken hebben</p>
     </article>
 </div>
