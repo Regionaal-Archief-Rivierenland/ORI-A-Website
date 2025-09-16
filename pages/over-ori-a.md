@@ -38,7 +38,7 @@ De ORI-A documentatie bestaat uit een aantal onderdelen:
     <article class="card">
     <header>
     <svg width=27 height=27>
-       <use xlink:href="boek.svg"/>
+       <use xlink:href="boek.svg#boek"/>
     </svg>Hoe werkt ORI-A?</header>
     <p>Stapgewijze uitleg van ORI-A aan de hand van stukjes XML</p>
     </article>
@@ -49,14 +49,14 @@ De ORI-A documentatie bestaat uit een aantal onderdelen:
     <article class="card">
     <header>
     <svg width=27 height=27>
-       <use xlink:href="download.svg"/>
+       <use xlink:href="download.svg#download"/>
     </svg>Voorbeeldbestanden</header>
     <p>Voorbeeld van hoe je een echte vergadering met behulp van ORI-A XML kan beschrijven</p>
     </article>
     <article class="card">
     <header>
     <svg width=27 height=27>
-       <use xlink:href="lijst.svg"/>
+       <use xlink:href="lijst.svg#lijst"/>
     </svg>Begrippenlijsten</header>
     <p>Definities van begrippen die met raadsinformatie te maken hebben</p>
     </article>
