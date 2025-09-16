@@ -9,7 +9,7 @@ Welkom op de landingspagina van de ORI-A website. Op deze pagina wordt het belan
 
 De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het duurzaam bewaren en uitwisselen van raadsinformatie in XML-formaat. Hiervoor is het ORI-A XML-schema ontwikkeld, dat kan worden gebruikt wanneer raadsinformatie, zoals een collectie videotulen, voor permanente bewaring naar een [e-depot](https://www.nationaalarchief.nl/archiveren/kennisbank/wat-is-een-e-depot) wordt gemigreerd. 
 
-ORI-A is gebaseerd op het informatiemodel van [de Open Raadsinformatie (ORI) API Specificatie](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie).
+ORI-A is gebaseerd op het door de VNG beheerde informatiemodel van [de Open Raadsinformatie (ORI) API Specificatie](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie).
 
 # Waarom is ORI-A ontwikkeld?
 
