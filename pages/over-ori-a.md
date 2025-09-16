@@ -64,9 +64,9 @@ De ORI-A documentatie bestaat uit een aantal onderdelen:
     <svg width=27 height=27 style="margin-top: -0.2em">
        <use xlink:href="image.svg#image"/>
     </svg>Diagram</header>
-    <p>UML diagram van het ORI-A informatiemodel</p>
     </article>
     <article class="card">
+    <p>Een schematische weergave van het ORI-A informatiemodel</p>
     <header>
     <svg width=27 height=27>
        <use xlink:href="faq.svg#faq"/>
