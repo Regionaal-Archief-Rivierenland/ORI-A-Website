@@ -1,7 +1,6 @@
 ---
 title: Over ORI-A
 position: 1
-title-icon: archive.svg
 ---
 
 ::: waarschuwing
