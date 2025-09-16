@@ -165,6 +165,29 @@ h3 {
 
 }
 
+.cardgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    max-width: 1200px;
+}
+
+.cardgrid article {
+    box-shadow: none;
+}
+
+.cardgrid p {
+    color: var(--pico-muted-color);
+}
+
+.cardgrid header {
+    font-family: var(--header-font);
+    font-weight: 600;
+}
+
+.cardgrid svg {
+    margin-right: 0.3em;
+}
+
 [data-theme="dark"] .tip {
     background-color: #113426;
 }
