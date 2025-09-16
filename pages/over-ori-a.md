@@ -3,7 +3,9 @@ title: Over ORI-A
 position: 1
 ---
 
-Welkom op de landingspagina van de ORI-A website. Op deze pagina wordt het belang van een archiefstandaard voor raadsinformatie uitgelegd, en vind je een overzicht van alle ORI-A gerelateerde documentatie.
+ORI-A is een archiefstandaard voor het duurzaam bewaren van **raadsinformatie** --- oftewel, de digitale gegevens die overheden zoals gemeentes en provincies aanmaken tijdens bestuurlijke of politieke besluitvorming. 
+
+Hieronder wordt het belang van een archiefstandaard voor zulke informatie uitgelegd, en vind je een overzicht van alle ORI-A gerelateerde documentatie.
 
 # Wat is ORI-A?
 
