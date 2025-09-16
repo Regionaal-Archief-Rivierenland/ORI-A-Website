@@ -14,25 +14,21 @@ De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het d
 
 ORI-A is gebaseerd op het informatiemodel van [de Open Raadsinformatie (ORI) API Specificatie](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie).
 
-## Achtergrond
+# Waarom is ORI-A ontwikkeld?
 
 In de zomer van 2021 is tijdens een landelijke ['videotulenbijeenkomst'](https://kiacommunity.nl/thoughts/11904) door diverse stakeholders in het informatiedomein de wens uitgesproken om te komen tot een standaard voor het duurzaam bewaren en beschikbaar stellen van raadsinformatie in een digitale archiefbewaarplaats (het e-depot). De toen opgerichte [Werkgroep Archivering Raadsinformatie](colofon) stelde zich als taak deze standaard te realiseren. ORI-A is daarvan het resultaat.
 
-De werkgroep heeft zich drie doelen gesteld: 
+ORI-A heeft een vergelijkbaar doel als het ORI-informatiemodel: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiekelijk gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
 
-* het ontwikkelen, testen en gebruiksklaar maken van een ORI-A XML-schema ([XSD](https://en.wikipedia.org/wiki/XML_Schema_(W3C)));
-* het promoten en tijdelijk ondersteunen van het gebruik van de standaard;
-* het borgen van het beheer van de standaard op de lange termijn.
+Waar ORI-A verschilt van de andere initiatieven is dat het zich ook richt op het migreren van raadsinformatie. Hierin is eerst gekeken naar het ORI-informatiemodel, maar deze kon niet aan alle behoeften van archiefdiensten voldoen. Toen is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
+
+# Beheer van de standaard
+De Werkgroep Archivering Raadsinformatie beheert momenteel ORI-A. De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard. Updates en nieuws over ORI-A is te lezen op deze website of op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome).
 
 ## Status
 
 Het ORI-A XML-schema is momenteel in bèta, en [kan hier gedownload worden](https://github.com/Regionaal-Archief-Rivierenland/ORI-XSD/releases). De website ondergaat de komende tijd een publieksreview. Vanaf het najaar volgen enkele pilotimplementaties, waarin de standaard wordt ingezet in de praktijk. Hierover zullen periodiek berichten op [KIA](https://kiacommunity.nl/welcome) verschijnen.
 
-# Waarom is ORI-A ontwikkeld?
-
-ORI-A heeft een vergelijkbaar doel als het ORI-informatiemodel: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiekelijk gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
-
-Waar ORI-A verschilt van de andere initiatieven is dat het zich ook richt op het migreren van raadsinformatie. Hierin is eerst gekeken naar het ORI-informatiemodel, maar deze kon niet aan alle behoeften van archiefdiensten voldoen. Toen is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
 
 # Documentatie
 
