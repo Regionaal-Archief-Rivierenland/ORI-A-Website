@@ -32,7 +32,32 @@ De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van ar
 
 # Documentatie
 
-<!-- todo: benoem downloads pagina, het plaatje, en de voor mensen bedoelde documentatie   -->
-De documentatie van de XSD is een work-in-progress. De betekenis van de verschillende (sub)elementen kan op dit moment achterhaald worden uit de waardes binnen de `<xs:documentation>` tags.
+De ORI-A documentatie bestaat uit een aantal onderdelen:
 
-Bovendien bestaat er een [grafische representatie van het informatiemodel.](ORI-A-diagram.pdf)
+<div class="cardgrid">
+    <article class="card">
+    <header>
+    <svg width=27 height=27>
+       <use xlink:href="boek.svg"/>
+    </svg>Hoe werkt ORI-A?</header>
+    <p>Stapgewijze uitleg van ORI-A aan de hand van stukjes XML</p>
+    </article>
+    <article class="card">
+    <header><span style='margin-right: 0.5em'></></span>XML-schema</header>
+    <p>Complete specificatie van het XML-schema</p>
+    </article>
+    <article class="card">
+    <header>
+    <svg width=27 height=27>
+       <use xlink:href="download.svg"/>
+    </svg>Voorbeeldbestanden</header>
+    <p>Voorbeeld van hoe je een echte vergadering met behulp van ORI-A XML kan beschrijven</p>
+    </article>
+    <article class="card">
+    <header>
+    <svg width=27 height=27>
+       <use xlink:href="lijst.svg"/>
+    </svg>Begrippenlijsten</header>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    </article>
+</div>
