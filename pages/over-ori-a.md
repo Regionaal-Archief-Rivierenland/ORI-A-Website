@@ -23,7 +23,7 @@ ORI-A heeft een vergelijkbaar doel als het ORI-informatiemodel: het gestandaardi
 Waar ORI-A verschilt van de andere initiatieven is dat het zich ook richt op het migreren van raadsinformatie. Hierin is eerst gekeken naar het ORI-informatiemodel, maar deze kon niet aan alle behoeften van archiefdiensten voldoen. Toen is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
 
 # Beheer van de standaard
-De Werkgroep Archivering Raadsinformatie beheert momenteel ORI-A. De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard. Updates en nieuws over ORI-A is te lezen op deze website of op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome).
+De Werkgroep Archivering Raadsinformatie beheert momenteel ORI-A. De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard. 
 
 ## Status
 
