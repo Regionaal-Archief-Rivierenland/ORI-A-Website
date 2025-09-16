@@ -115,7 +115,7 @@ Verplichte gegevens zijn **dikgedrukt**.
     <figcaption>
     Klein gedeelte van het ORI-A informatiemodel ([klik voor het volledige figuur](ORI-A-diagram.pdf){target="_blank"})
     </figcaption>
-    </figure>
+</figure>
 
 ``` {=html}
 <div class="grid download">
@@ -127,7 +127,6 @@ Verplichte gegevens zijn **dikgedrukt**.
 
 <a href="ORI-A-diagram.pdf" download role=button><span><strong>ORI-A diagram</strong> (pdf)</span></a>
 </div>
-
 ```
 
 # Logo
