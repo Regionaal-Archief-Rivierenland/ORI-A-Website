@@ -199,6 +199,11 @@ h3 {
     text-decoration: none;
 }
 
+.cardgrid a:hover article {
+  border-color: var(--pico-secondary-underline);
+}
+
+
 [data-theme="dark"] .tip {
     background-color: #113426;
 }
