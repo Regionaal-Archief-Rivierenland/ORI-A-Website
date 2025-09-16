@@ -31,16 +31,9 @@ ORI-A deelt het doel van de diverse ORI-initiatieven: het gestandaardiseerd besc
 
 Waar ORI-A verschilt van de andere initiatieven is dat het zich ook richt op het migreren van raadsinformatie. Met ORI-A kan raadsinformatie gestandaardiseerd in XML-formaat worden opgeslagen. Hierin is eerst gekeken naar het ORI-informatiemodel, maar deze kon niet aan alle behoeften van archiefdiensten voldoen. Toen is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
 
-# Documentatie <!-- nieuwe titel subkop: Legenda website? -->
+# Documentatie
 
 <!-- todo: benoem downloads pagina, het plaatje, en de voor mensen bedoelde documentatie   -->
-De documentatie van het ORI-A XML-schema is een work-in-progress. De betekenis van de verschillende (sub)elementen kan op dit moment achterhaald worden uit de waardes binnen de `<xs:documentation>` tags.
-<!-- Concepttekst voor bij lancering: 
-De website [ori-a.nl(www.ori-a.nl) functioneert als documentatie van het ORI-A XML-schema. Dit valt uiteen in een paar onderdelen:
- - Het XML-schema: technische uitleg over de entiteiten en elementen van het ORI-A XML-schema
- - Hoe werkt ORI-A?: inhoudelijke uitleg over hoe deze entiteiten en elementen in de praktijk kunnen worden gebruikt
- - Begrippenlijsten: informatie over de verschillende begrippenlijsten die binnen ORI-A worden gebruikt
- - Veelgestelde vragen: uitleg over ORI-A die niet paste op één van de andere onderdelen
--->
+De documentatie van de XSD is een work-in-progress. De betekenis van de verschillende (sub)elementen kan op dit moment achterhaald worden uit de waardes binnen de `<xs:documentation>` tags.
 
 Bovendien bestaat er een [grafische representatie van het informatiemodel.](ORI-A-diagram.pdf)
