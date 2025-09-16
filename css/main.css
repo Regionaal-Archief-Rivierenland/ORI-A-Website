@@ -169,10 +169,15 @@ h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     max-width: 1200px;
+    row-gap: 1.5em;
+    column-gap: 1.5em;
 }
 
 .cardgrid article {
     box-shadow: none;
+    min-height: 261px;
+    margin: 0;
+    width: 100%;
 }
 
 .cardgrid p {
@@ -186,6 +191,11 @@ h3 {
 
 .cardgrid svg {
     margin-right: 0.3em;
+}
+
+.cardgrid a  {
+    color: inherit;
+    text-decoration: none;
 }
 
 [data-theme="dark"] .tip {

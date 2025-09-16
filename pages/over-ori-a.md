@@ -33,44 +33,58 @@ Het ORI-A XML-schema is momenteel in bèta, en [kan hier gedownload worden](http
 
 De ORI-A documentatie bestaat uit een aantal onderdelen:
 
+``` {=html}
 <div class="cardgrid">
+  <a href="tutorial">
     <article class="card">
-    <header>
-    <svg width=27 height=27>
-       <use xlink:href="boek.svg#boek"/>
-    </svg>Hoe werkt ORI-A?</header>
-    <p>Stapgewijze uitleg van ORI-A aan de hand van stukjes XML</p>
+      <header>
+        <svg width=27 height=27>
+          <use xlink:href="boek.svg#boek"/>
+        </svg>Hoe werkt ORI-A?</header>
+      <p>Stapgewijze uitleg van ORI-A aan de hand van stukjes XML</p>
     </article>
+  </a>
+  <a href="xml-schema">
     <article class="card">
-    <header><span style='margin-right: 0.5em'></></span>XML-schema</header>
-    <p>Complete specificatie van het XML-schema</p>
-    </article>
-    <article class="card">
+      <header><span style='margin-right: 0.3em'>&lt;/&gt;</span>XML-schema</header>
+<p>Complete specificatie van het XML-schema</p>
+</article>
+</a>
+<a href="downloads#voorbeeldbestanden">
+  <article class="card">
     <header>
-    <svg width=27 height=27>
-       <use xlink:href="download.svg#download"/>
-    </svg>Voorbeeldbestanden</header>
+      <svg width=27 height=27>
+        <use xlink:href="download.svg#download"/>
+      </svg>Voorbeeldbestanden</header>
     <p>Voorbeeld van hoe je een echte vergadering met behulp van ORI-A XML kan beschrijven</p>
-    </article>
-    <article class="card">
+  </article>
+</a>
+<a href="begrippenlijsten">
+  <article class="card">
     <header>
-    <svg width=27 height=27>
-       <use xlink:href="lijst.svg#lijst"/>
-    </svg>Begrippenlijsten</header>
+      <svg width=27 height=27>
+        <use xlink:href="lijst.svg#lijst"/>
+      </svg>Begrippenlijsten</header>
     <p>Definities van begrippen die met raadsinformatie te maken hebben</p>
-    </article>
-    <article class="card">
+  </article>
+</a>
+<a href="downloads#diagram">
+  <article class="card">
     <header>
-    <svg width=27 height=27 style="margin-top: -0.2em">
-       <use xlink:href="image.svg#image"/>
-    </svg>Diagram</header>
-    </article>
-    <article class="card">
-    <p>Een schematische weergave van het ORI-A informatiemodel</p>
+      <svg width=27 height=27 style="margin-top: -0.2em; margin-right: 0.4em">
+        <use xlink:href="image.svg#image"/>
+      </svg>Diagram</header>
+    <p>Schematische weergave van het ORI-A informatiemodel</p>
+  </article>
+</a>
+<a href="faq">
+  <article class="card">
     <header>
-    <svg width=27 height=27>
-       <use xlink:href="faq.svg#faq"/>
-    </svg>Veelgestelde vragen</header>
+      <svg width=27 height=27>
+        <use xlink:href="faq.svg#faq"/>
+      </svg>Veelgestelde vragen</header>
     <p>Algemene vragen over ORI-A</p>
-    </article>
+  </article>
+</a>
 </div>
+```
