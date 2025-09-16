@@ -3,9 +3,7 @@ title: Over ORI-A
 position: 1
 ---
 
-::: waarschuwing
-**Disclaimer:** De ORI-A website en bijbehorende documentatie zijn nog in ontwikkeling. Hou er daarom rekening mee dat alle informatie op deze website onvolledig, onnauwkeurig of verouderd kan zijn.
-:::
+Welkom op de landingspagina van de ORI-A website. Op deze pagina wordt het belang van een archiefstandaard voor raadsinformatie uitgelegd, en vind je een overzicht van alle ORI-A gerelateerde documentatie.
 
 # Wat is ORI-A?
 
