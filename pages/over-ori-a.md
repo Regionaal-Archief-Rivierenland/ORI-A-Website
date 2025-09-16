@@ -15,7 +15,7 @@ ORI-A is gebaseerd op het informatiemodel dat de VNG heeft ontworpen voor [de Op
 
 # Waarom is ORI-A ontwikkeld?
 
-Tijdens een landelijke ['videotulenbijeenkomst'](https://kiacommunity.nl/thoughts/11904) is door diverse stakeholders in het informatiedomein de wens uitgesproken om te komen tot een standaard voor het duurzaam bewaren en beschikbaar stellen van raadsinformatie in een digitale archiefbewaarplaats (het e-depot). De toen opgerichte [Werkgroep Archivering Raadsinformatie](colofon) stelde zich als taak deze standaard te realiseren. ORI-A is daarvan het resultaat.
+Tijdens een [landelijke bijeenkomst over videotulen](https://kiacommunity.nl/thoughts/11904) gaven diverse stakeholders in het informatiedomein aan behoefte te hebben aan een standaard voor het duurzaam bewaren en beschikbaar stellen van raadsinformatie in een digitale archiefbewaarplaats (het e-depot). De toen opgerichte [Werkgroep Archivering Raadsinformatie](colofon) stelde zich als taak deze standaard te realiseren. ORI-A is daarvan het resultaat.
 
 ORI-A heeft een vergelijkbaar doel als het ORI-informatiemodel: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiekelijk gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
 
