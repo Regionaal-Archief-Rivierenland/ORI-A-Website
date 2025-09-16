@@ -59,4 +59,18 @@ De ORI-A documentatie bestaat uit een aantal onderdelen:
     </svg>Begrippenlijsten</header>
     <p>Definities van begrippen die met raadsinformatie te maken hebben</p>
     </article>
+    <article class="card">
+    <header>
+    <svg width=27 height=27 style="margin-top: -0.2em">
+       <use xlink:href="image.svg#image"/>
+    </svg>Diagram</header>
+    <p>UML diagram van het ORI-A informatiemodel</p>
+    </article>
+    <article class="card">
+    <header>
+    <svg width=27 height=27>
+       <use xlink:href="faq.svg#faq"/>
+    </svg>Veelgestelde vragen</header>
+    <p>Algemene vragen over ORI-A</p>
+    </article>
 </div>
