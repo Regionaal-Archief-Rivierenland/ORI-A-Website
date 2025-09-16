@@ -22,7 +22,7 @@ De werkgroep heeft zich drie doelen gesteld: ten eerste het ontwikkelen, testen 
 
 ## Status
 
-De ORI-A XSD is momenteel in bèta, en [kan hier gedownload worden](https://github.com/Regionaal-Archief-Rivierenland/ORI-XSD/releases). De standaard is de afgelopen tijd getest aan enkele praktijkcases, momenteel wordt gewerkt aan de documentatie en voorbeeldbestanden. Vanaf het najaar volgen enkele pilotimplementaties, waarin de standaard wordt ingezet in de praktijk. Hierover zullen periodiek berichten op [KIA](https://kiacommunity.nl/welcome) verschijnen.
+Het ORI-A XML-schema is momenteel in bèta, en [kan hier gedownload worden](https://github.com/Regionaal-Archief-Rivierenland/ORI-XSD/releases). De website ondergaat de komende tijd een publieksreview. Vanaf het najaar volgen enkele pilotimplementaties, waarin de standaard wordt ingezet in de praktijk. Hierover zullen periodiek berichten op [KIA](https://kiacommunity.nl/welcome) verschijnen.
 
 # Waarom is ORI-A ontwikkeld?
 
