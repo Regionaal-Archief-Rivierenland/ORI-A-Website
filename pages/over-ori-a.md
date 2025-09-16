@@ -3,13 +3,13 @@ title: Over ORI-A
 position: 1
 ---
 
-ORI-A is een archiefstandaard voor het duurzaam bewaren van **raadsinformatie** --- oftewel, de digitale gegevens die overheden zoals gemeentes en provincies aanmaken tijdens bestuurlijke of politieke besluitvorming. 
+ORI-A is een archiefstandaard voor het duurzaam bewaren van **raadsinformatie** --- oftewel, de digitale gegevens die overheden zoals gemeentes en provincies aanmaken tijdens bestuurlijke of politieke besluitvorming.
 
 Hieronder wordt het belang van een archiefstandaard voor zulke informatie uitgelegd, en vind je een overzicht van alle ORI-A documentatie.
 
 # Wat is ORI-A?
 
-De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het duurzaam bewaren en uitwisselen van raadsinformatie in XML-formaat. Hiervoor is het ORI-A XML-schema ontwikkeld, dat kan worden gebruikt wanneer raadsinformatie, zoals een collectie videotulen, voor permanente bewaring naar een [e-depot](https://www.nationaalarchief.nl/archiveren/kennisbank/wat-is-een-e-depot) wordt gemigreerd. 
+De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het duurzaam bewaren en uitwisselen van raadsinformatie in XML-formaat. Hiervoor is het ORI-A XML-schema ontwikkeld, dat kan worden gebruikt wanneer raadsinformatie, zoals een collectie videotulen, voor permanente bewaring naar een [e-depot](https://www.nationaalarchief.nl/archiveren/kennisbank/wat-is-een-e-depot) wordt gemigreerd.
 
 ORI-A is gebaseerd op het door de VNG beheerde informatiemodel van [de Open Raadsinformatie (ORI) API Specificatie](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie).
 
@@ -22,7 +22,7 @@ ORI-A heeft een vergelijkbaar doel als het ORI-informatiemodel: het gestandaardi
 Waar ORI-A verschilt van de andere initiatieven is dat het zich ook richt op het migreren van raadsinformatie. Hierin is eerst gekeken naar het ORI-informatiemodel, maar deze kon niet aan alle behoeften van archiefdiensten voldoen. Toen is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
 
 # Beheer van de standaard
-De Werkgroep Archivering Raadsinformatie beheert momenteel ORI-A. De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard. 
+De Werkgroep Archivering Raadsinformatie beheert momenteel ORI-A. De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard.
 
 ## Status
 
