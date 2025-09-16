@@ -31,7 +31,7 @@ Het ORI-A XML-schema is momenteel in bèta, en [kan hier gedownload worden](http
 
 ORI-A heeft een vergelijkbaar doel als het ORI-informatiemodel: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiekelijk gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
 
-Waar ORI-A verschilt van de andere initiatieven is dat het zich ook richt op het migreren van raadsinformatie. Met ORI-A kan raadsinformatie gestandaardiseerd in XML-formaat worden opgeslagen. Hierin is eerst gekeken naar het ORI-informatiemodel, maar deze kon niet aan alle behoeften van archiefdiensten voldoen. Toen is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
+Waar ORI-A verschilt van de andere initiatieven is dat het zich ook richt op het migreren van raadsinformatie. Hierin is eerst gekeken naar het ORI-informatiemodel, maar deze kon niet aan alle behoeften van archiefdiensten voldoen. Toen is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
 
 # Documentatie
 
