@@ -34,6 +34,8 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 
 ## Vergadering
 
+{{ vergadering_beschrijving }}
+
 ::: waarschuwing
 **Let op:** `<isVastgelegdMiddels>` is niet verplicht in ORI-A, omdat er soms geen opnamen worden gemaakt van een vergadering, bijvoorbeeld als deze besloten is. In alle andere gevallen raden we echter aan om via dit element een transcriptie of (audio)visueel verslag op te nemen.
 :::
@@ -63,7 +65,7 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 
 ## Agendapunt
 
-Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het volgnummer en bijbehorende stukken. De volgorde van agendapunt-elementen geeft aan in welke volgorde ze behandeld zijn.
+{{ agendapunt_beschrijving }}
 
 {{ agendapunt_table }}
 
@@ -81,9 +83,7 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 
 ## Stemming
 
-:::tip
-**Tip:** dit zijn gegevens over een **algemene stemming**; individuele stemkeuzes komen onder [`aanwezigeDeelnemerGegevens`](#aanwezige-deelnemer).
-:::
+{{ stemming_beschrijving }}
 
 {{ stemming_table }}
 
@@ -117,6 +117,10 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 ```
 
 ## Besluit
+
+<!-- FIXME: dit is nu nog een handmatige beschrijving. Deze moet uiteindelijk automatisch worden gegenereerd -->
+Gegevens over het besluit waartoe een stemming heeft geleid, zoals of het unaniem aangenomen of verworpen is.
+
 {{ besluit_table }}
 
 ### XML voorbeeld
@@ -133,6 +137,8 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 ```
 
 ## Fractie
+
+{{ fractie_beschrijving }}
 
 {{ fractie_table }}
 
@@ -152,6 +158,8 @@ Gegevens over een agendapunt wat tijdens de vergadering behandeld is, zoals het 
 </fractie>
 ```
 ## Dagelijks bestuur
+
+{{ dagelijks_bestuur_beschrijving }}
 
 {{ dagelijks_bestuur_table }}
 
@@ -209,6 +217,8 @@ Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke f
 
 ## Aanwezige deelnemer
 
+{{ aanwezige_deelnemer_beschrijving }}
+
 {{ aanwezige_deelnemer_table }}
 
 ### XML voorbeeld
@@ -243,11 +253,12 @@ Een belangrijke toepassing van dit datatype is vastleggen wie lid is van welke f
 
 # Gegevensgroepen
 
-Gegevensgroepen (<span class="badge">G</span>) komen altijd direct onder een ander element, en krijgen nooit een ID.
+Gegevensgroepen komen altijd direct onder een ander element, en krijgen nooit een ID.
 
 ## Naam
 
-Gegevens over de naam van een natuurlijk persoon.
+<!-- fixme: genereer automatisch -->
+Gegevens over de naam van een persoon, zoals diens voor- en achternaam.
 
 {{ naam_table }}
 
@@ -262,6 +273,8 @@ Gegevens over de naam van een natuurlijk persoon.
 ```
 
 ## Stemming over personen
+
+{{ stemming_over_personen_beschrijving }}
 
 {{ stemming_over_personen_table }}
 
@@ -289,6 +302,9 @@ Gegevens over de naam van een natuurlijk persoon.
 
 ## Nevenfunctie
 
+<!-- fixme: genereer automatisch -->
+Gegevens over nevenfuncties van een persoon, zoals of het om een betaalde functie gaat.
+
 {{ nevenfunctie_table }}
 
 ### XML voorbeeld
@@ -308,6 +324,7 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 
 ## Fractielidmaatschap
 
+{{ fractielidmaatschap_beschrijving }}
 
 {{ fractielidmaatschap_table }}
 
@@ -324,6 +341,7 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 
 ## Dagelijks bestuur lidmaatschap
 
+{{ dagelijks_bestuur_beschrijving }}
 
 {{ dagelijks_bestuur_lidmaatschap_table }}
 
@@ -340,6 +358,9 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 
 ## Spreekfragment
 
+<!-- fixme: genereer automatisch -->
+Gegevens over een spreekfragment waarin een deelnemer sprak, zoals het moment waarop dit fragment begon en eindigde.
+
 {{ spreekfragment_table }}
 
 ``` xml
@@ -352,6 +373,9 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 ```
 
 ## Stem
+
+<!-- fixme: genereer automatisch -->
+Gegevens over een stem die iemand heeft uitbracht, zoals diens stemkeuze en de stemming waarop deze keuze betrekking heeft.
 
 {{ stem_table }}
 
@@ -368,7 +392,8 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 
 ## Stemresultaat per fractie
 
-Gegevens over hoe de fractie als geheel tegenover een stemming stond, zoals of de aanwezige leden unaniem voor, unaniem tegen, of juist verdeeld hebben gestemd. Deze gegevens komen altijd onder het `<neemtDeelAanStemming>`-element van een `<fractie>`.
+<!-- fixme: genereer automatisch -->
+Gegevens over hoe een fractie als geheel tegenover een stemming stond, zoals of de aanwezige leden unaniem voor, unaniem tegen, of juist verdeeld hebben gestemd. Deze gegevens komen altijd onder het `<neemtDeelAanStemming>`-element van een `<fractie>`.
 
 Het stemresultaat op fractie-niveau is in de regel af te leiden [uit stemkeuzes van aanwezige deelnemers](#stem-gegevens).
 
@@ -392,7 +417,7 @@ Het stemresultaat op fractie-niveau is in de regel af te leiden [uit stemkeuzes 
 
 # Algemeen
 
-Algemene datatypes (<span class="badge">A</span>) die op meerdere plekken terugkomen.
+Algemene datatypes die op meerdere plekken terugkomen.
 
 ## Verwijzing gegevens
 

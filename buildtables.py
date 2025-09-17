@@ -161,6 +161,19 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
 
     return rows
 
+def find_description_for_complextype(complextype):
+    """There are multiple places where a datatype can be described.
+
+    Very rarely, its where you would expect (i.e. the annotation of the complexType).
+    More often, it exists in the annotation of under a random element of another complexType.
+    """
+
+    name = complextype.attrib.get('name', None)
+    if not name:
+        return ''
+
+    elem = root.find(f".//xs:element[@type='{name}']", namespaces=ns)
+    return elem.find('.//xs:documentation', namespaces=ns).text
 
 outfile = "pages/xml-schema.md"
 outfile_diagram = "diagram/ORI-A-diagram.tex"
@@ -197,9 +210,14 @@ for gegevensgroep_name, elem in zip(gegevensgroepen_names, gegevensgroepen_elems
     all_tables_html[snake_case_name] = html_table
     all_tables[snake_case_name] = rows
 
+    # create description to be placed under headers
+    snake_case_name_desc = "_".join(gegevensgroep_seperate_words[:-1] + ["beschrijving"]).lower()
+    all_tables_html[snake_case_name_desc] = find_description_for_complextype(elem)
+
 md_with_html_tables = documentatie_template.render(**all_tables_html)
 # this string must be removed for the yaml frontmatter to be syntactically correct
 md_with_html_tables = md_with_html_tables.replace('<!-- -*- mode: markdown -*- -->', '')
+
 diagram_rendered = diagram_template.render(**all_tables)
 diagram_rendered = diagram_rendered.replace('<!-- -*- mode: LaTex -*- -->', '')
 
