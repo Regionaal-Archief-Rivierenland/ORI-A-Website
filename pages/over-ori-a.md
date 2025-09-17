@@ -11,7 +11,7 @@ Hieronder wordt het belang van een archiefstandaard voor zulke informatie uitgel
 
 De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het duurzaam bewaren van raadsinformatie in XML-formaat. Deze regels zijn vastgelegd in het [ORI-A XML-schema](downloads#xml-schema). Dit schema kan gebruikt worden wanneer raadsinformatie, zoals een collectie videotulen, voor permanente bewaring naar een [e-depot](https://www.nationaalarchief.nl/archiveren/kennisbank/wat-is-een-e-depot) wordt gemigreerd.
 
-ORI-A is gebaseerd op het informatiemodel dat de VNG heeft ontworpen voor [de Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). In ["Hoe verhoudt ORI-A zich tot ORI?"](faq) kun je meer lezen over de verschillen tussen deze twee informatiemodellen.
+ORI-A is gebaseerd op het informatiemodel dat de VNG heeft ontworpen voor [de Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). In ["Hoe verhoudt ORI-A zich tot ORI?"](faq#hoe-verhoudt-ori-a-zich-tot-ori) kun je meer lezen over de verschillen tussen deze twee informatiemodellen.
 
 # Waarom is ORI-A ontwikkeld?
 
@@ -19,7 +19,7 @@ Tijdens een [landelijke bijeenkomst over videotulen](https://kiacommunity.nl/tho
 
 ORI-A heeft hetzelfde hoofddoel als het ORI project van de VNG: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiekelijk gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
 
-De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten. Hierom is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
+De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten. Hierom is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq#waarom-een-speciale-archiefstandaard)
 
 # Beheer van de standaard
 

@@ -214,7 +214,7 @@ Het ORI-A XML-schema checkt of alle waardes van `<ID>`'s binnen een XML boom uni
 
 
 :::tip
-**Tip:** Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in [Waarom heeft ORI-A geen aggregatieniveaus?](faq)
+**Tip:** Over de keuze voor dit verwijzingsmechanisme kun je meer lezen in [Waarom heeft ORI-A geen aggregatieniveaus?](faq#waarom-heeft-ori-a-geen-aggregatieniveaus)
 :::
 
 ### Individuele stemmen
