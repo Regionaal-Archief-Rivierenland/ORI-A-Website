@@ -153,4 +153,4 @@ Dit logo kun je bijvoorbeeld gebruiken in promotiemateriaal of slides.
 </div>
 ```
 
-<script src="download.js" defer></script>
+<script src="download.js" defer/>
