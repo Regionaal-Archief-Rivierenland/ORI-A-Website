@@ -29,6 +29,9 @@ De [Werkgroep Archivering Raadsinformatie](colofon) beheert momenteel ORI-A. De 
 
 Het [ORI-A XML-schema](downloads#xml-schema) is momenteel in bèta. De website ondergaat de komende tijd een publieksreview. Vanaf het najaar volgen enkele pilotimplementaties, waarin de standaard wordt ingezet in de praktijk. Updates en nieuws over ORI-A zijn te lezen op deze website of op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome).
 
+::: tip
+**Tip:** We nodigen iedereen uit feedback over ORI-A te delen via [onze GitHub!](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD)
+:::
 
 # Documentatie
 
