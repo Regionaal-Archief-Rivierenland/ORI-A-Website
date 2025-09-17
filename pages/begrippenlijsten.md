@@ -9,14 +9,27 @@ Hier vind je een overzicht van alle begrippenlijsten die met ORI-A en raadsinfor
 Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten.
 
 
+# Begrippenlijsten gebruiken
 
 # TOOI Begrippenlijsten
 
 Een paar begrippenlijsten die van toepassing zijn op ORI-A worden beheerd door TOOI. Dit betreft de begrippenlijsten voor het element `<bestuurslaag>`:
+Vanuit ORI-A XML kun je op volgende manier naar een begrippenlijst verwijzen (in dit geval naar de begrippenlijst 'Vergaderstuktypes', waar het begrip 'Motie' wordt verklaard):
+
+``` xml
+<informatieobjectType>
+    <begripLabel>Motie</begripLabel>
+    <verwijzingBegrippenlijst>
+        <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
+        <verwijzingNaam>ORI-A Vergaderstuktypes</verwijzingNaam>
+    </verwijzingBegrippenlijst>
+</informatieobjectType>
+```
 
 * [Begrippenlijst Gemeenten](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet/2)
 * [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_provincies_compleet/1)
+Zie [Hoe werkt ORI-A?](tutorial#begrippenlijsten-gebruiken) voor een uitgebreider voorbeeld.
 
 # ORI-A Begrippenlijsten
 
