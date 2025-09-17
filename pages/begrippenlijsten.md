@@ -11,9 +11,6 @@ Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standa
 
 # Begrippenlijsten gebruiken
 
-# TOOI Begrippenlijsten
-
-Een paar begrippenlijsten die van toepassing zijn op ORI-A worden beheerd door TOOI. Dit betreft de begrippenlijsten voor het element `<bestuurslaag>`:
 Vanuit ORI-A XML kun je op volgende manier naar een begrippenlijst verwijzen (in dit geval naar de begrippenlijst 'Vergaderstuktypes', waar het begrip 'Motie' wordt verklaard):
 
 ``` xml
@@ -26,14 +23,10 @@ Vanuit ORI-A XML kun je op volgende manier naar een begrippenlijst verwijzen (in
 </informatieobjectType>
 ```
 
-* [Begrippenlijst Gemeenten](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet/2)
-* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_provincies_compleet/1)
 Zie [Hoe werkt ORI-A?](tutorial#begrippenlijsten-gebruiken) voor een uitgebreider voorbeeld.
 
-# ORI-A Begrippenlijsten
 
-## Vergaderstuktypes
+# Vergaderstuktypes
 
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](tutorial#gebruik-van-ori-a-met-mdto).
 
@@ -126,5 +119,11 @@ In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergad
 | Portefeuillehouder | De portefeuillehouder van een voorstel. |
 
 # Begrippenlijsten gebruiken
+# TOOI Begrippenlijsten
 
-Voor meer informatie over hoe je begrippenlijsten gebruikt in ORI-A XML, zie [Begrippenlijsten gebruiken](tutorial#begrippenlijsten-gebruiken) in [ORI-A XML uitgelegd](tutorial).
+Een paar begrippenlijsten die van toepassing zijn op ORI-A worden beheerd door TOOI. Dit betreft de begrippenlijsten voor het element `<bestuurslaag>`:
+
+Voor meer informatie over hoe je begrippenlijsten gebruikt in ORI-A XML, zie [Begrippenlijsten gebruiken](tutorial#begrippenlijsten-gebruiken) in [ORI-A XML uitgelegd](tutorial).* [Begrippenlijst Gemeenten](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
+* [Begrippenlijst Gemeenten](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
+* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet/2)
+* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_provincies_compleet/1)
