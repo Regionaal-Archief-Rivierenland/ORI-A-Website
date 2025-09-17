@@ -4,7 +4,7 @@ title-icon: lijst.svg
 position: 4
 ---
 
-Hier vind je informatie over de momenten waarop ORI-A gebruik maakt van begrippenlijsten. Een begrippenlijst is een manier om gegevens te relateren aan een extern vastgestelde lijst van waarden. ORI-A volgt de definitie, semantiek en toepassing van begrippenlijsten zoals die ook in [MDTO](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst) worden gehanteerd.
+Hier vind je een overzicht van alle begrippenlijsten die met ORI-A en raadsinformatie te maken hebben. Een begrippenlijst is een manier om gegevens te relateren aan een extern vastgestelde lijst van waarden. ORI-A volgt de definitie, semantiek en toepassing van begrippenlijsten zoals die ook in [MDTO](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst) worden gehanteerd.
 
 Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten.
 
