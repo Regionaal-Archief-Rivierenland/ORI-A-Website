@@ -39,6 +39,7 @@ TABLE_SRC := pages/xml-schema.md.j2 templates/gegevensgroep_table.html ORI-A-XSD
 TABLE_DST := pages/xml-schema.md diagram/ORI-A-diagram.tex
 
 VOORBEELDZIP := site/ORI-A\ voorbeeldbestanden.zip
+PRESERVICAZIP := site/Preservica_documentatieset.zip
 
 .PHONY: all clean update-submodule
 
@@ -52,6 +53,9 @@ $(VOORBEELDZIP): $(shell fd . -tfile 'ORI-A-XSD/Voorbeelden')
 	ln -sf ORI-A-XSD/Voorbeelden "ORI-A voorbeeldbestanden" && \
 	zip -r "$@" "ORI-A voorbeeldbestanden" && \
 	unlink "ORI-A voorbeeldbestanden"
+
+$(PRESERVICAZIP): misc/Preservica_documentatieset.zip
+	cp $< $@
 
 site/ORI-A.xsd: ORI-A-XSD/ORI-A.xsd
 	cp ORI-A-XSD/ORI-A.xsd site/
@@ -138,7 +142,7 @@ $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
 	pdflatex -output-dir pdfs diagram/ORI-A-diagram.tex
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP)
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site

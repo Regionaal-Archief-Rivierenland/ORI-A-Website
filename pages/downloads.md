@@ -100,7 +100,13 @@ ORI-A voorbeeldbestanden/
 
 Gebruikersscenario van Erfgoed Leiden & Omstreken waar andere Preservica gebruikers mogelijk inspiratie uit op kunnen doen.
 
-TODO
+::: waarschuwing
+**Let op:**  Dit gedeelte van de website is nog niet af.
+:::
+
+[Preservica voorbeeldset (download)](Preservica_documentatieset.zip){download="Preservica voorbeeldset.zip"}
+
+
 
 # Diagram
 
