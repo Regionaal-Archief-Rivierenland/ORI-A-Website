@@ -198,11 +198,20 @@ def headers_to_accordions(html):
         details.append(summary)
 
         # Collect siblings until next header
-        sibling = h.find_next_sibling()
-        while sibling and not sibling.name == "h1":
+        # also collect subheaders because elems with .dropdown
+        # may be nested
+        h1_or_h2 = sibling.name in ["h1", "h2"]
+        while sibling and not h1_or_h2:
             next_sibling = sibling.find_next_sibling()
             details.append(sibling.extract())
+
+            if not next_sibling:
+                break
+
+            h1_or_h2 = next_sibling.name in ["h1", "h2"]
             sibling = next_sibling
+
+
 
         h.replace_with(details)
 
