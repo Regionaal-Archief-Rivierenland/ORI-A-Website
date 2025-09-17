@@ -22,7 +22,8 @@ ORI-A heeft hetzelfde hoofddoel als ORI: het gestandaardiseerd beschikbaar stell
 De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten. Hierom is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
 
 # Beheer van de standaard
-De Werkgroep Archivering Raadsinformatie beheert momenteel ORI-A. De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard. 
+
+De [Werkgroep Archivering Raadsinformatie](colofon) beheert momenteel ORI-A. De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard. 
 
 ## Status
 
