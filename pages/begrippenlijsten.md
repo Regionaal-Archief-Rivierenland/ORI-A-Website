@@ -28,7 +28,7 @@ Zie [Hoe werkt ORI-A?](tutorial#begrippenlijsten-gebruiken) voor een uitgebreide
 
 # Vergaderstuktypes
 
-Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](tutorial#gebruik-van-ori-a-met-mdto).
+Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](tutorial#ori-a-mdto-combineren).
 
 | Label      | Definitie                                                                  |
 |:-----------|:---------------------------------------------------------------------------|
