@@ -8,7 +8,6 @@ Hier vind je informatie over de momenten waarop ORI-A gebruik maakt van begrippe
 
 Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten.
 
-Alle begrippenlijsten die onderdeel zijn van ORI-A worden hieronder gedocumenteerd.
 
 
 # TOOI Begrippenlijsten
