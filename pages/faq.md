@@ -80,3 +80,4 @@ ORI-A is toepasbaar in verschillende scenario’s:
 - **Bij het vormgeven van de presentatie van raadsinformatie in een e-depot:** ORI-A bevat in de basis alle benodigde data-elementen om de presentatie van raadsinformatie in onderlinge samenhang mogelijk te maken. 
 
 
+<script src="open-details.js"/>
