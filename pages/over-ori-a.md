@@ -9,25 +9,29 @@ Hieronder wordt het belang van een archiefstandaard voor zulke informatie uitgel
 
 # Wat is ORI-A?
 
-De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het duurzaam bewaren en uitwisselen van raadsinformatie in XML-formaat. Hiervoor is het ORI-A XML-schema ontwikkeld, dat kan worden gebruikt wanneer raadsinformatie, zoals een collectie videotulen, voor permanente bewaring naar een [e-depot](https://www.nationaalarchief.nl/archiveren/kennisbank/wat-is-een-e-depot) wordt gemigreerd.
+De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het duurzaam bewaren van raadsinformatie in XML-formaat. Deze regels zijn vastgelegd in het [ORI-A XML-schema](downloads#xml-schema). Dit schema kan gebruikt worden wanneer raadsinformatie, zoals een collectie videotulen, voor permanente bewaring naar een [e-depot](https://www.nationaalarchief.nl/archiveren/kennisbank/wat-is-een-e-depot) wordt gemigreerd.
 
-ORI-A is gebaseerd op het door de VNG beheerde informatiemodel van [de Open Raadsinformatie (ORI) API Specificatie](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie).
+ORI-A is gebaseerd op het informatiemodel dat de VNG heeft ontworpen voor [de Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). In ["Hoe verhoudt ORI-A zich tot ORI?"](faq) kun je meer lezen over de verschillen tussen deze twee informatiemodellen.
 
 # Waarom is ORI-A ontwikkeld?
 
-Tijdens een landelijke ['videotulenbijeenkomst'](https://kiacommunity.nl/thoughts/11904) is door diverse stakeholders in het informatiedomein de wens uitgesproken om te komen tot een standaard voor het duurzaam bewaren en beschikbaar stellen van raadsinformatie in een digitale archiefbewaarplaats (het e-depot). De toen opgerichte [Werkgroep Archivering Raadsinformatie](colofon) stelde zich als taak deze standaard te realiseren. ORI-A is daarvan het resultaat.
+Tijdens een [landelijke bijeenkomst over videotulen](https://kiacommunity.nl/thoughts/11904) gaven diverse stakeholders in het informatiedomein aan behoefte te hebben aan een standaard voor het duurzaam bewaren en beschikbaar stellen van raadsinformatie in een digitale archiefbewaarplaats (het e-depot). De toen opgerichte [Werkgroep Archivering Raadsinformatie](colofon) stelde zich als taak deze standaard te realiseren. ORI-A is daarvan het resultaat.
 
-ORI-A heeft een vergelijkbaar doel als het ORI-informatiemodel: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiekelijk gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
+ORI-A heeft hetzelfde hoofddoel als het ORI project van de VNG: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiekelijk gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
 
-Waar ORI-A verschilt van de andere initiatieven is dat het zich ook richt op het migreren van raadsinformatie. Hierin is eerst gekeken naar het ORI-informatiemodel, maar deze kon niet aan alle behoeften van archiefdiensten voldoen. Toen is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
+De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten. Hierom is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq)
 
 # Beheer van de standaard
-De Werkgroep Archivering Raadsinformatie beheert momenteel ORI-A. De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard.
+
+De [Werkgroep Archivering Raadsinformatie](colofon) beheert momenteel ORI-A. De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard. 
 
 ## Status
 
-Het ORI-A XML-schema is momenteel in bèta, en [kan hier gedownload worden](https://ori-a.nl/downloads#xml-schema). De website ondergaat de komende tijd een publieksreview. Vanaf het najaar volgen enkele pilotimplementaties, waarin de standaard wordt ingezet in de praktijk. Updates en nieuws over ORI-A zijn te lezen op deze website of op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome).
+Het [ORI-A XML-schema](downloads#xml-schema) is momenteel in bèta. De website ondergaat de komende tijd een publieksreview. Vanaf het najaar volgen enkele pilotimplementaties, waarin de standaard wordt ingezet in de praktijk. Updates en nieuws over ORI-A zijn te lezen op deze website of op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome).
 
+::: tip
+**Tip:** We nodigen iedereen uit feedback over ORI-A te delen via [onze GitHub!](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD)
+:::
 
 # Documentatie
 
