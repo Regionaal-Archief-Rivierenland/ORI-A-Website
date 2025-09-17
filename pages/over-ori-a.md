@@ -26,7 +26,7 @@ De Werkgroep Archivering Raadsinformatie beheert momenteel ORI-A. De komende tij
 
 ## Status
 
-Het ORI-A XML-schema is momenteel in bèta, en [kan hier gedownload worden](https://ori-a.nl/downloads#xml-schema). De website ondergaat de komende tijd een publieksreview. Vanaf het najaar volgen enkele pilotimplementaties, waarin de standaard wordt ingezet in de praktijk. Updates en nieuws over ORI-A zijn te lezen op deze website of op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome).
+Het [ORI-A XML-schema](downloads#xml-schema) is momenteel in bèta. De website ondergaat de komende tijd een publieksreview. Vanaf het najaar volgen enkele pilotimplementaties, waarin de standaard wordt ingezet in de praktijk. Updates en nieuws over ORI-A zijn te lezen op deze website of op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome).
 
 
 # Documentatie
