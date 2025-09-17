@@ -40,7 +40,7 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 | Antwoord   | Antwoord op een vraag aan de raad.                                         |
 
 
-## Deelnemerrollen
+# Deelnemerrollen
 
 Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
 
@@ -68,7 +68,7 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 
 :::
 
-## Mediabrontypes
+# Mediabrontypes
 
 Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
 
