@@ -200,6 +200,7 @@ def headers_to_accordions(html):
         # Collect siblings until next header
         # also collect subheaders because elems with .dropdown
         # may be nested
+        sibling = h.find_next_sibling()
         h1_or_h2 = sibling.name in ["h1", "h2"]
         while sibling and not h1_or_h2:
             next_sibling = sibling.find_next_sibling()
