@@ -90,6 +90,10 @@ Wat je binnen `<bestuurslaag>` ziet is een begrip uit een zogeheten **begrippenl
 
 De oorsprong van dit begrip is een begrippenlijst beheerd door het [TOOI project](https://standaarden.overheid.nl/tooi/waardelijsten/), maar [ORI-A definieert zelf ook een aantal begrippenlijsten](begrippenlijsten). Tenslotte kun je ook besluiten om zelf een begrippenlijst te onderhouden (zie hiervoor [de richtlijnen van het Nationaal Archief](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst)).
 
+:::waarschuwing
+We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenlijst>`) een URL bij `<verwijzingID>` in te vullen. Hiermee maak je je begrippen vindbaar en valideerbaar.
+:::
+
 :::tip
 **Tip:** `<bestuurslaag>` is bedoeld voor de overheidslaag die verantwoordelijk was voor de vergadering. Het specifieke **gremium** (bijvoorbeeld "Commissie Ruimte & Wonen") kun je kwijt in `<georganiseerdDoorGremium>`.
 :::
