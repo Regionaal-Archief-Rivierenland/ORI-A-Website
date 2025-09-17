@@ -118,12 +118,10 @@ In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergad
 | Ondertekenaar      | Ondertekenaar van een vergaderstuk.     |
 | Portefeuillehouder | De portefeuillehouder van een voorstel. |
 
-# Begrippenlijsten gebruiken
 # TOOI Begrippenlijsten
 
 Een paar begrippenlijsten die van toepassing zijn op ORI-A worden beheerd door TOOI. Dit betreft de begrippenlijsten voor het element `<bestuurslaag>`:
 
-Voor meer informatie over hoe je begrippenlijsten gebruikt in ORI-A XML, zie [Begrippenlijsten gebruiken](tutorial#begrippenlijsten-gebruiken) in [ORI-A XML uitgelegd](tutorial).* [Begrippenlijst Gemeenten](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Gemeenten](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
 * [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet/2)
 * [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_provincies_compleet/1)
