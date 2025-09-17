@@ -44,8 +44,6 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 
 Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
 
-
-
 | Label                 | Definitie                                                                  |
 |:----------------------|:---------------------------------------------------------------------------|
 | Voorzitter            | De voorzitter van de vergadering.                                          |
@@ -79,37 +77,11 @@ Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worde
 | Audio        | Een geluidsopname van een vergadering. Ook wel 'audiotuul'.               |
 | Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
 
-## Betrokkene-vergaderstuk relaties
+# Betrokkene-vergaderstuk relaties
 
-In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergaderstukken. In ORI-A is geen plek voor deze informatie gemaakt, omdat deze informatie het best in MDTO kan worden uitgedrukt - het is immers contextinformatie over een informatieobject. De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
+In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergaderstukken. In ORI-A is geen plek voor deze informatie gemaakt, omdat deze informatie het best in MDTO kan worden uitgedrukt - het is immers contextinformatie over een informatieobject.
 
-
-
-<!-- ``` xml
-<informatieobject>
-    ...
-    <betrokkene>
-        <betrokkeneTypeRelatie>
-			<begripLabel>Indiener</begripLabel>
-			<begripBegrippenlijst>
-				<verwijzingNaam>Betrokkene-vergaderstuk relaties</verwijzingNaam>
-				<verwijzingIdentificatie>
-                    <identificatieKenmerk>https://www.ori-a.nl/begrippenlijsten#betrokkene-vergaderstuk-relaties</identificatieKenmerk>
-                    <identificatieBron>ORI-A</identificatieBron>
-                </verwijzingIdentificatie>
-			</begripBegrippenlijst>
-		</betrokkeneTypeRelatie>
-        <betrokkeneActor>
-            <verwijzingNaam>J. De Vries</verwijzingNaam>
-            <verwijzingIdentificatie>
-                <identificatieKenmerk>n208</identificatieKenmerk>
-                <identificatieBron>ORI-A/Parleaus</identificatieBron>
-            </verwijzingIdentificatie>
-        </betrokkeneActor>
-    </betrokkene>
-</informatieobject>
-```
--->
+De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie ook "[Naar personen verwijzen vanuit MDTO](tutorial#naar-personen-verwijzen-vanuit-mdto)" en [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
 
 
 | Label              | Definitie                               |
