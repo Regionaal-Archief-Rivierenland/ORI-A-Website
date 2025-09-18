@@ -1,3 +1,4 @@
 [submodule "ORI-A-XSD"]
 	path = ORI-A-XSD
 	url = https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD
+    shallow = true
