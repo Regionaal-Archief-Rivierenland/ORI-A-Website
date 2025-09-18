@@ -14,12 +14,14 @@ Het meest simpele ORI-A XML-bestand bestaat uit een **vergadering** met een lijs
 <article class="card">
   <header>
     <p>
-      <strong data-tooltip="Titel van de vergadering">Gemeenteraad</strong></p >
+      <strong data-tooltip="Titel van de vergadering">Gemeenteraad</strong></p>
     <p class="muted" style="font-size: 0.85em; padding-top:0.3em; line-height: 1.0em; display: flex; align-items: top">
-      <svg xmlns="http://www.w3.org/2000/svg" height="1.0em" viewBox="0 0 24 24" style="padding-right:0.1em; margin-top: 0.1em"><title>locatie-marker</title><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>
-      Raadzaal Stadhuis
-      <svg xmlns="http://www.w3.org/2000/svg" height="1.0em" viewBox="0 0 24 24" style="padding-left: 0.3em; padding-right:0.2em; margin-top: 0.1em"><title>kalender</title><path d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" /></svg>
-      do. 30 november 2023
+      <svg height="1.0em" viewBox="0 0 24 24" style="padding-right:0.1em; margin-top: 0.1em"><title>locatie-marker</title>
+        <use xlink:href="locatie.svg#locatie"/>
+      </svg>Raadzaal Stadhuis
+      <svg height="1.0em" viewBox="0 0 24 24" style="padding-left: 0.3em; padding-right:0.2em; margin-top: 0.1em"><title>datum</title>
+        <use xlink:href="kalender.svg#kalender"/>
+      </svg>do. 30 november 2023
     </p>
   </header>
   <details>
@@ -110,10 +112,12 @@ Stel bijvoorbeeld dat je de volgende agenda hebt:
     <p>
       <strong data-tooltip="Titel van de vergadering">Gemeenteraad</strong></p >
     <p class="muted" style="font-size: 0.85em; padding-top:0.3em; line-height: 1.0em; display: flex; align-items: top">
-      <svg xmlns="http://www.w3.org/2000/svg" height="1.0em" viewBox="0 0 24 24" style="padding-right:0.1em; margin-top: 0.1em"><title>locatie-marker</title><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>
-      Raadzaal Stadhuis
-      <svg xmlns="http://www.w3.org/2000/svg" height="1.0em" viewBox="0 0 24 24" style="padding-left: 0.3em; padding-right:0.2em; margin-top: 0.1em"><title>kalender</title><path d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" /></svg>
-      do. 30 november 2023
+      <svg height="1.0em" viewBox="0 0 24 24" style="padding-right:0.1em; margin-top: 0.1em"><title>locatie-marker</title>
+        <use xlink:href="locatie.svg#locatie"/>
+      </svg>Raadzaal Stadhuis
+      <svg height="1.0em" viewBox="0 0 24 24" style="padding-left: 0.3em; padding-right:0.2em; margin-top: 0.1em"><title>datum</title>
+        <use xlink:href="kalender.svg#kalender"/>
+      </svg>do. 30 november 2023
     </p>
   </header>
   <div class="hoofdagendapunt">
