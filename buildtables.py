@@ -2,6 +2,7 @@
 
 import xml.etree.ElementTree as ET
 import re
+import sys
 
 from jinja2 import FileSystemLoader, Environment
 
@@ -185,7 +186,12 @@ env = Environment(
 )
 
 documentatie_template = env.get_template("xml-schema.md.j2")
-table_template = env.get_template("gegevensgroep_table.html")
+
+if len(sys.argv) > 1 and sys.argv[1] == "markdown":
+    table_template = env.get_template("gegevensgroep_table.md")
+else:
+    table_template = env.get_template("gegevensgroep_table.html")
+    print("using html template")
 
 diagram_template = env.get_template("ORI-A-diagram.tex.j2")
 
