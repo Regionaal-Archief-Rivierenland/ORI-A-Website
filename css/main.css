@@ -645,7 +645,6 @@ summary)>a {
 :is(h1,
 h2,
 h3,
-h4,
 summary)>a:focus-visible {
   box-shadow:none;
   color:var(--pico-primary);
@@ -655,7 +654,6 @@ summary)>a:focus-visible {
 :is(h1,
 h2,
 h3,
-h4,
 summary):hover>a {
   opacity:.25
 }
@@ -663,7 +661,6 @@ summary):hover>a {
 :is(h1,
 h2,
 h3,
-h4,
 summary):hover>a:hover {
     opacity:.5;
 }
@@ -671,7 +668,6 @@ summary):hover>a:hover {
 :is(h1,
 h2,
 h3,
-h4,
 summary):hover>a:focus-visible {
     opacity:1;
 }
