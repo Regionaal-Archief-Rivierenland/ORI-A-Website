@@ -168,6 +168,7 @@ pdf: buildpages
 	pandoc ${PANDOCFLAGS} --pdf-engine xelatex pages/downloads.md -o /tmp/downloads.pdf
 	pandoc ${PANDOCFLAGS} pages/xml-schema.md -o /tmp/xml-schema.pdf
 	pandoc ${PANDOCFLAGS} pages/begrippenlijsten.md -o /tmp/begrippenlijsten.pdf
+	pandoc ${PANDOCFLAGS} pages/hoe-werkt-ori-a.md -o /tmp/hoe-werkt-ori-a.pdf
 	pandoc ${PANDOCFLAGS} pages/colofon.md -o /tmp/colofon.pdf
 	pandoc ${PANDOCFLAGS} pages/faq.md -o /tmp/faq.pdf
 
