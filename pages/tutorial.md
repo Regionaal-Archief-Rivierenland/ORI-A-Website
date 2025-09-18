@@ -4,7 +4,7 @@ title-icon: boek.svg
 position: 2
 ---
 
-Op deze pagina laten we stap voor stap zien uit welke onderdelen een ORI-A XML-bestand kan bestaan en hoe ze eruit zien in XML.
+Op deze pagina laten we zien hoe je verschillende onderdelen van een vergadering met behulp van ORI-A XML uitdrukt.
 
 # Een vergadering beschrijven
 
