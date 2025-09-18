@@ -624,12 +624,13 @@ nav li li li:last-child {
     margin-right:0.2em;
 }
 
-/* Anchor links next to headers */
 
+/* Anchor links next to headers */
 :is(h1,
 h2,
 h3,
-h4)>a {
+h4,
+summary)>a {
     padding-left:calc(var(--pico-spacing) * .5);
     font-weight:400;
     text-decoration:none;
@@ -637,12 +638,15 @@ h4)>a {
     visibility: none;
     transition:color var(--pico-transition) opacity var(--pico-transition);
     user-select: none;
+    /* make clickable area slightly wider */
+    padding-right: 36px;
 }
 
 :is(h1,
 h2,
 h3,
-h4)>a:focus-visible {
+h4,
+summary)>a:focus-visible {
   box-shadow:none;
   color:var(--pico-primary);
   opacity:1
@@ -651,21 +655,24 @@ h4)>a:focus-visible {
 :is(h1,
 h2,
 h3,
-h4):hover>a {
+h4,
+summary):hover>a {
   opacity:.25
 }
 
 :is(h1,
 h2,
 h3,
-h4):hover>a:hover {
+h4,
+summary):hover>a:hover {
     opacity:.5;
 }
 
 :is(h1,
 h2,
 h3,
-h4):hover>a:focus-visible {
+h4,
+summary):hover>a:focus-visible {
     opacity:1;
 }
 

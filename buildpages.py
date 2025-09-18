@@ -164,17 +164,25 @@ def colorize_inline_xml(html):
 
     return str(soup)
 
+def anchor_icon_to_elem(elem, href, soup):
+    """Generic function to add anchor links to elems.
+
+    Returns:
+        modified elem
+    """
+    a = soup.new_tag("a", **{"href": f"#{href}", "class": "secondary"})
+    # put the actual "icon" (the # char) in a span, to stop an accessibility issue
+    s = soup.new_tag("span", **{"aria-hidden": "true"})
+    a.append(s)
+    s.append("#")
+    elem.append(a)
+    return elem
 
 def anchor_icon_to_headers(html):
     soup = BeautifulSoup(html, "html.parser")
     headers = soup.find_all(re.compile("^h[1-6]$"))
     for h in headers:
-        a = soup.new_tag("a", **{"href": f"#{h['id']}", "class": "secondary"})
-        # put the actual "icon" (the # char) in a span, to stop an accessibility issue
-        s = soup.new_tag("span", **{"aria-hidden": "true"})
-        a.append(s)
-        s.append("#")
-        h.append(a)
+        h = anchor_icon_to_elem(h, h['id'], soup)
     return str(soup)
 
 
@@ -195,6 +203,8 @@ def headers_to_accordions(html):
         summary.attrs["role"] = "button"
         summary.attrs["class"] = "outline contrast"
         summary.string = h_title
+        # add <a> with anchor to summary
+        summary = anchor_icon_to_elem(summary, details['id'], soup)
         details.append(summary)
 
         # Collect siblings until next header
@@ -211,8 +221,6 @@ def headers_to_accordions(html):
 
             h1_or_h2 = next_sibling.name in ["h1", "h2"]
             sibling = next_sibling
-
-
 
         h.replace_with(details)
 
