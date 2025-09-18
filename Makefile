@@ -155,6 +155,25 @@ buildpages: prepare-site
 minify: buildpages
 	minify-html --minify-js $$(fd -ehtml . site/)
 
+
+PANDOCFLAGS = -V geometry:margin=3.5cm -V papersize:a4 -H /tmp/linenumbers.tex
+
+pdf: buildpages
+    # generate markdown variant of xml-schema
+	python buildtables.py markdown
+
+	printf '%s\n' '\usepackage{lineno}' '\linenumbers' > /tmp/linenumbers.tex
+
+	pandoc ${PANDOCFLAGS} pages/over-ori-a.md -o /tmp/over-ori-a.pdf
+	pandoc ${PANDOCFLAGS} --pdf-engine xelatex pages/downloads.md -o /tmp/downloads.pdf
+	pandoc ${PANDOCFLAGS} pages/xml-schema.md -o /tmp/xml-schema.pdf
+	pandoc ${PANDOCFLAGS} pages/begrippenlijsten.md -o /tmp/begrippenlijsten.pdf
+	pandoc ${PANDOCFLAGS} pages/colofon.md -o /tmp/colofon.pdf
+	pandoc ${PANDOCFLAGS} pages/faq.md -o /tmp/faq.pdf
+
+    # cleanup "artifact"
+	rm pages/xml-schema.md
+
 # Clean up
 clean:
 	rm -rf site
