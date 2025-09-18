@@ -637,7 +637,7 @@ code span.fu { color: var(--pico-ins-color); font-weight: 600;} /* XML declarati
 nav li li li {
     padding-bottom: 0.30em;
     padding-top: 0.30em;
-    margin-left: 0.25em;
+    margin-left: 0.20em;
 }
 
 nav li li li:last-child {
@@ -645,9 +645,9 @@ nav li li li:last-child {
 }
 
 .navbar-bullet {
-    font-size: 150%;
+    font-size: 169%;
     vertical-align: bottom;
-    margin-right:0.2em;
+    margin-right: 0.14em;
 }
 
 
