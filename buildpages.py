@@ -70,18 +70,15 @@ def pageinfo(filestem):
     }
 
 
-def add_icon_to_links(html):
-    soup = BeautifulSoup(html, "html.parser")
+def add_icon_to_links(soup):
     links = soup.find_all("a", href=re.compile(r"^https?://"))
 
     for link in links:
         link["class"] = ["external"]
 
-    return str(soup)
+    return soup
 
-def add_title_section(html, title, icon):
-    soup = BeautifulSoup(html, "html.parser")
-
+def add_title_section(soup, title, icon):
     title_tag = soup.new_tag('h1')
     title_tag.string = title
     title_tag["class"] = "title"
@@ -101,8 +98,6 @@ def add_title_section(html, title, icon):
             span.string = icon + " "
             title_tag.insert(0, span)
 
-
-
     hrule = soup.new_tag('hr')
 
     # make p tags muted until you find something different
@@ -119,15 +114,14 @@ def add_title_section(html, title, icon):
     else:
         title_tag.insert_after(hrule)
 
-    return str(soup)
+    return soup
 
-def delete_pandoc_cruft(html):
+def delete_pandoc_cruft(soup):
     """
     Pandoc inserts unused <a> tags in code blocks, as well as extra
     spans and divs. This is non-configurable.
     Hence, we delete these here.
     """
-    soup = BeautifulSoup(html, "html.parser")
 
     for tag in soup.select("code span > a"):
         tag.decompose()
@@ -140,11 +134,11 @@ def delete_pandoc_cruft(html):
     for div in soup.find_all("div", class_="sourceCode"):
         div.unwrap()
 
-    return str(soup)
+    return soup
 
 
-def colorize_inline_xml(html):
-    soup = BeautifulSoup(html, "html.parser")
+def colorize_inline_xml(soup):
+
     code_tags = soup.find_all("code", string=re.compile(r"^<.*>$"))
 
     for code in code_tags:
@@ -162,7 +156,7 @@ def colorize_inline_xml(html):
         code.append(span)
         code.append(">")
 
-    return str(soup)
+    return soup
 
 def anchor_icon_to_elem(elem, href, soup):
     """Generic function to add anchor links to elems.
@@ -170,6 +164,7 @@ def anchor_icon_to_elem(elem, href, soup):
     Returns:
         modified elem
     """
+
     a = soup.new_tag("a", **{"href": f"#{href}", "class": "secondary"})
     # put the actual "icon" (the # char) in a span, to stop an accessibility issue
     s = soup.new_tag("span", **{"aria-hidden": "true"})
@@ -178,16 +173,14 @@ def anchor_icon_to_elem(elem, href, soup):
     elem.append(a)
     return elem
 
-def anchor_icon_to_headers(html):
-    soup = BeautifulSoup(html, "html.parser")
+def anchor_icon_to_headers(soup):
     headers = soup.find_all(re.compile("^h[1-6]$"))
     for h in headers:
         h = anchor_icon_to_elem(h, h['id'], soup)
-    return str(soup)
+    return soup
 
 
-def headers_to_accordions(html):
-    soup = BeautifulSoup(html, "html.parser")
+def headers_to_accordions(soup):
     h1s_and_h2s = soup.find_all("h1") + soup.find_all("h2")
 
     for h in h1s_and_h2s:
@@ -224,11 +217,9 @@ def headers_to_accordions(html):
 
         h.replace_with(details)
 
-    return str(soup)
+    return soup
 
-def add_pill_to_headers(html):
-    soup = BeautifulSoup(html, "html.parser")
-
+def add_pill_to_headers(soup):
     h1s = soup.find_all("h1")
 
     labels = {
@@ -271,7 +262,7 @@ def add_pill_to_headers(html):
 
             sibling = next_sibling
 
-    return str(soup)
+    return soup
 
 
 pages = []
@@ -299,17 +290,22 @@ for page in pages:
     with open(f"{output_folder}/moon.svg") as f:
         moonsvg = f.read()
 
+    soup = BeautifulSoup(page_contents, "html.parser")
+
     # process html
-    page_contents = add_icon_to_links(page_contents)
+    soup = add_icon_to_links(soup)
 
     if page["title"] == "Het XML-schema":
-        page_contents = add_pill_to_headers(page_contents)
+        soup = add_pill_to_headers(soup)
 
-    page_contents = anchor_icon_to_headers(page_contents)
-    page_contents = headers_to_accordions(page_contents)
-    page_contents = add_title_section(page_contents, page["title"], page["title-icon"])
-    page_contents = colorize_inline_xml(page_contents)
-    page_contents = delete_pandoc_cruft(page_contents)
+    soup = anchor_icon_to_headers(soup)
+    soup = headers_to_accordions(soup)
+    soup = add_title_section(soup, page["title"], page["title-icon"])
+    soup = colorize_inline_xml(soup)
+    soup = delete_pandoc_cruft(soup)
+
+    # convert soup back to html
+    page_contents = str(soup)
 
     # this needs current_page because that visited page needs to styled in the navbar
     if page["title"] in ["Het XML-schema"]:
