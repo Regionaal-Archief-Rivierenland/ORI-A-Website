@@ -90,8 +90,8 @@ body.no-scroll {
     article {
         box-shadow: none;
     }
-    footer, .maingrid header, article {
-        padding-left: 13px;
-        padding-right: 13px;
+    footer, .maingrid header, article[role="document"]  {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
