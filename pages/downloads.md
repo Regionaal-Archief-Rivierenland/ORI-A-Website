@@ -55,7 +55,7 @@ Kort gezegd: alle XML die valide is bevonden op basis van schema versie `1.1.0` 
 
 # Voorbeeldbestanden
 
-Een voorbeeld van hoe je een vergadering kan beschrijven in ORI-A XML. De voorbeeldbestanden laten ook zien hoe je de **video-opname** en **bijbehorende vergaderstukken** kan beschrijven in MDTO (of de niet langer actief ondersteunde voorloper van MDTO, [TMLO](https://www.nationaalarchief.nl/archiveren/kennisbank/tmlo)).
+Een voorbeeld van hoe je een vergadering kan beschrijven in ORI-A XML. De voorbeeldbestanden laten ook zien hoe je de **video-opname** en **bijbehorende vergaderstukken** kan beschrijven in MDTO.
 
 ::: tip
 **Tip:** Voor meer informatie over ORI-A + MDTO, zie [ORI-A & MDTO combineren](ORI-A & MDTO combineren).
