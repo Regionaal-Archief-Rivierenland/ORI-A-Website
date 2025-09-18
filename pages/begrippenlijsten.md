@@ -23,12 +23,12 @@ Vanuit ORI-A XML kun je op volgende manier naar een begrippenlijst verwijzen (in
 </informatieobjectType>
 ```
 
-Zie [Hoe werkt ORI-A?](tutorial#begrippenlijsten-gebruiken) voor een uitgebreider voorbeeld.
+Zie [Hoe werkt ORI-A?](hoe-werkt-ori-a#begrippenlijsten-gebruiken) voor een uitgebreider voorbeeld.
 
 
 # Vergaderstuktypes
 
-Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](tutorial#ori-a-mdto-combineren).
+Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
 | Label      | Definitie                                                                  |
 |:-----------|:---------------------------------------------------------------------------|
@@ -81,7 +81,7 @@ Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worde
 
 In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergaderstukken. In ORI-A is geen plek voor deze informatie gemaakt, omdat deze informatie het best in MDTO kan worden uitgedrukt --- het is immers contextinformatie over een informatieobject.
 
-De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie ook "[Naar personen verwijzen vanuit MDTO](tutorial#naar-personen-verwijzen-vanuit-mdto)" en [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
+De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie ook "[Naar personen verwijzen vanuit MDTO](hoe-werkt-ori-a#naar-personen-verwijzen-vanuit-mdto)" en [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
 
 
 | Label              | Definitie                               |

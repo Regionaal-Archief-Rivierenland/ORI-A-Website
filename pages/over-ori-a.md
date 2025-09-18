@@ -39,7 +39,7 @@ De ORI-A documentatie bestaat uit een aantal onderdelen:
 
 ``` {=html}
 <div class="cardgrid">
-  <a href="tutorial">
+  <a href="hoe-werkt-ori-a">
     <article class="card">
       <header>
         <svg width=27 height=27>

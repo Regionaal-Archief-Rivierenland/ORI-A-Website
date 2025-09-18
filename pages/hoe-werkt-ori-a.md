@@ -206,7 +206,7 @@ Dit zegt:
 
 > De stemming met ID `RV 23.0081` had betrekking op een elders gedefinieerd agendapunt met ID `2028a00aa`. Tijdens dit agendapunt werd er gestemd over een besluitvormingsstuk met ID `0222a202`. 
 
-Voor een uitgebreide uitleg over het verwijzen **naar externe informatieobjecten** zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](tutorial#ori-a-mdto-combineren).
+Voor een uitgebreide uitleg over het verwijzen **naar externe informatieobjecten** zoals besluitvormingsstukken, zie [ORI-A & MDTO combineren](#ori-a-mdto-combineren).
 
 :::waarschuwing
 Het ORI-A XML-schema checkt of alle waardes van `<ID>`'s binnen een XML boom uniek zijn. Dit vermindert de kans op ambigue verwijzingen.
