@@ -87,7 +87,7 @@ body.no-scroll {
         padding-right: 0px;
         padding-left: 0px;
     }
-    article {
+    article[role="document"] {
         box-shadow: none;
         hyphens: auto;
     }
