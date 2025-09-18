@@ -43,15 +43,53 @@ official woff2 files from the Lato website had vertical spacing issues
     font-display: swap;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --pico-block-spacing-vertical: 2.0rem;
+    --pico-block-spacing-horizontal: 2.0rem;
+    /* Ubuntu, Open Sans, Cantarell, Lato are nice */
+    --header-font: "Lato", var(--pico-font-family-sans-serif);
+    --monospace-font: "CommitMonoVariable", var(--pico-font-family-monospace);
+    --tiny-font-size: 16px;
+    --small-box-shadow: 0 3px 3px #2b2a330d;
+    --purple: #4D1A57;
+    /* Windows users */
+    /* --pico-font-family-sans-serif: "Segoe UI Variable Static Display"; */
+}
+
+:root[data-theme=dark] {
+    --purple: #6F277D;
+}
+
 .title {
     font-weight: 900;
     font-size: 2.5rem;
+}
+
+h1, h2, h3, #documentation-menu, .logo {
+    font-family: var(--header-font);
 }
 
 .title svg {
     margin-top: -0.3rem;
     margin-right: 0.7rem;
     width: 2.5rem;
+}
+
+figure {
+    text-align: center;
+    padding-top: var(--pico-block-spacing-vertical);
+    padding-bottom: var(--pico-block-spacing-vertical);
+}
+
+/* make some images protrude in the margins  */
+.largefigure {
+    width: 101%;
+    max-width: 101%;
+    margin-left: -8px;
 }
 
 .pill {
@@ -69,7 +107,13 @@ official woff2 files from the Lato website had vertical spacing issues
 
 .pill-purple {
     background: #E7E0E9;
-    color: #4E1B58;
+    color: #4D1A57;
+}
+
+[data-theme=dark] .pill-purple {
+    /* using the inversion instead of the lightened purple here looks better imo  */
+    background: #4D1A57;
+    color: #E7E0E9;
 }
 
 .pill-green {
@@ -77,51 +121,33 @@ official woff2 files from the Lato website had vertical spacing issues
     color: #0F704A;
 }
 
+[data-theme=dark] .pill-green {
+    background: #0F704A;
+    color:  #DFECE7;
+}
+
 .pill-blue {
     background: #E4EBF2;
     color: #37669C;
 }
 
+[data-theme=dark] .pill-blue {
+    background: #37669C;
+    color: #E4EBF2;
+}
+
 .pill-yellow {
-    background: #EEE7C7;
-    color: #93822d;
+    background: #FCEFD9;
+    color: #876400;
 }
 
-figure {
-    text-align: center;
-    padding-top: var(--pico-block-spacing-vertical);
-    padding-bottom: var(--pico-block-spacing-vertical);
-}
-
-/* make some images protrude in the margins  */
-.largefigure {
-    width: 101%;
-    max-width: 101%;
-    margin-left: -8px;
+[data-theme=dark] .pill-yellow {
+    background: #876400;
+    color: #FCEFD9;
 }
 
 .muted {
     color: var(--pico-muted-color);
-}
-
-:root {
-    --pico-block-spacing-vertical: 2.0rem;
-    --pico-block-spacing-horizontal: 2.0rem;
-    /* Ubuntu, Open Sans, Cantarell, Lato are nice */
-    --header-font: "Lato", var(--pico-font-family-sans-serif);
-    --monospace-font: "CommitMonoVariable", var(--pico-font-family-monospace);
-    --tiny-font-size: 16px;
-    --small-box-shadow: 0 3px 3px #2b2a330d;
-    /* Windows users */
-    /* --pico-font-family-sans-serif: "Segoe UI Variable Static Display"; */
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-h1, h2, h3, #documentation-menu, .logo {
-    font-family: var(--header-font);
 }
 
 /* Used to add an icon to external URLS */

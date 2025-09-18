@@ -8,13 +8,13 @@
         <details {{ "open" if loop.first }} style="padding: 0px; margin-bottom: 0.35em">
           <summary style="color: var(--pico-secondary); margin-bottom:0">
             {% if header == "Entiteiten" %}
-            <span class="navbar-bullet" style="color: #4E1B58">•</span> {{ header }}
+            <span class="navbar-bullet" style="color: var(--purple)">•</span> {{ header }}
             {% elif header == "Relatieklasses" %}
             <span class="navbar-bullet" style="color: #0F704A">•</span> {{ header }}
             {% elif header == "Gegevensgroepen" %}
             <span class="navbar-bullet" style="color: #37669C">•</span> {{ header }}
             {% elif header == "Algemeen" %}
-            <span class="navbar-bullet" style="color: #93822d">•</span> {{ header }}
+            <span class="navbar-bullet" style="color: #876400">•</span> {{ header }}
             {% endif %}
           </summary>
           <ul>
