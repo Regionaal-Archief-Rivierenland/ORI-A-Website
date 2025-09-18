@@ -74,7 +74,7 @@ def add_icon_to_links(soup):
     links = soup.find_all("a", href=re.compile(r"^https?://"))
 
     for link in links:
-        link["class"] = ["external"]
+        link["class"] += ["external"]
 
     return soup
 
