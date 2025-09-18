@@ -89,6 +89,7 @@ body.no-scroll {
     }
     article {
         box-shadow: none;
+        hyphens: auto;
     }
     footer, .maingrid header, article[role="document"]  {
         padding-left: 12px;
