@@ -155,7 +155,6 @@ buildpages: prepare-site
 minify: buildpages
 	minify-html --minify-js $$(fd -ehtml . site/)
 
-
 PANDOCFLAGS = -V geometry:margin=3.5cm -V papersize:a4 -H /tmp/linenumbers.tex
 
 pdf: buildpages
@@ -172,8 +171,8 @@ pdf: buildpages
 	pandoc ${PANDOCFLAGS} pages/colofon.md -o /tmp/colofon.pdf
 	pandoc ${PANDOCFLAGS} pages/faq.md -o /tmp/faq.pdf
 
-    # cleanup "artifact"
-	rm pages/xml-schema.md
+    # cleanup artifacts
+	rm pages/xml-schema.md site/xml-schema.html
 
 # Clean up
 clean:
