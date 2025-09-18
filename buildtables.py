@@ -166,13 +166,18 @@ def find_description_for_complextype(complextype):
     """There are multiple places where a datatype can be described.
 
     Very rarely, its where you would expect (i.e. the annotation of the complexType).
-    More often, it exists in the annotation of under a random element of another complexType.
+    More often, it exists in the annotation of some element of another complexType.
     """
-
     name = complextype.attrib.get('name', None)
     if not name:
         return ''
 
+    # does the complex type have a directly associated annotation?
+    doc = complextype.find('./xs:annotation/xs:documentation', namespaces=ns)
+    if doc is not None:
+        return doc.text
+
+    # else, search for the docstring elsewhere
     elem = root.find(f".//xs:element[@type='{name}']", namespaces=ns)
     return elem.find('.//xs:documentation', namespaces=ns).text
 
@@ -191,7 +196,6 @@ if len(sys.argv) > 1 and sys.argv[1] == "markdown":
     table_template = env.get_template("gegevensgroep_table.md")
 else:
     table_template = env.get_template("gegevensgroep_table.html")
-    print("using html template")
 
 diagram_template = env.get_template("ORI-A-diagram.tex.j2")
 
