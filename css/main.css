@@ -69,7 +69,7 @@ html {
     font-size: 2.5rem;
 }
 
-h1, h2, h3, #documentation-menu, .logo {
+h1, h2, h3, #documentation-menu, .logo, .cardgrid header {
     font-family: var(--header-font);
 }
 
@@ -86,7 +86,7 @@ figure {
 }
 
 /* make some images protrude in the margins  */
-.largefigure {
+figure .largefigure {
     width: 101%;
     max-width: 101%;
     margin-left: -8px;
@@ -202,6 +202,7 @@ h3 {
 .cardgrid article {
     box-shadow: none;
     min-height: 261px;
+    /* margins are done at the gridlevel */
     margin: 0;
     width: 100%;
     height: 100%;
@@ -212,7 +213,6 @@ h3 {
 }
 
 .cardgrid header {
-    font-family: var(--header-font);
     font-weight: 600;
 }
 
@@ -220,6 +220,7 @@ h3 {
     margin-right: 0.3em;
 }
 
+/* don't style all content as clickable  */
 .cardgrid a  {
     color: inherit;
     text-decoration: none;
@@ -227,11 +228,6 @@ h3 {
 
 .cardgrid a:hover article {
   border-color: var(--pico-secondary-underline);
-}
-
-
-[data-theme="dark"] .tip {
-    background-color: #113426;
 }
 
 .waarschuwing {
@@ -276,6 +272,11 @@ h3 {
 .waarschuwing :last-child,
 .tip :last-child {
     margin-bottom: 0;
+}
+
+
+[data-theme="dark"] .tip {
+    background-color: #113426;
 }
 
 /*
@@ -341,6 +342,13 @@ table.stickytable th {
     font-weight: normal;
 }
 
+.chapter {
+    opacity: 0.8;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.0625;
+    text-transform: uppercase;
+}
 
 /* more responsive table */
 
@@ -392,34 +400,6 @@ table.stickytable th {
         display: none;
     }
 }
-
-.download {
-    margin-bottom: var(--pico-block-spacing-vertical);
-}
-
-.download select  {
-    height: 100%;
-}
-
-.download a {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* centers icon + text as a group */
-  gap: 0.5em;
-  white-space: nowrap; /* keeps strong + trailing text glued */
-}
-
-
-.download a::before {
-  content: "";
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  background-color: currentColor;
-  mask: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg"><path d="M200 124v64a12 12 0 0 1-12 12H12a12 12 0 0 1-12-12v-64a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0m-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L112 95V12a12 12 0 0 0-24 0v83L68.49 75.51a12 12 0 0 0-17 17z"/></svg>') no-repeat center / contain;
-
-}
-
 
 .maingrid {
   display: grid;
@@ -561,7 +541,6 @@ html.light-mode {
 
 main {
     grid-area: content;
-    min-width: 0; /* important for responsive layout; see pj-dev.com/blog/flex-items-and-min-width-0 */
 }
 
 /* dark mode tweaks */
@@ -609,14 +588,6 @@ pre > code {
     font-size: 1.0em;
 }
 
-.chapter {
-    opacity: 0.8;
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 0.0625;
-    text-transform: uppercase;
-}
-
 code {color: var(--pico-color)}
 code span.kw { color: var(--pico-ins-color); font-weight: 600; } /* Keyword */
 code span.co { color: var(--pico-muted-color)}/* comments */
@@ -645,6 +616,32 @@ nav li li li:last-child {
     margin-right: 0.14em;
 }
 
+.download {
+    margin-bottom: var(--pico-block-spacing-vertical);
+}
+
+.download select  {
+    height: 100%;
+}
+
+.download a {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers icon + text as a group */
+  gap: 0.5em;
+  white-space: nowrap; /* keeps strong + trailing text glued */
+}
+
+
+.download a::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: currentColor;
+  mask: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg"><path d="M200 124v64a12 12 0 0 1-12 12H12a12 12 0 0 1-12-12v-64a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0m-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L112 95V12a12 12 0 0 0-24 0v83L68.49 75.51a12 12 0 0 0-17 17z"/></svg>') no-repeat center / contain;
+
+}
 
 /* Anchor links next to headers */
 :is(h1,
