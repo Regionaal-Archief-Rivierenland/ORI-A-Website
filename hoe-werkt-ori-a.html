@@ -93,18 +93,18 @@
 &lt;/<span class=kw>aanwezigeDeelnemer</span>></code></pre><p>Dit zegt in essentie:<blockquote><p>Peter van der Velden (de burgemeester) was in deze vergadering aanwezig als voorzitter.</blockquote><h2 id=informatie-over-personen-buiten-een-vergadering>Informatie over personen buiten een vergadering<a class=secondary href=#informatie-over-personen-buiten-een-vergadering><span aria-hidden=true>#</span></a></h2><p>Als je informatie wilt registeren over personen die <em>niet</em> in de vergadering aanwezig waren, kan dat in <code class="sourceCode xml">&lt;<span class=kw>persoonBuitenVergadering</span>></code>. Met dit element kun je onder andere:<ul><li>De afwezigheid van raadsleden bijhouden<li>Vastleggen dat een ambtenaar die zelf niet aanwezig was verantwoordelijkheid over een agendapunt droeg<li>De ondertekenaars van een stuk opslaan</ul><p>In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering, maar speelde hij toch een zekere rol als behandelend ambtenaar:<pre class="sourceCode xml"><code class="sourceCode xml">&lt;<span class=kw>agendapunt</span>>
     …
     &lt;<span class=kw>heeftAlsBehandelendAmbtenaar</span>>
-        &lt;<span class=kw>verwijzingID</span>>persoon-076&lt;/<span class=kw>verwijzingID</span>>
+        &lt;<span class=kw>verwijzingID</span>>persoon-016&lt;/<span class=kw>verwijzingID</span>>
         &lt;<span class=kw>verwijzingNaam</span>>Jan de Vries&lt;/<span class=kw>verwijzingNaam</span>>
     &lt;/<span class=kw>heeftAlsBehandelendAmbtenaar</span>>
 &lt;/<span class=kw>agendapunt</span>>
 
 &lt;<span class=kw>persoonBuitenVergadering</span>>
-    &lt;<span class=kw>ID</span>>persoon-076&lt;/<span class=kw>ID</span>>
+    &lt;<span class=kw>ID</span>>persoon-016&lt;/<span class=kw>ID</span>>
     &lt;<span class=kw>functie</span>>Ambtenaar&lt;/<span class=kw>functie</span>>
     &lt;<span class=kw>naam</span>>
         &lt;<span class=kw>volledigeNaam</span>>Jan de Vries&lt;/<span class=kw>volledigeNaam</span>>
     &lt;/<span class=kw>naam</span>>
-&lt;/<span class=kw>persoonBuitenVergadering</span>></code></pre><h2 id=naar-personen-verwijzen-vanuit-mdto>Naar personen verwijzen vanuit MDTO<a class=secondary href=#naar-personen-verwijzen-vanuit-mdto><span aria-hidden=true>#</span></a></h2><p>ORI-A laat het beschrijven van <strong>relaties tussen personen en documenten</strong> over aan andere metadatastandaarden, zoals <a class=external href=https://www.nationaalarchief.nl/archiveren/mdto>MDTO</a>. In MDTO komen gegevens over zulke relaties onder het element <code class="sourceCode xml">&lt;<span class=kw>betrokkene</span>></code>.<p>MDTO vraagt een aantal gegevens onder <code class="sourceCode xml">&lt;<span class=kw>betrokkene</span>></code>:<ul><li>Binnen <code class="sourceCode xml">&lt;<span class=kw>betrokkeneTypeRelatie</span>></code> moet het <strong>type relatie</strong> tussen de persoon en het stuk beschreven worden, middels een begrip uit een begrippenlijst. ORI-A definieert hiervoor de <a href=begrippenlijsten#betrokkene-vergaderstuk-relaties>begrippenlijst ‘Betrokkene-vergaderstuk relaties’</a>.<li>Binnen <code class="sourceCode xml">&lt;<span class=kw>betrokkeneActor</span>></code> worden de <strong>naam en ID</strong> van de betrokkene verwacht, bijvoorbeeld <code>Jan de Vries</code> en <code>persoon-076</code> om naar de ambtenaar uit het voorbeeld hierboven te verwijzen.</ul><p>Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een <strong>indiener</strong> van een stuk was, dan kun je dat zo doen:<pre class="sourceCode xml"><code class="sourceCode xml">&lt;<span class=kw>MDTO</span>>
+&lt;/<span class=kw>persoonBuitenVergadering</span>></code></pre><h2 id=naar-personen-verwijzen-vanuit-mdto>Naar personen verwijzen vanuit MDTO<a class=secondary href=#naar-personen-verwijzen-vanuit-mdto><span aria-hidden=true>#</span></a></h2><p>ORI-A laat het beschrijven van <strong>relaties tussen personen en documenten</strong> over aan andere metadatastandaarden, zoals <a class=external href=https://www.nationaalarchief.nl/archiveren/mdto>MDTO</a>. In MDTO komen gegevens over zulke relaties onder het element <code class="sourceCode xml">&lt;<span class=kw>betrokkene</span>></code>.<p>MDTO vraagt een aantal gegevens onder <code class="sourceCode xml">&lt;<span class=kw>betrokkene</span>></code>:<ul><li>Binnen <code class="sourceCode xml">&lt;<span class=kw>betrokkeneTypeRelatie</span>></code> moet het <strong>type relatie</strong> tussen de persoon en het stuk beschreven worden, middels een begrip uit een begrippenlijst. ORI-A definieert hiervoor de <a href=begrippenlijsten#betrokkene-vergaderstuk-relaties>begrippenlijst ‘Betrokkene-vergaderstuk relaties’</a>.<li>Binnen <code class="sourceCode xml">&lt;<span class=kw>betrokkeneActor</span>></code> worden de <strong>naam en ID</strong> van de betrokkene verwacht, bijvoorbeeld <code>Jan de Vries</code> en <code>persoon-016</code> om naar de ambtenaar uit het voorbeeld hierboven te verwijzen.</ul><p>Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een <strong>indiener</strong> van een stuk was, dan kun je dat zo doen:<pre class="sourceCode xml"><code class="sourceCode xml">&lt;<span class=kw>MDTO</span>>
     &lt;<span class=kw>naam</span>>Voorstel bestemmingsplan Leiden-Noord&lt;/<span class=kw>naam</span>>
     …
     &lt;<span class=kw>betrokkene</span>>
@@ -121,7 +121,7 @@
         &lt;<span class=kw>betrokkeneActor</span>>
             &lt;<span class=kw>verwijzingNaam</span>>Jan de Vries&lt;/<span class=kw>verwijzingNaam</span>>
             &lt;<span class=kw>verwijzingIdentificatie</span>>
-                &lt;<span class=kw>identificatieKenmerk</span>>Persoon-76&lt;/<span class=kw>identificatieKenmerk</span>>
+                &lt;<span class=kw>identificatieKenmerk</span>>persoon-016&lt;/<span class=kw>identificatieKenmerk</span>>
                 &lt;<span class=kw>identificatieBron</span>>Parlaeus&lt;/<span class=kw>identificatieBron</span>>
             &lt;/<span class=kw>verwijzingIdentificatie</span>>
         &lt;/<span class=kw>betrokkeneActor</span>>
