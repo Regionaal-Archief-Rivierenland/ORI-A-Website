@@ -34,14 +34,12 @@
     transform: translate(100%);
     overflow-y: auto;
     max-height: 100vh;
-    opacity: 0;
     font-family: var(--header-font);
 }
 
 #mobile-menu.open {
     display: block;
     transform: translate(0);
-    opacity: 1;
 }
 
 /* indent nested list */
