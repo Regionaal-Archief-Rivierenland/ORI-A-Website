@@ -135,6 +135,9 @@ def delete_pandoc_cruft(soup):
     for div in soup.find_all("div", class_="sourceCode"):
         div.unwrap()
 
+    for elem in soup.find_all(class_="sourceCode"):
+        elem["class"].remove("sourceCode")
+
     return soup
 
 
