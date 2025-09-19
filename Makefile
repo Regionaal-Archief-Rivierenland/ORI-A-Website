@@ -109,7 +109,7 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 		--output-file=site/$(FONT_TITLE_BOLD) ; \
 	pyftsubset fonts/$(FONT_TITLE_HEAVY) \
         --drop-tables=FFTM,feat,meta \
-		--flavor=woff2 --layout-features="kern,liga" \
+		--flavor=woff2 --layout-features="kern" \
 		--text="$$titles</>" \
 		--output-file=site/$(FONT_TITLE_HEAVY) ; \
 
