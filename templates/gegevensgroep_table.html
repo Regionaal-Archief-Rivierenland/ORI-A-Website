@@ -17,14 +17,14 @@
         <p class="toelichting"><strong>Keuze uit:</strong> {{ row.opties | join(', ') }}</p>
         {%- endif -%}
       </td>
-      <td style="text-align: center">
+      <td class="centered">
         <!-- span is needed to make the opacity work -->
         <span class="icon-cell {{ '' if row.verplicht else 'muted' }}"
               aria-label="{{ 'Verplicht' if row.verplicht else 'Niet verplicht' }}">
           {{- '✓' if row.verplicht else '×' -}}
         </span>
       </td>
-      <td style="text-align: center">
+      <td class="centered">
         <span class="icon-cell {{ '' if row.herhaalbaar else 'muted' }}"
               aria-label="{{ 'Verplicht' if row.verplicht else 'Niet verplicht' }}">
           {{- '✓' if row.herhaalbaar else '×' -}}

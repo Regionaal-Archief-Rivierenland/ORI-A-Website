@@ -300,6 +300,11 @@ table.stickytable code[data-tooltip] {
     border-bottom: none;
 }
 
+/* centered table cell */
+.centered {
+    text-align: center;
+}
+
 .toelichting {
     padding-top: 0.25em;
     color: var(--pico-muted-color);
