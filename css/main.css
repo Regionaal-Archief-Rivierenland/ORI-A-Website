@@ -554,7 +554,6 @@ html.light-mode {
 }
 
 main {
-    align-self: start;
     grid-area: content;
     min-width: 0; /* important for responsive layout; see pj-dev.com/blog/flex-items-and-min-width-0 */
 }
