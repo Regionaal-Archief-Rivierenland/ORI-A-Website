@@ -34,7 +34,7 @@ Dit schema is beschikbaar in het **XSD-bestandsformaat**.
 
 ``` {=html}
 <div class="grid download">
-<select aria-label="Versie" required>
+<select aria-label="Versie">
   <option disabled value="">Versie</option>
   <option selected>v0.0.14</option>
   <option disabled>v1.0.0</option>
@@ -134,7 +134,7 @@ Verplichte gegevens zijn **dikgedrukt**.
 
 ``` {=html}
 <div class="grid download">
-<select aria-label="Bestandsformaat diagram" required">
+<select aria-label="Bestandsformaat diagram">
   <option disabled value="">Bestandsformaat</option>
   <option value="pdf_diagram" selected>PDF</option>
   <option disabled value="svg_diagram">SVG</option>
@@ -152,7 +152,7 @@ Dit logo kun je bijvoorbeeld gebruiken in promotiemateriaal of slides.
 
 ``` {=html}
 <div class="grid download">
-<select aria-label="Bestansformaat logo" required>
+<select aria-label="Bestansformaat logo">
   <option disabled value="">Bestandsformaat</option>
   <option value="png_logo" selected>PNG</option>
   <option value="svg_logo">SVG</option>
