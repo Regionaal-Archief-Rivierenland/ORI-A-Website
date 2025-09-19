@@ -21,7 +21,7 @@ Dit schema is beschikbaar in het **XSD-bestandsformaat**.
 ``` {=html}
 <figure>
 <svg viewBox="0 0 527.411 242.886" width="95%">
-  <use <use xlink:href="validatie.svg#validatie"/>
+  <use xlink:href="validatie.svg#validatie"/>
 </svg>
 <figcaption>Valideren van ORI-A XML</figcaption>
 </figure>
