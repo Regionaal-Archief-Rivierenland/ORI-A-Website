@@ -569,20 +569,12 @@ main {
     display: none; /* Initially hide both */
 }
 
-[data-theme="dark"] #moon {
+[data-theme="dark"] #moon, [data-theme="light"] #sun {
     display: inline;
 }
 
-[data-theme="dark"] #sun {
+[data-theme="dark"] #sun, [data-theme="light"] #moon {
     display: none;
-}
-
-[data-theme="light"] #moon {
-    display: none;
-}
-
-[data-theme="light"] #sun {
-    display: inline;
 }
 
 footer {
