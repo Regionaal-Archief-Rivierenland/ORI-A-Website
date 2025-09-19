@@ -33,6 +33,7 @@
     overflow-y: auto;
     max-height: 100vh;
     font-family: var(--header-font);
+    display: none;
 }
 
 #mobile-menu.open {
