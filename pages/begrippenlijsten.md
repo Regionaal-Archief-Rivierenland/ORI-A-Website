@@ -15,7 +15,9 @@ Vanuit ORI-A XML kun je op volgende manier naar een begrippenlijst verwijzen (in
 
 ``` xml
 <informatieobjectType>
+    <!-- het begrip-->
     <begripLabel>Motie</begripLabel>
+    <!-- verwijzing naar de begrippenlijst-->
     <verwijzingBegrippenlijst>
         <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
         <verwijzingNaam>ORI-A Vergaderstuktypes</verwijzingNaam>
