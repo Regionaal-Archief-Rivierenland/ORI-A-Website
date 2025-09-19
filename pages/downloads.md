@@ -164,7 +164,9 @@ Dit logo kun je bijvoorbeeld gebruiken in promotiemateriaal of slides.
 
 ``` {=html}
 <script defer>
-const fileMap = {
+
+document.querySelectorAll(".grid.download").forEach(group => {
+    const fmap = {
     "v1.0.0": "ORI-A (v1.0.0).xsd",
     "v0.0.14": "ORI-A.xsd",
     "pdf_diagram": "ORI-A-diagram.pdf",
@@ -173,9 +175,7 @@ const fileMap = {
     "svg_logo": "logo.svg",
     "ORI-A + MDTO": "ORI-A Voorbeeldbestanden.zip",
     "ORI-A + MDTO (opex)": "ORI-A Voorbeeldbestanden.zip",
-};
-
-document.querySelectorAll(".grid.download").forEach(group => {
+    };
     const select = group.querySelector("select");
         // link == download button
         const link = group.querySelector("a");
