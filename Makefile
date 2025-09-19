@@ -101,12 +101,12 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 	headers_sans_dropdowns=$$(rg '^\#.*' --no-filename pages/*md | grep -v dropdown) ; \
 	pyftsubset fonts/$(FONT_TITLE) \
         --drop-tables=FFTM,feat,meta \
-		--flavor=woff2 --layout-features="kern" \
+		--flavor=woff2 --layout-features="kern,liga" \
 		--text="Open raadsinformatie • Archiefstandaard#$$headers_h2h3" \
 		--output-file=site/$(FONT_TITLE) ; \
 	pyftsubset fonts/$(FONT_TITLE_BOLD) \
         --drop-tables=FFTM,feat,meta \
-		--flavor=woff2 --layout-features="kern" \
+		--flavor=woff2 --layout-features="kern,liga" \
 		--text="$$titles$$headers_sans_dropdowns" \
 		--output-file=site/$(FONT_TITLE_BOLD) ; \
 	pyftsubset fonts/$(FONT_TITLE_HEAVY) \
