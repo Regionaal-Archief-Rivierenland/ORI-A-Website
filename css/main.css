@@ -541,6 +541,7 @@ html.light-mode {
 
 main {
     grid-area: content;
+    /* important for mobile */
     min-width: 0;
 }
 
