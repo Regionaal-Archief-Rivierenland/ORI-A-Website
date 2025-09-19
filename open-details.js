@@ -1,1 +1,1 @@
-function e(){var e=location.hash.slice(1);e&&(e=document.getElementById(e))&&"details"===e.tagName.toLowerCase()&&(e.open=!0)}e(),window.addEventListener("hashchange",e);
+function l(){var e=location.hash.slice(1);e&&(e=document.getElementById(e))&&"details"===e.tagName.toLowerCase()&&(e.open=!0)}l(),window.addEventListener("hashchange",l);
