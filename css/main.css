@@ -427,6 +427,7 @@ table.stickytable th {
 
 /* Horizontal nav */
 aside {
+    scrollbar-width: thin;
     font-size: var(--tiny-font-size);
     position: sticky;
     top: 0; /* Stay at the top */
