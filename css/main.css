@@ -541,6 +541,7 @@ html.light-mode {
 
 main {
     grid-area: content;
+    min-width: 0;
 }
 
 /* dark mode tweaks */
