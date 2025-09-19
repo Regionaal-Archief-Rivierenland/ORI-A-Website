@@ -97,15 +97,16 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
     # Use titles and headers to subset lato
 	@titles=$$(rg '^title: (.*)' -r '$$1' --no-filename pages/*md) ; \
 	headers=$$(rg '^\#(.*?)(\{.*\})?$$' -r '$$1' --no-filename pages/*md) ; \
+	headers_sans_dropdowns=$$(rg '^\#.*' --no-filename pages/*md | grep -v dropdown) ; \
 	pyftsubset fonts/$(FONT_TITLE) \
         --drop-tables=FFTM,feat,meta \
 		--flavor=woff2 --layout-features="kern,liga" \
-		--text="Open raadsinformatie Archiefstandaard$$titles$$headers" \
+		--text="Open raadsinformatie • Archiefstandaard$$titles$$headers" \
 		--output-file=site/$(FONT_TITLE) ; \
 	pyftsubset fonts/$(FONT_TITLE_BOLD) \
         --drop-tables=FFTM,feat,meta \
 		--flavor=woff2 --layout-features="kern,liga" \
-		--text="$$titles$$headers" \
+		--text="$$titles$$headers_sans_dropdowns" \
 		--output-file=site/$(FONT_TITLE_BOLD) ; \
 	pyftsubset fonts/$(FONT_TITLE_HEAVY) \
         --drop-tables=FFTM,feat,meta \
