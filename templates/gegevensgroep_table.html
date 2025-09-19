@@ -32,7 +32,7 @@
       </td>
       <td>
         {% if row.datatype_url -%}
-        <a href="{{ row.datatype_url }}" class="secondary"><code class=" {{ row.datatype_width_class }}">
+        <a href="{{ row.datatype_url }}" class="secondary"><code data-ch="{{ row.datatype_max_width }}">
             {{- row.datatype_wbr | safe -}}
           </code></a>
         {%- elif row.datatype_tooltip -%}
