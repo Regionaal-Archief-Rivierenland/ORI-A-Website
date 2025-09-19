@@ -361,22 +361,29 @@ table.stickytable th {
     }
 }
 
+/* fixme: if https://caniuse.com/css3-attr lands, we can greatly simplify this  */
 @media (max-width: 1440px) {
-    /* 10 == length of 'gegevens' + 2 */
-    .code-ch-11 { max-width: 11ch; line-height: 1.3; white-space: wrap !important; }
-    .code-ch-12 { max-width: 12ch; line-height: 1.3; white-space: wrap !important; }
-    .code-ch-13 { max-width: 13ch; line-height: 1.3; white-space: wrap !important; }
-    .code-ch-14 { max-width: 14ch; line-height: 1.3; white-space: wrap !important; }
-    .code-ch-15 { max-width: 15ch; line-height: 1.3; white-space: wrap !important; }
-    .code-ch-16 { max-width: 16ch; line-height: 1.3; white-space: wrap !important; }
-    .code-ch-17 { max-width: 17ch; line-height: 1.3; white-space: wrap !important; }
-    .code-ch-18 { max-width: 18ch; line-height: 1.3; white-space: wrap !important; }
-    .code-ch-19 { max-width: 19ch; line-height: 1.3; white-space: wrap !important; }
-    .code-ch-20 { max-width: 20ch; line-height: 1.3; white-space: wrap !important; }
-    /* 21 == length of 'fractielidmaatschap' + 2 */
-    .code-ch-21 { max-width: 21ch; line-height: 1.3; white-space: wrap !important; }
-    .code-ch-22 { max-width: 22ch; line-height: 1.3; white-space: wrap !important; }
+    /* set maximum width in chars using a custom attrib */
+    code[data-ch] {
+        line-height: 1.3;
+        white-space: wrap !important;
+    }
+    code[data-ch="11"] { max-width: 11ch; }
+    code[data-ch="12"] { max-width: 12ch; }
+    code[data-ch="13"] { max-width: 13ch; }
+    code[data-ch="14"] { max-width: 14ch; }
+    code[data-ch="15"] { max-width: 15ch; }
+    code[data-ch="16"] { max-width: 16ch; }
+    code[data-ch="17"] { max-width: 17ch; }
+    code[data-ch="18"] { max-width: 18ch; }
+    code[data-ch="19"] { max-width: 19ch; }
+    code[data-ch="20"] { max-width: 20ch; }
+    code[data-ch="21"] { max-width: 21ch; }
+    code[data-ch="22"] { max-width: 22ch; }
+    /* some small elems are not worth it to break  */
+    code[data-ch="99"] { white-space: nowrap !important; }
 }
+
 
 /* Blink needs this, because it doesn't treat word breaks (<wbr>) as
    _recommended_ breaks, but as forced breaks */
@@ -596,7 +603,6 @@ a > code {
 }
 
 
-
 /* for some reason this looks strange at the inline code fontsize */
 pre > code {
     font-family: CommitMonoVariable;
@@ -627,7 +633,7 @@ code span.fu { color: var(--pico-ins-color); font-weight: 600;} /* XML declarati
 nav li li li {
     padding-bottom: 0.30em;
     padding-top: 0.30em;
-    margin-left: 0.19em;
+    margin-left: 0.20em;
 }
 
 nav li li li:last-child {

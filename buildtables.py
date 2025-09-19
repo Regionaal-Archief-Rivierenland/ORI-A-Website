@@ -120,10 +120,10 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         # (and same for stemmingOverPersonenGegevens)
         if datatype == "dagelijksBestuurLidmaatschapGegevens":
             datatype_wbr = "dagelijksBestuur<wbr>LidmaatschapGegevens"
-            width_class = f"code-ch-{len('LidmaatschapGegevens') + extra_box_padding}"
+            max_width = len('LidmaatschapGegevens') + extra_box_padding
         elif datatype == "stemmingOverPersonenGegevens":
             datatype_wbr = "stemmingOver<wbr>PersonenGegevens"
-            width_class = f"code-ch-{len('PersonenGegevens') + extra_box_padding}"
+            max_width = len('PersonenGegevens') + extra_box_padding
         else:
             datatype_wbr = "<wbr>".join(datatype_seperate_words)
             # find longest word in datatype. This is used later on to set
@@ -134,7 +134,10 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
             # add 2ch to account for padding? in any case, some kind of increment is visually nicer
             maxlen = maxlen + extra_box_padding
             # associate maxlen with a css class
-            width_class = f"code-ch-{maxlen}"
+            max_width = maxlen
+            # some small elems are not worth it to break, so we enlarge them
+            if max_width < 11:
+                max_width = 99
 
         # e.g. Dagelijksbestuur lidmaatschap gegevens
         naam_pretty = " ".join(w.lower() for w in naam_seperate_words).capitalize()
@@ -150,7 +153,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
                 "toelichting": docstring,
                 "datatype": datatype,
                 "datatype_wbr": datatype_wbr,
-                "datatype_width_class": width_class,
+                "datatype_max_width": max_width,
                 "datatype_pretty": datatype_pretty,
                 "datatype_url": datatype_url,
                 "datatype_tooltip": datatype_tooltip,
