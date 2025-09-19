@@ -187,8 +187,8 @@ document.querySelectorAll(".grid.download").forEach(group => {
         const value = select.value;
         if (!value) return;
         const label = value.split("_")[0];
-        span.innerHTML = `<strong>${strong.textContent}</strong> (${label.toLowerCase()})`;
-        const file = fileMap[value];
+        span.innerHTML = "<strong>" + strong.textContent + "</strong> (" + label.toLowerCase() + ")";;
+        const file = fmap[value];
         if (!file) return;
         link.setAttribute("href", file)
     });
