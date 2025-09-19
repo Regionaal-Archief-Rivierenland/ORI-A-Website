@@ -119,14 +119,15 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
     # removing the name table as above creates problems,
     # for some reason
     # Capital letter 'Y' is needed for a tooltip
+    # the first cmd gets all code blocks, and uses sd to remove full pairs whose opening ``` contains {
 	code_snippets=$$( \
-		rg --no-filename -U --multiline-dotall '```[^\n]*\n(.*?)```' -r '$$1' pages/*md; \
-		rg --no-filename -o '[^`]`(.*)`' -r '$$1' pages/*md \
+		rg -U --no-filename --multiline-dotall '```.*?```' pages/*md | sd -f s '``` ?\{.*?\}.*?```' '' | rg -v '```'; \
+		rg --no-filename -o '[^`]`(.*?)`' -r '$$1' pages/*md \
 	); \
 	pyftsubset fonts/$(FONT_MONOSPACE) \
         --drop-tables=FFTM,feat,meta \
 		--flavor=woff2 --layout-features="kern" \
-		--text="$$code_snippets""YPFURI" \
+		--text="$$code_snippets""YURI" \
 		--output-file=site/$(FONT_MONOSPACE)
 
 # copy/minify js
