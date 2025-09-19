@@ -11,7 +11,7 @@ PNG_SRC := $(wildcard ims/*.png)
 PNG_DST := $(patsubst ims/%,site/%,$(PNG_SRC))
 
 JS_SRC := $(wildcard js/*.js)
-JS_DST := $(patsubst js/%.js, site/%.js, $(JS_SRC))
+JS_DST := site/concat.js
 
 PDF_SRC := $(wildcard pdfs/*.pdf)
 PDF_DST := $(patsubst pdfs/%.pdf, site/%.pdf, $(PDF_SRC))
@@ -131,8 +131,8 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 		--output-file=site/$(FONT_MONOSPACE)
 
 # copy/minify js
-site/%.js: js/%.js
-	uglifyjs $< -o $@ -c -m --toplevel --rename --name-cache /tmp/.namecache
+$(JS_DST): $(JS_SRC)
+	uglifyjs js/*.js -o $@ -c -m --toplevel --rename
 
 
 $(VALIDATIE_DIAGRAM_DST): $(VALIDATIE_DIAGRAM_DEPS)
