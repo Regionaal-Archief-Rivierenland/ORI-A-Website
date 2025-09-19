@@ -1,1 +1,1 @@
-function openDetailsForHash(){var e=location.hash.slice(1);e&&(e=document.getElementById(e))&&"details"===e.tagName.toLowerCase()&&(e.open=!0)}window.addEventListener("DOMContentLoaded",openDetailsForHash),window.addEventListener("hashchange",openDetailsForHash);
+function openDetailsForHash(){var e=location.hash.slice(1);e&&(e=document.getElementById(e))&&"details"===e.tagName.toLowerCase()&&(e.open=!0)}openDetailsForHash(),window.addEventListener("hashchange",openDetailsForHash);
