@@ -132,7 +132,7 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 
 # copy/minify js
 site/%.js: js/%.js
-	uglifyjs $< -o $@ -c -m
+	uglifyjs $< -o $@ -c -m --toplevel
 
 
 $(VALIDATIE_DIAGRAM_DST): $(VALIDATIE_DIAGRAM_DEPS)
