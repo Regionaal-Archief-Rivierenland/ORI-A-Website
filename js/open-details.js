@@ -12,5 +12,6 @@ function openDetailsForHash() {
     el.open = true;
 }
 
-window.addEventListener('DOMContentLoaded', openDetailsForHash);
+// run by default (i.e. when DOM is loaded)
+openDetailsForHash();
 window.addEventListener('hashchange', openDetailsForHash);
