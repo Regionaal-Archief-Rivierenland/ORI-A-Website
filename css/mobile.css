@@ -86,6 +86,8 @@ body.no-scroll {
     }
     article[role="document"] {
         box-shadow: none;
+    }
+    article[role="document"] p {
         hyphens: auto;
     }
     footer, .maingrid header, article[role="document"]  {
