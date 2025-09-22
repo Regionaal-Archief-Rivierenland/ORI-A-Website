@@ -603,7 +603,7 @@ code span.fu { color: var(--pico-ins-color); font-weight: 600;} /* XML declarati
 nav li li li {
     padding-bottom: 0.30em;
     padding-top: 0.30em;
-    margin-left: 0.20em;
+    margin-left: 0.21em;
 }
 
 nav li li li:last-child {
