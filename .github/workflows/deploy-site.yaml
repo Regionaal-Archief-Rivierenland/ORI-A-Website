@@ -22,8 +22,6 @@ jobs:
 
       - name: Build site
         run: |
-          # install npm dep in cloned repo
-          npm install purgecss --no-save --prefix .
           # make update-submodule
           make generate-tables
           make -j5
