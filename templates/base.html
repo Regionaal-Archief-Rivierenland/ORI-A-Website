@@ -32,13 +32,12 @@
           document.documentElement.setAttribute('data-theme', theme);
       })();
     </script>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   </head>
   <body>
     <div class="maingrid container">
       <header id="header-nav">
-        <a class="logo" aria-label="logo" href="index.html">
-          {{logo | safe}}
+        <a class="logo" aria-label="logo" href="index.html">{{- logo | safe -}}
           <span class="muted" style="font-size: 0.5em; display: block">Open Raadsinformatie <span style="color: var(--purple)">•</span> Archiefstandaard</span>
         </a>
         <!-- right-side buttons -->
