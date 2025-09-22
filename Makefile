@@ -158,7 +158,7 @@ buildpages: prepare-site
 minify: buildpages
 	minify-html --minify-js $$(fd -ehtml . site/)
     # purge unused css (with custom script, since the purgecss cli acted weird)
-	./purge.mjs
+	NODE_PATH=$(npm root -g) ./purge.mjs
 
 PANDOCFLAGS = -V geometry:margin=3.5cm -V papersize:a4 -H /tmp/linenumbers.tex
 

@@ -23,5 +23,5 @@ RUN sudo pacman --noconfirm -Rs base-devel
 
 USER root
 
-# install npm dep (locally)
-RUN npm install purgecss --no-save --prefix .
+# install npm dep
+RUN npm install -g purgecss
