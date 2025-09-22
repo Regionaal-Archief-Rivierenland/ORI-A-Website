@@ -42,5 +42,4 @@ for (const { css, file } of results) {
   const outPath = path.join("site/", path.basename(file));
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, css, "utf8");
-  console.log(`Purged unused css from ${outPath}`);
 }
