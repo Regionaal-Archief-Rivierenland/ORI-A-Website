@@ -1,5 +1,8 @@
 FROM greyltc/archlinux-aur:paru
 
+# update keyring
+RUN pacman-key --init && sudo pacman -Sy --noconfirm archlinux-keyring
+
 USER ab
 
 WORKDIR /ori-a-website
@@ -14,8 +17,10 @@ RUN paru -Syu --skipreview --asexplicit --removemake --cleanafter --noconfirm \
 # cleanup unused pkgs and cache
 RUN paru --noconfirm -c -Rss python-setuptools 
 RUN paru --noconfirm -Scc
-RUN sudo npm -g purgecss
 RUN sudo pacman --noconfirm -Scc
 RUN sudo pacman --noconfirm -Rs base-devel
 
 USER root
+
+# install npm dep
+RUN npm -g install purgecss
