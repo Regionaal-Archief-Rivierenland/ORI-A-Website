@@ -124,8 +124,10 @@ Het ORI-A diagram is een visuele, op UML-geïnspireerde weergave van het ORI-A i
 Verplichte gegevens zijn **dikgedrukt**.
 
 <figure class="largefigure">
-    <a href="ORI-A-diagram.pdf" target="_blank">
-        <img alt="Klein gedeelte van het ORI-A informatiemodel" class="largefigure" src="klein.svg">
+    <a href="ORI-A-diagram.pdf" target="_blank" style="color: unset">
+      <svg viewBox="0 0 1023.4499 537.95622">
+        <use xlink:href="klein.svg#klein"/>
+      </svg>
     </a>
     <figcaption>
     Klein gedeelte van het ORI-A informatiemodel ([klik voor het volledige figuur](ORI-A-diagram.pdf){target="_blank"})

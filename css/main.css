@@ -56,12 +56,21 @@ html {
     --tiny-font-size: 16px;
     --small-box-shadow: 0 3px 3px #2b2a330d;
     --purple: #4D1A57;
+    /* mostly used for pills */
+    --purple-fg: #4D1A57;
+    --purple-bg: #E7E0E9;
+    --green-fg: var(--pico-ins-color);
+    --green-bg: #DFECE7;
     /* Windows users */
     /* --pico-font-family-sans-serif: "Segoe UI Variable Static Display"; */
 }
 
 :root[data-theme=dark] {
     --purple: #6F277D;
+    --purple-fg: #E7E0E9;
+    --purple-bg: var(--purple);
+    --green-bg: #0F704A;
+    --green-fg: #DFECE7;
 }
 
 .title {
@@ -106,24 +115,14 @@ figure .largefigure {
 }
 
 .pill-purple {
-    background: #E7E0E9;
-    color: #4D1A57;
+    background: var(--purple-bg);
+    color: var(--purple-fg);
 }
 
-[data-theme=dark] .pill-purple {
-    /* using the inversion instead of the lightened purple here looks better imo  */
-    background: #4D1A57;
-    color: #E7E0E9;
-}
 
 .pill-green {
-    background: #DFECE7;
-    color: #0F704A;
-}
-
-[data-theme=dark] .pill-green {
-    background: #0F704A;
-    color:  #DFECE7;
+    background: var(--green-bg);
+    color: var(--green-fg);
 }
 
 .pill-blue {
