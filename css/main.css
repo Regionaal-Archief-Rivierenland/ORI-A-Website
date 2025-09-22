@@ -12,7 +12,7 @@ kerning compared to the woff2 files on googlefonts.  Also, the
 official woff2 files from the Lato website had vertical spacing issues
 */
 @font-face {
-    font-family: "Lato";
+    font-family: Lato;
     src: url("/lato.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
@@ -20,7 +20,7 @@ official woff2 files from the Lato website had vertical spacing issues
 }
 
 @font-face {
-    font-family: "Lato";
+    font-family: Lato;
     src: url("/lato-black.woff2") format("woff2");
     font-weight: 900;
     font-style: normal;
@@ -28,7 +28,7 @@ official woff2 files from the Lato website had vertical spacing issues
 }
 
 @font-face {
-    font-family: "Lato";
+    font-family: Lato;
     src: url("/lato-bold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
@@ -36,7 +36,7 @@ official woff2 files from the Lato website had vertical spacing issues
 }
 
 @font-face {
-    font-family: "CommitMonoVariable";
+    font-family: CommitMonoVariable;
     src: url("/CommitMonoVariable.woff2") format("woff2");
     font-weight: 400 700;
     font-style: normal;
@@ -48,11 +48,11 @@ html {
 }
 
 :root {
-    --pico-block-spacing-vertical: 2.0rem;
-    --pico-block-spacing-horizontal: 2.0rem;
+    --pico-block-spacing-vertical: 2rem;
+    --pico-block-spacing-horizontal: 2rem;
     /* Ubuntu, Open Sans, Cantarell, Lato are nice */
-    --header-font: "Lato", var(--pico-font-family-sans-serif);
-    --monospace-font: "CommitMonoVariable", var(--pico-font-family-monospace);
+    --header-font: Lato, var(--pico-font-family-sans-serif);
+    --monospace-font: CommitMonoVariable, var(--pico-font-family-monospace);
     --tiny-font-size: 16px;
     --small-box-shadow: 0 3px 3px #2b2a330d;
     --purple: #4D1A57;
@@ -152,7 +152,7 @@ figure .largefigure {
 
 /* Used to add an icon to external URLS */
 .external {
-    padding-right: 1.0em;
+    padding-right: 1em;
 	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>');
 	background-size: 14px;
 	background-repeat: no-repeat;
@@ -536,14 +536,6 @@ a.plain {
     display: none;
 }
 
-html.dark-mode {
-    color-scheme: dark;
-}
-
-html.light-mode {
-    color-scheme: light;
-}
-
 main {
     grid-area: content;
     /* important for mobile */
@@ -592,7 +584,7 @@ a > code {
 /* for some reason this looks strange at the inline code fontsize */
 pre > code {
     font-family: CommitMonoVariable;
-    font-size: 1.0em;
+    font-size: 1em;
 }
 
 code {color: var(--pico-color)}
@@ -654,7 +646,6 @@ nav li li li:last-child {
 :is(h1,
 h2,
 h3,
-h4,
 summary)>a {
     padding-left:calc(var(--pico-spacing) * .5);
     font-weight:400;
