@@ -38,8 +38,7 @@
     <div class="maingrid container">
       <header id="header-nav">
         <a class="logo" aria-label="logo" href="index.html">{{- logo | safe -}}
-          <span class="muted" style="font-size: 0.5em; display: block">Open Raadsinformatie <span style="color: var(--purple)">•</span> Archiefstandaard</span>
-        </a>
+          <span class="muted" style="font-size: 0.5em; display: block">Open Raadsinformatie <span style="color: var(--purple)">•</span> Archiefstandaard</span></a>
         <!-- right-side buttons -->
         <nav id="topbar-nav">
           <ul>
@@ -50,8 +49,8 @@
             </li>
             <li>
               <a class="contrast" id="theme-toggle" aria-label="Toggle dark mode" title="Zet donkere modus aan/uit" href="">
-                {{sunsvg | safe}}
-                {{moonsvg | safe}}
+                {{- sunsvg | safe -}}
+                {{- moonsvg | safe -}}
               </a>
             </li>
             <li>
