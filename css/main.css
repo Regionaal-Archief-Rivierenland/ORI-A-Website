@@ -562,7 +562,7 @@ main {
 
 footer {
     grid-area: footer;
-    margin-top: -20px;
+    margin-top: -40px;
     padding-bottom: 20px;
 }
 
