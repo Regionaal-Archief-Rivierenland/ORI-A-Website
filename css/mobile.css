@@ -74,6 +74,10 @@ body.no-scroll {
     font-size: inherit;
 }
 
+.cardgrid {
+    grid-template-columns: 1fr;
+}
+
 /* really small sizes */
 @media (max-width: 400px) {
     .title svg {
