@@ -419,6 +419,7 @@ table.stickytable th {
 /* Horizontal nav */
 aside {
     font-size: var(--tiny-font-size);
+    scrollbar-width: thin;
     position: sticky;
     top: 0; /* Stay at the top */
     grid-area: sidebar;
