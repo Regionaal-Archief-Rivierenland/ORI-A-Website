@@ -102,7 +102,7 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 	pyftsubset fonts/$(FONT_TITLE) \
         --drop-tables=FFTM,feat,meta \
 		--flavor=woff2 --layout-features="kern,liga" \
-		--text="Open raadsinformatie • Archiefstandaard#$$headers_h2h3" \
+		--text="Open raadsinformatie • Archiefstandaard$$headers_h2h3" \
 		--output-file=site/$(FONT_TITLE) ; \
 	pyftsubset fonts/$(FONT_TITLE_BOLD) \
         --drop-tables=FFTM,feat,meta \
