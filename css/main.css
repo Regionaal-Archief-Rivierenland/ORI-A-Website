@@ -426,7 +426,7 @@ aside {
     height: 100vh;
     overflow-y: auto;
     /* space for scrollbar */
-    padding-right: 13px;
+    padding-right: 6px;
 }
 
 /* hack to have margin protruding highlighting of active navbar item  */
