@@ -521,14 +521,15 @@ a.plain {
 }
 
 .o-svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1.25em;  /* Adjust size as needed */
-  height: 1.25em;
-  transform: translate(-8.1%, -9.1%);
-  pointer-events: none; /* Ensures text selection works normally */
-  user-select: none; /* Prevents SVG from being treated as selectable text */
+    color: var(--pico-ins-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.25em;  /* Adjust size as needed */
+    height: 1.25em;
+    transform: translate(-8.1%, -9.1%);
+    pointer-events: none; /* Ensures text selection works normally */
+    user-select: none; /* Prevents SVG from being treated as selectable text */
 }
 
 /* only display hamburger mobile on certain viewport sizes  */
