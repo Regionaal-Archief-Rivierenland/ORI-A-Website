@@ -5,7 +5,7 @@
     <ul>
       {% for header, anchor in page.headers %}
       <li style="padding-bottom: 0px">
-        <details {{ "open" if loop.first }} style="padding: 0px; margin-bottom: 0.35em">
+        <details {{ "open" if loop.first }} style="margin-bottom: 0.35em">
           <summary style="color: var(--pico-secondary); margin-bottom:0">
             {% if header == "Entiteiten" %}
             <span class="navbar-bullet" style="color: var(--purple)">•</span> {{ header }}
