@@ -51,7 +51,7 @@ update-submodule:
 
 $(VOORBEELDZIP): $(shell fd . -tfile 'ORI-A-XSD/Voorbeelden')
 	ln -sf ORI-A-XSD/Voorbeelden "ORI-A voorbeeldbestanden" && \
-	zip -r "$@" "ORI-A voorbeeldbestanden" && \
+	zip -9 -r "$@" "ORI-A voorbeeldbestanden" && \
 	unlink "ORI-A voorbeeldbestanden"
 
 $(PRESERVICAZIP): misc/Preservica_documentatieset.zip
