@@ -119,7 +119,7 @@ Gebruikersscenario van Erfgoed Leiden & Omstreken waar andere Preservica gebruik
 
 # Diagram
 
-Het ORI-A diagram is een visuele, op UML-geïnspireerde weergave van het ORI-A informatiemodel. Nuttig als je een globaal plaatje van ORI-A wilt krijgen.
+Het ORI-A diagram is een visuele, op UML-geïnspireerde weergave van het ORI-A informatiemodel. Nuttig als je een globaal beeld van ORI-A wilt krijgen.
 
 Verplichte gegevens zijn **dikgedrukt**.
 
