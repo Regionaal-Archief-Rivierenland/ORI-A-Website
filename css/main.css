@@ -61,6 +61,8 @@ html {
     --purple-bg: #E7E0E9;
     --green-fg: var(--pico-ins-color);
     --green-bg: #DFECE7;
+    /* this is currently only used in the navbar */
+    --blue-fg: #1D6DCC;
     /* Windows users */
     /* --pico-font-family-sans-serif: "Segoe UI Variable Static Display"; */
 }
@@ -71,6 +73,7 @@ html {
     --purple-bg: var(--purple);
     --green-bg: #0F704A;
     --green-fg: #DFECE7;
+    --blue-fg: #37669C;
 }
 
 .title {
