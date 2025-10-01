@@ -154,8 +154,6 @@ buildpages: prepare-site
     # replace normal hyphens by non-breaking ones
     # todo: do this in more places
 	sd  -F 'Wanneer gebruik je ORI-A' 'Wanneer gebruik je ORI‑A' site/faq.html
-	cp ims/voorbeeld.html site/
-	cp ims/videotuul_kort.mp4 site/
 
 minify: buildpages
 	minify-html --minify-css --allow-optimal-entities --minify-js $$(fd -ehtml . site/)
