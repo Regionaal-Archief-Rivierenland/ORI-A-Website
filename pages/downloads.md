@@ -150,7 +150,11 @@ Verplichte gegevens zijn **dikgedrukt**.
 
 Dit logo kun je bijvoorbeeld gebruiken in promotiemateriaal of slides.
 
-![ ](logo.svg){width=60%}
+
+<figure>
+  <img src="logo.svg" alt="ORI-A logo" width="60%">
+</figure>
+
 
 ``` {=html}
 <div class="grid download">
