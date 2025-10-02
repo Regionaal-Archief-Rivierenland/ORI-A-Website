@@ -659,7 +659,7 @@ summary)>a {
     transition:color var(--pico-transition) opacity var(--pico-transition);
     user-select: none;
     /* make clickable area slightly wider */
-    padding-right: 35px;
+    padding-right: 30px;
 }
 
 :is(h1,
