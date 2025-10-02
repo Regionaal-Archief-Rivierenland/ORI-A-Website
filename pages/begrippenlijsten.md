@@ -90,7 +90,7 @@ De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort rela
 | Ondertekenaar      | Ondertekenaar van een vergaderstuk.     |
 | Portefeuillehouder | De portefeuillehouder van een voorstel. |
 
-# Vergaderingstype
+# Vergaderingstypes
 
 Met de begrippen uit deze lijst kan het type van een [`<vergadering>`](xml-schema#vergadering) worden vastgelegd:
 
@@ -104,7 +104,7 @@ Met de begrippen uit deze lijst kan het type van een [`<vergadering>`](xml-schem
 | Algemene bestuursvergadering | Vergadering van een algemeen bestuur. |
 | Presidium                    | Vergadering van een presidium.        |
 
-# Dagelijks bestuur type
+# Dagelijks bestuur types
 
 Met de begrippen uit deze lijst kan het type van een [`<dagelijksBestuur>`](xml-schema#dagelijksBestuur) worden vastgelegd:
 
@@ -114,7 +114,7 @@ Met de begrippen uit deze lijst kan het type van een [`<dagelijksBestuur>`](xml-
 | Gedeputeerde Staten | Dagelijks bestuur van de provincie.   |
 | Dagelijks bestuur   | Dagelijks bestuur van een waterschap. |
 
-# Functie
+# Functies
 
 Met de begrippen uit deze lijst kan de functie of ambt van een persoon worden vastgelegd:
 
