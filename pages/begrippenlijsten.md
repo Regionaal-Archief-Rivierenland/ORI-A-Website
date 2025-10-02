@@ -27,6 +27,11 @@ Vanuit ORI-A XML kun je op volgende manier naar een begrippenlijst verwijzen (in
 
 Zie [Hoe werkt ORI-A?](hoe-werkt-ori-a#begrippenlijsten-gebruiken) voor een uitgebreider voorbeeld.
 
+::: tip
+**Tip:** Alhoewel we aanraden bestaande begrippenlijsten te gebruiken of [suggesties te doen om ze completer te maken](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new), kun je er ook voor kiezen zelf een begrippenlijsten te starten. Dit kan bijvoorbeeld nuttig zijn als een instantie unieke werkprocessen hanteert.
+
+Zorg in dat geval wel dat deze begrippenlijst [duurzaam wordt beheert](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst).
+:::
 
 # Vergaderstuktypes
 
