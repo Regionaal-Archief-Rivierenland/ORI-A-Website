@@ -65,13 +65,11 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 
 * Een uitbreiding op deze begrippenlijst [aanvragen](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new)
 * Een nieuwe begrippenlijst starten
-
 :::
 
 # Mediabrontypes
 
 Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
-
 
 | Label        | Definitie                                                                 |
 |:-------------|:--------------------------------------------------------------------------|
