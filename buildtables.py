@@ -165,24 +165,17 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
 
     return rows
 
-def find_description_for_complextype(complextype):
-    """There are multiple places where a datatype can be described.
+def find_description_for_complextype(complextype) -> str:
+    """Get xs:documentation directly under complextype"""
 
-    Very rarely, its where you would expect (i.e. the annotation of the complexType).
-    More often, it exists in the annotation of some element of another complexType.
-    """
     name = complextype.attrib.get('name', None)
+    # not sure why empty names popup
     if not name:
         return ''
 
-    # does the complex type have a directly associated annotation?
     doc = complextype.find('./xs:annotation/xs:documentation', namespaces=ns)
-    if doc is not None:
-        return doc.text
+    return doc.text
 
-    # else, search for the docstring elsewhere
-    elem = root.find(f".//xs:element[@type='{name}']", namespaces=ns)
-    return elem.find('.//xs:documentation', namespaces=ns).text
 
 outfile = "pages/xml-schema.md"
 outfile_diagram = "diagram/ORI-A-diagram.tex"
