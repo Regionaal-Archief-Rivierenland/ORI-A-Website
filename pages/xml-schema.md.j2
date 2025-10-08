@@ -118,8 +118,7 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 
 ## Besluit
 
-<!-- FIXME: dit is nu nog een handmatige beschrijving. Deze moet uiteindelijk automatisch worden gegenereerd -->
-Gegevens over het besluit waartoe een stemming heeft geleid, zoals of het unaniem aangenomen of verworpen is.
+{{ besluit_beschrijving }}
 
 {{ besluit_table }}
 
@@ -129,11 +128,16 @@ Gegevens over het besluit waartoe een stemming heeft geleid, zoals of het unanie
 <stemming>
     ...
     <leidtTotBesluit>
-        <toezegging>De wethouder belooft een preciezere schatting van de verwachte CO² uitstoot.</toezegging>
-        <besluitResultaat>Aangenomen</besluitResultaat>
+        <verwijzingID>ca4b182</verwijzingID>
     </leidtTotBesluit>
     ...
 </stemming>
+
+<besluit>
+    <ID>ca4b182</ID>
+    <toezegging>De wethouder belooft een preciezere schatting van de verwachte CO² uitstoot.</toezegging>
+    <besluitResultaat>Aangenomen</besluitResultaat>
+</besluit>
 ```
 
 ## Fractie
@@ -179,7 +183,6 @@ Gegevens over het besluit waartoe een stemming heeft geleid, zoals of het unanie
     </bestuurslaag>
 </dagelijksBestuur>
 ```
-
 
 ## Natuurlijk persoon
 
