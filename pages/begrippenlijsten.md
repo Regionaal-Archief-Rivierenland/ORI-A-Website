@@ -97,6 +97,61 @@ De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort rela
 | Ondertekenaar      | Ondertekenaar van een vergaderstuk.     |
 | Portefeuillehouder | De portefeuillehouder van een voorstel. |
 
+# Vergaderingstypes
+
+Met de begrippen uit deze lijst kan het type van een [`<vergadering>`](xml-schema#vergadering) worden vastgelegd:
+
+
+| Label                        | Definitie                             |
+|:-----------------------------|:--------------------------------------|
+| Raadsvergadering             | Vergadering van een gemeenteraad.     |
+| Commissievergadering         | Vergadering van een commissie.        |
+| Collegevergadering           | Vergadering van een college.          |
+| Statenvergadering            | Vergadering van Provinciale Staten.   |
+| Algemene bestuursvergadering | Vergadering van een algemeen bestuur. |
+| Presidium                    | Vergadering van een presidium.        |
+
+# Dagelijks bestuur types
+
+Met de begrippen uit deze lijst kan het type van een [`<dagelijksBestuur>`](xml-schema#dagelijksBestuur) worden vastgelegd:
+
+| Label               | Definitie                             |
+|:--------------------|:--------------------------------------|
+| College             | Dagelijks bestuur van een gemeente.   |
+| Gedeputeerde Staten | Dagelijks bestuur van de provincie.   |
+| Dagelijks bestuur   | Dagelijks bestuur van een waterschap. |
+
+# Functies
+
+Met de begrippen uit deze lijst kan de functie of ambt van een persoon worden vastgelegd:
+
+| Label                     | Definitie                                                        |
+|:--------------------------|:-----------------------------------------------------------------|
+| Burgemeester              | De burgemeester.                                                 |
+| Wethouder                 | Lid van het dagelijks bestuur van een gemeente.                  |
+| Raadslid                  | Gekozen volksvertegenwoordiger binnen een gemeente.              |
+| Burgerlid                 | Door de gemeenteraad benoemd lid van een commissie of werkgroep. |
+| Griffier                  | Hoofd van de griffie.                                            |
+| Gemeentesecretaris        | De secretaris van het college van B&W.                           |
+| Commissaris van de Koning | Commissaris van de Koning of Koningin.                           |
+| Gedeputeerde              | Lid van het dagelijks bestuur van een provincie.                 |
+| Statenlid                 | Lid van de Provinciale Staten.                                   |
+| Provinciesecretaris       | De secretaris van het college van Gedeputeerde Staten.           |
+| Dijkgraaf                 | Voorzitter van een waterschap.                                   |
+| Dagelijks bestuurslid     | Lid van een dagelijks bestuur.                                   |
+| Algemeen bestuurslid      | Lid van een algemeen bestuur.                                    |
+| Secretarisdirecteur       | Secretarisdirecteur van een waterschap.                          |
+| Ambtenaar/medewerker      | Een overheidsmedewerker.                                         |
+| Adviseur of deskundige    | Een door de overheid ingehuurde adviseur of deskundige.          |
+| <del>Overig</del>         | -                                                                |
+
+::: waarschuwing
+De functie "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informatiemodel te garanderen. Het gebruik van deze functieaanduiding wordt afgeraden. Als de bestaande functies niet toereikend zijn, heb je twee opties:
+
+* Een uitbreiding op deze begrippenlijst [aanvragen](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new)
+* Een nieuwe begrippenlijst starten
+:::
+
 # TOOI Begrippenlijsten
 
 Een paar begrippenlijsten die van toepassing zijn op ORI-A worden beheerd door TOOI. Dit betreft de begrippenlijsten voor het element `<bestuurslaag>`:
