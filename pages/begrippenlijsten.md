@@ -32,14 +32,16 @@ Zie [Hoe werkt ORI-A?](hoe-werkt-ori-a#begrippenlijsten-gebruiken) voor een uitg
 
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
-| Label      | Definitie                                                                  |
-|:-----------|:---------------------------------------------------------------------------|
-| Voorstel   | Plan waarover een besluit genomen kan worden.                              |
-| Motie      | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
-| Amendement | Voorstel om een bestaand voorstel te wijzigen.                             |
-| Toezegging | Toezegging van een gedeputeerde of raadslid.                               |
-| Vraag      | Vraag aan de raad.                                                         |
-| Antwoord   | Antwoord op een vraag aan de raad.                                         |
+| Label          | Definitie                                                                  |
+|:---------------|:---------------------------------------------------------------------------|
+| Voorstel       | Plan waarover een besluit genomen kan worden.                              |
+| Motie          | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
+| Amendement     | Voorstel om een bestaand voorstel te wijzigen.                             |
+| Toezegging     | Toezegging van een gedeputeerde of raadslid.                               |
+| Vraag          | Vraag aan de raad.                                                         |
+| Antwoord       | Antwoord op een vraag aan de raad.                                         |
+| Ingekomen stuk | Een stuk gericht aan de raad.                                              |
+| Mededeling     | Een mededeling.                                                            |
 
 
 # Deelnemerrollen
