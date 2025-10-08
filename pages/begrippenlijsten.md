@@ -97,7 +97,7 @@ De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort rela
 
 # Vergaderingstypes
 
-Met de begrippen uit deze lijst kan het type van een [`<vergadering>`](xml-schema#vergadering) worden vastgelegd:
+Met de begrippen uit deze lijst kan het type van een [`vergadering`](xml-schema#vergadering) worden vastgelegd:
 
 
 | Label                        | Definitie                             |
@@ -111,7 +111,7 @@ Met de begrippen uit deze lijst kan het type van een [`<vergadering>`](xml-schem
 
 # Dagelijks bestuur types
 
-Met de begrippen uit deze lijst kan het type van een [`<dagelijksBestuur>`](xml-schema#dagelijksBestuur) worden vastgelegd:
+Met de begrippen uit deze lijst kan het type van een [`dagelijksBestuur`](xml-schema#dagelijksBestuur) worden vastgelegd:
 
 | Label               | Definitie                             |
 |:--------------------|:--------------------------------------|
