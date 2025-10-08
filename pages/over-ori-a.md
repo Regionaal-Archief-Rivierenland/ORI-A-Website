@@ -15,9 +15,10 @@ ORI-A is gebaseerd op het informatiemodel dat de VNG heeft ontworpen voor [de Op
 
 # Waarom is ORI-A ontwikkeld?
 
-Tijdens een [landelijke bijeenkomst over videotulen](https://kiacommunity.nl/thoughts/11904) gaven diverse stakeholders in het informatiedomein aan behoefte te hebben aan een standaard voor het duurzaam bewaren en beschikbaar stellen van raadsinformatie in een digitale archiefbewaarplaats (het e-depot). De toen opgerichte [Werkgroep Archivering Raadsinformatie](colofon) stelde zich als taak deze standaard te realiseren. ORI-A is daarvan het resultaat.
+Tijdens een [landelijke bijeenkomst over videotulen](https://kiacommunity.nl/thoughts/11904) gaven diverse stakeholders in het informatiedomein aan behoefte te hebben aan een standaard voor het duurzaam bewaren en beschikbaarstellen
+van raadsinformatie in een digitale archiefbewaarplaats (het e-depot). De toen opgerichte [Werkgroep Archivering Raadsinformatie](colofon) stelde zich als taak deze standaard te realiseren. ORI-A is daarvan het resultaat.
 
-ORI-A heeft hetzelfde hoofddoel als het ORI project van de VNG: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiekelijk gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
+ORI-A heeft hetzelfde hoofddoel als het ORI project van de VNG: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder RIS-systeem momenteel een eigen, niet-publiek gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
 
 De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten. Hierom is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq#waarom-een-speciale-archiefstandaard)
 
