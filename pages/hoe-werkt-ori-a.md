@@ -445,11 +445,11 @@ In MDTO druk je dit zo uit:
 <MDTO>
     <informatieobject>
         …
-        <heeftRepresenatie>
+        <heeftRepresentatie>
             <verwijzingNaam>videotuul.mp4.bestand.mdto.xml</verwijzingNaam>
-        </heeftRepresenatie>
-        <heeftRepresenatie>
+        </heeftRepresentatie>
+        <heeftRepresentatie>
             <verwijzingNaam>videotuul.vtt.bestand.mdto.xml</verwijzingNaam>
-        </heeftRepresenatie>
+        </heeftRepresentatie>
         …
 ```
