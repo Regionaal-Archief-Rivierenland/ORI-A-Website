@@ -194,7 +194,7 @@ Om een relatie tot stand te brengen, heeft de entiteit waarnaar verwezen wordt e
 <stemming>
     <ID>RV 23.0081</ID>
     <heeftBetrekkingOpAgendapunt>
-        <verwijzingID>2028a00aa</verwijzingID>
+        <verwijzingID>20a280a8a8a88220008208822f6b6b02</verwijzingID>
     </heeftBetrekkingOpAgendapunt>
     <heeftBetrekkingOpBesluitvormingsstuk>
         <verwijzingInformatieobject>
