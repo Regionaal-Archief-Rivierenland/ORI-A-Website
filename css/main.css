@@ -181,7 +181,7 @@ h3 {
     position: relative;
     border-radius: var(--pico-border-radius);
     box-shadow: var(--small-box-shadow);
-    margin-bottom: var(--pico-block-spacing-vertical);
+    margin-bottom: var(--pico-typography-spacing-vertical);
 }
 
 .tip {
