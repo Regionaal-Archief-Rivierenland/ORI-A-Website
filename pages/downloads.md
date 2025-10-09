@@ -107,7 +107,7 @@ ORI-A voorbeeldbestanden/
 
 ## Gebruikersscenario: ORI-A voorbeeldbestanden in Preservica
 
-Gebruikersscenario van Erfgoed Leiden & Omstreken waar andere Preservica gebruikers mogelijk inspiratie uit op kunnen doen.
+Gebruikersscenario van Erfgoed Leiden & Omstreken waar andere Preservica-gebruikers mogelijk inspiratie uit op kunnen doen.
 
 ::: waarschuwing
 **Let op:**  Dit gedeelte van de website is nog niet af.
