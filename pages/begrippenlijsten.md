@@ -49,7 +49,7 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 
 # Deelnemerrollen
 
-Binnen ORI-A zijn de enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
+Binnen ORI-A zijn enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
 
 | Label                 | Definitie                                                                  |
 |:----------------------|:---------------------------------------------------------------------------|
