@@ -446,10 +446,10 @@ In MDTO druk je dit zo uit:
     <informatieobject>
         …
         <heeftRepresentatie>
-            <verwijzingNaam>videotuul.mp4.bestand.mdto.xml</verwijzingNaam>
+            <verwijzingNaam>videotuul.mp4</verwijzingNaam>
         </heeftRepresentatie>
         <heeftRepresentatie>
-            <verwijzingNaam>videotuul.vtt.bestand.mdto.xml</verwijzingNaam>
+            <verwijzingNaam>videotuul.vtt</verwijzingNaam>
         </heeftRepresentatie>
         …
 ```
