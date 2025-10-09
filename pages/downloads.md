@@ -12,7 +12,7 @@ Hier vind je bestanden die je helpen bij het maken, begrijpen of valideren van O
 <!-- **Tip:**  Technische feedback of vragen over de XSD kun je achterlaten op [Github](https://github.com/regionaal-archief-rivierenland/ORI-A-XSD/issues). -->
 <!-- ::: -->
 
-Het ORI-A XML-schema beschrijft de regels van valide ORI-A XML. Je kan dit schema gebruiken om te **controleren** of een XML-document valide ORI-A XML bevat.
+Het ORI-A XML-schema beschrijft de regels van valide ORI-A XML. Met dit schema kun je **controleren** of een XML-document valide ORI-A XML bevat.
 
 Dit schema is beschikbaar in het **XSD-bestandsformaat**.
 
