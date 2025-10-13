@@ -223,9 +223,15 @@
           %% make the box just slightly wider (for visual balance)
           \hspace{0.8cm}
         };
+
    \node (vergadering) [ORI object, left=17cm of agendapunt]
         {
           {{ render_table('Vergadering', vergadering_table) }}
+        };
+
+   \node (gremium) [ORI gegevensgroep, left=-1.5cm of vergadering, yshift=8.7cm]
+        {
+          {{ render_table('Gremium', gremium_table) }}
         };
 
    \node (deelnemer) [ORI object,  below=3.3cm of vergadering]
@@ -481,6 +487,9 @@
   node [anchor=center, above, pos=0.275] {is vastgelegd middels}
   node [anchor=center, below, pos=0.275] {\umltype{Relatiesoort}}
   ($(mdto.north)+(1cm,0)$);
+
+  %% vergadering -> gremium
+  \draw[gegevenspijl] ($(vergadering.north)+(-1.2, 0)$) |- (gremium);
 
   %% spreekfragment -> mdto (mediabron)
   \draw[relatiepijl] ($(spreekfragment.east)+(0, -3)$) -|
