@@ -149,11 +149,3 @@ De functie "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI infor
 * Een uitbreiding op deze begrippenlijst [aanvragen](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new)
 * Een nieuwe begrippenlijst starten
 :::
-
-# TOOI Begrippenlijsten
-
-Een paar begrippenlijsten die van toepassing zijn op ORI-A worden beheerd door TOOI. Dit betreft de begrippenlijsten voor het element `<bestuurslaag>`:
-
-* [Begrippenlijst Gemeenten](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet/2)
-* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_provincies_compleet/1)
