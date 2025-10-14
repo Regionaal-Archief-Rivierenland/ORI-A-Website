@@ -33,6 +33,7 @@ Zorg in dat geval wel dat deze begrippenlijst [duurzaam wordt beheert](https://w
 
 # Vergaderstuktypes
 
+<!-- todo: link to heeftalsbijlage-->
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
 | Label          | Definitie                                                                  |
@@ -49,6 +50,7 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 
 # Deelnemerrollen
 
+<!-- todo: link to aanwezigeDeelnemer-->
 Binnen ORI-A zijn enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
 
 | Label                 | Definitie                                                                  |
@@ -86,7 +88,8 @@ Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worde
 
 In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergaderstukken. In ORI-A is geen plek voor deze informatie gemaakt, omdat deze informatie het best in MDTO kan worden uitgedrukt --- het is immers contextinformatie over een informatieobject.
 
-De onderstaande begrippenlijst kan binnen MDTO worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie ook "[Naar personen verwijzen vanuit MDTO](hoe-werkt-ori-a#naar-personen-verwijzen-vanuit-mdto)" en [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
+<!-- TODO: staat deze begrippenlijst ook vernoemd in die sectie over MDTO -->
+De onderstaande begrippenlijst **kan binnen MDTO** worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie ook "[Naar personen verwijzen vanuit MDTO](hoe-werkt-ori-a#naar-personen-verwijzen-vanuit-mdto)" en [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
 
 
 | Label              | Definitie                               |
