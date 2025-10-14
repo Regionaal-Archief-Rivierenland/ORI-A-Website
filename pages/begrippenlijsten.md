@@ -33,8 +33,7 @@ Zorg in dat geval wel dat deze begrippenlijst [duurzaam wordt beheert](https://w
 
 # Vergaderstuktypes
 
-<!-- todo: link to heeftalsbijlage-->
-Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals `<heeftAlsBijlage>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](hoe-werkt-ori-a#ori-a-mdto-combineren).
+Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals in `<heeftAlsBijlage>` onder [`agendapunt`](xml-schema#agendapunt). Voor meer informatie, zie [Gebruik van ORI-A met MDTO](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
 | Label          | Definitie                                                                  |
 |:---------------|:---------------------------------------------------------------------------|
@@ -50,7 +49,6 @@ Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen 
 
 # Deelnemerrollen
 
-<!-- todo: link to aanwezigeDeelnemer-->
 Binnen ORI-A zijn enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
 
 | Label                 | Definitie                                                                  |
@@ -124,7 +122,7 @@ Met de begrippen uit deze lijst kan het type van een [`dagelijksBestuur`](xml-sc
 
 # Functies
 
-Met de begrippen uit deze lijst kan de functie of ambt van een persoon worden vastgelegd:
+Met de begrippen uit deze lijst kan de functie of ambt van een [`natuurlijkPersoon`](xml-schema#natuurlijk-persoon) worden vastgelegd:
 
 | Label                     | Definitie                                                        |
 |:--------------------------|:-----------------------------------------------------------------|
