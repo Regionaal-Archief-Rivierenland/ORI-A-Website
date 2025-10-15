@@ -20,10 +20,11 @@ Oud-deelnemers: **Regionaal Archief Zutphen**, **Waterlands Archief**
 
 Dank aan de volgende RIS leveranciers voor het beschikbaarstellen van test- en voorbeeldbestanden:
 
-* Qualigraf (voorheen Parlaeus)
-* Company Webcast
-* iBabs
-* Notubiz
+* **Qualigraf** (voorheen Parlaeus)
+* **Company Webcast**
+* **iBabs**
+* **Notubiz**
+
 
 Ook dank aan alle organisaties die hebben geholpen met het reviewen van de website en het XML-schema:
 
