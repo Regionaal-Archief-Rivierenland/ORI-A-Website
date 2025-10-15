@@ -70,7 +70,7 @@ Een voorbeeld van hoe je een vergadering kan beschrijven in ORI-A XML. De voorbe
 **Tip:** Voor meer informatie over ORI-A + MDTO, zie [ORI-A & MDTO combineren](ORI-A & MDTO combineren).
 :::
 
-De vergadering in kwestie [is gebaseerd op een vergadering van de gemeenteraad van de gemeente Leiden](https://leiden.parlaeus.nl/app/public/agenda/8028228820022a0a0282a0a8814c778c/vod). Sommige gegevens zijn om didactische redenen gefictionaliseerd.
+De vergadering in kwestie is gebaseerd op [een vergadering van de gemeenteraad van de gemeente Leiden](https://leiden.parlaeus.nl/app/public/agenda/8028228820022a0a0282a0a8814c778c/vod). Sommige gegevens zijn om didactische redenen gefictionaliseerd.
 
 
 <figure style="text-align: left">
