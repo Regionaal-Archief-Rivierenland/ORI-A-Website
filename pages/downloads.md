@@ -36,7 +36,7 @@ Dit schema is beschikbaar in het **XSD-bestandsformaat**.
 <div class="grid download">
 <select aria-label="Versie">
   <option disabled value="">Versie</option>
-  <option selected>v0.0.14</option>
+  <option selected>v0.0.15</option>
   <option disabled>v1.0.0</option>
 </select>
 
@@ -174,7 +174,7 @@ Dit logo kun je bijvoorbeeld gebruiken in promotiemateriaal of slides.
 document.querySelectorAll(".grid.download").forEach(group => {
     const fmap = {
     "v1.0.0": "ORI-A (v1.0.0).xsd",
-    "v0.0.14": "ORI-A.xsd",
+    "v0.0.15": "ORI-A.xsd",
     "pdf_diagram": "ORI-A-diagram.pdf",
     "svg_diagram": "ORI-A-diagram.svg",
     "png_logo": "logo.png",
