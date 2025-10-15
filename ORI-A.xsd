@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="https://ori-a.nl" targetNamespace="https://ori-a.nl" xmlns:ori-a="https://ori-a.nl" elementFormDefault="qualified" version="v0.0.14">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="https://ori-a.nl" targetNamespace="https://ori-a.nl" xmlns:ori-a="https://ori-a.nl" elementFormDefault="qualified" version="v0.0.15">
     <xs:element name="ORI-A">
         <xs:complexType>
             <xs:sequence>
@@ -127,7 +127,7 @@
             <xs:documentation>Gegevens over een vergadering, zoals de startdatum en locatie.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="ID" type="xs:string" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>Uniek identificatiekenmerk van de vergadering.</xs:documentation>
                 </xs:annotation>
@@ -157,7 +157,7 @@
                     <xs:documentation>Locatie (bijvoorbeeld gebouw of stad) waar de vergadering gehouden is.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="raadpleeglocatieOnline" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="weblocatie" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>Actuele link naar een online raadpleeglocatie waar de vergadering in zijn geheel wordt getoond, zoals de publicatieomgeving van een e-depot of raadsinformatiesysteem.</xs:documentation>
                 </xs:annotation>
@@ -226,7 +226,7 @@
             </xs:element>
             <xs:element name="heeftAlsBijlage" type="informatieobjectGegevens" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
-                    <xs:documentation>Gegevens over een informatieobject dat als bijlage bij de vergadering diende.</xs:documentation>
+                    <xs:documentation>Gegevens over een informatieobject dat als bijlage bij de algehele (deel)vergadering diende.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="heeftAlsDeelvergadering" type="vergaderingGegevens" minOccurs="0" maxOccurs="unbounded">
@@ -333,7 +333,7 @@
             </xs:element>
             <xs:element name="heeftAlsBijlage" type="informatieobjectGegevens" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
-                    <xs:documentation>Gegevens over een informatieobject dat als bijlage bij het agendapunt diende.</xs:documentation>
+                    <xs:documentation>Gegevens over een informatieobject dat als bijlage bij dit agendapunt diende.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="heeftAlsSubagendapunt" type="agendapuntGegevens" minOccurs="0" maxOccurs="unbounded">
@@ -496,7 +496,7 @@
     </xs:complexType>
     <xs:complexType name="besluitGegevens">
         <xs:annotation>
-            <xs:documentation>Gegevens over een besluit, zoals of het unaniem aangenomen of verworpen is.</xs:documentation>
+            <xs:documentation>Gegevens over een besluit, zoals of het unaniem aangenomen of verworpen is. Een besluit volgt in de regel op een `stemming`.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="unbounded">
@@ -546,14 +546,14 @@
                     <xs:documentation>Naam van het dagelijks bestuur.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="dagelijksBestuurType" minOccurs="0" maxOccurs="1">
+            <xs:element name="dagelijksBestuurType" type="begripGegevens" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>Het soort dagelijks bestuur. Bij voorkeur een waarde uit de begrippenlijst 'Dagelijks bestuur types'.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="bestuurslaag" type="begripGegevens" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
-                    <xs:documentation>Gegevens over de bestuurslaag die verantwoordelijk is voor de taken van dit dagelijks bestuur. Bij voorkeur een waarde uit een TOOI waardenlijst, zoals 'Register gemeenten compleet'.</xs:documentation>
+                    <xs:documentation>Gegevens over de bestuurslaag waarbinnen dit dagelijks bestuur opereert.</xs:documentation>
                 </xs:annotation>
             </xs:element>
         </xs:sequence>
@@ -570,12 +570,12 @@
             </xs:element>
             <xs:element name="datumBeginDagelijksBestuurLidmaatschap" type="xs:date" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
-                    <xs:documentation>Datum waarop iemands lidmaatschap van het dagelijkse bestuur begon.</xs:documentation>
+                    <xs:documentation>Datum waarop iemands lidmaatschap van het dagelijks bestuur begon.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="datumEindeDagelijksBestuurLidmaatschap" type="xs:date" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
-                    <xs:documentation>Datum waarop iemands lidmaatschap van het dagelijkse bestuur eindigde.</xs:documentation>
+                    <xs:documentation>Datum waarop iemands lidmaatschap van het dagelijks bestuur eindigde.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="verwijzingDagelijksBestuur" type="verwijzingGegevens" minOccurs="1" maxOccurs="1">
@@ -844,7 +844,7 @@
             </xs:element>
             <xs:element name="isNatuurlijkPersoon" type="natuurlijkPersoonGegevens" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
-                    <xs:documentation>Gegevens over de persoon die deelnemer als optreedt, zoals diens naam en fractielidmaatschap.</xs:documentation>
+                    <xs:documentation>Gegevens over de persoon die als deelnemer optreedt, zoals diens naam en fractielidmaatschap.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="neemtDeelAanStemming" type="stemGegevens" minOccurs="0" maxOccurs="unbounded">
@@ -901,7 +901,7 @@
             </xs:element>
             <xs:element name="gremiumNaam" type="xs:string" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
-                    <xs:documentation>Naam van het gremium, zoals 'Commissie Stedelijke Ontwikkeling'.</xs:documentation>
+                    <xs:documentation>Naam van het gremium, zoals 'Commissie Samenleving'.</xs:documentation>
                 </xs:annotation>
             </xs:element>
         </xs:sequence>
