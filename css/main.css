@@ -318,6 +318,11 @@ table.stickytable code[data-tooltip] {
     /* hyphens: auto; */
 }
 
+/* don't indent lists in the toelichting section */
+ul.toelichting {
+    padding-left: 0.86rem;
+}
+
 /* draw "fake" border, because the normal one doesn't work with position: sticky  */
 table.stickytable thead::after {
   content: "";

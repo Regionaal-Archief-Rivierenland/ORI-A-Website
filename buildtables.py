@@ -6,7 +6,7 @@ import sys
 
 from jinja2 import FileSystemLoader, Environment
 
-ns = {"xs": "http://www.w3.org/2001/XMLSchema"}
+ns = {"xs": "http://www.w3.org/2001/XMLSchema", "ori-a": "https://ori-a.nl"}
 # this dir is a git submodule
 root = ET.parse("ORI-A-XSD/ORI-A.xsd").getroot()
 
@@ -76,6 +76,17 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         if datatype == "enumeratie":
             for optie in elem.findall(".//xs:enumeration", namespaces=ns):
                 opties.append(optie.attrib["value"])
+        elif datatype == "begripGegevens":
+            for begrippenlijst in elem.findall(".//ori-a:aangeradenBegrippenlijst", namespaces=ns):
+                url = begrippenlijst.find(".//ori-a:URL", namespaces=ns).text
+                # so that links become "internal"
+                url = url.removeprefix("https://ori-a.nl/")
+                opties.append(
+                    {
+                        "naam": begrippenlijst.find(".//ori-a:naam", namespaces=ns).text,
+                        "url": url
+                    }
+                )
 
         # construct "pretty" (i.e. normal dutch) variants of datatypes names
         if datatype == "date":

@@ -13,9 +13,16 @@
       <td>
         <div class="small"><strong>{{ row.naam_wbr | safe }}</strong></div>
         <p class="toelichting">{{ row.toelichting }}</p>
-        {% if row.opties %}
-        <p class="toelichting"><strong>Keuze uit:</strong> {{ row.opties | join(', ') }}</p>
-        {%- endif -%}
+        {% if row.datatype == 'enumeratie' %}
+        <p class="toelichting">
+          <strong>Keuzes</strong>
+          <ul class="toelichting">
+            {% for optie in row.opties %}
+            <li>{{ optie }}</li>
+            {% endfor %}
+          </ul>
+        </p>
+        {% endif %}
       </td>
       <td class="centered">
         {# <!-- span is needed to make the opacity work --> #}
