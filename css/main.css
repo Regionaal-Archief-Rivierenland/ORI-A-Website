@@ -49,7 +49,6 @@ html {
 
 :root {
     --pico-block-spacing-vertical: 2rem;
-    --pico-block-spacing-horizontal: 2rem;
     /* Ubuntu, Open Sans, Cantarell, Lato are nice */
     --header-font: Lato, var(--pico-font-family-sans-serif);
     --monospace-font: CommitMonoVariable, var(--pico-font-family-monospace);
@@ -93,7 +92,7 @@ h1, h2, h3, #documentation-menu, .logo, .cardgrid header {
 
 figure {
     text-align: center;
-    padding-top: var(--pico-block-spacing-vertical);
+    padding-top: var(--pico-spacing);
     padding-bottom: var(--pico-block-spacing-vertical);
 }
 
@@ -181,7 +180,7 @@ h3 {
     position: relative;
     border-radius: var(--pico-border-radius);
     box-shadow: var(--small-box-shadow);
-    margin-bottom: var(--pico-typography-spacing-vertical);
+    margin-bottom: var(--pico-spacing);
 }
 
 .tip {
@@ -514,7 +513,6 @@ a.plain {
 }
 
 /* O with logo */
-
 .logo {
     all: unset;
     cursor: pointer;
