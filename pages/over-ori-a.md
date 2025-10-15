@@ -24,7 +24,7 @@ De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van ar
 
 # Beheer van de standaard
 
-ORI-A wordt beheert door de [werkgroep Archivering Raadsinformatie](colofon). De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard. 
+ORI-A wordt beheert door de [Werkgroep Archivering Raadsinformatie](colofon). De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard. 
 
 ## Status
 
