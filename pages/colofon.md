@@ -24,3 +24,11 @@ Dank aan de volgende RIS leveranciers voor het beschikbaarstellen van test- en v
 * Company Webcast
 * iBabs
 * Notubiz
+
+Ook dank aan alle organisaties die hebben geholpen met het reviewen van de website en het XML-schema:
+
+* [**Erfgoedcentrum Achterhoek en Liemers**](https://www.ecal.nu/){.contrast .plain}
+* [**Gemeente Berkelland**](http://www.gemeenteberkelland.nl/){.contrast .plain}
+* [**Groninger Archieven**](https://www.groningerarchieven.nl/){.contrast .plain}
+
+Alle resterende fouten zijn fouten van de Werkgroep Archivering Raadsinformatie.
