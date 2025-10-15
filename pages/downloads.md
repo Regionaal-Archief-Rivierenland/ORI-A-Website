@@ -48,7 +48,7 @@ Dit schema is beschikbaar in het **XSD-bestandsformaat**.
 
 Het ORI-A XML-schema houdt een vorm van [semantisch versioneren](https://semver.org/lang/nl/) aan. Dit betekent dat elk fragment van een versienummer in de vorm `MAJEUR.MINEUR.PATCH` een speciale betekenis draagt:
 
-1. `MAJEUR` wordt verhoogd bij schemawijzigingen die bestaande ORI-A XML onvalide maakt.
+1. `MAJEUR` wordt verhoogd bij schemawijzigingen die bestaande ORI-A XML onvalide maken.
 2. `MINEUR` wordt verhoogtd wanneer functionaliteit wordt toegevoegd _zonder_ de status van bestaande ORI-A XML te veranderen (ook wel "compatibele wijzigingen").
 3. `PATCH` wordt verhoogtd bij compatibele _bugfixes_, zoals correcties in de documentatie.
 
