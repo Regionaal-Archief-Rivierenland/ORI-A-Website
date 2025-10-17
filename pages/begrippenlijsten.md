@@ -52,7 +52,7 @@ Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>
 |:--------------------|:---------------------------------------------------------------------------|
 | Voorstel            | Plan waarover een besluit genomen kan worden.                              |
 | Motie               | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
-| Motie \| Voorstel   | Voorstel over beleid ingediend door een dagelijks bestuur.                 |
+| Motie \| Voorstel   | Motie met een voorstel tot handelen.                                       |
 | Motie \| Wantrouwen | Motie van wantrouwen.                                                      |
 | Motie \| Treurnis   | Motie van treurnis.                                                        |
 | Motie \| Afkeuring  | Motie van afkeuring.                                                       |
