@@ -35,16 +35,34 @@ Zorg in dat geval wel dat deze begrippenlijst [duurzaam wordt beheert](https://w
 
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals in `<heeftAlsBijlage>` onder [`agendapunt`](xml-schema#agendapunt). Voor meer informatie, zie [Gebruik van ORI-A met MDTO](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
-| Label          | Definitie                                                                  |
-|:---------------|:---------------------------------------------------------------------------|
-| Voorstel       | Plan waarover een besluit genomen kan worden.                              |
-| Motie          | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
-| Amendement     | Voorstel om een bestaand voorstel te wijzigen.                             |
-| Toezegging     | Toezegging van een gedeputeerde of raadslid.                               |
-| Vraag          | Vraag aan de raad.                                                         |
-| Antwoord       | Antwoord op een vraag aan de raad.                                         |
-| Ingekomen stuk | Een stuk gericht aan de raad.                                              |
-| Mededeling     | Een mededeling.                                                            |
+ORI-A onderscheidt verschillende soorten moties. Als het soort motie bekend is, zet je het soort achter het `|`-teken:
+
+``` xml
+<informatieobjectType>
+   <begripLabel>Motie | Wantrouwen</begripLabel>
+   <verwijzingBegrippenlijst>
+       <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
+   …
+```
+
+Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>` is in dat geval gewoon gelijk aan `Motie`.
+
+
+| Label               | Definitie                                                                  |
+|:--------------------|:---------------------------------------------------------------------------|
+| Voorstel            | Plan waarover een besluit genomen kan worden.                              |
+| Motie               | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
+| Motie \| Voorstel   | Motie met een voorstel tot handelen.                                       |
+| Motie \| Wantrouwen | Motie van wantrouwen.                                                      |
+| Motie \| Treurnis   | Motie van treurnis.                                                        |
+| Motie \| Afkeuring  | Motie van afkeuring.                                                       |
+| Motie \| Vreemd     | Motie over een onderwerp dat niet op de agenda staat.                      |
+| Amendement          | Voorstel om een bestaand voorstel te wijzigen.                             |
+| Toezegging          | Toezegging van een gedeputeerde of raadslid.                               |
+| Vraag               | Vraag aan de raad.                                                         |
+| Antwoord            | Antwoord op een vraag aan de raad.                                         |
+| Ingekomen stuk      | Een stuk gericht aan de raad.                                              |
+| Mededeling          | Een mededeling.                                                            |
 
 
 # Deelnemerrollen
