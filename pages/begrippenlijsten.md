@@ -56,7 +56,7 @@ Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>
 | Motie \| Wantrouwen | Motie van wantrouwen.                                                      |
 | Motie \| Treurnis   | Motie van treurnis.                                                        |
 | Motie \| Afkeuring  | Motie van afkeuring.                                                       |
-| Motie \| Vreemd     | Een motie over een onderwerp dat niet op de agenda staat.                  |
+| Motie \| Vreemd     | Motie over een onderwerp dat niet op de agenda staat.                      |
 | Amendement          | Voorstel om een bestaand voorstel te wijzigen.                             |
 | Toezegging          | Toezegging van een gedeputeerde of raadslid.                               |
 | Vraag               | Vraag aan de raad.                                                         |
