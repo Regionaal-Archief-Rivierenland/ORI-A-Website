@@ -358,7 +358,6 @@ Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van
 
 # Spreekfragmenten
 
-TODO
 Een belangrijke functionaliteit binnen digitale raadsinformatie is de mogelijkheid om te navigeren naar momenten in de opname dat een specifieke spreker aan het woord is tijdens een agendapunt. In ORI-A gebeurt dat via het element Spreekfragment. Spreekfragmenten relateren een <aanwezigeDeelnemer> aan een <Agendapunt>.
 
 
