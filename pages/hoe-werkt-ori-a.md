@@ -365,6 +365,19 @@ Het element <Spreekfragment> biedt veel ruimte om informatie over het spreekfrag
 ## Absolute tijdsaanduiding
 
 Met de elementen <aanvang> en <einde> kan het absolute moment waarop het spreekfragment in de tijd plaatsvond worden vastgelegd, dus de datum en het tijdstip.
+
+``` xml
+<MDTO>
+    <aanwezigeDeelnemer>
+        …
+        <spreektTijdensSpreekfragment>
+            <aanvang>2023-11-30T19:32:47</aanvang>
+            <einde>2023-11-30T19:35:24</einde>
+            …
+        </spreektTijdensSpreekfragment>
+    </aanwezigeDeelnemer>
+```
+
 <!-- misschien incl. interactieve video, waarin je ook even het verschil uitlegt tussen relatieve en absolute timestamps -->
 
 # ORI-A & MDTO combineren
