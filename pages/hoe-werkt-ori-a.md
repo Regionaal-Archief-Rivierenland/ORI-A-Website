@@ -378,6 +378,8 @@ Met de elementen <aanvang> en <einde> kan het absolute moment waarop het spreekf
     </aanwezigeDeelnemer>
 ```
 
+## Tijdsaanduiding in relatie tot de opname
+In ORI-A kan je ook tijdsaanduidingen van spreekfragmenten vastleggen die relateren aan een audio- en/of video-opname. Hier zijn verschillende elementen voor ingericht, die hieronder te zien zijn. ORI-A accepteert als relatieve tijdsaanduiding zowel tijdcodes (hh:mm:ss) als positieve integers. Die laatste gebruik je als de tijdsaanduiding van het spreekfragment in seconden sinds het startpunt van de opname is vastgelegd. 
 <!-- misschien incl. interactieve video, waarin je ook even het verschil uitlegt tussen relatieve en absolute timestamps -->
 
 # ORI-A & MDTO combineren
