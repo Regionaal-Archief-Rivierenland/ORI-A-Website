@@ -148,23 +148,23 @@ Met de begrippen uit deze lijst kan de functie of ambt van een [`natuurlijkPerso
 
 | Label                     | Definitie                                                                                     |
 |:--------------------------|:----------------------------------------------------------------------------------------------|
-| Burgemeester              | Voorzitter van het algemeen en dagelijks bestuur van een gemeente.                            |
 | Commissaris van de Koning | Voorzitter van het algemeen en dagelijks bestuur van een provincie.                           |
+| Burgemeester              | Voorzitter van het algemeen en dagelijks bestuur van een gemeente.                            |
 | Dijkgraaf                 | Voorzitter van het algemeen en dagelijks bestuur van een waterschap.                          |
 | Watergraaf                | Voorzitter van het algemeen en dagelijks bestuur van een waterschap.                          |
-| Raadslid                  | Lid van het algemeen bestuur van een gemeente (gemeenteraad)                                  |
 | Statenlid                 | Lid van het algemeen bestuur van een provincie (Provinciale Staten).                          |
-| Wethouder                 | Lid van het dagelijks bestuur van een gemeente (College van burgemeester en wethouders).      |
+| Raadslid                  | Lid van het algemeen bestuur van een gemeente (gemeenteraad)                                  |
+| Algemeen bestuurslid      | Lid van een algemeen bestuur.                                                                 |
 | Gedeputeerde              | Lid van het dagelijks bestuur van een provincie (Gedeputeerde Staten).                        |
+| Wethouder                 | Lid van het dagelijks bestuur van een gemeente (College van burgemeester en wethouders).      |
 | Heemraad                  | Lid van het dagelijks bestuur van een waterschap (College van dijkgraaf en heemraden).        |
 | Hoogheemraad              | Lid van het dagelijks bestuur van een waterschap (College van dijkgraaf en hoogheemraden).    |
 | Dagelijks bestuurslid     | Lid van een dagelijks bestuur.                                                                |
 | Griffier                  | Secretaris van het algemeen bestuur van een gemeente of provincie.                            |
 | Secretaris-directeur      | Secretaris van het algemeen en dagelijks bestuur van een waterschap.                          |
-| Gemeentesecretaris        | Secretaris van het dagelijks bestuur van een gemeente.                                        |
 | Provinciesecretaris       | Secretaris van het dagelijks bestuur van een provincie.                                       |
+| Gemeentesecretaris        | Secretaris van het dagelijks bestuur van een gemeente.                                        |
 | Burgerlid                 | Door het algemeen bestuur van een overheidsorgaan benoemd lid van een commissie of werkgroep. |
-| Algemeen bestuurslid      | Lid van een algemeen bestuur.                                                                 |
 | Ambtenaar/medewerker      | Een overheidsmedewerker.                                                                      |
 | Adviseur of deskundige    | Een door de overheid ingehuurde adviseur of deskundige.                                       |
 | <del>Overig</del>         | -                                                                                             |
