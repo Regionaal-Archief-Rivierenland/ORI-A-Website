@@ -120,14 +120,15 @@ De onderstaande begrippenlijst **kan binnen MDTO** worden gebruikt om het soort 
 Met de begrippen uit deze lijst kan het type van een [`vergadering`](xml-schema#vergadering) worden vastgelegd:
 
 
-| Label                        | Definitie                             |
-|:-----------------------------|:--------------------------------------|
-| Raadsvergadering             | Vergadering van een gemeenteraad.     |
-| Commissievergadering         | Vergadering van een commissie.        |
-| Collegevergadering           | Vergadering van een college.          |
-| Statenvergadering            | Vergadering van Provinciale Staten.   |
-| Algemene bestuursvergadering | Vergadering van een algemeen bestuur. |
-| Presidium                    | Vergadering van een presidium.        |
+| Label                         | Definitie                              |
+|:------------------------------|:---------------------------------------|
+| Raadsvergadering              | Vergadering van een gemeenteraad.      |
+| Commissievergadering          | Vergadering van een commissie.         |
+| Collegevergadering            | Vergadering van een college.           |
+| Statenvergadering             | Vergadering van Provinciale Staten.    |
+| Algemene bestuursvergadering  | Vergadering van een algemeen bestuur.  |
+| Dagelijks bestuursvergadering | Vergadering van een dagelijks bestuur. |
+| Presidium                     | Vergadering van een presidium.         |
 
 # Dagelijks bestuur types
 
