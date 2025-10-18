@@ -134,11 +134,13 @@ Met de begrippen uit deze lijst kan het type van een [`vergadering`](xml-schema#
 
 Met de begrippen uit deze lijst kan het type van een [`dagelijksBestuur`](xml-schema#dagelijksBestuur) worden vastgelegd:
 
-| Label               | Definitie                             |
-|:--------------------|:--------------------------------------|
-| College             | Dagelijks bestuur van een gemeente.   |
-| Gedeputeerde Staten | Dagelijks bestuur van de provincie.   |
-| Dagelijks bestuur   | Dagelijks bestuur van een waterschap. |
+| Label                                  | Definitie                                  |
+|:---------------------------------------|:-------------------------------------------|
+| College van burgemeester en wethouders | Dagelijks bestuur van een gemeente.        |
+| College van Gedeputeerde Staten        | Dagelijks bestuur van de provincie.        |
+| College van dijkgraaf en hoogheemraden | Dagelijks bestuur van een waterschap.      |
+| College van dijkgraaf en heemraden     | Dagelijks bestuur van een waterschap.      |
+| Dagelijks bestuur                      | Dagelijks bestuur van een overheidsorgaan. |
 
 # Functies
 
