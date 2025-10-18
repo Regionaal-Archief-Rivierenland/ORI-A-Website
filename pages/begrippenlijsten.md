@@ -146,25 +146,28 @@ Met de begrippen uit deze lijst kan het type van een [`dagelijksBestuur`](xml-sc
 
 Met de begrippen uit deze lijst kan de functie of ambt van een [`natuurlijkPersoon`](xml-schema#natuurlijk-persoon) worden vastgelegd:
 
-| Label                     | Definitie                                                        |
-|:--------------------------|:-----------------------------------------------------------------|
-| Burgemeester              | De burgemeester.                                                 |
-| Wethouder                 | Lid van het dagelijks bestuur van een gemeente.                  |
-| Raadslid                  | Gekozen volksvertegenwoordiger binnen een gemeente.              |
-| Burgerlid                 | Door de gemeenteraad benoemd lid van een commissie of werkgroep. |
-| Griffier                  | Hoofd van de griffie.                                            |
-| Gemeentesecretaris        | De secretaris van het college van B&W.                           |
-| Commissaris van de Koning | Commissaris van de Koning of Koningin.                           |
-| Gedeputeerde              | Lid van het dagelijks bestuur van een provincie.                 |
-| Statenlid                 | Lid van de Provinciale Staten.                                   |
-| Provinciesecretaris       | De secretaris van het college van Gedeputeerde Staten.           |
-| Dijkgraaf                 | Voorzitter van een waterschap.                                   |
-| Dagelijks bestuurslid     | Lid van een dagelijks bestuur.                                   |
-| Algemeen bestuurslid      | Lid van een algemeen bestuur.                                    |
-| Secretarisdirecteur       | Secretarisdirecteur van een waterschap.                          |
-| Ambtenaar/medewerker      | Een overheidsmedewerker.                                         |
-| Adviseur of deskundige    | Een door de overheid ingehuurde adviseur of deskundige.          |
-| <del>Overig</del>         | -                                                                |
+| Label                     | Definitie                                                                                     |
+|:--------------------------|:----------------------------------------------------------------------------------------------|
+| Burgemeester              | Voorzitter van het algemeen en dagelijks bestuur van een gemeente.                            |
+| Commissaris van de Koning | Voorzitter van het algemeen en dagelijks bestuur van een provincie.                           |
+| Dijkgraaf                 | Voorzitter van het algemeen en dagelijks bestuur van een waterschap.                          |
+| Watergraaf                | Voorzitter van het algemeen en dagelijks bestuur van een waterschap.                          |
+| Raadslid                  | Lid van het algemeen bestuur van een gemeente (gemeenteraad)                                  |
+| Statenlid                 | Lid van het algemeen bestuur van een provincie (Provinciale Staten).                          |
+| Wethouder                 | Lid van het dagelijks bestuur van een gemeente (College van burgemeester en wethouders).      |
+| Gedeputeerde              | Lid van het dagelijks bestuur van een provincie (Gedeputeerde Staten).                        |
+| Heemraad                  | Lid van het dagelijks bestuur van een waterschap (College van dijkgraaf en heemraden).        |
+| Hoogheemraad              | Lid van het dagelijks bestuur van een waterschap (College van dijkgraaf en hoogheemraden).    |
+| Dagelijks bestuurslid     | Lid van een dagelijks bestuur.                                                                |
+| Griffier                  | Secretaris van het algemeen bestuur van een gemeente of provincie.                            |
+| Secretaris-directeur      | Secretaris van het algemeen en dagelijks bestuur van een waterschap.                          |
+| Gemeentesecretaris        | Secretaris van het dagelijks bestuur van een gemeente.                                        |
+| Provinciesecretaris       | Secretaris van het dagelijks bestuur van een provincie.                                       |
+| Burgerlid                 | Door het algemeen bestuur van een overheidsorgaan benoemd lid van een commissie of werkgroep. |
+| Algemeen bestuurslid      | Lid van een algemeen bestuur.                                                                 |
+| Ambtenaar/medewerker      | Een overheidsmedewerker.                                                                      |
+| Adviseur of deskundige    | Een door de overheid ingehuurde adviseur of deskundige.                                       |
+| <del>Overig</del>         | -                                                                                             |
 
 ::: waarschuwing
 De functie "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informatiemodel te garanderen. Het gebruik van deze functieaanduiding wordt afgeraden. Als de bestaande functies niet toereikend zijn, heb je twee opties:
