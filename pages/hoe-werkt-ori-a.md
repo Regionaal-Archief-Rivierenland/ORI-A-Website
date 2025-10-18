@@ -359,6 +359,8 @@ Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van
 # Spreekfragmenten
 
 TODO
+Een belangrijke functionaliteit binnen digitale raadsinformatie is de mogelijkheid om te navigeren naar momenten in de opname dat een specifieke spreker aan het woord is tijdens een agendapunt. In ORI-A gebeurt dat via het element Spreekfragment. Spreekfragmenten relateren een <aanwezigeDeelnemer> aan een <Agendapunt>.
+Het element <Spreekfragment> biedt veel ruimte om informatie over het spreekfragment op te nemen, zoals de <taal>, <titel> en de uitgeschreven <tekst> van het fragment. De essentie van een spreekfragment zijn de tijdsaanduidingen van het spreekfragment. Deze zogenoemde timestamps definiëren de tijdsspanne waarin het spreekfragment plaatsvindt in de opname. ORI-A kan zowel absolute als relatieve timestamps vastleggen.
 
 <!-- misschien incl. interactieve video, waarin je ook even het verschil uitlegt tussen relatieve en absolute timestamps -->
 
