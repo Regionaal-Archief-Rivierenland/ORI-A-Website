@@ -394,6 +394,19 @@ In ORI-A kan je ook tijdsaanduidingen van spreekfragmenten vastleggen die relate
     </aanwezigeDeelnemer>
 ```
 
+``` xml
+<MDTO>
+    <aanwezigeDeelnemer>
+        …
+        <spreektTijdensSpreekfragment>
+            …
+            <audioTijdsaanduidingAanvang>0</audioTijdsaanduidingAanvang>
+            <audioTijdsaanduidingEinde>156</audioTijdsaanduidingEinde>
+            …
+        </spreektTijdensSpreekfragment>
+    </aanwezigeDeelnemer>
+```
+
 <!-- misschien incl. interactieve video, waarin je ook even het verschil uitlegt tussen relatieve en absolute timestamps -->
 
 # ORI-A & MDTO combineren
