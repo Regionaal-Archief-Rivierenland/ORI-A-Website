@@ -360,6 +360,35 @@ Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van
 
 TODO
 Een belangrijke functionaliteit binnen digitale raadsinformatie is de mogelijkheid om te navigeren naar momenten in de opname dat een specifieke spreker aan het woord is tijdens een agendapunt. In ORI-A gebeurt dat via het element Spreekfragment. Spreekfragmenten relateren een <aanwezigeDeelnemer> aan een <Agendapunt>.
+
+
+``` xml
+<MDTO>
+    <aanwezigeDeelnemer>
+        …
+        <isNatuurlijkPersoon>
+            …
+            <naam>
+                …
+                <volledigeNaam>Peter van der Velden</volledigeNaam>
+            </naam>
+        <spreektTijdensSpreekfragment>
+            <videoTijdsaanduidingAanvang>00:00:00</videoTijdsaanduidingAanvang>
+            <videoTijdsaanduidingEinde>00:02:36</videoTijdsaanduidingEinde>
+            <isVastgelegdIn>
+                <verwijzingInformatieobject>
+                    <verwijzingID>8088a20808a0280002a000280b25219e</verwijzingID>
+                    <verwijzingNaam>Videotuul Gemeenteraad 30 november 2023</verwijzingNaam>
+                </verwijzingInformatieobject>
+            <isVastgelegdIn>
+            <spreektTijdensAgendapunt>
+                <verwijzingID>2028a00aaa2a8aaa00a2aab6bdaef</verwijzingID>
+                <verwijzingNaam>RV 23.0081 Delegatiebesluit Omgevingsplan Leiden 2023</verwijzingNaam>
+            </spreektTijdensAgendapunt>
+        </spreektTijdensSpreekfragment>
+    </aanwezigeDeelnemer>
+```
+
 Het element <Spreekfragment> biedt veel ruimte om informatie over het spreekfragment op te nemen, zoals de <taal>, <titel> en de uitgeschreven <tekst> van het fragment. De essentie van een spreekfragment zijn de tijdsaanduidingen van het spreekfragment. Deze zogenoemde timestamps definiëren de tijdsspanne waarin het spreekfragment plaatsvindt in de opname. ORI-A kan zowel absolute als relatieve timestamps vastleggen.
 
 ## Absolute tijdsaanduiding
