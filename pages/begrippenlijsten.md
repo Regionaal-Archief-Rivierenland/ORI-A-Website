@@ -4,9 +4,11 @@ title-icon: lijst.svg
 position: 4
 ---
 
-Hier vind je een overzicht van alle begrippenlijsten die met ORI-A en raadsinformatie te maken hebben. Een begrippenlijst is een manier om gegevens te relateren aan een extern vastgestelde lijst van waarden. ORI-A volgt de definitie, semantiek en toepassing van begrippenlijsten zoals die ook in [MDTO](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst) worden gehanteerd.
+Hier vind je een overzicht van alle begrippenlijsten die door ORI-A worden beheerd en met raadsinformatie te maken hebben. Een begrippenlijst is een manier om gegevens te relateren aan een extern vastgestelde lijst van waarden. ORI-A volgt de definitie, semantiek en toepassing van begrippenlijsten zoals die ook in [MDTO](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst) worden gehanteerd.
 
-Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten.
+Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten. 
+
+Zie ook het [XML-schema](https://ori-a.nl/xml-schema), waar per element dat begrippenlijsten een rol spelen, aangeraden begrippenlijsten zijn opgenomen.
 
 
 # Begrippenlijsten gebruiken
@@ -28,23 +30,41 @@ Zie [Hoe werkt ORI-A?](hoe-werkt-ori-a#begrippenlijsten-gebruiken) voor een uitg
 ::: tip
 **Tip:** Alhoewel we aanraden bestaande begrippenlijsten te gebruiken of [suggesties te doen om ze completer te maken](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new), kun je er ook voor kiezen zelf een begrippenlijsten te starten. Dit kan bijvoorbeeld nuttig zijn als een instantie unieke werkprocessen hanteert.
 
-Zorg in dat geval wel dat deze begrippenlijst [duurzaam wordt beheert](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst).
+Zorg in dat geval wel dat deze begrippenlijst [duurzaam wordt beheerd](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst).
 :::
 
 # Vergaderstuktypes
 
 Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals in `<heeftAlsBijlage>` onder [`agendapunt`](xml-schema#agendapunt). Voor meer informatie, zie [Gebruik van ORI-A met MDTO](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
-| Label          | Definitie                                                                  |
-|:---------------|:---------------------------------------------------------------------------|
-| Voorstel       | Plan waarover een besluit genomen kan worden.                              |
-| Motie          | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
-| Amendement     | Voorstel om een bestaand voorstel te wijzigen.                             |
-| Toezegging     | Toezegging van een gedeputeerde of raadslid.                               |
-| Vraag          | Vraag aan de raad.                                                         |
-| Antwoord       | Antwoord op een vraag aan de raad.                                         |
-| Ingekomen stuk | Een stuk gericht aan de raad.                                              |
-| Mededeling     | Een mededeling.                                                            |
+ORI-A onderscheidt verschillende soorten moties. Als het soort motie bekend is, zet je het soort achter het `|`-teken:
+
+``` xml
+<informatieobjectType>
+   <begripLabel>Motie | Wantrouwen</begripLabel>
+   <verwijzingBegrippenlijst>
+       <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderstuktypes</verwijzingID>
+   …
+```
+
+Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>` is in dat geval gewoon gelijk aan `Motie`.
+
+
+| Label               | Definitie                                                                  |
+|:--------------------|:---------------------------------------------------------------------------|
+| Voorstel            | Plan waarover een besluit genomen kan worden.                              |
+| Motie               | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
+| Motie \| Voorstel   | Motie met een voorstel tot handelen.                                       |
+| Motie \| Wantrouwen | Motie van wantrouwen.                                                      |
+| Motie \| Treurnis   | Motie van treurnis.                                                        |
+| Motie \| Afkeuring  | Motie van afkeuring.                                                       |
+| Motie \| Vreemd     | Motie over een onderwerp dat niet op de agenda staat.                      |
+| Amendement          | Voorstel om een bestaand voorstel te wijzigen.                             |
+| Toezegging          | Toezegging van een gedeputeerde of raadslid.                               |
+| Vraag               | Vraag aan de raad.                                                         |
+| Antwoord            | Antwoord op een vraag aan de raad.                                         |
+| Ingekomen stuk      | Een stuk gericht aan de raad.                                              |
+| Mededeling          | Een mededeling.                                                            |
 
 
 # Deelnemerrollen
@@ -149,11 +169,3 @@ De functie "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI infor
 * Een uitbreiding op deze begrippenlijst [aanvragen](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new)
 * Een nieuwe begrippenlijst starten
 :::
-
-# TOOI Begrippenlijsten
-
-Een paar begrippenlijsten die van toepassing zijn op ORI-A worden beheerd door TOOI. Dit betreft de begrippenlijsten voor het element `<bestuurslaag>`:
-
-* [Begrippenlijst Gemeenten](https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4)
-* [Begrippenlijst Waterschappen](https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet/2)
-* [Begrippenlijst Provincie](https://identifier.overheid.nl/tooi/set/rwc_provincies_compleet/1)
