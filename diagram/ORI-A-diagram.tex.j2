@@ -565,29 +565,17 @@
   {% raw %}
   \node[draw=mainblack, rounded corners=5pt, very thick, inner sep=16pt,
     label={[anchor=south west]north west:{\large \textcolor{mainblack}{\fontseries{b}\selectfont Enumeraties}}},
-    below right=-7.8cm and 3.1cm of fractie, align=left]
+    right=8.6cm of dagelijksbestuur.north, align=left, yshift=0.7cm]
   (enumeraties) {
-    \begin{tabular}{@{}p{1.0\linewidth} @{\hspace{0.5cm}} | @{\hspace{0.5cm}} p{1.0\linewidth}@{}}
+    \begin{tabular}{@{}p{0.95\linewidth} @{\hspace{0.5cm}} | @{\hspace{0.5cm}} p{0.95\linewidth}@{}}
       \makecell[tl]{%
         \enumeration{besluitResultaat}{
           \keuze{Unaniem aangenomen}\sep\keuze{Aangenomen}\sep\keuze{Verworpen}
           \sep\keuze{Geamendeerd aangenomen}\sep\keuze{Onder voorbehoud aangenomen}
         } \\
         \seprule
-        \enumeration{dagelijksBestuurType}{
-          \keuze{College}\sep\keuze{Gedeputeerde staten}\sep\keuze{Dagelijks bestuur}
-        } \\
-        \seprule
         \enumeration{fractieStemresultaat}{
           \keuze{Aangenomen}\sep\keuze{Verworpen}\sep\keuze{Verdeeld}
-        } \\
-        \seprule
-        \enumeration{functie}{
-          \keuze{Burgemeester}\sep\keuze{Wethouder}\sep\keuze{Raadslid}\sep\keuze{Burgerlid}\sep\keuze{Griffier}
-          \sep\keuze{Gedeputeerde}\sep\keuze{Commissaris van de Koning}\sep\keuze{Statenlid}
-          \sep\keuze{Provinciesecretaris}\sep\keuze{Secretarisdirecteur}\sep\keuze{Dagelijks bestuurslid}\sep
-          \keuze{Algemeen bestuurslid}\sep\keuze{Dijkgraaf}\sep\keuze{Ambtenaar/medewerker}\sep
-          \keuze{Adviseur of deskundige}\sep\keuze{Gemeentesecretaris}\sep\keuze{Overig}
         } \\
         \seprule
         \enumeration{geslachtsaanduiding}{
@@ -596,18 +584,11 @@
         \seprule
         \enumeration{keuzeStemming}{
           \keuze{Voor}\sep\keuze{Tegen}\sep\keuze{Afwezig}\sep\keuze{Onthouden}
-        }
+        } \\
       } &
       \makecell[tl]{%
         \enumeration{resultaatMondelingeStemming}{
           \keuze{Voor}\sep\keuze{Tegen}\sep\keuze{Gelijk}
-        } \\
-        \seprule
-        \enumeration{rolnaam}{
-          \raggedright
-          \keuze{Voorzitter}\sep\keuze{Vice-voorzitter}\sep\keuze{Raadslid}\sep\keuze{Statenlid}\sep
-          \keuze{Dagelijks bestuurslid}\sep\keuze{Algemeen bestuurslid}\sep\keuze{Inspreker}\sep
-          \keuze{Portefeuillehouder}\sep\keuze{Griffier}\sep\keuze{Overig}
         } \\
         \seprule
         \enumeration{status}{
@@ -616,11 +597,6 @@
         \seprule
         \enumeration{stemmingstype}{
           \keuze{Hoofdelijk}\sep\keuze{Regulier}\sep\keuze{Mondeling}
-        } \\
-        \seprule
-        \enumeration{vergaderingstype}{
-          \keuze{Raadsvergadering}\sep\keuze{Commissievergadering}\sep\keuze{Statenvergadering}
-          \sep\keuze{Algemene bestuursvergadering}\sep\keuze{Presidium}
         }
       }
     \end{tabular}
