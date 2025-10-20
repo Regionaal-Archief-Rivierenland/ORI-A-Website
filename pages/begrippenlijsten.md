@@ -8,8 +8,6 @@ Hier vind je een overzicht van alle begrippenlijsten die door ORI-A worden behee
 
 Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten. 
 
-Zie ook het [XML-schema](https://ori-a.nl/xml-schema), waar per element dat begrippenlijsten een rol spelen, aangeraden begrippenlijsten zijn opgenomen.
-
 
 # Begrippenlijsten gebruiken
 
