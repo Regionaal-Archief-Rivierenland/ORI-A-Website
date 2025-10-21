@@ -220,7 +220,7 @@
   \node (agendapunt) [ORI object]
         {
           {{ render_table('Agendapunt', agendapunt_table) }} \\
-          \attrib{Relatieve tijdsaanduiding}{tijdsaanduiding}{[0..*]}
+          \attrib{Tijdsaanduiding mediabron}{tijdsaanduidingGegevens}{[0..*]}
         };
 
    \node (vergadering) [ORI object, left=17cm of agendapunt]
@@ -308,8 +308,8 @@
    \node (tijdsaanduiding) [ORI gegevensgroep, right = 2.5cm of agendapunt, yshift=1.5cm]
          {
            \objectheader{Tijdsaanduiding}
-          \attrib{Aanvang}{integerOfTijdcode}{[0..1]} \\
-          \attrib{Einde}{integerOfTijdcode}{[0..1]}
+          \attrib{Startpunt}{integerOfTijdcode}{[0..1]} \\
+          \attrib{Eindpunt}{integerOfTijdcode}{[0..1]}
          };
 
    \node (informatieobject) [ORI relatieklasse, right = 2cm of tijdsaanduiding, yshift=0.0cm]
@@ -420,7 +420,7 @@
   ++(2cm,-1.8cm) -| ($(mdto.south) - (2cm, 0)$)
   coordinate[pos=0.25] (tempcoordinate)
   node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{1}}
-  node [pos=0.163, above] {relatief tot}
+  node [pos=0.163, above] {is relatief tot}
   node [pos=0.163, below, name=relatieftotcoord] {\umltype{Relatiesoort}};
   \draw[dashedpijl] ($(relatieftotcoord.north) - (0cm,-0.5cm)$) -- (relatieftotcoord.north |- informatieobject.south);
   %% agendapunt -> mdto (heeftAlsBijlage)
