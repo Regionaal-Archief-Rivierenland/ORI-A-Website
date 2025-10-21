@@ -484,33 +484,42 @@
   node [kardinaliteit, above, pos=0, xshift=\kxshiftbeg] {\oldstylenums{0..*}}
   ($(vergadering.east)+(11, 6.0)$) -| 
   node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..*}}
-  node [anchor=center, above, pos=0.345] {heeft als bijlage}
-  node [anchor=center, below, pos=0.345] {\umltype{Relatiesoort}}
-  coordinate[pos=0.345] (tempcoordinate) %% define tmp halfway coord
+  %% coordinate[pos=0.345] (tempcoordinate) %% define tmp halfway coord
   ($(mdto.north)+(-2.0cm,0)$);
   % Draw the dashed line
-  \coordinate (lineendsouth) at (tempcoordinate|-informatieobject.north);
-  \draw[dashedpijl] ($(tempcoordinate) + (0, -0.5cm)$) -- ($(lineendsouth) + (0, 0.32cm)$);
+  %% \coordinate (lineendsouth) at (tempcoordinate|-informatieobject.north);
+  %% \draw[dashedpijl] ($(tempcoordinate) + (0, -0.5cm)$) -- ($(lineendsouth) + (0, 0.32cm)$);
+    \draw[dashedpijl] ($(informatieobject.north) + (-3cm, 0.4cm)$) --
+    node [above, pos=1.2] {heeft als bijlage}
+    node [below, pos=1.2] {\umltype{Relatiesoort}}
+    ($(informatieobject.north) + (-3cm, 2.7cm)$);
+
   
   %% vergadering -> mdto (notulen)
   \draw[relatiepijl] ($(vergadering.north)+(4, 0)$) --
   node [kardinaliteit, right, pos=0, yshift=\kyshiftbeg] {\oldstylenums{0..1}}
   ($(vergadering.north)+(4, 2.5)$) -| 
   node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..1}}
-  node [anchor=center, above, pos=0.396] {is genotuleerd in}
-  node [anchor=center, below, pos=0.396, name=relatienotulencoord] {\umltype{Relatiesoort}}
   (mdto.north);
-  \draw[dashedpijl] ($(relatienotulencoord.south) - (0cm,0.1cm)$) -- (relatienotulencoord.north |- informatieobject.north);
+  %% dashed arrow
+  \draw[dashedpijl] (informatieobject.north) --
+  node [above, pos=1.12] {is genotuleerd in}
+  node [below, pos=1.125] {\umltype{Relatiesoort}}
+  ($(informatieobject.north) + (0, 4.2cm)$);
 
   %% vergadering -> mdto (isvastgelegdmiddels)
   \draw[relatiepijl] ($(vergadering.north)+(2, 0)$) --
   node [kardinaliteit, right, pos=0, yshift=\kyshiftbeg] {\oldstylenums{0..*}}
   ($(vergadering.north)+(2, 4.12)$) -|
-  node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..1}}
-  node [anchor=center, above, pos=0.415] {is vastgelegd middels}
-  node [anchor=center, below, pos=0.415,name=relatiemediabron] {\umltype{Relatiesoort}}
+  node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..*}}
   ($(mdto.north)+(2cm,0)$);
-  \draw[dashedpijl] ($(relatiemediabron.south) - (0cm,0.1cm)$) -- (relatiemediabron.north |- informatieobject.north);
+  %% \draw[dashedpijl] ($(relatiemediabron.south) - (0cm,0.1cm)$) -- (relatiemediabron.north |- informatieobject.north);
+    %% dashed arrow
+  \draw[dashedpijl] ($(informatieobject.north) + (3cm, 0)$) --
+  node [above, pos=1.10] {is vastgeled middels}
+  node [below, pos=1.10] {\umltype{Relatiesoort}}
+  ($(informatieobject.north) + (3cm, 5.75cm)$);
+
 
   %% vergadering -> gremium
   \draw[gegevenspijl] ($(vergadering.north)+(-1.2, 0)$) |- (gremium);
