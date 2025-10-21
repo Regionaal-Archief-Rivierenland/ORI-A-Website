@@ -176,6 +176,7 @@
 
   {% macro render_table(table_title, rows) -%}
 
+    {# these names should not be present in the diagram #}
     {%- set excluded_types = ['verwijzingGegevens', 'informatieobjectGegevens',
     'agendapuntGegevens', 'besluitGegevens', 'stemresultaatPerFractieGegevens',
     'vergaderingGegevens', 'dagelijksBestuurLidmaatschapGegevens',
@@ -220,7 +221,6 @@
   \node (agendapunt) [ORI object]
         {
           {{ render_table('Agendapunt', agendapunt_table) }} \\
-          \attrib{Tijdsaanduiding mediabron}{tijdsaanduidingGegevens}{[0..*]}
         };
 
    \node (vergadering) [ORI object, left=17cm of agendapunt]
@@ -307,9 +307,7 @@
 
    \node (tijdsaanduiding) [ORI gegevensgroep, right = 2.5cm of agendapunt, yshift=1.5cm]
          {
-           \objectheader{Tijdsaanduiding}
-          \attrib{Startpunt}{integerOfTijdcode}{[0..1]} \\
-          \attrib{Eindpunt}{integerOfTijdcode}{[0..1]}
+           {{ render_table('Tijdsaanduiding', tijdsaanduiding_table) }}
          };
 
    \node (informatieobject) [ORI relatieklasse, right = 2cm of tijdsaanduiding, yshift=0.0cm]
