@@ -49,6 +49,7 @@ html {
 
 :root {
     --pico-block-spacing-vertical: 2rem;
+    --pico-block-spacing-horizontal: 2rem;
     /* Ubuntu, Open Sans, Cantarell, Lato are nice */
     --header-font: Lato, var(--pico-font-family-sans-serif);
     --monospace-font: CommitMonoVariable, var(--pico-font-family-monospace);
