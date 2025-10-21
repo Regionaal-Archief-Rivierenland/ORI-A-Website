@@ -350,13 +350,13 @@
   \draw[relatiepijl] ($(stemming.east) + (0, 0.0cm)$) -|
   node [kardinaliteit, pos=0, above, xshift=\kxshiftbeg]  {\oldstylenums{0..*}}
   node [kardinaliteit, pos=1, right, yshift=-\kyshiftend]  {\oldstylenums{0..*}}
-  node [pos=0.312, above] {heeft betrekking op}
-  node [pos=0.312, below] {\umltype{Relatiesoort}}
-  coordinate[pos=0.312] (tempcoordinate) % coordinate along the line
   ($(mdto.south) + (2, 0cm)$);
   %% draw dashed line to informatieobject
-  \coordinate (lineendnorth) at (tempcoordinate|-informatieobject.south);
-  \draw[dashedpijl] ($(tempcoordinate) + (0, 0.5cm)$) -- (lineendnorth);
+  %% dashed arrow
+  \draw[dashedpijl] ($(informatieobject.south) + (3cm, 0.0cm)$) --
+    node [above, pos=1.04] {heeft als bijlage }
+    node [below, pos=1.04] {\umltype{Relatiesoort}}
+    ($(informatieobject.south) + (3cm, -10.8cm)$);
 
   %% deelnemer -> vergadering
   \draw[relatiepijl] (deelnemer)  --
@@ -418,20 +418,23 @@
   ($(tijdsaanduiding.south) + (-1.6cm,0)$) |-
   node [kardinaliteit, pos=0, above, xshift=\kxshiftbeg, yshift=-0.5cm]  {\oldstylenums{0..*}}
   ++(2cm,-1.8cm) -| ($(mdto.south) - (2cm, 0)$)
-  coordinate[pos=0.25] (tempcoordinate)
-  node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{1}}
-  node [pos=0.163, above] {is relatief tot}
-  node [pos=0.163, below, name=relatieftotcoord] {\umltype{Relatiesoort}};
-  \draw[dashedpijl] ($(relatieftotcoord.north) - (0cm,-0.5cm)$) -- (relatieftotcoord.north |- informatieobject.south);
+  node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{1}};
+  %% dashed arrow
+  \draw[dashedpijl] ($(informatieobject.south) + (-3cm, 0.0cm)$) --
+    node [above, pos=1.2] {is relatief tot}
+    node [below, pos=1.2] {\umltype{Relatiesoort}}
+    ($(informatieobject.south) + (-3cm, -1.7cm)$);
   %% agendapunt -> mdto (heeftAlsBijlage)
   \draw[relatiepijl] 
   ($(agendapunt.east) - (0, 3.3cm)$) --
   node [kardinaliteit, pos=0, above, xshift=\kxshiftbeg] {\oldstylenums{0..*}}
   ++(2cm,0) -| (mdto.south)
-  coordinate[pos=0.273] (tempcoordinate)
-  node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{0..*}}
-  node [pos=0.272, above] {heeft als bijlage}
-  node [pos=0.272, below] {\umltype{Relatiesoort}};
+  node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{0..*}};
+  %% dashed arrow
+  \draw[dashedpijl] ($(informatieobject.south) + (0cm, 0.0cm)$) --
+    node [above, pos=1.2] {heeft als bijlage }
+    node [below, pos=1.2] {\umltype{Relatiesoort}}
+    ($(informatieobject.south) + (0cm, -2.9cm)$);
   %% agendapunt -> natuurlijkpersoon
   % Draw the dashed line
   \coordinate (lineendnorth) at (tempcoordinate|-informatieobject.south);
@@ -486,9 +489,7 @@
   node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..*}}
   %% coordinate[pos=0.345] (tempcoordinate) %% define tmp halfway coord
   ($(mdto.north)+(-2.0cm,0)$);
-  % Draw the dashed line
-  %% \coordinate (lineendsouth) at (tempcoordinate|-informatieobject.north);
-  %% \draw[dashedpijl] ($(tempcoordinate) + (0, -0.5cm)$) -- ($(lineendsouth) + (0, 0.32cm)$);
+
     \draw[dashedpijl] ($(informatieobject.north) + (-3cm, 0.4cm)$) --
     node [above, pos=1.2] {heeft als bijlage}
     node [below, pos=1.2] {\umltype{Relatiesoort}}
