@@ -341,6 +341,40 @@ Gegevensgroepen komen altijd direct onder een ander element, en krijgen nooit ee
 </nevenfunctie>
 ```
 
+## Tijdsaanduiding
+
+{{ tijdsaanduiding_beschrijving }}
+
+::: tip
+**Tip:** Het gebruik van `<isRelatiefTot>` is doorgaans overbodig, aangezien de meeste vergaderingen maar uit één opname bestaan. Om ruimte te besparen kun je daarom `<isRelatiefTot>` meestal beter weg laten. 
+
+Zorg er in dat geval wel voor dat er maar een video- of audio-opname geregisteerd is onder het hoogste [`vergadering`](xml-schema#vergadering)-element, via `<isVastgelegdMiddels>`.
+:::
+
+{{ tijdsaanduiding_table  }}
+
+### XML Voorbeeld
+
+``` xml
+<agendapunt>
+    ...
+    <tijdsaanduidingMediabron>
+        <aanvang>00:25:00</aanvang>
+        <einde>01:06:00</einde>
+        <isRelatiefTot>
+            <informatieobjectType>
+                <begripLabel>audio</begripLabel>
+                <verwijzingBegrippenlijst>
+                    <verwijzingID>https://ori-a.nl/begrippenlijsten#mediabrontypes</verwijzingID>
+                </verwijzingBegrippenlijst>
+            </informatieobjectType>
+            <verwijzingInformatieobject>
+                <verwijzingID>audiotuul-bc687</verwijzingID>
+            </verwijzingInformatieobject>
+        </isRelatiefTot>
+    </tijdsaanduidingMediabron>
+```
+
 # Relatieklasses
 
 Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
