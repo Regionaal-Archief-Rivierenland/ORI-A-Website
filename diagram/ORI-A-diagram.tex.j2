@@ -450,7 +450,7 @@
   
   %% One could argue that this should just be another attribute
   %% vergadering -> vergadering
-  \draw[relatiepijl] ($(vergadering.west)+(0,2.8)$) |-
+  \draw[relatiepijl] ($(vergadering.west)+(0,2.8)$) --
   node [kardinaliteit, above, xshift = -0.4cm] {\oldstylenums{0..1}}
   ($(vergadering.west)+(-3.0,2.8)$) |- ($(vergadering.west)+(-3.0,-0.8)$)
   node [fill=white, pos=0.25] {heeft als deelvergadering\\\umltype{Relatiesoort}} --
