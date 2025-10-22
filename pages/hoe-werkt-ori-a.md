@@ -418,12 +418,12 @@ Via het element <isRelatiefTot> is het mogelijk om direct naar het informatieobj
 <MDTO>
     <aanwezigeDeelnemer>
         …
-        <spreektTijdensSpreekfragment>
+        <tijdsaanduidingMediabron>
             …
-            <videoTijdsaanduidingAanvang>00:00:00</videoTijdsaanduidingAanvang>
-            <videoTijdsaanduidingEinde>00:02:36</videoTijdsaanduidingEinde>
+            <aanvang>00:00:00</aanvang>
+            <eind>00:02:36</einde>
             …
-        </spreektTijdensSpreekfragment>
+        </tijdsaanduidingMediabron>
     </aanwezigeDeelnemer>
 ```
 
@@ -431,12 +431,12 @@ Via het element <isRelatiefTot> is het mogelijk om direct naar het informatieobj
 <MDTO>
     <aanwezigeDeelnemer>
         …
-        <spreektTijdensSpreekfragment>
+        <tijdsaanduidingMediabron>
             …
-            <audioTijdsaanduidingAanvang>0</audioTijdsaanduidingAanvang>
-            <audioTijdsaanduidingEinde>156</audioTijdsaanduidingEinde>
+            <aanvang>0</aanvang>
+            <einde>156</einde>
             …
-        </spreektTijdensSpreekfragment>
+        </tijdsaanduidingMediabron>
     </aanwezigeDeelnemer>
 ```
 
