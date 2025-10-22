@@ -19,7 +19,7 @@ Tijdens een [landelijke bijeenkomst over videotulen](https://kiacommunity.nl/tho
 
 ORI-A heeft hetzelfde hoofddoel als het ORI project van de VNG: het gestandaardiseerd beschikbaar stellen van raadsinformatie. Deze standaardisatieslag is hard nodig, omdat ieder raadsinformatiesysteem (RIS) momenteel een eigen, niet-publiek gedocumenteerd formaat voor raadsinformatie hanteert. Hiermee komt de toekomstige **vindbaarheid** en **interpreteerbaarheid** van raadsinformatie in gevaar.
 
-De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten. Hierom is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq#waarom-een-speciale-archiefstandaard)
+De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten, waaronder [de mogelijkheid tot integratie met **MDTO**](hoe-werkt-ori-a#ori-a-mdto-combineren). Hierom is besloten een archiefvariant van ORI te ontwikkelen. Je kan hier meer over lezen in [Waarom een speciale archiefstandaard?](faq#waarom-een-speciale-archiefstandaard)
 
 # Beheer van de standaard
 
