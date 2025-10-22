@@ -395,7 +395,7 @@ Het element <spreektTijdensSpreekfragment> biedt veel ruimte om informatie over 
 
 ## Absolute tijdsaanduiding
 
-Met de elementen <aanvang> en <einde> kan het absolute moment waarop het spreekfragment in de tijd plaatsvond worden vastgelegd, dus de datum en het tijdstip.
+Met de elementen <aanvang> en <einde> direct onder <spreektTijdensSpreekfragment> kan het absolute moment waarop het spreekfragment in de tijd plaatsvond worden vastgelegd, dus de datum en het tijdstip.
 
 ``` xml
 <MDTO>
