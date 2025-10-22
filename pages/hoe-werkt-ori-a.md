@@ -371,20 +371,23 @@ Een belangrijke functionaliteit binnen digitale raadsinformatie is de mogelijkhe
                 …
                 <volledigeNaam>Peter van der Velden</volledigeNaam>
             </naam>
-        <spreektTijdensSpreekfragment>
-            <videoTijdsaanduidingAanvang>00:00:00</videoTijdsaanduidingAanvang>
-            <videoTijdsaanduidingEinde>00:02:36</videoTijdsaanduidingEinde>
-            <isVastgelegdIn>
-                <verwijzingInformatieobject>
-                    <verwijzingID>8088a20808a0280002a000280b25219e</verwijzingID>
-                    <verwijzingNaam>Videotuul Gemeenteraad 30 november 2023</verwijzingNaam>
-                </verwijzingInformatieobject>
-            <isVastgelegdIn>
-            <spreektTijdensAgendapunt>
-                <verwijzingID>2028a00aaa2a8aaa00a2aab6bdaef</verwijzingID>
-                <verwijzingNaam>RV 23.0081 Delegatiebesluit Omgevingsplan Leiden 2023</verwijzingNaam>
-            </spreektTijdensAgendapunt>
-        </spreektTijdensSpreekfragment>
+            <spreektTijdensSpreekfragment>
+                <tijdsaanduidingMediabron>
+                    <aanvang>00:00:00</aanvang>
+                    <einde>00:02:36</einde>
+                    <isRelatiefTot>
+                        <verwijzingInformatieobject>
+                            <verwijzingID>8088a20808a0280002a000280b25219e</verwijzingID>
+                            <verwijzingNaam>Videotuul Gemeenteraad 30 november 2023</verwijzingNaam>
+                        </verwijzingInformatieobject>
+                    </isRelatiefTot>
+                </tijdsaanduidingMediabron>
+                <spreektTijdensAgendapunt>
+                    <verwijzingID>2028a00aaa2a8aaa00a2aab6bdaef</verwijzingID>
+                    <verwijzingNaam>RV 23.0081 Delegatiebesluit Omgevingsplan Leiden 2023</verwijzingNaam>
+                </spreektTijdensAgendapunt>
+            </spreektTijdensSpreekfragment>
+        </isNatuurlijkPersoon>
     </aanwezigeDeelnemer>
 ```
 
