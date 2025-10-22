@@ -176,6 +176,7 @@
 
   {% macro render_table(table_title, rows) -%}
 
+    {# these names should not be present in the diagram #}
     {%- set excluded_types = ['verwijzingGegevens', 'informatieobjectGegevens',
     'agendapuntGegevens', 'besluitGegevens', 'stemresultaatPerFractieGegevens',
     'vergaderingGegevens', 'dagelijksBestuurLidmaatschapGegevens',
@@ -219,9 +220,7 @@
 
   \node (agendapunt) [ORI object]
         {
-          {{ render_table('Agendapunt', agendapunt_table) }}
-          %% make the box just slightly wider (for visual balance)
-          \hspace{0.8cm}
+          {{ render_table('Agendapunt', agendapunt_table) }} \\
         };
 
    \node (vergadering) [ORI object, left=17cm of agendapunt]
@@ -229,7 +228,7 @@
           {{ render_table('Vergadering', vergadering_table) }}
         };
 
-   \node (gremium) [ORI gegevensgroep, left=-1.5cm of vergadering, yshift=8.7cm]
+   \node (gremium) [ORI gegevensgroep, left=-1.5cm of vergadering, yshift=9.15cm]
         {
           {{ render_table('Gremium', gremium_table) }}
         };
@@ -295,23 +294,31 @@
           {{ render_table('Dagelijks bestuur lidmaatschap', dagelijks_bestuur_lidmaatschap_table) }}
         };
 
-  \node (besluit) [ORI object, above right = 0.5cm and 0.9cm of stemming]
+  \node (besluit) [ORI object, above right = 0.1cm and 0.9cm of stemming]
         {
           {{ render_table('Besluit', besluit_table) }}
         };
 
-  \node (stemmingOverPersonenGegevens) [ORI gegevensgroep, below right = 5.3cm and -9.2cm of besluit]
+  \node (stemmingOverPersonenGegevens) [ORI gegevensgroep, below right = 5.2cm and -9.2cm of besluit]
         {
           {{ render_table('Stemming over personen', stemming_over_personen_table) }}
         };
 
-   \node (informatieobject) [ORI relatieklasse, above right = -4.6cm and 7.2cm of agendapunt]
-        {
-          {{ render_table('Informatieobject', informatieobject_table) }}
-        };
+
+   \node (tijdsaanduiding) [ORI gegevensgroep, right = 2.5cm of agendapunt, yshift=1.5cm]
+         {
+           {{ render_table('Tijdsaanduiding', tijdsaanduiding_table) }}
+         };
+
+   \node (informatieobject) [ORI relatieklasse, right = 2cm of tijdsaanduiding, yshift=0.0cm]
+   {
+     {{ render_table('Informatieobject', informatieobject_table) }}
+     %% make the box just slightly wider (for arrow area)
+     \hspace{0.8cm}
+   };
 
   %% inner MDTO rectangle
-  \node (mdto-inner) [rectangle, draw=mainblack, text=mainblack, ultra thick, right = 3.2cm of informatieobject, inner sep=40pt, fill=githubgrey]
+  \node (mdto-inner) [rectangle, draw=mainblack, text=mainblack, ultra thick, right = 3.4cm of informatieobject, inner sep=40pt, fill=githubgrey, yshift=0.6cm]
         {
           {\huge \fontseries{sb}\selectfont MDTO}
         };
@@ -341,13 +348,13 @@
   \draw[relatiepijl] ($(stemming.east) + (0, 0.0cm)$) -|
   node [kardinaliteit, pos=0, above, xshift=\kxshiftbeg]  {\oldstylenums{0..*}}
   node [kardinaliteit, pos=1, right, yshift=-\kyshiftend]  {\oldstylenums{0..*}}
-  node [pos=0.302, above] {heeft betrekking op}
-  node [pos=0.302, below] {\umltype{Relatiesoort}}
-  coordinate[pos=0.302] (tempcoordinate) % coordinate along the line
-  (mdto.south);
+  ($(mdto.south) + (2, 0cm)$);
   %% draw dashed line to informatieobject
-  \coordinate (lineendnorth) at (tempcoordinate|-informatieobject.south);
-  \draw[dashedpijl] ($(tempcoordinate) + (0, 0.5cm)$) -- (lineendnorth);
+  %% dashed arrow
+  \draw[dashedpijl] ($(informatieobject.south) + (3cm, 0.0cm)$) --
+    node [above, pos=1.04] {heeft als bijlage }
+    node [below, pos=1.04] {\umltype{Relatiesoort}}
+    ($(informatieobject.south) + (3cm, -10.8cm)$);
 
   %% deelnemer -> vergadering
   \draw[relatiepijl] (deelnemer)  --
@@ -389,45 +396,61 @@
 
   
   %% agendapunt -> vergadering
-  \draw[relatiepijl] (agendapunt) -- (vergadering)
+  \draw[relatiepijl] ($(agendapunt.west) - (0,1cm)$) -- ($(vergadering.east) - (0,1cm)$)
   node [pos=0.5, above] {wordt behandeld tijdens}
   node [pos=0.5, below] {\umltype{Relatiesoort}}
   node [kardinaliteit, pos=0.00, xshift=-\kxshiftbeg,  above] {\oldstylenums{0..*}}
   node [kardinaliteit, pos=0.965, above] {\oldstylenums{1}};
+
   %% agendapunt -> agendapunt
-  \draw[relatiepijl] ($(agendapunt.east)+(0, 2.8)$) |-
-  node [kardinaliteit, above, xshift = \kxshiftbeg] {\oldstylenums{0..1}} 
-  ($(agendapunt.east)+(3.0, 2.8)$) |- ($(agendapunt.east)+(3.0, -0.8)$)
+  \draw[relatiepijl] ($(agendapunt.west)+(0, 3.8)$) |-
+  node [kardinaliteit, above, xshift = -\kxshiftbeg] {\oldstylenums{0..1}} 
+  ($(agendapunt.west)+(-3.0, 3.8)$) |- ($(agendapunt.west)-(3.0, -0.8)$)
   node [fill=white, pos=0.25] {heeft als subagendapunt\\\umltype{Relatiesoort}} --
-  ($(agendapunt.east)+(0, -0.8)$)
-  node [kardinaliteit, above, xshift = 0.8cm] {\oldstylenums{0..*}};
-  %% agendapunt -> mdto
+  ($(agendapunt.west)+(0, 0.8)$)
+  node [kardinaliteit, above, xshift = -0.8cm] {\oldstylenums{0..*}};
+  %% agendapunt -> tijdsaanduiding
+  \draw[gegevenspijl] ($(agendapunt.east)+(0,1.5cm)$) -- ($(tijdsaanduiding.west) + (0,0)$);
+  %% tijdsaanduiding -> mdto (relatief tot)
   \draw[relatiepijl] 
-  ($(agendapunt.east) - (0, 2.5cm)$) --
+  ($(tijdsaanduiding.south) + (-1.6cm,0)$) |-
+  node [kardinaliteit, pos=0, above, xshift=\kxshiftbeg, yshift=-0.5cm]  {\oldstylenums{0..*}}
+  ++(2cm,-1.8cm) -| ($(mdto.south) - (2cm, 0)$)
+  node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{1}};
+  %% dashed arrow
+  \draw[dashedpijl] ($(informatieobject.south) + (-3cm, 0.0cm)$) --
+    node [above, pos=1.2] {is relatief tot}
+    node [below, pos=1.2] {\umltype{Relatiesoort}}
+    ($(informatieobject.south) + (-3cm, -1.7cm)$);
+  %% agendapunt -> mdto (heeftAlsBijlage)
+  \draw[relatiepijl] 
+  ($(agendapunt.east) - (0, 3.3cm)$) --
   node [kardinaliteit, pos=0, above, xshift=\kxshiftbeg] {\oldstylenums{0..*}}
-  ++(2cm,0) -| ($(mdto.south) - (2cm, 0cm)$)
-  coordinate[pos=0.25] (tempcoordinate)
-  node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{0..*}}
-  node [pos=0.25, above] {heeft als bijlage}
-  node [pos=0.25, below] {\umltype{Relatiesoort}};
+  ++(2cm,0) -| (mdto.south)
+  node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{0..*}};
+  %% dashed arrow
+  \draw[dashedpijl] ($(informatieobject.south) + (0cm, 0.0cm)$) --
+    node [above, pos=1.2] {heeft als bijlage }
+    node [below, pos=1.2] {\umltype{Relatiesoort}}
+    ($(informatieobject.south) + (0cm, -2.9cm)$);
+  %% agendapunt -> natuurlijkpersoon
   % Draw the dashed line
   \coordinate (lineendnorth) at (tempcoordinate|-informatieobject.south);
   \draw[dashedpijl] ($(tempcoordinate) + (0, 0.52cm)$) -- (lineendnorth);
-  %% agendapunt -> natuurlijkpersoon
   %% halfwaypoint stem and stemming
-  \coordinate (midpoint) at ($(stem.east)!.5!(stemming.west) + (-0.5cm,0)$);
+  \coordinate (midpoint) at ($(stem.east)!.5!(stemming.west) + (-0.3cm,0)$);
   % Project the midpoint to the Y-coordinate of stem.north
   \coordinate (midpointadjusted) at (midpoint|-stem.north);
   \draw[very thick, draw=mainblack] ($(agendapunt.south) - (3.0cm,0)$) |-
   node [kardinaliteit, pos=0, right, yshift=-\kyshiftbeg] {\oldstylenums{0..*}}
   (midpointadjusted) --
-  ($(midpointadjusted) - (0cm, 4.34cm)$)
+  ($(midpointadjusted) - (0cm, 4.46cm)$)
   % save bump location
-  coordinate[pos=1.133] (bumpstart); % Save the starting point for the bump
+  coordinate[pos=1.130] (bumpstart); % Save the starting point for the bump
   % Create the bump
   \draw[very thick, draw=mainblack] (bumpstart)
   arc[start angle=270, end angle=90, radius=0.3cm];
-  \draw[relatiepijl, yshift=-1.2cm] ($(bumpstart) + (0,0.02cm)$) --
+  \draw[relatiepijl, yshift=1.0cm] ($(bumpstart) + (0,0.02cm)$) --
   ($(bumpstart) - (0,3.3cm)$) -|
   node [pos=0.17, above] {heeft behandelend ambtenaar}
   node [pos=0.17, below] {\umltype{Relatiesoort}}
@@ -455,47 +478,52 @@
   ($(vergadering.west)+(0,-0.8)$)
   node [kardinaliteit, above, xshift = -0.8cm] {\oldstylenums{0..*}} ;
 
-  %% vergadering -> mdto (bijlage)
+  %% vergadering -> mdto (heeftalsbijlage)
   \draw[relatiepijl] ($(vergadering.east)+(0, 3)$) -|
   node [kardinaliteit, above, pos=0, xshift=\kxshiftbeg] {\oldstylenums{0..*}}
-  ($(vergadering.east)+(11, 5.5)$) -| 
+  ($(vergadering.east)+(11, 6.0)$) -| 
   node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..*}}
-  node [anchor=center, above, pos=0.335] {heeft als bijlage}
-  node [anchor=center, below, pos=0.335] {\umltype{Relatiesoort}}
-  coordinate[pos=0.335] (tempcoordinate) %% define tmp halfway coord
-  ($(mdto.north)+(-2.8cm,0)$);
-  % Draw the dashed line
-  \coordinate (lineendsouth) at (tempcoordinate|-informatieobject.north);
-  \draw[dashedpijl] ($(tempcoordinate) + (0, -0.5cm)$) -- ($(lineendsouth) + (0, 0.35cm)$);
+  %% coordinate[pos=0.345] (tempcoordinate) %% define tmp halfway coord
+  ($(mdto.north)+(-2.0cm,0)$);
+
+    \draw[dashedpijl] ($(informatieobject.north) + (-3cm, 0.4cm)$) --
+    node [above, pos=1.2] {heeft als bijlage}
+    node [below, pos=1.2] {\umltype{Relatiesoort}}
+    ($(informatieobject.north) + (-3cm, 2.7cm)$);
+
   
   %% vergadering -> mdto (notulen)
   \draw[relatiepijl] ($(vergadering.north)+(4, 0)$) --
   node [kardinaliteit, right, pos=0, yshift=\kyshiftbeg] {\oldstylenums{0..1}}
   ($(vergadering.north)+(4, 2.5)$) -| 
   node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..1}}
-  node [anchor=center, above, pos=0.32] {is genotuleerd in}
-  node [anchor=center, below, pos=0.32] {\umltype{Relatiesoort}}
-  ($(mdto.north)+(-1cm,0)$);
+  (mdto.north);
+  %% dashed arrow
+  \draw[dashedpijl] (informatieobject.north) --
+  node [above, pos=1.12] {is genotuleerd in}
+  node [below, pos=1.125] {\umltype{Relatiesoort}}
+  ($(informatieobject.north) + (0, 4.2cm)$);
 
-  %% vergadering -> mdto (mediabron)
+  %% vergadering -> mdto (isvastgelegdmiddels)
   \draw[relatiepijl] ($(vergadering.north)+(2, 0)$) --
   node [kardinaliteit, right, pos=0, yshift=\kyshiftbeg] {\oldstylenums{0..*}}
-  ($(vergadering.north)+(2, 4.3)$) -|
-  node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..1}}
-  node [anchor=center, above, pos=0.275] {is vastgelegd middels}
-  node [anchor=center, below, pos=0.275] {\umltype{Relatiesoort}}
-  ($(mdto.north)+(1cm,0)$);
+  ($(vergadering.north)+(2, 4.12)$) -|
+  node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..*}}
+  ($(mdto.north)+(2cm,0)$);
+  %% \draw[dashedpijl] ($(relatiemediabron.south) - (0cm,0.1cm)$) -- (relatiemediabron.north |- informatieobject.north);
+    %% dashed arrow
+  \draw[dashedpijl] ($(informatieobject.north) + (3cm, 0)$) --
+  node [above, pos=1.10] {is vastgeled middels}
+  node [below, pos=1.10] {\umltype{Relatiesoort}}
+  ($(informatieobject.north) + (3cm, 5.75cm)$);
+
 
   %% vergadering -> gremium
   \draw[gegevenspijl] ($(vergadering.north)+(-1.2, 0)$) |- (gremium);
 
-  %% spreekfragment -> mdto (mediabron)
-  \draw[relatiepijl] ($(spreekfragment.east)+(0, -3)$) -|
-  node [kardinaliteit, right, pos=0, yshift=\kyshiftbeg] {\oldstylenums{0..1}}
-  node [kardinaliteit, right, pos=1, yshift=\kyshiftend] {\oldstylenums{0..*}}
-  node [anchor=center, above, pos=0.137] {is vastgelegd in}
-  node [anchor=center, below, pos=0.137] {\umltype{Relatiesoort}}
-  ($(mdto.north)+(2.8cm,0)$);
+  %% spreekfragment -> tijdsaanduiding
+  \draw[gegevenspijl] ($(spreekfragment.east)+(0, -2.5)$) -|
+  ($(tijdsaanduiding.north) + (-1.6cm,0.4cm)$);
   
   %% persoon -> naam
   \draw[gegevenspijl] ([xshift=-1.7cm] natuurlijkpersoon.south) -- ([xshift=1.3cm] naam.north);
