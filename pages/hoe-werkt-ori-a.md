@@ -391,9 +391,7 @@ Een belangrijke functionaliteit binnen digitale raadsinformatie is de mogelijkhe
     </aanwezigeDeelnemer>
 ```
 
-Het element <Spreekfragment> biedt veel ruimte om informatie over het spreekfragment op te nemen, zoals de <taal>, <titel> en de uitgeschreven <tekst> van het fragment. Ook is het via het element <isVastgelegdIn> mogelijk om direct naar het informatieobject te verwijzen waarin het spreekfragment is opgenomen. Dit kan een uitkomst zijn als er meerdere opnamen zijn gemaakt in een vergadering, bijvoorbeeld als een deel besloten is. Dan zijn spreekfragmenten altijd aan de juiste opname te relateren.
-
-De essentie van een spreekfragment zijn de tijdsaanduidingen van het spreekfragment. Deze zogenoemde timestamps definiëren de tijdsspanne waarin het spreekfragment plaatsvindt in de opname. ORI-A kan zowel absolute als relatieve timestamps vastleggen.
+Het element <spreektTijdensSpreekfragment> biedt veel ruimte om informatie over het spreekfragment op te nemen, zoals de <taal>, <titel> en de uitgeschreven <tekst> van het fragment. De essentie van een spreekfragment zijn de tijdsaanduidingen van het spreekfragment. Deze zogenoemde timestamps definiëren de tijdsspanne waarin het spreekfragment plaatsvindt in de opname. ORI-A kan zowel absolute als relatieve timestamps vastleggen.
 
 ## Absolute tijdsaanduiding
 
