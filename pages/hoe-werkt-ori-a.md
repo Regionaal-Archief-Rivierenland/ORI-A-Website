@@ -453,3 +453,5 @@ In MDTO druk je dit zo uit:
         </heeftRepresentatie>
         …
 ```
+
+Natuurlijk kun je er ook voor kiezen om ondertitels als losse informatieobjecten te modelleren. Dit kan bijvoorbeeld handig zijn als je informatie wilt registreren over de ontstaansgeschiedenis van de ondertitels, zoals of ze automatisch gegeneerd zijn, of wie de auteursrechten in bezit heeft.
