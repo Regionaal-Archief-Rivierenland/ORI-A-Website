@@ -358,7 +358,87 @@ Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van
 
 # Spreekfragmenten
 
-TODO
+Een belangrijke functionaliteit binnen digitale raadsinformatie is de mogelijkheid om te navigeren naar momenten in de opname dat een specifieke spreker aan het woord is tijdens een agendapunt. In ORI-A gebeurt dat via het element Spreekfragment. Spreekfragmenten relateren een <aanwezigeDeelnemer> aan een <Agendapunt>.
+
+
+``` xml
+<MDTO>
+    <aanwezigeDeelnemer>
+        …
+        <isNatuurlijkPersoon>
+            …
+            <naam>
+                …
+                <volledigeNaam>Peter van der Velden</volledigeNaam>
+            </naam>
+            <spreektTijdensSpreekfragment>
+                <tijdsaanduidingMediabron>
+                    <aanvang>00:00:00</aanvang>
+                    <einde>00:02:36</einde>
+                    <isRelatiefTot>
+                        <verwijzingInformatieobject>
+                            <verwijzingID>8088a20808a0280002a000280b25219e</verwijzingID>
+                            <verwijzingNaam>Videotuul Gemeenteraad 30 november 2023</verwijzingNaam>
+                        </verwijzingInformatieobject>
+                    </isRelatiefTot>
+                </tijdsaanduidingMediabron>
+                <spreektTijdensAgendapunt>
+                    <verwijzingID>2028a00aaa2a8aaa00a2aab6bdaef</verwijzingID>
+                    <verwijzingNaam>RV 23.0081 Delegatiebesluit Omgevingsplan Leiden 2023</verwijzingNaam>
+                </spreektTijdensAgendapunt>
+            </spreektTijdensSpreekfragment>
+        </isNatuurlijkPersoon>
+    </aanwezigeDeelnemer>
+```
+
+Het element <spreektTijdensSpreekfragment> biedt veel ruimte om informatie over het spreekfragment op te nemen, zoals de <taal>, <titel> en de uitgeschreven <tekst> van het fragment. De essentie van een spreekfragment zijn de tijdsaanduidingen van het spreekfragment. Deze zogenoemde timestamps definiëren de tijdsspanne waarin het spreekfragment plaatsvindt in de opname. ORI-A kan zowel absolute als relatieve timestamps vastleggen.
+
+## Absolute tijdsaanduiding
+
+Met de elementen <aanvang> en <einde> direct onder <spreektTijdensSpreekfragment> kan het absolute moment waarop het spreekfragment in de tijd plaatsvond worden vastgelegd, dus de datum en het tijdstip.
+
+``` xml
+<MDTO>
+    <aanwezigeDeelnemer>
+        …
+        <spreektTijdensSpreekfragment>
+            <aanvang>2023-11-30T19:32:47</aanvang>
+            <einde>2023-11-30T19:35:24</einde>
+            …
+        </spreektTijdensSpreekfragment>
+    </aanwezigeDeelnemer>
+```
+
+## Tijdsaanduiding in relatie tot de opname
+Met het element <tijdsaanduidingMediabron> is het mogelijk om tijdsaanduidingen van spreekfragmenten vast te leggen die relateren aan een audio- en/of video-opname. ORI-A accepteert als relatieve tijdsaanduiding zowel tijdcodes (hh:mm:ss) als positieve integers. Die laatste gebruik je als de tijdsaanduiding van het spreekfragment in seconden sinds het startpunt van de opname is vastgelegd. 
+
+Via het element <isRelatiefTot> is het mogelijk om direct naar het informatieobject te verwijzen waar de tijdsaanduidingen aan relateren. Dit kan een uitkomst zijn als er meerdere opnamen zijn gemaakt in een vergadering, bijvoorbeeld als een deel besloten is. Dan zijn spreekfragmenten altijd aan de juiste opname te relateren. Als er maar één opname is gemaakt, dan is het efficiënter om de verwijzing naar de mediabron op te nemen in het element <isVastgelegdMiddels> onder de entiteit <vergadering> en hier achterwege te laten.
+ 
+``` xml
+<MDTO>
+    <aanwezigeDeelnemer>
+        …
+        <tijdsaanduidingMediabron>
+            …
+            <aanvang>00:00:00</aanvang>
+            <eind>00:02:36</einde>
+            …
+        </tijdsaanduidingMediabron>
+    </aanwezigeDeelnemer>
+```
+
+``` xml
+<MDTO>
+    <aanwezigeDeelnemer>
+        …
+        <tijdsaanduidingMediabron>
+            …
+            <aanvang>0</aanvang>
+            <einde>156</einde>
+            …
+        </tijdsaanduidingMediabron>
+    </aanwezigeDeelnemer>
+```
 
 <!-- misschien incl. interactieve video, waarin je ook even het verschil uitlegt tussen relatieve en absolute timestamps -->
 
