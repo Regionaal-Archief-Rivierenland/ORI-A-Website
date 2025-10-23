@@ -60,7 +60,7 @@ De ORI-A documentatie bestaat uit een aantal onderdelen:
       <svg width=27 height=27>
         <use xlink:href="download.svg#download"/>
       </svg>Voorbeeldbestanden</header>
-    <p>Voorbeeld van hoe je een echte vergadering met behulp van ORI-A XML kan beschrijven</p>
+    <p>Voorbeeld van hoe je een echte vergadering met behulp van ORI-A & MDTO kan beschrijven</p>
   </article>
 </a>
 <a href="begrippenlijsten">
