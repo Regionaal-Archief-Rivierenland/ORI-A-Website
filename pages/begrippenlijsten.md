@@ -100,6 +100,10 @@ Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worde
 | Audio        | Een geluidsopname van een vergadering. Ook wel 'audiotuul'.               |
 | Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
 
+::: waarschuwing
+Tradionele notulen kun je vastleggen via `isGenotuleerdIn` onder [`vergadering`](xml-schema#vergadering).
+:::
+
 # Betrokkene-vergaderstuk relaties
 
 In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergaderstukken. In ORI-A is geen plek voor deze informatie gemaakt, omdat deze informatie het best in MDTO kan worden uitgedrukt --- het is immers contextinformatie over een informatieobject.
