@@ -299,7 +299,7 @@
           {{ render_table('Besluit', besluit_table) }}
         };
 
-  \node (stemmingOverPersonenGegevens) [ORI gegevensgroep, below right = 5.2cm and -9.2cm of besluit]
+  \node (stemmingOverPersonenGegevens) [ORI gegevensgroep, below right = 6.2cm and -8.2cm of besluit]
         {
           {{ render_table('Stemming over personen', stemming_over_personen_table) }}
         };
@@ -352,8 +352,8 @@
   %% draw dashed line to informatieobject
   %% dashed arrow
   \draw[dashedpijl] ($(informatieobject.south) + (3cm, 0.0cm)$) --
-    node [above, pos=1.04] {heeft als bijlage }
-    node [below, pos=1.04] {\umltype{Relatiesoort}}
+    node [above, pos=1.065] {heeft als bijlage }
+    node [below, pos=1.065] {\umltype{Relatiesoort}}
     ($(informatieobject.south) + (3cm, -10.8cm)$);
 
   %% deelnemer -> vergadering
@@ -369,7 +369,7 @@
   node [below] {\umltype{Relatiesoort}}
   (natuurlijkpersoon);
   %% deelnemer -> stemming
-  \draw[dashedpijl] ($(deelnemer.east)!0.5!(stemming.west) + (0, -.10)$) -- (stem);
+  \draw[dashedpijl] ($(deelnemer.east)!0.5!(stemming.west) + (0, -.40)$) -- (stem);
   \coordinate (deelnemershifted) at ($(deelnemer.east) - (0,0.7cm)$);
   \coordinate (stemmingshifted) at ($(stemming.west) - (0,0.7cm)$);
   % Use the `|-` operator to align vertically while shifting horizontally
@@ -391,7 +391,7 @@
   node [kardinaliteit, pos=1.0, xshift=-\kxshiftend, above] {\oldstylenums{0..*}}
   ($(agendapunt.west) -  (0, 3.0cm)$);        
   % Draw the dashed line
-  \draw[dashedpijl] ($(tempcoordinate) + (0, 0.65cm)$) -- 
+  \draw[dashedpijl] ($(tempcoordinate) + (0, 2cm)$) -- 
   (tempcoordinate |- spreekfragment.south);
 
   
@@ -444,7 +444,7 @@
   \draw[very thick, draw=mainblack] ($(agendapunt.south) - (3.0cm,0)$) |-
   node [kardinaliteit, pos=0, right, yshift=-\kyshiftbeg] {\oldstylenums{0..*}}
   (midpointadjusted) --
-  ($(midpointadjusted) - (0cm, 4.46cm)$)
+  ($(midpointadjusted) - (0cm, 4.59cm)$)
   % save bump location
   coordinate[pos=1.130] (bumpstart); % Save the starting point for the bump
   % Create the bump
@@ -553,7 +553,7 @@
   \draw[dashedpijl] (dagelijksbestuurlidmaatschap.south) --
   node [above, pos=1.34] {is lid van}
   node [below, pos=1.32] {\umltype{Relatiesoort}}
-  ($(dagelijksbestuurlidmaatschap.south) - (0, 1.47cm)$);
+  ($(dagelijksbestuurlidmaatschap.south) - (0, 1.67cm)$);
 
   %% enumeraties
   {% raw %}
@@ -591,7 +591,7 @@
   {% raw %}
   \node[draw=mainblack, rounded corners=5pt, very thick, inner sep=16pt,
     label={[anchor=south west]north west:{\large \textcolor{mainblack}{\fontseries{b}\selectfont Enumeraties}}},
-    right=8.6cm of dagelijksbestuur.north, align=left, yshift=0.7cm]
+    right=8.9cm of dagelijksbestuur.north, align=left, yshift=1.35cm]
   (enumeraties) {
     \begin{tabular}{@{}p{0.95\linewidth} @{\hspace{0.5cm}} | @{\hspace{0.5cm}} p{0.95\linewidth}@{}}
       \makecell[tl]{%
@@ -624,6 +624,7 @@
         \enumeration{stemmingstype}{
           \keuze{Hoofdelijk}\sep\keuze{Regulier}\sep\keuze{Mondeling}
         }
+        \vspace{12em}
       }
     \end{tabular}
   };
