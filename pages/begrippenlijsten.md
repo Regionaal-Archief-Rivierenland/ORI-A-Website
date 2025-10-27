@@ -122,48 +122,54 @@ De onderstaande begrippenlijst **kan binnen MDTO** worden gebruikt om het soort 
 Met de begrippen uit deze lijst kan het type van een [`vergadering`](xml-schema#vergadering) worden vastgelegd:
 
 
-| Label                        | Definitie                             |
-|:-----------------------------|:--------------------------------------|
-| Raadsvergadering             | Vergadering van een gemeenteraad.     |
-| Commissievergadering         | Vergadering van een commissie.        |
-| Collegevergadering           | Vergadering van een college.          |
-| Statenvergadering            | Vergadering van Provinciale Staten.   |
-| Algemene bestuursvergadering | Vergadering van een algemeen bestuur. |
-| Presidium                    | Vergadering van een presidium.        |
+| Label                         | Definitie                              |
+|:------------------------------|:---------------------------------------|
+| Raadsvergadering              | Vergadering van een gemeenteraad.      |
+| Commissievergadering          | Vergadering van een commissie.         |
+| Collegevergadering            | Vergadering van een college.           |
+| Statenvergadering             | Vergadering van Provinciale Staten.    |
+| Algemene bestuursvergadering  | Vergadering van een algemeen bestuur.  |
+| Dagelijks bestuursvergadering | Vergadering van een dagelijks bestuur. |
+| Presidium                     | Vergadering van een presidium.         |
 
 # Dagelijks bestuur types
 
 Met de begrippen uit deze lijst kan het type van een [`dagelijksBestuur`](xml-schema#dagelijksBestuur) worden vastgelegd:
 
-| Label               | Definitie                             |
-|:--------------------|:--------------------------------------|
-| College             | Dagelijks bestuur van een gemeente.   |
-| Gedeputeerde Staten | Dagelijks bestuur van de provincie.   |
-| Dagelijks bestuur   | Dagelijks bestuur van een waterschap. |
+| Label                                  | Definitie                                  |
+|:---------------------------------------|:-------------------------------------------|
+| College van burgemeester en wethouders | Dagelijks bestuur van een gemeente.        |
+| College van Gedeputeerde Staten        | Dagelijks bestuur van de provincie.        |
+| College van dijkgraaf en hoogheemraden | Dagelijks bestuur van een waterschap.      |
+| College van dijkgraaf en heemraden     | Dagelijks bestuur van een waterschap.      |
+| Dagelijks bestuur                      | Dagelijks bestuur van een overheidsorgaan. |
 
 # Functies
 
 Met de begrippen uit deze lijst kan de functie of ambt van een [`natuurlijkPersoon`](xml-schema#natuurlijk-persoon) worden vastgelegd:
 
-| Label                     | Definitie                                                        |
-|:--------------------------|:-----------------------------------------------------------------|
-| Burgemeester              | De burgemeester.                                                 |
-| Wethouder                 | Lid van het dagelijks bestuur van een gemeente.                  |
-| Raadslid                  | Gekozen volksvertegenwoordiger binnen een gemeente.              |
-| Burgerlid                 | Door de gemeenteraad benoemd lid van een commissie of werkgroep. |
-| Griffier                  | Hoofd van de griffie.                                            |
-| Gemeentesecretaris        | De secretaris van het college van B&W.                           |
-| Commissaris van de Koning | Commissaris van de Koning of Koningin.                           |
-| Gedeputeerde              | Lid van het dagelijks bestuur van een provincie.                 |
-| Statenlid                 | Lid van de Provinciale Staten.                                   |
-| Provinciesecretaris       | De secretaris van het college van Gedeputeerde Staten.           |
-| Dijkgraaf                 | Voorzitter van een waterschap.                                   |
-| Dagelijks bestuurslid     | Lid van een dagelijks bestuur.                                   |
-| Algemeen bestuurslid      | Lid van een algemeen bestuur.                                    |
-| Secretarisdirecteur       | Secretarisdirecteur van een waterschap.                          |
-| Ambtenaar/medewerker      | Een overheidsmedewerker.                                         |
-| Adviseur of deskundige    | Een door de overheid ingehuurde adviseur of deskundige.          |
-| <del>Overig</del>         | -                                                                |
+| Label                     | Definitie                                                                                     |
+|:--------------------------|:----------------------------------------------------------------------------------------------|
+| Commissaris van de Koning | Voorzitter van het algemeen en dagelijks bestuur van een provincie.                           |
+| Burgemeester              | Voorzitter van het algemeen en dagelijks bestuur van een gemeente.                            |
+| Dijkgraaf                 | Voorzitter van het algemeen en dagelijks bestuur van een waterschap.                          |
+| Watergraaf                | Voorzitter van het algemeen en dagelijks bestuur van een waterschap.                          |
+| Statenlid                 | Lid van het algemeen bestuur van een provincie (Provinciale Staten).                          |
+| Raadslid                  | Lid van het algemeen bestuur van een gemeente (gemeenteraad)                                  |
+| Algemeen bestuurslid      | Lid van een algemeen bestuur.                                                                 |
+| Gedeputeerde              | Lid van het dagelijks bestuur van een provincie (Gedeputeerde Staten).                        |
+| Wethouder                 | Lid van het dagelijks bestuur van een gemeente (College van burgemeester en wethouders).      |
+| Heemraad                  | Lid van het dagelijks bestuur van een waterschap (College van dijkgraaf en heemraden).        |
+| Hoogheemraad              | Lid van het dagelijks bestuur van een waterschap (College van dijkgraaf en hoogheemraden).    |
+| Dagelijks bestuurslid     | Lid van een dagelijks bestuur.                                                                |
+| Griffier                  | Secretaris van het algemeen bestuur van een gemeente of provincie.                            |
+| Secretaris-directeur      | Secretaris van het algemeen en dagelijks bestuur van een waterschap.                          |
+| Provinciesecretaris       | Secretaris van het dagelijks bestuur van een provincie.                                       |
+| Gemeentesecretaris        | Secretaris van het dagelijks bestuur van een gemeente.                                        |
+| Burgerlid                 | Door het algemeen bestuur van een overheidsorgaan benoemd lid van een commissie of werkgroep. |
+| Ambtenaar/medewerker      | Een overheidsmedewerker.                                                                      |
+| Adviseur of deskundige    | Een door de overheid ingehuurde adviseur of deskundige.                                       |
+| <del>Overig</del>         | -                                                                                             |
 
 ::: waarschuwing
 De functie "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informatiemodel te garanderen. Het gebruik van deze functieaanduiding wordt afgeraden. Als de bestaande functies niet toereikend zijn, heb je twee opties:
