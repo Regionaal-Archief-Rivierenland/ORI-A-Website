@@ -358,7 +358,7 @@ Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van
 
 # Spreekfragmenten
 
-Een aanwezige deelnemer heeft vaak een actieve rol tijdens een vergadering, bijvoorbeeld door te spreken tijdens agendapunten. Via het element <spreektTijdensSpreekfragment> kan je gegevens vastleggen over zo'n spreekfragment, zoals de tijdsaanduidingen ervan, maar ook bijvoorbeeld de <taal> van het fragment. 
+Een aanwezige deelnemer heeft vaak een actieve rol tijdens een vergadering, bijvoorbeeld door te spreken tijdens agendapunten. Via het element `<spreektTijdensSpreekfragment>` kan je gegevens vastleggen over zo'n spreekfragment, zoals de tijdsaanduidingen ervan, maar ook bijvoorbeeld de `<taal>` van het fragment. 
 
 ``` xml
 <aanwezigeDeelnemer>
@@ -387,7 +387,7 @@ Een aanwezige deelnemer heeft vaak een actieve rol tijdens een vergadering, bijv
 </aanwezigeDeelnemer>
 ```
 
-Via het element <isRelatiefTot> is het mogelijk om direct naar het informatieobject te verwijzen waar de tijdsaanduidingen aan relateren. Dit kan een uitkomst zijn als er meerdere opnamen zijn gemaakt in een vergadering, bijvoorbeeld als een deel besloten is. Dan zijn spreekfragmenten altijd aan de juiste opname te relateren. Als er maar één opname is gemaakt, dan is het efficiënter om de verwijzing naar de mediabron op te nemen in het element <isVastgelegdMiddels> onder de entiteit <vergadering> en hier achterwege te laten.
+Via het element `<isRelatiefTot>` is het mogelijk om direct naar het informatieobject te verwijzen waar de tijdsaanduidingen aan relateren. Dit kan een uitkomst zijn als er meerdere opnamen zijn gemaakt in een vergadering, bijvoorbeeld als een deel besloten is. Dan zijn spreekfragmenten altijd aan de juiste opname te relateren. Als er maar één opname is gemaakt, dan is het efficiënter om de verwijzing naar de mediabron op te nemen in het element `<isVastgelegdMiddels>` onder de entiteit `<vergadering>` en hier achterwege te laten.
 
 ## Tijdsaanduiding varianten
 
@@ -395,7 +395,7 @@ De tijdsaanduidingen definiëren de tijdsspanne waarin het spreekfragment plaats
 
 ### Absolute tijdsaanduiding
 
-Met de elementen <aanvang> en <einde> direct onder <spreektTijdensSpreekfragment> kan het absolute moment waarop het <spreekfragment> in de tijd plaatsvond worden vastgelegd.
+Met de elementen `<aanvang>` en `<einde>` direct onder `<spreektTijdensSpreekfragment>` kan het absolute moment waarop het spreekfragment in de tijd plaatsvond worden vastgelegd.
 
 ``` xml
 <aanwezigeDeelnemer>
@@ -410,7 +410,7 @@ De XML hierboven zegt dat het spreekfragment begon om 19:32:47 op 30 november 20
 
 ### Tijdsaanduiding in relatie tot de opname
 
-Met het element <tijdsaanduidingMediabron> is het mogelijk om tijdsaanduidingen van spreekfragmenten vast te leggen _in relatie tot_ een audio- en/of video-opname. ORI-A accepteert als relatieve tijdsaanduiding zowel tijdcodes (hh:mm:ss) als positieve getallen.
+Met het element `<tijdsaanduidingMediabron>` is het mogelijk om tijdsaanduidingen van spreekfragmenten vast te leggen _in relatie tot_ een audio- en/of video-opname. ORI-A accepteert als relatieve tijdsaanduiding zowel tijdcodes (hh:mm:ss) als positieve getallen.
 
 Een voorbeeld van tijdscodes als tijdsaanduiding:
 
