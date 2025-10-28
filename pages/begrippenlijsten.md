@@ -152,9 +152,8 @@ Met de begrippen uit deze lijst kan de functie of ambt van een [`natuurlijkPerso
 | Commissaris van de Koning | Voorzitter van het algemeen en dagelijks bestuur van een provincie.                           |
 | Burgemeester              | Voorzitter van het algemeen en dagelijks bestuur van een gemeente.                            |
 | Dijkgraaf                 | Voorzitter van het algemeen en dagelijks bestuur van een waterschap.                          |
-| Watergraaf                | Voorzitter van het algemeen en dagelijks bestuur van een waterschap.                          |
-| Statenlid                 | Lid van het algemeen bestuur van een provincie (Provinciale Staten).                          |
 | Raadslid                  | Lid van het algemeen bestuur van een gemeente (gemeenteraad)                                  |
+| Statenlid                 | Lid van het algemeen bestuur van een provincie.                                              |
 | Algemeen bestuurslid      | Lid van een algemeen bestuur.                                                                 |
 | Gedeputeerde              | Lid van het dagelijks bestuur van een provincie.                                              |
 | Wethouder                 | Lid van het dagelijks bestuur van een gemeente.                                               |
