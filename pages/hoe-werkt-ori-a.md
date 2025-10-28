@@ -43,19 +43,19 @@ Neem bijvoorbeeld de vergadering hierboven, met als titel simpelweg 'Gemeenteraa
     <vergadering>
         <ID>20a280a8a8a88220008208822f6b6b02</ID>
         <naam>Gemeenteraad</naam>
-        <vergaderdatum>2023-11-30</vergaderdatum>
+        <datum>2023-11-30</datum>
         <locatie>Raadzaal Stadhuis</locatie>
     </vergadering>
     <agendapunt>
         <ID>2028a00aaa2a8aaa00a2uaab6bdaef</ID>
         <volgnummer>1</volgnummer>
-        <titel>Vaststelling Agenda</titel>
+        <naam>Vaststelling Agenda</naam>
         <omschrijving>De raad stelt de agenda vast.</omschrijving>
     </agendapunt>
     <agendapunt>
         <ID>202282aa200aa08200a2821eb50cf</ID>
         <volgnummer>2</volgnummer>
-        <titel>Mededelingen</titel>
+        <naam>Mededelingen</naam>
         <omschrijving>Mededelingen aan de raad.</omschrijving>
     </agendapunt>
 </ORI-A>
@@ -75,7 +75,7 @@ Meestal wil je ook weten _wie_ de vergadering heeft georganiseerd. In ORI-A doe 
 <vergadering>
     <ID>20a280a8a8a88220008208822f6b6b02</ID>
     <naam>Gemeenteraad</naam>
-    <vergaderdatum>2023-11-30</vergaderdatum>
+    <datum>2023-11-30</datum>
     <overheidsorgaan>
         <begripLabel>Gemeente Leiden</begripLabel>
         <begripCode>gm0546</begripCode>
@@ -146,16 +146,16 @@ Dan kun je dat zo in XML uitdrukken:
 ```xml
 <agendapunt>
     <ID>202282aa200aa08200a2821eb50cf</ID>
-    <titel>BEËDIGINGEN EN BENOEMINGEN</titel> 
+    <naam>BEËDIGINGEN EN BENOEMINGEN</naam 
     <heeftAlsSubagendapunt>
         …
-        <titel>Beëdiging nieuw raadslid</titel>
+        <naam>Beëdiging nieuw raadslid</naam>
         <volgnummer>8</volgnummer>
         <omschrijving>Dhr. Versluijs wordt beëdigd als duo-lid.</omschrijving>
     </heeftAlsSubagendapunt>
     <heeftAlsSubagendapunt>
         …
-        <titel>Benoeming leden Rekenkamer Leiden</titel>
+        <naam>Benoeming leden Rekenkamer Leiden</naam>
         <volgnummer>9</volgnummer>
         <omschrijving>Mw. Snel wordt aangesteld als lid van de Rekenkamer.</omschrijving>
     </heeftAlsSubagendapunt>
@@ -163,10 +163,10 @@ Dan kun je dat zo in XML uitdrukken:
 
 <agendapunt>
     <ID>202282aa200aa08200a2821eb5100</ID>
-    <titel>HAMERSTUKKEN</titel>
+    <naam>HAMERSTUKKEN</naam>
     <heeftAlsSubagendapunt>
         …
-        <titel>Vaststelling Regeling Regio Rijnland (9de wijziging)</titel>
+        <naam>Vaststelling Regeling Regio Rijnland (9de wijziging)</naam>
         <volgnummer>10</volgnummer>
         <omschrijving>De raad wordt gevraagd de 9de wijziging op de regeling Regio Rijnland vast te stellen.</omschrijving>
     </heeftAlsSubagendapunt>
