@@ -139,10 +139,10 @@ Met de begrippen uit deze lijst kan het type van een [`dagelijksBestuur`](xml-sc
 | Label                                  | Definitie                                  |
 |:---------------------------------------|:-------------------------------------------|
 | College van burgemeester en wethouders | Dagelijks bestuur van een gemeente.        |
-| College van Gedeputeerde Staten        | Dagelijks bestuur van de provincie.        |
 | College van dijkgraaf en hoogheemraden | Dagelijks bestuur van een waterschap.      |
 | College van dijkgraaf en heemraden     | Dagelijks bestuur van een waterschap.      |
 | Dagelijks bestuur                      | Dagelijks bestuur van een overheidsorgaan. |
+| College van Gedeputeerde Staten        | Dagelijks bestuur van een provincie.                                       |
 
 # Functies
 
