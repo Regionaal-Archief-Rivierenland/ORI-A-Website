@@ -358,7 +358,7 @@ Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een **indiener** van
 
 # Spreekfragmenten
 
-Een aanwezige deelnemer heeft vaak een actieve rol tijdens een vergadering, bijvoorbeeld door te spreken tijdens agendapunten. Via het element `<spreektTijdensSpreekfragment>` kan je gegevens vastleggen over zo'n spreekfragment, zoals de tijdsaanduidingen ervan, maar ook bijvoorbeeld de `<taal>` van het fragment. 
+Een aanwezige deelnemer heeft vaak een actieve rol tijdens een vergadering, bijvoorbeeld door mee te discussiëren over een agendapunt, of in te spreken tijdens een debat. Via het element `<spreektTijdensSpreekfragment>` kan je gegevens vastleggen over deze zogeheten 'spreekfragmenten', zoals tijdens welk agendapunt er werd gesproken, en in welke taal.
 
 ``` xml
 <aanwezigeDeelnemer>
@@ -369,60 +369,52 @@ Een aanwezige deelnemer heeft vaak een actieve rol tijdens een vergadering, bijv
     </isNatuurlijkPersoon>
     <spreektTijdensSpreekfragment>
         <taal>nl</taal>
-        <tijdsaanduidingMediabron>
-            <aanvang>00:00:00</aanvang>
-            <einde>00:02:36</einde>
-            <isRelatiefTot>
-                <verwijzingInformatieobject>
-                    <verwijzingID>8088a20808a0280002a000280b25219e</verwijzingID>
-                    <verwijzingNaam>Videotuul Gemeenteraad 30 november 2023</verwijzingNaam>
-                </verwijzingInformatieobject>
-            </isRelatiefTot>
-        </tijdsaanduidingMediabron>
         <spreektTijdensAgendapunt>
-            <verwijzingID>2028a00aaa2a8aaa00a2aab6bdaef</verwijzingID>
-            <verwijzingNaam>RV 23.0081 Delegatiebesluit Omgevingsplan Leiden 2023</verwijzingNaam>
+            <verwijzingID>2028a00aa</verwijzingID>
+            <verwijzingNaam>Delegatiebesluit omgevingsplan Leiden 2023</verwijzingNaam>
         </spreektTijdensAgendapunt>
     </spreektTijdensSpreekfragment>
 </aanwezigeDeelnemer>
 ```
 
-Via het element `<isRelatiefTot>` is het mogelijk om direct naar het informatieobject te verwijzen waar de tijdsaanduidingen aan relateren. Dit kan een uitkomst zijn als er meerdere opnamen zijn gemaakt in een vergadering, bijvoorbeeld als een deel besloten is. Dan zijn spreekfragmenten altijd aan de juiste opname te relateren. Als er maar één opname is gemaakt, dan is het efficiënter om de verwijzing naar de mediabron op te nemen in het element `<isVastgelegdMiddels>` onder de entiteit `<vergadering>` en hier achterwege te laten.
-
 ## Tijdsaanduiding varianten
 
-De tijdsaanduidingen definiëren de tijdsspanne waarin het spreekfragment plaatsvindt in de opname. ORI-A kan zowel absolute als relatieve timestamps vastleggen. 
+Alhoewel bovenstaande al iets verteld over wanneer er is gesproken --- namelijk tijdens een agendapunt getiteld "Delegatiebesluit omgevingsplan Leiden 2023" --- kun je in ORI-A nog veel gedetailleerdere chronologische informatie kwijt.
+
+Specifieker gezegd ondersteunt ORI-A twee verschillende manieren om aan te geven wanneer een spreekfragment begint en eindigt, een relatieve en een absolute variant. Met de relatieve variant kun je aan geven wanneer het fragment begint en eindigt relatief tot een specifieke mediabron (zoals een video-opname), en met de absolute variant kun je aangeven op welk datum en tijdstip er gesproken is.
 
 ### Absolute tijdsaanduiding
 
-Met de elementen `<aanvang>` en `<einde>` direct onder `<spreektTijdensSpreekfragment>` kan het absolute moment waarop het spreekfragment in de tijd plaatsvond worden vastgelegd.
+Het datum en tijdstip van een spreekfragment, ook wel een _absolute_ tijdsaanduiding, kun je vastleggen met `<aanvang>` en `<einde>` direct onder het element `<spreektTijdensSpreekfragment>`:
 
 ``` xml
 <aanwezigeDeelnemer>
+    …
     <spreektTijdensSpreekfragment>
         <aanvang>2023-11-30T19:32:47</aanvang>
         <einde>2023-11-30T19:35:24</einde>
+        …
     </spreektTijdensSpreekfragment>
-</aanwezigeDeelnemer>
 ```
 
-De XML hierboven zegt dat het spreekfragment begon om 19:32:47 op 30 november 2023, en eindigde om 19:35:24 op dezelfde dag.
+Dit zegt dat het spreekfragment begon om 19:32:47 op 30 november 2023, en eindigde om 19:35:24 op dezelfde dag.
 
 ### Tijdsaanduiding in relatie tot de opname
 
-Met het element `<tijdsaanduidingMediabron>` is het mogelijk om tijdsaanduidingen van spreekfragmenten vast te leggen _in relatie tot_ een audio- en/of video-opname. ORI-A accepteert als relatieve tijdsaanduiding zowel tijdcodes (hh:mm:ss) als positieve getallen.
+Met het element `<tijdsaanduidingMediabron>` is het mogelijk om tijdsaanduidingen van spreekfragmenten vast te leggen _in relatie tot_ een audio- en/of video-opname, ook wel 'mediabron'. ORI-A accepteert als relatieve tijdsaanduiding zowel tijdcodes (hh:mm:ss) als positieve getallen.
 
 Een voorbeeld van tijdscodes als tijdsaanduiding:
 
 ``` xml
 <aanwezigeDeelnemer>
+    …
     <spreektTijdensSpreekfragment>
         <tijdsaanduidingMediabron>
             <aanvang>00:00:00</aanvang>
             <einde>00:02:36</einde>
         </tijdsaanduidingMediabron>
-    <spreektTijdensSpreekfragment>
-</aanwezigeDeelnemer>
+        …
+    </spreektTijdensSpreekfragment>
 ```
 
 De XML hierboven zegt dat het spreekfragment meteen aan het begin van de opname begint (00:00:00), en stopt op twee minuten en zesendertig seconden in de opname (00:02:36). 
@@ -437,6 +429,25 @@ Een voorbeeld van positieve getallen als tijdsaanduidingen:
 ```
 
 De XML hierboven zegt dat de opname meteen aan het begin van de opname begint (op seconde nul), en op 156 seconden in de opname eindigt.
+
+### Tijdsaanduidingen aan een specifieke mediabron koppelen
+
+Binnen `<tijdsaanduidingMediabron>` kun je gebruik maken van het element `<isRelatiefTot>`. Met dit element kun je naar de specifiecke mediabron verwijzen waar de tijdsaanduiding aan relateert.
+
+``` xml
+<tijdsaanduidingMediabron>
+    <aanvang>40</aanvang>
+    <einde>60</einde>
+    <isRelatiefTot>
+        <verwijzingInformatieobject>
+            <verwijzingID>8088a20808a<verwijzingID/>
+            <verwijzingNaam>Videotuul Gemeenteraad 30 november 2023</verwijzingNaam>
+        </verwijzingInformatieobject>
+    </isRelatiefTot>
+</tijdsaanduidingMediabron>
+```
+
+Dit kan een uitkomst zijn als er meerdere opnamen zijn gemaakt van een vergadering. Als er maar één opname is gemaakt, dan is het efficiënter om de verwijzing naar de mediabron op te nemen in het element `<isVastgelegdMiddels>` onder  vergadering, en `<isRelatiefTot>` achterwege te laten. 
 
 <!-- misschien incl. interactieve video, waarin je ook even het verschil uitlegt tussen relatieve en absolute timestamps -->
 
