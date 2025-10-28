@@ -419,7 +419,7 @@ Een voorbeeld van tijdscodes als tijdsaanduiding:
 
 De XML hierboven zegt dat het spreekfragment meteen aan het begin van de opname begint (00:00:00), en stopt op twee minuten en zesendertig seconden in de opname (00:02:36). 
 
-Een voorbeeld van positieve getallen als tijdsaanduidingen:
+Hetzelfde, maar dan uitgedrukt met positieve getallen:
 
 ``` xml
 <tijdsaanduidingMediabron>
