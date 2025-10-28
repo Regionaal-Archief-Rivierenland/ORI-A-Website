@@ -53,7 +53,7 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 ``` xml
 <vergadering>
     <naam>Commissie Ruimte en Wonen</naam>
-    <vergaderingsType>Commissievergadering</vergaderingsType>
+    <type>Commissievergadering</type>
     <locatie>Gemeentehuis Oosterhout</locatie>
     <vergaderdatum>2023-05-26</vergaderdatum>
     <overheidsorgaan>
@@ -83,7 +83,7 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 <agendapunt>
     <ID>a120-003</ID>
     <volgnummer>3b</volgnummer>
-    <besloten>false</besloten>
+    <indicatieBesloten>false</indicatieBesloten>
     <titel>Begroting bankjes in Westerpark</titel>
     <tijdsaanduidingMediabron>
         <aanvang>01:02:00</aanvang>
@@ -103,7 +103,7 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 ``` xml
 <stemming>
     <ID>stemming-0010</ID>
-    <stemmingType>Regulier</stemmingType>
+    <type>Regulier</type>
     <!-- Let op dat een echte stemming vrijwel nooit over een motie _en_ persoon gaat -->
     <leidtTotBesluit>
         <besluitResultaat>Aangenomen</besluitResultaat>
@@ -147,7 +147,7 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 <besluit>
     <ID>ca4b182</ID>
     <toezegging>De wethouder belooft een preciezere schatting van de verwachte CO² uitstoot.</toezegging>
-    <besluitResultaat>Aangenomen</besluitResultaat>
+    <resultaat>Aangenomen</resultaat>
 </besluit>
 ```
 
@@ -162,7 +162,7 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 ``` xml
 <fractie>
     <ID>D66-gm0826</ID>
-    <fractienaam>D66</fractienaam>
+    <naam>D66</naam>
     <overheidsorgaan>
         <begripLabel>Gemeente Oosterhout</begripLabel>
         <begripCode>gm0826</begripCode>
@@ -183,8 +183,8 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 ``` xml
 <dagelijksBestuur>
     <ID>College van B&amp;W-gm0546</ID>
-    <dagelijksBestuurNaam>College van B&amp;W</dagelijksBestuurNaam>
-    <dagelijksBestuurType>College</dagelijksBestuurType>
+    <naam>College van B&amp;W</naam>
+    <type>College</type>
     <overheidsorgaan>
         <begripLabel>Gemeente Leiden</begripLabel>
         <begripCode>gm0546</begripCode>
@@ -220,10 +220,10 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
     <nevenfunctie>
         <omschrijving>Promovendus</omschrijving>
         <naamOrganisatie>Universiteit Leiden</naamOrganisatie>
-        <bezoldigd>true</bezoldigd>
+        <indicatieBezoldigd>true</indicatieBezoldigd>
     </nevenfunctie>
     <isLidVanFractie>
-        <voorzitter>true</voorzitter>
+        <indicatieVoorzitter>true</indicatieVoorzitter>
         <verwijzingFractie>
             <verwijzingID>D66-gm0826</verwijzingID>
         </verwijzingFractie>
@@ -258,7 +258,9 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
         </gegevenOpStemming>
     </neemtDeelAanStemming>
     <spreektTijdensSpreekfragment>
-        <videoTijdsaanduidingAanvang>00:02:20</videoTijdsaanduidingAanvang>
+        <tijdsaanduidingMediabron>
+            <aanvang>01:46:13</aanvang>
+        </tijdsaanduidingMediabron>
         <spreektTijdensAgendapunt>
             <verwijzingID>b6bd-0aef</verwijzingID>
         </spreektTijdensAgendapunt>
@@ -281,7 +283,7 @@ Gegevensgroepen komen altijd direct onder een ander element, en krijgen nooit ee
 <vergadering>
    …
    <georganiseerdDoorGremium>
-       <gremiumNaam>Provinciale Adviesraad Dierenwelzijn</gremiumNaam>
+       <naam>Provinciale Adviesraad Dierenwelzijn</naam>
    </georganiseerdDoorGremium>
    …
 </vergadering>
@@ -339,12 +341,11 @@ Gegevensgroepen komen altijd direct onder een ander element, en krijgen nooit ee
 
 ### XML voorbeeld
 
-
 ``` xml
 <nevenfunctie>
     <omschrijving>Promovendus</omschrijving>
     <naamOrganisatie>Universiteit Leiden</naamOrganisatie>
-    <bezoldigd>true</bezoldigd>
+    <indicatieBezoldigd>true</indicatieBezoldigd>
 </nevenfunctie>
 ```
 
@@ -366,8 +367,8 @@ Zorg er in dat geval wel voor dat er maar een video- of audio-opname geregistree
 <agendapunt>
     ...
     <tijdsaanduidingMediabron>
-        <aanvang>00:25:00</aanvang>
-        <einde>01:06:00</einde>
+        <aanvang>00:58:00</aanvang>
+        <einde>01:06:22</einde>
         <isRelatiefTot>
             <informatieobjectType>
                 <begripLabel>audio</begripLabel>
@@ -396,7 +397,7 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 
 ``` xml
 <isLidVanFractie>
-    <voorzitter>true</voorzitter>
+    <indicatieVoorzitter>true</indicatieVoorzitter>
     <verwijzingFractie>
         <verwijzingID>D66-gm0826</verwijzingID>
     </verwijzingFractie>
@@ -430,7 +431,15 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 
 ``` xml
 <spreektTijdensSpreekfragment>
-    <videoTijdsaanduidingAanvang>00:02:20</videoTijdsaanduidingAanvang>
+    <tijdsaanduidingMediabron>
+        <aanvang>01:46:13</aanvang>
+        <einde>01:47:00</einde>
+        <isRelatiefTot>
+            <verwijzingInformatieobject>
+                <verwijzingID>videotuul-fe947</verwijzingID>
+            </verwijzingInformatieobject>
+        </isRelatiefTot>
+    </tijdsaanduidingMediabron>
     <spreektTijdensAgendapunt>
         <verwijzingID>2028a00aaa2a8aaa00a2aab6bdaef</verwijzingID>
     </spreektTijdensAgendapunt>
@@ -467,7 +476,7 @@ Het stemresultaat op fractie-niveau is in de regel af te leiden [uit stemkeuzes 
 ``` xml
 <fractie>
     …
-    <fractienaam>D66</fractienaam>
+    <naam>D66</naam>
     <neemtDeelAanStemming>
         <fractieStemresultaat>Aangenomen</fractieStemresultaat>
         <gegevenOpStemming>
