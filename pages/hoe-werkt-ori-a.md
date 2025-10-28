@@ -174,7 +174,7 @@ Dan kun je dat zo in XML uitdrukken:
 ```
 
 :::waarschuwing
-Veel RIS-systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen" als agendapunten, maar geven ze geen volgnummers. Bij het ontbreken van volgnummers moet de volgorde van agendapunt-elementen aangeven in welke volgorde ze behandeld zijn.
+Sommige RIS-systemen beschouwen rubrieken zoals "Beëdigingen en Benoemingen" als agendapunten, maar geven ze geen volgnummers. Bij het ontbreken van volgnummers moet de volgorde van agendapunt-elementen aangeven in welke volgorde ze behandeld zijn.
 :::
 
 # Relaties tussen ORI-A entiteiten aanleggen
