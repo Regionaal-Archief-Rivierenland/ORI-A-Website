@@ -502,7 +502,7 @@ De verwijzing naar deze mediabron komt in ORI-A onder `<vergadering>`:
             </verwijzingBegrippenlijst>
         </informatieobjectType>
         <verwijzingInformatieobject>
-            <verwijzingID>8088a20808a0…</verwijzingID>
+            <verwijzingID>8088a20808a0</verwijzingID>
             <verwijzingNaam>Videotuul Gemeenteraad 30 november 2023</verwijzingNaam>
         </verwijzingInformatieobject>
     </isVastgelegdMiddels>
