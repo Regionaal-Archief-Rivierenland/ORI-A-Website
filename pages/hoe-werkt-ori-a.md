@@ -146,7 +146,7 @@ Dan kun je dat zo in XML uitdrukken:
 ```xml
 <agendapunt>
     <ID>202282aa200aa08200a2821eb50cf</ID>
-    <naam>BEËDIGINGEN EN BENOEMINGEN</naam 
+    <naam>BEËDIGINGEN EN BENOEMINGEN</naam>
     <heeftAlsSubagendapunt>
         …
         <naam>Beëdiging nieuw raadslid</naam>
