@@ -447,7 +447,7 @@ Binnen `<tijdsaanduidingMediabron>` kun je gebruik maken van het element `<isRel
 </tijdsaanduidingMediabron>
 ```
 
-Dit kan een uitkomst zijn als er meerdere opnamen zijn gemaakt van een vergadering. Als er maar één opname is gemaakt, dan is het efficiënter om de verwijzing naar de mediabron op te nemen in het element `<isVastgelegdMiddels>` onder  vergadering, en `<isRelatiefTot>` achterwege te laten. 
+Dit kan een uitkomst zijn als er meerdere opnamen zijn gemaakt van een vergadering. Als er maar één opname is gemaakt, dan is het efficiënter om de verwijzing naar de mediabron op te nemen in het element `<isVastgelegdMiddels>` onder  de entiteit [vergadering](xml-schema#vergadering), en `<isRelatiefTot>` achterwege te laten. 
 
 <!-- misschien incl. interactieve video, waarin je ook even het verschil uitlegt tussen relatieve en absolute timestamps -->
 
