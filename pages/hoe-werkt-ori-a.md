@@ -381,7 +381,7 @@ Een aanwezige deelnemer heeft vaak een actieve rol tijdens een vergadering, bijv
 
 Alhoewel bovenstaande al iets verteld over wanneer er is gesproken --- namelijk tijdens een agendapunt getiteld "Delegatiebesluit omgevingsplan Leiden 2023" --- kun je nog veel gedetailleerdere chronologische informatie over spreekfragmenten opnemen.
 
-Specifieker gezegd ondersteunt ORI-A twee verschillende manieren om aan te geven wanneer een spreekfragment begint en eindigt, een relatieve en een absolute variant. Met de relatieve variant kun je aangeven wanneer het fragment begint en eindigt relatief tot een specifieke mediabron (zoals een video-opname), en met de absolute variant kun je aangeven op welk datum en tijdstip er gesproken is.
+Specifieker gezegd ondersteunt ORI-A twee verschillende manieren om aan te geven wanneer een spreekfragment begint en eindigt: een relatieve en een absolute variant. Met de relatieve variant kun je aangeven wanneer het fragment begint en eindigt relatief tot een specifieke mediabron (zoals een video-opname), en met de absolute variant kun je aangeven op welk datum en tijdstip er gesproken is.
 
 ### Absolute tijdsaanduiding
 
