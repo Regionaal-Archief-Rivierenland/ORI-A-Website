@@ -130,9 +130,9 @@
         <<span class=kw>tijdsaanduidingMediabron</span>>
             <<span class=kw>aanvang</span>>01:46:13&LT/<span class=kw>aanvang</span>>
         &LT/<span class=kw>tijdsaanduidingMediabron</span>>
-        <<span class=kw>spreektTijdensAgendapunt</span>>
+        <<span class=kw>gedurendeAgendapunt</span>>
             <<span class=kw>verwijzingID</span>>b6bd-0aef&LT/<span class=kw>verwijzingID</span>>
-        &LT/<span class=kw>spreektTijdensAgendapunt</span>>
+        &LT/<span class=kw>gedurendeAgendapunt</span>>
     &LT/<span class=kw>spreektTijdensSpreekfragment</span>>
     ...
 &LT/<span class=kw>aanwezigeDeelnemer</span>></code></pre><h1 id=gegevensgroepen>Gegevensgroepen<a class=secondary href=#gegevensgroepen><span aria-hidden=true>#</span></a></h1><p>Gegevensgroepen komen altijd direct onder een ander element, en krijgen nooit een ID.<h2 id=gremium><span class="pill pill-blue">«Gegevensgroep»</span><br><span>Gremium</span><a class=secondary href=#gremium><span aria-hidden=true>#</span></a></h2><p>Gegevens over een gremium.<table class=stickytable><thead><tr><th><small class=chapter>Gremium</small><br>Naam element<th>Verplicht<th>Herhaalbaar<th>Datatype<tbody><tr><td><div class=small><strong>naam</strong></div><p class=toelichting>Naam van het gremium, zoals ‘Commissie Samenleving’.</p><td class=centered><span aria-label=Verplicht class=icon-cell>✓</span><td class=centered><span class="icon-cell muted" aria-label=Verplicht>×</span><td><code data-tooltip="Reeks tekens">string</code><tr><td><div class=small><strong>identificatie</strong></div><p class=toelichting>Uniek identificatiekenmerk van het gremium.</p><td class=centered><span aria-label="Niet verplicht" class="icon-cell muted">×</span><td class=centered><span aria-label="Niet verplicht" class="icon-cell muted">×</span><td><code data-tooltip="Reeks tekens">string</code></table><pre class=xml><code class=xml><<span class=kw>vergadering</span>>
@@ -199,9 +199,9 @@
             &LT/<span class=kw>verwijzingInformatieobject</span>>
         &LT/<span class=kw>isRelatiefTot</span>>
     &LT/<span class=kw>tijdsaanduidingMediabron</span>>
-    <<span class=kw>spreektTijdensAgendapunt</span>>
+    <<span class=kw>gedurendeAgendapunt</span>>
         <<span class=kw>verwijzingID</span>>2028a00aaa2a8aaa00a2aab6bdaef&LT/<span class=kw>verwijzingID</span>>
-    &LT/<span class=kw>spreektTijdensAgendapunt</span>>
+    &LT/<span class=kw>gedurendeAgendapunt</span>>
 &LT/<span class=kw>spreektTijdensSpreekfragment</span>></code></pre><h2 id=stem><span class="pill pill-green">«Relatieklasse»</span><br><span>Stem</span><a class=secondary href=#stem><span aria-hidden=true>#</span></a></h2><p>Gegevens over een stem die iemand heeft uitbracht, zoals diens stemkeuze en de stemming waarop deze keuze betrekking heeft.<table class=stickytable><thead><tr><th><small class=chapter>Stem</small><br>Naam element<th>Verplicht<th>Herhaalbaar<th>Datatype<tbody><tr><td><div class=small><strong>ID</strong></div><p class=toelichting>Uniek identificatiekenmerk van de stem.</p><td class=centered><span aria-label="Niet verplicht" class="icon-cell muted">×</span><td class=centered><span aria-label="Niet verplicht" class=icon-cell>✓</span><td><code data-tooltip="Reeks tekens">string</code><tr><td><div class=small><strong>keuzeStemming</strong></div><p class=toelichting>De keuze op de stemming.</p> <p class=toelichting><strong>Keuzes</strong><ul class=toelichting><li>Voor<li>Tegen<li>Afwezig<li>Onthouden</ul><td class=centered><span aria-label=Verplicht class=icon-cell>✓</span><td class=centered><span class="icon-cell muted" aria-label=Verplicht>×</span><td><code data-tooltip="Lijst van keuzes">enumeratie</code><tr><td><div class=small><strong>gegevenOpStemming</strong></div><p class=toelichting>Verwijzing naar de stemming waar de stem betrekking op heeft.</p><td class=centered><span aria-label=Verplicht class=icon-cell>✓</span><td class=centered><span class="icon-cell muted" aria-label=Verplicht>×</span><td><a class=secondary href=#verwijzing-gegevens><code data-ch=12>verwijzing<wbr>Gegevens</code></a></table><h3 id=xml-voorbeeld-16>XML voorbeeld<a class=secondary href=#xml-voorbeeld-16><span aria-hidden=true>#</span></a></h3><pre class=xml><code class=xml><<span class=kw>neemtDeelAanStemming</span>>
     <<span class=kw>keuzeStemming</span>>Voor&LT/<span class=kw>keuzeStemming</span>>
     <<span class=kw>gegevenOpStemming</span>>
