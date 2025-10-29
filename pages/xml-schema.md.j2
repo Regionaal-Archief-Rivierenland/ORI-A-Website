@@ -53,9 +53,14 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 ``` xml
 <vergadering>
     <naam>Commissie Ruimte en Wonen</naam>
-    <type>Commissievergadering</type>
+    <datum>2023-05-26</datum>
+    <type>
+        <begripLabel>Commissievergadering</begripLabel>
+        <verwijzingBegrippenlijst>
+            <verwijzingID>https://ori-a.nl/begrippenlijsten#vergaderingstypes</verwijzingID>
+        </verwijzingBegrippenlijst>
+    </type>
     <locatie>Gemeentehuis Oosterhout</locatie>
-    <vergaderdatum>2023-05-26</vergaderdatum>
     <overheidsorgaan>
         <begripLabel>Gemeente Oosterhout</begripLabel>
         <begripCode>gm0826</begripCode>
@@ -76,19 +81,18 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 
 {{ agendapunt_table }}
 
-
 ### XML voorbeeld
 
 ``` xml
 <agendapunt>
     <ID>a120-003</ID>
+    <naam>Begroting bankjes in Westerpark</naam>
     <volgnummer>3b</volgnummer>
-    <indicatieBesloten>false</indicatieBesloten>
-    <titel>Begroting bankjes in Westerpark</titel>
     <tijdsaanduidingMediabron>
         <aanvang>01:02:00</aanvang>
         <einde>01:35:00</einde>
     </tijdsaanduidingMediabron>
+    <indicatieBesloten>false</indicatieBesloten>
 </agendapunt>
 ```
 
@@ -104,10 +108,6 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 <stemming>
     <ID>stemming-0010</ID>
     <type>Regulier</type>
-    <!-- Let op dat een echte stemming vrijwel nooit over een motie _en_ persoon gaat -->
-    <leidtTotBesluit>
-        <besluitResultaat>Aangenomen</besluitResultaat>
-    </leidtTotBesluit>
     <heeftBetrekkingOpAgendapunt>
         <verwijzingID>2028-354b</verwijzingID>
         <verwijzingNaam>Beleid openbare ruimte 2023</verwijzingNaam>
@@ -124,6 +124,9 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
             <verwijzingNaam>Motie PvdD Groene ruimte borgen</verwijzingNaam>
         </verwijzingInformatieobject>
     </heeftBetrekkingOpBesluitvormingsstuk>
+    <leidtTotBesluit>
+        <verwijzingID>besluit-0042</verwijzingID>
+    </leidtTotBesluit>
 </stemming>
 ```
 
@@ -146,8 +149,8 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 
 <besluit>
     <ID>ca4b182</ID>
-    <toezegging>De wethouder belooft een preciezere schatting van de verwachte CO² uitstoot.</toezegging>
     <resultaat>Aangenomen</resultaat>
+    <toezegging>De wethouder belooft een preciezere schatting van de verwachte CO² uitstoot.</toezegging>
 </besluit>
 ```
 
@@ -184,7 +187,6 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 <dagelijksBestuur>
     <ID>College van B&amp;W-gm0546</ID>
     <naam>College van B&amp;W</naam>
-    <type>College</type>
     <overheidsorgaan>
         <begripLabel>Gemeente Leiden</begripLabel>
         <begripCode>gm0546</begripCode>
@@ -192,6 +194,12 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
             <verwijzingID>https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet/4</verwijzingID>
         </verwijzingBegrippenlijst>
     </overheidsorgaan>
+    <type>
+        <begripLabel>College van burgemeester en wethouders</begripLabel>
+        <verwijzingBegrippenlijst>
+            <verwijzingID>https://ori-a.nl/begrippenlijsten#dagelijks-bestuur-types</verwijzingID>
+        </verwijzingBegrippenlijst>
+    </type>
 </dagelijksBestuur>
 ```
 
@@ -206,6 +214,10 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
 ``` xml
 <isNatuurlijkPersoon>
     <ID>Persoon-1</ID>
+    <naam>
+        <achternaam>Derks</achternaam>
+        <volledigeNaam>Peter Derks</volledigeNaam>
+    </naam>
     <geslachtsaanduiding>Man</geslachtsaanduiding>
     <functie>
         <begripLabel>Raadslid</begripLabel>
@@ -213,10 +225,6 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
             <verwijzingID>https://ori-a.nl/begrippenlijsten#functies</verwijzingID>
         </verwijzingBegrippenlijst>
     </functie>
-    <naam>
-        <achternaam>de Boer</achternaam>
-        <volledigeNaam>Peter de Boer</volledigeNaam>
-    </naam>
     <nevenfunctie>
         <omschrijving>Promovendus</omschrijving>
         <naamOrganisatie>Universiteit Leiden</naamOrganisatie>
@@ -249,7 +257,6 @@ Gegevens die onder het _root_-element `<ORI-A>` komen.
             <achternaam>Veltman</achternaam>
             <volledigeNaam>Julia Veltman</volledigeNaam>
         </naam>
-        ...
     </isNatuurlijkPersoon>
     <neemtDeelAanStemming>
         <keuzeStemming>Tegen</keuzeStemming>
@@ -370,12 +377,6 @@ Zorg er in dat geval wel voor dat er maar een video- of audio-opname geregistree
         <aanvang>00:58:00</aanvang>
         <einde>01:06:22</einde>
         <isRelatiefTot>
-            <informatieobjectType>
-                <begripLabel>audio</begripLabel>
-                <verwijzingBegrippenlijst>
-                    <verwijzingID>https://ori-a.nl/begrippenlijsten#mediabrontypes</verwijzingID>
-                </verwijzingBegrippenlijst>
-            </informatieobjectType>
             <verwijzingInformatieobject>
                 <verwijzingID>audiotuul-bc687</verwijzingID>
             </verwijzingInformatieobject>
