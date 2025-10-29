@@ -7,14 +7,14 @@
     &LT/<span class=kw>vergadering</span>>
     <<span class=kw>agendapunt</span>>
         <<span class=kw>ID</span>>2028a00aaa2a8aaa00a2uaab6bdaef&LT/<span class=kw>ID</span>>
-        <<span class=kw>volgnummer</span>>1&LT/<span class=kw>volgnummer</span>>
         <<span class=kw>naam</span>>Vaststelling Agenda&LT/<span class=kw>naam</span>>
+        <<span class=kw>volgnummer</span>>1&LT/<span class=kw>volgnummer</span>>
         <<span class=kw>omschrijving</span>>De raad stelt de agenda vast.&LT/<span class=kw>omschrijving</span>>
     &LT/<span class=kw>agendapunt</span>>
     <<span class=kw>agendapunt</span>>
         <<span class=kw>ID</span>>202282aa200aa08200a2821eb50cf&LT/<span class=kw>ID</span>>
-        <<span class=kw>volgnummer</span>>2&LT/<span class=kw>volgnummer</span>>
         <<span class=kw>naam</span>>Mededelingen&LT/<span class=kw>naam</span>>
+        <<span class=kw>volgnummer</span>>2&LT/<span class=kw>volgnummer</span>>
         <<span class=kw>omschrijving</span>>Mededelingen aan de raad.&LT/<span class=kw>omschrijving</span>>
     &LT/<span class=kw>agendapunt</span>>
 &LT/<span class=kw>ORI-A</span>></code></pre><p>Dit zegt:<blockquote><p>Er was <strong>30 november 2023</strong> een vergadering genaamd ‘Gemeenteraad’ met <strong>twee agendapunten</strong>. Tijdens het agendapunt met volgnummer 1 kwam de vaststelling van de agenda aan bod, en bij het volgende agendapunt was er ruimte voor mededelingen.</blockquote><p>Een goed begin, maar nog niet heel informatief.<h1 id=begrippenlijsten-gebruiken>Begrippenlijsten gebruiken<a class=secondary href=#begrippenlijsten-gebruiken><span aria-hidden=true>#</span></a></h1><p>Meestal wil je ook weten <em>wie</em> de vergadering heeft georganiseerd. In ORI-A doe je dit door een <code class="sourceCode xml"><<span class=kw>overheidsorgaan</span>></code> aan je vergadering toe te voegen:<pre class=xml><code class=xml><<span class=kw>vergadering</span>>
@@ -82,13 +82,13 @@
     <<span class=kw>rolnaam</span>>Voorzitter&LT/<span class=kw>rolnaam</span>>
     <<span class=kw>isNatuurlijkPersoon</span>>
         <<span class=kw>ID</span>>Persoon-0&LT/<span class=kw>ID</span>>
-        <<span class=kw>geslachtsaanduiding</span>>Man&LT/<span class=kw>geslachtsaanduiding</span>>
-        <<span class=kw>functie</span>>Burgemeester&LT/<span class=kw>functie</span>>
         <<span class=kw>naam</span>>
             <<span class=kw>achternaam</span>>Velden&LT/<span class=kw>achternaam</span>>
             <<span class=kw>tussenvoegsel</span>>van der&LT/<span class=kw>tussenvoegsel</span>>
             <<span class=kw>volledigeNaam</span>>Peter van der Velden&LT/<span class=kw>volledigeNaam</span>>
         &LT/<span class=kw>naam</span>>
+        <<span class=kw>geslachtsaanduiding</span>>Man&LT/<span class=kw>geslachtsaanduiding</span>>
+        <<span class=kw>functie</span>>Burgemeester&LT/<span class=kw>functie</span>>
     &LT/<span class=kw>isNatuurlijkPersoon</span>>
 &LT/<span class=kw>aanwezigeDeelnemer</span>></code></pre><p>Dit zegt in essentie:<blockquote><p>Peter van der Velden (de burgemeester) was in deze vergadering aanwezig als voorzitter.</blockquote><h2 id=informatie-over-personen-buiten-een-vergadering>Informatie over personen buiten een vergadering<a class=secondary href=#informatie-over-personen-buiten-een-vergadering><span aria-hidden=true>#</span></a></h2><p>Als je informatie wilt registeren over personen die <em>niet</em> in de vergadering aanwezig waren, kan dat in <code class="sourceCode xml"><<span class=kw>persoonBuitenVergadering</span>></code>. Met dit element kun je onder andere:<ul><li>De afwezigheid van raadsleden bijhouden<li>Vastleggen dat een ambtenaar die zelf niet aanwezig was verantwoordelijkheid over een agendapunt droeg<li>De ondertekenaars van een stuk opslaan</ul><p>In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering, maar speelde hij toch een zekere rol als behandelend ambtenaar:<pre class=xml><code class=xml><<span class=kw>agendapunt</span>>
     …
@@ -100,10 +100,10 @@
 
 <<span class=kw>persoonBuitenVergadering</span>>
     <<span class=kw>ID</span>>persoon-016&LT/<span class=kw>ID</span>>
-    <<span class=kw>functie</span>>Ambtenaar&LT/<span class=kw>functie</span>>
     <<span class=kw>naam</span>>
         <<span class=kw>volledigeNaam</span>>Jan de Vries&LT/<span class=kw>volledigeNaam</span>>
     &LT/<span class=kw>naam</span>>
+    <<span class=kw>functie</span>>Ambtenaar&LT/<span class=kw>functie</span>>
 &LT/<span class=kw>persoonBuitenVergadering</span>></code></pre><h2 id=naar-personen-verwijzen-vanuit-mdto>Naar personen verwijzen vanuit MDTO<a class=secondary href=#naar-personen-verwijzen-vanuit-mdto><span aria-hidden=true>#</span></a></h2><p>ORI-A laat het beschrijven van <strong>relaties tussen personen en documenten</strong> over aan andere metadatastandaarden, zoals <a class=external href=https://www.nationaalarchief.nl/archiveren/mdto>MDTO</a>. In MDTO komen gegevens over zulke relaties onder het element <code class="sourceCode xml"><<span class=kw>betrokkene</span>></code>.<p>MDTO vraagt een aantal gegevens onder <code class="sourceCode xml"><<span class=kw>betrokkene</span>></code>:<ul><li>Binnen <code class="sourceCode xml"><<span class=kw>betrokkeneTypeRelatie</span>></code> moet het <strong>type relatie</strong> tussen de persoon en het stuk beschreven worden, middels een begrip uit een begrippenlijst. ORI-A definieert hiervoor de <a href=begrippenlijsten#betrokkene-vergaderstuk-relaties>begrippenlijst ‘Betrokkene-vergaderstuk relaties’</a>.<li>Binnen <code class="sourceCode xml"><<span class=kw>betrokkeneActor</span>></code> worden de <strong>naam en ID</strong> van de betrokkene verwacht, bijvoorbeeld <code>Jan de Vries</code> en <code>persoon-016</code> om naar de ambtenaar uit het voorbeeld hierboven te verwijzen.</ul><p>Stel bijvoorbeeld dat je wilt vastleggen dat een betrokkene een <strong>indiener</strong> van een stuk was, dan kun je dat zo doen:<pre class=xml><code class=xml><<span class=kw>MDTO</span>>
     <<span class=kw>naam</span>>Voorstel bestemmingsplan Leiden-Noord&LT/<span class=kw>naam</span>>
     …
