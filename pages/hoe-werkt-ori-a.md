@@ -185,8 +185,11 @@ Deze entiteiten hebben doorgaans veel **relaties**, zowel onderling als met exte
 
 ## Voorbeeld: de relaties van een stemming
 
-<!-- todo: documenteer ook wanneer je nest? -->
-Het leggen van een relatie tussen twee entiteiten --- bijvoorbeeld een stemming en een agendapunt --- gaat via een **verwijzing**<!-- (tenminste, zolang de entiteit waarnaar verwezen wordt in principe herhaaldelijk aangehaald zou kunnen worden) -->.
+Het leggen van een relatie tussen twee entiteiten --- bijvoorbeeld een stemming en een agendapunt --- gaat via een **verwijzing**.
+
+::: waarschuwing
+De enige twee entiteiten in ORI-A die niet via een verwijzing gekoppeld zijn, zijn natuurlijk persoon en aanwezige deelnemer. Zie de sectie over [persoonsgegevens](hoe-werkt-ori-a#persoonsgegevens) voor meer informatie.
+:::
 
 Om een relatie tot stand te brengen, heeft de entiteit waarnaar verwezen wordt een uniek ID nodig. Dit ID kan vervolgens in `<verwijzingID>` worden ingevuld:
 
