@@ -48,14 +48,14 @@ Neem bijvoorbeeld de vergadering hierboven, met als titel simpelweg 'Gemeenteraa
     </vergadering>
     <agendapunt>
         <ID>2028a00aaa2a8aaa00a2uaab6bdaef</ID>
-        <volgnummer>1</volgnummer>
         <naam>Vaststelling Agenda</naam>
+        <volgnummer>1</volgnummer>
         <omschrijving>De raad stelt de agenda vast.</omschrijving>
     </agendapunt>
     <agendapunt>
         <ID>202282aa200aa08200a2821eb50cf</ID>
-        <volgnummer>2</volgnummer>
         <naam>Mededelingen</naam>
+        <volgnummer>2</volgnummer>
         <omschrijving>Mededelingen aan de raad.</omschrijving>
     </agendapunt>
 </ORI-A>
@@ -275,13 +275,13 @@ De meest gebruikelijke optie is om persoonsgegevens onder het `<isNatuurlijkPers
     <rolnaam>Voorzitter</rolnaam>
     <isNatuurlijkPersoon>
         <ID>Persoon-0</ID>
-        <geslachtsaanduiding>Man</geslachtsaanduiding>
-        <functie>Burgemeester</functie>
         <naam>
             <achternaam>Velden</achternaam>
             <tussenvoegsel>van der</tussenvoegsel>
             <volledigeNaam>Peter van der Velden</volledigeNaam>
         </naam>
+        <geslachtsaanduiding>Man</geslachtsaanduiding>
+        <functie>Burgemeester</functie>
     </isNatuurlijkPersoon>
 </aanwezigeDeelnemer>
 ```
@@ -312,10 +312,10 @@ In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering,
 
 <persoonBuitenVergadering>
     <ID>persoon-016</ID>
-    <functie>Ambtenaar</functie>
     <naam>
         <volledigeNaam>Jan de Vries</volledigeNaam>
     </naam>
+    <functie>Ambtenaar</functie>
 </persoonBuitenVergadering>
 ```
 
