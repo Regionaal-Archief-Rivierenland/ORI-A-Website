@@ -82,7 +82,7 @@ ORI-A voorbeeldbestanden/
     …
 ```
 
-<figcaption style="margin: 0 9px;">Gedeelte van de inhoud van de ORI-A + MDTO voorbeeldbestanden. Het bestand `Gemeenteraad_30-11-2023.mdto.xml` functioneert als dossierinformatie over de vergadering; het `.ori-a.xml` bestand functioneert als wat in MDTO [aanvullende metagegevens](https://www.nationaalarchief.nl/archiveren/mdto/aanvullendeMetagegevens) heten.</figcaption>
+<figcaption style="margin: 0 9px">Gedeelte van de inhoud van de ORI-A + MDTO voorbeeldbestanden. Het bestand `Gemeenteraad_30-11-2023.mdto.xml` functioneert als dossierinformatie over de vergadering; het `.ori-a.xml` bestand functioneert als wat in MDTO [aanvullende metagegevens](https://www.nationaalarchief.nl/archiveren/mdto/aanvullendeMetagegevens) heten.</figcaption>
 </figure>
 
 ``` {=html}
