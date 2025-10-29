@@ -21,7 +21,6 @@ Dit schema is beschikbaar in het **XSD-bestandsformaat**.
 </figure>
 ```
 
-
 :::tip
 **Tip:** Voor het valideren van XML raden we [xmllint](https://en.wikipedia.org/wiki/Libxml2) (_commandline_ programma) of [xmlschema](https://github.com/sissaschool/xmlschema) (Python pakket) aan.
 :::
@@ -72,6 +71,7 @@ De vergadering in kwestie is gebaseerd op [een vergadering van de gemeenteraad v
 ```
 ORI-A voorbeeldbestanden/
 ├── Voorbeeld.ori-a.xml
+├── Gemeenteraad_30-11-2023.mdto.xml
 ├── 23-11-30_Transcript_Raadsvergadering_Leiden/
 │   ├── 23-11-30_Transcript_Raadsvergadering_Leiden.pdf
 │   ├── 23-11-30_Transcript_Raadsvergadering_Leiden.mdto.xml
@@ -83,7 +83,7 @@ ORI-A voorbeeldbestanden/
     …
 ```
 
-<figcaption style="text-align: center">Gedeelte van de inhoud van de ORI-A + MDTO voorbeeldbestanden</figcaption>
+<figcaption style="text-align: center">Gedeelte van de inhoud van de ORI-A + MDTO voorbeeldbestanden. Het bestand `Gemeenteraad_30-11-2023.mdto.xml` functioneert als dossierinformatie over de vergadering; het `.ori-a.xml` bestand functioneert als wat in MDTO [aanvullende metagegevens](https://www.nationaalarchief.nl/archiveren/mdto/aanvullendeMetagegevens) heten.</figcaption>
 </figure>
 
 ``` {=html}
