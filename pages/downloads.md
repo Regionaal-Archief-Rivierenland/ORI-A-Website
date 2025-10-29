@@ -65,7 +65,6 @@ Een voorbeeld van hoe je een vergadering kan beschrijven in ORI-A XML. De voorbe
 
 De vergadering in kwestie is gebaseerd op [een vergadering van de gemeenteraad van de gemeente Leiden](https://leiden.parlaeus.nl/app/public/agenda/8028228820022a0a0282a0a8814c778c/vod). Sommige gegevens zijn om didactische redenen gefictionaliseerd.
 
-
 <figure style="text-align: left">
 
 ```
@@ -83,7 +82,7 @@ ORI-A voorbeeldbestanden/
     …
 ```
 
-<figcaption>Gedeelte van de inhoud van de ORI-A + MDTO voorbeeldbestanden. Het bestand `Gemeenteraad_30-11-2023.mdto.xml` functioneert als dossierinformatie over de vergadering; het `.ori-a.xml` bestand functioneert als wat in MDTO [aanvullende metagegevens](https://www.nationaalarchief.nl/archiveren/mdto/aanvullendeMetagegevens) heten.</figcaption>
+<figcaption style="margin: 0 9px;">Gedeelte van de inhoud van de ORI-A + MDTO voorbeeldbestanden. Het bestand `Gemeenteraad_30-11-2023.mdto.xml` functioneert als dossierinformatie over de vergadering; het `.ori-a.xml` bestand functioneert als wat in MDTO [aanvullende metagegevens](https://www.nationaalarchief.nl/archiveren/mdto/aanvullendeMetagegevens) heten.</figcaption>
 </figure>
 
 ``` {=html}
