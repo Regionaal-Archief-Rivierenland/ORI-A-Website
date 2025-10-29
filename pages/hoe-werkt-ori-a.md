@@ -372,10 +372,10 @@ Een aanwezige deelnemer heeft vaak een actieve rol tijdens een vergadering, bijv
     </isNatuurlijkPersoon>
     <spreektTijdensSpreekfragment>
         <taal>nl</taal>
-        <spreektTijdensAgendapunt>
+        <gedurendeAgendapunt>
             <verwijzingID>2028a00aa</verwijzingID>
             <verwijzingNaam>Delegatiebesluit omgevingsplan Leiden 2023</verwijzingNaam>
-        </spreektTijdensAgendapunt>
+        </gedurendeAgendapunt>
     </spreektTijdensSpreekfragment>
 </aanwezigeDeelnemer>
 ```
