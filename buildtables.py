@@ -190,6 +190,7 @@ def find_description_for_complextype(complextype) -> str:
 
 outfile = "pages/xml-schema.md"
 outfile_diagram = "diagram/ORI-A-diagram.tex"
+outfile_mini_diagram = "diagram/ORI-A-diagram-mini.tex"
 # Setup environment with whitespace control
 env = Environment(
     loader=FileSystemLoader(["pages", "templates", "diagram"]),
@@ -205,6 +206,7 @@ else:
     table_template = env.get_template("gegevensgroep_table.html")
 
 diagram_template = env.get_template("ORI-A-diagram.tex.j2")
+mini_diagram_template = env.get_template("ORI-A-diagram-mini.tex.j2")
 
 # to be passed as kwards to jinja
 all_tables_html = {}
@@ -235,11 +237,19 @@ md_with_html_tables = documentatie_template.render(**all_tables_html)
 # this string must be removed for the yaml frontmatter to be syntactically correct
 md_with_html_tables = md_with_html_tables.replace('<!-- -*- mode: markdown -*- -->', '')
 
-diagram_rendered = diagram_template.render(**all_tables)
-diagram_rendered = diagram_rendered.replace('<!-- -*- mode: LaTex -*- -->', '')
 
 with open(outfile, "w") as f:
     f.write(md_with_html_tables)
 
+diagram_rendered = diagram_template.render(**all_tables)
+diagram_rendered = diagram_rendered.replace('<!-- -*- mode: LaTex -*- -->', '')
+    
+mini_diagram_rendered = mini_diagram_template.render(**all_tables)
+mini_diagram_rendered = mini_diagram_rendered.replace('<!-- -*- mode: LaTex -*- -->', '')
+    
 with open(outfile_diagram, "w") as f:
     f.write(diagram_rendered)
+
+with open(outfile_mini_diagram, "w") as f:
+    f.write(mini_diagram_rendered)
+

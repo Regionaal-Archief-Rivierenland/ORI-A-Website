@@ -25,6 +25,9 @@ HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
 # # validatie.tex depends on specific svgs to compile
 # VALIDATIE_DIAGRAM_DEPS := $(VALIDATIE_DIAGRAM_TEX) diagram/empty-page.svg diagram/window-xml.svg diagram/xmark-solid.svg diagram/check-solid.svg 
 
+MINI_DIAGRAM_SRC := diagram/ORI-A-diagram-mini.tex
+MINI_DIAGRAM_DST := ims/mini.svg
+
 MAIN_HTML = over-ori-a.html
 
 FONT_TITLE := lato.woff2
@@ -36,7 +39,7 @@ FONT_INPUTS := fonts/$(FONT_TITLE) fonts/$(FONT_TITLE_BOLD) fonts/$(FONT_TITLE_H
 FONT_OUTPUTS := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_TITLE_HEAVY) site/$(FONT_MONOSPACE)
 
 TABLE_SRC := pages/xml-schema.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd diagram/ORI-A-diagram.tex.j2
-TABLE_DST := pages/xml-schema.md diagram/ORI-A-diagram.tex
+TABLE_DST := pages/xml-schema.md diagram/ORI-A-diagram.tex diagram/ORI-A-diagram-mini.tex
 
 VOORBEELDZIP := site/ORI-A\ voorbeeldbestanden.zip
 PRESERVICAZIP := site/Preservica_documentatieset.zip
@@ -143,9 +146,30 @@ generate-tables: $(TABLE_DST)
 
 $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
-	pdflatex -output-dir pdfs diagram/ORI-A-diagram.tex
+    # needs an env var to find the shared .sty file
+	TEXINPUTS=diagram: pdflatex -output-dir pdfs diagram/ORI-A-diagram.tex
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP)
+$(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
+	TEXINPUTS=diagram: pdflatex -output-dir /tmp diagram/ORI-A-diagram-mini.tex
+	mutool draw -o $@ /tmp/ORI-A-diagram-mini.pdf
+    # mutool insist on appending a 1, so strip it
+	mv "ims/"$$(basename $@ ".svg")"1.svg" $@
+    # replace colors
+	sd -F '#ffffff' 'var(--svg-bg)' $@
+	sd -F '#3a3a3a' 'currentColor' $@
+	sd -F '#333333' 'currentColor' $@
+	sd -F '#eaeef2' 'var(--pico-code-background-color)' $@
+	sd -F '#e7e0e8' 'var(--purple-bg)' $@
+	sd -F '#4e1b58' 'var(--purple-fg)' $@
+	sd -F '#43674c' 'var(--pico-ins-color)' $@
+	sd -F '#deebe6' 'var(--green-bg)' $@
+	sd -F '#0f704b' 'var(--green-fg)' $@
+    # remove font info
+	sd 'data-text="."' '' $@
+	scour --create-groups --set-precision=4 --enable-id-stripping --shorten-ids $@ | sponge $@
+	sd -F -n1 '<svg' "<svg id=\"$$(basename $@ '.svg')\"" $@ # add an id
+
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(MINI_DIAGRAM_DST)
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
@@ -186,3 +210,4 @@ clean:
 	rm -rf site
 	rm -f pages/xml-schema.md
 	fd . -ehtml pages/ --exclude index.html -X rm
+	rm ims/ORI-A-diagram-mini.svg

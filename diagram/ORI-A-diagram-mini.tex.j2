@@ -1,0 +1,127 @@
+<!-- -*- mode: LaTex -*- -->
+
+\documentclass[margin={0pt 0pt 0pt 0pt}]{standalone}
+
+%% shared preamble
+\usepackage{ORI-A-diagram}
+
+\begin{document}
+
+  % Jinja macro to render tables
+
+  {% macro render_table(table_title, rows) -%}
+
+    {# these names should not be present in the diagram #}
+    {%- set excluded_types = ['verwijzingGegevens', 'informatieobjectGegevens',
+    'agendapuntGegevens', 'besluitGegevens', 'stemresultaatPerFractieGegevens',
+    'vergaderingGegevens', 'dagelijksBestuurLidmaatschapGegevens',
+    'fractielidmaatschapGegevens', 'stemGegevens', 'spreekfragmentGegevens', 'natuurlijkPersoonGegevens'] -%}
+    {%- set filtered_rows = rows
+    | rejectattr('datatype', 'in', excluded_types)
+    | list -%}
+
+
+   \objectheader{ {{- table_title -}} }
+  {% for row in filtered_rows %}
+    {%- if row.herhaalbaar and row.verplicht -%}
+      {%- set kardinaliteit = '[1..*]' -%}
+    {%- elif not row.verplicht and not row.herhaalbaar -%}
+      {%- set kardinaliteit = '[0..1]' -%}
+    {%- elif not row.verplicht and row.herhaalbaar -%}
+      {%- set kardinaliteit = '[0..*]' -%}
+    {%- elif row.verplicht and not row.herhaalbaar -%}
+      {%- set kardinaliteit = '' -%}
+    {%- else -%}
+      {%- set kardinaliteit = '' -%}
+    {%- endif -%}
+      \attrib
+          {
+            {%- if row.verplicht -%}
+            \textbf{ {{- row.naam_pretty -}} }
+            {%- else -%}
+            {{- row.naam_pretty -}}
+            {%- endif -%}
+          }
+    { 
+      {%- if row.datatype_pretty == 'enumeratie' -%}
+        \enumeratietype{ {{- row.enumeratie_naam -}} }
+      {%- else -%}
+        {{- row.datatype_pretty -}}
+      {%- endif -%}
+    }{ {{- kardinaliteit -}} }{{ '' if loop.last else '\\\\' }}
+  {% endfor %}
+{%- endmacro %}
+
+  \begin{tikzpicture}
+  \node (agendapunt) [ORI object]
+        {
+          {{ render_table('Agendapunt', agendapunt_table) }}
+        };
+
+   \node (vergadering) [ORI object, left=17cm of agendapunt]
+        {
+          {{ render_table('Vergadering', vergadering_table) }}
+        };
+
+   \node (deelnemer) [ORI object,  below=3.3cm of vergadering]
+        {
+          {{ render_table('Aanwezige deelnemer', aanwezige_deelnemer_table) }}
+        };
+
+    \node (stemming) [ORI object, below = 3.9cm of agendapunt]
+        {
+          {{ render_table('Stemming', stemming_table) }}
+        };
+
+   \node (stem) [ORI relatieklasse, at = ($(deelnemer.east)!0.5!(stemming.west)$), yshift=2.4cm]
+        {
+          {{ render_table('Stem', stem_table) }}
+        };
+  %% Arrows
+
+  %% stemming -> agendapunt
+  \draw [relatiepijl] (stemming) --
+  node [anchor=center, fill=white] {heeft betrekking op\\\umltype{Relatiesoort}}
+  node [kardinaliteit, pos=0.00, yshift=\kyshiftbeg, right]  {\oldstylenums{0..*}}
+  node [kardinaliteit, pos=1.0, yshift=-\kyshiftend, right] {\oldstylenums{1}}
+  (agendapunt);
+
+  %% deelnemer -> vergadering
+  \draw[relatiepijl] (deelnemer)  --
+  node [kardinaliteit, pos=0.0, yshift=\kyshiftbeg, right] {\oldstylenums{0..*}}
+  node [kardinaliteit, pos=1.0, yshift=-\kyshiftend, right] {\oldstylenums{1}}
+  node [anchor=center, fill=white] {neemt deel aan\\\umltype{Relatiesoort}} (vergadering);
+
+  %% deelnemer -> stemming
+  \draw[dashedpijl] ($(deelnemer.east)!0.5!(stemming.west) + (0, -.40)$) -- (stem);
+  \coordinate (deelnemershifted) at ($(deelnemer.east) - (0,0.7cm)$);
+  \coordinate (stemmingshifted) at ($(stemming.west) - (0,0.7cm)$);
+  % Use the `|-` operator to align vertically while shifting horizontally
+  \draw[relatiepijl] 
+  ($(deelnemershifted |- stemmingshifted)$) --
+  node [kardinaliteit, pos=0.0, xshift=\kxshiftbeg, above] {\oldstylenums{0..*}}
+  node [kardinaliteit, pos=1.0, xshift=-\kxshiftend, above] {\oldstylenums{0..*}}
+  node [above, fill=white] {neemt deel aan} 
+  node [below] {\umltype{Relatiesoort}} 
+  (stemmingshifted.west);
+  %% deelnemer -> agendapunt
+  \draw[relatiepijl] ($(deelnemer.north) + (3cm, 0)$) --
+  node [kardinaliteit, pos=0.0, yshift=\kyshiftbeg, right] {\oldstylenums{0..*}}
+  ($(deelnemer.north) + (3cm, 2.6cm)$) --
+  node [above, pos=0.75] {spreekt tijdens}
+  node [below, pos=0.75] {\umltype{Relatiesoort}}
+  coordinate[pos=0.75] (tempcoordinate) %% define relatie line starting position
+  ($(deelnemer.north) + (12cm, 2.6cm)$) |-
+  node [kardinaliteit, pos=1.0, xshift=-\kxshiftend, above] {\oldstylenums{0..*}}
+  ($(agendapunt.west) -  (0, 3.0cm)$);        
+
+  %% agendapunt -> vergadering
+  \draw[relatiepijl] ($(agendapunt.west) - (0,1cm)$) -- ($(vergadering.east) - (0,1cm)$)
+  node [pos=0.5, above] {wordt behandeld tijdens}
+  node [pos=0.5, below] {\umltype{Relatiesoort}}
+  node [kardinaliteit, pos=0.00, xshift=-\kxshiftbeg,  above] {\oldstylenums{0..*}}
+  node [kardinaliteit, pos=0.965, above] {\oldstylenums{1}};
+
+\end{tikzpicture}
+
+\end{document}

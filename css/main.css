@@ -63,6 +63,8 @@ html {
     --green-bg: #DFECE7;
     /* this is currently only used in the navbar */
     --blue-fg: #1D6DCC;
+    /* needed for an otherwhise misbehaving svg */
+    --svg-bg: var(--pico-background-color, initial);
     /* Windows users */
     /* --pico-font-family-sans-serif: "Segoe UI Variable Static Display"; */
 }
@@ -99,9 +101,9 @@ figure {
 
 /* make some images protrude in the margins  */
 figure .largefigure {
-    width: 101%;
-    max-width: 101%;
-    margin-left: -8px;
+    width: 106%;
+    max-width: 106%;
+    margin-left: -18px;
 }
 
 .pill {

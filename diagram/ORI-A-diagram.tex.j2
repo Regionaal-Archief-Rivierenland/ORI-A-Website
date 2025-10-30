@@ -1,176 +1,11 @@
 <!-- -*- mode: LaTex -*- -->
-\documentclass[margin={0pt 15pt 15pt 15pt}]{standalone}
 
-\usepackage[dutch]{babel}
+\documentclass[margin={15pt 15pt 15pt 15pt}]{standalone}
 
-%% font configuration
-\usepackage[T1]{fontenc}
-\usepackage[default, type1]{sourcesanspro}
-\usepackage{inconsolata}
-\usepackage[kerning=true, tracking=true, activate={true,nocompatibility}]{microtype} %% tracking is pdftex only
-
-%% symbols
-\usepackage{amsmath}
-\usepackage{mathtools}
-\usepackage{mdsymbol}
-
-%% Tables
-\usepackage{makecell}
-\usepackage{colortbl} % To enable \arrayrulecolor
-
-%% linestretching
-\usepackage{setspace}
-
-%% rounded boxes
-\usepackage[most]{tcolorbox}
-
-%% Color definitions
-\usepackage[dvipsnames, table]{xcolor}
-\definecolor{githubgrey}{HTML}{EAEEF2}
-\definecolor{githubdarkblue}{HTML}{053a69}
-\definecolor{mainblack}{HTML}{333333}
-\definecolor{blueishblack}{HTML}{3A3A3A}
-\definecolor{lightgray}{HTML}{D9DDE1}
-\definecolor{moderngray}{HTML}{D8D8DB}
-\definecolor{darkgreen}{HTML}{43674c}
-\definecolor{enumeratiecolor}{HTML}{3C5770}
-\definecolor{logogreen}{HTML}{257D5B}
-\definecolor{logopurple}{HTML}{5e3067}
-\definecolor{logoblue}{HTML}{4974A5}
-
-
-%% tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows}
-\usetikzlibrary{fit}
-\usetikzlibrary{calc}
-\usetikzlibrary{arrows.meta}
-\usetikzlibrary{shapes.multipart}
-\usetikzlibrary{shapes.misc}
-\usetikzlibrary{positioning}
-%% needed for making svgs with white backgrounds
-\usetikzlibrary{backgrounds}
+%% shared preamble
+\usepackage{ORI-A-diagram}
 
 \begin{document}
-
-%% set default font to sans serif
-\sffamily
-
-
-%% TODO
-%% add arrow from vergadering to MDTO
-%% - be consistent in ur use of baselineskips (and amounts)
-%% - moeten verplichte relaties ook dik gedrukt/anders getypeset
-%% - maybe bullets instead of plusses? Making a proper list also gives more flexibility
-%%    - all the more because the plusses serve little purposes
-
-\newcommand{\kyshiftbeg}{0.25cm}
-\newcommand{\kyshiftend}{0.70cm}
-\newcommand{\kxshiftbeg}{0.35cm}
-\newcommand{\kxshiftend}{0.80cm}
-\newcommand\mystrut{\rule[-2.5pt]{0pt}{12pt}}
-
-{% raw %}
-%% datatype typesetting
-\newcommand{\datatype}[2][text]{
-    \tcbox[
-      on line,
-      boxsep=0pt,
-      left=2.5pt,
-      right=2.5pt,
-      top=0pt,
-      bottom=0pt,
-      enlarge top initially by=-14pt,
-      enlarge bottom by=-14pt,
-      enlarge right by=-4pt,
-      enlarge left by=-2pt,
-      opacityframe=0,
-      colback=githubgrey,
-      fontupper={\ttfamily\mystrut},
-      fontlower={\ttfamily\mystrut}]
-      {\textcolor{blueishblack}{\textbf{#2}}}
-}
-
-\newcommand{\pill}[2]{
-  \tcbox[
-    on line,
-    boxsep=5.0pt,
-    left=7.5pt,
-    right=7.5pt,
-    top=0.5pt,
-    bottom=0.5pt,
-    arc=8pt,
-    opacityframe=0,
-    colback=#1!15]{\fontseries{sb}\selectfont\textcolor{#1!110}{\guillemotleft#2\guillemotright}}
-}
-
-\newcommand{\umltype}[1]{
-  {\textbf{\textcolor{gray}{\guillemotleft#1\guillemotright}}}
-}
-
-\newcommand{\enumeratietype}[1]{enumeratie \textcolor{darkgreen}{#1}}
-
-%% Header of boxes
-\newcommand{\objectheader}[1]{
-  \rule[-1ex]{0pt}{4ex}
-  {\large \textcolor{mainblack}{{\fontseries{b}\selectfont #1}}}
-  \nodepart[align=left]{two}
-}
-
-%% TODO: try if a regular box looks better (maybe make the whole box a certain color? or just the bottom half)
-%% Attribute typesetting
-\newcommand{\attrib}[3]{\textcolor{mainblack}{+ \; #1:}\, \datatype{#2} \; {
-    %% \figureversion{text} %% doesn't work with every font?
-    
-    \textcolor{gray}{\oldstylenums{\scshape#3}}}}
-
-
-{% endraw %}
-\begin{tikzpicture}[
-    %% needed to fix svg
-    background rectangle/.style={fill=white}, show background rectangle,
-    %% changerectangle split part fill for colors
-    ORI object/.style={rectangle split, rectangle split parts=2,
-      rectangle split part fill={white,white}, draw=mainblack, rounded corners=5pt, fill=white, align=left, very thick, inner sep=10pt,
-      append after command={
-        node[
-          shift={(47pt,0pt)}
-        ] at (\tikzlastnode.north west)
-        {
-          \pill{logopurple}{Entiteit}
-        }
-      }
-    },
-    ORI relatieklasse/.style={rectangle split, rectangle split parts=2,
-      rectangle split part fill={white,white}, rounded corners=5pt,
-      very thick, inner sep=10pt, draw=gray!86, fill=white, align=left,
-      append after command={
-        node[
-          shift={(58pt,0pt)}
-        ] at (\tikzlastnode.north west)
-        {
-          \pill{logogreen}{Relatieklasse}
-        }
-      }
-      },
-    ORI gegevensgroep/.style={rectangle split, rectangle split parts=2,
-      rectangle split part fill={white,white}, rounded corners=5pt,
-      very thick, inner sep=10pt, draw=gray!86, fill=white, align=left,
-      append after command={
-        node[
-          shift={(60pt,0pt)}
-        ] at (\tikzlastnode.north west)
-        {
-          \pill{logoblue}{Gegevensgroep}
-        }
-      }
-      },
-    relatiepijl/.style={-{Straight Barb[length=4mm,width=6mm]}, very thick, draw=mainblack, text=mainblack},
-    gegevenspijl/.style={-{Straight Barb[length=4mm,width=6mm]}, very thick, dashed, draw=mainblack},
-    generalisatiepijl/.style={-{Latex[round,open,length=4mm,width=6mm]}, very thick, draw=mainblack},
-    dashedpijl/.style={very thick, dashed, text=mainblack, draw=gray!86},
-    kardinaliteit/.style={text=mainblack},
-    align=center]
 
   % Jinja macro to render tables
 
@@ -187,7 +22,6 @@
 
 
    \objectheader{ {{- table_title -}} }
-
   {% for row in filtered_rows %}
     {%- if row.herhaalbaar and row.verplicht -%}
       {%- set kardinaliteit = '[1..*]' -%}
@@ -218,6 +52,7 @@
   {% endfor %}
 {%- endmacro %}
 
+  \begin{tikzpicture}
   \node (agendapunt) [ORI object]
         {
           {{ render_table('Agendapunt', agendapunt_table) }}
@@ -303,7 +138,6 @@
         {
           {{ render_table('Stemming over personen', stemming_over_personen_table) }}
         };
-
 
    \node (tijdsaanduiding) [ORI gegevensgroep, right = 2.5cm of agendapunt, yshift=1.5cm]
          {
@@ -456,7 +290,6 @@
   node [pos=0.17, below] {\umltype{Relatiesoort}}
   node [kardinaliteit, pos=1, right, yshift=-\kyshiftbeg, xshift=\kxshiftbeg] {\oldstylenums{0..*}}
   ($(natuurlijkpersoon.south) + (3.9cm, 0)$);
-
   
   %% fractie -> stemming
   \draw[relatiepijl] (fractie) --
