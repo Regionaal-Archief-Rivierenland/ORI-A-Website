@@ -79,7 +79,7 @@ $(CSS_DST)%: $(CSS_SRC)%
 
 # Minimize SVG
 site/%.svg: ims/%.svg
-	scour --enable-id-stripping --protect-ids-list=$$(rg -I 'svg.*#(\w+)' -r '$$1' -o pages/* | sd '\n' ',')"moon,sun" --remove-descriptive-elements --strip-xml-prolog --no-line-breaks --enable-comment-stripping --indent=none -i $< -o $@
+	scour --create-groups --enable-id-stripping --protect-ids-list=$$(rg -I 'svg.*#(\w+)' -r '$$1' -o pages/* | sd '\n' ',')"moon,sun" --remove-descriptive-elements --strip-xml-prolog --no-line-breaks --enable-comment-stripping --indent=none -i $< -o $@
 
 site/%.png: ims/%.png
 	optipng -clobber -o3 $< -out $@
