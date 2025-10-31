@@ -153,7 +153,7 @@ $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 	TEXINPUTS=diagram: pdflatex -output-dir /tmp diagram/ORI-A-diagram-mini.tex
 	mutool draw -o $@ /tmp/ORI-A-diagram-mini.pdf
     # mutool insist on appending a 1, so strip it
-	mv "ims/"$$(basename $@ ".svg")"1.svg" $@
+	mv "site/"$$(basename $@ ".svg")"1.svg" $@
     # replace colors
 	sd -F '#ffffff' 'var(--svg-bg)' $@
 	sd -F '#3a3a3a' 'currentColor' $@
@@ -210,4 +210,4 @@ clean:
 	rm -rf site
 	rm -f pages/xml-schema.md
 	fd . -ehtml pages/ --exclude index.html -X rm
-	rm ims/ORI-A-diagram-mini.svg
+	rm site/ORI-A-diagram-mini.svg
