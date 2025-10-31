@@ -39,7 +39,7 @@ FONT_INPUTS := fonts/$(FONT_TITLE) fonts/$(FONT_TITLE_BOLD) fonts/$(FONT_TITLE_H
 FONT_OUTPUTS := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_TITLE_HEAVY) site/$(FONT_MONOSPACE)
 
 TABLE_SRC := pages/xml-schema.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd diagram/ORI-A-diagram.tex.j2
-TABLE_DST := pages/xml-schema.md diagram/ORI-A-diagram.tex diagram/ORI-A-diagram-mini.tex
+TABLE_DST := pages/xml-schema.md diagram/ORI-A-diagram.tex
 
 VOORBEELDZIP := site/ORI-A\ voorbeeldbestanden.zip
 PRESERVICAZIP := site/Preservica_documentatieset.zip
@@ -169,7 +169,7 @@ $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 	scour --create-groups --set-precision=4 --enable-id-stripping --shorten-ids $@ | sponge $@
 	sd -F -n1 '<svg' "<svg id=\"$$(basename $@ '.svg')\"" $@ # add an id
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(MINI_DIAGRAM_DST)
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) 
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
