@@ -26,7 +26,7 @@ HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
 # VALIDATIE_DIAGRAM_DEPS := $(VALIDATIE_DIAGRAM_TEX) diagram/empty-page.svg diagram/window-xml.svg diagram/xmark-solid.svg diagram/check-solid.svg 
 
 MINI_DIAGRAM_SRC := diagram/ORI-A-diagram-mini.tex
-MINI_DIAGRAM_DST := ims/mini.svg
+MINI_DIAGRAM_DST := site/mini.svg
 
 MAIN_HTML = over-ori-a.html
 
