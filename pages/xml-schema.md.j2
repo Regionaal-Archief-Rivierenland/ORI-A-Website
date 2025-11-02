@@ -312,6 +312,22 @@ Gegevensgroepen komen altijd direct onder een ander element, en krijgen nooit ee
 </naam>
 ```
 
+## Nevenfunctie
+
+{{ nevenfunctie_beschrijving }}
+
+{{ nevenfunctie_table }}
+
+### XML voorbeeld
+
+``` xml
+<nevenfunctie>
+    <omschrijving>Promovendus</omschrijving>
+    <naamOrganisatie>Universiteit Leiden</naamOrganisatie>
+    <indicatieBezoldigd>true</indicatieBezoldigd>
+</nevenfunctie>
+```
+
 ## Stemming over personen
 
 {{ stemming_over_personen_beschrijving }}
@@ -338,22 +354,6 @@ Gegevensgroepen komen altijd direct onder een ander element, en krijgen nooit ee
         <aantalUitgebrachteStemmenvolledigeNaam>6</aantalUitgebrachteStemmen>
     </stemmingOverPersonen>
 </stemming>
-```
-
-## Nevenfunctie
-
-{{ nevenfunctie_beschrijving }}
-
-{{ nevenfunctie_table }}
-
-### XML voorbeeld
-
-``` xml
-<nevenfunctie>
-    <omschrijving>Promovendus</omschrijving>
-    <naamOrganisatie>Universiteit Leiden</naamOrganisatie>
-    <indicatieBezoldigd>true</indicatieBezoldigd>
-</nevenfunctie>
 ```
 
 ## Tijdsaanduiding
@@ -388,23 +388,6 @@ Zorg er in dat geval wel voor dat er maar een video- of audio-opname geregistree
 
 Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
 
-## Fractielidmaatschap
-
-{{ fractielidmaatschap_beschrijving }}
-
-{{ fractielidmaatschap_table }}
-
-### XML voorbeeld
-
-``` xml
-<isLidVanFractie>
-    <indicatieVoorzitter>true</indicatieVoorzitter>
-    <verwijzingFractie>
-        <verwijzingID>D66-gm0826</verwijzingID>
-    </verwijzingFractie>
-</isLidVanFractie>
-```
-
 ## Dagelijks bestuur lidmaatschap
 
 {{ dagelijks_bestuur_beschrijving }}
@@ -420,6 +403,23 @@ Relatieklasses bevatten gegevens over een relatie tussen twee entiteiten.
         <verwijzingID>College van B&amp;W-gm0546</verwijzingID>
     </verwijzingDagelijksBestuur>
 </isLidVanDagelijksBestuur>
+```
+
+## Fractielidmaatschap
+
+{{ fractielidmaatschap_beschrijving }}
+
+{{ fractielidmaatschap_table }}
+
+### XML voorbeeld
+
+``` xml
+<isLidVanFractie>
+    <indicatieVoorzitter>true</indicatieVoorzitter>
+    <verwijzingFractie>
+        <verwijzingID>D66-gm0826</verwijzingID>
+    </verwijzingFractie>
+</isLidVanFractie>
 ```
 
 ## Spreekfragment
