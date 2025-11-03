@@ -79,7 +79,12 @@
     <<span class=kw>verwijzingID</span>>2028a00aa&LT/<span class=kw>verwijzingID</span>>
     <<span class=kw>verwijzingNaam</span>>Delegatiebesluit omgevingsplan Leiden 2023&LT/<span class=kw>verwijzingNaam</span>>
 &LT/<span class=kw>heeftBetrekkingOpAgendapunt</span>></code></pre><div class=waarschuwing><p>De enige twee entiteiten in ORI-A die niet via een verwijzing gekoppeld zijn, zijn natuurlijk persoon en aanwezige deelnemer. Zie de sectie over <a href=hoe-werkt-ori-a#persoonsgegevens>persoonsgegevens</a> voor meer informatie.</div><h1 id=persoonsgegevens>Persoonsgegevens<a class=secondary href=#persoonsgegevens><span aria-hidden=true>#</span></a></h1><p>In ORI-A kun je <a href=xml-schema#natuurlijk-persoon>persoonsgegevens</a> onder twee verschillende <em>top-level</em> elementen opnemen: onder <code class="sourceCode xml"><<span class=kw>aanwezigeDeelnemer</span>></code>, of onder <code class="sourceCode xml"><<span class=kw>persoonBuitenVergadering</span>></code>. Deze opties hebben een iets andere semantiek.<h2 id=aanwezige-deelnemer>Aanwezige deelnemer<a class=secondary href=#aanwezige-deelnemer><span aria-hidden=true>#</span></a></h2><p>De meest gebruikelijke optie is om persoonsgegevens onder het <code class="sourceCode xml"><<span class=kw>isNatuurlijkPersoon</span>></code> element van een aanwezige deelnemer te zetten:<pre class=xml><code class=xml><<span class=kw>aanwezigeDeelnemer</span>>
-    <<span class=kw>rolnaam</span>>Voorzitter&LT/<span class=kw>rolnaam</span>>
+    <<span class=kw>rolnaam</span>>
+        <<span class=kw>begripLabel</span>>Voorzitter&LT/<span class=kw>begripLabel</span>>
+        <<span class=kw>verwijzingBegrippenlijst</span>>
+            <<span class=kw>verwijzingID</span>>https://ori-a.nl/begrippenlijsten#deelnemerrollen&LT/<span class=kw>verwijzingID</span>>
+        &LT/<span class=kw>verwijzingBegrippenlijst</span>>
+    &LT/<span class=kw>rolnaam</span>>
     <<span class=kw>isNatuurlijkPersoon</span>>
         <<span class=kw>ID</span>>Persoon-0&LT/<span class=kw>ID</span>>
         <<span class=kw>naam</span>>
@@ -88,7 +93,12 @@
             <<span class=kw>volledigeNaam</span>>Peter van der Velden&LT/<span class=kw>volledigeNaam</span>>
         &LT/<span class=kw>naam</span>>
         <<span class=kw>geslachtsaanduiding</span>>Man&LT/<span class=kw>geslachtsaanduiding</span>>
-        <<span class=kw>functie</span>>Burgemeester&LT/<span class=kw>functie</span>>
+        <<span class=kw>functie</span>>
+            <<span class=kw>begripLabel</span>>Burgemeester&LT/<span class=kw>begripLabel</span>>
+            <<span class=kw>verwijzingBegrippenlijst</span>>
+                <<span class=kw>verwijzingID</span>>https://ori-a.nl/begrippenlijsten#functies&LT/<span class=kw>verwijzingID</span>>
+            &LT/<span class=kw>verwijzingBegrippenlijst</span>>
+        &LT/<span class=kw>functie</span>>
     &LT/<span class=kw>isNatuurlijkPersoon</span>>
 &LT/<span class=kw>aanwezigeDeelnemer</span>></code></pre><p>Dit zegt in essentie:<blockquote><p>Peter van der Velden (de burgemeester) was in deze vergadering aanwezig als voorzitter.</blockquote><h2 id=informatie-over-personen-buiten-een-vergadering>Informatie over personen buiten een vergadering<a class=secondary href=#informatie-over-personen-buiten-een-vergadering><span aria-hidden=true>#</span></a></h2><p>Als je informatie wilt registeren over personen die <em>niet</em> in de vergadering aanwezig waren, kan dat in <code class="sourceCode xml"><<span class=kw>persoonBuitenVergadering</span>></code>. Met dit element kun je onder andere:<ul><li>De afwezigheid van raadsleden bijhouden<li>Vastleggen dat een ambtenaar die zelf niet aanwezig was verantwoordelijkheid over een agendapunt droeg<li>De ondertekenaars van een stuk opslaan</ul><p>In onderstaande voorbeeld was Jan de Vries niet zelf aanwezig in de vergadering, maar speelde hij toch een zekere rol als behandelend ambtenaar:<pre class=xml><code class=xml><<span class=kw>agendapunt</span>>
     …
