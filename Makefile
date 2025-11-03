@@ -10,6 +10,9 @@ SVG_DST := $(patsubst ims/%,site/%,$(SVG_SRC))
 PNG_SRC := $(wildcard ims/*.png)
 PNG_DST := $(patsubst ims/%,site/%,$(PNG_SRC))
 
+JPG_SRC := $(wildcard ims/*.jpg)
+JPG_DST := $(patsubst ims/%,site/%,$(JPG_SRC))
+
 JS_SRC := $(wildcard js/*.js)
 JS_DST := site/concat.js
 
@@ -83,6 +86,9 @@ site/%.svg: ims/%.svg
 
 site/%.png: ims/%.png
 	optipng -clobber -o3 $< -out $@
+
+site/%.jpg: ims/%.jpg
+	cp $< $@
 
 # TODO: optimize pdfs?
 site/%.pdf: pdfs/%.pdf
@@ -169,7 +175,7 @@ $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 	scour --create-groups --set-precision=4 --enable-id-stripping --shorten-ids $@ | sponge $@
 	sd -F -n1 '<svg' "<svg id=\"$$(basename $@ '.svg')\"" $@ # add an id
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) 
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JPG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) 
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
