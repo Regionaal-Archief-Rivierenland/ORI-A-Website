@@ -62,7 +62,7 @@ def pageinfo(filestem):
         "title": title,
         "title-icon": title_icon,
         "position": position,
-        "url": "https://ori-a.nl/" + filestem,
+        "url": "https://ori-a.nl/" + filestem.removeprefix(f'{pages_folder}/'),
         "hide": hide,
         "filename": f"{filestem.removeprefix(f'{pages_folder}/')}",
         "headers": headers,
