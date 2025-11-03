@@ -193,11 +193,11 @@
   %% deelnemer -> vergadering
   \draw[relatiepijl] (deelnemer)  --
   node [kardinaliteit, pos=0.0, yshift=\kyshiftbeg, right] {\oldstylenums{0..*}}
-  node [kardinaliteit, pos=1.0, yshift=-\kyshiftend, right] {\oldstylenums{1}}
+  node [kardinaliteit, pos=1.0, yshift=-\kyshiftend, right] {\oldstylenums{0..*}}
   node [anchor=center, fill=white] {neemt deel aan\\\umltype{Relatiesoort}} (vergadering);
   %% deelnemer -> persoon
   \draw[relatiepijl] (deelnemer) --
-  node [kardinaliteit, pos=0.0, xshift=-\kxshiftbeg, above] {\oldstylenums{0..*}}
+  node [kardinaliteit, pos=0.0, xshift=-\kxshiftbeg, above] {\oldstylenums{0..1}}
   node [kardinaliteit, pos=1.0, xshift=0.6cm, above] {\oldstylenums{1}}
   node [above] {is natuurlijk persoon}
   node [below] {\umltype{Relatiesoort}}
@@ -242,7 +242,7 @@
   ($(agendapunt.west)+(-3.0, 3.8)$) |- ($(agendapunt.west)-(3.0, -0.8)$)
   node [fill=white, pos=0.25] {heeft als subagendapunt\\\umltype{Relatiesoort}} --
   ($(agendapunt.west)+(0, 0.8)$)
-  node [kardinaliteit, above, xshift = -0.8cm] {\oldstylenums{0..*}};
+  node [kardinaliteit, above, xshift = -0.8cm] {\oldstylenums{1}};
   %% agendapunt -> tijdsaanduiding
   \draw[gegevenspijl] ($(agendapunt.east)+(0,1.5cm)$) -- ($(tijdsaanduiding.west) + (0,0)$);
   %% tijdsaanduiding -> mdto (relatief tot)
@@ -264,7 +264,7 @@
   node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{0..*}};
   %% dashed arrow
   \draw[dashedpijl] ($(informatieobject.south) + (0cm, 0.0cm)$) --
-    node [above, pos=1.2] {heeft als bijlage }
+    node [above, pos=1.2] {heeft als bijlage}
     node [below, pos=1.2] {\umltype{Relatiesoort}}
     ($(informatieobject.south) + (0cm, -2.9cm)$);
   %% agendapunt -> natuurlijkpersoon
@@ -305,7 +305,7 @@
   
   %% vergadering -> vergadering
   \draw[relatiepijl] ($(vergadering.west)+(0,2.8)$) --
-  node [kardinaliteit, above, xshift = 1.0cm] {\oldstylenums{0..1}}
+  node [kardinaliteit, above, xshift = 1.0cm] {\oldstylenums{1}}
   ($(vergadering.west)+(-3.0,2.8)$) |- ($(vergadering.west)+(-3.0,-0.8)$)
   node [fill=white, pos=0.25] {heeft als deelvergadering\\\umltype{Relatiesoort}} --
   ($(vergadering.west)+(0,-0.8)$)
@@ -370,7 +370,7 @@
   node[kardinaliteit, pos=0, right, yshift=-\kyshiftbeg] {\oldstylenums{0..*}}
   coordinate[pos=1.0] (linestartfractielidmaatschap) % coordinate along the line
   (Y) --
-  node[kardinaliteit, pos=1, above, xshift=-\kxshiftend] {\oldstylenums{0..*}}
+  node[kardinaliteit, pos=1, above, xshift=-\kxshiftend] {\oldstylenums{0..1}}
   (endpoint.west);
   %% dashed line
   \draw[dashedpijl, yshift=-3cm] (linestartfractielidmaatschap) --
