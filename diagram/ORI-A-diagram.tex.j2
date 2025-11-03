@@ -238,11 +238,11 @@
 
   %% agendapunt -> agendapunt
   \draw[relatiepijl] ($(agendapunt.west)+(0, 3.8)$) |-
-  node [kardinaliteit, above, xshift = -\kxshiftbeg] {\oldstylenums{0..1}} 
+  node [kardinaliteit, above, xshift = -\kxshiftbeg] {\oldstylenums{1}}
   ($(agendapunt.west)+(-3.0, 3.8)$) |- ($(agendapunt.west)-(3.0, -0.8)$)
   node [fill=white, pos=0.25] {heeft als subagendapunt\\\umltype{Relatiesoort}} --
   ($(agendapunt.west)+(0, 0.8)$)
-  node [kardinaliteit, above, xshift = -0.8cm] {\oldstylenums{1}};
+  node [kardinaliteit, above, xshift = -0.8cm] {\oldstylenums{0..*}};
   %% agendapunt -> tijdsaanduiding
   \draw[gegevenspijl] ($(agendapunt.east)+(0,1.5cm)$) -- ($(tijdsaanduiding.west) + (0,0)$);
   %% tijdsaanduiding -> mdto (relatief tot)
@@ -305,7 +305,7 @@
   
   %% vergadering -> vergadering
   \draw[relatiepijl] ($(vergadering.west)+(0,2.8)$) --
-  node [kardinaliteit, above, xshift = 1.0cm] {\oldstylenums{1}}
+  node [kardinaliteit, above, xshift = 1.2cm] {\oldstylenums{1}}
   ($(vergadering.west)+(-3.0,2.8)$) |- ($(vergadering.west)+(-3.0,-0.8)$)
   node [fill=white, pos=0.25] {heeft als deelvergadering\\\umltype{Relatiesoort}} --
   ($(vergadering.west)+(0,-0.8)$)
