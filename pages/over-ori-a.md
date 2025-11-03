@@ -23,14 +23,10 @@ De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van ar
 
 # Beheer van de standaard
 
-ORI-A wordt beheerd door de [Werkgroep Archivering Raadsinformatie](colofon). De komende tijd richten we ons op het promoten en tijdelijk ondersteunen van het gebruik van de standaard. 
-
-## Status
-
-Het [ORI-A XML-schema](downloads#xml-schema) is momenteel in bèta. De website ondergaat de komende tijd een publieksreview. Vanaf het najaar volgen enkele pilotimplementaties, waarin de standaard wordt ingezet in de praktijk. Updates en nieuws over ORI-A zijn te lezen op deze website of op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome).
+ORI-A wordt beheerd door de [Werkgroep Archivering Raadsinformatie](colofon). De komende tijd richten we ons op pilotimplementaties, waarin we de 1.0 versie van de standaard gaan inzetten voor migraties vanuit RIS-systemen. Updates over deze ontwikkelingen vind je op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome) en deze website.
 
 ::: tip
-**Tip:** We nodigen iedereen uit feedback over ORI-A te delen via [onze GitHub!](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD)
+**Versie 1.0** van het [ORI-A XML-schema](downloads#xml-schema) is onlangs uitgekomen 🎉 We nodigen iedereen uit feedback over ORI-A te delen via [onze GitHub.](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD)
 :::
 
 # Documentatie
