@@ -272,7 +272,12 @@ De meest gebruikelijke optie is om persoonsgegevens onder het `<isNatuurlijkPers
 
 ``` xml
 <aanwezigeDeelnemer>
-    <rolnaam>Voorzitter</rolnaam>
+    <rolnaam>
+        <begripLabel>Voorzitter</begripLabel>
+        <verwijzingBegrippenlijst>
+            <verwijzingID>https://ori-a.nl/begrippenlijsten#deelnemerrollen</verwijzingID>
+        </verwijzingBegrippenlijst>
+    </rolnaam>
     <isNatuurlijkPersoon>
         <ID>Persoon-0</ID>
         <naam>
@@ -281,7 +286,12 @@ De meest gebruikelijke optie is om persoonsgegevens onder het `<isNatuurlijkPers
             <volledigeNaam>Peter van der Velden</volledigeNaam>
         </naam>
         <geslachtsaanduiding>Man</geslachtsaanduiding>
-        <functie>Burgemeester</functie>
+        <functie>
+            <begripLabel>Burgemeester</begripLabel>
+            <verwijzingBegrippenlijst>
+                <verwijzingID>https://ori-a.nl/begrippenlijsten#functies</verwijzingID>
+            </verwijzingBegrippenlijst>
+        </functie>
     </isNatuurlijkPersoon>
 </aanwezigeDeelnemer>
 ```
