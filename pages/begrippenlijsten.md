@@ -134,7 +134,7 @@ Met de begrippen uit deze lijst kan het type van een [`vergadering`](xml-schema#
 
 # Dagelijks bestuur types
 
-Met de begrippen uit deze lijst kan het type van een [`dagelijksBestuur`](xml-schema#dagelijksBestuur) worden vastgelegd:
+Met de begrippen uit deze lijst kan het type van een [`dagelijksBestuur`](xml-schema#dagelijks-bestuur) worden vastgelegd:
 
 | Label                                  | Definitie                                                                  |
 |:---------------------------------------|:---------------------------------------------------------------------------|
