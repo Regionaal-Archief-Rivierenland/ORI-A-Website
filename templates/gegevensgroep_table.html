@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     {%- for row in rows -%}
-    <tr>
+    <tr id={{ table_title.replace(" ", "-").lower() + "-" + row.naam_pretty.replace(" ", "-").lower() }}>
       <td>
         <div class="small"><strong>{{ row.naam_wbr | safe }}</strong></div>
         <p class="toelichting">{{ row.toelichting }}</p>
