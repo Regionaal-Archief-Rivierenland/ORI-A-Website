@@ -97,7 +97,7 @@ We raden aan om in de verwijzing naar je begrippenlijst (`<verwijzingBegrippenli
 :::
 
 :::tip
-**Tip:** `<overheidsorgaan>` is bedoeld voor de overheidsorganisatie die verantwoordelijk was voor de vergadering. Het specifieke **gremium** (bijvoorbeeld "Commissie Ruimte & Wonen") kun je kwijt in `<georganiseerdDoorGremium>`.
+**Tip:** `<overheidsorgaan>` is bedoeld voor de overheidsorganisatie die verantwoordelijk was voor de vergadering. Het specifieke **gremium** (bijvoorbeeld "Commissie Ruimte & Wonen") kun je kwijt in [`georganiseerdDoorGremium`](xml-schema#vergadering-georganiseerd-door-gremium).
 :::
 
 # Hoofd- en subagendapunten
