@@ -236,8 +236,6 @@ Een stem van een persoon op een `<stemming>` komt onder het _top-level_ element 
 
 Dit betekent dat deze deelnemer "Voor"  heeft gestemd op een stemming met ID `RV 23.0081`. 
 
-Naast personen, kunnen ook fracties een stem uitbrengen. Zie hiervoor [`stemResultaatPerFractieGegevens`](xml-schema#stemresultaat-per-fractie).
-
 ## Verwijzen met een naam
 
 Binnen [`verwijzingGegevens`](xml-schema#verwijzing-gegevens) --- de gegevensgroep waarmee je in ORI-A van de ene naar de andere entiteit verwijst --- is alleen het element `<verwijzingID>` verplicht. Naast deze verplichte ID, heb je in deze gegevensgroep ook de mogelijkheid om de **naam** van de entiteit waarnaar je verwijst meenemen.  Dit is omdat dit...
