@@ -33,7 +33,7 @@ Zorg in dat geval wel dat deze begrippenlijst [duurzaam wordt beheerd](https://w
 
 # Vergaderstuktypes
 
-Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals in `<heeftAlsBijlage>` onder [`agendapunt`](xml-schema#agendapunt). Voor meer informatie, zie [Gebruik van ORI-A met MDTO](hoe-werkt-ori-a#ori-a-mdto-combineren).
+Binnen ORI-A zijn de volgende vergaderstuktypes gedefinieerd. Deze types kunnen worden toegevoegd bij een verwijzing naar een informatieobject, zoals in [`heeftAlsBijlage`](xml-schema#agendapunt-heeft-als-bijlage) onder een `<agendapunt>`. Voor meer informatie, zie [Gebruik van ORI-A met MDTO](hoe-werkt-ori-a#ori-a-mdto-combineren).
 
 ORI-A onderscheidt verschillende soorten moties. Als het soort motie bekend is, zet je het soort achter het `|`-teken:
 
@@ -92,7 +92,7 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 
 # Mediabrontypes
 
-Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder `<informatieobjectType>`, als het informatieobject waarnaar je verwijst een mediabron is.
+Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder [`informatieobjectType`](xml-schema#informatieobject-gegevens-informatieobject-type), als het informatieobject waarnaar je verwijst een mediabron is.
 
 | Label        | Definitie                                                                 |
 |:-------------|:--------------------------------------------------------------------------|
@@ -101,7 +101,7 @@ Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worde
 | Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
 
 ::: waarschuwing
-Tradionele notulen kun je vastleggen via `isGenotuleerdIn` onder [`vergadering`](xml-schema#vergadering).
+Tradionele notulen kun je vastleggen via [`isGenotuleerdIn`](xml-schema#vergadering-is-genotuleerd-in) onder `<vergadering>`.
 :::
 
 # Betrokkene-vergaderstuk relaties
