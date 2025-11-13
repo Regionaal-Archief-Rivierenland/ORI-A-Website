@@ -293,14 +293,14 @@ tbody tr:nth-child(odd) td {
     background-color: var(--pico-table-row-stripped-background-color);
 }
 
-table.stickytable thead {
+.stickytable thead {
     top: 0;
     position: sticky;
     z-index: 1;
 }
 
 
-table.stickytable code[data-tooltip] {
+.stickytable code[data-tooltip] {
     border-bottom: none;
 }
 
@@ -326,7 +326,7 @@ ul.toelichting {
 }
 
 /* draw "fake" border, because the normal one doesn't work with position: sticky  */
-table.stickytable thead::after {
+.stickytable thead::after {
   content: "";
   position: absolute;
   z-index: 2;
@@ -338,7 +338,7 @@ table.stickytable thead::after {
 }
 
 /* chromium needs this in order for the above to look nice */
-table.stickytable th {
+.stickytable th {
     border-bottom: 1px;
     border-color: var(--pico-background-color);
 }
