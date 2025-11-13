@@ -409,7 +409,7 @@ Dit zegt dat het spreekfragment begon om 19:32:47 op 30 november 2023, en eindig
 
 ### Tijdsaanduiding in relatie tot de opname
 
-Met het element `<tijdsaanduidingMediabron>` is het mogelijk om tijdsaanduidingen van spreekfragmenten vast te leggen _in relatie tot_ een audio- en/of video-opname, ook wel 'mediabron'. ORI-A accepteert als relatieve tijdsaanduiding zowel tijdcodes (hh:mm:ss) als positieve getallen.
+Met het element `<tijdsaanduidingMediabron>` is het mogelijk om tijdsaanduidingen van spreekfragmenten vast te leggen _in relatie tot_ een audio- en/of video-opname, ook wel 'mediabron'. ORI-A accepteert als relatieve tijdsaanduiding zowel tijdcodes (`hh:mm:ss`) als positieve getallen.
 
 Een voorbeeld van tijdscodes als tijdsaanduiding:
 
