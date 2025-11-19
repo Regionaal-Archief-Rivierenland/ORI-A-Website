@@ -71,9 +71,6 @@ $(CSS_DST) $(HTML_DST): | site
 site:
 	mkdir -p $(CSS_DST)
 
-# to strip unused css: 
-# ./node_modules/purgecss/bin/purgecss.js --content "site/*.html" "js/*.js" --css $@ --output $@
-# (but this seems to be buggy)
 
 # Minize CSS
 $(CSS_DST)%: $(CSS_SRC)%
