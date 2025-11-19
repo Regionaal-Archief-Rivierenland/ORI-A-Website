@@ -22,6 +22,7 @@ PDF_DST := $(patsubst pdfs/%.pdf, site/%.pdf, $(PDF_SRC))
 MD_SRC := $(wildcard pages/*.md)
 HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
 
+SITEMAP_DST := site/sitemap.xml
 # we're not compiling this everytime, because the pipeline kind of sucks. Like this pulls inkscape
 # VALIDATIE_DIAGRAM_DST := site/validatie.svg
 # VALIDATIE_DIAGRAM_TEX := diagram/validatie.tex
@@ -71,6 +72,20 @@ $(CSS_DST) $(HTML_DST): | site
 site:
 	mkdir -p $(CSS_DST)
 
+$(SITEMAP_DST): $(HTML_DST)
+	@{ \
+		echo '<?xml version="1.0" encoding="UTF-8"?>'; \
+		echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'; \
+		echo '  <url><loc>https://ori-a.nl</loc></url>'; \
+		for f in $(HTML_DST); do \
+            stem=$$(echo $$f | sd 'pages/(.*).html' '$$1'); \
+			echo "  <url><loc>https://ori-a.nl/$$stem</loc></url>"; \
+		done; \
+		echo '</urlset>'; \
+	} > $@
+
+site/robots.txt: robots.txt
+	cp $< $@
 
 # Minize CSS
 $(CSS_DST)%: $(CSS_SRC)%
@@ -172,7 +187,7 @@ $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 	scour --create-groups --set-precision=4 --enable-id-stripping --shorten-ids $@ | sponge $@
 	sd -F -n1 '<svg' "<svg id=\"$$(basename $@ '.svg')\"" $@ # add an id
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JPG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) 
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JPG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(SITEMAP_DST) site/robots.txt
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
