@@ -87,6 +87,10 @@ $(SITEMAP_DST): $(HTML_DST)
 site/robots.txt: robots.txt
 	cp $< $@
 
+# This is for the Google Search console (i.e. seo stuff)
+site/google311d515abf442b48.html: google311d515abf442b48.html
+	cp $< $@
+
 # Minize CSS
 $(CSS_DST)%: $(CSS_SRC)%
 	@mkdir -p $(@D)
