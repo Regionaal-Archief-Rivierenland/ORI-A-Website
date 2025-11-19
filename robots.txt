@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ori-a.nl/sitemap.xml
