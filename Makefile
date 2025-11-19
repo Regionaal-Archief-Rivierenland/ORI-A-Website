@@ -191,7 +191,7 @@ $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 	scour --create-groups --set-precision=4 --enable-id-stripping --shorten-ids $@ | sponge $@
 	sd -F -n1 '<svg' "<svg id=\"$$(basename $@ '.svg')\"" $@ # add an id
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JPG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(SITEMAP_DST) site/robots.txt
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JPG_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(SITEMAP_DST) site/robots.txt site/google311d515abf442b48.html
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
