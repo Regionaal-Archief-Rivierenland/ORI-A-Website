@@ -59,7 +59,7 @@ Kort gezegd: alle XML die valide is bevonden op basis van schema versie `1.1.0` 
 Een voorbeeld van hoe je een vergadering kan beschrijven in ORI-A XML. De voorbeeldbestanden laten ook zien hoe je de **video-opname** en **bijbehorende vergaderstukken** kan beschrijven in MDTO.
 
 ::: tip
-**Tip:** Voor meer informatie over ORI-A + MDTO, zie [ORI-A & MDTO combineren](ORI-A & MDTO combineren).
+**Tip:** Voor meer informatie over ORI-A + MDTO, zie [ORI-A & MDTO combineren](hoe-werkt-ori-a#ori-a-mdto-combineren).
 :::
 
 De vergadering in kwestie is gebaseerd op [een vergadering van de gemeenteraad van de gemeente Leiden](https://leiden.parlaeus.nl/app/public/agenda/8028228820022a0a0282a0a8814c778c/vod). Sommige gegevens zijn om didactische redenen gefictionaliseerd.
