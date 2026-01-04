@@ -38,5 +38,5 @@ Alle resterende fouten zijn fouten van de Werkgroep Archivering Raadsinformatie.
 
 De ORI-A website gebruikt icoontjes uit de volgende projecten:
 
-* [iconior](https://iconoir.com/) (MIT License)
-* [phosphor](https://phosphoricons.com/) (MIT License)
+* [**iconior**](https://iconoir.com/){.contrast .plain} (MIT License)
+* [**phosphor**](https://phosphoricons.com/){.contrast .plain} (MIT License)
