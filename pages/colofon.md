@@ -33,3 +33,10 @@ Ook dank aan alle organisaties die hebben geholpen met het reviewen van de websi
 * [**Groninger Archieven**](https://www.groningerarchieven.nl/){.contrast .plain}
 
 Alle resterende fouten zijn fouten van de Werkgroep Archivering Raadsinformatie.
+
+## Icoontjes
+
+De ORI-A website gebruikt icoontjes uit de volgende projecten:
+
+* [iconior](https://iconoir.com/) (MIT License)
+* [phosphor](https://phosphoricons.com/) (MIT License)
