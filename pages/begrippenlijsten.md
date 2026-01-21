@@ -6,9 +6,6 @@ position: 4
 
 Hier vind je een overzicht van alle begrippenlijsten die door ORI-A worden beheerd en met raadsinformatie te maken hebben. Een begrippenlijst is een manier om gegevens te relateren aan een extern vastgestelde lijst van waarden. ORI-A volgt de definitie, semantiek en toepassing van begrippenlijsten zoals die ook in [MDTO](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst) worden gehanteerd.
 
-Waar mogelijk maakt ORI-A gebruik van begrippenlijsten van **TOOI**, [een standaardisatieproject opgezet door de Rijksoverheid](https://standaarden.overheid.nl/tooi/doc/tooi-registers/). In andere gevallen beheert ORI-A voorlopig eigen begrippenlijsten. 
-
-
 # Begrippenlijsten gebruiken
 
 Vanuit ORI-A XML kun je op volgende manier naar een begrippenlijst verwijzen (in dit geval naar de begrippenlijst 'Vergaderstuktypes', waar het begrip 'Motie' wordt verklaard):
@@ -26,7 +23,7 @@ Vanuit ORI-A XML kun je op volgende manier naar een begrippenlijst verwijzen (in
 Zie [Hoe werkt ORI-A?](hoe-werkt-ori-a#begrippenlijsten-gebruiken) voor een uitgebreider voorbeeld.
 
 ::: tip
-**Tip:** Alhoewel we aanraden bestaande begrippenlijsten te gebruiken of [suggesties te doen om ze completer te maken](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new), kun je er ook voor kiezen zelf een begrippenlijsten te starten. Dit kan bijvoorbeeld nuttig zijn als een instantie unieke werkprocessen hanteert.
+**Tip:** Alhoewel we aanraden ofwel bestaande begrippenlijsten te gebruiken (zie o.a. het [TOOI-project](https://standaarden.overheid.nl/tooi/waardelijsten)), ofwel [suggesties te doen om ze vollediger te maken](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/issues/new), kun je er ook voor kiezen zelf een begrippenlijsten te starten. Dit kan bijvoorbeeld nuttig zijn als een instantie unieke werkprocessen hanteert.
 
 Zorg in dat geval wel dat deze begrippenlijst [duurzaam wordt beheerd](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst).
 :::
