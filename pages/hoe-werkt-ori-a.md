@@ -457,7 +457,7 @@ Binnen `<tijdsaanduidingMediabron>` kun je gebruik maken van het element `<isRel
 
 Dit kan een uitkomst zijn als er meerdere opnamen zijn gemaakt van een vergadering. Als er maar één opname is gemaakt, dan is het efficiënter om de verwijzing naar de mediabron op te nemen in het element [`isVastgelegdMiddels`](xml-schema#vergadering-is-vastgelegd-middels) onder het `<vergadering>`-element, en `<isRelatiefTot>` achterwege te laten.
 
-<!-- misschien incl. interactieve video, waarin je ook even het verschil uitlegt tussen relatieve en absolute timestamps -->
+<!-- TODO: misschien incl. interactieve video, waarin je ook even het verschil uitlegt tussen relatieve en absolute timestamps -->
 
 # ORI-A & MDTO combineren
 
@@ -472,6 +472,11 @@ De enige _inhoudelijke_ informatie over informatieobjecten die in ORI-A wordt op
 Om ORI-A gegevens aan een MDTO informatieobject te koppelen, verwijs je naar het ID van een in MDTO opgesteld informatieobject  (zie ook [`verwijzingGegevens`](xml-schema#verwijzing-gegevens)):
 
 <!-- TODO: misschien wel mooi om het MDTO bestand ook als voorbeeld op te voeren. -->
+
+<!-- TODO: het is niet heel duidelijk aangekondigd wat dit precies uitdrukt. 
+    - Een visuele illustratie zou hier erg kunnen helpen!
+ -->
+
 ``` xml
 <agendapunt>
     …
