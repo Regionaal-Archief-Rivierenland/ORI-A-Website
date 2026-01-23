@@ -4,7 +4,7 @@ title-icon: lijst.svg
 position: 4
 ---
 
-Hier vind je een overzicht van alle begrippenlijsten die door ORI-A worden beheerd en met raadsinformatie te maken hebben.
+Hier vind je alle begrippenlijsten die door ORI-A worden beheerd en met raadsinformatie te maken hebben.
 
 Een begrippenlijst is een manier om gegevens te relateren aan een extern vastgestelde lijst van waarden. ORI-A volgt de definitie, semantiek en toepassing van begrippenlijsten zoals die ook in [MDTO](https://www.nationaalarchief.nl/archiveren/mdto/begripbegrippenlijst) worden gehanteerd.
 
