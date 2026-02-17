@@ -20,5 +20,4 @@ RUN paru --noconfirm -Scc
 RUN sudo pacman --noconfirm -Scc
 RUN sudo pacman --noconfirm -Rs base-devel
 
-
 USER root
