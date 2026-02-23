@@ -57,15 +57,6 @@ De ORI-A documentatie bestaat uit een aantal onderdelen:
     <p>Voorbeeld van hoe je een echte vergadering + videotuul met behulp van ORI-A en MDTO kan beschrijven</p>
   </article>
 </a>
-<a href="begrippenlijsten">
-  <article class="card">
-    <header>
-      <svg width=27 height=27>
-        <use xlink:href="lijst.svg#lijst"/>
-      </svg>Begrippenlijsten</header>
-    <p>Definities van begrippen die met raadsinformatie te maken hebben</p>
-  </article>
-</a>
 <a href="downloads#diagram">
   <article class="card">
     <header>
@@ -73,6 +64,15 @@ De ORI-A documentatie bestaat uit een aantal onderdelen:
         <use xlink:href="image.svg#image"/>
       </svg>Diagram</header>
     <p>Schematische weergave van het ORI-A informatiemodel</p>
+  </article>
+</a>
+<a href="begrippenlijsten">
+  <article class="card">
+    <header>
+      <svg width=27 height=27>
+        <use xlink:href="lijst.svg#lijst"/>
+      </svg>Begrippenlijsten</header>
+    <p>Definities van begrippen die met raadsinformatie te maken hebben</p>
   </article>
 </a>
 <a href="faq">
