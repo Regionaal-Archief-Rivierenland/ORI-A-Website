@@ -62,7 +62,7 @@ Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>
 | Antwoord            | Antwoord op een vraag aan de raad.                                         |
 | Ingekomen stuk      | Een stuk gericht aan de raad.                                              |
 | Mededeling          | Een mededeling.                                                            |
-| Besluitenlijst      | Overzicht van genomen besluiten.                                           |
+| Besluitenlijst      | Overzicht van tijdens een vergadering genomen besluiten.                   |
 
 
 # Deelnemerrollen
