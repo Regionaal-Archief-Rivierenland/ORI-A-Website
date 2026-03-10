@@ -4,6 +4,14 @@ To build the Docker image:
 sudo docker build -t oria-builder .
 ```
 
+Alternatively, get a pre-build image online: 
+
+``` shell
+
+```
+
+# Website met docker bouwen
+
 Then, to build the website (make sure you are at the root of the website!):
 
 ``` shell
