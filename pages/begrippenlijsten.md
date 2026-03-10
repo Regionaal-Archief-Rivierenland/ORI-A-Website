@@ -166,7 +166,8 @@ Met de begrippen uit deze lijst kan de functie of ambt van een [`natuurlijkPerso
 | Secretaris-directeur      | Secretaris van het algemeen en dagelijks bestuur van een waterschap.                            |
 | Provinciesecretaris       | Secretaris van het dagelijks bestuur van een provincie.                                         |
 | Gemeentesecretaris        | Secretaris van het dagelijks bestuur van een gemeente.                                          |
-| Burgerlid                 | Door het algemeen bestuur van een overheidsorgaan benoemd lid van een commissie of werkgroep.   |
+| Commisielid               | Door het algemeen bestuur van een overheidsorgaan benoemd lid van een commissie of werkgroep.   |
+| Commisielid \| Burgerlid  | Een niet-verkozen lid van een commissie of werkgroep.                                           |
 | Ambtenaar/medewerker      | Een overheidsmedewerker.                                                                        |
 | Adviseur of deskundige    | Een door de overheid ingehuurde adviseur of deskundige.                                         |
 | <del>Overig</del>         | -                                                                                               |
