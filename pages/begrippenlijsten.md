@@ -64,6 +64,10 @@ Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>
 | Mededeling          | Een mededeling.                                                            |
 
 
+::: tip
+De begrippenlijst [PLOOI documentsoorten](https://identifier.overheid.nl/tooi/set/ccw_plooi_documentsoorten/7) bevat andere nuttige vergaderstuktypes.
+:::
+
 # Deelnemerrollen
 
 Binnen ORI-A zijn enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
