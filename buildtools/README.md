@@ -10,7 +10,7 @@ Alternatively, get a pre-build image online:
 
 ```
 
-# Website met docker bouwen
+# Build the website with docker
 
 Then, to build the website (make sure you are at the root of the website!):
 
