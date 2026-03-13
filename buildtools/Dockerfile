@@ -20,8 +20,9 @@ RUN paru --noconfirm -Scc
 RUN sudo pacman --noconfirm -Scc
 RUN sudo pacman --noconfirm -Rs base-devel
 
-# npm deps
-RUN npm install purgecss --no-save --prefix .
-
-
 USER root
+
+# npm deps
+RUN sudo npm install purgecss --no-save --prefix .
+
+
