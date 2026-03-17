@@ -208,10 +208,13 @@ buildpages: prepare-site
 
 minify: buildpages
 	minify-html --minify-css --allow-optimal-entities --minify-js $$(fd -ehtml . site/)
-    # purge unused css (with custom script, since the purgecss cli acted weird)
-	./purge.mjs
     # minify html doesn't pick up on this
 	sd -F 'div> <p' 'div><p' site/*html
+    # purge unused css (with custom script, since the purgecss cli acted weird)
+	./purge.cjs
+    # purge.cjs writes pico.min.css to site root, so we can cleanup this foldera
+    rm -rf site/pico
+
 
 PANDOCFLAGS = -V geometry:margin=3.5cm -V papersize:a4 -H /tmp/linenumbers.tex
 

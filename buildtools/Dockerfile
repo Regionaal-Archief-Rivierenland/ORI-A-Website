@@ -23,4 +23,6 @@ RUN sudo pacman --noconfirm -Rs base-devel
 USER root
 
 # npm deps
-RUN npm install purgecss --no-save --prefix .
+# write node deps to /deps so node_modules/ isn't overridden on container mount
+RUN npm install purgecss --prefix /deps
+ENV NODE_PATH=/deps/node_modules
