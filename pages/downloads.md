@@ -29,7 +29,8 @@ Dit schema is beschikbaar in het **XSD-bestandsformaat**.
 <div class="grid download">
 <select aria-label="Versie">
   <option disabled value="">Versie</option>
-  <option selected>v1.0.0</option>
+  <option selected>v1.0.1</option>
+  <option>v1.0.0</option>
 </select>
 
 <a download href="ORI-A.xsd" role=button><span><strong>ORI-A XML schema</strong> (xsd)</span></a>
@@ -165,7 +166,8 @@ Dit logo kun je bijvoorbeeld gebruiken in promotiemateriaal of slides.
 
 document.querySelectorAll(".grid.download").forEach(group => {
     const fmap = {
-    "v1.0.0": "ORI-A.xsd",
+    "v1.0.1": "https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/releases/download/v1.0.1/ORI-A.xsd",
+    "v1.0.0": "https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/releases/download/v1.0.0/ORI-A.xsd",
     "pdf_diagram": "ORI-A-diagram.pdf",
     "svg_diagram": "ORI-A-diagram.svg",
     "png_logo": "logo.png",
@@ -183,10 +185,10 @@ document.querySelectorAll(".grid.download").forEach(group => {
     select.addEventListener("change", () => {
         const value = select.value;
         if (!value) return;
-        const label = value.split("_")[0];
-        span.innerHTML = "<strong>" + strong.textContent + "</strong> (" + label.toLowerCase() + ")";;
         const file = fmap[value];
         if (!file) return;
+        const ext = file.split(".").pop();
+        span.innerHTML = "<strong>" + strong.textContent + "</strong> (" + ext.toLowerCase() + ")";
         link.setAttribute("href", file)
     });
 
