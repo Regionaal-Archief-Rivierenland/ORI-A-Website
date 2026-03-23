@@ -51,6 +51,12 @@ Kort gezegd: alle XML die valide is bevonden op basis van schema versie `1.1.0` 
 
 [Volledig overzicht van wijzigingen](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/commits/main/) | [Historische versies van de XSD](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/releases)
 
+###  Versie 1.0.1
+
+* Spel- en stijlfouten in de documentatie verbeterd.
+* Tab-karakters naar spaties veranderd.
+* Het datatype onder het root-element heeft nu een naam. Zie <https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/issues/82>.
+
 ###  Versie 1.0.0
 
 * Eerste publieke release
