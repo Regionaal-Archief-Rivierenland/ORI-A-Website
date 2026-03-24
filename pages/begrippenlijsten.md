@@ -65,7 +65,7 @@ Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>
 
 
 ::: tip
-De begrippenlijst [PLOOI documentsoorten](https://identifier.overheid.nl/tooi/set/ccw_plooi_documentsoorten/7) bevat andere nuttige vergaderstuktypes.
+**Tip:** De begrippenlijst [PLOOI documentsoorten](https://identifier.overheid.nl/tooi/set/ccw_plooi_documentsoorten/7) bevat andere nuttige vergaderstuktypes.
 :::
 
 # Deelnemerrollen
