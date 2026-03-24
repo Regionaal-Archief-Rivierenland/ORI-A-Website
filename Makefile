@@ -60,10 +60,9 @@ update-submodule:
 	git submodule update --recursive --remote
 
 $(VOORBEELDZIP): $(shell fd . -tfile 'ORI-A-XSD/Voorbeelden')
-	rm -rf .ziptemp && mkdir .ziptemp && \
-	ln -s ../ORI-A-XSD/Voorbeelden ".ziptemp/ORI-A voorbeeldbestanden" && \
-	cd .ziptemp && zip -9 -r "../$@" "ORI-A voorbeeldbestanden" && \
-	cd .. && rm -rf .ziptemp
+	ln -sf ORI-A-XSD/Voorbeelden "ORI-A voorbeeldbestanden" && \
+	zip -9 -r "$@" "ORI-A voorbeeldbestanden" && \
+	unlink "ORI-A voorbeeldbestanden"
 
 $(PRESERVICAZIP): misc/Preservica_documentatieset.zip
 	cp $< $@
