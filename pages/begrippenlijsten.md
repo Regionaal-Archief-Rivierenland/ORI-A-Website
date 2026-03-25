@@ -44,24 +44,27 @@ ORI-A onderscheidt verschillende soorten moties. Als het soort motie bekend is, 
    …
 ```
 
-Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>` is in dat geval gewoon gelijk aan `Motie`.
+Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>` is in dat geval gewoon gelijk aan `Motie`. Dezelfde hiërarchische classificatie wordt gebruikt voor `Vraag`.
 
 
-| Label               | Definitie                                                                  |
-|:--------------------|:---------------------------------------------------------------------------|
-| Voorstel            | Plan waarover een besluit genomen kan worden.                              |
-| Motie               | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
-| Motie \| Voorstel   | Motie met een voorstel tot handelen.                                       |
-| Motie \| Wantrouwen | Motie van wantrouwen.                                                      |
-| Motie \| Treurnis   | Motie van treurnis.                                                        |
-| Motie \| Afkeuring  | Motie van afkeuring.                                                       |
-| Motie \| Vreemd     | Motie over een onderwerp dat niet op de agenda staat.                      |
-| Amendement          | Voorstel om een bestaand voorstel te wijzigen.                             |
-| Toezegging          | Toezegging van een gedeputeerde of raadslid.                               |
-| Vraag               | Vraag aan de raad.                                                         |
-| Antwoord            | Antwoord op een vraag aan de raad.                                         |
-| Ingekomen stuk      | Een stuk gericht aan de raad.                                              |
-| Mededeling          | Een mededeling.                                                            |
+| Label                                  | Definitie                                                                  |
+|:---------------------------------------|:---------------------------------------------------------------------------|
+| Voorstel                               | Plan waarover een besluit genomen kan worden.                              |
+| Motie                                  | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
+| Motie \| Voorstel                      | Motie met een voorstel tot handelen.                                       |
+| Motie \| Wantrouwen                    | Motie van wantrouwen.                                                      |
+| Motie \| Treurnis                      | Motie van treurnis.                                                        |
+| Motie \| Afkeuring                     | Motie van afkeuring.                                                       |
+| Motie \| Vreemd                        | Motie over een onderwerp dat niet op de agenda staat.                      |
+| Amendement                             | Voorstel om een bestaand voorstel te wijzigen.                             |
+| Toezegging                             | Toezegging van een gedeputeerde of raadslid.                               |
+| Vraag                                  | Vraag aan een overheidsorgaan.                                             |
+| Vraag \| Technische vraag              | Vraag naar feitelijke informatie.                                          |
+| Vraag \| Schriftelijke politieke vraag | Schriftelijk ingediende vraag over een politiek standpunt.                 |
+| Vraag \| Mondelinge politieke vraag    | Mondelinge vraag over een politiek standpunt.                              |
+| Antwoord                               | Antwoord op een vraag.                                                     |
+| Ingekomen stuk                         | Een stuk gericht aan de raad.                                              |
+| Mededeling                             | Een mededeling.                                                            |
 
 
 ::: tip
