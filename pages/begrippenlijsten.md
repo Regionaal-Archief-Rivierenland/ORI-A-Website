@@ -44,24 +44,27 @@ ORI-A onderscheidt verschillende soorten moties. Als het soort motie bekend is, 
    …
 ```
 
-Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>` is in dat geval gewoon gelijk aan `Motie`.
+Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>` is in dat geval gewoon gelijk aan `Motie`. Dezelfde hiërarchische classificatie wordt gebruikt voor `Vraag`.
 
 
-| Label               | Definitie                                                                  |
-|:--------------------|:---------------------------------------------------------------------------|
-| Voorstel            | Plan waarover een besluit genomen kan worden.                              |
-| Motie               | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
-| Motie \| Voorstel   | Motie met een voorstel tot handelen.                                       |
-| Motie \| Wantrouwen | Motie van wantrouwen.                                                      |
-| Motie \| Treurnis   | Motie van treurnis.                                                        |
-| Motie \| Afkeuring  | Motie van afkeuring.                                                       |
-| Motie \| Vreemd     | Motie over een onderwerp dat niet op de agenda staat.                      |
-| Amendement          | Voorstel om een bestaand voorstel te wijzigen.                             |
-| Toezegging          | Toezegging van een gedeputeerde of raadslid.                               |
-| Vraag               | Vraag aan de raad.                                                         |
-| Antwoord            | Antwoord op een vraag aan de raad.                                         |
-| Ingekomen stuk      | Een stuk gericht aan de raad.                                              |
-| Mededeling          | Een mededeling.                                                            |
+| Label                                  | Definitie                                                                  |
+|:---------------------------------------|:---------------------------------------------------------------------------|
+| Voorstel                               | Plan waarover een besluit genomen kan worden.                              |
+| Motie                                  | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
+| Motie \| Voorstel                      | Motie met een voorstel tot handelen.                                       |
+| Motie \| Wantrouwen                    | Motie van wantrouwen.                                                      |
+| Motie \| Treurnis                      | Motie van treurnis.                                                        |
+| Motie \| Afkeuring                     | Motie van afkeuring.                                                       |
+| Motie \| Vreemd                        | Motie over een onderwerp dat niet op de agenda staat.                      |
+| Amendement                             | Voorstel om een bestaand voorstel te wijzigen.                             |
+| Toezegging                             | Toezegging van een gedeputeerde of raadslid.                               |
+| Vraag                                  | Vraag aan een overheidsorgaan.                                             |
+| Vraag \| Technische vraag              | Vraag naar feitelijke informatie.                                          |
+| Vraag \| Schriftelijke politieke vraag | Schriftelijk ingediende vraag over een politiek standpunt.                 |
+| Vraag \| Mondelinge politieke vraag    | Mondelinge vraag over een politiek standpunt.                              |
+| Antwoord                               | Antwoord op een vraag.                                                     |
+| Ingekomen stuk                         | Een stuk gericht aan de raad.                                              |
+| Mededeling                             | Een mededeling.                                                            |
 
 
 ::: tip
@@ -166,7 +169,8 @@ Met de begrippen uit deze lijst kan de functie of ambt van een [`natuurlijkPerso
 | Secretaris-directeur      | Secretaris van het algemeen en dagelijks bestuur van een waterschap.                            |
 | Provinciesecretaris       | Secretaris van het dagelijks bestuur van een provincie.                                         |
 | Gemeentesecretaris        | Secretaris van het dagelijks bestuur van een gemeente.                                          |
-| Burgerlid                 | Door het algemeen bestuur van een overheidsorgaan benoemd lid van een commissie of werkgroep.   |
+| Commissielid              | Door het algemeen bestuur van een overheidsorgaan benoemd lid van een commissie of werkgroep.   |
+| Commissielid \| Burgerlid | Een niet-verkozen lid van een commissie of werkgroep.                                           |
 | Ambtenaar/medewerker      | Een overheidsmedewerker.                                                                        |
 | Adviseur of deskundige    | Een door de overheid ingehuurde adviseur of deskundige.                                         |
 | <del>Overig</del>         | -                                                                                               |
