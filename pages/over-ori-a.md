@@ -35,7 +35,7 @@ De ORI-A documentatie bestaat uit een aantal onderdelen:
         <svg width=27 height=27>
           <use xlink:href="boek.svg#boek"/>
         </svg>Hoe werkt ORI-A?</header>
-      <p>Stapgewijze uitleg van ORI-A aan de hand van stukjes XML</p>
+      <p>Stapsgewijze uitleg van ORI-A aan de hand van stukjes XML</p>
     </article>
   </a>
   <a href="xml-schema">
