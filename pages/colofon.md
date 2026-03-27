@@ -6,7 +6,9 @@ hide_from_navigation: true
 
 # Werkgroep Archivering Raadsinformatie
 
-De Open Raadsinformatie Archiefstandaard is een initiatief van en wordt beheerd door de Werkgroep Archivering Raadsinformatie. De werkgroep bestaat uit afgevaardigden van de volgende organisaties:
+De Open Raadsinformatie Archiefstandaard (ORI-A) is een initiatief van de Werkgroep Archivering Raadsinformatie. De werkgroep functioneert ook als beheerder van de standaard en alle bijbehorende documentatie.
+
+De werkgroep bestaat uit afgevaardigden van de volgende organisaties:
 
 * [**Erfgoed Leiden en Omstreken**](https://www.erfgoedleiden.nl/){.contrast .plain}
 * [**Groninger Archieven**](https://www.groningerarchieven.nl/){.contrast .plain}
