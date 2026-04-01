@@ -11,19 +11,20 @@ position: 3
 ---
 ```
 
-`title` is de titel van de pagina (die zie je terug in de URL en in de navigatiebalk), `position` is de plek in de navigatienbalk/PDF waar de pagina in kwestie komt.
+`title` is de titel van de pagina (die zie je terug in de URL en in de navigatiebalk), `position` is de plek in de navigatiebalk waar de pagina in kwestie komt.
 
 
 # Website (lokaal) bouwen
 
-De website wordt automatisch opnieuw gebouwd na elke commit.
+De website wordt automatisch opnieuw gebouwd en gepubliceerd na elke commit.
 
-Het lokaal bouwen van de website komt neer op `make` runnen, mits je alle dependencies hebt.  Na `make` komt de "site" (i.e. de _build artifacts_) in de map `site/`.
+Het lokaal bouwen van de website komt neer op `make` runnen, mits je alle dependencies hebt.  Na `make` komt de "site" (i.e. de _build artifacts_) in de map `site/`. Omdat het bouwprocess nogal wat dependencies heeft, is het meestal aan te raden om de website te bouwen [met behulp van de speciaal hiervoor gemaakte docker container](buildtools/). 
 
-Die kun je vervolgens raadplegen door bijv. `python -m http.server .` in die map aan te roepen.
+
+De site kun je na het bouwen raadplegen door bijv. `python -m http.server .` in de map `site/` aan te roepen.
 
 > [!NOTE]
-> Dit project gebruikt de ORI-A XSD als git submodule. Hierom moet je na `git clone https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website`  ook nog `git submodule update --init --recursive` runnen.
+> Dit project gebruikt de ORI-A XSD als git submodule. Hierom moet je na `git clone https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website` ook nog `git submodule update --init --recursive` runnen.
 
 # Wat is wat
 
