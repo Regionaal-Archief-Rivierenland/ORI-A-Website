@@ -34,8 +34,8 @@ FONT_TITLE_BOLD := lato-bold.woff2
 FONT_TITLE_HEAVY := lato-black.woff2
 FONT_MONOSPACE := CommitMonoVariable.woff2
 
-FONT_INPUTS := fonts/$(FONT_TITLE) fonts/$(FONT_TITLE_BOLD) fonts/$(FONT_TITLE_HEAVY) fonts/$(FONT_MONOSPACE)
-FONT_OUTPUTS := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_TITLE_HEAVY) site/$(FONT_MONOSPACE)
+FONT_SRC := fonts/$(FONT_TITLE) fonts/$(FONT_TITLE_BOLD) fonts/$(FONT_TITLE_HEAVY) fonts/$(FONT_MONOSPACE)
+FONT_DST := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_TITLE_HEAVY) site/$(FONT_MONOSPACE)
 
 TABLE_SRC := pages/xml-schema.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd diagram/ORI-A-diagram.tex.j2
 TABLE_DST := pages/xml-schema.md site/ORI-A-diagram.pdf
@@ -111,9 +111,9 @@ pages/%.html: pages/%.md
 	@mkdir -p $(@D)
 	pandoc --wrap=none -f markdown-native_divs $< -o $@
 
-subset-fonts: $(FONT_OUTPUTS)
+subset-fonts: $(FONT_DST)
 
-$(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
+$(FONT_DST): $(MD_SRC) $(FONT_SRC)
     # Use titles and headers to subset lato
 	@titles=$$(rg '^title: (.*)' -r '$$1' --no-filename pages/*md) ; \
 	headers=$$(rg '^\#(.*?)(\{.*\})?$$' -r '$$1' --no-filename pages/*md) ; \
