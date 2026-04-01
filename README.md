@@ -1,6 +1,6 @@
 # Website bewerken
 
-Om de website te bewerken kun je simpelweg een `.md` bestand in de map `pages/` aanpassen/toevoegen.
+Om de website te bewerken kun je simpelweg een `.md` (markdown) bestand in de map `pages/` aanpassen/toevoegen.
 
 Let er op dat je bij het aanmaken van een nieuw `.md` bestand de juiste metadata toevoegt:
 
