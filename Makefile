@@ -26,11 +26,6 @@ MD_SRC := $(wildcard pages/*.md)
 HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
 
 SITEMAP_DST := site/sitemap.xml
-# we're not compiling this everytime, because the pipeline kind of sucks. Like this pulls inkscape
-# VALIDATIE_DIAGRAM_DST := site/validatie.svg
-# VALIDATIE_DIAGRAM_TEX := diagram/validatie.tex
-# # validatie.tex depends on specific svgs to compile
-# VALIDATIE_DIAGRAM_DEPS := $(VALIDATIE_DIAGRAM_TEX) diagram/empty-page.svg diagram/window-xml.svg diagram/xmark-solid.svg diagram/check-solid.svg 
 
 MINI_DIAGRAM_SRC := diagram/ORI-A-diagram-mini.tex
 MINI_DIAGRAM_DST := site/mini.svg
@@ -164,11 +159,6 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 # copy/minify js
 $(JS_DST): $(JS_SRC)
 	uglifyjs js/*.js -o $@ -c -m --toplevel --rename
-
-
-$(VALIDATIE_DIAGRAM_DST): $(VALIDATIE_DIAGRAM_DEPS)
-	pdflatex --shell-escape $(VALIDATIE_DIAGRAM_TEX)
-	mutool draw -o $@ diagram/validatie.pdf
 
 generate-tables: $(TABLE_DST)
 
