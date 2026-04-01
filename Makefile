@@ -19,8 +19,7 @@ JS_DST := site/concat.js
 ICO_SRC := ims/favicon.ico
 ICO_DST := site/favicon.ico
 
-PDF_SRC := $(wildcard pdfs/*.pdf)
-PDF_DST := $(patsubst pdfs/%.pdf, site/%.pdf, $(PDF_SRC))
+PDF_DST := /tmp/ORI-A-diagram-mini.pdf /tmp/ORI-A-diagram.pdf
 
 MD_SRC := $(wildcard pages/*.md)
 HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
@@ -105,10 +104,6 @@ site/%.jpg: ims/%.jpg
 	cp $< $@
 
 $(ICO_DST): $(ICO_SRC)
-	cp $< $@
-
-# TODO: optimize pdfs?
-site/%.pdf: pdfs/%.pdf
 	cp $< $@
 
 # Convert Markdown to HTML
