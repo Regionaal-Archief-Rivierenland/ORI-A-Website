@@ -27,8 +27,6 @@ SITEMAP_DST := site/sitemap.xml
 MINI_DIAGRAM_SRC := diagram/ORI-A-diagram-mini.tex
 MINI_DIAGRAM_DST := site/mini.svg
 
-MAIN_HTML = over-ori-a.html
-
 FONT_TITLE := lato.woff2
 FONT_TITLE_BOLD := lato-bold.woff2
 FONT_TITLE_HEAVY := lato-black.woff2
@@ -42,6 +40,8 @@ TABLE_DST := pages/xml-schema.md site/ORI-A-diagram.pdf
 
 VOORBEELDZIP := site/ORI-A\ voorbeeldbestanden.zip
 PRESERVICAZIP := site/Preservica_documentatieset.zip
+
+MAIN_HTML = over-ori-a.html
 
 .PHONY: all clean update-submodule
 
