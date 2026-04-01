@@ -19,8 +19,6 @@ JS_DST := site/concat.js
 ICO_SRC := ims/favicon.ico
 ICO_DST := site/favicon.ico
 
-PDF_DST := /tmp/ORI-A-diagram-mini.pdf /tmp/ORI-A-diagram.pdf
-
 MD_SRC := $(wildcard pages/*.md)
 HTML_DST := $(patsubst pages/%.md,pages/%.html,$(MD_SRC))
 
@@ -40,7 +38,7 @@ FONT_INPUTS := fonts/$(FONT_TITLE) fonts/$(FONT_TITLE_BOLD) fonts/$(FONT_TITLE_H
 FONT_OUTPUTS := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_TITLE_HEAVY) site/$(FONT_MONOSPACE)
 
 TABLE_SRC := pages/xml-schema.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd diagram/ORI-A-diagram.tex.j2
-TABLE_DST := pages/xml-schema.md diagram/ORI-A-diagram.tex
+TABLE_DST := pages/xml-schema.md site/ORI-A-diagram.pdf
 
 VOORBEELDZIP := site/ORI-A\ voorbeeldbestanden.zip
 PRESERVICAZIP := site/Preservica_documentatieset.zip
@@ -66,8 +64,9 @@ site/ORI-A.xsd: ORI-A-XSD/ORI-A.xsd
 
 # Create site/ directory
 $(CSS_DST) $(HTML_DST): | site
+
 site:
-	mkdir -p $(CSS_DST)
+	mkdir -p site/
 
 $(SITEMAP_DST): $(HTML_DST)
 	@{ \
@@ -155,12 +154,12 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 $(JS_DST): $(JS_SRC)
 	uglifyjs js/*.js -o $@ -c -m --toplevel --rename
 
-generate-tables: $(TABLE_DST)
+generate-tables: site $(TABLE_DST)
 
 $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
     # the env var is needed to find some shared .sty file
-	TEXINPUTS=diagram: pdflatex -output-dir /tmp diagram/ORI-A-diagram.tex
+	TEXINPUTS=diagram: pdflatex -output-dir site/ diagram/ORI-A-diagram.tex
 
 $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 	TEXINPUTS=diagram: pdflatex -output-dir /tmp diagram/ORI-A-diagram-mini.tex
@@ -180,7 +179,7 @@ $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 	scour --create-groups --set-precision=4 --enable-id-stripping --shorten-ids $@ | sponge $@
 	sd -F -n1 '<svg' "<svg id=\"$$(basename $@ '.svg')\"" $@ # add an id
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JPG_DST) $(ICO_DST) $(JS_DST) $(PDF_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(SITEMAP_DST) site/robots.txt site/google311d515abf442b48.html
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JPG_DST) $(ICO_DST) $(JS_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(SITEMAP_DST) site/robots.txt site/google311d515abf442b48.html
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
@@ -224,4 +223,5 @@ pdf: buildpages
 clean:
 	rm -rf site/
 	rm -f pages/xml-schema.md
+	rm -f /tmp/ORI-A-diagram*
 	fd . -ehtml pages/ --exclude index.html -X rm
