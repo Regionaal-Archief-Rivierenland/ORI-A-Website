@@ -41,7 +41,7 @@ De site kun je na het bouwen raadplegen door bijv. `python -m http.server .` in 
 * `js/`
   * Kleine stukjes javascript die op de site gebruikt worden
 * `templates/`
-  * Het HTML "skelet" (i.e. templates) waar de inhoud van de markdown bestanden in worden gezet
+  * Het HTML "skelet" (i.e. templates) waar de inhoud van de markdown bestanden in wordt gezet
 * `buildpages.py`
   * Gebruikt Jinja om de eerder naar HTML geconverteerde bestanden in de templates te stoppen
   * Doet ook wat HTML nabewerkingen
