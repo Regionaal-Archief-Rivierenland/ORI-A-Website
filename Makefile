@@ -151,7 +151,7 @@ $(FONT_OUTPUTS): $(MD_SRC) $(FONT_INPUTS)
 		--text="$$code_snippets""YURI" \
 		--output-file=site/$(FONT_MONOSPACE)
 
-# copy/minify js
+# minify js
 $(JS_DST): $(JS_SRC)
 	uglifyjs js/*.js -o $@ -c -m --toplevel --rename
 
@@ -159,8 +159,8 @@ generate-tables: $(TABLE_DST)
 
 $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
-    # needs an env var to find the shared .sty file
-	TEXINPUTS=diagram: pdflatex -output-dir pdfs diagram/ORI-A-diagram.tex
+    # the env var is needed to find some shared .sty file
+	TEXINPUTS=diagram: pdflatex -output-dir /tmp diagram/ORI-A-diagram.tex
 
 $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 	TEXINPUTS=diagram: pdflatex -output-dir /tmp diagram/ORI-A-diagram-mini.tex
@@ -192,9 +192,9 @@ buildpages: prepare-site
 
 minify: buildpages
 	minify-html --minify-css --allow-optimal-entities --minify-js $$(fd -ehtml . site/)
-    # minify html doesn't pick up on this
+    # minify-html doesn't pick up on this
 	sd -F 'div> <p' 'div><p' site/*html
-    # purge unused css (with custom script, since the purgecss cli acted weird)
+    # purge unused css (with custom JS script, since the purgecss cli acted weird)
 	./purge.cjs
     # purge.cjs writes pico.min.css to site root, so we can cleanup this foldera
 	rm -rf site/pico
@@ -202,6 +202,7 @@ minify: buildpages
 
 PANDOCFLAGS = -V geometry:margin=3.5cm -V papersize:a4 -H /tmp/linenumbers.tex
 
+# generally unused step to convert the website to a PF
 pdf: buildpages
     # generate markdown variant of xml-schema
 	python buildtables.py markdown
@@ -221,6 +222,6 @@ pdf: buildpages
 
 # Clean up
 clean:
-	rm -rf site
+	rm -rf site/
 	rm -f pages/xml-schema.md
 	fd . -ehtml pages/ --exclude index.html -X rm
