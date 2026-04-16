@@ -50,7 +50,7 @@ De site kun je na het bouwen raadplegen door bijv. `python -m http.server .` in 
 * `ims/`
   * Afbeelingen
 * `buildtools/`
-  * Dockerfile waarmee een container wordt gebouwd die alle dependencies voor het bouwen van de website bundeld. Deze container wordt in de CI bouw-stap gebruikt omdat het sneller is dan alle dependencies los via `apt-get`, `pip`, etc. downloaden, maar is ook vooral heel handig als je de website zelf lokaal wilt bouwen, en geen zin hebt om zelf alle dependencies bij elkaar te sprokkelen!
+  * Dockerfile waarmee een container wordt gebouwd die alle dependencies voor het bouwen van de website bundeld. Deze container wordt in de CI bouw-stap gebruikt omdat het sneller is dan alle dependencies los via `apt-get`, `pip`, etc. downloaden, maar is ook handig als je de website zelf lokaal wilt bouwen, en geen zin hebt om zelf alle dependencies bij elkaar te sprokkelen!
 * `fonts/`
   * `.woff2` bestanden. Zijn nog niet gesubset! Dat doet de Makefile.
 * `Makefile`
