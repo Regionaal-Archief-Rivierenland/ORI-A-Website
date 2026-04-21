@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.17)  21 APR 2026 10:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.17)  21 APR 2026 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,7 +1019,7 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count354
 )
-No file ORI-A-diagram.aux.
+(site//ORI-A-diagram.aux)
 \openout1 = `ORI-A-diagram.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -1039,7 +1039,7 @@ LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 8.
 LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 8
 .
-(/usr/share/texmf-dist/tex/latex/ly1/ly1ptm.fd
+ (/usr/share/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
 LaTeX Font Info:    ... okay on input line 8.
@@ -1247,10 +1247,10 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 30926 strings out of 468904
- 643626 string characters out of 5454206
+ 30929 strings out of 468904
+ 643702 string characters out of 5454206
  1465837 words of memory out of 5000000
- 59056 multiletter control sequences out of 15000+600000
+ 59057 multiletter control sequences out of 15000+600000
  735621 words of font info for 108 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
  131i,27n,135p,1018b,1441s stack positions out of 10000i,1000n,20000p,200000b,200000s
