@@ -216,12 +216,16 @@ for gegevensgroep_name, elem in zip(gegevensgroepen_names, gegevensgroepen_elems
 
     # remove -Gegevens suffix, sometimes
     slice_index = None
-    if not gegevensgroep_name in ["verwijzingGegevens", "begripGegevens", "informatieobjectGegevens"]:
+    if not gegevensgroep_name in ["verwijzingGegevens", "begripGegevens", "informatieobjectGegevens", "ORI-A"]:
         slice_index = -1
 
-    gegevensgroep_pretty = " ".join(w.lower() for w in gegevensgroep_seperate_words[0:slice_index]).capitalize()
-    snake_case_name = "_".join(gegevensgroep_seperate_words[:-1] + ["table"]).lower()
-    snake_case_name = snake_case_name.replace("ori-a", "ori_a")
+    if gegevensgroep_name == "ORI-A":
+        gegevensgroep_pretty = "ORI-A"
+        snake_case_name = "ori_a_table"
+    else:
+        gegevensgroep_pretty = " ".join(w.lower() for w in gegevensgroep_seperate_words[0:slice_index]).capitalize()
+        snake_case_name = "_".join(gegevensgroep_seperate_words[:-1] + ["table"]).lower()
+
     html_table = table_template.render(rows=rows, table_title=gegevensgroep_pretty)
     all_tables_html[snake_case_name] = html_table
     all_tables[snake_case_name] = rows
