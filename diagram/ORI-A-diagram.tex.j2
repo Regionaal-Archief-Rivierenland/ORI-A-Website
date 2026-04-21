@@ -250,7 +250,7 @@
   ($(tijdsaanduiding.south) + (-1.6cm,0)$) |-
   node [kardinaliteit, pos=0, above, xshift=\kxshiftbeg, yshift=-0.5cm]  {\oldstylenums{0..*}}
   ++(2cm,-1.8cm) -| ($(mdto.south) - (2cm, 0)$)
-  node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{1}};
+  node [kardinaliteit, pos=1, right, yshift=-\kyshiftend] {\oldstylenums{0..1}};
   %% dashed arrow
   \draw[dashedpijl] ($(informatieobject.south) + (-3cm, 0.0cm)$) --
     node [above, pos=1.2] {is relatief tot}
