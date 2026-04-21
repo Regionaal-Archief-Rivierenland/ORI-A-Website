@@ -35,7 +35,7 @@ FONT_SRC := fonts/$(FONT_TITLE) fonts/$(FONT_TITLE_BOLD) fonts/$(FONT_TITLE_HEAV
 FONT_DST := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_TITLE_HEAVY) site/$(FONT_MONOSPACE)
 
 TABLE_SRC := pages/xml-schema.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd diagram/ORI-A-diagram.tex.j2
-TABLE_DST := pages/xml-schema.md site/ORI-A-diagram.pdf
+TABLE_DST := pages/xml-schema.md site/ORI-A-diagram.pdf diagram/ORI-A-diagram-mini.tex
 
 VOORBEELDZIP := site/ORI-A\ voorbeeldbestanden.zip
 PRESERVICAZIP := site/Preservica_documentatieset.zip
