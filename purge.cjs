@@ -9,7 +9,7 @@ async function main() {
         // content: ["**/*.html", '*.html', './*.html'],
         content: ['site/*.html'],
         // css: ["**/*.css"],
-        css: ["site/pico/pico.min.css", "site/main.css", "site/mobile.css"],
+        css: ["site/pico.min.css", "site/main.css", "site/mobile.css"],
         safelist: {
             standard: [
                 "[data-theme=dark]",    // keep dark theme block

@@ -1,8 +1,5 @@
-CSS_SRC := css/
-CSS_DST := site/
-
-CSS_FILES := main.css pico/pico.min.css mobile.css
-CSS_DST_FILES := $(addprefix $(CSS_DST),$(CSS_FILES))
+CSS_SRC := $(wildcard css/*.css)
+CSS_DST := $(patsubst css/%,site/%,$(CSS_SRC))
 
 SVG_SRC := $(wildcard ims/*.svg)
 SVG_DST := $(patsubst ims/%,site/%,$(SVG_SRC))
@@ -84,8 +81,7 @@ site/robots.txt: robots.txt
 	cp $< $@
 
 # Minize CSS
-$(CSS_DST)%: $(CSS_SRC)%
-	@mkdir -p $(@D)
+site/%.css: css/%.css
 	lightningcss --minify $< -o $@
 
 # Minimize SVG
@@ -175,7 +171,7 @@ $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 	scour --create-groups --set-precision=4 --enable-id-stripping --shorten-ids $@ | sponge $@
 	sd -F -n1 '<svg' "<svg id=\"$$(basename $@ '.svg')\"" $@ # add an id
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST_FILES) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JPG_DST) $(ICO_DST) $(JS_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(SITEMAP_DST) site/robots.txt
+prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JPG_DST) $(ICO_DST) $(JS_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(SITEMAP_DST) site/robots.txt
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
@@ -191,9 +187,6 @@ minify: buildpages
 	sd -F 'div> <p' 'div><p' site/*html
     # purge unused css (with custom JS script, since the purgecss cli acted weird)
 	./purge.cjs
-    # purge.cjs writes pico.min.css to site root, so we can cleanup this foldera
-	rm -rf site/pico
-
 
 PANDOCFLAGS = -V geometry:margin=3.5cm -V papersize:a4 -H /tmp/linenumbers.tex
 
