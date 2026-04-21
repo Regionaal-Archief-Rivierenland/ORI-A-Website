@@ -101,7 +101,6 @@ $(ICO_DST): $(ICO_SRC)
 # Convert Markdown to HTML
 # NOTE: currently breaks if you use filenames with spaces
 pages/%.html: pages/%.md
-	@mkdir -p $(@D)
 	pandoc --wrap=none -f markdown-native_divs $< -o $@
 
 subset-fonts: $(FONT_DST)
