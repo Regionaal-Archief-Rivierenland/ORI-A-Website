@@ -10,6 +10,7 @@ PNG_DST := $(patsubst ims/%,site/%,$(PNG_SRC))
 JPG_SRC := $(wildcard ims/*.jpg)
 JPG_DST := $(patsubst ims/%,site/%,$(JPG_SRC))
 
+# all cross-site js will be concated
 JS_SRC := $(wildcard js/*.js)
 JS_DST := site/concat.js
 
@@ -190,7 +191,7 @@ minify: buildpages
 
 PANDOCFLAGS = -V geometry:margin=3.5cm -V papersize:a4 -H /tmp/linenumbers.tex
 
-# generally unused step to convert the website to a PF
+# generally unused step to convert the website to a PDF
 pdf: buildpages
     # generate markdown variant of xml-schema
 	python buildtables.py markdown
