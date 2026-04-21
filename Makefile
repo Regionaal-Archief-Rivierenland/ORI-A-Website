@@ -48,6 +48,13 @@ all: generate-tables buildpages minify subset-fonts
 update-submodule:
 	git submodule update --recursive --remote
 
+
+# Create site/ directory
+$(CSS_DST) $(HTML_DST): | site
+
+site:
+	mkdir -p site/
+
 $(VOORBEELDZIP): $(shell fd . -tfile 'ORI-A-XSD/Voorbeelden')
 	ln -sf ORI-A-XSD/Voorbeelden "ORI-A voorbeeldbestanden" && \
 	zip -9 -r "$@" "ORI-A voorbeeldbestanden" && \
@@ -58,12 +65,6 @@ $(PRESERVICAZIP): misc/Preservica_documentatieset.zip
 
 site/ORI-A.xsd: ORI-A-XSD/ORI-A.xsd
 	cp ORI-A-XSD/ORI-A.xsd site/
-
-# Create site/ directory
-$(CSS_DST) $(HTML_DST): | site
-
-site:
-	mkdir -p site/
 
 $(SITEMAP_DST): $(HTML_DST)
 	@{ \
