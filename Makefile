@@ -1,3 +1,6 @@
+# create target dir unconditionally, as its a dep of (almost) all targets
+$(shell mkdir -p site/)
+
 CSS_SRC := $(wildcard css/*.css)
 CSS_DST := $(patsubst css/%,site/%,$(CSS_SRC))
 
@@ -49,13 +52,6 @@ all: generate-tables buildpages minify subset-fonts
 
 update-submodule:
 	git submodule update --recursive --remote
-
-
-# Create site/ directory
-$(CSS_DST) $(HTML_DST): | site
-
-site:
-	mkdir -p site/
 
 $(VOORBEELDZIP): $(shell fd . -tfile 'ORI-A-XSD/Voorbeelden')
 	ln -sf ORI-A-XSD/Voorbeelden "ORI-A voorbeeldbestanden" && \
@@ -148,7 +144,7 @@ $(FONT_DST): $(MD_SRC) $(FONT_SRC)
 $(JS_DST): $(JS_SRC)
 	uglifyjs js/*.js -o $@ -c -m --toplevel --rename
 
-generate-tables: site $(TABLE_DST)
+generate-tables: $(TABLE_DST)
 
 $(TABLE_DST): $(TABLE_SRC)
 	python3 buildtables.py
