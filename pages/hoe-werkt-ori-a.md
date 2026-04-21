@@ -4,7 +4,7 @@ title-icon: boek.svg
 position: 2
 ---
 
-Op deze pagina laten we zien hoe je verschillende onderdelen van een vergadering in ORI-A XML kan uitdrukken. Voor een compleet voorbeeld [kun je de ORI-A voorbeeldbestanden bekijken](https://ori-a.nl/downloads#voorbeeldbestanden).
+Op deze pagina laten we zien hoe je verschillende onderdelen van een vergadering in ORI-A XML kan uitdrukken. Voor een compleet voorbeeld kun je [de ORI-A voorbeeldbestanden bekijken](https://ori-a.nl/downloads#voorbeeldbestanden).
 
 # Een vergadering beschrijven
 
