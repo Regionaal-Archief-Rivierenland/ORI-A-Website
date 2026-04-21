@@ -11,10 +11,7 @@ ns = {"xs": "http://www.w3.org/2001/XMLSchema", "ori-a": "https://ori-a.nl"}
 root = ET.parse("ORI-A-XSD/ORI-A.xsd").getroot()
 
 gegevensgroepen_elems = [e for e in root.findall(".//xs:complexType", namespaces=ns)]
-# the first complextype, ORI-A, does not have a name attribute
-gegevensgroepen_names = ["ORI-AGegevens"] + [
-    e.attrib["name"] for e in gegevensgroepen_elems[1:]
-]
+gegevensgroepen_names = [e.attrib["name"] for e in gegevensgroepen_elems]
 
 def camel_to_seperate_words(string) -> list[str]:
     """Convert camel cased string to a list of words"""
@@ -108,7 +105,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         if datatype in gegevensgroepen_names:
             # strip -Gegevens suffix, except in some cases
             slice_index = None
-            if not datatype in ["verwijzingGegevens", "begripGegevens", "informatieobjectGegevens"]:
+            if not datatype in ["verwijzingGegevens", "begripGegevens", "informatieobjectGegevens", "ORI-A"]:
                 slice_index = -1
 
             # this is pandoc's anchor link fmt
