@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.17)  21 APR 2026 12:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.17)  21 APR 2026 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1247,10 +1247,10 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 30926 strings out of 468904
- 643626 string characters out of 5454206
- 1465837 words of memory out of 5000000
- 59056 multiletter control sequences out of 15000+600000
+ 30929 strings out of 468904
+ 643702 string characters out of 5454206
+ 1465846 words of memory out of 5000000
+ 59057 multiletter control sequences out of 15000+600000
  735621 words of font info for 108 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
  131i,27n,135p,1018b,1441s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1259,7 +1259,7 @@ usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb></u
 sr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb><
 /usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Semibold.pf
 b>
-Output written on site//ORI-A-diagram.pdf (1 page, 239880 bytes).
+Output written on site//ORI-A-diagram.pdf (1 page, 239885 bytes).
 PDF statistics:
  77 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
