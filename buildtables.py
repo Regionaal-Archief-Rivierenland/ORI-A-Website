@@ -222,16 +222,18 @@ for gegevensgroep_name, elem in zip(gegevensgroepen_names, gegevensgroepen_elems
     if gegevensgroep_name == "ORI-A":
         gegevensgroep_pretty = "ORI-A"
         snake_case_name = "ori_a_table"
+        snake_case_name_desc = "ori_a_beschrijving"
     else:
         gegevensgroep_pretty = " ".join(w.lower() for w in gegevensgroep_seperate_words[0:slice_index]).capitalize()
         snake_case_name = "_".join(gegevensgroep_seperate_words[:-1] + ["table"]).lower()
+        # create description to be placed under headers
+        snake_case_name_desc = "_".join(gegevensgroep_seperate_words[:-1] + ["beschrijving"]).lower()
+
 
     html_table = table_template.render(rows=rows, table_title=gegevensgroep_pretty)
     all_tables_html[snake_case_name] = html_table
     all_tables[snake_case_name] = rows
 
-    # create description to be placed under headers
-    snake_case_name_desc = "_".join(gegevensgroep_seperate_words[:-1] + ["beschrijving"]).lower()
     all_tables_html[snake_case_name_desc] = find_description_for_complextype(elem)
 
 md_with_html_tables = documentatie_template.render(**all_tables_html)
