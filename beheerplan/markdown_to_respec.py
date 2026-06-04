@@ -4,7 +4,6 @@
 
 import os
 import re
-import git
 import sys
 import json
 import logging
@@ -173,32 +172,6 @@ def load_external_config(markdown_file):
     else:
         raise Exception(f"Unable to find external ReSpec config at {json_file}")
 
-def git_push(branch_name, html_files):
-    """Publish by pushing a git branch.
-    """
-    repo = git.Repo(".")
-
-    # if we are publishing to a different branch we need to switch to it
-    if branch_name != repo.active_branch.name:
-        branch_names = [branch.name for branch in repo.branches]
-        if branch_name not in branch_names:
-            branch = repo.create_head(branch_name)
-        else:
-            branch = repo.branches[branch_names.index(branch_name)]
-        branch.checkout()
-
-    # set user to commit as (needs to be defined)
-    config = repo.config_writer()
-    config.add_section('user')
-    config.set('user', 'email', 'markdown-to-respec@example.com')
-    config.set('user', 'name', 'markdown-to-respec')
-
-    # commit the new HTML files
-    repo.index.add(html_files)
-    repo.index.commit('Latest ReSpec HTML')
-
-    # push to the origin (assumed to be the first remote)
-    repo.git.push('origin', branch_name, force=True)
 
 if __name__ == "__main__":
     main()
