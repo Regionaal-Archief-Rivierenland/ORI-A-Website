@@ -70,8 +70,8 @@ def head(respec_config):
 
 <!-- these need to be flush left or else all the markdown gets mucked up -->
 <section id="sotd" class="override introductory">
-    <h2>Status van dit document</h2>
-    {respec_config["sotd"]}
+<h2>Status van dit document</h2>
+{respec_config["sotd"]}
 </section>
 <section id="abstract">{respec_config["abstract"]}</section>
 
