@@ -56,6 +56,8 @@ De site kun je na het bouwen raadplegen door bijv. `python -m http.server .` in 
 * `Makefile`
   * GNU makefile die alle scripts uitvoert die nodig zijn om de website te bouwen en _resources_ te minimaliseren
   * Heeft ~~te veel~~ heel veel afhankelijkheden
+* `Beheerplan/`
+  * Het beheerplan bronbestand in Markdown-formaat, en een script dat 'm omzet naar een ReSpec document.
 
 # Attributies
 
