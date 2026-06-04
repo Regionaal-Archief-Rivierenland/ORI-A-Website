@@ -4,12 +4,11 @@ lang: nl
 latestVersion: "https://ori-a.nl/beheerplan"
 edDraftURI: "https://ori-a.nl/beheerplan"
 editors:
-    - name: "<a href=https://ori-a.nl/colofon>Werkgroep Archivering Raadsinformatie</a>"
-authors:
-    - name: "<a href=https://ori-a.nl/colofon>Werkgroep Archivering Raadsinformatie</a>"
+    - name: Werkgroep Archivering Raadsinformatie
+      url: "https://ori-a.nl/colofon#werkgroep-archivering-raadsinformatie"
 specStatus: base
 logos: 
-    - src: "https://ori-a.nl/logo-small.svg"
+    - src: logo-small.svg
       alt: ORI-A logo
       width: 180
       id: logo-small
@@ -18,11 +17,9 @@ github: "https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website"
 
 <!-- 
 TODO:
-- [ ] Denk dat het goed is om in het plan te vermelden dat alle docs in Markdown staan en blijven (en waar)
+- [ ] Denk dat het goed is om in het plan te vermelden dat alle docs in Markdown staan en blijven (en waar ze staan, in zoverre dat nog niet gedaan is)
 - [x] pandoc created `--` instead of an actual en-dash. 
   - also, a lot of these en-dashes were inserted at weird places
-- [ ] italics became bold 
-  - then again, I don't mind this look
 - [ ] footnotes are messed up. I don't think their content warrants fixing this, though
 -->
 
