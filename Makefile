@@ -186,7 +186,7 @@ buildpages: prepare-site
 	sd  -F 'Wanneer gebruik je ORI-A' 'Wanneer gebruik je ORI‑A' site/faq.html
 
 minify: buildpages
-	minify-html --minify-css --allow-optimal-entities --minify-js $$(fd -ehtml . site/)
+	minify-html --minify-css --allow-optimal-entities --minify-js $$(fd -ehtml . site/ | grep -v beheerplan)
     # minify-html doesn't pick up on this
 	sd -F 'div> <p' 'div><p' site/*html
     # purge unused css (with custom JS script, since the purgecss cli acted weird)
