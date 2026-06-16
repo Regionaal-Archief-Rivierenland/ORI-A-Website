@@ -11,7 +11,7 @@ WORKDIR /ori-a-website
 RUN paru -Syu --skipreview --asexplicit --removemake --cleanafter --noconfirm \
     scour ripgrep fd make git optipng sd zip mupdf-tools moreutils \
     minify-html-bin uglify-js lightningcss-cli-bin pandoc-bin npm \
-    python-fonttools python-jinja python-beautifulsoup4 python-frontmatter python-setuptools python-brotli \
+    python-fonttools python-rdflib python-jinja python-beautifulsoup4 python-frontmatter python-setuptools python-brotli \
     texlive-basic texlive-latexextra texlive-plaingeneric texlive-latexrecommended texlive-fontsextra texlive-langeuropean 
 
 # cleanup unused pkgs and cache
