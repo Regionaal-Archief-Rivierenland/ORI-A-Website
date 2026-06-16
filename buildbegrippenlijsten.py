@@ -20,7 +20,7 @@ env = Environment(
 )
 
 begrippenlijsten_page_template = env.get_template("begrippenlijsten.md.j2")
-table_template = env.get_template("begrippenlijst_table.md")
+table_template = env.get_template("begrippenlijst_table.html")
 all_tables = {}
 
 for ttl in Path("ori-a-begrippenlijsten").glob("*.ttl"):

@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>Label</th>
+      <th>Definitie</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for begrip in begrippenlijst  %}
+    <tr>
+      <td{% if '|' in begrip.label %} style="white-space: nowrap"{% endif %}>
+        {{ "<del>" + begrip.label + "</del>" if begrip.deprecated else begrip.label}}</td>
+      <td>{{ begrip.definition }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
