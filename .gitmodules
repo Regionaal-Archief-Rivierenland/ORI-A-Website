@@ -2,3 +2,6 @@
 	path = ORI-A-XSD
 	url = https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD
     shallow = true
+[submodule "ori-a-begrippenlijsten"]
+	path = ori-a-begrippenlijsten
+	url = git@github.com:Regionaal-Archief-Rivierenland/ori-a-begrippenlijsten.git
