@@ -1,3 +1,4 @@
+
 ---
 title: Begrippenlijsten
 title-icon: lijst.svg
@@ -46,25 +47,43 @@ ORI-A onderscheidt verschillende soorten moties. Als het soort motie bekend is, 
 
 Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>` is in dat geval gewoon gelijk aan `Motie`. Dezelfde hiërarchische classificatie wordt gebruikt voor `Vraag`.
 
-
-| Label                                  | Definitie                                                                  |
-|:---------------------------------------|:---------------------------------------------------------------------------|
-| Voorstel                               | Plan waarover een besluit genomen kan worden.                              |
-| Motie                                  | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
-| Motie \| Voorstel                      | Motie met een voorstel tot handelen.                                       |
-| Motie \| Wantrouwen                    | Motie van wantrouwen.                                                      |
-| Motie \| Treurnis                      | Motie van treurnis.                                                        |
-| Motie \| Afkeuring                     | Motie van afkeuring.                                                       |
-| Motie \| Vreemd                        | Motie over een onderwerp dat niet op de agenda staat.                      |
-| Amendement                             | Voorstel om een bestaand voorstel te wijzigen.                             |
-| Toezegging                             | Toezegging van een gedeputeerde of raadslid.                               |
-| Vraag                                  | Vraag aan een overheidsorgaan.                                             |
-| Vraag \| Technische vraag              | Vraag naar feitelijke informatie.                                          |
-| Vraag \| Schriftelijke politieke vraag | Schriftelijk ingediende vraag over een politiek standpunt.                 |
-| Vraag \| Mondelinge politieke vraag    | Mondelinge vraag over een politiek standpunt.                              |
-| Antwoord                               | Antwoord op een vraag.                                                     |
-| Ingekomen stuk                         | Een stuk gericht aan de raad.                                              |
-| Mededeling                             | Een mededeling.                                                            |
++---------------+---------------+
+| Label         | Definitie     |
++===============+===============+
+| Vergaderstuk | Document dat een rol speelt op of ten behoeve van een vergadering. |
++---------------+---------------+
+| Voorstel | Plan waarover een besluit genomen kan worden. |
++---------------+---------------+
+| Motie | Gemotiveerde verklaring waardoor een mening of verzoek wordt uitgesproken. |
++---------------+---------------+
+| Motie \| Voorstel | Motie met een voorstel tot handelen. |
++---------------+---------------+
+| Motie \| Wantrouwen | Motie van wantrouwen. |
++---------------+---------------+
+| Motie \| Treurnis | Motie van treurnis. |
++---------------+---------------+
+| Motie \| Afkeuring | Motie van afkeuring. |
++---------------+---------------+
+| Motie \| Vreemd | Motie over een onderwerp dat niet op de agenda staat. |
++---------------+---------------+
+| Amendement | Voorstel om een bestaand voorstel te wijzigen. |
++---------------+---------------+
+| Toezegging | Toezegging van een gedeputeerde of raadslid. |
++---------------+---------------+
+| Vraag | Vraag aan een overheidsorgaan. |
++---------------+---------------+
+| Vraag \| Technische vraag | Vraag naar feitelijke informatie. |
++---------------+---------------+
+| Vraag \| Schriftelijke politieke vraag | Schriftelijk ingediende vraag over een politiek standpunt. |
++---------------+---------------+
+| Vraag \| Mondelinge politieke vraag | Mondelinge vraag over een politiek standpunt. |
++---------------+---------------+
+| Antwoord | Antwoord op een vraag. |
++---------------+---------------+
+| Ingekomen stuk | Een stuk gericht aan de raad. |
++---------------+---------------+
+| Mededeling | Een mededeling. |
++---------------+---------------+
 
 
 ::: tip
@@ -73,21 +92,34 @@ Als het soort motie onbekend is laat je dit achtervoegsel weg --- `<begripLabel>
 
 # Deelnemerrollen
 
-Binnen ORI-A zijn enkele rollen waarin een `<aanwezigeDeelnemer>` in een vergadering aanwezig kan zijn gedefinieerd:
+Binnen ORI-A zijn enkele rollen waarin een [`aanwezigeDeelnemer`](https://ori-a.nl/xml-schema#aanwezige-deelnemer) in een vergadering aanwezig kan zijn gedefinieerd:
 
-| Label                 | Definitie                                                                  |
-|:----------------------|:---------------------------------------------------------------------------|
-| Voorzitter            | De voorzitter van de vergadering.                                          |
-| Vice-voorzitter       | De vice-voorzitter van de vergadering.                                     |
-| Portefeuillehouder    | Ambtenaar die de verantwoordelijkheid draagt over een besproken onderwerp. |
-| Griffier              | Hoofd van de griffie.                                                      |
-| Raadslid              | Gekozen volksvertegenwoordiger binnen een gemeente.                        |
-| Statenlid             | Gekozen volksvertegenwoordiger binnen een provincie.                       |
-| Kamerlid              | Gekozen volksvertegenwoordiger binnen de Eerste of Tweede Kamer.           |
-| Dagelijks bestuurslid | Lid van een dagelijks bestuur.                                             |
-| Algemeen bestuurslid  | Lid van een algemeen bestuur.                                              |
-| Inspreker             | Niet-lid dat inspreekt tijdens de vergadering.                             |
-| <del>Overig</del>     | -                                                                          |
++---------------+---------------+
+| Label         | Definitie     |
++===============+===============+
+| Voorzitter | De voorzitter van de vergadering. |
++---------------+---------------+
+| Vice-voorzitter | De vice-voorzitter van de vergadering. |
++---------------+---------------+
+| Portefeuillehouder | Ambtenaar die de verantwoordelijkheid draagt over een besproken onderwerp. |
++---------------+---------------+
+| Griffier | Hoofd van de griffie. |
++---------------+---------------+
+| Raadslid | Gekozen volksvertegenwoordiger binnen een gemeente. |
++---------------+---------------+
+| Statenlid | Gekozen volksvertegenwoordiger binnen een provincie. |
++---------------+---------------+
+| Kamerlid | Gekozen volksvertegenwoordiger binnen de Eerste of Tweede Kamer. |
++---------------+---------------+
+| Dagelijks bestuurslid | Lid van een dagelijks bestuur. |
++---------------+---------------+
+| Algemeen bestuurslid | Lid van een algemeen bestuur. |
++---------------+---------------+
+| Inspreker | Niet-lid dat inspreekt tijdens de vergadering. |
++---------------+---------------+
+| <del>Overig</del> | - |
++---------------+---------------+
+
 
 ::: waarschuwing
 De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informatiemodel te garanderen. Het gebruik van deze rol wordt afgeraden. Als de bestaande rollen niet toereikend zijn, heb je twee opties:
@@ -100,11 +132,16 @@ De rol "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informati
 
 Deze lijst beschrijft de meest gangbare mediaformaten waarin vergaderingen worden vastgesteld. Deze waardes kun je gebruiken onder [`informatieobjectType`](xml-schema#informatieobject-gegevens-informatieobject-type), als het informatieobject waarnaar je verwijst een mediabron is.
 
-| Label        | Definitie                                                                 |
-|:-------------|:--------------------------------------------------------------------------|
-| Video        | Een audiovisuele opname van een vergadering. Ook wel 'videotuul'.         |
-| Audio        | Een geluidsopname van een vergadering. Ook wel 'audiotuul'.               |
++---------------+---------------+
+| Label         | Definitie     |
++===============+===============+
+| Video | Een audiovisuele opname van een vergadering. |
++---------------+---------------+
+| Audio | Een geluidsopname van een vergadering. |
++---------------+---------------+
 | Transcriptie | Een schriftelijke uitwerking van de gesproken inhoud van een vergadering. |
++---------------+---------------+
+
 
 ::: waarschuwing
 Tradionele notulen kun je vastleggen via [`isGenotuleerdIn`](xml-schema#vergadering-is-genotuleerd-in) onder `<vergadering>`.
@@ -117,63 +154,104 @@ In het ORI-informatiemodel bestaan een aantal relaties tussen personen en vergad
 De onderstaande begrippenlijst **kan binnen MDTO** worden gebruikt om het soort relatie tussen een `<betrokkene>` en een informatieobject vast te leggen (zie ook "[Naar personen verwijzen vanuit MDTO](hoe-werkt-ori-a#naar-personen-verwijzen-vanuit-mdto)" en [`mdto:betrokkeneTypeRelatie`](https://www.nationaalarchief.nl/archiveren/mdto/betrokkeneTypeRelatie)).
 
 
-| Label              | Definitie                               |
-|:-------------------|:----------------------------------------|
-| Indiener           | Indiener van een vergaderstuk.          |
-| Ondertekenaar      | Ondertekenaar van een vergaderstuk.     |
++---------------+---------------+
+| Label         | Definitie     |
++===============+===============+
+| Indiener | Indiener van een vergaderstuk. |
++---------------+---------------+
+| Ondertekenaar | Ondertekenaar van een vergaderstuk. |
++---------------+---------------+
 | Portefeuillehouder | De portefeuillehouder van een voorstel. |
++---------------+---------------+
+
 
 # Vergaderingstypes
 
 Met de begrippen uit deze lijst kan het type van een [`vergadering`](xml-schema#vergadering) worden vastgelegd:
 
 
-| Label                         | Definitie                              |
-|:------------------------------|:---------------------------------------|
-| Raadsvergadering              | Vergadering van een gemeenteraad.      |
-| Commissievergadering          | Vergadering van een commissie.         |
-| Collegevergadering            | Vergadering van een college.           |
-| Statenvergadering             | Vergadering van Provinciale Staten.    |
-| Algemene bestuursvergadering  | Vergadering van een algemeen bestuur.  |
++---------------+---------------+
+| Label         | Definitie     |
++===============+===============+
+| Raadsvergadering | Vergadering van een gemeenteraad. |
++---------------+---------------+
+| Commissievergadering | Vergadering van een commissie. |
++---------------+---------------+
+| Collegevergadering | Vergadering van een college. |
++---------------+---------------+
+| Statenvergadering | Vergadering van Provinciale Staten. |
++---------------+---------------+
+| Algemene bestuursvergadering | Vergadering van een algemeen bestuur. |
++---------------+---------------+
 | Dagelijks bestuursvergadering | Vergadering van een dagelijks bestuur. |
-| Presidium                     | Vergadering van een presidium.         |
++---------------+---------------+
+| Presidium | Vergadering van een presidium. |
++---------------+---------------+
+
 
 # Dagelijks bestuur types
 
 Met de begrippen uit deze lijst kan het type van een [`dagelijksBestuur`](xml-schema#dagelijks-bestuur) worden vastgelegd:
 
-| Label                                  | Definitie                                                                  |
-|:---------------------------------------|:---------------------------------------------------------------------------|
-| College van burgemeester en wethouders | Dagelijks bestuur van een gemeente.                                        |
-| College van Gedeputeerde Staten        | Dagelijks bestuur van een provincie.                                       |
-| College van dijkgraaf en heemraden     | Dagelijks bestuur van een waterschap. Ook van toepassing op hoogheemraden. |
-| Dagelijks bestuur                      | Dagelijks bestuur van een overheidsorgaan.                                 |
++---------------+---------------+
+| Label         | Definitie     |
++===============+===============+
+| College van burgemeester en wethouders | Dagelijks bestuur van een gemeente. |
++---------------+---------------+
+| College van Gedeputeerde Staten | Dagelijks bestuur van een provincie. |
++---------------+---------------+
+| College van dijkgraaf en heemraden | Dagelijks bestuur van een waterschap. Ook van toepassing op hoogheemraden. |
++---------------+---------------+
+| Dagelijks bestuur | Dagelijks bestuur van een overheidsorgaan. |
++---------------+---------------+
+
 
 # Functies
 
 Met de begrippen uit deze lijst kan de functie of ambt van een [`natuurlijkPersoon`](xml-schema#natuurlijk-persoon) worden vastgelegd:
 
-| Label                     | Definitie                                                                                       |
-|:--------------------------|:------------------------------------------------------------------------------------------------|
-| Commissaris van de Koning | Voorzitter van het algemeen en dagelijks bestuur van een provincie.                             |
-| Burgemeester              | Voorzitter van het algemeen en dagelijks bestuur van een gemeente.                              |
-| Dijkgraaf                 | Voorzitter van het algemeen en dagelijks bestuur van een waterschap. Ook bekend als watergraaf. |
-| Statenlid                 | Lid van het algemeen bestuur van een provincie.                                                 |
-| Raadslid                  | Lid van het algemeen bestuur van een gemeente.                                                  |
-| Algemeen bestuurslid      | Lid van een algemeen bestuur.                                                                   |
-| Gedeputeerde              | Lid van het dagelijks bestuur van een provincie.                                                |
-| Wethouder                 | Lid van het dagelijks bestuur van een gemeente.                                                 |
-| Heemraad                  | Lid van het dagelijks bestuur van een waterschap. Ook bekend als hoogheemraad.                  |
-| Dagelijks bestuurslid     | Lid van een dagelijks bestuur.                                                                  |
-| Griffier                  | Secretaris van het algemeen bestuur van een gemeente of provincie.                              |
-| Secretaris-directeur      | Secretaris van het algemeen en dagelijks bestuur van een waterschap.                            |
-| Provinciesecretaris       | Secretaris van het dagelijks bestuur van een provincie.                                         |
-| Gemeentesecretaris        | Secretaris van het dagelijks bestuur van een gemeente.                                          |
-| Commissielid              | Door het algemeen bestuur van een overheidsorgaan benoemd lid van een commissie of werkgroep.   |
-| Commissielid \| Burgerlid | Een niet-verkozen lid van een commissie of werkgroep.                                           |
-| Ambtenaar/medewerker      | Een overheidsmedewerker.                                                                        |
-| Adviseur of deskundige    | Een door de overheid ingehuurde adviseur of deskundige.                                         |
-| <del>Overig</del>         | -                                                                                               |
++---------------+---------------+
+| Label         | Definitie     |
++===============+===============+
+| Commissaris van de Koning | Voorzitter van het algemeen en dagelijks bestuur van een provincie. |
++---------------+---------------+
+| Burgemeester | Voorzitter van het algemeen en dagelijks bestuur van een gemeente. |
++---------------+---------------+
+| Dijkgraaf | Voorzitter van het algemeen en dagelijks bestuur van een waterschap. |
++---------------+---------------+
+| Statenlid | Lid van het algemeen bestuur van een provincie. |
++---------------+---------------+
+| Raadslid | Lid van het algemeen bestuur van een gemeente. |
++---------------+---------------+
+| Algemeen bestuurslid | Lid van een algemeen bestuur. |
++---------------+---------------+
+| Gedeputeerde | Lid van het dagelijks bestuur van een provincie. |
++---------------+---------------+
+| Wethouder | Lid van het dagelijks bestuur van een gemeente. |
++---------------+---------------+
+| Heemraad | Lid van het dagelijks bestuur van een waterschap. |
++---------------+---------------+
+| Dagelijks bestuurslid | Lid van een dagelijks bestuur. |
++---------------+---------------+
+| Griffier | Secretaris van het algemeen bestuur van een gemeente of provincie. |
++---------------+---------------+
+| Secretaris-directeur | Secretaris van het algemeen en dagelijks bestuur van een waterschap. |
++---------------+---------------+
+| Provinciesecretaris | Secretaris van het dagelijks bestuur van een provincie. |
++---------------+---------------+
+| Gemeentesecretaris | Secretaris van het dagelijks bestuur van een gemeente. |
++---------------+---------------+
+| Commissielid | Door het algemeen bestuur van een overheidsorgaan benoemd lid van een commissie of werkgroep. |
++---------------+---------------+
+| Commissielid \| Burgerlid | Een niet-verkozen lid van een commissie of werkgroep. |
++---------------+---------------+
+| Ambtenaar of medewerker | Een overheidsmedewerker. |
++---------------+---------------+
+| Adviseur of deskundige | Een door de overheid ingehuurde adviseur of deskundige. |
++---------------+---------------+
+| <del>Overig</del> | - |
++---------------+---------------+
+
 
 ::: waarschuwing
 De functie "Overig" bestaat om compatibiliteit met het oorspronkelijke ORI informatiemodel te garanderen. Het gebruik van deze functieaanduiding wordt afgeraden. Als de bestaande functies niet toereikend zijn, heb je twee opties:

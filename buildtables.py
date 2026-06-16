@@ -188,7 +188,7 @@ def find_description_for_complextype(complextype) -> str:
 outfile = "pages/xml-schema.md"
 outfile_diagram = "diagram/ORI-A-diagram.tex"
 outfile_mini_diagram = "diagram/ORI-A-diagram-mini.tex"
-# Setup environment with whitespace control
+
 env = Environment(
     loader=FileSystemLoader(["pages", "templates", "diagram"]),
     trim_blocks=True,

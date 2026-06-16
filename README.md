@@ -47,6 +47,8 @@ De site kun je na het bouwen raadplegen door bijv. `python -m http.server .` in 
   * Doet ook wat HTML nabewerkingen
 * `buildtables.py`
   * Zet de gegevensgroep tabellen in `pages/documentatie.md.j2` en in `diagram/ORI-A-diagram.tex.j2`
+* `buildbegrippenlijsten.py`
+  * Zet de begrippenlijst-tabellen in `pages/begrippenlijsten.md.j2`
 * `ims/`
   * Afbeelingen
 * `buildtools/`

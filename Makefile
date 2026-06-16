@@ -40,6 +40,9 @@ FONT_DST := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_TITLE_HEAVY) 
 TABLE_SRC := pages/xml-schema.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd diagram/ORI-A-diagram.tex.j2
 TABLE_DST := pages/xml-schema.md site/ORI-A-diagram.pdf diagram/ORI-A-diagram-mini.tex
 
+THESAURI_SRC := pages/begrippenlijsten.md.j2 buildbegrippenlijsten.py
+THESAURI_DST := pages/begrippenlijsten.md
+
 BEHEERPLAN_SRC := beheerplan/beheerplan.md
 BEHEERPLAN_DST := site/beheerplan.html
 
@@ -150,9 +153,12 @@ $(JS_DST): $(JS_SRC)
 generate-tables: $(TABLE_DST)
 
 $(TABLE_DST): $(TABLE_SRC)
-	python3 buildtables.py
+	python buildtables.py
     # the env var is needed to find some shared .sty file
 	TEXINPUTS=diagram: pdflatex -output-dir site/ diagram/ORI-A-diagram.tex
+
+$(THESAURI_DST): $(THESAURI_SRC)
+	python buildbegrippenlijsten.py
 
 $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 	TEXINPUTS=diagram: pdflatex -output-dir /tmp diagram/ORI-A-diagram-mini.tex
@@ -175,7 +181,7 @@ $(MINI_DIAGRAM_DST): $(MINI_DIAGRAM_SRC) $(TABLE_DST)
 $(BEHEERPLAN_DST): $(BEHEERPLAN_SRC)
 	./beheerplan/markdown_to_respec.py $< -o $@
 
-prepare-site: $(TABLE_DST) $(HTML_DST) $(CSS_DST) $(MINI_DIAGRAM_DST) $(SVG_DST) $(PNG_DST) $(JPG_DST) $(ICO_DST) $(JS_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(SITEMAP_DST) $(BEHEERPLAN_DST) site/robots.txt
+prepare-site: $(TABLE_DST) $(THESAURI_DST) $(HTML_DST) $(CSS_DST) $(MINI_DIAGRAM_DST)  $(SVG_DST) $(PNG_DST) $(JPG_DST) $(ICO_DST) $(JS_DST) $(VOORBEELDZIP) site/ORI-A.xsd $(PRESERVICAZIP) $(SITEMAP_DST) $(BEHEERPLAN_DST) site/robots.txt
 
 # Build HTML pages (depends on all build artifacts)
 buildpages: prepare-site
@@ -216,5 +222,6 @@ pdf: buildpages
 clean:
 	rm -rf site/
 	rm -f pages/xml-schema.md
+	rm -f pages/begrippenlijsten.md
 	rm -f /tmp/ORI-A-diagram*
 	fd . -ehtml pages/ --exclude index.html -X rm
