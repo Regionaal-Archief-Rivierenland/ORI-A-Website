@@ -25,7 +25,7 @@
         {% elif row.datatype == 'begripGegevens' %}
         <p class="toelichting">
           <strong>Aangeraden begrippenlijsten</strong>
-          <ul class="toelichting" style="padding-left: 0.86rem">
+          <ul class="toelichting">
             {% for optie in row.opties %}
             <li><a class="secondary" href="{{ optie.url }}">{{ optie.naam }}</a></li>
             {% endfor %}
