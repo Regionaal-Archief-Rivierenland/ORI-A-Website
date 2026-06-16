@@ -43,7 +43,7 @@ for ttl in Path("ori-a-begrippenlijsten").glob("*.ttl"):
                 "label": build_label(concept, g),
                 # empty definitions are rendered as a hyphen
                 "definition": g.value(concept, SKOS.definition) or "-",
-                "altLabels": g.value(concept, SKOS.altLabel),
+                "altLabels": list(g.objects(concept, SKOS.altLabel)),
                 "deprecated": bool(g.value(concept, OWL.deprecated)),
             }
         )

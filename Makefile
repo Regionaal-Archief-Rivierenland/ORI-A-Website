@@ -41,7 +41,7 @@ FONT_DST := site/$(FONT_TITLE) site/$(FONT_TITLE_BOLD) site/$(FONT_TITLE_HEAVY) 
 TABLE_SRC := pages/xml-schema.md.j2 templates/gegevensgroep_table.html ORI-A-XSD/ORI-A.xsd diagram/ORI-A-diagram.tex.j2
 TABLE_DST := pages/xml-schema.md site/ORI-A-diagram.pdf diagram/ORI-A-diagram-mini.tex
 
-THESAURI_SRC := pages/begrippenlijsten.md.j2 buildbegrippenlijsten.py
+THESAURI_SRC := pages/begrippenlijsten.md.j2 buildbegrippenlijsten.py templates/begrippenlijst_table.html
 THESAURI_DST := pages/begrippenlijsten.md
 
 BEHEERPLAN_SRC := beheerplan/beheerplan.md

@@ -329,6 +329,26 @@ ul.toelichting {
     padding-left: 0.86rem;
 }
 
+.table-details, .table-details summary {
+    margin-bottom: 0em !important;
+}
+
+.table-details summary {
+    margin-top: 0.3em !important;
+    margin-left: -0.2em;
+}
+
+.table-details ul {
+    margin-top: 0.3em !important;
+    padding-left: 40px !important; /* restore default */
+}
+
+.table-details summary::after    {
+    margin-inline-start: 0 !important;
+    float: inline-start;
+    margin-right: 0.2em;
+}
+
 /* draw "fake" border, because the normal one doesn't work with position: sticky  */
 .stickytable thead::after {
   content: "";

@@ -8,8 +8,18 @@
   <tbody>
     {% for begrip in begrippenlijst  %}
     <tr>
-      <td{% if '|' in begrip.label %} style="white-space: nowrap"{% endif %}>
-        {{ "<del>" + begrip.label + "</del>" if begrip.deprecated else begrip.label}}</td>
+      <td {% if '|' in begrip.label %} style="white-space: nowrap"{% endif %}>
+        {{ "<del>" + begrip.label + "</del>" if begrip.deprecated else begrip.label }}
+        {% if begrip.altLabels %}
+          <details class="table-details">
+            <summary><span class="toelichting" data-tooltip="Sommige begrippen zijn onder meerdere namen bekend">Alternatieve labels</span></summary>
+            <ul class="toelichting">
+              {% for label in begrip.altLabels %}
+              <li>{{ label }}</li>
+              {% endfor %}
+          </ul></details>
+        {% endif %}
+      </td>
       <td>{{ begrip.definition }}</td>
     </tr>
     {% endfor %}
