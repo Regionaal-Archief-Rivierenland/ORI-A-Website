@@ -112,10 +112,10 @@ subset-fonts: $(FONT_DST)
 
 $(FONT_DST): $(MD_SRC) $(FONT_SRC)
     # Use titles and headers to subset lato
-	@titles=$$(rg '^title: (.*)' -r '$$1' --no-filename pages/*md) ; \
-	headers=$$(rg '^\#(.*?)(\{.*\})?$$' -r '$$1' --no-filename pages/*md) ; \
-	headers_h2h3=$$(rg '^\#\#? ([A-z].*?)(\{.*\})?$$' -r '$$1' --no-filename pages/*md) ; \
-	headers_sans_dropdowns=$$(rg '^\#.*' --no-filename pages/*md | grep -v dropdown) ; \
+	@titles=$$(rg '^title: (.*)' -r '$$1' --no-filename $(MD_SRC)) ; \
+	headers=$$(rg '^\#(.*?)(\{.*\})?$$' -r '$$1' --no-filename $(MD_SRC)) ; \
+	headers_h2h3=$$(rg '^\#\#? ([A-z].*?)(\{.*\})?$$' -r '$$1' --no-filename $(MD_SRC)) ; \
+	headers_sans_dropdowns=$$(rg '^\#.*' --no-filename $(MD_SRC) | grep -v dropdown) ; \
 	pyftsubset fonts/$(FONT_TITLE) \
         --drop-tables=FFTM,feat,meta \
 		--flavor=woff2 --layout-features="kern,liga" \
@@ -138,8 +138,8 @@ $(FONT_DST): $(MD_SRC) $(FONT_SRC)
     # Capital letter 'Y' is needed for a tooltip
     # the first cmd gets all code blocks, and uses sd to remove full pairs whose opening ``` contains {
 	code_snippets=$$( \
-		rg -U -I --multiline-dotall '```.*?```' pages/*md | sd -f s '``` ?\{.*?\}.*?```' '' | rg -v '```'; \
-		rg -I -o '[^`]`(.*?)`' -r '$$1' pages/*md \
+		rg -U -I --multiline-dotall '```.*?```' $(MD_SRC) | sd -f s '``` ?\{.*?\}.*?```' '' | rg -v '```'; \
+		rg -I -o '[^`]`(.*?)`' -r '$$1' $(MD_SRC) \
 	); \
 	pyftsubset fonts/$(FONT_MONOSPACE) \
         --drop-tables=FFTM,feat,meta \
