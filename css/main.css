@@ -347,6 +347,7 @@ ul.toelichting {
     margin-inline-start: 0 !important;
     float: inline-start;
     margin-right: 0.2em;
+    height: 1.1rem; /* looks better on Win/nix than 1.0rem imo */
 }
 
 /* draw "fake" border, because the normal one doesn't work with position: sticky  */
