@@ -288,7 +288,7 @@ Voor majeure en mineure versiewijzigingen is consensus nodig van de Werkgroep, g
 
 ## Opleiding
 
-Er bestaan nog geen opleidingsmogelijkheden om ORI-A toe te passen in de praktijk. Met de huidige mate van financiering is er vanuit de Werkgroep geen ruimte om opleidingstrajecten in ORI-A te faciliteren.
+Met de huidige mate van financiering is er vanuit de Werkgroep geen ruimte om opleidingstrajecten in ORI-A te faciliteren.
 
 Wel worden diverse praktijkvoorbeelden gedeeld op de communicatiekanalen van de Werkgroep, bedoeld om gebruik van ORI-A te ondersteunen en toelichting te geven op diverse implementatiescenario\'s.
 
