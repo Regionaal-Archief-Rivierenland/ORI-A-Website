@@ -17,6 +17,7 @@ github: "https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website"
 
 <!-- 
 TODO:
+- [ ] Check of alle formuleringen leverancier vriendelijk genoeg zijn
 - [ ] Denk dat het goed is om in het plan te vermelden dat alle docs in Markdown staan en blijven (en waar ze staan, in zoverre dat nog niet gedaan is)
 - [x] pandoc created `--` instead of an actual en-dash. 
   - also, a lot of these en-dashes were inserted at weird places
