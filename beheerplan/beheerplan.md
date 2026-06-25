@@ -148,7 +148,7 @@ ORI-A en haar onderdelen zijn met publieke middelen tot stand gekomen en vrij be
 
 - ORI-A is een complementair onderdeel van het Open Raadsinformatie landschap.
 
-- Toekomstige interpreteerbaarheid van raadsinformatie is belangrijker dan het kunnen huisvesten van alle raadsinformatie die tijdens het proces kunnen worden vastgelegd. Gegevens die alleen een tijdelijk belang hebben of (waarvan het belang niet kan worden aangetoond), worden niet in ORI-A opgenomen. Dat neemt niet weg dat, indien relevant geacht, deze informatie buiten ORI-A alsnog in leveringen kan worden opgenomen.
+- Toekomstige interpreteerbaarheid van raadsinformatie is belangrijker dan het kunnen huisvesten van alle raadsinformatie die tijdens het proces kunnen worden vastgelegd. Gegevens die alleen een tijdelijk belang hebben of niet duurzaam te beschijven zijn, worden niet in ORI-A opgenomen. Dat neemt niet weg dat, indien relevant geacht, deze informatie buiten ORI-A alsnog in leveringen kan worden opgenomen.
 
 - ORI-A schikt zich niet naar één specifieke implementatie of toepassing van ORI-A in een informatiesysteem (lees: raadsinformatiesysteem of e-depot).
 
