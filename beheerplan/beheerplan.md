@@ -86,7 +86,7 @@ ORI-A bestaat momenteel uit een aantal onderdelen, die door hun aard ieder op ee
 
 - Voorbeeldbestanden (https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/tree/main/Voorbeelden)
 
-Daarnaast beheert de Werkgroep een [KIA-groep](https://kiacommunity.nl/groups/86-videotulen/welcome), om nieuws over de standaard te delen en kennisuitwisseling te faciliteren.
+Daarnaast beheert de Werkgroep een [KIA-groep](https://kiacommunity.nl/groups/86-videotulen/welcome), om nieuws over de standaard te delen en kennisuitwisseling over videotulen te faciliteren.
 
 ## Financiën
 
