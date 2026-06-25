@@ -39,13 +39,11 @@ De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het d
 
 ORI-A is gebaseerd op het informatiemodel dat VNG Realisatie heeft ontworpen voor [de Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten, waaronder [de mogelijkheid tot integratie met MDTO](https://ori-a.nl/hoe-werkt-ori-a#ori-a-mdto-combineren). Hierom is besloten een archiefvariant van ORI te ontwikkelen.
 
-Raadsinformatie wordt doorgaans opgesteld in raadsinformatiesystemen (RIS'en), die momenteel elk een eigen, niet-publiek gedocumenteerd formaat voor raadsinformatie hanteren. ORI-A maakt het mogelijk om deze raadsinformatie op uniforme wijze uit te drukken, waardoor de toekomstige vindbaarheid en interpreteerbaarheid van deze informatie veilig wordt gesteld. Hierin sluit het aan bij de doelstelling van Open Raadsinformatie, <!-- zoals vermeld op hun website-->namelijk...[^1]
+Raadsinformatie wordt doorgaans opgesteld in raadsinformatiesystemen (RIS'en), die momenteel elk een eigen, niet-publiek gedocumenteerd formaat voor raadsinformatie hanteren. ORI-A maakt het mogelijk om deze raadsinformatie op uniforme wijze uit te drukken, waardoor de toekomstige vindbaarheid en interpreteerbaarheid van deze informatie veilig wordt gesteld. Hierin sluit ORI-A aan [bij de hoofddoelstelling van Open Raadsinformatie](https://zoek.openraadsinformatie.nl/):
 
 > om de besluitvorming van decentrale overheden transparanter te maken en een bijdrage te leveren aan de lokale democratie.
 
 ORI-A maakt deel uit van het Open Raadsinformatie-ecosysteem. Dit ecosysteem heeft een zelfversterkend effect: hoe breder het ORI-informatiemodel wordt toegepast, des te beter dat is voor de adoptie van ORI-A, mits ORI en ORI-A soepel in elkaar om te zetten zijn.
-
-[^1]: Bron: https://zoek.openraadsinformatie.nl/
 
 ### Mission statement
 
@@ -57,9 +55,7 @@ ORI-A maakt deel uit van het Open Raadsinformatie-ecosysteem. Dit ecosysteem hee
 
 \- *voor het duurzaam toegankelijk vastleggen van raadsinformatie in XML-formaat –* door ORI-A gezamenlijk met MDTO te gebruiken wordt voldaan aan de eisen ten aanzien van digitale duurzaamheid, zoals die in [de Archiefwet 2026](https://www.nationaalarchief.nl/archiveren/kennisbank/nieuwe-archiefwet-2021) staan vermeld;
 
-\- *wanneer het wordt gemigreerd naar een e-depot –* ORI-A richt zich op statische, blijvend te bewaren raadsinformatie.[^2]
-
-[^2]: Een by design gebruik van ORI-A als metadatamodel in een informatiesysteem is mogelijk, maar omdat ORI-A is ontworpen als afgeleide van ORI, zou het gebruiken van ORI als basis voor een by design inrichting logischer zijn. Om die reden beperkt ORI-A zich tot het toepassingsscenario van migratie naar een e-depot.
+\- *wanneer het wordt gemigreerd naar een e-depot –* ORI-A richt zich op statische, blijvend te bewaren raadsinformatie.
 
 ### Scope
 
