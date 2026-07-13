@@ -236,7 +236,7 @@ Besluitvorming over wijziging van deze documentatie vindt net als bij het XML-sc
 
 #### De voorbeeldbestanden
 
-Het vierde onderdeel van ORI-A vormen de voorbeeldbestanden, die eveneens op de ORI-A website zijn opgenomen. Zij worden beheerd op dezelfde GitHub repository als de website. De voorbeeldbestanden geven een praktijkvoorbeeld van hoe een levering aan raadsinformatie eruitziet, als deze volgens de instructies van het XML-schema en de documentatie is vormgegeven.
+De voorbeeldbestanden vormen het vierde onderdeel van ORI-A. Zij worden beheerd op dezelfde GitHub repository als het XML-schema. De voorbeeldbestanden geven een praktijkvoorbeeld van hoe een levering aan raadsinformatie eruitziet, als deze volgens de instructies van het XML-schema en de documentatie is vormgegeven.
 
 Slechts plaatsing en ordening van het ORI-A XML-bestand in de mappenstructuur ten opzichte van de andere bestanden en mappen in de structuur, valt strikt genomen onder beheer van de Werkgroep. Voor de mappenstructuur en ordening en inhoud van de informatieobjecten wordt de [Submission Information Package (SIP)-instructie van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/specificatie-submission-information-package/structuur) gevolgd. De inhoud van de voorbeeldbestanden (de domeinspecifieke informatie, als ook de informatieobjecten (videotulen en documenten)) is geen onderdeel van de standaard maar dient slechts ter illustratie.
 
