@@ -73,7 +73,7 @@ De Werkgroep bestaat uit afgevaardigden van diverse Nederlandse overheidsorganis
 
 - Bij het maken van beslissingen over ORI-A zijn altijd afgevaardigden van archiefdiensten betrokken.
 
-Er wordt wel gezocht naar een geschikte beheerder voor de langere termijn, bij voorkeur een partij actief binnen de Nederlandse overheid op het gebied van standaardenbeheer en/of digitale duurzaamheid.
+Er wordt gezocht naar een geschikte beheerder voor de langere termijn, bij voorkeur een partij actief binnen de Nederlandse overheid op het gebied van standaardenbeheer en/of digitale duurzaamheid.
 
 
 ORI-A bestaat momenteel uit een aantal onderdelen, die door hun aard ieder op een eigen manier wordt beheerd:
