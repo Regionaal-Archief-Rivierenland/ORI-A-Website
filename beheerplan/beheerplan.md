@@ -300,7 +300,7 @@ Vanuit de Werkgroep is beperkte ondersteuning beschikbaar richting derde partije
 
 ## Helpdesk
 
-De ORI-A specificatie en -documentatie is te vinden op [ori-a.nl](https://ori-a.nl/). De Werkgroep biedt op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome) en op GitHub de mogelijkheid tot het stellen van vragen over ORI-A. Via KIA of langs (in)formele wijze kunnen Werkgroepleden ook direct worden benaderd.
+De ORI-A specificatie en -documentatie is te vinden op [ori-a.nl](https://ori-a.nl/). De Werkgroep biedt op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome) en op GitHub de mogelijkheid tot het stellen van vragen over ORI-A. Ten slotte kunnen Werkgroepleden direct benaderd worden, bijvoorbeeld via KIA.
 
 ## Moduleontwikkeling
 
