@@ -216,7 +216,7 @@ Er zijn echter procedurele en inhoudelijke redenen te noemen waarom deze begripp
 
 #### De documentatie
 
-Het derde onderdeel van ORI-A vormt alle documentatie over ORI-A en haar onderdelen, die op de [ORI-A website](https://ori-a.nl) is opgenomen. De documentatie beschrijft alle onderdelen van het XML-schema en geeft relevante informatie aan de verschillende soorten gebruikers, bedoeld om het gebruik van het ORI-A XML-schema zoveel mogelijk te ondersteunen. Beheer daarvan vindt eveneens op [GitHub](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website) plaats.
+De documentatie vormt het derde deel van ORI-A, en is op de [ORI-A website](https://ori-a.nl) te bekijken. De documentatie beschrijft alle onderdelen van het XML-schema en geeft relevante informatie aan de verschillende soorten gebruikers, bedoeld om het gebruik van het ORI-A XML-schema zoveel mogelijk te ondersteunen. Beheer daarvan vindt eveneens op [GitHub](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website) plaats.
 
 De documentatie valt uiteen in meerdere onderdelen:
 
