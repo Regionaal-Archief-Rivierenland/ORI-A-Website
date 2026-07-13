@@ -78,13 +78,13 @@ Er wordt gezocht naar een geschikte beheerder voor de langere termijn, bij voork
 
 ORI-A bestaat momenteel uit een aantal onderdelen, die door hun aard ieder op een eigen manier wordt beheerd:
 
-- Een XML-schema;
+- [Een XML-schema](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD)
 
-- Begrippenlijsten;
+- [Begrippenlijsten](https://github.com/Regionaal-Archief-Rivierenland/ori-a-begrippenlijsten)
 
-- Documentatie over ORI-A (https://ori-a.nl)
+- [Documentatie over ORI-A](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/tree/main/pages)
 
-- Voorbeeldbestanden (https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/tree/main/Voorbeelden)
+- [Voorbeeldbestanden](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/tree/main/Voorbeelden)
 
 Daarnaast beheert de Werkgroep een [KIA-groep](https://kiacommunity.nl/groups/86-videotulen/welcome), om nieuws over de standaard te delen en kennisuitwisseling over videotulen te faciliteren.
 
