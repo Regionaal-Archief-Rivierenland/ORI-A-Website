@@ -246,7 +246,7 @@ Omdat ORI-A als primaire gebruikersgroep de Nederlandse archiefsector voor zich 
 
 ### Versiebeleid
 
-Het ORI-A XML-schema is een levende standaard die naar gelang er noodzaak toe is zal veranderen. Gezien comptabiliteit met MDTO en ORI belangrijke waarden zijn voor ORI-A, zullen wijzigingen aan die twee standaarden gevolgd worden en waar nodig leiden tot wijzigingen aan ORI-A. Om ervoor te zorgen dat wijzigingen aan ORI-A niet ten koste zullen gaan van het zijn van een standaard, is het nodig om een zorgvuldig wijzigingsproces en bijbehorend versiebeheer toe te passen op ORI-A.
+Het ORI-A XML-schema is een levende standaard, wat betekent dat er nog regelmatig wijzigingen zullen worden doorgevoerd.  Gezien comptabiliteit met MDTO en ORI belangrijke waarden zijn voor ORI-A, zullen wijzigingen aan die twee standaarden gevolgd worden en waar nodig leiden tot wijzigingen aan ORI-A. Om ervoor te zorgen dat wijzigingen aan ORI-A niet ten koste zullen gaan van het zijn van een standaard, is het nodig om een zorgvuldig wijzigingsproces en bijbehorend versiebeheer toe te passen op ORI-A.
 
 Alle gepubliceerde versies van ORI-A worden publiekelijk gedocumenteerd en beheerd op de [ORI-A website](https://ori-a.nl/downloads#xml-schema). Hierdoor blijft het mogelijk om te valideren aan het ORI-A XML-schema, ongeacht welke versie een gebruiker bij een implementatie heeft gehanteerd.
 
