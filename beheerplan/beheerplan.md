@@ -292,7 +292,7 @@ Voor majeure en mineure versiewijzigingen is consensus nodig van de Werkgroep, g
 
 ## Opleiding
 
-Met de huidige mate van financiering is er vanuit de Werkgroep geen ruimte om opleidingstrajecten in ORI-A te faciliteren.
+De Werkgroep heeft geen financiële ruimte of plannen om opleidingstrajecten in ORI-A te faciliteren.
 
 Wel worden diverse praktijkvoorbeelden gedeeld op de communicatiekanalen van de Werkgroep, bedoeld om gebruik van ORI-A te ondersteunen en toelichting te geven op diverse implementatiescenario's.
 
