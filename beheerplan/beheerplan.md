@@ -158,7 +158,7 @@ ORI-A en haar onderdelen zijn met publieke middelen tot stand gekomen en vrij be
 
 - ORI-A is een afgeleide van het ORI-informatiemodel. Dat betekent:
 
- - ORI-A volgt het ORI-informatiemodel wat betreft inhoudelijke (domeinspecifieke) metagegevens over het politieke/bestuurlijke besluitvormingsproces. Wijzigingsverzoeken aan ORI-A die gaan over deze inhoudelijke metagegevens nemen we pas in behandeling als deze wijzigingen zijn doorgevoerd in het ORI-informatiemodel. Als ze daar nog niet zijn ingediend, verwijzen we door naar de repository van het ORI-informatiemodel.
+ - ORI-A volgt het ORI-informatiemodel wat betreft inhoudelijke --- oftewel, _domeinspecifieke_ --- metagegevens over het politieke/bestuurlijke besluitvormingsproces. Wijzigingsverzoeken aan ORI-A die gaan over deze inhoudelijke metagegevens nemen we pas in behandeling als deze wijzigingen zijn doorgevoerd in het ORI-informatiemodel. Als ze daar nog niet zijn ingediend, verwijzen we door naar de repository van het ORI-informatiemodel.
 
  - ORI-A gebruikt waar mogelijk dezelfde of vergelijkbare opbouw en naamgeving van klassen en eigenschappen als het ORI-informatiemodel en legt eventuele verschillen duidelijk uit, zodat wederzijdse conversie zo efficiënt mogelijk blijft en zonder informatieverlies.
 
