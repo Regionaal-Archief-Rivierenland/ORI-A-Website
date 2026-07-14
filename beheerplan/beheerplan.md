@@ -70,7 +70,7 @@ Bovendien zal ORI-A altijd een XML-vertaling van het ORI-informatiemodel blijven
 
 ## Governance
 
-ORI-A is ontwikkeld en wordt beheerd door de [Werkgroep Archivering Raadsinformatie](https://ori-a.nl/colofon#werkgroep-archivering-raadsinformatie) (hierna: de Werkgroep). Zij zijn voorlopig de *de facto* eigenaar en beheerder van de standaard.
+ORI-A is ontwikkeld en wordt beheerd door de [Werkgroep Archivering Raadsinformatie](https://ori-a.nl/colofon#werkgroep-archivering-raadsinformatie) (hierna: de Werkgroep). De werkgroep is voorlopig eigenaar van de standaard.
 
 De Werkgroep bestaat uit afgevaardigden van diverse Nederlandse overheidsorganisaties, betrokken bij de duurzame toegankelijkheid van raadsinformatie. Ze hebben als doel de verdere verspreiding en ondersteuning van het gebruik van ORI-A, het onderhouden van contact met betrokken partijen in het ORI-ecosysteem en het onderhouden van de onderdelen van ORI-A.
 
