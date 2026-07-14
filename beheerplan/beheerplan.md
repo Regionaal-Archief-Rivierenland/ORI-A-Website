@@ -152,7 +152,7 @@ ORI-A en haar onderdelen zijn met publieke middelen tot stand gekomen en vrij be
 
 - ORI-A is een complementair onderdeel van het Open Raadsinformatie landschap.
 
-- Toekomstige interpreteerbaarheid van raadsinformatie is belangrijker dan het kunnen huisvesten van alle raadsinformatie die tijdens het proces kunnen worden vastgelegd. Gegevens die alleen een tijdelijk belang hebben of (waarvan het belang niet kan worden aangetoond), worden niet in ORI-A opgenomen. Dat neemt niet weg dat, indien relevant geacht, deze informatie buiten ORI-A alsnog in leveringen kan worden opgenomen.
+- Toekomstige interpreteerbaarheid van raadsinformatie is belangrijker dan het kunnen huisvesten van alle raadsinformatie die tijdens het proces kunnen worden vastgelegd. Gegevens die alleen een tijdelijk belang hebben of niet duurzaam te beschijven zijn, worden niet in ORI-A opgenomen. Dat neemt niet weg dat, indien relevant geacht, deze informatie buiten ORI-A alsnog in leveringen kan worden opgenomen.
 
 - ORI-A schikt zich niet naar één specifieke implementatie of toepassing van ORI-A in een informatiesysteem (lees: raadsinformatiesysteem of e-depot).
 
@@ -162,7 +162,7 @@ ORI-A en haar onderdelen zijn met publieke middelen tot stand gekomen en vrij be
 
 - ORI-A is een afgeleide van het ORI-informatiemodel. Dat betekent:
 
- - ORI-A volgt het ORI-informatiemodel wat betreft inhoudelijke (domeinspecifieke) metagegevens over het politieke/bestuurlijke besluitvormingsproces. Wijzigingsverzoeken aan ORI-A die gaan over deze inhoudelijke metagegevens nemen we pas in behandeling als deze wijzigingen zijn doorgevoerd in het ORI-informatiemodel. Als ze daar nog niet zijn ingediend, verwijzen we door naar de repository van het ORI-informatiemodel.
+ - ORI-A volgt het ORI-informatiemodel wat betreft inhoudelijke --- oftewel, _domeinspecifieke_ --- metagegevens over het politieke/bestuurlijke besluitvormingsproces. Wijzigingsverzoeken aan ORI-A die gaan over deze inhoudelijke metagegevens nemen we pas in behandeling als deze wijzigingen zijn doorgevoerd in het ORI-informatiemodel. Als ze daar nog niet zijn ingediend, verwijzen we door naar de repository van het ORI-informatiemodel.
 
  - ORI-A gebruikt waar mogelijk dezelfde of vergelijkbare opbouw en naamgeving van klassen en eigenschappen als het ORI-informatiemodel en legt eventuele verschillen duidelijk uit, zodat wederzijdse conversie zo efficiënt mogelijk blijft en zonder informatieverlies.
 
@@ -240,7 +240,7 @@ Besluitvorming over wijziging van deze documentatie vindt net als bij het XML-sc
 
 #### De voorbeeldbestanden
 
-Het vierde onderdeel van ORI-A vormen de voorbeeldbestanden, die eveneens op de ORI-A website zijn opgenomen. Zij worden beheerd op dezelfde GitHub repository als de website. De voorbeeldbestanden geven een praktijkvoorbeeld van hoe een levering aan raadsinformatie eruitziet, als deze volgens de instructies van het XML-schema en de documentatie is vormgegeven.
+De voorbeeldbestanden vormen het vierde onderdeel van ORI-A. Zij worden beheerd op dezelfde GitHub repository als het XML-schema. De voorbeeldbestanden geven een praktijkvoorbeeld van hoe een levering aan raadsinformatie eruitziet, als deze volgens de instructies van het XML-schema en de documentatie is vormgegeven.
 
 Slechts plaatsing en ordening van het ORI-A XML-bestand in de mappenstructuur ten opzichte van de andere bestanden en mappen in de structuur, valt strikt genomen onder beheer van de Werkgroep. Voor de mappenstructuur en ordening en inhoud van de informatieobjecten wordt de [Submission Information Package (SIP)-instructie van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/specificatie-submission-information-package/structuur) gevolgd. De inhoud van de voorbeeldbestanden (de domeinspecifieke informatie, als ook de informatieobjecten (videotulen en documenten)) is geen onderdeel van de standaard maar dient slechts ter illustratie.
 
@@ -250,7 +250,7 @@ Omdat ORI-A als primaire gebruikersgroep de Nederlandse archiefsector voor zich 
 
 ### Versiebeleid
 
-Het ORI-A XML-schema is een levende standaard die naar gelang er noodzaak toe is zal veranderen. Gezien comptabiliteit met MDTO en ORI belangrijke waarden zijn voor ORI-A, zullen wijzigingen aan die twee standaarden gevolgd worden en waar nodig leiden tot wijzigingen aan ORI-A. Om ervoor te zorgen dat wijzigingen aan ORI-A niet ten koste zullen gaan van het zijn van een standaard, is het nodig om een zorgvuldig wijzigingsproces en bijbehorend versiebeheer toe te passen op ORI-A.
+Het ORI-A XML-schema is een levende standaard, wat betekent dat er regelmatig wijzigingen zullen worden doorgevoerd.  Gezien comptabiliteit met MDTO en ORI belangrijke waarden zijn voor ORI-A, zullen wijzigingen aan die twee standaarden gevolgd worden en waar nodig leiden tot wijzigingen aan ORI-A. Om ervoor te zorgen dat wijzigingen aan ORI-A niet ten koste zullen gaan van het zijn van een standaard, is het nodig om een zorgvuldig wijzigingsproces en bijbehorend versiebeheer toe te passen op ORI-A.
 
 Alle gepubliceerde versies van ORI-A worden publiekelijk gedocumenteerd en beheerd op de [ORI-A website](https://ori-a.nl/downloads#xml-schema). Hierdoor blijft het mogelijk om te valideren aan het ORI-A XML-schema, ongeacht welke versie een gebruiker bij een implementatie heeft gehanteerd.
 
