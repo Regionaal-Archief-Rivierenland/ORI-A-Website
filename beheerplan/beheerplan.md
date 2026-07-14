@@ -254,7 +254,7 @@ Het ORI-A XML-schema is een levende standaard die naar gelang er noodzaak toe is
 
 Alle gepubliceerde versies van ORI-A worden publiekelijk gedocumenteerd en beheerd op de [ORI-A website](https://ori-a.nl/downloads#xml-schema). Hierdoor blijft het mogelijk om te valideren aan het ORI-A XML-schema, ongeacht welke versie een gebruiker bij een implementatie heeft gehanteerd.
 
-De versionering van ORI-A maakt gebruik van een eigen interpretatie van semantisch versiebeheer. Er is een eigen interpretatie gekozen, omdat semantisch versioneren primair is bedoeld om softwareontwikkeling te ondersteunen, en minder op het onderhouden van een XML-schema. Meer over deze interpretatie is te lezen onder de paragraaf Versiebeheer.
+De versionering van ORI-A maakt gebruik van een eigen interpretatie van semantisch versiebeheer. Er is een eigen interpretatie gekozen, omdat semantisch versioneren primair is bedoeld om softwareontwikkeling te ondersteunen, en minder op het onderhouden van een XML-schema. Meer over deze interpretatie is te lezen in [Versiebeheer](#versiebeheer).
 
 Onderhoud op de standaard vindt plaats door het vier-ogenprincipe te hanteren; minstens twee beheerders moeten akkoord gaan met een wijziging om deze door te voeren. Wijzigingsverzoeken vinden plaats door middel van pull requests. Besluitvorming over versiewijziging van ORI-A vindt plaats binnen vergaderingen van de Werkgroep, waarna een beheerder de nieuwe versie lanceert. Wanneer de beheerders voldoende wijzigingen hebben verzameld en verwerkt om een nieuwe versie te rechtvaardigen, wordt besloten tot het publiceren van een nieuwe versie. Naar gelang de aard van de wijziging wordt het nieuwe versienummer besloten.
 
