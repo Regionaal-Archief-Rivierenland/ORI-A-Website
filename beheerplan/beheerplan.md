@@ -308,7 +308,7 @@ De Werkgroep zelf heeft geen intentie om softwarecomponenten te ontwikkelen die 
 
 ## Validatie & certificering
 
-Validatie van de toepassing van ORI-A kan door middel van open source XML-validatietooling te gebruiken. Hiermee kan ook toepassing van MDTO worden gevalideerd.
+Validatie van de toepassing van ORI-A kan door middel van XML-validatietooling. Hiermee kan ook toepassing van MDTO worden gevalideerd.
 
 # Communicatie
 
