@@ -96,7 +96,7 @@ Daarnaast beheert de Werkgroep een [KIA-groep](https://kiacommunity.nl/groups/86
 
 De Werkgroep, en daarmee het beheer van ORI-A, kent geen eigen financiering. De bouw, toepassing en ondersteuning van de standaard worden momenteel gedragen door de leden van de Werkgroep, een groep medewerkers van verschillende overheidsorganisaties die daarvoor in de eigen organisaties ruimte hebben gekregen.
 
-Het Regionaal Archief Rivierenland neemt momenteel de kosten voor de domeinnaam `ori-a.nl` voor haar rekening. De hosting van de website wordt geregeld door GitHub, dat hier momenteel geen kosten voor rekent.
+Het Regionaal Archief Rivierenland neemt momenteel de kosten voor de domeinnaam `ori-a.nl` voor haar rekening. De website wordt kosteloos gehost ("gepubliceerd") via [Github Pages](Github Pages).
 
 Waar mogelijk wordt het budget van de Werkgroep aangevuld door aangeworven projectfinanciering en/of subsidie(s), bijvoorbeeld bij de realisatie van nieuwe toepassingen van ORI-A. Hiervoor dienen te zijner tijd aanvullende afspraken te worden gemaakt.
 
