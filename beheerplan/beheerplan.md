@@ -40,7 +40,7 @@ De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het d
 
 ORI-A is gebaseerd op het informatiemodel dat VNG Realisatie heeft ontworpen voor [de Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten, waaronder [de mogelijkheid tot integratie met MDTO](https://ori-a.nl/hoe-werkt-ori-a#ori-a-mdto-combineren). Hierom is besloten een archiefvariant van ORI te ontwikkelen.
 
-Raadsinformatie wordt doorgaans opgesteld in raadsinformatiesystemen (RIS'en), die momenteel elk een eigen, niet-publiek gedocumenteerd formaat voor raadsinformatie hanteren. ORI-A maakt het mogelijk om deze raadsinformatie op uniforme wijze uit te drukken, waardoor de toekomstige vindbaarheid en interpreteerbaarheid van deze informatie veilig wordt gesteld. Hierin sluit het aan bij de doelstelling van Open Raadsinformatie, <!-- zoals vermeld op hun website-->namelijk...[^1]
+Raadsinformatie wordt doorgaans opgesteld in raadsinformatiesystemen (RIS'en), die momenteel elk een eigen, niet-publiek gedocumenteerd formaat voor raadsinformatie hanteren. ORI-A maakt het mogelijk om deze raadsinformatie op uniforme en publiek gedocumenteerde wijze uit te drukken, waardoor de toekomstige vindbaarheid en interpreteerbaarheid van deze informatie veilig wordt gesteld. Hierin sluit het aan bij de doelstelling van Open Raadsinformatie, <!-- zoals vermeld op hun website-->namelijk...[^1]
 
 > om de besluitvorming van decentrale overheden transparanter te maken en een bijdrage te leveren aan de lokale democratie.
 
