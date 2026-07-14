@@ -66,7 +66,7 @@ ORI-A maakt deel uit van het Open Raadsinformatie-ecosysteem. Dit ecosysteem hee
 
 ORI-A is een domeinspecifiek metagegevensschema voor raadsinformatie. Dit betekent dat ORI-A alleen gegevens definieert die binnen het domein van politieke en bestuurlijke besluitvorming een rol spelen. Het definieert bijvoorbeeld geen metagegevens over informatieobjecten, hoewel deze wel van groot belang zijn bij het raadplegen van raadsinformatie. Voor metagegevens over informatieobjecten wordt aangeraden om [MDTO](https://www.nationaalarchief.nl/archiveren/mdto) te gebruiken. Het gebruiken van ORI-A bij migraties van raadsinformatie naar een e-depot gaat daarom idealiter altijd gepaard met het gebruiken van MDTO.
 
-Bovendien zal ORI-A altijd een XML-vertaling van het ORI-informatiemodel blijven. De enige mogelijke uitzonderingen daarop zijn wijzigingen die ORI-A beter helpen aansluiten bij conventies binnen de Nederlandse archiefsector.
+Bovendien zal ORI-A altijd een XML-vertaling van het ORI-informatiemodel blijven.  Uitzonderingen daarop zijn wijzigingen die ORI-A beter helpen aansluiten bij conventies binnen de Nederlandse archiefsector.
 
 ## Governance
 
