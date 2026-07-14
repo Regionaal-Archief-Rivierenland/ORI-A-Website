@@ -124,7 +124,7 @@ Adoptie van de standaard wordt momenteel op drie manieren ondersteund:
 
 - Door de standaard actief onder de aandacht te brengen via presentaties, lezingen, workshops en dergelijke;
 
-- Door het uitvoeren van pilotimplementaties (migratietrajecten naar e-depots) van ORI-A en MDTO en daarover te communiceren, om zo aan te tonen dat de standaard werkt in de praktijk en leveranciers van raadsinformatiesystemen te voorzien in conversiescripts van hun data naar ORI-A (en eventueel MDTO);
+- Door het uitvoeren van pilotimplementaties (migratietrajecten naar e-depots) van ORI-A en MDTO en daarover te communiceren, om zo aan te tonen dat de standaard werkt in de praktijk en leveranciers van raadsinformatiesystemen te voorzien van tips en door leden ontwikkelde conversie software;
 
 - Door geïnteresseerde partijen en gebruikers van ORI-A te informeren en in de praktijk te ondersteunen.
 
