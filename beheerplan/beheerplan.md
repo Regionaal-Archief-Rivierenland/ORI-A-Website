@@ -38,9 +38,9 @@ Dit document bevat het lange termijn beheerplan van de open raadsinformatie arch
 
 De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het duurzaam bewaren van raadsinformatie in XML-formaat. Deze regels zijn vastgelegd in het [ORI-A XML-schema](https://ori-a.nl/downloads#xml-schema). Dit schema kan gebruikt worden wanneer raadsinformatie, zoals een collectie videotulen, voor permanente bewaring naar een [e-depot](https://www.nationaalarchief.nl/archiveren/kennisbank/wat-is-een-e-depot) wordt gemigreerd.
 
-ORI-A is gebaseerd op het informatiemodel dat VNG Realisatie heeft ontworpen voor [de Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). De ORI-standaard van de VNG was nog niet als XML-schema beschreven en voldeed niet volledig aan de behoeften van archiefdiensten, waaronder [de mogelijkheid tot integratie met MDTO](https://ori-a.nl/hoe-werkt-ori-a#ori-a-mdto-combineren). Hierom is besloten een archiefvariant van ORI te ontwikkelen.
+ORI-A is gebaseerd op het informatiemodel dat VNG Realisatie heeft ontworpen voor [de Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten, waaronder [de mogelijkheid tot integratie met MDTO](https://ori-a.nl/hoe-werkt-ori-a#ori-a-mdto-combineren). Hierom is besloten een archiefvariant van ORI te ontwikkelen.
 
-Raadsinformatie wordt doorgaans opgesteld in raadsinformatiesystemen (RIS'en), die momenteel elk een eigen, niet-publiek gedocumenteerd formaat voor raadsinformatie hanteren. ORI-A maakt het mogelijk om deze raadsinformatie op uniforme wijze uit te drukken, waardoor de toekomstige vindbaarheid en interpreteerbaarheid van deze informatie veilig wordt gesteld. Hierin sluit het aan bij de doelstelling van Open Raadsinformatie, <!-- zoals vermeld op hun website-->namelijk...[^1]
+Raadsinformatie wordt doorgaans opgesteld in raadsinformatiesystemen (RIS'en), die momenteel elk een eigen, niet-publiek gedocumenteerd formaat voor raadsinformatie hanteren. ORI-A maakt het mogelijk om deze raadsinformatie op uniforme en publiek gedocumenteerde wijze uit te drukken, waardoor de toekomstige vindbaarheid en interpreteerbaarheid van deze informatie veilig wordt gesteld. Hierin sluit het aan bij de doelstelling van Open Raadsinformatie, <!-- zoals vermeld op hun website-->namelijk...[^1]
 
 > om de besluitvorming van decentrale overheden transparanter te maken en een bijdrage te leveren aan de lokale democratie.
 
@@ -66,11 +66,11 @@ ORI-A maakt deel uit van het Open Raadsinformatie-ecosysteem. Dit ecosysteem hee
 
 ORI-A is een domeinspecifiek metagegevensschema voor raadsinformatie. Dit betekent dat ORI-A alleen gegevens definieert die binnen het domein van politieke en bestuurlijke besluitvorming een rol spelen. Het definieert bijvoorbeeld geen metagegevens over informatieobjecten, hoewel deze wel van groot belang zijn bij het raadplegen van raadsinformatie. Voor metagegevens over informatieobjecten wordt aangeraden om [MDTO](https://www.nationaalarchief.nl/archiveren/mdto) te gebruiken. Het gebruiken van ORI-A bij migraties van raadsinformatie naar een e-depot gaat daarom idealiter altijd gepaard met het gebruiken van MDTO.
 
-ORI-A is een XML-schema. Het is te zien als een XML-vertaling van het ORI-informatiemodel, gericht op het migreren van raadsinformatie naar een e-depot. Ook sluit het hierbij aan bij conventies binnen de Nederlandse archiefsector.
+Bovendien zal ORI-A altijd een XML-vertaling van het ORI-informatiemodel blijven.  Uitzonderingen daarop zijn wijzigingen die ORI-A beter helpen aansluiten bij conventies binnen de Nederlandse archiefsector.
 
 ## Governance
 
-ORI-A is ontwikkeld en wordt beheerd door de [Werkgroep Archivering Raadsinformatie](https://ori-a.nl/colofon#werkgroep-archivering-raadsinformatie) (hierna: de Werkgroep). Zij zijn voorlopig de *de facto* eigenaar en beheerder van de standaard.
+ORI-A is ontwikkeld en wordt beheerd door de [Werkgroep Archivering Raadsinformatie](https://ori-a.nl/colofon#werkgroep-archivering-raadsinformatie) (hierna: de Werkgroep). De werkgroep is voorlopig eigenaar van de standaard.
 
 De Werkgroep bestaat uit afgevaardigden van diverse Nederlandse overheidsorganisaties, betrokken bij de duurzame toegankelijkheid van raadsinformatie. Ze hebben als doel de verdere verspreiding en ondersteuning van het gebruik van ORI-A, het onderhouden van contact met betrokken partijen in het ORI-ecosysteem en het onderhouden van de onderdelen van ORI-A.
 
@@ -82,21 +82,21 @@ Er wordt gezocht naar een geschikte beheerder voor de langere termijn, bij voork
 
 ORI-A bestaat momenteel uit een aantal onderdelen, die door hun aard ieder op een eigen manier wordt beheerd:
 
-- Een XML-schema;
+- [Een XML-schema](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD)
 
-- Begrippenlijsten;
+- [Begrippenlijsten](https://github.com/Regionaal-Archief-Rivierenland/ori-a-begrippenlijsten)
 
-- Documentatie over ORI-A (https://ori-a.nl)
+- [Documentatie over ORI-A](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website/tree/main/pages)
 
-- Voorbeeldbestanden (https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/tree/main/Voorbeelden)
+- [Voorbeeldbestanden](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD/tree/main/Voorbeelden)
 
-Daarnaast beheert de Werkgroep een [KIA-groep](https://kiacommunity.nl/groups/86-videotulen/welcome), om nieuws over de standaard te delen en kennisuitwisseling te faciliteren.
+Daarnaast beheert de Werkgroep een [KIA-groep](https://kiacommunity.nl/groups/86-videotulen/welcome), om nieuws over de standaard te delen en kennisuitwisseling over videotulen te faciliteren.
 
 ## Financiën
 
 De Werkgroep, en daarmee het beheer van ORI-A, kent geen eigen financiering. De bouw, toepassing en ondersteuning van de standaard worden momenteel gedragen door de leden van de Werkgroep, een groep medewerkers van verschillende overheidsorganisaties die daarvoor in de eigen organisaties ruimte hebben gekregen.
 
-Het Regionaal Archief Rivierenland neemt momenteel de kosten voor de domeinnaam `ori-a.nl` voor haar rekening. De hosting van de website wordt geregeld door GitHub, dat hier momenteel geen kosten voor rekent.
+Het Regionaal Archief Rivierenland neemt momenteel de kosten voor de domeinnaam `ori-a.nl` voor haar rekening. De website wordt kosteloos gehost ("gepubliceerd") via [Github Pages](Github Pages).
 
 Waar mogelijk wordt het budget van de Werkgroep aangevuld door aangeworven projectfinanciering en/of subsidie(s), bijvoorbeeld bij de realisatie van nieuwe toepassingen van ORI-A. Hiervoor dienen te zijner tijd aanvullende afspraken te worden gemaakt.
 
