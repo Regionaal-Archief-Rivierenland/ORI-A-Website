@@ -200,7 +200,7 @@ De onderdelen hebben afhankelijkheden met producten van enkele stakeholders.
 
 **MDTO** (product van het Nationaal Archief) wordt mede gebruikt in de voorbeeldbestanden.
 
-**TOOI** (product van KOOP) levert enkele begrippenlijsten
+**TOOI** (product van KOOP) levert enkele begrippenlijsten.
 
 #### Het XML-schema
 
