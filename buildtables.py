@@ -61,8 +61,13 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         if not datatype:
             if len(elem.findall(".//xs:enumeration", namespaces=ns)) > 1:
                 datatype = "enumeratie"
-                # this is just a copy of the name of the element
-                enumeratie_naam = str(naam)
+                # often, we can just a copy of the name of the element
+                # ... except in case of stemmingstype, in which case we prefer "stemmingtype" over just "type"
+                enumeratie_naam = (
+                    "stemmingstype"
+                    if complextype.attrib["name"] == "stemming" and naam == "type"
+                    else str(naam)
+                )
             else:
                 datatype = "string"
 
