@@ -81,7 +81,7 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
         elif datatype == "begripGegevens":
             for begrippenlijst in elem.findall(".//ori-a:aangeradenBegrippenlijst", namespaces=ns):
                 url = begrippenlijst.find(".//ori-a:URL", namespaces=ns).text
-                # so that links become "internal"
+                # make links "internal"
                 url = url.removeprefix("https://ori-a.nl/")
                 opties.append(
                     {
