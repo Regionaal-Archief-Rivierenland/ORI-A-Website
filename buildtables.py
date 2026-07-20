@@ -1,6 +1,6 @@
 #!/bin/python
 
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 import re
 import sys
 
@@ -12,6 +12,10 @@ root = ET.parse("ORI-A-XSD/ORI-A.xsd").getroot()
 
 gegevensgroepen_elems = [e for e in root.findall(".//xs:complexType", namespaces=ns)]
 gegevensgroepen_names = [e.attrib["name"] for e in gegevensgroepen_elems]
+enumeraties = {
+    e.getparent().getparent().attrib["name"]
+    for e in root.findall(".//xs:enumeration", namespaces=ns)
+}
 
 def camel_to_seperate_words(string) -> list[str]:
     """Convert camel cased string to a list of words"""
@@ -53,30 +57,26 @@ def complextype_to_dict(complextype: ET.Element) -> list[dict]:
 
         verplicht = bool(int(elem.attrib["minOccurs"]))
         herhaalbaar = True if elem.attrib["maxOccurs"] == "unbounded" else False
-        # assume enumaration if type is not specified
-        # FIXME: this assumption is wrong in case of regexes
         datatype = elem.attrib.get("type", None)
         enumeratie_naam = None
+
+        if datatype in enumeraties:
+            enumeratie_naam = str(datatype)
+            datatype = "enumeratie"
+
         # In XSD, restrictions do not set `type=`, so we need to look at info within the restriction
         if not datatype:
-            if len(elem.findall(".//xs:enumeration", namespaces=ns)) > 1:
-                datatype = "enumeratie"
-                # often, we can just a copy of the name of the element
-                # ... except in case of stemmingstype, in which case we prefer "stemmingtype" over just "type"
-                enumeratie_naam = (
-                    "stemmingstype"
-                    if complextype.attrib["name"] == "stemming" and naam == "type"
-                    else str(naam)
-                )
-            else:
-                datatype = "string"
+            # this is only hit for regexes
+            # FIXME: maybe we should look at this case more thoroughly?
+            datatype = "string"
 
         datatype = datatype.replace("xs:", "")
 
         opties = []
-        # change datatype to "keuze uit: `X`, `Y`, `...`"  if enumeratie
+        # append enumeration options to "keuze uit: X, Y, ..."-array
         if datatype == "enumeratie":
-            for optie in elem.findall(".//xs:enumeration", namespaces=ns):
+            enumeratie_elem = root.find(f".//xs:simpleType[@name='{enumeratie_naam}']", namespaces=ns)
+            for optie in enumeratie_elem.findall(".//xs:enumeration", namespaces=ns):
                 opties.append(optie.attrib["value"])
         elif datatype == "begripGegevens":
             for begrippenlijst in elem.findall(".//ori-a:aangeradenBegrippenlijst", namespaces=ns):
