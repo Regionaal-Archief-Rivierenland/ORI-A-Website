@@ -40,13 +40,11 @@ De Open Raadsinformatie Archiefstandaard (ORI-A) beschrijft de regels voor het d
 
 ORI-A is gebaseerd op het informatiemodel dat VNG Realisatie heeft ontworpen voor [de Open Raadsinformatie (ORI) API](https://github.com/VNG-Realisatie/ODS-Open-Raadsinformatie). De ORI-standaard van de VNG voldeed echter niet volledig aan de behoeften van archiefdiensten, waaronder [de mogelijkheid tot integratie met MDTO](https://ori-a.nl/hoe-werkt-ori-a#ori-a-mdto-combineren). Hierom is besloten een archiefvariant van ORI te ontwikkelen.
 
-Raadsinformatie wordt doorgaans opgesteld in raadsinformatiesystemen (RIS'en), die momenteel elk een eigen, niet-publiek gedocumenteerd formaat voor raadsinformatie hanteren. ORI-A maakt het mogelijk om deze raadsinformatie op uniforme en publiek gedocumenteerde wijze uit te drukken, waardoor de toekomstige vindbaarheid en interpreteerbaarheid van deze informatie veilig wordt gesteld. Hierin sluit het aan bij de doelstelling van Open Raadsinformatie, <!-- zoals vermeld op hun website-->namelijk...[^1]
+Raadsinformatie wordt doorgaans opgesteld in raadsinformatiesystemen (RIS'en), die momenteel elk een eigen, niet-publiek gedocumenteerd formaat voor raadsinformatie hanteren. ORI-A maakt het mogelijk om deze raadsinformatie op uniforme wijze uit te drukken, waardoor de toekomstige vindbaarheid en interpreteerbaarheid van deze informatie veilig wordt gesteld. Hierin sluit ORI-A aan [bij de hoofddoelstelling van Open Raadsinformatie](https://zoek.openraadsinformatie.nl/):
 
 > om de besluitvorming van decentrale overheden transparanter te maken en een bijdrage te leveren aan de lokale democratie.
 
 ORI-A maakt deel uit van het Open Raadsinformatie-ecosysteem. Dit ecosysteem heeft een zelfversterkend effect: hoe breder het ORI-informatiemodel wordt toegepast, des te beter dat is voor de adoptie van ORI-A, mits ORI en ORI-A soepel in elkaar om te zetten zijn.
-
-[^1]: Bron: https://zoek.openraadsinformatie.nl/
 
 ### Mission statement
 
@@ -58,9 +56,7 @@ ORI-A maakt deel uit van het Open Raadsinformatie-ecosysteem. Dit ecosysteem hee
 
 \- *voor het duurzaam toegankelijk vastleggen van raadsinformatie in XML-formaat –* door ORI-A gezamenlijk met MDTO te gebruiken wordt voldaan aan de eisen ten aanzien van digitale duurzaamheid, zoals die in [de Archiefwet 2026](https://www.nationaalarchief.nl/archiveren/kennisbank/nieuwe-archiefwet-2021) staan vermeld;
 
-\- *wanneer het wordt gemigreerd naar een e-depot –* ORI-A richt zich op statische, blijvend te bewaren raadsinformatie.[^2]
-
-[^2]: Een by design gebruik van ORI-A als metadatamodel in een informatiesysteem is mogelijk, maar omdat ORI-A is ontworpen als afgeleide van ORI, zou het gebruiken van ORI als basis voor een by design inrichting logischer zijn. Om die reden beperkt ORI-A zich tot het toepassingsscenario van migratie naar een e-depot.
+\- *wanneer het wordt gemigreerd naar een e-depot –* ORI-A richt zich op statische, blijvend te bewaren raadsinformatie.
 
 ### Scope
 
@@ -108,23 +104,23 @@ ORI-A is ontstaan als initiatief vanuit de Nederlandse archiefsector, om te kome
 
 Er zijn diverse stakeholders voor ORI-A te definiëren:
 
-**Beheerders van archiefbewaarplaatsen** kiezen ORI-A als metagegevensschema bij het migreren van raadsinformatie naar hun e-depots. Hun belang is dat raadsinformatie eenduidig is beschreven en volgens een vaste procedure kan worden gemigreerd en vervolgens beschikbaar gesteld.
+* **Beheerders van archiefbewaarplaatsen** kiezen ORI-A als metagegevensschema bij het migreren van raadsinformatie naar hun e-depots. Hun belang is dat raadsinformatie eenduidig is beschreven en volgens een vaste procedure kan worden gemigreerd en vervolgens beschikbaar gesteld.
 
-**Informatiebeheerders en griffies bij het verantwoordelijk overheidsorgaan (de archiefvormer)** zijn verantwoordelijk voor het opmaken en beheren van raadsinformatie, in de uitvoering van het politiek/bestuurlijke besluitvormingsproces. Zij maken hiervoor vaak gebruik van een raadsinformatiesysteem (RIS). Hun belang is dat raadsinformatie op een eenduidige manier wordt geregistreerd en gebruikt in haar verschillende contexten: van registreren en beheren in het raadsinformatiesysteem, tot aan actieve openbaarmaking via de ORI API en migreren naar een e-depot via ORI-A. Datastandaardisatie via ORI en ORI-A helpt hen hierbij.
+* **Informatiebeheerders en griffies bij het verantwoordelijk overheidsorgaan (de archiefvormer)** zijn verantwoordelijk voor het opmaken en beheren van raadsinformatie, in de uitvoering van het politiek/bestuurlijke besluitvormingsproces. Zij maken hiervoor vaak gebruik van een raadsinformatiesysteem (RIS). Hun belang is dat raadsinformatie op een eenduidige manier wordt geregistreerd en gebruikt in haar verschillende contexten: van registreren en beheren in het raadsinformatiesysteem, tot aan actieve openbaarmaking via de ORI API en migreren naar een e-depot via ORI-A. Datastandaardisatie via ORI en ORI-A helpt hen hierbij.
 
-**Leveranciers van raadsinformatiesystemen** leveren de software waarin raadsinformatie wordt aangemaakt en beheerd. Zij leveren de data(structuur) en bestanden die naar ORI-A worden omgezet. In sommige gevallen kunnen zij ook verantwoordelijk zijn voor de conversie naar ORI-A. Hun belang is om te kunnen voorzien in een uniforme wijze om raadsinformatie uit hun systemen te migreren naar een archiefbewaarplaats.
+* **Leveranciers van raadsinformatiesystemen** leveren de software waarin raadsinformatie wordt aangemaakt en beheerd. Zij leveren de data(structuur) en bestanden die naar ORI-A worden omgezet. In sommige gevallen kunnen zij ook verantwoordelijk zijn voor de conversie naar ORI-A. Hun belang is om te kunnen voorzien in een uniforme wijze om raadsinformatie uit hun systemen te migreren naar een archiefbewaarplaats.
 
-**De Open Raadsinformatie-community** levert verschillende producten en diensten, gericht op het beter toegankelijk maken van raadsinformatie in brede zin. Hierbij kan het gaan om een zoekportaal als <https://openraadsinformatie.nl>, initiatieven om data te standaardiseren zoals het ORI-informatiemodel of gestandaardiseerd te ontsluiten zoals de ORI API. Het is een losse alliantie van overheidsorganisaties, non-profit organisaties en softwareontwikkelaars als VNG Realisatie, Open State Foundation, Ontola en de Werkgroep Archivering Raadsinformatie. Hun belang is dat ORI-A complementair is aan hun eigen initiatieven, zodat ze elkaar versterken.
+* **De Open Raadsinformatie-community** levert verschillende producten en diensten, gericht op het beter toegankelijk maken van raadsinformatie in brede zin. Hierbij kan het gaan om een zoekportaal als <https://openraadsinformatie.nl>, initiatieven om data te standaardiseren zoals het ORI-informatiemodel of gestandaardiseerd te ontsluiten zoals de ORI API. Het is een losse alliantie van overheidsorganisaties, non-profit organisaties en softwareontwikkelaars als VNG Realisatie, Open State Foundation, Ontola en de Werkgroep Archivering Raadsinformatie. Hun belang is dat ORI-A complementair is aan hun eigen initiatieven, zodat ze elkaar versterken.
 
-**Initiatieven gericht op het standaardiseren van overheidsinformatie in Nederland**, zoals MDTO, TOOI en het Gemeentelijk Gegevensmodel (GGM), delen dezelfde doelstelling als ORI-A en hebben hun eigen toepassingsgebied. Hun belang is dat het toepassingsgebied van ORI-A complementair is aan andere standaardiseringsinitiatieven, dat er zo min mogelijk inhoudelijke overlap is met andere metagegevensschema's en dat ze waar nodig gezamenlijk ingezet kunnen worden.
+* **Initiatieven gericht op het standaardiseren van overheidsinformatie in Nederland**, zoals MDTO, TOOI en het Gemeentelijk Gegevensmodel (GGM), delen dezelfde doelstelling als ORI-A en hebben hun eigen toepassingsgebied. Hun belang is dat het toepassingsgebied van ORI-A complementair is aan andere standaardiseringsinitiatieven, dat er zo min mogelijk inhoudelijke overlap is met andere metagegevensschema's en dat ze waar nodig gezamenlijk ingezet kunnen worden.
 
 ## Adoptie
 
 Adoptie van de standaard wordt momenteel op drie manieren ondersteund:
 
-- Door de standaard actief onder de aandacht te brengen via presentaties, lezingen, workshops en dergelijke;
+- Door de standaard actief onder de aandacht te brengen via presentaties, lezingen en workshops.
 
-- Door het uitvoeren van pilotimplementaties (migratietrajecten naar e-depots) van ORI-A en MDTO en daarover te communiceren, om zo aan te tonen dat de standaard werkt in de praktijk en leveranciers van raadsinformatiesystemen te voorzien in conversiescripts van hun data naar ORI-A (en eventueel MDTO);
+- Door het uitvoeren van pilotimplementaties (migratietrajecten naar e-depots) van ORI-A en MDTO en daarover te communiceren, om zo aan te tonen dat de standaard werkt in de praktijk en leveranciers van raadsinformatiesystemen te voorzien in conversiescripts van hun data naar ORI-A (en eventueel MDTO)
 
 - Door geïnteresseerde partijen en gebruikers van ORI-A te informeren en in de praktijk te ondersteunen.
 
@@ -152,7 +148,7 @@ ORI-A en haar onderdelen zijn met publieke middelen tot stand gekomen en vrij be
 
 - ORI-A is een complementair onderdeel van het Open Raadsinformatie landschap.
 
-- Toekomstige interpreteerbaarheid van raadsinformatie is belangrijker dan het kunnen huisvesten van alle raadsinformatie die tijdens het proces kunnen worden vastgelegd. Gegevens die alleen een tijdelijk belang hebben of (waarvan het belang niet kan worden aangetoond), worden niet in ORI-A opgenomen. Dat neemt niet weg dat, indien relevant geacht, deze informatie buiten ORI-A alsnog in leveringen kan worden opgenomen.
+- Toekomstige interpreteerbaarheid van raadsinformatie is belangrijker dan het kunnen huisvesten van alle raadsinformatie die tijdens het proces kunnen worden vastgelegd. Gegevens die alleen een tijdelijk belang hebben of niet duurzaam te beschijven zijn, worden niet in ORI-A opgenomen. Dat neemt niet weg dat, indien relevant geacht, deze informatie buiten ORI-A alsnog in leveringen kan worden opgenomen.
 
 - ORI-A schikt zich niet naar één specifieke implementatie of toepassing van ORI-A in een informatiesysteem (lees: raadsinformatiesysteem of e-depot).
 
@@ -162,9 +158,9 @@ ORI-A en haar onderdelen zijn met publieke middelen tot stand gekomen en vrij be
 
 - ORI-A is een afgeleide van het ORI-informatiemodel. Dat betekent:
 
- - ORI-A volgt het ORI-informatiemodel wat betreft inhoudelijke (domeinspecifieke) metagegevens over het politieke/bestuurlijke besluitvormingsproces. Wijzigingsverzoeken aan ORI-A die gaan over deze inhoudelijke metagegevens nemen we pas in behandeling als deze wijzigingen zijn doorgevoerd in het ORI-informatiemodel. Als ze daar nog niet zijn ingediend, verwijzen we door naar de repository van het ORI-informatiemodel.
+ - ORI-A volgt het ORI-informatiemodel wat betreft inhoudelijke --- oftewel, _domeinspecifieke_ --- metagegevens over het politieke/bestuurlijke besluitvormingsproces. Wijzigingsverzoeken aan ORI-A die gaan over deze inhoudelijke metagegevens nemen we pas in behandeling als deze wijzigingen zijn doorgevoerd in het ORI-informatiemodel. Als ze daar nog niet zijn ingediend, verwijzen we door naar de repository van het ORI-informatiemodel.
 
- - ORI-A gebruikt waar mogelijk dezelfde of vergelijkbare opbouw en naamgeving van klassen en eigenschappen als het ORI-informatiemodel en legt eventuele verschillen duidelijk uit, zodat wederzijdse conversie zo efficiënt mogelijk blijft en zonder informatieverlies;
+ - ORI-A gebruikt waar mogelijk dezelfde of vergelijkbare opbouw en naamgeving van klassen en eigenschappen als het ORI-informatiemodel en legt eventuele verschillen duidelijk uit, zodat wederzijdse conversie zo efficiënt mogelijk blijft en zonder informatieverlies.
 
  - Alleen voor informatie die de duurzame toegankelijkheid van raadsinformatie vergroten, of comptabiliteit met breed gedeelde gewoontes in de archiefsector, mag ORI-A afwijken van ORI. Een voorbeeld is het gebruiken van MDTO voor metagegevens over informatieobjecten. Ook hier geldt dat deze verschillen tussen ORI en ORI-A duidelijk worden uitgelegd.
 
@@ -186,13 +182,13 @@ ORI-A en haar onderdelen zijn met publieke middelen tot stand gekomen en vrij be
 
 De architectuur van ORI-A bestaat momenteel uit vier onderdelen:
 
-- Een XML-schema;
+- Een XML-schema
 
-- Voorbeeldbestanden;
+- Voorbeeldbestanden
 
-- Begrippenlijsten;
+- Begrippenlijsten
 
-- Documentatie over ORI-A.
+- Documentatie over ORI-A
 
 De onderdelen hebben afhankelijkheden met producten van enkele stakeholders.
 
@@ -200,7 +196,7 @@ De onderdelen hebben afhankelijkheden met producten van enkele stakeholders.
 
 **MDTO** (product van het Nationaal Archief) wordt mede gebruikt in de voorbeeldbestanden.
 
-**TOOI** (product van KOOP) levert enkele begrippenlijsten
+**TOOI** (product van KOOP) levert enkele begrippenlijsten.
 
 #### Het XML-schema
 
@@ -212,9 +208,9 @@ Binnen het XML-schema bestaat de mogelijkheid om gegevens te relateren aan exter
 
 Er zijn echter procedurele en inhoudelijke redenen te noemen waarom deze begrippenlijsten uiteindelijk beter bij een andere beheerpartij kunnen worden ondergebracht:
 
-- Het beheren van begrippenlijsten vereist een heel eigen beheermodel (zie [TOOI](https://standaarden.overheid.nl/tooi/doc/tooi-beheerplan/)) met bijbehorende kennis, handelingen en infrastructuur;
+- Het beheren van begrippenlijsten vereist een heel eigen beheermodel (zie [TOOI](https://standaarden.overheid.nl/tooi/doc/tooi-beheerplan/)) met bijbehorende kennis, handelingen en infrastructuur.
 
-- De begrippenlijsten binnen ORI-A bij uitstek domeinkennis vereisen over het politieke en/of bestuurlijke besluitvormingsproces, en de Werkgroep deze kennis ontbeert, gezien het (momenteel) uitsluitend bestaat uit overheidsinformatie professionals;
+- De begrippenlijsten binnen ORI-A bij uitstek domeinkennis vereisen over het politieke en/of bestuurlijke besluitvormingsproces, en de Werkgroep deze kennis ontbeert, gezien het (momenteel) uitsluitend bestaat uit overheidsinformatie professionals.
 
 - Deze begrippenlijsten algemene relevantie hebben binnen het domein, en dus ORI-A overstijgend zijn.
 
@@ -224,23 +220,23 @@ Het derde onderdeel van ORI-A vormt alle documentatie over ORI-A en haar onderde
 
 De documentatie valt uiteen in meerdere onderdelen:
 
-- *Over ORI-A* – algemene informatie over nut en noodzaak van de standaard;
+- *Over ORI-A* – algemene informatie over nut en noodzaak van de standaard
 
-- *Hoe werkt ORI-A* – inhoudelijke uitleg over hoe je met ORI-A vergaderingen beschrijft; bedoeld om beginners zoveel mogelijk bij de hand te nemen.
+- *Hoe werkt ORI-A* – inhoudelijke uitleg over hoe je met ORI-A vergaderingen beschrijft; bedoeld om beginners bij de hand te nemen
 
-- *Het XML-schema* – uitputtende en meer formele beschrijving van alle ORI-A entiteiten en eigenschappen;
+- *Het XML-schema* – uitputtende en meer formele beschrijving van alle ORI-A entiteiten en eigenschappen
 
-- *Begrippenlijsten* – de aan ORI-A gelieerde begrippenlijsten;
+- *Begrippenlijsten* – de aan ORI-A gelieerde begrippenlijsten
 
-- *Veelgestelde vragen* – algemene vragen over ORI-A en hun antwoorden;
+- *Veelgestelde vragen* – algemene vragen over ORI-A en hun antwoorden
 
-- *Grafische weergave* – grafische, op UML-geïnspireerde weergave van het informatiemodel.
+- *Grafische weergave* – grafische, op UML-geïnspireerde weergave van het informatiemodel
 
 Besluitvorming over wijziging van deze documentatie vindt net als bij het XML-schema plaats op GitHub, volgens dezelfde werkwijzen.
 
 #### De voorbeeldbestanden
 
-Het vierde onderdeel van ORI-A vormen de voorbeeldbestanden, die eveneens op de ORI-A website zijn opgenomen. Zij worden beheerd op dezelfde GitHub repository als de website. De voorbeeldbestanden geven een praktijkvoorbeeld van hoe een levering aan raadsinformatie eruitziet, als deze volgens de instructies van het XML-schema en de documentatie is vormgegeven.
+De voorbeeldbestanden vormen het vierde onderdeel van ORI-A. Zij worden beheerd op dezelfde GitHub repository als het XML-schema. De voorbeeldbestanden geven een praktijkvoorbeeld van hoe een levering aan raadsinformatie eruitziet, als deze volgens de instructies van het XML-schema en de documentatie is vormgegeven.
 
 Slechts plaatsing en ordening van het ORI-A XML-bestand in de mappenstructuur ten opzichte van de andere bestanden en mappen in de structuur, valt strikt genomen onder beheer van de Werkgroep. Voor de mappenstructuur en ordening en inhoud van de informatieobjecten wordt de [Submission Information Package (SIP)-instructie van MDTO](https://www.nationaalarchief.nl/archiveren/mdto/specificatie-submission-information-package/structuur) gevolgd. De inhoud van de voorbeeldbestanden (de domeinspecifieke informatie, als ook de informatieobjecten (videotulen en documenten)) is geen onderdeel van de standaard maar dient slechts ter illustratie.
 
@@ -250,11 +246,11 @@ Omdat ORI-A als primaire gebruikersgroep de Nederlandse archiefsector voor zich 
 
 ### Versiebeleid
 
-Het ORI-A XML-schema is een levende standaard die naar gelang er noodzaak toe is zal veranderen. Gezien comptabiliteit met MDTO en ORI belangrijke waarden zijn voor ORI-A, zullen wijzigingen aan die twee standaarden gevolgd worden en waar nodig leiden tot wijzigingen aan ORI-A. Om ervoor te zorgen dat wijzigingen aan ORI-A niet ten koste zullen gaan van het zijn van een standaard, is het nodig om een zorgvuldig wijzigingsproces en bijbehorend versiebeheer toe te passen op ORI-A.
+Het ORI-A XML-schema is een levende standaard, wat betekent dat er regelmatig wijzigingen zullen worden doorgevoerd.  Gezien comptabiliteit met MDTO en ORI belangrijke waarden zijn voor ORI-A, zullen wijzigingen aan die twee standaarden gevolgd worden en waar nodig leiden tot wijzigingen aan ORI-A. Om ervoor te zorgen dat wijzigingen aan ORI-A niet ten koste zullen gaan van het zijn van een standaard, is het nodig om een zorgvuldig wijzigingsproces en bijbehorend versiebeheer toe te passen op ORI-A.
 
 Alle gepubliceerde versies van ORI-A worden publiekelijk gedocumenteerd en beheerd op de [ORI-A website](https://ori-a.nl/downloads#xml-schema). Hierdoor blijft het mogelijk om te valideren aan het ORI-A XML-schema, ongeacht welke versie een gebruiker bij een implementatie heeft gehanteerd.
 
-De versionering van ORI-A maakt gebruik van een eigen interpretatie van semantisch versiebeheer. Er is een eigen interpretatie gekozen, omdat semantisch versioneren primair is gericht om softwareontwikkeling te ondersteunen, en minder op het onderhouden van een XML-schema. Meer over deze interpretatie is te lezen onder de paragraaf Versiebeheer.
+De versionering van ORI-A maakt gebruik van een eigen interpretatie van semantisch versiebeheer. Er is een eigen interpretatie gekozen, omdat semantisch versioneren primair is bedoeld om softwareontwikkeling te ondersteunen, en minder op het onderhouden van een XML-schema. Meer over deze interpretatie is te lezen in [Versiebeheer](#versiebeheer).
 
 Onderhoud op de standaard vindt plaats door het vier-ogenprincipe te hanteren; minstens twee beheerders moeten akkoord gaan met een wijziging om deze door te voeren. Wijzigingsverzoeken vinden plaats door middel van pull requests. Besluitvorming over versiewijziging van ORI-A vindt plaats binnen vergaderingen van de Werkgroep, waarna een beheerder de nieuwe versie lanceert. Wanneer de beheerders voldoende wijzigingen hebben verzameld en verwerkt om een nieuwe versie te rechtvaardigen, wordt besloten tot het publiceren van een nieuwe versie. Naar gelang de aard van de wijziging wordt het nieuwe versienummer besloten.
 
@@ -268,7 +264,7 @@ Het kwaliteitsbeheer van ORI-A is een samenspel van de kernwaarden van ORI-A en 
 
 ## Wijzigingsverzoeken en doorontwikkeling
 
-Eenieder met toegang tot GitHub kan op één van de ORI-A repositories (voor het [XML-schema](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD) of voor de [voorbeeldbestanden, documentatie of begrippenlijsten](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website)) wijzigingsverzoeken indienen en issues aankaarten. De beheerders van deze repositories, leden van de Werkgroep, voeren bijbehorende beheertaken uit. Zij doen dit op basis van geldende best practices ten aanzien van repository-beheer en softwareprogrammering.
+Iedereen kan op de ORI-A [documentatie](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Website), [XML-schema](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-XSD), en [begrippenlijsten](https://github.com/Regionaal-Archief-Rivierenland/ORI-A-Begrippenlijsten) repositories wijzigingsverzoeken indienen en issues aankaarten. De beheerders van deze repositories, leden van de Werkgroep, voeren bijbehorende beheertaken uit. Zij doen dit op basis van geldende best practices ten aanzien van repository-beheer en softwareprogrammering.
 
 Naast GitHub hebben externe stakeholders de mogelijkheid om contact te zoeken met de Werkgroep via [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome) of door werkgroepleden direct te benaderen.
 
@@ -304,7 +300,7 @@ Vanuit de Werkgroep is beperkte ondersteuning beschikbaar richting derde partije
 
 ## Helpdesk
 
-De ORI-A specificatie en -documentatie is te vinden op [ori-a.nl](https://ori-a.nl/). De Werkgroep biedt op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome) en op GitHub de mogelijkheid tot het stellen van vragen over ORI-A. Via KIA of langs (in)formele wijze kunnen Werkgroepleden ook direct worden benaderd.
+De ORI-A specificatie en -documentatie is te vinden op [ori-a.nl](https://ori-a.nl/). De Werkgroep biedt op [KIA](https://kiacommunity.nl/groups/86-videotulen/welcome) en op GitHub de mogelijkheid tot het stellen van vragen over ORI-A. Ten slotte kunnen Werkgroepleden direct benaderd worden, bijvoorbeeld via KIA.
 
 ## Moduleontwikkeling
 
@@ -312,7 +308,7 @@ De Werkgroep zelf heeft geen intentie om softwarecomponenten te ontwikkelen die 
 
 ## Validatie & certificering
 
-Validatie van de toepassing van ORI-A kan door middel van open source XML-validatietooling te gebruiken. Hiermee kan ook toepassing van MDTO worden gevalideerd.
+Validatie van de toepassing van ORI-A kan door middel van XML-validatietooling. Hiermee kan ook toepassing van MDTO worden gevalideerd.
 
 # Communicatie
 
