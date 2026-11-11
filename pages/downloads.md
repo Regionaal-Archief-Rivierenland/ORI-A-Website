@@ -97,7 +97,6 @@ ORI-A voorbeeldbestanden/
   <option disabled value="">Soort</option>
   <option selected>ORI-A + MDTO</option>
   <option disabled>ORI-A + MDTO (opex)</option>
-  <option disabled>ORI-A + TMLO</option>
 </select>
 
 <a href="ORI-A voorbeeldbestanden.zip" download role=button><span><strong>Voorbeeldbestanden</strong> (zip)</span></a>
